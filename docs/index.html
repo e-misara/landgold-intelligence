@@ -396,18 +396,19 @@ function runAnalysis(e) {
   const btn  = document.getElementById('btn-txt');
   btn.textContent = '...';
 
+  const el = name => form.elements[name];
   const constraints = [...form.querySelectorAll('input[name="constraints"]:checked')].map(i=>i.value);
   const payload = {
-    name:     form.name.value,
-    email:    form.email.value,
-    phone:    form.phone.value,
-    budget:   parseFloat(form.budget_usd.value),
-    landType: form.land_type.value,
-    area:     parseFloat(form.area_m2.value),
-    location: form.location.value,
-    roadType: form.road_type.value,
-    prox:     parseFloat(form.highway_proximity_m.value),
-    signal:   form.gov_signal.value,
+    name:     el('name').value,
+    email:    el('email').value,
+    phone:    el('phone').value,
+    budget:   parseFloat(el('budget_usd').value),
+    landType: el('land_type').value,
+    area:     parseFloat(el('area_m2').value),
+    location: el('location').value,
+    roadType: el('road_type').value,
+    prox:     parseFloat(el('highway_proximity_m').value),
+    signal:   el('gov_signal').value,
     constraints: constraints.length ? constraints : ['no_issue'],
   };
 
