@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LandGold · Admin</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:     { DEFAULT:'#C9A84C', light:'#E8C96A', dark:'#A07828' },
+            obsidian: { DEFAULT:'#0A0A0A', 1:'#111111', 2:'#1A1A1A', 3:'#242424' },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body { background:#0A0A0A; font-family:'Inter',sans-serif; }
+    .gold-border { border:1px solid #C9A84C33; }
+    .badge-pending  { background:#92400e22; color:#fbbf24; border:1px solid #92400e55; }
+    .badge-approved { background:#14532d22; color:#4ade80; border:1px solid #14532d55; }
+    .risk-LOW      { color:#4ade80; }
+    .risk-MEDIUM   { color:#facc15; }
+    .risk-HIGH     { color:#fb923c; }
+    .risk-CRITICAL { color:#f87171; }
+    .signal-bar { background:linear-gradient(90deg,#C9A84C,#A07828); }
+    tr:hover td { background:#1a1a1a; }
+  </style>
+</head>
+<body class="text-gray-300 min-h-screen">
+
+<!-- NAV -->
+<nav class="flex items-center justify-between px-8 py-4 border-b border-gold/20 bg-obsidian-1">
+  <div class="flex items-center gap-3">
+    <svg width="22" height="22" viewBox="0 0 28 28" fill="none">
+      <polygon points="14,2 26,24 2,24" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+      <polygon points="14,8 22,22 6,22" fill="#C9A84C" opacity="0.18"/>
+    </svg>
+    <span class="text-gold font-semibold tracking-widest text-xs uppercase">LandGold · Admin Panel</span>
+  </div>
+  <a href="/" class="text-xs text-gray-600 hover:text-gold transition-colors tracking-widest">← CLIENT VIEW</a>
+</nav>
+
+<!-- STATS BAR -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4 px-8 py-6" id="stats-bar">
+  <div class="gold-border bg-obsidian-2 rounded p-4 text-center">
+    <p class="text-gray-600 text-xs mb-1 uppercase tracking-widest">Total Leads</p>
+    <p class="text-gold text-2xl font-light" id="stat-leads">—</p>
+  </div>
+  <div class="gold-border bg-obsidian-2 rounded p-4 text-center">
+    <p class="text-gray-600 text-xs mb-1 uppercase tracking-widest">Pending</p>
+    <p class="text-yellow-400 text-2xl font-light" id="stat-pending">—</p>
+  </div>
+  <div class="gold-border bg-obsidian-2 rounded p-4 text-center">
+    <p class="text-gray-600 text-xs mb-1 uppercase tracking-widest">Approved</p>
+    <p class="text-green-400 text-2xl font-light" id="stat-approved">—</p>
+  </div>
+  <div class="gold-border bg-obsidian-2 rounded p-4 text-center">
+    <p class="text-gray-600 text-xs mb-1 uppercase tracking-widest">Active Signals</p>
+    <p class="text-gold text-2xl font-light" id="stat-signals">—</p>
+  </div>
+</div>
+
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-6 px-8 pb-16">
+
+  <!-- LEADS TABLE -->
+  <div class="xl:col-span-2 space-y-4">
+    <h2 class="text-xs text-gray-500 uppercase tracking-widest">Lead Queue</h2>
+    <div class="gold-border bg-obsidian-1 rounded-lg overflow-hidden">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="border-b border-white/5 text-xs text-gray-600 uppercase tracking-widest">
+            <th class="text-left px-4 py-3">Name</th>
+            <th class="text-left px-4 py-3">Budget</th>
+            <th class="text-left px-4 py-3">Lang</th>
+            <th class="text-left px-4 py-3">Date</th>
+            <th class="text-left px-4 py-3"></th>
+          </tr>
+        </thead>
+        <tbody id="leads-table-body">
+          <tr><td colspan="5" class="px-4 py-8 text-center text-gray-700 text-xs">Loading...</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- MESSAGE DETAIL PANEL -->
+    <div id="msg-panel" class="hidden gold-border bg-obsidian-1 rounded-lg p-6 space-y-4">
+      <div class="flex items-center justify-between">
+        <h3 class="text-gold text-xs uppercase tracking-widest">Agent Messages</h3>
+        <span class="text-xs text-gray-600" id="msg-panel-lead"></span>
+      </div>
+      <div id="msg-list" class="space-y-3"></div>
+    </div>
+  </div>
+
+  <!-- GOV SIGNALS SIDEBAR -->
+  <div class="space-y-4">
+    <h2 class="text-xs text-gray-500 uppercase tracking-widest">Active Gov Signals</h2>
+    <div id="signals-list" class="space-y-3">
+      <div class="text-xs text-gray-700 py-4 text-center">Loading...</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+let allLeads = [];
+let allMessages = {};
+
+async function loadAll() {
+  const [leadsRes, signalsRes] = await Promise.all([
+    fetch('/api/leads'),
+    fetch('/api/signals'),
+  ]);
+  allLeads = await leadsRes.json();
+  const signals = await signalsRes.json();
+
+  renderLeads(allLeads);
+  renderSignals(signals);
+
+  // Stats
+  document.getElementById('stat-leads').textContent = allLeads.length;
+  document.getElementById('stat-signals').textContent = signals.length;
+
+  // Fetch all messages for stats
+  let pending = 0, approved = 0;
+  await Promise.all(allLeads.map(async l => {
+    const msgs = await fetch(`/api/leads/${l.id}/messages`).then(r => r.json());
+    allMessages[l.id] = msgs;
+    msgs.forEach(m => { if (m.status === 'APPROVED') approved++; else pending++; });
+  }));
+  document.getElementById('stat-pending').textContent  = pending;
+  document.getElementById('stat-approved').textContent = approved;
+}
+
+function renderLeads(leads) {
+  const tbody = document.getElementById('leads-table-body');
+  if (!leads.length) {
+    tbody.innerHTML = '<tr><td colspan="5" class="px-4 py-8 text-center text-gray-700 text-xs">No leads yet.</td></tr>';
+    return;
+  }
+  tbody.innerHTML = leads.map(l => `
+    <tr class="border-b border-white/5 cursor-pointer transition-colors" onclick="openMessages(${l.id}, '${esc(l.name)}')">
+      <td class="px-4 py-3 text-white text-sm">${esc(l.name)}<br/><span class="text-gray-600 text-xs">${esc(l.email)}</span></td>
+      <td class="px-4 py-3 text-gold font-medium">$${Number(l.budget_usd || 0).toLocaleString()}</td>
+      <td class="px-4 py-3 text-gray-400 uppercase text-xs">${esc(l.language)}</td>
+      <td class="px-4 py-3 text-gray-600 text-xs">${esc((l.created_at || '').slice(0,10))}</td>
+      <td class="px-4 py-3 text-right">
+        <span class="text-xs text-gold/50 hover:text-gold">view →</span>
+      </td>
+    </tr>`).join('');
+}
+
+function renderSignals(signals) {
+  const el = document.getElementById('signals-list');
+  if (!signals.length) {
+    el.innerHTML = '<div class="text-xs text-gray-700 text-center py-4">No active signals.</div>';
+    return;
+  }
+  el.innerHTML = signals.map(s => `
+    <div class="gold-border bg-obsidian-2 rounded-lg p-4 space-y-2">
+      <div class="flex items-start justify-between gap-2">
+        <span class="text-gold text-xs font-medium leading-tight">${fmt(s.signal_type)}</span>
+        <span class="text-xs text-gray-500 shrink-0">${esc(s.region || '')}</span>
+      </div>
+      <p class="text-gray-500 text-xs leading-relaxed">${esc(s.description || '')}</p>
+      <div class="flex items-center gap-2">
+        <div class="flex-1 bg-obsidian-3 rounded-full h-1">
+          <div class="signal-bar h-1 rounded-full" style="width:${s.confidence_pct}%"></div>
+        </div>
+        <span class="text-xs text-gold/70">${s.confidence_pct}%</span>
+      </div>
+    </div>`).join('');
+}
+
+async function openMessages(leadId, name) {
+  const panel = document.getElementById('msg-panel');
+  document.getElementById('msg-panel-lead').textContent = name;
+  panel.classList.remove('hidden');
+
+  // Use cached or fetch fresh
+  const msgs = allMessages[leadId] || await fetch(`/api/leads/${leadId}/messages`).then(r => r.json());
+  allMessages[leadId] = msgs;
+  renderMessages(msgs, leadId);
+  panel.scrollIntoView({ behavior: 'smooth' });
+}
+
+function renderMessages(msgs, leadId) {
+  const el = document.getElementById('msg-list');
+  if (!msgs.length) {
+    el.innerHTML = '<p class="text-xs text-gray-700 text-center py-4">No messages.</p>';
+    return;
+  }
+  el.innerHTML = msgs.map(m => `
+    <div class="bg-obsidian-2 rounded p-4 gold-border space-y-2" id="msg-${m.id}">
+      <div class="flex items-center justify-between">
+        <span class="text-gold text-xs font-semibold tracking-wide">${esc(m.agent)}</span>
+        <div class="flex items-center gap-2">
+          <span class="text-xs px-2 py-0.5 rounded ${m.status === 'APPROVED' ? 'badge-approved' : 'badge-pending'}" id="badge-${m.id}">
+            ${m.status}
+          </span>
+          ${m.status !== 'APPROVED' ? `
+          <button onclick="approveMsg(${m.id}, ${leadId})"
+            class="text-xs px-2 py-0.5 rounded bg-gold/10 text-gold border border-gold/20 hover:bg-gold/20 transition-colors">
+            Approve
+          </button>` : ''}
+        </div>
+      </div>
+      <p class="text-gray-400 text-xs leading-relaxed" dir="${m.lang === 'ar' ? 'rtl' : 'ltr'}">${esc(m.message)}</p>
+    </div>`).join('');
+}
+
+async function approveMsg(msgId, leadId) {
+  await fetch(`/api/messages/${msgId}/approve`, { method: 'POST' });
+  const badge = document.getElementById(`badge-${msgId}`);
+  if (badge) {
+    badge.textContent = 'APPROVED';
+    badge.className = 'text-xs px-2 py-0.5 rounded badge-approved';
+    badge.closest('.space-y-2').querySelector('button')?.remove();
+  }
+  // Update stats
+  allMessages[leadId] = await fetch(`/api/leads/${leadId}/messages`).then(r => r.json());
+  let pending = 0, approved = 0;
+  Object.values(allMessages).flat().forEach(m => m.status === 'APPROVED' ? approved++ : pending++);
+  document.getElementById('stat-pending').textContent  = pending;
+  document.getElementById('stat-approved').textContent = approved;
+}
+
+function esc(s) {
+  return String(s ?? '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+function fmt(s) {
+  return String(s).replace(/_/g,' ').replace(/\b\w/g, c => c.toUpperCase());
+}
+
+loadAll();
+</script>
+</body>
+</html>

@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>LandGold Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:     { DEFAULT:'#C9A84C', light:'#E8C96A', dark:'#A07828' },
+            obsidian: { DEFAULT:'#0A0A0A', 1:'#111111', 2:'#1A1A1A', 3:'#242424' },
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    body { background:#0A0A0A; font-family:'Inter',sans-serif; }
+    .gold-border { border:1px solid #C9A84C44; }
+    .gold-glow   { box-shadow:0 0 28px #C9A84C14; }
+    .lang-btn.active { background:#C9A84C; color:#0A0A0A; }
+    .placeholder-img { background:linear-gradient(135deg,#1A1A1A 0%,#242424 50%,#1A1A1A 100%); border:1px dashed #C9A84C33; }
+    input, select { background:#1A1A1A !important; color:#e5e5e5 !important; }
+    input::placeholder { color:#444 !important; }
+    .badge { animation:pulse 2.4s cubic-bezier(.4,0,.6,1) infinite; }
+    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.45} }
+    .risk-bar-fill { transition:width .7s ease, background .7s ease; }
+    [dir="rtl"] { text-align:right; }
+  </style>
+</head>
+<body class="text-gray-200 min-h-screen">
+
+<!-- NAV -->
+<nav class="flex items-center justify-between px-6 md:px-10 py-4 border-b border-gold/20 bg-obsidian-1 sticky top-0 z-10">
+  <div class="flex items-center gap-3">
+    <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
+      <polygon points="14,2 26,24 2,24" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+      <polygon points="14,8 22,22 6,22" fill="#C9A84C" opacity="0.18"/>
+    </svg>
+    <span class="text-gold font-semibold tracking-widest text-xs uppercase">LandGold Intelligence</span>
+  </div>
+  <div class="flex gap-1 bg-obsidian-2 rounded p-1 gold-border" id="lang-sw">
+    <button class="lang-btn active px-3 py-1 rounded text-xs font-medium transition-all" data-lang="en" onclick="setLang('en')">EN</button>
+    <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="ru" onclick="setLang('ru')">RU</button>
+    <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="ar" onclick="setLang('ar')">AR</button>
+    <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="tr" onclick="setLang('tr')">TR</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="text-center py-16 px-4">
+  <p class="text-gold/50 text-xs tracking-[.3em] uppercase mb-3" id="t-tag">Sovereign Land Intelligence · TR Zoning Law 3194</p>
+  <h1 class="text-4xl md:text-5xl font-light text-white mb-4" id="t-hero">Strategic Land <span class="text-gold">Acquisition</span> Intelligence</h1>
+  <p class="text-gray-500 text-sm max-w-xl mx-auto" id="t-sub">Real-time ROI analysis, government signal tracking, and multi-agent due diligence — denominated exclusively in USD.</p>
+</header>
+
+<!-- PROJECTIONS -->
+<section class="max-w-5xl mx-auto px-6 mb-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="placeholder-img rounded-lg p-6 flex flex-col min-h-52 gold-glow">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-xs text-gray-500 tracking-widest uppercase" id="t-cur">Current State</span>
+        <span class="text-xs bg-obsidian-3 text-gray-500 px-2 py-0.5 rounded border border-white/5">Agricultural / Bare</span>
+      </div>
+      <div class="flex-1 flex items-center justify-center">
+        <svg width="180" height="85" viewBox="0 0 180 85" fill="none" opacity=".35">
+          <rect x="0" y="58" width="180" height="27" fill="#3a5a2a"/>
+          <line x1="0" y1="58" x2="180" y2="58" stroke="#4a7a3a" stroke-width="1"/>
+          <rect x="22" y="38" width="8" height="20" fill="#5a8a4a"/>
+          <rect x="62" y="33" width="8" height="25" fill="#5a8a4a"/>
+          <rect x="112" y="40" width="8" height="18" fill="#5a8a4a"/>
+          <rect x="152" y="36" width="8" height="22" fill="#5a8a4a"/>
+          <circle cx="90" cy="16" r="13" fill="#b8860b" opacity=".28"/>
+        </svg>
+      </div>
+      <p class="text-center text-gray-700 text-xs mt-3">[ Parcel Photo Placeholder ]</p>
+    </div>
+    <div class="placeholder-img rounded-lg p-6 flex flex-col min-h-52 gold-glow">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-xs text-gray-500 tracking-widest uppercase" id="t-fut">Future Projection</span>
+        <span class="text-xs bg-gold/10 text-gold px-2 py-0.5 rounded border border-gold/20" id="t-badge">Logistic / Commercial</span>
+      </div>
+      <div class="flex-1 flex items-center justify-center">
+        <svg width="180" height="85" viewBox="0 0 180 85" fill="none" opacity=".5">
+          <rect x="0" y="63" width="180" height="22" fill="#1a1a1a"/>
+          <rect x="10" y="28" width="45" height="35" fill="#2a2a2a" stroke="#C9A84C" stroke-width=".8"/>
+          <rect x="65" y="18" width="55" height="45" fill="#2a2a2a" stroke="#C9A84C" stroke-width=".8"/>
+          <rect x="130" y="36" width="40" height="27" fill="#2a2a2a" stroke="#C9A84C" stroke-width=".8"/>
+          <line x1="0" y1="63" x2="180" y2="63" stroke="#C9A84C" stroke-width=".4" opacity=".4"/>
+          <rect x="68" y="20" width="8" height="5" fill="#C9A84C" opacity=".5"/>
+        </svg>
+      </div>
+      <p class="text-center text-gray-600 text-xs mt-3">[ Gov Signal: Zoning Projection ]</p>
+    </div>
+  </div>
+</section>
+
+<!-- GOV SIGNALS TICKER -->
+<section class="max-w-5xl mx-auto px-6 mb-10">
+  <div class="gold-border bg-obsidian-1 rounded-lg p-5">
+    <h3 class="text-xs text-gray-600 uppercase tracking-widest mb-4" id="t-sig-title">Active Government Signals</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-3" id="signals-grid">
+      <!-- populated by JS -->
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="max-w-3xl mx-auto px-6 mb-12">
+  <div class="gold-border gold-glow rounded-lg p-8 bg-obsidian-1">
+    <h2 class="text-gold text-xs tracking-widest uppercase mb-6" id="t-form">USD Investment Request Pool</h2>
+    <form id="af" onsubmit="runAnalysis(event)" class="space-y-5">
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-name">Full Name</label>
+          <input type="text" name="name" required placeholder="Your Name" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-email">Email</label>
+          <input type="email" name="email" required placeholder="you@example.com" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-phone">Phone</label>
+          <input type="text" name="phone" placeholder="+1 000 000 0000" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-budget">Budget (USD)</label>
+          <input type="number" name="budget_usd" required placeholder="250000" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+      </div>
+
+      <hr class="border-white/5"/>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-ltype">Land Type</label>
+          <select name="land_type" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
+            <option value="agricultural">Agricultural</option>
+            <option value="zoned_commercial">Zoned Commercial</option>
+            <option value="zoned_residential">Zoned Residential</option>
+            <option value="industrial">Industrial</option>
+            <option value="tourism_zone">Tourism Zone</option>
+            <option value="forest_edge">Forest Edge</option>
+          </select></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-area">Area (m²)</label>
+          <input type="number" name="area_m2" required placeholder="5000" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-loc">Location / Region</label>
+          <input type="text" name="location" placeholder="e.g. Konya, TR" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-road">Road Type</label>
+          <select name="road_type" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
+            <option value="provincial_road">Provincial Road</option>
+            <option value="state_road">State Road</option>
+            <option value="motorway">Motorway</option>
+            <option value="village_road">Village Road</option>
+          </select></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-prox">Highway Proximity (m)</label>
+          <input type="number" name="highway_proximity_m" required placeholder="80" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
+        <div><label class="block text-xs text-gray-600 mb-1" id="l-sig">Gov Signal</label>
+          <select name="gov_signal" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
+            <option value="none">None</option>
+            <option value="municipality_zoning_change">Zoning Change</option>
+            <option value="infrastructure_project_nearby">Infrastructure Nearby</option>
+            <option value="highway_extension">Highway Extension</option>
+            <option value="airport_expansion">Airport Expansion</option>
+            <option value="industrial_zone_declaration">Industrial Zone</option>
+            <option value="tourism_incentive_zone">Tourism Incentive</option>
+          </select></div>
+      </div>
+
+      <div>
+        <label class="block text-xs text-gray-600 mb-2" id="l-con">Title Deed Constraints</label>
+        <div class="flex flex-wrap gap-4">
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="mortgage" class="accent-gold"/> <span id="c-mort">Mortgage</span></label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="annotation" class="accent-gold"/> <span id="c-ann">Annotation</span></label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="court_injunction" class="accent-gold"/> <span id="c-court">Court Injunction</span></label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="easement" class="accent-gold"/> <span id="c-ease">Easement</span></label>
+          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="multiple_owners" class="accent-gold"/> <span id="c-mult">Multiple Owners</span></label>
+        </div>
+      </div>
+
+      <button type="submit" class="w-full py-3 rounded bg-gold text-obsidian font-semibold text-sm tracking-widest uppercase hover:bg-gold-light transition-colors">
+        <span id="btn-txt">Run Intelligence Analysis</span>
+      </button>
+    </form>
+  </div>
+</section>
+
+<!-- RESULTS -->
+<section class="max-w-3xl mx-auto px-6 mb-20 hidden" id="results">
+  <div class="gold-border gold-glow rounded-lg p-8 bg-obsidian-1 space-y-6">
+    <h2 class="text-gold text-xs tracking-widest uppercase" id="t-rep">Intelligence Report</h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="metrics"></div>
+    <div>
+      <div class="flex justify-between text-xs mb-1">
+        <span class="text-gray-500" id="t-risk">Risk Score</span>
+        <span id="risk-val" class="font-medium"></span>
+      </div>
+      <div class="w-full bg-obsidian-3 rounded-full h-1.5">
+        <div id="risk-bar" class="h-1.5 rounded-full risk-bar-fill" style="width:0%"></div>
+      </div>
+    </div>
+    <div class="space-y-4" id="agent-msgs"></div>
+    <p class="text-xs text-gray-700 text-center" id="t-pend">All agent outputs carry status: PENDING_APPROVAL</p>
+  </div>
+</section>
+
+<!-- LEAD POOL -->
+<section class="max-w-3xl mx-auto px-6 mb-20 hidden" id="pool-section">
+  <div class="gold-border bg-obsidian-1 rounded-lg p-6">
+    <h2 class="text-gold text-xs tracking-widest uppercase mb-4" id="t-pool">Investment Request Pool</h2>
+    <div id="pool-list" class="space-y-2"></div>
+  </div>
+</section>
+
+<footer class="border-t border-gold/10 text-center py-6 text-gray-700 text-xs tracking-widest">
+  LANDGOLD INTELLIGENCE · USD DENOMINATED · TR LAW 3194
+</footer>
+
+<script>
+// ── Constants (ported from logic.py) ───────────────────────────────────────
+const HIGHWAY_SETBACKS = { motorway:50, state_road:30, provincial_road:15, village_road:10 };
+const LAND_TYPES = {
+  agricultural:      { base:8,  mult:2.5 },
+  forest_edge:       { base:5,  mult:1.8 },
+  zoned_residential: { base:45, mult:3.2 },
+  zoned_commercial:  { base:90, mult:4.5 },
+  industrial:        { base:35, mult:3.0 },
+  tourism_zone:      { base:60, mult:5.0 },
+};
+const DEED_RISKS = { mortgage:25, annotation:15, court_injunction:40, easement:10, multiple_owners:20, no_issue:0 };
+const GOV_MULT  = {
+  infrastructure_project_nearby:1.8, municipality_zoning_change:2.2,
+  highway_extension:1.6, airport_expansion:2.5,
+  industrial_zone_declaration:1.9, tourism_incentive_zone:2.3, none:1.0,
+};
+const GOV_SIGNALS_SEED = [
+  { type:'municipality_zoning_change',    region:'Konya',   desc:'Karatay ilçesi imar planı revizyonu — tarım → ticari',         pct:78 },
+  { type:'highway_extension',             region:'Ankara',  desc:'Kuzey Çevre Yolu 42 km uzatma projesi ihaleye çıktı',          pct:85 },
+  { type:'airport_expansion',             region:'İzmir',   desc:'Adnan Menderes 3. pist genişlemesi DHMI onayı alındı',         pct:70 },
+  { type:'industrial_zone_declaration',   region:'Bursa',   desc:'OSB sınırı 1,200 dönüm genişletme kararnamesi imzalandı',      pct:90 },
+  { type:'tourism_incentive_zone',        region:'Antalya', desc:'Kemer-Beldibi turizm teşvik bölgesi ilanı TBMM onayı',         pct:65 },
+  { type:'infrastructure_project_nearby', region:'Mersin',  desc:'Liman genişlemesi — 3. konteyner terminali ihalesi açıldı',    pct:80 },
+];
+
+// ── Logic ──────────────────────────────────────────────────────────────────
+function calcUsd(landType, areaM2, govSignal) {
+  const lt  = LAND_TYPES[landType] || LAND_TYPES.agricultural;
+  const mul = GOV_MULT[govSignal]  || 1.0;
+  const cur = lt.base;
+  const prj = +(cur * mul).toFixed(2);
+  const tc  = +(cur * areaM2).toFixed(2);
+  const tp  = +(prj * areaM2).toFixed(2);
+  const roi = +(((tp - tc) / tc) * 100).toFixed(1);
+  return { land_type:landType, area_m2:areaM2, current_usd_m2:cur, projected_usd_m2:prj,
+           total_current_usd:tc, total_projected_usd:tp, roi_percent:roi, gov_signal:govSignal };
+}
+
+function scoreRisk(constraints, proximityM, roadType) {
+  const base   = constraints.reduce((s, c) => s + (DEED_RISKS[c] || 0), 0);
+  const setbck = HIGHWAY_SETBACKS[roadType] || 0;
+  let score = base;
+  if (proximityM < setbck) score += 30;
+  else if (proximityM < setbck * 1.5) score += 10;
+  score = Math.min(score, 100);
+  const label = score < 20 ? 'LOW' : score < 50 ? 'MEDIUM' : score < 75 ? 'HIGH' : 'CRITICAL';
+  return { risk_score:score, risk_label:label, constraints,
+           highway_setback_required:setbck, highway_proximity_m:proximityM,
+           setback_compliant: proximityM >= setbck };
+}
+
+// ── Agents (ported from agents.py) ─────────────────────────────────────────
+const TEMPLATES = {
+  james: [
+    (a,r,v)=>`Looking at the numbers — ${fmt(a.area_m2)} m² of ${a.land_type}, sitting at $${a.current_usd_m2}/m² today. If that ${a.gov_signal.replace(/_/g,' ')} plays out, you're looking at $${a.projected_usd_m2}/m², total projected value $${fmt(a.total_projected_usd)}. ROI: ${a.roi_percent}%. Risk score ${r.risk_score}/100 — ${r.risk_label}. My call: ${v}`,
+    (a,r,v)=>`Straight to it: current buy-in is $${fmt(a.total_current_usd)}, projection hits $${fmt(a.total_projected_usd)} on the back of '${a.gov_signal}'. Title constraints: [${r.constraints.join(', ')}]. Risk is ${r.risk_label} at ${r.risk_score}/100. ${v}`,
+  ],
+  dmitry: [
+    (a,r,v)=>`Анализ завершён. Участок ${fmt(a.area_m2)} м², текущая стоимость $${a.current_usd_m2}/м². С учётом сигнала «${a.gov_signal}» прогноз: $${a.projected_usd_m2}/м² — итого $${fmt(a.total_projected_usd)}. ROI: ${a.roi_percent}%. Риск: ${r.risk_score}/100 (${r.risk_label}). Рекомендация: ${v}`,
+    (a,r,v)=>`Капитал защищается прежде всего. Актив ${fmt(a.area_m2)} м², риск-индекс ${r.risk_score}. При реализации «${a.gov_signal}» потенциал роста составит $${fmt(a.total_projected_usd)}. Обременения: [${r.constraints.join(', ')}]. ${v}`,
+  ],
+  abdullah: [
+    (a,r,v)=>`بارك الله في هذه الصفقة. مساحة الأرض ${fmt(a.area_m2)} متر مربع، السعر الحالي $${a.current_usd_m2}/م². مع إشارة «${a.gov_signal}» التوقع $${a.projected_usd_m2}/م²، الإجمالي $${fmt(a.total_projected_usd)}. العائد: ${a.roi_percent}٪. المخاطرة: ${r.risk_score}/100 — ${r.risk_label}. التوصية: ${v}`,
+    (a,r,v)=>`الثقة أساس كل استثمار. القيود المسجّلة: [${r.constraints.join(', ')}]. القيمة الحالية $${fmt(a.total_current_usd)} مقابل التوقع $${fmt(a.total_projected_usd)}. مؤشر المخاطرة ${r.risk_label}. ${v}`,
+  ],
+  selim: [
+    (a,r,v)=>`${fmt(a.area_m2)} m² ${a.land_type} parseli incelendi. Güncel birim değer $${a.current_usd_m2}/m². «${a.gov_signal}» sinyali ile projeksiyon $${a.projected_usd_m2}/m², toplam $${fmt(a.total_projected_usd)}. ROI: %${a.roi_percent}. Risk skoru ${r.risk_score}/100 — ${r.risk_label}. Sonuç: ${v}`,
+    (a,r,v)=>`3194 sayılı Kanun ve tapu kütüğü kısıtları değerlendirildi. Tespit edilen kısıtlar: [${r.constraints.join(', ')}]. Yola mesafe uyumu: ${r.setback_compliant?'uyumlu':'uyumsuz'}. Risk düzeyi: ${r.risk_label} (${r.risk_score}/100). ${v}`,
+  ],
+};
+const VERDICTS = {
+  LOW:      { james:'I\'d move on this fast.',                       dmitry:'Рекомендую к приобретению.',              abdullah:'أنصح بالمضي قُدُماً.',              selim:'Alım için uygun görünüyor.' },
+  MEDIUM:   { james:'Worth a closer look — negotiate hard on price.',dmitry:'Требует дополнительной проверки.',        abdullah:'يستحق الدراسة مع الحذر الواجب.',    selim:'Dikkatli inceleme, müzakere şart.' },
+  HIGH:     { james:'Risky. Get legal on the title first.',          dmitry:'Высокий риск. Юридическая экспертиза.',   abdullah:'مخاطرة عالية. مراجعة قانونية أولاً.',selim:'Tapu müşavirliği olmadan ilerlemeyin.' },
+  CRITICAL: { james:'Walk away unless you have serious legal cover.',dmitry:'Критический риск — отказ рекомендован.',  abdullah:'خطر حرج. التوصية بالانسحاب.',       selim:'Kritik risk. Yatırım tavsiye edilmez.' },
+};
+const AGENT_META = {
+  james:    { name:'James',    lang:'en' },
+  dmitry:   { name:'Dmitry',   lang:'ru' },
+  abdullah: { name:'Abdullah', lang:'ar' },
+  selim:    { name:'Selim',    lang:'tr' },
+};
+
+function generateAll(a, r) {
+  return Object.keys(AGENT_META).map(key => {
+    const v   = VERDICTS[r.risk_label][key];
+    const tpl = TEMPLATES[key];
+    const msg = tpl[Math.floor(Math.random() * tpl.length)](a, r, v);
+    return { agent:AGENT_META[key].name, lang:AGENT_META[key].lang, message:msg, status:'PENDING_APPROVAL' };
+  });
+}
+
+function fmt(n) { return Number(n).toLocaleString(); }
+
+// ── i18n ──────────────────────────────────────────────────────────────────
+const I18N = {
+  en:{ tag:'Sovereign Land Intelligence · TR Zoning Law 3194', hero:'Strategic Land <span class="text-gold">Acquisition</span> Intelligence',
+       sub:'Real-time ROI analysis, government signal tracking, and multi-agent due diligence — denominated exclusively in USD.',
+       cur:'Current State', fut:'Future Projection', badge:'Logistic / Commercial', form:'USD Investment Request Pool',
+       sig:'Active Government Signals', lname:'Full Name', lemail:'Email', lphone:'Phone', lbudget:'Budget (USD)',
+       ltype:'Land Type', larea:'Area (m²)', lloc:'Location / Region', lroad:'Road Type', lprox:'Highway Proximity (m)',
+       lsig:'Gov Signal', lcon:'Title Deed Constraints', btn:'Run Intelligence Analysis',
+       rep:'Intelligence Report', risk:'Risk Score', pend:'All agent outputs carry status: PENDING_APPROVAL',
+       pool:'Investment Request Pool', m1:'Current $/m²', m2:'Projected $/m²', m3:'Total Value', m4:'ROI',
+       cmort:'Mortgage', cann:'Annotation', ccourt:'Court Injunction', cease:'Easement', cmult:'Multiple Owners' },
+  ru:{ tag:'Земельная аналитика · Закон TR 3194', hero:'Стратегический анализ <span class="text-gold">земельных</span> активов',
+       sub:'ROI в реальном времени, правительственные сигналы, многоагентный анализ — только в USD.',
+       cur:'Текущее состояние', fut:'Прогноз', badge:'Логистика / Коммерция', form:'USD Инвестиционный пул',
+       sig:'Активные государственные сигналы', lname:'Полное имя', lemail:'Email', lphone:'Телефон', lbudget:'Бюджет (USD)',
+       ltype:'Тип участка', larea:'Площадь (м²)', lloc:'Локация / Регион', lroad:'Тип дороги', lprox:'Расстояние до шоссе (м)',
+       lsig:'Гос. сигнал', lcon:'Обременения', btn:'Запустить анализ',
+       rep:'Отчёт разведки', risk:'Уровень риска', pend:'Все сообщения агентов имеют статус: PENDING_APPROVAL',
+       pool:'Инвестиционный пул', m1:'Текущий $/м²', m2:'Прогноз $/м²', m3:'Стоимость', m4:'ROI',
+       cmort:'Ипотека', cann:'Аннотация', ccourt:'Судебный запрет', cease:'Сервитут', cmult:'Несколько владельцев' },
+  ar:{ tag:'استخبارات الأراضي السيادية · قانون التقسيم 3194', hero:'استخبارات الاستحواذ <span class="text-gold">الاستراتيجي</span> على الأراضي',
+       sub:'تحليل العائد الفوري، رصد الإشارات الحكومية، والعناية الواجبة متعددة الوكلاء — بالدولار حصراً.',
+       cur:'الحالة الراهنة', fut:'التوقع المستقبلي', badge:'لوجستي / تجاري', form:'مجمّع طلبات الاستثمار بالدولار',
+       sig:'الإشارات الحكومية النشطة', lname:'الاسم الكامل', lemail:'البريد الإلكتروني', lphone:'الهاتف', lbudget:'الميزانية (USD)',
+       ltype:'نوع الأرض', larea:'المساحة (م²)', lloc:'الموقع / المنطقة', lroad:'نوع الطريق', lprox:'القرب من الطريق (م)',
+       lsig:'الإشارة الحكومية', lcon:'قيود صك الملكية', btn:'تشغيل التحليل الاستخباراتي',
+       rep:'تقرير الاستخبارات', risk:'مؤشر المخاطرة', pend:'جميع مخرجات الوكلاء تحمل الحالة: PENDING_APPROVAL',
+       pool:'مجمّع الطلبات', m1:'$/م² الحالي', m2:'$/م² المتوقع', m3:'القيمة الكلية', m4:'العائد',
+       cmort:'رهن عقاري', cann:'تعليق', ccourt:'قرار قضائي', cease:'ارتفاق', cmult:'ملاك متعددون' },
+  tr:{ tag:'Egemen Arsa İstihbaratı · 3194 Sayılı İmar Kanunu', hero:'Stratejik Arsa <span class="text-gold">Edinim</span> İstihbaratı',
+       sub:'Anlık ROI analizi, hükümet sinyal takibi ve çok ajanlı durum tespiti — yalnızca USD cinsinden.',
+       cur:'Mevcut Durum', fut:'Gelecek Projeksiyon', badge:'Lojistik / Ticari', form:'USD Yatırım Talep Havuzu',
+       sig:'Aktif Hükümet Sinyalleri', lname:'Ad Soyad', lemail:'E-posta', lphone:'Telefon', lbudget:'Bütçe (USD)',
+       ltype:'Arazi Türü', larea:'Alan (m²)', lloc:'Konum / Bölge', lroad:'Yol Tipi', lprox:'Yola Mesafe (m)',
+       lsig:'Hükümet Sinyali', lcon:'Tapu Kütüğü Kısıtları', btn:'İstihbarat Analizi Başlat',
+       rep:'İstihbarat Raporu', risk:'Risk Skoru', pend:'Tüm ajan çıktıları PENDING_APPROVAL statüsündedir',
+       pool:'Yatırım Talep Havuzu', m1:'Güncel $/m²', m2:'Projeksiyon $/m²', m3:'Toplam Değer', m4:'ROI',
+       cmort:'İpotek', cann:'Şerh', ccourt:'Mahkeme Tedbiri', cease:'İrtifak', cmult:'Birden Fazla Malik' },
+};
+
+let lang = 'en';
+function setLang(l) {
+  lang = l;
+  const t = I18N[l];
+  document.documentElement.lang = l;
+  document.documentElement.dir  = l === 'ar' ? 'rtl' : 'ltr';
+  const set = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
+  set('t-tag',t.tag); set('t-hero',t.hero); set('t-sub',t.sub);
+  set('t-cur',t.cur); set('t-fut',t.fut); set('t-badge',t.badge);
+  set('t-form',t.form); set('t-sig-title',t.sig);
+  set('l-name',t.lname); set('l-email',t.lemail); set('l-phone',t.lphone); set('l-budget',t.lbudget);
+  set('l-ltype',t.ltype); set('l-area',t.larea); set('l-loc',t.lloc);
+  set('l-road',t.lroad); set('l-prox',t.lprox); set('l-sig',t.lsig); set('l-con',t.lcon);
+  set('btn-txt',t.btn); set('t-rep',t.rep); set('t-risk',t.risk); set('t-pend',t.pend); set('t-pool',t.pool);
+  set('c-mort',t.cmort); set('c-ann',t.cann); set('c-court',t.ccourt); set('c-ease',t.cease); set('c-mult',t.cmult);
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === l);
+    b.classList.toggle('text-gray-400', b.dataset.lang !== l);
+  });
+}
+
+// ── Gov signals render ─────────────────────────────────────────────────────
+function renderSignals() {
+  const grid = document.getElementById('signals-grid');
+  grid.innerHTML = GOV_SIGNALS_SEED.map(s => `
+    <div class="bg-obsidian-2 rounded p-3 gold-border space-y-1.5">
+      <div class="flex justify-between items-start gap-2">
+        <span class="text-gold text-xs font-medium">${s.type.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}</span>
+        <span class="text-gray-600 text-xs shrink-0">${s.region}</span>
+      </div>
+      <p class="text-gray-500 text-xs leading-relaxed">${s.desc}</p>
+      <div class="flex items-center gap-2">
+        <div class="flex-1 bg-obsidian-3 rounded-full h-1">
+          <div class="h-1 rounded-full" style="width:${s.pct}%;background:linear-gradient(90deg,#C9A84C,#A07828)"></div>
+        </div>
+        <span class="text-xs text-gold/60">${s.pct}%</span>
+      </div>
+    </div>`).join('');
+}
+
+// ── Analysis ───────────────────────────────────────────────────────────────
+const RISK_COLORS = { LOW:'#4ade80', MEDIUM:'#facc15', HIGH:'#fb923c', CRITICAL:'#f87171' };
+
+function runAnalysis(e) {
+  e.preventDefault();
+  const form = e.target;
+  const btn  = document.getElementById('btn-txt');
+  btn.textContent = '...';
+
+  const constraints = [...form.querySelectorAll('input[name="constraints"]:checked')].map(i=>i.value);
+  const payload = {
+    name:     form.name.value,
+    email:    form.email.value,
+    phone:    form.phone.value,
+    budget:   parseFloat(form.budget_usd.value),
+    landType: form.land_type.value,
+    area:     parseFloat(form.area_m2.value),
+    location: form.location.value,
+    roadType: form.road_type.value,
+    prox:     parseFloat(form.highway_proximity_m.value),
+    signal:   form.gov_signal.value,
+    constraints: constraints.length ? constraints : ['no_issue'],
+  };
+
+  const analysis = calcUsd(payload.landType, payload.area, payload.signal);
+  const risk     = scoreRisk(payload.constraints, payload.prox, payload.roadType);
+  const messages = generateAll(analysis, risk);
+
+  // Save to localStorage
+  const leads = JSON.parse(localStorage.getItem('lg_leads') || '[]');
+  leads.unshift({ ...payload, analysis, risk, messages, ts: new Date().toISOString() });
+  localStorage.setItem('lg_leads', JSON.stringify(leads.slice(0, 50)));
+
+  renderResults(analysis, risk, messages);
+  renderPool();
+  btn.textContent = I18N[lang].btn;
+}
+
+function renderResults(a, r, msgs) {
+  const t     = I18N[lang];
+  const color = RISK_COLORS[r.risk_label];
+  document.getElementById('results').classList.remove('hidden');
+
+  document.getElementById('metrics').innerHTML = [
+    [t.m1, `$${a.current_usd_m2}/m²`],
+    [t.m2, `$${a.projected_usd_m2}/m²`],
+    [t.m3, `$${fmt(a.total_projected_usd)}`],
+    [t.m4, `+${a.roi_percent}%`],
+  ].map(([l,v])=>`<div class="bg-obsidian-2 rounded p-4 gold-border text-center">
+    <p class="text-gray-600 text-xs mb-1">${l}</p>
+    <p class="text-gold text-lg font-semibold">${v}</p></div>`).join('');
+
+  document.getElementById('risk-val').textContent = `${r.risk_score}/100 — ${r.risk_label}`;
+  document.getElementById('risk-val').style.color  = color;
+  const bar = document.getElementById('risk-bar');
+  setTimeout(()=>{ bar.style.width = r.risk_score+'%'; bar.style.background = color; }, 50);
+
+  document.getElementById('agent-msgs').innerHTML = msgs.map(m=>`
+    <div class="bg-obsidian-2 rounded p-4 gold-border">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-gold text-xs font-semibold tracking-wide">${m.agent}</span>
+        <span class="text-xs bg-obsidian-3 text-yellow-600 px-2 py-0.5 rounded border border-yellow-900/40 badge">${m.status}</span>
+      </div>
+      <p class="text-gray-400 text-sm leading-relaxed" dir="${m.lang==='ar'?'rtl':'ltr'}">${esc(m.message)}</p>
+    </div>`).join('');
+
+  document.getElementById('results').scrollIntoView({ behavior:'smooth' });
+}
+
+function renderPool() {
+  const sec   = document.getElementById('pool-section');
+  const list  = document.getElementById('pool-list');
+  const leads = JSON.parse(localStorage.getItem('lg_leads') || '[]');
+  if (!leads.length) { sec.classList.add('hidden'); return; }
+  sec.classList.remove('hidden');
+  list.innerHTML = leads.map(l=>`
+    <div class="flex items-center justify-between bg-obsidian-2 rounded px-4 py-3 gold-border text-xs">
+      <span class="text-white">${esc(l.name)}</span>
+      <span class="text-gray-600">${esc(l.location||'—')}</span>
+      <span class="text-gold font-medium">$${fmt(l.budget)}</span>
+      <span class="text-gray-700">${(l.ts||'').slice(0,10)}</span>
+    </div>`).join('');
+}
+
+function esc(s) {
+  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+}
+
+// ── Init ───────────────────────────────────────────────────────────────────
+renderSignals();
+renderPool();
+</script>
+</body>
+</html>
