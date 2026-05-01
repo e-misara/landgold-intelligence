@@ -3,600 +3,773 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>LandGold Intelligence</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold:     { DEFAULT:'#C9A84C', light:'#E8C96A', dark:'#A07828' },
-            obsidian: { DEFAULT:'#0A0A0A', 1:'#111111', 2:'#1A1A1A', 3:'#242424' },
-          }
-        }
-      }
-    }
-  </script>
+  <meta name="description" content="Tradia Turkey — AI-powered property intelligence for international investors. USD-denominated scoring, daily regulatory tracking, and executive briefings."/>
+  <title>Tradia Turkey — AI Property Intelligence</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-    body { background:#0A0A0A; font-family:'Inter',sans-serif; }
-    .gold-border { border:1px solid #C9A84C44; }
-    .gold-glow   { box-shadow:0 0 28px #C9A84C14; }
-    .lang-btn.active { background:#C9A84C; color:#0A0A0A; }
-    .placeholder-img { background:linear-gradient(135deg,#1A1A1A 0%,#242424 50%,#1A1A1A 100%); border:1px dashed #C9A84C33; }
-    input, select { background:#1A1A1A !important; color:#e5e5e5 !important; }
-    input::placeholder { color:#444 !important; }
-    .badge { animation:pulse 2.4s cubic-bezier(.4,0,.6,1) infinite; }
-    @keyframes pulse { 0%,100%{opacity:1}50%{opacity:.45} }
-    .risk-bar-fill { transition:width .7s ease, background .7s ease; }
-    [dir="rtl"] { text-align:right; }
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Tokens ── */
+    :root {
+      --gold:       #C9973A;
+      --gold-lt:    #E8B84B;
+      --gold-dim:   rgba(201,151,58,.14);
+      --gold-bdr:   rgba(201,151,58,.22);
+      --bg:         #080808;
+      --bg1:        #0d0d0d;
+      --bg2:        #131313;
+      --bg3:        #1a1a1a;
+      --bg4:        #212121;
+      --text:       #e4e0d8;
+      --text-dim:   #7a7670;
+      --text-muted: #3e3c38;
+      --green:      #2ECC8A;
+      --red:        #E05252;
+      --blue:       #4A9EE0;
+    }
+
+    /* ── Base ── */
+    html  { scroll-behavior: smooth; }
+    body  { background: var(--bg); color: var(--text); font-family: 'DM Sans', sans-serif;
+            font-size: 15px; line-height: 1.65; min-height: 100vh; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', serif; line-height: 1.25; }
+    a    { color: inherit; text-decoration: none; }
+    img  { display: block; max-width: 100%; }
+
+    /* ── Scrollbar ── */
+    ::-webkit-scrollbar { width: 4px; height: 4px; }
+    ::-webkit-scrollbar-track { background: var(--bg2); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 2px; opacity:.5; }
+
+    /* ── Utility ── */
+    .gold        { color: var(--gold); }
+    .divider     { height: 1px; background: linear-gradient(90deg,transparent,var(--gold),transparent); opacity:.35; }
+    .eyebrow     { font-size:.65rem; letter-spacing:.28em; text-transform:uppercase; color:var(--gold); opacity:.8; }
+    .section-title { font-size:clamp(1.7rem,3vw,2.3rem); color:#fff; margin-top:.6rem; margin-bottom:2.8rem; }
+    .section-wrap  { max-width:1240px; margin:0 auto; padding:0 2rem; }
+    section.block  { padding:5.5rem 0; }
+
+    /* ── Buttons ── */
+    .btn-gold {
+      display:inline-block; background:var(--gold); color:#080808;
+      font-family:'DM Sans',sans-serif; font-size:.72rem; font-weight:600;
+      letter-spacing:.14em; text-transform:uppercase; padding:10px 22px;
+      border-radius:3px; border:none; cursor:pointer; transition:background .2s;
+    }
+    .btn-gold:hover { background:var(--gold-lt); }
+    .btn-outline {
+      display:inline-block; background:none; color:var(--gold);
+      border:1px solid var(--gold); font-family:'DM Sans',sans-serif;
+      font-size:.72rem; font-weight:600; letter-spacing:.14em;
+      text-transform:uppercase; padding:10px 22px; border-radius:3px;
+      cursor:pointer; transition:all .2s;
+    }
+    .btn-outline:hover { background:var(--gold-dim); }
+
+    /* ══════════════════════════════════════════
+       NAVBAR
+    ══════════════════════════════════════════ */
+    #navbar {
+      position:fixed; top:0; left:0; right:0; z-index:200;
+      height:62px; display:flex; align-items:center;
+      justify-content:space-between; padding:0 2.5rem;
+      background:rgba(8,8,8,.94); backdrop-filter:blur(14px);
+      border-bottom:1px solid var(--gold-bdr);
+    }
+    .nav-logo {
+      font-family:'Playfair Display',serif; font-size:1.55rem;
+      font-weight:700; color:var(--gold); letter-spacing:.05em;
+    }
+    .nav-logo sup {
+      font-family:'DM Sans',sans-serif; font-size:.5rem; font-weight:400;
+      letter-spacing:.18em; color:var(--text-dim); text-transform:uppercase;
+      vertical-align:super; margin-left:4px;
+    }
+    .nav-links { display:flex; gap:2.2rem; list-style:none; }
+    .nav-links a {
+      font-size:.72rem; letter-spacing:.12em; text-transform:uppercase;
+      color:var(--text-dim); transition:color .2s;
+    }
+    .nav-links a:hover { color:var(--gold); }
+    .nav-right { display:flex; align-items:center; gap:1rem; }
+    .lang-sw   { display:flex; gap:2px; background:var(--bg3); border:1px solid var(--gold-bdr); border-radius:4px; padding:3px; }
+    .lang-btn  { background:none; border:none; color:var(--text-muted); font-family:'DM Sans',sans-serif; font-size:.68rem; font-weight:600; letter-spacing:.1em; padding:4px 9px; border-radius:3px; cursor:pointer; transition:all .18s; }
+    .lang-btn.active { background:var(--gold); color:#080808; }
+    .lang-btn:not(.active):hover { color:var(--gold); }
+
+    /* ══════════════════════════════════════════
+       HERO
+    ══════════════════════════════════════════ */
+    #hero {
+      min-height:100vh; display:flex; flex-direction:column;
+      align-items:center; justify-content:center; text-align:center;
+      padding:80px 2rem 52px; position:relative; overflow:hidden;
+    }
+    #hero::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse 80% 50% at 50% 25%, rgba(201,151,58,.07) 0%, transparent 65%);
+      pointer-events:none;
+    }
+    .hero-eye    { margin-bottom:1.4rem; }
+    .hero-h1     { font-size:clamp(2.4rem,5.5vw,4.2rem); font-weight:600; color:#fff; max-width:820px; margin-bottom:1.4rem; }
+    .hero-h1 em  { font-style:normal; color:var(--gold); }
+    .hero-sub    { font-size:.98rem; color:var(--text-dim); max-width:560px; line-height:1.85; margin-bottom:2.8rem; }
+    .hero-ctas   { display:flex; gap:1rem; flex-wrap:wrap; justify-content:center; margin-bottom:4.5rem; }
+
+    /* ── Ticker ── */
+    .ticker-bar {
+      position:absolute; bottom:0; left:0; right:0; height:42px;
+      background:var(--bg2); border-top:1px solid var(--gold-bdr);
+      overflow:hidden; display:flex; align-items:center;
+    }
+    .ticker-live {
+      flex-shrink:0; font-size:.6rem; letter-spacing:.2em; text-transform:uppercase;
+      color:var(--gold); background:var(--bg2); padding:0 1.2rem;
+      height:100%; display:flex; align-items:center; gap:.5rem;
+      border-right:1px solid var(--gold-bdr); z-index:1;
+    }
+    .ticker-live-dot {
+      width:6px; height:6px; border-radius:50%; background:var(--green);
+      animation:pulse-glow 2s ease-in-out infinite;
+    }
+    .ticker-wrap  { overflow:hidden; flex:1; }
+    .ticker-inner { display:inline-flex; gap:3.5rem; animation:ticker-scroll 32s linear infinite; white-space:nowrap; }
+    .ticker-inner:hover { animation-play-state:paused; }
+    .ticker-item  { font-size:.7rem; letter-spacing:.06em; color:var(--gold); opacity:.85; }
+    .ticker-item b { color:#fff; font-weight:500; margin-left:.35rem; opacity:.95; }
+    @keyframes ticker-scroll { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ══════════════════════════════════════════
+       DASHBOARD
+    ══════════════════════════════════════════ */
+    #dashboard { background:var(--bg1); padding:5.5rem 0; }
+    .dash-grid {
+      display:grid;
+      grid-template-columns: 1fr 1fr 300px;
+      gap:1.4rem;
+      align-items:start;
+    }
+    .dash-col { background:var(--bg2); border:1px solid var(--gold-bdr); border-radius:6px; overflow:hidden; display:flex; flex-direction:column; }
+    .dash-col-hdr {
+      flex-shrink:0; padding:.9rem 1.2rem;
+      border-bottom:1px solid var(--gold-bdr);
+      display:flex; align-items:center; justify-content:space-between;
+    }
+    .dash-col-title { font-size:.62rem; letter-spacing:.22em; text-transform:uppercase; color:var(--gold); }
+    .dash-badge     { font-size:.58rem; letter-spacing:.08em; color:var(--text-muted); background:var(--bg4); padding:2px 8px; border-radius:2px; border:1px solid rgba(255,255,255,.04); }
+    .dash-badge.live { color:var(--green); }
+
+    /* Feed body — wraps the injected <section> */
+    .dash-feed-wrap {
+      flex:1; overflow:hidden; position:relative;
+    }
+
+    /* ── Override injected section layout ── */
+    #lg-news-feed, #lg-property-feed {
+      max-width:100% !important;
+      margin:0 !important;
+      padding:.9rem !important;
+      max-height:500px;
+      overflow-y:auto;
+      background:var(--bg2) !important;
+    }
+    /* Override injected h2 */
+    #lg-news-feed > h2, #lg-property-feed > h2 {
+      display:none !important; /* column header already shown in dash-col-hdr */
+    }
+    /* Dark override for light-background injected cards */
+    #lg-news-feed div, #lg-property-feed div {
+      background: var(--bg3) !important;
+      color: var(--text) !important;
+      border-color: var(--gold-bdr) !important;
+    }
+    /* Muted sub-text inside injected cards */
+    #lg-news-feed div > div:not(:first-child),
+    #lg-property-feed div > div:not(:first-child) {
+      color: var(--text-dim) !important;
+    }
+    /* Keep colored left-border labels visible */
+    #lg-news-feed div > div:first-child { color: inherit !important; }
+
+    .feed-placeholder { padding:1.2rem; font-size:.8rem; color:var(--text-muted); }
+
+    /* ── Agent Status Panel ── */
+    .agent-list { padding:.9rem 1.2rem; display:flex; flex-direction:column; gap:.55rem; }
+    .agent-row  { display:flex; align-items:center; justify-content:space-between; padding:.45rem 0; border-bottom:1px solid rgba(255,255,255,.04); }
+    .agent-row:last-child { border-bottom:none; }
+    .agent-lhs  { display:flex; align-items:center; gap:.65rem; }
+    .agent-name { font-size:.78rem; color:var(--text-dim); }
+    .agent-st   { font-size:.62rem; letter-spacing:.06em; color:var(--text-muted); }
+
+    .pulse-dot  { width:8px; height:8px; border-radius:50%; background:var(--green); flex-shrink:0; position:relative; }
+    .pulse-dot::after {
+      content:''; position:absolute; top:-4px; left:-4px;
+      width:16px; height:16px; border-radius:50%;
+      background:var(--green); opacity:.25;
+      animation:pulse-glow 2.2s ease-in-out infinite;
+    }
+    @keyframes pulse-glow { 0%,100%{transform:scale(1);opacity:.25} 50%{transform:scale(1.5);opacity:0} }
+
+    .stats-mini { display:grid; grid-template-columns:1fr 1fr; gap:.5rem; padding:.9rem 1.2rem; border-top:1px solid var(--gold-bdr); }
+    .stat-mini  { background:var(--bg3); border:1px solid rgba(255,255,255,.04); border-radius:4px; padding:.65rem .8rem; text-align:center; }
+    .stat-mini-val   { font-size:1.1rem; font-weight:600; color:var(--gold); font-family:'DM Sans',sans-serif; }
+    .stat-mini-label { font-size:.58rem; letter-spacing:.1em; text-transform:uppercase; color:var(--text-muted); margin-top:2px; }
+
+    /* ══════════════════════════════════════════
+       HOW IT WORKS
+    ══════════════════════════════════════════ */
+    #how-it-works { background:var(--bg); }
+    .steps-grid   { display:grid; grid-template-columns:repeat(4,1fr); background:var(--gold-bdr); border:1px solid var(--gold-bdr); border-radius:6px; overflow:hidden; gap:1px; }
+    .step { background:var(--bg2); padding:2.2rem 1.6rem; }
+    .step-num   { font-family:'Playfair Display',serif; font-size:3rem; font-weight:700; color:var(--gold); opacity:.13; line-height:1; margin-bottom:1rem; }
+    .step-agent { font-size:.62rem; letter-spacing:.18em; text-transform:uppercase; color:var(--gold); opacity:.7; margin-bottom:.5rem; }
+    .step-title { font-family:'Playfair Display',serif; font-size:1rem; color:#fff; margin-bottom:.7rem; }
+    .step-desc  { font-size:.8rem; color:var(--text-muted); line-height:1.65; }
+
+    /* ══════════════════════════════════════════
+       SCORECARD
+    ══════════════════════════════════════════ */
+    #scorecard       { background:var(--bg1); }
+    .criteria-grid   { display:grid; grid-template-columns:repeat(5,1fr); gap:1rem; }
+    .crit-card { background:var(--bg2); border:1px solid var(--gold-bdr); border-radius:6px; padding:1.3rem 1.1rem; transition:border-color .2s,background .2s; cursor:default; }
+    .crit-card:hover { border-color:var(--gold); background:var(--bg3); }
+    .crit-icon   { font-size:1.5rem; margin-bottom:.7rem; }
+    .crit-name   { font-size:.75rem; color:var(--text-dim); margin-bottom:.4rem; }
+    .crit-weight { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--gold); font-weight:600; }
+    .crit-weight span { font-size:.72rem; opacity:.6; }
+
+    /* ══════════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════════ */
+    #contact { background:var(--bg); }
+    .contact-grid { display:grid; grid-template-columns:1fr 1.3fr; gap:5rem; align-items:start; }
+    .contact-aside h2 { font-size:clamp(1.6rem,2.5vw,2rem); color:#fff; margin:.6rem 0 1rem; }
+    .contact-aside p  { font-size:.87rem; color:var(--text-muted); line-height:1.8; margin-bottom:1.8rem; }
+    .contact-detail   { font-size:.78rem; color:var(--text-dim); margin-bottom:.45rem; }
+    .contact-detail a { color:var(--gold); }
+
+    .f-group    { margin-bottom:1.1rem; }
+    .f-label    { display:block; font-size:.62rem; letter-spacing:.15em; text-transform:uppercase; color:var(--text-muted); margin-bottom:.4rem; }
+    .f-input, .f-select, .f-textarea {
+      width:100%; background:var(--bg2); border:1px solid rgba(255,255,255,.08); border-radius:4px;
+      color:var(--text); font-family:'DM Sans',sans-serif; font-size:.87rem;
+      padding:10px 14px; outline:none; transition:border-color .2s; appearance:none;
+    }
+    .f-input:focus, .f-select:focus, .f-textarea:focus { border-color:var(--gold); }
+    .f-input::placeholder, .f-textarea::placeholder { color:var(--text-muted); }
+    .f-select option { background:var(--bg3); color:var(--text); }
+    .f-textarea { resize:vertical; min-height:96px; }
+    .f-row { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .btn-submit { width:100%; padding:14px; background:var(--gold); color:#080808; border:none; font-family:'DM Sans',sans-serif; font-size:.75rem; font-weight:600; letter-spacing:.15em; text-transform:uppercase; border-radius:4px; cursor:pointer; transition:background .2s; margin-top:.4rem; }
+    .btn-submit:hover { background:var(--gold-lt); }
+
+    /* ══════════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════════ */
+    footer { background:var(--bg2); border-top:1px solid var(--gold-bdr); padding:2.5rem 2rem; text-align:center; }
+    .footer-logo { font-family:'Playfair Display',serif; font-size:1.4rem; color:var(--gold); margin-bottom:.5rem; }
+    .footer-sub  { font-size:.65rem; letter-spacing:.18em; text-transform:uppercase; color:var(--text-muted); }
+    .footer-copy { font-size:.6rem; letter-spacing:.1em; color:var(--text-muted); opacity:.5; margin-top:.5rem; }
+
+    /* ══════════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════════ */
+    @media(max-width:1100px) {
+      .dash-grid      { grid-template-columns:1fr 1fr; }
+      .dash-grid > .dash-col:nth-child(3) { grid-column:1/-1; }
+      .criteria-grid  { grid-template-columns:repeat(3,1fr); }
+    }
+    @media(max-width:780px) {
+      #navbar         { padding:0 1.2rem; }
+      .nav-links      { display:none; }
+      .dash-grid      { grid-template-columns:1fr; }
+      .steps-grid     { grid-template-columns:1fr 1fr; }
+      .criteria-grid  { grid-template-columns:repeat(2,1fr); }
+      .contact-grid   { grid-template-columns:1fr; gap:2.5rem; }
+      .f-row          { grid-template-columns:1fr; }
+      section.block   { padding:3.5rem 0; }
+    }
+    @media(max-width:480px) {
+      .steps-grid     { grid-template-columns:1fr; }
+      .criteria-grid  { grid-template-columns:1fr 1fr; }
+      .hero-ctas      { flex-direction:column; align-items:center; }
+    }
+
+    /* ── RTL ── */
+    [dir="rtl"] .ticker-inner { animation-direction:reverse; }
+    [dir="rtl"] .nav-links    { flex-direction:row-reverse; }
   </style>
 </head>
-<body class="text-gray-200 min-h-screen">
+<body>
 
-<!-- NAV -->
-<nav class="flex items-center justify-between px-6 md:px-10 py-4 border-b border-gold/20 bg-obsidian-1 sticky top-0 z-10">
-  <div class="flex items-center gap-3">
-    <svg width="26" height="26" viewBox="0 0 28 28" fill="none">
-      <polygon points="14,2 26,24 2,24" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
-      <polygon points="14,8 22,22 6,22" fill="#C9A84C" opacity="0.18"/>
-    </svg>
-    <span class="text-gold font-semibold tracking-widest text-xs uppercase">LandGold Intelligence</span>
-  </div>
-  <div class="flex gap-1 bg-obsidian-2 rounded p-1 gold-border" id="lang-sw">
-    <button class="lang-btn active px-3 py-1 rounded text-xs font-medium transition-all" data-lang="en" onclick="setLang('en')">EN</button>
-    <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="ru" onclick="setLang('ru')">RU</button>
-    <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="ar" onclick="setLang('ar')">AR</button>
-    <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="tr" onclick="setLang('tr')">TR</button>
+<!-- ══════════════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════════════ -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">TRADIA<sup data-i18n="nav-sub">Turkey Intelligence</sup></a>
+
+  <ul class="nav-links">
+    <li><a href="#dashboard" data-i18n="nav-intel">Intelligence</a></li>
+    <li><a href="#dashboard" data-i18n="nav-props">Properties</a></li>
+    <li><a href="#how-it-works" data-i18n="nav-about">About</a></li>
+    <li><a href="#contact" data-i18n="nav-contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-right">
+    <div class="lang-sw" id="lang-sw">
+      <button class="lang-btn active" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn" data-lang="ru" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn" data-lang="ar" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn" data-lang="tr" onclick="setLang('tr')">TR</button>
+    </div>
+    <a href="#contact" class="btn-gold" data-i18n="nav-cta">Request Brief</a>
   </div>
 </nav>
 
-<!-- HERO -->
-<header class="text-center py-16 px-4">
-  <p class="text-gold/50 text-xs tracking-[.3em] uppercase mb-3" id="t-tag">Sovereign Land Intelligence · TR Zoning Law 3194</p>
-  <h1 class="text-4xl md:text-5xl font-light text-white mb-4" id="t-hero">Strategic Land <span class="text-gold">Acquisition</span> Intelligence</h1>
-  <p class="text-gray-500 text-sm max-w-xl mx-auto" id="t-sub">Real-time ROI analysis, government signal tracking, and multi-agent due diligence — denominated exclusively in USD.</p>
-</header>
 
-<!-- PROJECTIONS -->
-<section class="max-w-5xl mx-auto px-6 mb-12">
-  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-    <div class="placeholder-img rounded-lg p-6 flex flex-col min-h-52 gold-glow">
-      <div class="flex items-center justify-between mb-4">
-        <span class="text-xs text-gray-500 tracking-widest uppercase" id="t-cur">Current State</span>
-        <span class="text-xs bg-obsidian-3 text-gray-500 px-2 py-0.5 rounded border border-white/5">Agricultural / Bare</span>
-      </div>
-      <div class="flex-1 flex items-center justify-center">
-        <svg width="180" height="85" viewBox="0 0 180 85" fill="none" opacity=".35">
-          <rect x="0" y="58" width="180" height="27" fill="#3a5a2a"/>
-          <line x1="0" y1="58" x2="180" y2="58" stroke="#4a7a3a" stroke-width="1"/>
-          <rect x="22" y="38" width="8" height="20" fill="#5a8a4a"/>
-          <rect x="62" y="33" width="8" height="25" fill="#5a8a4a"/>
-          <rect x="112" y="40" width="8" height="18" fill="#5a8a4a"/>
-          <rect x="152" y="36" width="8" height="22" fill="#5a8a4a"/>
-          <circle cx="90" cy="16" r="13" fill="#b8860b" opacity=".28"/>
-        </svg>
-      </div>
-      <p class="text-center text-gray-700 text-xs mt-3">[ Parcel Photo Placeholder ]</p>
+<!-- ══════════════════════════════════════════════
+     HERO
+══════════════════════════════════════════════ -->
+<section id="hero">
+  <p class="eyebrow hero-eye" data-i18n="hero-eye">AI-Powered · USD Denominated · Daily Intelligence</p>
+  <h1 class="hero-h1" data-i18n-html="hero-h1">Turkey's Most <em>Intelligent</em> Property Platform</h1>
+  <p class="hero-sub" data-i18n="hero-sub">AI-powered due diligence for international investors. Regulatory tracking. USD-denominated scoring. Daily intelligence.</p>
+  <div class="hero-ctas">
+    <a href="#dashboard" class="btn-gold"    data-i18n="hero-cta1">View Live Opportunities</a>
+    <a href="#contact"   class="btn-outline" data-i18n="hero-cta2">Request Intelligence Brief</a>
+  </div>
+
+  <div class="ticker-bar">
+    <div class="ticker-live">
+      <span class="ticker-live-dot"></span>
+      LIVE
     </div>
-    <div class="placeholder-img rounded-lg p-6 flex flex-col min-h-52 gold-glow">
-      <div class="flex items-center justify-between mb-4">
-        <span class="text-xs text-gray-500 tracking-widest uppercase" id="t-fut">Future Projection</span>
-        <span class="text-xs bg-gold/10 text-gold px-2 py-0.5 rounded border border-gold/20" id="t-badge">Logistic / Commercial</span>
-      </div>
-      <div class="flex-1 flex items-center justify-center">
-        <svg width="180" height="85" viewBox="0 0 180 85" fill="none" opacity=".5">
-          <rect x="0" y="63" width="180" height="22" fill="#1a1a1a"/>
-          <rect x="10" y="28" width="45" height="35" fill="#2a2a2a" stroke="#C9A84C" stroke-width=".8"/>
-          <rect x="65" y="18" width="55" height="45" fill="#2a2a2a" stroke="#C9A84C" stroke-width=".8"/>
-          <rect x="130" y="36" width="40" height="27" fill="#2a2a2a" stroke="#C9A84C" stroke-width=".8"/>
-          <line x1="0" y1="63" x2="180" y2="63" stroke="#C9A84C" stroke-width=".4" opacity=".4"/>
-          <rect x="68" y="20" width="8" height="5" fill="#C9A84C" opacity=".5"/>
-        </svg>
-      </div>
-      <p class="text-center text-gray-600 text-xs mt-3">[ Gov Signal: Zoning Projection ]</p>
+    <div class="ticker-wrap">
+      <div class="ticker-inner" id="ticker"></div>
     </div>
   </div>
 </section>
 
-<!-- GOV SIGNALS TICKER -->
-<section class="max-w-5xl mx-auto px-6 mb-10">
-  <div class="gold-border bg-obsidian-1 rounded-lg p-5">
-    <h3 class="text-xs text-gray-600 uppercase tracking-widest mb-4" id="t-sig-title">Active Government Signals</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-3" id="signals-grid">
-      <!-- populated by JS -->
-    </div>
-  </div>
-</section>
+<div class="divider"></div>
 
-<!-- FORM -->
-<section class="max-w-3xl mx-auto px-6 mb-12">
-  <div class="gold-border gold-glow rounded-lg p-8 bg-obsidian-1">
-    <h2 class="text-gold text-xs tracking-widest uppercase mb-6" id="t-form">USD Investment Request Pool</h2>
-    <form id="af" onsubmit="runAnalysis(event)" class="space-y-5">
 
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-name">Full Name</label>
-          <input type="text" name="name" required placeholder="Your Name" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-email">Email</label>
-          <input type="email" name="email" required placeholder="you@example.com" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-phone">Phone</label>
-          <input type="text" name="phone" placeholder="+1 000 000 0000" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-budget">Budget (USD)</label>
-          <input type="number" name="budget_usd" required placeholder="250000" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-      </div>
+<!-- ══════════════════════════════════════════════
+     LIVE INTELLIGENCE DASHBOARD
+══════════════════════════════════════════════ -->
+<section id="dashboard" class="block">
+  <div class="section-wrap">
+    <p class="eyebrow" data-i18n="dash-eye">Live Intelligence Dashboard</p>
+    <h2 class="section-title" data-i18n="dash-title">Today's Market Intelligence</h2>
 
-      <hr class="border-white/5"/>
+    <div class="dash-grid">
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-ltype">Land Type</label>
-          <select name="land_type" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
-            <option value="agricultural">Agricultural</option>
-            <option value="zoned_commercial">Zoned Commercial</option>
-            <option value="zoned_residential">Zoned Residential</option>
-            <option value="industrial">Industrial</option>
-            <option value="tourism_zone">Tourism Zone</option>
-            <option value="forest_edge">Forest Edge</option>
-          </select></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-area">Area (m²)</label>
-          <input type="number" name="area_m2" required placeholder="5000" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-loc">Location / Region</label>
-          <input type="text" name="location" placeholder="e.g. Konya, TR" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-road">Road Type</label>
-          <select name="road_type" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
-            <option value="provincial_road">Provincial Road</option>
-            <option value="state_road">State Road</option>
-            <option value="motorway">Motorway</option>
-            <option value="village_road">Village Road</option>
-          </select></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-prox">Highway Proximity (m)</label>
-          <input type="number" name="highway_proximity_m" required placeholder="80" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/></div>
-        <div><label class="block text-xs text-gray-600 mb-1" id="l-sig">Gov Signal</label>
-          <select name="gov_signal" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
-            <option value="none">None</option>
-            <option value="municipality_zoning_change">Zoning Change</option>
-            <option value="infrastructure_project_nearby">Infrastructure Nearby</option>
-            <option value="highway_extension">Highway Extension</option>
-            <option value="airport_expansion">Airport Expansion</option>
-            <option value="industrial_zone_declaration">Industrial Zone</option>
-            <option value="tourism_incentive_zone">Tourism Incentive</option>
-          </select></div>
-      </div>
-
-      <div>
-        <label class="block text-xs text-gray-600 mb-2" id="l-con">Title Deed Constraints</label>
-        <div class="flex flex-wrap gap-4">
-          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="mortgage" class="accent-gold"/> <span id="c-mort">Mortgage</span></label>
-          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="annotation" class="accent-gold"/> <span id="c-ann">Annotation</span></label>
-          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="court_injunction" class="accent-gold"/> <span id="c-court">Court Injunction</span></label>
-          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="easement" class="accent-gold"/> <span id="c-ease">Easement</span></label>
-          <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer"><input type="checkbox" name="constraints" value="multiple_owners" class="accent-gold"/> <span id="c-mult">Multiple Owners</span></label>
+      <!-- Col 1 — News Feed -->
+      <div class="dash-col">
+        <div class="dash-col-hdr">
+          <span class="dash-col-title" data-i18n="col-news">Market Signals</span>
+          <span class="dash-badge live">● Live</span>
+        </div>
+        <div class="dash-feed-wrap">
+          <section id="lg-news-feed">
+            <div class="feed-placeholder" data-i18n="feed-news-ph">Fetching market signals…</div>
+          </section>
         </div>
       </div>
 
-      <button type="submit" class="w-full py-3 rounded bg-gold text-obsidian font-semibold text-sm tracking-widest uppercase hover:bg-gold-light transition-colors">
-        <span id="btn-txt">Run Intelligence Analysis</span>
-      </button>
-    </form>
+      <!-- Col 2 — Property Feed -->
+      <div class="dash-col">
+        <div class="dash-col-hdr">
+          <span class="dash-col-title" data-i18n="col-props">Active Opportunities</span>
+          <span class="dash-badge live">● Live</span>
+        </div>
+        <div class="dash-feed-wrap">
+          <section id="lg-property-feed">
+            <div class="feed-placeholder" data-i18n="feed-prop-ph">Loading active opportunities…</div>
+          </section>
+        </div>
+      </div>
+
+      <!-- Col 3 — System Status -->
+      <div class="dash-col">
+        <div class="dash-col-hdr">
+          <span class="dash-col-title" data-i18n="col-status">System Status</span>
+          <span class="dash-badge" style="color:var(--green)">● Operational</span>
+        </div>
+        <div class="agent-list">
+          <div class="agent-row">
+            <div class="agent-lhs"><div class="pulse-dot"></div><span class="agent-name" data-i18n="ag-ceo">CEO Agent</span></div>
+            <span class="agent-st" data-i18n="st-active">Active</span>
+          </div>
+          <div class="agent-row">
+            <div class="agent-lhs"><div class="pulse-dot"></div><span class="agent-name" data-i18n="ag-news">News Agent</span></div>
+            <span class="agent-st" data-i18n="st-scan">Scanning</span>
+          </div>
+          <div class="agent-row">
+            <div class="agent-lhs"><div class="pulse-dot"></div><span class="agent-name" data-i18n="ag-prop">Property Agent</span></div>
+            <span class="agent-st" data-i18n="st-score">Scoring</span>
+          </div>
+          <div class="agent-row">
+            <div class="agent-lhs"><div class="pulse-dot"></div><span class="agent-name" data-i18n="ag-out">Outreach Agent</span></div>
+            <span class="agent-st" data-i18n="st-active">Active</span>
+          </div>
+          <div class="agent-row">
+            <div class="agent-lhs"><div class="pulse-dot"></div><span class="agent-name" data-i18n="ag-dev">Dev Agent</span></div>
+            <span class="agent-st" data-i18n="st-mon">Monitoring</span>
+          </div>
+        </div>
+        <div class="stats-mini">
+          <div class="stat-mini">
+            <div class="stat-mini-val">6</div>
+            <div class="stat-mini-label" data-i18n="s-src">Sources</div>
+          </div>
+          <div class="stat-mini">
+            <div class="stat-mini-val">10</div>
+            <div class="stat-mini-label" data-i18n="s-prop">Properties</div>
+          </div>
+          <div class="stat-mini">
+            <div class="stat-mini-val">67.8</div>
+            <div class="stat-mini-label" data-i18n="s-avg">Avg Score</div>
+          </div>
+          <div class="stat-mini">
+            <div class="stat-mini-val" id="last-upd">—</div>
+            <div class="stat-mini-label" data-i18n="s-upd">Updated</div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /dash-grid -->
   </div>
 </section>
 
-<!-- RESULTS -->
-<section class="max-w-3xl mx-auto px-6 mb-20 hidden" id="results">
-  <div class="gold-border gold-glow rounded-lg p-8 bg-obsidian-1 space-y-6">
-    <h2 class="text-gold text-xs tracking-widest uppercase" id="t-rep">Intelligence Report</h2>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="metrics"></div>
-    <div>
-      <div class="flex justify-between text-xs mb-1">
-        <span class="text-gray-500" id="t-risk">Risk Score</span>
-        <span id="risk-val" class="font-medium"></span>
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════
+     HOW IT WORKS
+══════════════════════════════════════════════ -->
+<section id="how-it-works" class="block">
+  <div class="section-wrap">
+    <p class="eyebrow" data-i18n="how-eye">Methodology</p>
+    <h2 class="section-title" data-i18n="how-title">How Tradia Works</h2>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-agent" data-i18n="s1-ag">News Agent</div>
+        <h3 class="step-title" data-i18n="s1-t">Regulatory Scan</h3>
+        <p class="step-desc" data-i18n="s1-d">Monitors 6+ Turkish news sources, official gazette, and regulatory feeds for zoning changes, infrastructure signals, and market movements.</p>
       </div>
-      <div class="w-full bg-obsidian-3 rounded-full h-1.5">
-        <div id="risk-bar" class="h-1.5 rounded-full risk-bar-fill" style="width:0%"></div>
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-agent" data-i18n="s2-ag">Property Agent</div>
+        <h3 class="step-title" data-i18n="s2-t">Property Scoring</h3>
+        <p class="step-desc" data-i18n="s2-d">10-criteria weighted scorecard evaluates every listing: location, zoning, legal cleanliness, infrastructure proximity, and USD price-value ratio.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-agent" data-i18n="s3-ag">Outreach Agent</div>
+        <h3 class="step-title" data-i18n="s3-t">Investor Matching</h3>
+        <p class="step-desc" data-i18n="s3-d">Profiles and segments international investors from Gulf, Russia, and Europe. Generates personalized briefs in EN, RU, and AR.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">04</div>
+        <div class="step-agent" data-i18n="s4-ag">CEO Agent</div>
+        <h3 class="step-title" data-i18n="s4-t">CEO Synthesis</h3>
+        <p class="step-desc" data-i18n="s4-d">Aggregates all agent outputs into a daily executive briefing and weekly investor report with priority actions and conflict resolution.</p>
       </div>
     </div>
-    <div class="space-y-4" id="agent-msgs"></div>
-    <p class="text-xs text-gray-700 text-center" id="t-pend">All agent outputs carry status: PENDING_APPROVAL</p>
   </div>
 </section>
 
-<!-- LEAD POOL -->
-<section class="max-w-3xl mx-auto px-6 mb-20 hidden" id="pool-section">
-  <div class="gold-border bg-obsidian-1 rounded-lg p-6">
-    <h2 class="text-gold text-xs tracking-widest uppercase mb-4" id="t-pool">Investment Request Pool</h2>
-    <div id="pool-list" class="space-y-2"></div>
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════
+     PROPERTY SCORECARD
+══════════════════════════════════════════════ -->
+<section id="scorecard" class="block">
+  <div class="section-wrap">
+    <p class="eyebrow" data-i18n="sc-eye">Scoring Methodology</p>
+    <h2 class="section-title" data-i18n="sc-title">10-Criteria Property Scorecard</h2>
+    <div class="criteria-grid">
+      <div class="crit-card"><div class="crit-icon">📍</div><div class="crit-name" data-i18n="c1">Location Score</div><div class="crit-weight">20<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">🏗️</div><div class="crit-name" data-i18n="c2">Zoning Score</div><div class="crit-weight">15<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">⚖️</div><div class="crit-name" data-i18n="c3">Legal Cleanliness</div><div class="crit-weight">15<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">🛣️</div><div class="crit-name" data-i18n="c4">Infrastructure</div><div class="crit-weight">12<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">💵</div><div class="crit-name" data-i18n="c5">Price / Value</div><div class="crit-weight">12<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">🏦</div><div class="crit-name" data-i18n="c6">Rental Yield</div><div class="crit-weight">10<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">📈</div><div class="crit-name" data-i18n="c7">5yr Projection</div><div class="crit-weight">8<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">💧</div><div class="crit-name" data-i18n="c8">Liquidity</div><div class="crit-weight">5<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">🏛️</div><div class="crit-name" data-i18n="c9">Gov Signal</div><div class="crit-weight">2<span>%</span></div></div>
+      <div class="crit-card"><div class="crit-icon">📰</div><div class="crit-name" data-i18n="c10">News Context</div><div class="crit-weight">1<span>%</span></div></div>
+    </div>
   </div>
 </section>
 
-<footer class="border-t border-gold/10 text-center py-6 text-gray-700 text-xs tracking-widest">
-  LANDGOLD INTELLIGENCE · USD DENOMINATED · TR LAW 3194
+<div class="divider"></div>
+
+
+<!-- ══════════════════════════════════════════════
+     CONTACT
+══════════════════════════════════════════════ -->
+<section id="contact" class="block">
+  <div class="section-wrap">
+    <div class="contact-grid">
+
+      <div class="contact-aside">
+        <p class="eyebrow" data-i18n="ct-eye">Intelligence Brief</p>
+        <h2 data-i18n="ct-title">Request a Private Briefing</h2>
+        <p data-i18n="ct-desc">Our intelligence system generates USD-denominated property briefs for qualified international investors. Share your parameters and receive a tailored report within 24 hours.</p>
+        <p class="contact-detail" data-i18n="ct-email">Email: <a href="mailto:intel@tradiaturkey.com">intel@tradiaturkey.com</a></p>
+        <p class="contact-detail" data-i18n="ct-cov">Coverage: Istanbul · Ankara · İzmir · Bursa · Antalya</p>
+        <p class="contact-detail" data-i18n="ct-min">Min. Investment: $75,000 USD</p>
+      </div>
+
+      <form id="contact-form" onsubmit="submitForm(event)">
+        <div class="f-row">
+          <div class="f-group">
+            <label class="f-label" data-i18n="f-name">Name</label>
+            <input type="text" class="f-input" required data-i18n-ph="f-name-ph"/>
+          </div>
+          <div class="f-group">
+            <label class="f-label" data-i18n="f-email">Email</label>
+            <input type="email" class="f-input" required data-i18n-ph="f-email-ph"/>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label class="f-label" data-i18n="f-country">Country</label>
+            <select class="f-select">
+              <option value="">—</option>
+              <option>United Arab Emirates</option>
+              <option>Saudi Arabia</option>
+              <option>Kuwait</option>
+              <option>Qatar</option>
+              <option>Russia</option>
+              <option>Germany</option>
+              <option>United Kingdom</option>
+              <option>France</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label class="f-label" data-i18n="f-budget">Budget (USD)</label>
+            <select class="f-select">
+              <option>$75k – $150k</option>
+              <option>$150k – $300k</option>
+              <option>$300k – $500k</option>
+              <option>$500k – $1M</option>
+              <option>$1M+</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-row">
+          <div class="f-group">
+            <label class="f-label" data-i18n="f-type">Property Type</label>
+            <select class="f-select">
+              <option data-i18n="ft-land">Commercial Land</option>
+              <option data-i18n="ft-ind">Industrial Land</option>
+              <option data-i18n="ft-res">Residential</option>
+              <option data-i18n="ft-com">Commercial Office</option>
+              <option data-i18n="ft-mix">Mixed Use</option>
+            </select>
+          </div>
+          <div class="f-group">
+            <label class="f-label" data-i18n="f-region">Preferred Region</label>
+            <select class="f-select">
+              <option>Istanbul</option>
+              <option>Ankara</option>
+              <option>İzmir</option>
+              <option>Bursa</option>
+              <option>Antalya</option>
+              <option data-i18n="fr-any">Any Region</option>
+            </select>
+          </div>
+        </div>
+        <div class="f-group">
+          <label class="f-label" data-i18n="f-msg">Message</label>
+          <textarea class="f-textarea" data-i18n-ph="f-msg-ph"></textarea>
+        </div>
+        <button type="submit" class="btn-submit" data-i18n="f-sub">Submit Request</button>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ══════════════════════════════════════════════
+     FOOTER
+══════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-logo">TRADIA</div>
+  <p class="footer-sub" data-i18n="ft-sub">TURKEY · AI-POWERED PROPERTY INTELLIGENCE · TRADIATURKEY.COM</p>
+  <p class="footer-copy">© 2026 TRADIA. ALL RIGHTS RESERVED.</p>
 </footer>
 
+
 <script>
-// ── Constants (ported from logic.py) ───────────────────────────────────────
-const HIGHWAY_SETBACKS = { motorway:50, state_road:30, provincial_road:15, village_road:10 };
-const LAND_TYPES = {
-  agricultural:      { base:8,  mult:2.5 },
-  forest_edge:       { base:5,  mult:1.8 },
-  zoned_residential: { base:45, mult:3.2 },
-  zoned_commercial:  { base:90, mult:4.5 },
-  industrial:        { base:35, mult:3.0 },
-  tourism_zone:      { base:60, mult:5.0 },
-};
-const DEED_RISKS = { mortgage:25, annotation:15, court_injunction:40, easement:10, multiple_owners:20, no_issue:0 };
-const GOV_MULT  = {
-  infrastructure_project_nearby:1.8, municipality_zoning_change:2.2,
-  highway_extension:1.6, airport_expansion:2.5,
-  industrial_zone_declaration:1.9, tourism_incentive_zone:2.3, none:1.0,
-};
-const GOV_SIGNALS_SEED = [
-  { type:'municipality_zoning_change',    region:'Konya',   desc:'Karatay ilçesi imar planı revizyonu — tarım → ticari',         pct:78 },
-  { type:'highway_extension',             region:'Ankara',  desc:'Kuzey Çevre Yolu 42 km uzatma projesi ihaleye çıktı',          pct:85 },
-  { type:'airport_expansion',             region:'İzmir',   desc:'Adnan Menderes 3. pist genişlemesi DHMI onayı alındı',         pct:70 },
-  { type:'industrial_zone_declaration',   region:'Bursa',   desc:'OSB sınırı 1,200 dönüm genişletme kararnamesi imzalandı',      pct:90 },
-  { type:'tourism_incentive_zone',        region:'Antalya', desc:'Kemer-Beldibi turizm teşvik bölgesi ilanı TBMM onayı',         pct:65 },
-  { type:'infrastructure_project_nearby', region:'Mersin',  desc:'Liman genişlemesi — 3. konteyner terminali ihalesi açıldı',    pct:80 },
-];
-
-// ── Logic ──────────────────────────────────────────────────────────────────
-function calcUsd(landType, areaM2, govSignal) {
-  const lt  = LAND_TYPES[landType] || LAND_TYPES.agricultural;
-  const mul = GOV_MULT[govSignal]  || 1.0;
-  const cur = lt.base;
-  const prj = +(cur * mul).toFixed(2);
-  const tc  = +(cur * areaM2).toFixed(2);
-  const tp  = +(prj * areaM2).toFixed(2);
-  const roi = +(((tp - tc) / tc) * 100).toFixed(1);
-  return { land_type:landType, area_m2:areaM2, current_usd_m2:cur, projected_usd_m2:prj,
-           total_current_usd:tc, total_projected_usd:tp, roi_percent:roi, gov_signal:govSignal };
-}
-
-function scoreRisk(constraints, proximityM, roadType) {
-  const base   = constraints.reduce((s, c) => s + (DEED_RISKS[c] || 0), 0);
-  const setbck = HIGHWAY_SETBACKS[roadType] || 0;
-  let score = base;
-  if (proximityM < setbck) score += 30;
-  else if (proximityM < setbck * 1.5) score += 10;
-  score = Math.min(score, 100);
-  const label = score < 20 ? 'LOW' : score < 50 ? 'MEDIUM' : score < 75 ? 'HIGH' : 'CRITICAL';
-  return { risk_score:score, risk_label:label, constraints,
-           highway_setback_required:setbck, highway_proximity_m:proximityM,
-           setback_compliant: proximityM >= setbck };
-}
-
-// ── Agents (ported from agents.py) ─────────────────────────────────────────
-const TEMPLATES = {
-  james: [
-    (a,r,v)=>`Looking at the numbers — ${fmt(a.area_m2)} m² of ${a.land_type}, sitting at $${a.current_usd_m2}/m² today. If that ${a.gov_signal.replace(/_/g,' ')} plays out, you're looking at $${a.projected_usd_m2}/m², total projected value $${fmt(a.total_projected_usd)}. ROI: ${a.roi_percent}%. Risk score ${r.risk_score}/100 — ${r.risk_label}. My call: ${v}`,
-    (a,r,v)=>`Straight to it: current buy-in is $${fmt(a.total_current_usd)}, projection hits $${fmt(a.total_projected_usd)} on the back of '${a.gov_signal}'. Title constraints: [${r.constraints.join(', ')}]. Risk is ${r.risk_label} at ${r.risk_score}/100. ${v}`,
-  ],
-  dmitry: [
-    (a,r,v)=>`Анализ завершён. Участок ${fmt(a.area_m2)} м², текущая стоимость $${a.current_usd_m2}/м². С учётом сигнала «${a.gov_signal}» прогноз: $${a.projected_usd_m2}/м² — итого $${fmt(a.total_projected_usd)}. ROI: ${a.roi_percent}%. Риск: ${r.risk_score}/100 (${r.risk_label}). Рекомендация: ${v}`,
-    (a,r,v)=>`Капитал защищается прежде всего. Актив ${fmt(a.area_m2)} м², риск-индекс ${r.risk_score}. При реализации «${a.gov_signal}» потенциал роста составит $${fmt(a.total_projected_usd)}. Обременения: [${r.constraints.join(', ')}]. ${v}`,
-  ],
-  abdullah: [
-    (a,r,v)=>`بارك الله في هذه الصفقة. مساحة الأرض ${fmt(a.area_m2)} متر مربع، السعر الحالي $${a.current_usd_m2}/م². مع إشارة «${a.gov_signal}» التوقع $${a.projected_usd_m2}/م²، الإجمالي $${fmt(a.total_projected_usd)}. العائد: ${a.roi_percent}٪. المخاطرة: ${r.risk_score}/100 — ${r.risk_label}. التوصية: ${v}`,
-    (a,r,v)=>`الثقة أساس كل استثمار. القيود المسجّلة: [${r.constraints.join(', ')}]. القيمة الحالية $${fmt(a.total_current_usd)} مقابل التوقع $${fmt(a.total_projected_usd)}. مؤشر المخاطرة ${r.risk_label}. ${v}`,
-  ],
-  selim: [
-    (a,r,v)=>`${fmt(a.area_m2)} m² ${a.land_type} parseli incelendi. Güncel birim değer $${a.current_usd_m2}/m². «${a.gov_signal}» sinyali ile projeksiyon $${a.projected_usd_m2}/m², toplam $${fmt(a.total_projected_usd)}. ROI: %${a.roi_percent}. Risk skoru ${r.risk_score}/100 — ${r.risk_label}. Sonuç: ${v}`,
-    (a,r,v)=>`3194 sayılı Kanun ve tapu kütüğü kısıtları değerlendirildi. Tespit edilen kısıtlar: [${r.constraints.join(', ')}]. Yola mesafe uyumu: ${r.setback_compliant?'uyumlu':'uyumsuz'}. Risk düzeyi: ${r.risk_label} (${r.risk_score}/100). ${v}`,
-  ],
-};
-const VERDICTS = {
-  LOW:      { james:'I\'d move on this fast.',                       dmitry:'Рекомендую к приобретению.',              abdullah:'أنصح بالمضي قُدُماً.',              selim:'Alım için uygun görünüyor.' },
-  MEDIUM:   { james:'Worth a closer look — negotiate hard on price.',dmitry:'Требует дополнительной проверки.',        abdullah:'يستحق الدراسة مع الحذر الواجب.',    selim:'Dikkatli inceleme, müzakere şart.' },
-  HIGH:     { james:'Risky. Get legal on the title first.',          dmitry:'Высокий риск. Юридическая экспертиза.',   abdullah:'مخاطرة عالية. مراجعة قانونية أولاً.',selim:'Tapu müşavirliği olmadan ilerlemeyin.' },
-  CRITICAL: { james:'Walk away unless you have serious legal cover.',dmitry:'Критический риск — отказ рекомендован.',  abdullah:'خطر حرج. التوصية بالانسحاب.',       selim:'Kritik risk. Yatırım tavsiye edilmez.' },
-};
-const AGENT_META = {
-  james:    { name:'James',    lang:'en' },
-  dmitry:   { name:'Dmitry',   lang:'ru' },
-  abdullah: { name:'Abdullah', lang:'ar' },
-  selim:    { name:'Selim',    lang:'tr' },
-};
-
-function generateAll(a, r) {
-  return Object.keys(AGENT_META).map(key => {
-    const v   = VERDICTS[r.risk_label][key];
-    const tpl = TEMPLATES[key];
-    const msg = tpl[Math.floor(Math.random() * tpl.length)](a, r, v);
-    return { agent:AGENT_META[key].name, lang:AGENT_META[key].lang, message:msg, status:'PENDING_APPROVAL' };
-  });
-}
-
-function fmt(n) { return Number(n).toLocaleString(); }
-
-// ── i18n ──────────────────────────────────────────────────────────────────
-const I18N = {
-  en:{ tag:'Sovereign Land Intelligence · TR Zoning Law 3194', hero:'Strategic Land <span class="text-gold">Acquisition</span> Intelligence',
-       sub:'Real-time ROI analysis, government signal tracking, and multi-agent due diligence — denominated exclusively in USD.',
-       cur:'Current State', fut:'Future Projection', badge:'Logistic / Commercial', form:'USD Investment Request Pool',
-       sig:'Active Government Signals', lname:'Full Name', lemail:'Email', lphone:'Phone', lbudget:'Budget (USD)',
-       ltype:'Land Type', larea:'Area (m²)', lloc:'Location / Region', lroad:'Road Type', lprox:'Highway Proximity (m)',
-       lsig:'Gov Signal', lcon:'Title Deed Constraints', btn:'Run Intelligence Analysis',
-       rep:'Intelligence Report', risk:'Risk Score', pend:'All agent outputs carry status: PENDING_APPROVAL',
-       pool:'Investment Request Pool', m1:'Current $/m²', m2:'Projected $/m²', m3:'Total Value', m4:'ROI',
-       cmort:'Mortgage', cann:'Annotation', ccourt:'Court Injunction', cease:'Easement', cmult:'Multiple Owners' },
-  ru:{ tag:'Земельная аналитика · Закон TR 3194', hero:'Стратегический анализ <span class="text-gold">земельных</span> активов',
-       sub:'ROI в реальном времени, правительственные сигналы, многоагентный анализ — только в USD.',
-       cur:'Текущее состояние', fut:'Прогноз', badge:'Логистика / Коммерция', form:'USD Инвестиционный пул',
-       sig:'Активные государственные сигналы', lname:'Полное имя', lemail:'Email', lphone:'Телефон', lbudget:'Бюджет (USD)',
-       ltype:'Тип участка', larea:'Площадь (м²)', lloc:'Локация / Регион', lroad:'Тип дороги', lprox:'Расстояние до шоссе (м)',
-       lsig:'Гос. сигнал', lcon:'Обременения', btn:'Запустить анализ',
-       rep:'Отчёт разведки', risk:'Уровень риска', pend:'Все сообщения агентов имеют статус: PENDING_APPROVAL',
-       pool:'Инвестиционный пул', m1:'Текущий $/м²', m2:'Прогноз $/м²', m3:'Стоимость', m4:'ROI',
-       cmort:'Ипотека', cann:'Аннотация', ccourt:'Судебный запрет', cease:'Сервитут', cmult:'Несколько владельцев' },
-  ar:{ tag:'استخبارات الأراضي السيادية · قانون التقسيم 3194', hero:'استخبارات الاستحواذ <span class="text-gold">الاستراتيجي</span> على الأراضي',
-       sub:'تحليل العائد الفوري، رصد الإشارات الحكومية، والعناية الواجبة متعددة الوكلاء — بالدولار حصراً.',
-       cur:'الحالة الراهنة', fut:'التوقع المستقبلي', badge:'لوجستي / تجاري', form:'مجمّع طلبات الاستثمار بالدولار',
-       sig:'الإشارات الحكومية النشطة', lname:'الاسم الكامل', lemail:'البريد الإلكتروني', lphone:'الهاتف', lbudget:'الميزانية (USD)',
-       ltype:'نوع الأرض', larea:'المساحة (م²)', lloc:'الموقع / المنطقة', lroad:'نوع الطريق', lprox:'القرب من الطريق (م)',
-       lsig:'الإشارة الحكومية', lcon:'قيود صك الملكية', btn:'تشغيل التحليل الاستخباراتي',
-       rep:'تقرير الاستخبارات', risk:'مؤشر المخاطرة', pend:'جميع مخرجات الوكلاء تحمل الحالة: PENDING_APPROVAL',
-       pool:'مجمّع الطلبات', m1:'$/م² الحالي', m2:'$/م² المتوقع', m3:'القيمة الكلية', m4:'العائد',
-       cmort:'رهن عقاري', cann:'تعليق', ccourt:'قرار قضائي', cease:'ارتفاق', cmult:'ملاك متعددون' },
-  tr:{ tag:'Egemen Arsa İstihbaratı · 3194 Sayılı İmar Kanunu', hero:'Stratejik Arsa <span class="text-gold">Edinim</span> İstihbaratı',
-       sub:'Anlık ROI analizi, hükümet sinyal takibi ve çok ajanlı durum tespiti — yalnızca USD cinsinden.',
-       cur:'Mevcut Durum', fut:'Gelecek Projeksiyon', badge:'Lojistik / Ticari', form:'USD Yatırım Talep Havuzu',
-       sig:'Aktif Hükümet Sinyalleri', lname:'Ad Soyad', lemail:'E-posta', lphone:'Telefon', lbudget:'Bütçe (USD)',
-       ltype:'Arazi Türü', larea:'Alan (m²)', lloc:'Konum / Bölge', lroad:'Yol Tipi', lprox:'Yola Mesafe (m)',
-       lsig:'Hükümet Sinyali', lcon:'Tapu Kütüğü Kısıtları', btn:'İstihbarat Analizi Başlat',
-       rep:'İstihbarat Raporu', risk:'Risk Skoru', pend:'Tüm ajan çıktıları PENDING_APPROVAL statüsündedir',
-       pool:'Yatırım Talep Havuzu', m1:'Güncel $/m²', m2:'Projeksiyon $/m²', m3:'Toplam Değer', m4:'ROI',
-       cmort:'İpotek', cann:'Şerh', ccourt:'Mahkeme Tedbiri', cease:'İrtifak', cmult:'Birden Fazla Malik' },
+// ── i18n ─────────────────────────────────────────────────────────────────────
+const T = {
+  en:{
+    "nav-sub":"Turkey Intelligence","nav-intel":"Intelligence","nav-props":"Properties","nav-about":"About","nav-contact":"Contact","nav-cta":"Request Brief",
+    "hero-eye":"AI-Powered · USD Denominated · Daily Intelligence",
+    "hero-h1":"Turkey's Most <em>Intelligent</em> Property Platform",
+    "hero-sub":"AI-powered due diligence for international investors. Regulatory tracking. USD-denominated scoring. Daily intelligence.",
+    "hero-cta1":"View Live Opportunities","hero-cta2":"Request Intelligence Brief",
+    "dash-eye":"Live Intelligence Dashboard","dash-title":"Today's Market Intelligence",
+    "col-news":"Market Signals","col-props":"Active Opportunities","col-status":"System Status",
+    "feed-news-ph":"Fetching market signals…","feed-prop-ph":"Loading active opportunities…",
+    "ag-ceo":"CEO Agent","ag-news":"News Agent","ag-prop":"Property Agent","ag-out":"Outreach Agent","ag-dev":"Dev Agent",
+    "st-active":"Active","st-scan":"Scanning","st-score":"Scoring","st-mon":"Monitoring",
+    "s-src":"Sources","s-prop":"Properties","s-avg":"Avg Score","s-upd":"Updated",
+    "how-eye":"Methodology","how-title":"How Tradia Works",
+    "s1-ag":"News Agent","s1-t":"Regulatory Scan","s1-d":"Monitors 6+ Turkish news sources, official gazette, and regulatory feeds for zoning changes, infrastructure signals, and market movements.",
+    "s2-ag":"Property Agent","s2-t":"Property Scoring","s2-d":"10-criteria weighted scorecard evaluates every listing: location, zoning, legal cleanliness, infrastructure proximity, and USD price-value ratio.",
+    "s3-ag":"Outreach Agent","s3-t":"Investor Matching","s3-d":"Profiles and segments international investors from Gulf, Russia, and Europe. Generates personalized briefs in EN, RU, and AR.",
+    "s4-ag":"CEO Agent","s4-t":"CEO Synthesis","s4-d":"Aggregates all agent outputs into a daily executive briefing and weekly investor report with priority actions and conflict resolution.",
+    "sc-eye":"Scoring Methodology","sc-title":"10-Criteria Property Scorecard",
+    "c1":"Location Score","c2":"Zoning Score","c3":"Legal Cleanliness","c4":"Infrastructure","c5":"Price / Value","c6":"Rental Yield","c7":"5yr Projection","c8":"Liquidity","c9":"Gov Signal","c10":"News Context",
+    "ct-eye":"Intelligence Brief","ct-title":"Request a Private Briefing",
+    "ct-desc":"Our intelligence system generates USD-denominated property briefs for qualified international investors. Share your parameters and receive a tailored report within 24 hours.",
+    "ct-email":"Email: intel@tradiaturkey.com","ct-cov":"Coverage: Istanbul · Ankara · İzmir · Bursa · Antalya","ct-min":"Min. Investment: $75,000 USD",
+    "f-name":"Name","f-name-ph":"Your full name","f-email":"Email","f-email-ph":"you@example.com","f-country":"Country","f-budget":"Budget (USD)","f-type":"Property Type","f-region":"Preferred Region",
+    "ft-land":"Commercial Land","ft-ind":"Industrial Land","ft-res":"Residential","ft-com":"Commercial Office","ft-mix":"Mixed Use","fr-any":"Any Region",
+    "f-msg":"Message","f-msg-ph":"Tell us about your investment goals…","f-sub":"Submit Request",
+    "ft-sub":"TURKEY · AI-POWERED PROPERTY INTELLIGENCE · TRADIATURKEY.COM"
+  },
+  ru:{
+    "nav-sub":"Аналитика Турции","nav-intel":"Аналитика","nav-props":"Объекты","nav-about":"О нас","nav-contact":"Контакт","nav-cta":"Запросить Брифинг",
+    "hero-eye":"ИИ-аналитика · Номинировано в USD · Ежедневно",
+    "hero-h1":"Самая <em>Интеллектуальная</em> Платформа Недвижимости Турции",
+    "hero-sub":"ИИ-анализ для международных инвесторов. Отслеживание регулятора. Оценка в USD. Ежедневная аналитика.",
+    "hero-cta1":"Смотреть возможности","hero-cta2":"Запросить брифинг",
+    "dash-eye":"Панель аналитики в реальном времени","dash-title":"Рыночная аналитика сегодня",
+    "col-news":"Рыночные сигналы","col-props":"Активные возможности","col-status":"Статус системы",
+    "feed-news-ph":"Загрузка рыночных сигналов…","feed-prop-ph":"Загрузка активных объектов…",
+    "ag-ceo":"Агент CEO","ag-news":"Новостной агент","ag-prop":"Агент недвижимости","ag-out":"Агент контактов","ag-dev":"Dev агент",
+    "st-active":"Активен","st-scan":"Сканирует","st-score":"Оценивает","st-mon":"Мониторинг",
+    "s-src":"Источники","s-prop":"Объекты","s-avg":"Ср. балл","s-upd":"Обновлено",
+    "how-eye":"Методология","how-title":"Как работает Tradia",
+    "s1-ag":"Новостной агент","s1-t":"Регуляторный мониторинг","s1-d":"Мониторинг 6+ турецких новостных источников, официального вестника и регуляторных лент на предмет изменений зонирования и инфраструктурных сигналов.",
+    "s2-ag":"Агент недвижимости","s2-t":"Оценка объектов","s2-d":"10-критериальная взвешенная система: локация, зонирование, юридическая чистота, близость инфраструктуры и соотношение цены к стоимости в USD.",
+    "s3-ag":"Агент контактов","s3-t":"Подбор инвесторов","s3-d":"Профилирование и сегментация инвесторов из Залива, России и Европы. Персонализированные брифинги на EN, RU и AR.",
+    "s4-ag":"Агент CEO","s4-t":"Синтез CEO","s4-d":"Объединяет результаты всех агентов в ежедневный исполнительный брифинг и еженедельный инвесторский отчёт.",
+    "sc-eye":"Методология оценки","sc-title":"10-критериальная оценочная система",
+    "c1":"Локация","c2":"Зонирование","c3":"Юр. чистота","c4":"Инфраструктура","c5":"Цена / Стоимость","c6":"Доходность аренды","c7":"Прогноз 5 лет","c8":"Ликвидность","c9":"Гос. сигнал","c10":"Контекст новостей",
+    "ct-eye":"Брифинг по запросу","ct-title":"Запросить частный брифинг",
+    "ct-desc":"Наша система генерирует брифинги в USD для квалифицированных международных инвесторов. Укажите параметры и получите отчёт в течение 24 часов.",
+    "ct-email":"Email: intel@tradiaturkey.com","ct-cov":"Зоны: Стамбул · Анкара · Измир · Бурса · Анталья","ct-min":"Мин. инвестиции: $75,000 USD",
+    "f-name":"Имя","f-name-ph":"Ваше полное имя","f-email":"Email","f-email-ph":"you@example.com","f-country":"Страна","f-budget":"Бюджет (USD)","f-type":"Тип недвижимости","f-region":"Предпочт. регион",
+    "ft-land":"Коммерческий участок","ft-ind":"Промышленный участок","ft-res":"Жилая","ft-com":"Коммерческий офис","ft-mix":"Смешанное","fr-any":"Любой регион",
+    "f-msg":"Сообщение","f-msg-ph":"Расскажите о ваших инвестиционных целях…","f-sub":"Отправить запрос",
+    "ft-sub":"ТУРЦИЯ · ИИ-АНАЛИТИКА НЕДВИЖИМОСТИ · TRADIATURKEY.COM"
+  },
+  ar:{
+    "nav-sub":"استخبارات تركيا","nav-intel":"الاستخبارات","nav-props":"العقارات","nav-about":"حول","nav-contact":"تواصل","nav-cta":"طلب إحاطة",
+    "hero-eye":"مدعوم بالذكاء الاصطناعي · بالدولار · استخبارات يومية",
+    "hero-h1":"منصة العقارات الأكثر <em>ذكاءً</em> في تركيا",
+    "hero-sub":"العناية الواجبة بالذكاء الاصطناعي للمستثمرين الدوليين. تتبع تنظيمي. تقييم بالدولار. استخبارات يومية.",
+    "hero-cta1":"عرض الفرص الحية","hero-cta2":"طلب إحاطة استخباراتية",
+    "dash-eye":"لوحة الاستخبارات المباشرة","dash-title":"استخبارات السوق اليومية",
+    "col-news":"إشارات السوق","col-props":"الفرص النشطة","col-status":"حالة النظام",
+    "feed-news-ph":"جارٍ جلب إشارات السوق…","feed-prop-ph":"جارٍ تحميل الفرص النشطة…",
+    "ag-ceo":"وكيل CEO","ag-news":"وكيل الأخبار","ag-prop":"وكيل العقارات","ag-out":"وكيل التواصل","ag-dev":"وكيل التطوير",
+    "st-active":"نشط","st-scan":"يفحص","st-score":"يُقيّم","st-mon":"يراقب",
+    "s-src":"المصادر","s-prop":"العقارات","s-avg":"متوسط الدرجة","s-upd":"آخر تحديث",
+    "how-eye":"المنهجية","how-title":"كيف تعمل Tradia",
+    "s1-ag":"وكيل الأخبار","s1-t":"المسح التنظيمي","s1-d":"يراقب أكثر من 6 مصادر إخبارية تركية والجريدة الرسمية لتغييرات التقسيم والإشارات الهيكلية.",
+    "s2-ag":"وكيل العقارات","s2-t":"تقييم العقارات","s2-d":"بطاقة تقييم مرجّحة بـ 10 معايير: الموقع، التقسيم، النظافة القانونية، قرب البنية التحتية، ونسبة السعر بالدولار.",
+    "s3-ag":"وكيل التواصل","s3-t":"مطابقة المستثمرين","s3-d":"تحديد ملامح وتصنيف المستثمرين من الخليج وروسيا وأوروبا مع توليد إحاطات مخصصة بالإنجليزية والروسية والعربية.",
+    "s4-ag":"وكيل CEO","s4-t":"تجميع CEO","s4-d":"يجمع مخرجات جميع الوكلاء في إحاطة تنفيذية يومية وتقرير مستثمر أسبوعي.",
+    "sc-eye":"منهجية التقييم","sc-title":"بطاقة التقييم بـ 10 معايير",
+    "c1":"درجة الموقع","c2":"درجة التقسيم","c3":"النظافة القانونية","c4":"البنية التحتية","c5":"السعر / القيمة","c6":"عائد الإيجار","c7":"توقع 5 سنوات","c8":"السيولة","c9":"الإشارة الحكومية","c10":"سياق الأخبار",
+    "ct-eye":"إحاطة استخباراتية","ct-title":"طلب إحاطة خاصة",
+    "ct-desc":"يولّد نظام الاستخبارات لدينا إحاطات عقارية بالدولار للمستثمرين الدوليين المؤهلين. شارك معاييرك واستلم تقريراً مخصصاً خلال 24 ساعة.",
+    "ct-email":"البريد: intel@tradiaturkey.com","ct-cov":"التغطية: إسطنبول · أنقرة · إزمير · بورصة · أنطاليا","ct-min":"الحد الأدنى: $75,000 USD",
+    "f-name":"الاسم","f-name-ph":"اسمك الكامل","f-email":"البريد","f-email-ph":"you@example.com","f-country":"الدولة","f-budget":"الميزانية (USD)","f-type":"نوع العقار","f-region":"المنطقة المفضلة",
+    "ft-land":"أرض تجارية","ft-ind":"أرض صناعية","ft-res":"سكني","ft-com":"مكتب تجاري","ft-mix":"استخدام مختلط","fr-any":"أي منطقة",
+    "f-msg":"الرسالة","f-msg-ph":"أخبرنا عن أهدافك الاستثمارية…","f-sub":"إرسال الطلب",
+    "ft-sub":"تركيا · استخبارات عقارية بالذكاء الاصطناعي · TRADIATURKEY.COM"
+  },
+  tr:{
+    "nav-sub":"Türkiye İstihbaratı","nav-intel":"İstihbarat","nav-props":"Mülkler","nav-about":"Hakkımızda","nav-contact":"İletişim","nav-cta":"Brifing Talebi",
+    "hero-eye":"YZ Destekli · USD Cinsinden · Günlük İstihbarat",
+    "hero-h1":"Türkiye'nin En <em>Akıllı</em> Gayrimenkul Platformu",
+    "hero-sub":"Uluslararası yatırımcılar için YZ destekli durum tespiti. Mevzuat takibi. USD bazlı skorlama. Günlük istihbarat.",
+    "hero-cta1":"Canlı Fırsatları Görüntüle","hero-cta2":"İstihbarat Brifing Talebi",
+    "dash-eye":"Canlı İstihbarat Panosu","dash-title":"Bugünün Piyasa İstihbaratı",
+    "col-news":"Piyasa Sinyalleri","col-props":"Aktif Fırsatlar","col-status":"Sistem Durumu",
+    "feed-news-ph":"Piyasa sinyalleri getiriliyor…","feed-prop-ph":"Aktif fırsatlar yükleniyor…",
+    "ag-ceo":"CEO Ajan","ag-news":"Haber Ajanı","ag-prop":"Mülk Ajanı","ag-out":"İletişim Ajanı","ag-dev":"Dev Ajanı",
+    "st-active":"Aktif","st-scan":"Tarıyor","st-score":"Puanlıyor","st-mon":"İzliyor",
+    "s-src":"Kaynaklar","s-prop":"Mülkler","s-avg":"Ort. Puan","s-upd":"Güncellendi",
+    "how-eye":"Metodoloji","how-title":"Tradia Nasıl Çalışır",
+    "s1-ag":"Haber Ajanı","s1-t":"Mevzuat Taraması","s1-d":"İmar değişiklikleri ve altyapı sinyalleri için 6+ Türk haber kaynağını, resmi gazeteyi ve mevzuat beslemelerini izler.",
+    "s2-ag":"Mülk Ajanı","s2-t":"Mülk Skorlaması","s2-d":"Her ilanı 10 kriterli ağırlıklı puan kartıyla değerlendirir: konum, imar, hukuki temizlik, altyapı yakınlığı ve USD fiyat-değer oranı.",
+    "s3-ag":"İletişim Ajanı","s3-t":"Yatırımcı Eşleştirme","s3-d":"Körfez, Rusya ve Avrupa'dan uluslararası yatırımcıları profillendirir. EN, RU ve AR dillerinde kişiselleştirilmiş brifingler oluşturur.",
+    "s4-ag":"CEO Ajanı","s4-t":"CEO Sentezi","s4-d":"Tüm ajan çıktılarını günlük yönetici brifingine ve haftalık yatırımcı raporuna dönüştürür.",
+    "sc-eye":"Puanlama Metodolojisi","sc-title":"10 Kriterli Mülk Puan Kartı",
+    "c1":"Konum Skoru","c2":"İmar Skoru","c3":"Hukuki Temizlik","c4":"Altyapı","c5":"Fiyat / Değer","c6":"Kira Getirisi","c7":"5 Yıl Proj.","c8":"Likidite","c9":"Hükümet Sinyali","c10":"Haber Bağlamı",
+    "ct-eye":"İstihbarat Brifing","ct-title":"Özel Brifing Talep Edin",
+    "ct-desc":"İstihbarat sistemimiz nitelikli uluslararası yatırımcılar için USD cinsinden mülk brifingleri oluşturur. Parametrelerinizi paylaşın, 24 saat içinde özel rapor alın.",
+    "ct-email":"E-posta: intel@tradiaturkey.com","ct-cov":"Kapsam: İstanbul · Ankara · İzmir · Bursa · Antalya","ct-min":"Minimum Yatırım: $75,000 USD",
+    "f-name":"Ad","f-name-ph":"Tam adınız","f-email":"E-posta","f-email-ph":"siz@ornek.com","f-country":"Ülke","f-budget":"Bütçe (USD)","f-type":"Mülk Türü","f-region":"Tercih Edilen Bölge",
+    "ft-land":"Ticari Arsa","ft-ind":"Sanayi Arsası","ft-res":"Konut","ft-com":"Ticari Ofis","ft-mix":"Karma Kullanım","fr-any":"Her Bölge",
+    "f-msg":"Mesaj","f-msg-ph":"Yatırım hedeflerinizi paylaşın…","f-sub":"Talebi Gönder",
+    "ft-sub":"TÜRKİYE · YZ DESTEKLİ GAYRİMENKUL İSTİHBARATI · TRADIATURKEY.COM"
+  }
 };
 
-let lang = 'en';
 function setLang(l) {
-  lang = l;
-  const t = I18N[l];
+  const t = T[l]; if (!t) return;
   document.documentElement.lang = l;
   document.documentElement.dir  = l === 'ar' ? 'rtl' : 'ltr';
-  const set = (id, val) => { const el = document.getElementById(id); if(el) el.innerHTML = val; };
-  set('t-tag',t.tag); set('t-hero',t.hero); set('t-sub',t.sub);
-  set('t-cur',t.cur); set('t-fut',t.fut); set('t-badge',t.badge);
-  set('t-form',t.form); set('t-sig-title',t.sig);
-  set('l-name',t.lname); set('l-email',t.lemail); set('l-phone',t.lphone); set('l-budget',t.lbudget);
-  set('l-ltype',t.ltype); set('l-area',t.larea); set('l-loc',t.lloc);
-  set('l-road',t.lroad); set('l-prox',t.lprox); set('l-sig',t.lsig); set('l-con',t.lcon);
-  set('btn-txt',t.btn); set('t-rep',t.rep); set('t-risk',t.risk); set('t-pend',t.pend); set('t-pool',t.pool);
-  set('c-mort',t.cmort); set('c-ann',t.cann); set('c-court',t.ccourt); set('c-ease',t.cease); set('c-mult',t.cmult);
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const v = t[el.dataset.i18n]; if (v !== undefined) el.textContent = v;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const v = t[el.dataset.i18nHtml]; if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+    const v = t[el.dataset.i18nPh]; if (v !== undefined) el.placeholder = v;
+  });
   document.querySelectorAll('.lang-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.lang === l);
-    b.classList.toggle('text-gray-400', b.dataset.lang !== l);
   });
 }
 
-// ── Gov signals render ─────────────────────────────────────────────────────
-function renderSignals() {
-  const grid = document.getElementById('signals-grid');
-  grid.innerHTML = GOV_SIGNALS_SEED.map(s => `
-    <div class="bg-obsidian-2 rounded p-3 gold-border space-y-1.5">
-      <div class="flex justify-between items-start gap-2">
-        <span class="text-gold text-xs font-medium">${s.type.replace(/_/g,' ').replace(/\b\w/g,c=>c.toUpperCase())}</span>
-        <span class="text-gray-600 text-xs shrink-0">${s.region}</span>
-      </div>
-      <p class="text-gray-500 text-xs leading-relaxed">${s.desc}</p>
-      <div class="flex items-center gap-2">
-        <div class="flex-1 bg-obsidian-3 rounded-full h-1">
-          <div class="h-1 rounded-full" style="width:${s.pct}%;background:linear-gradient(90deg,#C9A84C,#A07828)"></div>
-        </div>
-        <span class="text-xs text-gold/60">${s.pct}%</span>
-      </div>
-    </div>`).join('');
+// ── Ticker ────────────────────────────────────────────────────────────────────
+function buildTicker() {
+  const now = new Date().toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+  const items = [
+    ['Sources Monitored','6'],['Properties Analyzed Today','10'],
+    ['Avg Property Score','67.8 / 100'],['News Items Processed','154'],
+    ['Agent Status','Operational'],['USD / TRY Rate','45.18'],
+    ['Last Intelligence Update', now],['Coverage','Istanbul · Ankara · İzmir'],
+  ];
+  const html = items.map(([k,v])=>`<span class="ticker-item">${k}<b>${v}</b></span>`).join('');
+  const el = document.getElementById('ticker');
+  if (el) el.innerHTML = html + html; // double for seamless loop
+  const lu = document.getElementById('last-upd');
+  if (lu) lu.textContent = now;
 }
 
-// ── Analysis ───────────────────────────────────────────────────────────────
-const RISK_COLORS = { LOW:'#4ade80', MEDIUM:'#facc15', HIGH:'#fb923c', CRITICAL:'#f87171' };
-
-function runAnalysis(e) {
+// ── Form ──────────────────────────────────────────────────────────────────────
+function submitForm(e) {
   e.preventDefault();
-  const form = e.target;
-  const btn  = document.getElementById('btn-txt');
-  btn.textContent = '...';
-
-  const el = name => form.elements[name];
-  const constraints = [...form.querySelectorAll('input[name="constraints"]:checked')].map(i=>i.value);
-  const payload = {
-    name:     el('name').value,
-    email:    el('email').value,
-    phone:    el('phone').value,
-    budget:   parseFloat(el('budget_usd').value),
-    landType: el('land_type').value,
-    area:     parseFloat(el('area_m2').value),
-    location: el('location').value,
-    roadType: el('road_type').value,
-    prox:     parseFloat(el('highway_proximity_m').value),
-    signal:   el('gov_signal').value,
-    constraints: constraints.length ? constraints : ['no_issue'],
-  };
-
-  const analysis = calcUsd(payload.landType, payload.area, payload.signal);
-  const risk     = scoreRisk(payload.constraints, payload.prox, payload.roadType);
-  const messages = generateAll(analysis, risk);
-
-  // Save to localStorage
-  const leads = JSON.parse(localStorage.getItem('lg_leads') || '[]');
-  leads.unshift({ ...payload, analysis, risk, messages, ts: new Date().toISOString() });
-  localStorage.setItem('lg_leads', JSON.stringify(leads.slice(0, 50)));
-
-  renderResults(analysis, risk, messages);
-  renderPool();
-  btn.textContent = I18N[lang].btn;
+  const btn = e.target.querySelector('.btn-submit');
+  const orig = btn.textContent;
+  btn.textContent = '✓ Sent';
+  btn.style.cssText = 'background:#2ECC8A;color:#080808';
+  setTimeout(() => { btn.textContent = orig; btn.style.cssText = ''; e.target.reset(); }, 3000);
 }
 
-function renderResults(a, r, msgs) {
-  const t     = I18N[lang];
-  const color = RISK_COLORS[r.risk_label];
-  document.getElementById('results').classList.remove('hidden');
-
-  document.getElementById('metrics').innerHTML = [
-    [t.m1, `$${a.current_usd_m2}/m²`],
-    [t.m2, `$${a.projected_usd_m2}/m²`],
-    [t.m3, `$${fmt(a.total_projected_usd)}`],
-    [t.m4, `+${a.roi_percent}%`],
-  ].map(([l,v])=>`<div class="bg-obsidian-2 rounded p-4 gold-border text-center">
-    <p class="text-gray-600 text-xs mb-1">${l}</p>
-    <p class="text-gold text-lg font-semibold">${v}</p></div>`).join('');
-
-  document.getElementById('risk-val').textContent = `${r.risk_score}/100 — ${r.risk_label}`;
-  document.getElementById('risk-val').style.color  = color;
-  const bar = document.getElementById('risk-bar');
-  setTimeout(()=>{ bar.style.width = r.risk_score+'%'; bar.style.background = color; }, 50);
-
-  document.getElementById('agent-msgs').innerHTML = msgs.map(m=>`
-    <div class="bg-obsidian-2 rounded p-4 gold-border">
-      <div class="flex items-center justify-between mb-2">
-        <span class="text-gold text-xs font-semibold tracking-wide">${m.agent}</span>
-        <span class="text-xs bg-obsidian-3 text-yellow-600 px-2 py-0.5 rounded border border-yellow-900/40 badge">${m.status}</span>
-      </div>
-      <p class="text-gray-400 text-sm leading-relaxed" dir="${m.lang==='ar'?'rtl':'ltr'}">${esc(m.message)}</p>
-    </div>`).join('');
-
-  document.getElementById('results').scrollIntoView({ behavior:'smooth' });
-}
-
-function renderPool() {
-  const sec   = document.getElementById('pool-section');
-  const list  = document.getElementById('pool-list');
-  const leads = JSON.parse(localStorage.getItem('lg_leads') || '[]');
-  if (!leads.length) { sec.classList.add('hidden'); return; }
-  sec.classList.remove('hidden');
-  list.innerHTML = leads.map(l=>`
-    <div class="flex items-center justify-between bg-obsidian-2 rounded px-4 py-3 gold-border text-xs">
-      <span class="text-white">${esc(l.name)}</span>
-      <span class="text-gray-600">${esc(l.location||'—')}</span>
-      <span class="text-gold font-medium">$${fmt(l.budget)}</span>
-      <span class="text-gray-700">${(l.ts||'').slice(0,10)}</span>
-    </div>`).join('');
-}
-
-function esc(s) {
-  return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
-}
-
-// ── Init ───────────────────────────────────────────────────────────────────
-renderSignals();
-renderPool();
+// ── Init ──────────────────────────────────────────────────────────────────────
+buildTicker();
+setLang('en');
 </script>
-<section id="lg-news-feed" style="padding:2rem 1rem;max-width:900px;margin:0 auto">
-  <h2 style="font-size:1.1rem;font-weight:600;letter-spacing:.05em;color:#C9973A;margin-bottom:1.2rem">
-    MARKET INTELLIGENCE
-  </h2>
-  <div style="border-left:3px solid #1D9E75;padding:.75rem 1rem;margin-bottom:1rem;background:#fafafa">
-      <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;color:#1D9E75;margin-bottom:.3rem">
-        OPPORTUNITY  ·  70/100
-      </div>
-      <div style="font-size:.95rem;font-weight:500;margin-bottom:.4rem">İstanbul Havalimanı Avrupa'nın en yoğunu</div>
-      <div style="font-size:.85rem;color:#555;line-height:1.5">Istanbul Airport became Europe's busiest airport during the week of September 23–29, recording a daily average of 1,438 flights. This milestone highlights Istanbul's growing dominance as a major European aviation hub.</div>
-      <div style="font-size:.8rem;color:#888;margin-top:.4rem;font-style:italic">Enhanced air connectivity reinforces Istanbul's appeal as a prime real estate investment destination, as improved accessibility typically drives demand for both residential and commercial properties among foreign buyers.</div>
-    </div>
-    <div style="border-left:3px solid #888780;padding:.75rem 1rem;margin-bottom:1rem;background:#fafafa">
-      <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;color:#888780;margin-bottom:.3rem">
-        NEUTRAL  ·  20/100
-      </div>
-      <div style="font-size:.95rem;font-weight:500;margin-bottom:.4rem">16 santrale 1,11 milyar liralık kapasite ödeme</div>
-      <div style="font-size:.85rem;color:#555;line-height:1.5">**Summary:** Turkey's electricity transmission company TEİAŞ will make capacity payments totaling 1.11 billion Turkish lira to 16 power generation plants for the month of March. These payments are part of Turkey's capacity mechanism, which ensures grid reliability by compensating power plants for maintaining available generation capacity.
-
-**</div>
-      <div style="font-size:.8rem;color:#888;margin-top:.4rem;font-style:italic">** Continued government investment in Turkey's energy infrastructure signals stable electricity supply, which is a positive indicator for foreign investors considering industrial, commercial, or large-scale residential property developments that depend on reliable power availability.</div>
-    </div>
-    <div style="border-left:3px solid #888780;padding:.75rem 1rem;margin-bottom:1rem;background:#fafafa">
-      <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;color:#888780;margin-bottom:.3rem">
-        NEUTRAL  ·  20/100
-      </div>
-      <div style="font-size:.95rem;font-weight:500;margin-bottom:.4rem">Ekonomi yönetimi 1 Mayıs Emek ve Dayanışma Günü'nü kutladı</div>
-      <div style="font-size:.85rem;color:#555;line-height:1.5">**Summary:** Turkey's economy-focused cabinet ministers marked May 1st Labor and Solidarity Day with official celebrations. The content beyond the headline was not provided in full detail.
-
-**</div>
-      <div style="font-size:.8rem;color:#888;margin-top:.4rem;font-style:italic">** This item carries no direct or immediate implications for foreign property investors in Turkey, as it is a ceremonial observance rather than a policy or regulatory development.</div>
-    </div>
-    <div style="border-left:3px solid #888780;padding:.75rem 1rem;margin-bottom:1rem;background:#fafafa">
-      <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;color:#888780;margin-bottom:.3rem">
-        NEUTRAL  ·  20/100
-      </div>
-      <div style="font-size:.95rem;font-weight:500;margin-bottom:.4rem">Türkiye'den Suudi Arabistan ile Orta Doğu'da dengeyi sarsacak dev proje</div>
-      <div style="font-size:.85rem;color:#555;line-height:1.5">**Summary:** Turkey and Saudi Arabia are preparing landmark joint projects aimed at reshaping the balance of power in the Middle East, coinciding with a period of escalating geopolitical risks in the region. The partnership includes a strategic transit trade agreement and plans for Turkey to serve as a central hub in an east-to-west electricity transmission corridor.
-
-**</div>
-      <div style="font-size:.8rem;color:#888;margin-top:.4rem;font-style:italic">** Strengthened Turkey-Saudi Arabia economic ties and Turkey's growing role as a regional energy and trade hub signal improved long-term economic stability, potentially increasing investor confidence and demand for commercial and logistics-related real estate in Turkey.</div>
-    </div>
-    <div style="border-left:3px solid #888780;padding:.75rem 1rem;margin-bottom:1rem;background:#fafafa">
-      <div style="font-size:.7rem;font-weight:600;text-transform:uppercase;color:#888780;margin-bottom:.3rem">
-        NEUTRAL  ·  20/100
-      </div>
-      <div style="font-size:.95rem;font-weight:500;margin-bottom:.4rem">77 ili birbirine bağlandı, ortalama hız 90 km'ye çıktı</div>
-      <div style="font-size:.85rem;color:#555;line-height:1.5">**Summary:** The first section of the Karaman Bypass Road was inaugurated today with the participation of Transport and Infrastructure Minister Abdulkadir Uraloğlu. The minister highlighted that 77 of Turkey's provinces are now connected via divided highways, with average inter-city travel speeds reaching 90 km/h.
-
-**</div>
-      <div style="font-size:.8rem;color:#888;margin-top:.4rem;font-style:italic">** Improved road infrastructure and faster inter-city connectivity across Turkey enhances accessibility to regional property markets, potentially increasing the appeal and value of real estate investments in previously less accessible provinces like Karaman.</div>
-    </div>
-</section>
-<section id="lg-property-feed" style="padding:2rem 1rem;max-width:900px;margin:0 auto">
-  <h2 style="font-size:1.1rem;font-weight:600;letter-spacing:.05em;color:#C9973A;margin-bottom:1.2rem">
-    ACTIVE OPPORTUNITIES
-  </h2>
-  <div style="border:1px solid #e0e0e0;border-radius:8px;padding:1.2rem;margin-bottom:1rem;background:#fff">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
-        <div style="font-size:.95rem;font-weight:600">Ankara Çankaya Ofis Katı</div>
-        <div style="background:#378ADD;color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .7rem;border-radius:4px">
-          B · 77/100
-        </div>
-      </div>
-      <div style="font-size:.8rem;color:#666;margin-bottom:.5rem">
-        Ankara · Çankaya · 195m² · $98,000 USD
-      </div>
-      <div style="font-size:.85rem;color:#333;line-height:1.5"># INVESTMENT BRIEF
-### Ankara Çankaya Ofis Katı — Kızılay, Ankara
-**LandGold Intelligence | Commercial Asset Analysis**
-
----
-
-## 1. Executive Summary
-
-A 195 m² commercial office floor in Kızılay — Ank...</div>
-      <div style="margin-top:.8rem;font-size:.8rem;font-weight:600;color:#BA7517">WATCH</div>
-    </div>
-    <div style="border:1px solid #e0e0e0;border-radius:8px;padding:1.2rem;margin-bottom:1rem;background:#fff">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
-        <div style="font-size:.95rem;font-weight:600">Pendik Kurtköy Sanayi Arsası - TEM Yanı</div>
-        <div style="background:#378ADD;color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .7rem;border-radius:4px">
-          B · 75/100
-        </div>
-      </div>
-      <div style="font-size:.8rem;color:#666;margin-bottom:.5rem">
-        Istanbul · Pendik · 3,200m² · $461,000 USD
-      </div>
-      <div style="font-size:.85rem;color:#333;line-height:1.5"># LANDGOLD INTELLIGENCE — PROPERTY INVESTMENT BRIEF
-### Pendik Kurtköy Industrial Land | TEM Highway Corridor | Istanbul
-
----
-
-## 1. EXECUTIVE SUMMARY
-
-A 3,200 m² industrial-zoned parcel positioned di...</div>
-      <div style="margin-top:.8rem;font-size:.8rem;font-weight:600;color:#BA7517">WATCH</div>
-    </div>
-    <div style="border:1px solid #e0e0e0;border-radius:8px;padding:1.2rem;margin-bottom:1rem;background:#fff">
-      <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:.6rem">
-        <div style="font-size:.95rem;font-weight:600">Esenyurt Ticari Arsa - Ana Cadde Cepheli</div>
-        <div style="background:#378ADD;color:#fff;font-size:.75rem;font-weight:700;padding:.2rem .7rem;border-radius:4px">
-          B · 73/100
-        </div>
-      </div>
-      <div style="font-size:.8rem;color:#666;margin-bottom:.5rem">
-        Istanbul · Esenyurt · 420m² · $138,000 USD
-      </div>
-      <div style="font-size:.85rem;color:#333;line-height:1.5"># LandGold Intelligence — Investment Brief
-**Esenyurt Ticari Arsa | Fatih Mahallesi, Esenyurt, Istanbul**
-*Property Type: Commercial Land | 420 m² | USD 138,000 | Grade: B (72.78/100)*
-
----
-
-## 1. Exe...</div>
-      <div style="margin-top:.8rem;font-size:.8rem;font-weight:600;color:#BA7517">WATCH</div>
-    </div>
-</section>
 </body>
 </html>
