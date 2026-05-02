@@ -1,0 +1,228 @@
+{
+  "version": "1.0",
+  "region": "Ege",
+  "last_updated": "2026-05-02",
+  "projects": [
+    {
+      "id": "antalya-turizm-kusagi",
+      "name": "Antalya Turizm ve Konut Kuşağı",
+      "name_en": "Antalya Tourism & Residential Belt",
+      "category": "tourism",
+      "status": "active",
+      "tradia_score": 88,
+      "summary_en": "Turkey's premier tourism corridor recording 15.2M visitors in 2024 — 23% YoY growth. Short-term rental yields averaging 11-14% annually. Gulf and European buyer demand driving coastal villa and apartment prices to record highs.",
+      "summary_ru": "Ведущий туристический коридор Турции — 15,2 млн посетителей в 2024 году, рост 23% год к году. Доходность краткосрочной аренды 11-14% годовых. Спрос покупателей из Залива и Европы толкает цены прибрежных вилл и квартир к рекордным значениям.",
+      "summary_ar": "الممر السياحي الرئيسي في تركيا — 15.2 مليون زائر في 2024، نمو 23% سنوياً. عائد الإيجار قصير الأجل 11-14% سنوياً. الطلب من الخليج وأوروبا يدفع أسعار الفيلات والشقق الساحلية إلى مستويات قياسية.",
+      "summary_tr": "Türkiye'nin önde gelen turizm koridoru — 2024'te 15,2 milyon ziyaretçi, yüzde 23 artış. Kısa dönem kira getirisi yıllık yüzde 11-14. Körfez ve Avrupa alıcı talebi kıyı villa ve daire fiyatlarını rekor seviyelere taşıyor.",
+      "key_events": [
+        {"date": "2022-06", "event_en": "Record 12.5M visitors — post-COVID surge", "price_impact": "+28%"},
+        {"date": "2023-03", "event_en": "Antalya airport capacity expanded to 35M/year", "price_impact": "+15%"},
+        {"date": "2023-09", "event_en": "Russian buyer surge — Antalya top destination", "price_impact": "+32%"},
+        {"date": "2024-04", "event_en": "15.2M visitors — 23% YoY growth record", "price_impact": "+18%"},
+        {"date": "2024-11", "event_en": "New marina development Konyaaltı approved", "price_impact": "+22%"},
+        {"date": "2025-06", "event_en": "Direct flights from 180 cities — new record", "price_impact": "+12%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 800, "max": 1400, "note": "Pre-COVID baseline"},
+          {"year": 2021, "min": 1100, "max": 1800, "note": "Recovery surge"},
+          {"year": 2022, "min": 1600, "max": 2600, "note": "Russian demand"},
+          {"year": 2023, "min": 2200, "max": 3400, "note": "Record visitors"},
+          {"year": 2024, "min": 2800, "max": 4200, "note": "Gulf buyer surge"},
+          {"year": 2026, "min": 3200, "max": 5000, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Konyaaltı", "district": "Antalya", "type": "apartment", "price_usd_m2": 2800, "upside": "+25-35% (2yr)", "risk": "low"},
+        {"name": "Lara", "district": "Antalya", "type": "luxury_apartment", "price_usd_m2": 3400, "upside": "+20-30% (2yr)", "risk": "low"},
+        {"name": "Belek", "district": "Serik", "type": "villa_land", "price_usd_m2": 1200, "upside": "+35-50% (3yr)", "risk": "medium"},
+        {"name": "Kalkan", "district": "Kaş", "type": "luxury_villa", "price_usd_m2": 4500, "upside": "+20-28% (2yr)", "risk": "low"},
+        {"name": "Alanya merkez", "district": "Alanya", "type": "apartment", "price_usd_m2": 1800, "upside": "+30-45% (3yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Seasonal dependency — winter occupancy drops 60%",
+        "Currency risk for TRY-denominated costs",
+        "Coastal construction restrictions tightening",
+        "Oversupply risk in mass-market apartment segment"
+      ],
+      "tradia_verdict": "BUY — Konyaaltı and Lara offer best risk-adjusted returns. Belek villa land for medium-term hold. Avoid mass-market Alanya new builds — oversupply risk."
+    },
+    {
+      "id": "mugla-bodrum-marmaris",
+      "name": "Muğla — Bodrum, Marmaris, Fethiye Lüks Kuşağı",
+      "name_en": "Mugla Luxury Coast — Bodrum, Marmaris, Fethiye",
+      "category": "luxury_tourism",
+      "status": "active",
+      "tradia_score": 91,
+      "summary_en": "Turkey's highest-value coastal real estate market. Bodrum consistently outperforms all Turkish markets in USD terms. International celebrity and UHNW buyer demand. Limited coastal supply driving prices to Aegean Mediterranean levels.",
+      "summary_ru": "Рынок прибрежной недвижимости с самыми высокими ценами в Турции. Бодрум стабильно опережает все турецкие рынки в долларовом выражении. Спрос со стороны международных знаменитостей и UHNW-покупателей.",
+      "summary_ar": "سوق العقارات الساحلية الأعلى قيمة في تركيا. بودروم يتفوق باستمرار على جميع الأسواق التركية بالدولار. طلب من المشاهير الدوليين والأثرياء جداً.",
+      "summary_tr": "Türkiye'nin en yüksek değerli kıyı gayrimenkul piyasası. Bodrum USD bazında tüm Türk piyasalarını sürekli geride bırakıyor. Uluslararası ünlü ve UHNW alıcı talebi. Sınırlı kıyı arzı fiyatları Ege Akdeniz seviyelerine taşıyor.",
+      "key_events": [
+        {"date": "2021-08", "event_en": "Bodrum villa prices surpass $10,000/m² for first time", "price_impact": "+45%"},
+        {"date": "2022-05", "event_en": "International yacht marina capacity doubled", "price_impact": "+20%"},
+        {"date": "2023-07", "event_en": "Fethiye Ölüdeniz designated UNESCO heritage zone", "price_impact": "+30%"},
+        {"date": "2024-03", "event_en": "Bodrum airport new terminal — capacity 8M/year", "price_impact": "+18%"},
+        {"date": "2025-04", "event_en": "Luxury brand hotels — Aman, Six Senses opening", "price_impact": "+25%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 2500, "max": 5000, "note": "Pre-COVID"},
+          {"year": 2021, "min": 4500, "max": 9000, "note": "COVID boom"},
+          {"year": 2022, "min": 6000, "max": 12000, "note": "Record prices"},
+          {"year": 2023, "min": 7500, "max": 15000, "note": "UHNW demand"},
+          {"year": 2024, "min": 9000, "max": 18000, "note": "Luxury brands"},
+          {"year": 2026, "min": 11000, "max": 22000, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Yalıkavak", "district": "Bodrum", "type": "luxury_villa", "price_usd_m2": 12000, "upside": "+18-25% (2yr)", "risk": "low"},
+        {"name": "Türkbükü", "district": "Bodrum", "type": "luxury_villa", "price_usd_m2": 15000, "upside": "+15-22% (2yr)", "risk": "low"},
+        {"name": "Göcek", "district": "Fethiye", "type": "marina_villa", "price_usd_m2": 5500, "upside": "+30-40% (3yr)", "risk": "low"},
+        {"name": "Hisarönü", "district": "Fethiye", "type": "villa_land", "price_usd_m2": 1800, "upside": "+40-60% (4yr)", "risk": "medium"},
+        {"name": "İçmeler", "district": "Marmaris", "type": "apartment", "price_usd_m2": 2200, "upside": "+25-35% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Highest entry prices in Turkey — capital intensive",
+        "Illiquid market — longer sale timelines",
+        "Coastal zoning extremely restrictive",
+        "Seasonal rental market — 4-5 month peak season only"
+      ],
+      "tradia_verdict": "BUY — Göcek marina and Hisarönü land offer best entry points for new investors. Yalıkavak and Türkbükü for UHNW capital preservation."
+    },
+    {
+      "id": "izmir-lojistik-aksi",
+      "name": "İzmir Lojistik ve Sanayi Aksı",
+      "name_en": "Izmir Logistics & Industrial Corridor",
+      "category": "industrial",
+      "status": "active",
+      "tradia_score": 82,
+      "summary_en": "Turkey's third largest city emerging as major logistics hub. New container port at Çandarlı (capacity 1.5M TEU) transforms İzmir's industrial geography. Torbalı and Kemalpaşa OSB zones seeing sustained foreign investment.",
+      "summary_ru": "Третий по величине город Турции становится крупным логистическим узлом. Новый контейнерный порт в Чандарлы (мощность 1,5 млн TEU) меняет промышленную географию Измира.",
+      "summary_ar": "ثالث أكبر مدينة في تركيا تبرز كمركز لوجستي رئيسي. ميناء حاويات جديد في تشاندارلي (طاقة 1.5 مليون وحدة) يحوّل الجغرافيا الصناعية لإزمير.",
+      "summary_tr": "Türkiye'nin üçüncü büyük şehri önemli bir lojistik merkez olarak öne çıkıyor. Çandarlı'daki yeni konteyner limanı (1,5 milyon TEU kapasitesi) İzmir'in sanayi coğrafyasını dönüştürüyor.",
+      "key_events": [
+        {"date": "2021-09", "event_en": "Çandarlı Port Phase 1 construction started", "price_impact": "+22%"},
+        {"date": "2022-11", "event_en": "Kemalpaşa OSB Phase 3 expansion — 450 new lots", "price_impact": "+18%"},
+        {"date": "2023-06", "event_en": "İzmir-Ankara high speed rail tender", "price_impact": "+15%"},
+        {"date": "2024-02", "event_en": "BMW supplier cluster established Torbalı", "price_impact": "+25%"},
+        {"date": "2025-03", "event_en": "Çandarlı Port first commercial operations", "price_impact": "+30%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 80, "max": 150, "note": "Industrial baseline"},
+          {"year": 2021, "min": 140, "max": 250, "note": "Port announced"},
+          {"year": 2022, "min": 200, "max": 380, "note": "OSB expansion"},
+          {"year": 2023, "min": 280, "max": 520, "note": "Rail tender"},
+          {"year": 2024, "min": 380, "max": 680, "note": "BMW cluster"},
+          {"year": 2026, "min": 480, "max": 850, "note": "Current — port operational"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Torbalı OSB", "district": "Torbalı", "type": "industrial_land", "price_usd_m2": 280, "upside": "+40-60% (3yr)", "risk": "low"},
+        {"name": "Kemalpaşa OSB", "district": "Kemalpaşa", "type": "industrial_land", "price_usd_m2": 320, "upside": "+35-50% (3yr)", "risk": "low"},
+        {"name": "Çandarlı çevresi", "district": "Aliağa", "type": "logistics_land", "price_usd_m2": 180, "upside": "+55-80% (4yr)", "risk": "medium"},
+        {"name": "Gaziemir", "district": "İzmir", "type": "commercial", "price_usd_m2": 650, "upside": "+20-30% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Port operational delays possible",
+        "Environmental regulations near coastal industrial zones",
+        "Competition from Mersin port for cargo volume"
+      ],
+      "tradia_verdict": "BUY — Çandarlı port hinterland strongest long-term play. Torbalı and Kemalpaşa OSB zones offer immediate industrial demand with low risk."
+    },
+    {
+      "id": "izmir-alsancak-gelisim",
+      "name": "İzmir Alsancak — Bayraklı Kentsel Dönüşüm",
+      "name_en": "Izmir Alsancak-Bayraklı Urban Transformation",
+      "category": "urban_renewal",
+      "status": "active",
+      "tradia_score": 79,
+      "summary_en": "İzmir's premium coastal district undergoing major urban transformation. Bayraklı business district established with 50+ towers. Alsancak port area conversion to mixed-use cultural zone announced. Expat and digital nomad demand growing.",
+      "summary_ru": "Элитный прибрежный район Измира переживает масштабную городскую трансформацию. Деловой район Байраклы сформирован — 50+ башен. Объявлено о реконверсии порта Алсанджак в культурно-деловую зону.",
+      "summary_ar": "حي إزمير الساحلي الراقي يشهد تحولاً حضرياً كبيراً. تأسس حي بيراقلي التجاري بأكثر من 50 برجاً. أُعلن عن تحويل ميناء ألسانجاق إلى منطقة ثقافية متعددة الاستخدامات.",
+      "summary_tr": "İzmir'in premium kıyı bölgesi büyük bir kentsel dönüşüm yaşıyor. Bayraklı iş merkezi 50'den fazla kuleyle kuruldu. Alsancak liman alanının karma kullanımlı kültürel bölgeye dönüştürülmesi açıklandı.",
+      "key_events": [
+        {"date": "2020-10", "event_en": "İzmir earthquake — urban renewal acceleration", "price_impact": "+20%"},
+        {"date": "2022-04", "event_en": "Alsancak port conversion masterplan approved", "price_impact": "+28%"},
+        {"date": "2023-08", "event_en": "Bayraklı towers 80% occupancy — commercial success", "price_impact": "+15%"},
+        {"date": "2024-06", "event_en": "İzmir ranked top 10 European expat cities", "price_impact": "+22%"},
+        {"date": "2025-09", "event_en": "High speed rail İzmir-İstanbul reduces travel to 3.5hr", "price_impact": "+18%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 1200, "max": 2000, "note": "Pre-earthquake"},
+          {"year": 2021, "min": 1600, "max": 2800, "note": "Post-earthquake renewal"},
+          {"year": 2022, "min": 2200, "max": 3600, "note": "Port conversion"},
+          {"year": 2023, "min": 2800, "max": 4400, "note": "Expat demand"},
+          {"year": 2024, "min": 3400, "max": 5200, "note": "Rail connection"},
+          {"year": 2026, "min": 3800, "max": 6000, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Alsancak", "district": "Konak", "type": "luxury_apartment", "price_usd_m2": 4200, "upside": "+22-32% (2yr)", "risk": "low"},
+        {"name": "Bayraklı", "district": "Bayraklı", "type": "commercial_office", "price_usd_m2": 3800, "upside": "+18-28% (2yr)", "risk": "low"},
+        {"name": "Karşıyaka", "district": "Karşıyaka", "type": "residential", "price_usd_m2": 2800, "upside": "+25-35% (3yr)", "risk": "low"},
+        {"name": "Bornova", "district": "Bornova", "type": "student_residential", "price_usd_m2": 1800, "upside": "+20-30% (3yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Earthquake risk — building age verification essential",
+        "Port conversion timeline uncertain",
+        "High prices relative to Turkish average"
+      ],
+      "tradia_verdict": "WATCH — Alsancak luxury segment for capital preservation. Karşıyaka residential for rental yield. Wait for port conversion confirmation before committing."
+    },
+    {
+      "id": "nevsehir-kappadokya",
+      "name": "Nevşehir — Kapadokya Turizm Yatırım Bölgesi",
+      "name_en": "Nevsehir — Cappadocia Tourism Investment Zone",
+      "category": "tourism",
+      "status": "active",
+      "tradia_score": 84,
+      "summary_en": "Cappadocia emerging as Turkey's most unique tourism investment market. 340 boutique hotel licenses issued Q1 2024 alone. Hot air balloon tourism generating 18%+ Airbnb yields. Land with accommodation license potential at significant premium.",
+      "summary_ru": "Каппадокия становится наиболее уникальным туристическим инвестиционным рынком Турции. В одном только 1 квартале 2024 года выдано 340 лицензий на бутик-отели. Воздухоплавание генерирует 18%+ доходность Airbnb.",
+      "summary_ar": "كابادوكيا تبرز كأكثر أسواق الاستثمار السياحي تميزاً في تركيا. 340 ترخيص فندق بوتيك في الربع الأول من 2024 وحده. سياحة البالون يولّد عوائد Airbnb تتجاوز 18%.",
+      "summary_tr": "Kapadokya Türkiye'nin en özgün turizm yatırım pazarı olarak öne çıkıyor. Sadece 2024 ilk çeyreğinde 340 butik otel lisansı verildi. Balon turizminde Airbnb getirisi yüzde 18 üzerinde.",
+      "key_events": [
+        {"date": "2021-03", "event_en": "UNESCO application for expanded heritage zone", "price_impact": "+25%"},
+        {"date": "2022-08", "event_en": "International direct flights — 8 new routes", "price_impact": "+20%"},
+        {"date": "2023-11", "event_en": "Boutique hotel licenses — highest demand ever", "price_impact": "+35%"},
+        {"date": "2024-01", "event_en": "340 licenses Q1 — record quarterly issuance", "price_impact": "+28%"},
+        {"date": "2025-06", "event_en": "Göreme cave dwelling renovation program", "price_impact": "+22%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2018, "min": 200, "max": 500, "note": "Pre-boom"},
+          {"year": 2020, "min": 350, "max": 800, "note": "COVID — domestic tourism"},
+          {"year": 2022, "min": 700, "max": 1600, "note": "International return"},
+          {"year": 2023, "min": 1200, "max": 2800, "note": "License premium"},
+          {"year": 2024, "min": 1800, "max": 4200, "note": "Record licenses"},
+          {"year": 2026, "min": 2400, "max": 5500, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Göreme", "district": "Nevşehir", "type": "cave_boutique", "price_usd_m2": 4800, "upside": "+20-30% (2yr)", "risk": "low"},
+        {"name": "Ürgüp", "district": "Nevşehir", "type": "boutique_hotel_land", "price_usd_m2": 2200, "upside": "+35-50% (3yr)", "risk": "medium"},
+        {"name": "Uçhisar", "district": "Nevşehir", "type": "viewpoint_villa", "price_usd_m2": 3500, "upside": "+25-38% (2yr)", "risk": "low"},
+        {"name": "Avanos", "district": "Nevşehir", "type": "guesthouse_land", "price_usd_m2": 800, "upside": "+50-70% (4yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "UNESCO restrictions limit development options",
+        "Seasonal — 85% occupancy April-October only",
+        "Cave property maintenance costs high",
+        "License availability tightening"
+      ],
+      "tradia_verdict": "BUY — Ürgüp boutique hotel land strongest entry. Avanos for long-term hold. Göreme cave properties for immediate rental yield but high entry price."
+    }
+  ]
+}

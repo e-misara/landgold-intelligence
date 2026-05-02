@@ -157,6 +157,77 @@ class ResearchAgent(BaseAgent):
             "tradia_score":     83,
             "investment_horizon": "2-4 years",
         },
+        # ── Ege Region ─────────────────────────────────────────────────────
+        {
+            "id":               "antalya-turizm-kusagi",
+            "name":             "Antalya Turizm Kuşağı Gelişim Aksı",
+            "name_en":          "Antalya Tourism Belt Development Corridor",
+            "region":           "Ege",
+            "category":         "tourism",
+            "districts":        ["Antalya", "Alanya", "Serik", "Kaş"],
+            "status":           "active",
+            "keywords_tr":      ["antalya turizm", "antalya otel yatırım", "alanya konut", "kaş villa"],
+            "keywords_en":      ["antalya tourism", "antalya investment", "alanya property", "kas villa"],
+            "impact_radius_km": 30,
+            "tradia_score":     88,
+            "investment_horizon": "2-5 years",
+        },
+        {
+            "id":               "mugla-bodrum-marmaris",
+            "name":             "Muğla Lüks Kıyı Kuşağı",
+            "name_en":          "Mugla Luxury Coast Belt",
+            "region":           "Ege",
+            "category":         "luxury_coastal",
+            "districts":        ["Bodrum", "Marmaris", "Fethiye", "Göcek"],
+            "status":           "active",
+            "keywords_tr":      ["bodrum villa", "marmaris yat limanı", "fethiye yazlık", "göcek marina"],
+            "keywords_en":      ["bodrum villa", "marmaris marina", "fethiye property", "gocek luxury"],
+            "impact_radius_km": 20,
+            "tradia_score":     91,
+            "investment_horizon": "2-4 years",
+        },
+        {
+            "id":               "izmir-lojistik-aksi",
+            "name":             "İzmir Lojistik ve Sanayi Aksı",
+            "name_en":          "Izmir Logistics and Industrial Corridor",
+            "region":           "Ege",
+            "category":         "industrial",
+            "districts":        ["Torbalı", "Kemalpaşa", "Aliağa", "Gaziemir"],
+            "status":           "active",
+            "keywords_tr":      ["izmir osb", "torbalı sanayi", "aliağa liman", "kemalpaşa lojistik"],
+            "keywords_en":      ["izmir industrial", "torbali OIZ", "aliaga port", "izmir logistics"],
+            "impact_radius_km": 15,
+            "tradia_score":     82,
+            "investment_horizon": "3-5 years",
+        },
+        {
+            "id":               "izmir-alsancak-gelisim",
+            "name":             "İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı",
+            "name_en":          "Izmir Alsancak-Bayrakli Urban Renewal Corridor",
+            "region":           "Ege",
+            "category":         "urban_renewal",
+            "districts":        ["Alsancak", "Bayraklı", "Karşıyaka", "Bornova"],
+            "status":           "active",
+            "keywords_tr":      ["alsancak dönüşüm", "bayraklı ofis", "karşıyaka metro", "bornova konut"],
+            "keywords_en":      ["alsancak renewal", "bayrakli office", "karsiyaka metro", "bornova residential"],
+            "impact_radius_km": 10,
+            "tradia_score":     79,
+            "investment_horizon": "2-4 years",
+        },
+        {
+            "id":               "nevsehir-kappadokya",
+            "name":             "Nevşehir Kapadokya Turizm Yatırım Bölgesi",
+            "name_en":          "Nevsehir Cappadocia Tourism Investment Zone",
+            "region":           "Ege",
+            "category":         "tourism",
+            "districts":        ["Göreme", "Ürgüp", "Uçhisar", "Avanos"],
+            "status":           "active",
+            "keywords_tr":      ["kapadokya otel", "göreme yatırım", "ürgüp villa", "nevşehir turizm"],
+            "keywords_en":      ["cappadocia hotel", "goreme investment", "urgup villa", "nevsehir tourism"],
+            "impact_radius_km": 25,
+            "tradia_score":     84,
+            "investment_horizon": "3-6 years",
+        },
     ]
 
     SEARCH_SOURCES: list[dict] = [
@@ -214,9 +285,25 @@ class ResearchAgent(BaseAgent):
         m = re.search(r"([+-]?\d+(?:\.\d+)?)\s*%", str(text))
         return float(m.group(1)) if m else 0.0
 
-    def load_archive(self, region: str) -> dict[str, Any]:
-        """Load static intelligence archive for a region, keyed by project_id."""
-        archive_path = RESEARCH_DIR / "projects" / f"{region}_archive.json"
+    ARCHIVE_FILES: dict[str, str] = {
+        "marmara": "marmara_archive.json",
+        "ege":     "ege_archive.json",
+    }
+
+    def load_archive(self, region: str | None = None) -> dict[str, Any]:
+        """Load static intelligence archive keyed by project_id.
+
+        If region is None, all known archives are merged and returned.
+        """
+        if region is None:
+            merged: dict[str, Any] = {}
+            for r in self.ARCHIVE_FILES:
+                merged.update(self.load_archive(r))
+            return merged
+
+        region = region.lower()
+        filename = self.ARCHIVE_FILES.get(region, f"{region}_archive.json")
+        archive_path = RESEARCH_DIR / "projects" / filename
         if not archive_path.exists():
             self.log(f"No archive found for region: {region}")
             return {}
@@ -444,6 +531,51 @@ class ResearchAgent(BaseAgent):
         })
         return combined
 
+    def research_all_ege(self) -> dict[str, Any]:
+        """Research all Ege mega-projects and produce combined report."""
+        ege = [p for p in self.MEGA_PROJECTS if p["region"] == "Ege"]
+        self.log(f"Researching {len(ege)} Ege projects")
+
+        results: list[dict[str, Any]] = []
+        for project in ege:
+            result = self.research_project(project["id"])
+            results.append(result)
+
+        positive = [r for r in results if r.get("overall_sentiment") == "positive"]
+        ranked   = sorted(
+            positive or results,
+            key=lambda r: r.get("tradia_score", 0),
+            reverse=True,
+        )
+        top_opportunity = ranked[0] if ranked else None
+
+        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        combined: dict[str, Any] = {
+            "date":               date_str,
+            "region":             "Ege",
+            "projects_analyzed":  len(results),
+            "top_opportunity":    {
+                "project_id":   top_opportunity["project_id"],
+                "project_name": top_opportunity["project_name"],
+                "tradia_score": top_opportunity["tradia_score"],
+                "sentiment":    top_opportunity["overall_sentiment"],
+                "price_signal": top_opportunity["price_signal_avg"],
+            } if top_opportunity else None,
+            "projects": results,
+        }
+
+        out_path = RESEARCH_DIR / f"ege_report_{date_str}.json"
+        out_path.write_text(json.dumps(combined, indent=2, ensure_ascii=False), encoding="utf-8")
+        self.log(f"Ege combined report saved → {out_path.name}")
+
+        self.report_to_ceo({
+            "action":            "ege_research_complete",
+            "projects_analyzed": len(results),
+            "top_opportunity":   combined["top_opportunity"],
+            "priority":          "high",
+        })
+        return combined
+
     def generate_property_targets(self, project_id: str) -> list[dict[str, Any]]:
         """Generate 3 target property profiles for the given project via Claude."""
         project = next((p for p in self.MEGA_PROJECTS if p["id"] == project_id), None)
@@ -515,6 +647,14 @@ class ResearchAgent(BaseAgent):
 
         if action == "marmara":
             report = self.research_all_marmara()
+            return {
+                "status":            "OK",
+                "projects_analyzed": report["projects_analyzed"],
+                "top_opportunity":   report.get("top_opportunity"),
+            }
+
+        if action == "ege":
+            report = self.research_all_ege()
             return {
                 "status":            "OK",
                 "projects_analyzed": report["projects_analyzed"],
