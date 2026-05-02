@@ -154,6 +154,29 @@ textarea.form-input{min-height:100px;resize:vertical}
 [dir="rtl"] .nav-links{direction:rtl}
 @media(max-width:900px){.dash-grid{grid-template-columns:1fr}.steps-grid{grid-template-columns:repeat(2,1fr)}.score-grid{grid-template-columns:repeat(3,1fr)}.contact-grid{grid-template-columns:1fr}.nav-links{display:none}}
 @media(max-width:600px){.hero-stats{gap:1.5rem}.score-grid{grid-template-columns:repeat(2,1fr)}.footer{flex-direction:column;text-align:center}}
+/* hero-desc */
+.hero-desc{font-size:1.05rem;color:var(--text2);max-width:560px;line-height:1.75;margin-bottom:2.5rem}
+/* agent strip */
+.agent-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:1.5rem;margin-top:3.5rem;padding-top:2.5rem;border-top:1px solid var(--gold-bdr)}
+.agent-col{text-align:center}
+.agent-icon{font-size:1.6rem;margin-bottom:.6rem}
+.agent-name{font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);margin-bottom:.35rem}
+.agent-desc{font-size:.72rem;color:var(--text2);line-height:1.5}
+@media(max-width:900px){.agent-strip{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.agent-strip{grid-template-columns:repeat(2,1fr)}}
+/* price timeline */
+#timeline{padding:6rem 2rem;max-width:1100px;margin:0 auto}
+.timeline-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:2.5rem}
+.timeline-card{background:var(--card);border:1px solid var(--gold-bdr);border-radius:8px;padding:1.5rem}
+.timeline-card.trend-up{border-left:3px solid #22c55e}
+.timeline-card.trend-watch{border-left:3px solid var(--gold)}
+.timeline-city{font-size:.78rem;font-weight:600;letter-spacing:.05em;color:var(--text2);text-transform:uppercase;margin-bottom:.5rem}
+.timeline-change{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:#22c55e;margin-bottom:.2rem}
+.timeline-card.trend-watch .timeline-change{color:var(--gold)}
+.timeline-period{font-size:.68rem;color:var(--text2);margin-bottom:.6rem}
+.timeline-driver{font-size:.78rem;color:var(--text1)}
+@media(max-width:900px){.timeline-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.timeline-grid{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -204,8 +227,8 @@ textarea.form-input{min-height:100px;resize:vertical}
 
 <section id="hero">
   <div class="hero-eyebrow" data-i18n="hero_eyebrow">Turkey Property Intelligence &mdash; Powered by AI</div>
-  <h1 class="hero-title">Turkey's Most<br><em>Intelligent</em><br>Property Platform</h1>
-  <p class="hero-sub" data-i18n="hero_sub">Real-time market signals, AI-scored opportunities, and institutional-grade analysis for every serious investor in Turkish real estate.</p>
+  <h1 class="hero-title">We Track Where<br><em>Turkish Property Prices</em><br>Are Moving Next</h1>
+  <p class="hero-desc">Our AI agents watch 81 provinces 24 hours a day — scanning listings, zoning decisions, infrastructure news and currency moves — so you know which districts are about to break out before the market does.</p>
   <div class="hero-btns">
     <button class="btn-primary" onclick="document.getElementById('dashboard').scrollIntoView({behavior:'smooth'})" data-i18n="hero_cta1">View Intelligence</button>
     <button class="btn-secondary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})" data-i18n="hero_cta2">Request Brief</button>
@@ -215,6 +238,34 @@ textarea.form-input{min-height:100px;resize:vertical}
     <div class="hero-stat"><div class="hero-stat-n">10+</div><div class="hero-stat-l" data-i18n="stat_criteria">Score Criteria</div></div>
     <div class="hero-stat"><div class="hero-stat-n">24h</div><div class="hero-stat-l" data-i18n="stat_update">Update Cycle</div></div>
     <div class="hero-stat"><div class="hero-stat-n">4</div><div class="hero-stat-l" data-i18n="stat_langs">Languages</div></div>
+  </div>
+
+  <div class="agent-strip">
+    <div class="agent-col">
+      <div class="agent-icon">📡</div>
+      <div class="agent-name">News Agent</div>
+      <div class="agent-desc">Scans Turkish property news &amp; zoning decisions every 12 hours</div>
+    </div>
+    <div class="agent-col">
+      <div class="agent-icon">🏗️</div>
+      <div class="agent-name">Property Agent</div>
+      <div class="agent-desc">Scores every new listing across 10+ investment criteria</div>
+    </div>
+    <div class="agent-col">
+      <div class="agent-icon">🧠</div>
+      <div class="agent-name">CEO Agent</div>
+      <div class="agent-desc">Synthesises signals into a weekly investor-grade brief</div>
+    </div>
+    <div class="agent-col">
+      <div class="agent-icon">🤝</div>
+      <div class="agent-name">Outreach Agent</div>
+      <div class="agent-desc">Matches investors to shortlisted opportunities automatically</div>
+    </div>
+    <div class="agent-col">
+      <div class="agent-icon">🚀</div>
+      <div class="agent-name">Deploy Agent</div>
+      <div class="agent-desc">Publishes fresh intelligence to this site within minutes</div>
+    </div>
   </div>
 </section>
 
@@ -520,6 +571,52 @@ textarea.form-input{min-height:100px;resize:vertical}
   </div>
 </section>
 
+<section id="timeline">
+  <div class="section-header">
+    <div class="section-eyebrow">Price Intelligence</div>
+    <h2 class="section-title">Where Prices Are Moving</h2>
+    <p class="section-sub">AI-tracked price momentum across key districts. Updated every 24 hours.</p>
+  </div>
+  <div class="timeline-grid">
+    <div class="timeline-card trend-up">
+      <div class="timeline-city">Istanbul — Esenyurt</div>
+      <div class="timeline-change">+18%</div>
+      <div class="timeline-period">12-month trend</div>
+      <div class="timeline-driver">Metro extension + rezoning</div>
+    </div>
+    <div class="timeline-card trend-up">
+      <div class="timeline-city">Antalya — Kepez</div>
+      <div class="timeline-change">+24%</div>
+      <div class="timeline-period">12-month trend</div>
+      <div class="timeline-driver">Tourism boom + foreign demand</div>
+    </div>
+    <div class="timeline-card trend-up">
+      <div class="timeline-city">Ankara — Çankaya</div>
+      <div class="timeline-change">+15%</div>
+      <div class="timeline-period">12-month trend</div>
+      <div class="timeline-driver">Government hub relocation</div>
+    </div>
+    <div class="timeline-card trend-watch">
+      <div class="timeline-city">Izmir — Bornova</div>
+      <div class="timeline-change">+9%</div>
+      <div class="timeline-period">12-month trend</div>
+      <div class="timeline-driver">University district expansion</div>
+    </div>
+    <div class="timeline-card trend-up">
+      <div class="timeline-city">Bursa — Nilüfer</div>
+      <div class="timeline-change">+21%</div>
+      <div class="timeline-period">12-month trend</div>
+      <div class="timeline-driver">Industry + logistics corridor</div>
+    </div>
+    <div class="timeline-card trend-watch">
+      <div class="timeline-city">Gaziantep — Şehitkamil</div>
+      <div class="timeline-change">+12%</div>
+      <div class="timeline-period">12-month trend</div>
+      <div class="timeline-driver">Cross-border trade growth</div>
+    </div>
+  </div>
+</section>
+
 <section id="dashboard">
   <div class="section-header">
     <div class="section-eyebrow" data-i18n="dash_eyebrow">Live Intelligence Feed</div>
@@ -753,8 +850,9 @@ This 420 m² main-boulevard-facing commercial plot in Esenyurt, Istanbul is offe
 
 <section id="contact">
   <div class="section-header">
-    <div class="section-eyebrow" data-i18n="contact_eyebrow">Get In Touch</div>
-    <h2 class="section-title" data-i18n="contact_title">Request an Intelligence Brief</h2>
+    <div class="section-eyebrow">Investment Profile</div>
+    <h2 class="section-title">Tell Us What You Need</h2>
+    <p class="section-sub">We match your budget, timeline and risk appetite to specific districts and deal types — no generic reports.</p>
   </div>
   <div class="contact-grid">
     <div class="contact-info">
