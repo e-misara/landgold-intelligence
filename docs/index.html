@@ -1238,6 +1238,54 @@ const OSB_BY_IL = {
     }
   });
 
+  // Nüfus verileri per province
+  const NUFUS_BY_IL = {
+    "İstanbul":       {nufus:"16.0M", buyume:"+1.8%", medyan_yas:"33.2", goc:"+85K"},
+    "Ankara":         {nufus:"5.8M",  buyume:"+1.2%", medyan_yas:"34.8", goc:"+12.8K"},
+    "İzmir":          {nufus:"4.5M",  buyume:"+1.4%", medyan_yas:"35.1", goc:"+22.4K"},
+    "Bursa":          {nufus:"3.2M",  buyume:"+1.6%", medyan_yas:"33.6", goc:"+18.2K"},
+    "Antalya":        {nufus:"2.7M",  buyume:"+2.3%", medyan_yas:"32.4", goc:"+32.1K"},
+    "Kocaeli":        {nufus:"2.1M",  buyume:"+1.9%", medyan_yas:"32.8", goc:"+24.6K"},
+    "Muğla":          {nufus:"1.1M",  buyume:"+2.6%", medyan_yas:"36.4", goc:"+28.4K"},
+    "Tekirdağ":       {nufus:"1.2M",  buyume:"+2.0%", medyan_yas:"32.2", goc:"+18.2K"},
+    "Sakarya":        {nufus:"1.1M",  buyume:"+1.7%", medyan_yas:"33.4", goc:"+15.4K"},
+    "Mersin":         {nufus:"1.9M",  buyume:"+1.2%", medyan_yas:"31.2", goc:"+9.2K"},
+    "Gaziantep":      {nufus:"2.2M",  buyume:"+1.1%", medyan_yas:"28.6", goc:"+5.8K"},
+    "Konya":          {nufus:"2.3M",  buyume:"+0.9%", medyan_yas:"30.4", goc:"+8.4K"},
+    "Trabzon":        {nufus:"820K",  buyume:"+0.3%", medyan_yas:"38.2", goc:"+14.2K"},
+    "Şanlıurfa":      {nufus:"2.2M",  buyume:"+2.4%", medyan_yas:"22.1", goc:"-12K"},
+    "Nevşehir":       {nufus:"311K",  buyume:"+1.8%", medyan_yas:"33.8", goc:"+4.2K"},
+    "Çanakkale":      {nufus:"580K",  buyume:"+1.4%", medyan_yas:"36.2", goc:"+6.2K"},
+    "Balıkesir":      {nufus:"1.3M",  buyume:"+0.9%", medyan_yas:"38.6", goc:"+8.8K"},
+    "Eskişehir":      {nufus:"912K",  buyume:"+0.8%", medyan_yas:"34.2", goc:"+4.8K"},
+    "Kayseri":        {nufus:"1.4M",  buyume:"+1.0%", medyan_yas:"32.0", goc:"+2.6K"},
+    "Diyarbakır":     {nufus:"1.8M",  buyume:"+0.8%", medyan_yas:"25.3", goc:"-9.6K"}
+  };
+
+  // Refah endeksi per province
+  const REFAH_BY_IL = {
+    "Ankara":         {endeks:78.4, gelir:82, egitim:84, altyapi:88, kira_getiri:"7.2%", grade:"A"},
+    "İzmir":          {endeks:76.8, gelir:78, egitim:80, altyapi:82, kira_getiri:"7.8%", grade:"A"},
+    "İstanbul":       {endeks:74.2, gelir:88, egitim:82, altyapi:76, kira_getiri:"6.8%", grade:"A"},
+    "Muğla":          {endeks:72.6, gelir:74, egitim:68, altyapi:78, kira_getiri:"9.4%", grade:"A"},
+    "Antalya":        {endeks:71.4, gelir:72, egitim:68, altyapi:80, kira_getiri:"10.2%", grade:"A"},
+    "Bursa":          {endeks:70.8, gelir:74, egitim:70, altyapi:76, kira_getiri:"8.2%", grade:"B"},
+    "Eskişehir":      {endeks:70.2, gelir:68, egitim:78, altyapi:74, kira_getiri:"7.6%", grade:"B"},
+    "Kocaeli":        {endeks:69.6, gelir:76, egitim:68, altyapi:78, kira_getiri:"7.8%", grade:"B"},
+    "Çanakkale":      {endeks:68.8, gelir:66, egitim:70, altyapi:72, kira_getiri:"8.6%", grade:"B"},
+    "Tekirdağ":       {endeks:67.4, gelir:70, egitim:64, altyapi:76, kira_getiri:"7.4%", grade:"B"},
+    "Bolu":           {endeks:66.8, gelir:64, egitim:66, altyapi:74, kira_getiri:"7.0%", grade:"B"},
+    "Sakarya":        {endeks:65.4, gelir:66, egitim:62, altyapi:72, kira_getiri:"7.6%", grade:"B"},
+    "Nevşehir":       {endeks:64.8, gelir:62, egitim:60, altyapi:68, kira_getiri:"12.4%", grade:"B"},
+    "Kayseri":        {endeks:64.2, gelir:66, egitim:64, altyapi:72, kira_getiri:"7.2%", grade:"B"},
+    "Balıkesir":      {endeks:63.8, gelir:62, egitim:62, altyapi:70, kira_getiri:"7.8%", grade:"B"},
+    "Trabzon":        {endeks:62.4, gelir:62, egitim:62, altyapi:68, kira_getiri:"9.2%", grade:"C"},
+    "Konya":          {endeks:61.4, gelir:62, egitim:60, altyapi:68, kira_getiri:"7.4%", grade:"C"},
+    "Mersin":         {endeks:60.2, gelir:60, egitim:58, altyapi:66, kira_getiri:"7.6%", grade:"C"},
+    "Gaziantep":      {endeks:57.8, gelir:62, egitim:52, altyapi:64, kira_getiri:"7.8%", grade:"C"},
+    "Diyarbakır":     {endeks:47.8, gelir:48, egitim:44, altyapi:50, kira_getiri:"8.8%", grade:"D"}
+  };
+
   function openProvincePanel(provinceName){
     const data=TURKEY_INVESTMENT_DATA[provinceName]||null;
     const osbs=OSB_BY_IL[provinceName]||[];
@@ -1320,6 +1368,48 @@ const OSB_BY_IL = {
         +'</div>';
     }
 
+    // Sosyal göstergeler (nüfus + refah)
+    const nufus=NUFUS_BY_IL[provinceName]||null;
+    const refah=REFAH_BY_IL[provinceName]||null;
+    let sosyal_html='';
+    if(nufus||refah){
+      const gradeColor={A:'#2ECC8A',B:'#C9973A',C:'#F59E0B',D:'#E8504A'};
+      const rc=refah?gradeColor[refah.grade]||'#6B7280':'#6B7280';
+      sosyal_html='<div style="margin-top:.8rem">'
+        +'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#6B7280;margin-bottom:.4rem">SOSYAL GÖSTERGELER</div>'
+        +(nufus?
+          '<div style="display:grid;grid-template-columns:repeat(2,1fr);gap:2px;margin-bottom:.4rem">'
+          +'<div style="background:#080D1A;border:1px solid rgba(99,102,241,0.2);padding:.5rem .7rem">'
+          +'<div style="font-size:.52rem;color:#6B7280;text-transform:uppercase;letter-spacing:.1em">NÜFUS</div>'
+          +'<div style="font-size:.85rem;color:#F0EDE8;font-weight:500">'+nufus.nufus+'</div>'
+          +'<div style="font-size:.58rem;color:#2ECC8A">'+nufus.buyume+' büyüme</div>'
+          +'</div>'
+          +'<div style="background:#080D1A;border:1px solid rgba(99,102,241,0.2);padding:.5rem .7rem">'
+          +'<div style="font-size:.52rem;color:#6B7280;text-transform:uppercase;letter-spacing:.1em">MEDYAN YAŞ</div>'
+          +'<div style="font-size:.85rem;color:#F0EDE8;font-weight:500">'+nufus.medyan_yas+'</div>'
+          +'<div style="font-size:.58rem;color:#8A8F9E">Net göç: '+nufus.goc+'</div>'
+          +'</div>'
+          +'</div>':''
+        )
+        +(refah?
+          '<div style="background:#080D1A;border:1px solid rgba(99,102,241,0.2);padding:.5rem .7rem;margin-bottom:.4rem">'
+          +'<div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:.4rem">'
+          +'<div style="font-size:.6rem;color:#8A8F9E">Refah Endeksi</div>'
+          +'<div style="font-size:.6rem;font-weight:600;color:'+rc+';border:1px solid '+rc+'44;padding:.1rem .5rem">'+refah.grade+'</div>'
+          +'</div>'
+          +'<div style="background:#1F2937;height:4px;border-radius:2px;margin-bottom:.5rem">'
+          +'<div style="height:100%;width:'+refah.endeks+'%;background:linear-gradient(90deg,'+rc+'66,'+rc+');border-radius:2px"></div>'
+          +'</div>'
+          +'<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:4px">'
+          +'<div style="text-align:center"><div style="font-size:.52rem;color:#6B7280">GELİR</div><div style="font-size:.68rem;color:#F0EDE8">'+refah.gelir+'/100</div></div>'
+          +'<div style="text-align:center"><div style="font-size:.52rem;color:#6B7280">EĞİTİM</div><div style="font-size:.68rem;color:#F0EDE8">'+refah.egitim+'/100</div></div>'
+          +'<div style="text-align:center"><div style="font-size:.52rem;color:#6B7280">KİRA GETİRİ</div><div style="font-size:.68rem;color:#2ECC8A">'+refah.kira_getiri+'</div></div>'
+          +'</div>'
+          +'</div>':''
+        )
+        +'</div>';
+    }
+
     // News items
     const provinceNews=(typeof NEWS_ARCHIVE!=='undefined'?NEWS_ARCHIVE:[])
       .filter(n=>{const pn=normName(n.province||'');return pn===provinceName||n.province===provinceName||provinceName.includes(pn)||pn.includes(provinceName);})
@@ -1370,6 +1460,7 @@ const OSB_BY_IL = {
       +osbHTML
       +turizmHTML
       +tarihi_html
+      +sosyal_html
       +kaynaklar_html
       +newsHTML
       +'<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">'
