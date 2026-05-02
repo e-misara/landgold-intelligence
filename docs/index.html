@@ -961,6 +961,53 @@ const IL_TESVIK = {
   "Batman":5,"Mardin":5,"Şanlıurfa":5,"Diyarbakır":5
 };
 
+// Historical sites per province
+const TARIHI_BY_IL = {
+  "İstanbul":      [{ad:"Ayasofya + Tarihi Yarımada", tip:"UNESCO",      ziyaretci:"18.5M/yıl"}],
+  "İzmir":         [{ad:"Efes Antik Kenti",           tip:"UNESCO",      ziyaretci:"3.2M/yıl"}],
+  "Çanakkale":     [{ad:"Truva",                      tip:"UNESCO",      ziyaretci:"1.8M/yıl"}],
+  "Konya":         [{ad:"Mevlana + Çatalhöyük",       tip:"UNESCO",      ziyaretci:"3.8M/yıl"}],
+  "Şanlıurfa":     [{ad:"Göbeklitepe",                tip:"UNESCO 2018", ziyaretci:"680K/yıl"}],
+  "Adıyaman":      [{ad:"Nemrut Dağı",                tip:"UNESCO",      ziyaretci:"420K/yıl"}],
+  "Karabük":       [{ad:"Safranbolu",                 tip:"UNESCO",      ziyaretci:"1.2M/yıl"}],
+  "Trabzon":       [{ad:"Sümela Manastırı",           tip:"Tarihi",      ziyaretci:"680K/yıl"}],
+  "Edirne":        [{ad:"Selimiye Camii",             tip:"UNESCO",      ziyaretci:"1.2M/yıl"}],
+  "Mardin":        [{ad:"Tarihi Mardin",              tip:"Tescilli",    ziyaretci:"1.8M/yıl"}],
+  "Diyarbakır":    [{ad:"Diyarbakır Surları",         tip:"UNESCO",      ziyaretci:"980K/yıl"}],
+  "Denizli":       [{ad:"Pamukkale-Hierapolis",       tip:"UNESCO",      ziyaretci:"2.8M/yıl"}],
+  "Antalya":       [{ad:"Perge + Aspendos",           tip:"Arkeolojik",  ziyaretci:"1.4M/yıl"}],
+  "Muğla":         [{ad:"Xanthos-Letoon",             tip:"UNESCO",      ziyaretci:"480K/yıl"}],
+  "Nevşehir":      [{ad:"Göreme + Kapadokya",         tip:"UNESCO",      ziyaretci:"3.8M/yıl"}],
+  "Bursa":         [{ad:"Tarihi Bursa",               tip:"Osmanlı",     ziyaretci:"2.8M/yıl"}],
+  "Hatay":         [{ad:"Antakya",                    tip:"Helenistik",  ziyaretci:"850K/yıl"}],
+  "Malatya":       [{ad:"Arslantepe Höyüğü",          tip:"UNESCO 2021", ziyaretci:"180K/yıl"}],
+  "Aydın":         [{ad:"Afrodisias",                 tip:"UNESCO",      ziyaretci:"380K/yıl"}],
+  "Mersin":        [{ad:"Tarsus — Aziz Pavlus",       tip:"Dini",        ziyaretci:"800K/yıl"}]
+};
+
+// Natural resources per province
+const KAYNAKLAR_BY_IL = {
+  "Kütahya":        ["Bor (dünya %73)","Linyit (3.2B ton)"],
+  "Afyonkarahisar": ["Jeotermal (850MW)","Mermer (Türkiye 1.)"],
+  "Aydın":          ["Jeotermal (680MW — Türkiye en yüksek)"],
+  "Manisa":         ["Jeotermal (480MW)"],
+  "Zonguldak":      ["Taş kömürü (400M ton)"],
+  "Batman":         ["Petrol (280M varil)"],
+  "Adıyaman":       ["Petrol (180M varil)"],
+  "Balıkesir":      ["Altın-Gümüş (280 ton)"],
+  "Erzincan":       ["Altın (Anagold aktif)"],
+  "Trabzon":        ["Fındık (dünya %65)","Bakır (Murgul)"],
+  "Rize":           ["Çay (Türkiye %65)","HES potansiyeli"],
+  "Konya":          ["Buğday (Türkiye ambarı)","Krom (12M ton)"],
+  "Şanlıurfa":      ["Pamuk-Mısır (GAP)"],
+  "Isparta":        ["Gül yağı (dünya %70)"],
+  "Gaziantep":      ["Antep fıstığı (dünya 3.)"],
+  "Muğla":          ["Linyit (1.8B ton)","Mermer"],
+  "Denizli":        ["Jeotermal (280MW)"],
+  "Nevşehir":       ["Volkanik tüf (mağara yapı)"],
+  "Çanakkale":      ["Jeotermal (320MW)","Mermer"]
+};
+
 // Tourism zones per province
 const TURIZM_BY_IL = {
   "Antalya":       [{ad:"Türk Rivierası",          turist:"15.2M/yıl", getiri:"%12", score:88}],
@@ -1242,6 +1289,37 @@ const OSB_BY_IL = {
         +'</div>';
     }
 
+    // Tarihi miras cards
+    const tarihi=TARIHI_BY_IL[provinceName]||[];
+    let tarihi_html='';
+    if(tarihi.length>0){
+      tarihi_html='<div style="margin-top:.8rem">'
+        +'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#6B7280;margin-bottom:.4rem">TARİHİ MİRAS</div>'
+        +tarihi.map(t=>
+          '<div style="background:#080D1A;border:1px solid rgba(217,119,6,0.2);padding:.55rem .8rem;margin-bottom:2px;display:flex;align-items:center;gap:.6rem">'
+          +'<span style="font-size:.65rem;color:#F59E0B">&#127963;</span>'
+          +'<div style="flex:1;font-size:.68rem;color:#F0EDE8">'+t.ad+'</div>'
+          +'<div style="font-size:.58rem;color:#D97706">'+t.tip+'</div>'
+          +'</div>'
+        ).join('')
+        +'</div>';
+    }
+
+    // Doğal kaynaklar cards
+    const kaynaklar=KAYNAKLAR_BY_IL[provinceName]||[];
+    let kaynaklar_html='';
+    if(kaynaklar.length>0){
+      kaynaklar_html='<div style="margin-top:.8rem">'
+        +'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#6B7280;margin-bottom:.4rem">DOĞAL KAYNAKLAR</div>'
+        +kaynaklar.map(k=>
+          '<div style="background:#080D1A;border:1px solid rgba(16,185,129,0.2);padding:.45rem .8rem;margin-bottom:2px;display:flex;align-items:center;gap:.6rem">'
+          +'<span style="font-size:.6rem">&#9935;</span>'
+          +'<div style="font-size:.65rem;color:#8A8F9E">'+k+'</div>'
+          +'</div>'
+        ).join('')
+        +'</div>';
+    }
+
     // News items
     const provinceNews=(typeof NEWS_ARCHIVE!=='undefined'?NEWS_ARCHIVE:[])
       .filter(n=>{const pn=normName(n.province||'');return pn===provinceName||n.province===provinceName||provinceName.includes(pn)||pn.includes(provinceName);})
@@ -1291,6 +1369,8 @@ const OSB_BY_IL = {
       +tesvikHTML
       +osbHTML
       +turizmHTML
+      +tarihi_html
+      +kaynaklar_html
       +newsHTML
       +'<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">'
       +'<button onclick="document.getElementById(\'contact\').scrollIntoView({behavior:\'smooth\'})" style="width:100%;background:#C9973A;color:#080D1A;border:none;padding:.75rem;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-family:inherit">Bu Bölge İçin Analiz Talep Et →</button>'
