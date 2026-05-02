@@ -377,8 +377,10 @@ class ResearchAgent(BaseAgent):
                 merged.update(self.load_archive(r))
             return merged
 
-        region = region.lower()
-        filename = self.ARCHIVE_FILES.get(region, f"{region}_archive.json")
+        # Normalize Turkish İ (U+0130) → i before lowercasing to avoid
+        # the two-char "i̇" produced by str.lower() on that codepoint.
+        region_key = region.replace("İ", "i").replace("I", "ı").lower()
+        filename = self.ARCHIVE_FILES.get(region_key, f"{region_key}_archive.json")
         archive_path = RESEARCH_DIR / "projects" / filename
         if not archive_path.exists():
             self.log(f"No archive found for region: {region}")
