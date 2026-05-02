@@ -854,6 +854,38 @@ class ResearchAgent(BaseAgent):
             self.log(f"Tarihi alan error: {exc}")
             return []
 
+    def get_nufus_verileri(self, il_adi: str | None = None) -> list[dict] | dict:
+        """Return population data, optionally filtered to a single province."""
+        path = RESEARCH_DIR / "sosyal" / "nufus_verileri.json"
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            iller = data.get("iller", [])
+            if il_adi:
+                for il in iller:
+                    if il.get("il") == il_adi:
+                        return il
+                return {}
+            return sorted(iller, key=lambda x: x.get("nufus", 0), reverse=True)
+        except Exception as exc:
+            self.log(f"Nüfus verisi error: {exc}")
+            return [] if il_adi is None else {}
+
+    def get_refah_endeksi(self, il_adi: str | None = None) -> list[dict] | dict:
+        """Return welfare index data, optionally filtered to a single province."""
+        path = RESEARCH_DIR / "sosyal" / "refah_endeksi.json"
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            iller = data.get("iller", [])
+            if il_adi:
+                for il in iller:
+                    if il.get("il") == il_adi:
+                        return il
+                return {}
+            return sorted(iller, key=lambda x: x.get("refah_endeksi", 0), reverse=True)
+        except Exception as exc:
+            self.log(f"Refah endeksi error: {exc}")
+            return [] if il_adi is None else {}
+
     def get_osb_summary_by_region(self, region: str | None = None) -> dict[str, Any]:
         """Return OSB summary stats per region or all regions."""
         osb_db_path = RESEARCH_DIR / "osb_database.json"
@@ -1087,6 +1119,24 @@ class ResearchAgent(BaseAgent):
             il    = action.split(":", 1)[1]
             sites = self.get_tarihi_alanlar(il_adi=il)
             return {"status": "OK", "il": il, "count": len(sites), "sites": sites}
+
+        if action == "nufus":
+            iller = self.get_nufus_verileri()
+            return {"status": "OK", "count": len(iller), "top_il": iller[0]["il"] if iller else None}
+
+        if action.startswith("nufus:"):
+            il    = action.split(":", 1)[1]
+            data  = self.get_nufus_verileri(il_adi=il)
+            return {"status": "OK", "il": il, "data": data}
+
+        if action == "refah":
+            iller = self.get_refah_endeksi()
+            return {"status": "OK", "count": len(iller), "top_il": iller[0]["il"] if iller else None}
+
+        if action.startswith("refah:"):
+            il    = action.split(":", 1)[1]
+            data  = self.get_refah_endeksi(il_adi=il)
+            return {"status": "OK", "il": il, "data": data}
 
         if action == "full":
             marmara_report = self.research_all_marmara()
