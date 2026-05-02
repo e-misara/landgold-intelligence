@@ -881,7 +881,7 @@ This 3,200 m² industrial land parcel in Pendik's Kurtköy district offers compe
 
 <div class="province-panel" id="province-panel">
   <button class="province-panel-close" id="panel-close" aria-label="Close">×</button>
-  <div id="panel-content"></div>
+  <div id="province-panel-content"></div>
 </div>
 
 <script src="turkey-data.js"></script>
@@ -930,13 +930,120 @@ function applyLang(lang){
 }
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 
+// OSB data per province
+const OSB_BY_IL = {
+  "İstanbul": [
+    {ad:"İkitelli OSB", score:88, arsa:1200, trend:"+15%", sektor:"tekstil,metal", grade:"A"},
+    {ad:"Dudullu OSB", score:86, arsa:1800, trend:"+18%", sektor:"elektronik,makine", grade:"A"},
+    {ad:"Tuzla OSB", score:82, arsa:1400, trend:"+12%", sektor:"kimya,plastik", grade:"B"},
+    {ad:"Hadımköy OSB", score:85, arsa:950, trend:"+22%", sektor:"otomotiv,metal", grade:"A"},
+    {ad:"Esenyurt OSB", score:78, arsa:1100, trend:"+10%", sektor:"tekstil,ambalaj", grade:"B"}
+  ],
+  "Bursa": [
+    {ad:"Bursa OSB (BOSB)", score:89, arsa:680, trend:"+14%", sektor:"otomotiv,tekstil", grade:"A"},
+    {ad:"Demirtaş OSB", score:81, arsa:520, trend:"+12%", sektor:"kimya,plastik", grade:"B"},
+    {ad:"İnegöl OSB", score:84, arsa:380, trend:"+16%", sektor:"mobilya,orman", grade:"A"},
+    {ad:"Gemlik OSB", score:83, arsa:420, trend:"+16%", sektor:"petrokimya,liman", grade:"A"},
+    {ad:"Nilüfer OSB", score:79, arsa:580, trend:"+11%", sektor:"tekstil,gıda", grade:"B"}
+  ],
+  "Kocaeli": [
+    {ad:"Kocaeli OSB (KOSBI)", score:91, arsa:480, trend:"+18%", sektor:"otomotiv,kimya", grade:"A"},
+    {ad:"Dilovası OSB", score:87, arsa:380, trend:"+20%", sektor:"kimya,plastik", grade:"A"},
+    {ad:"Gebze OSB", score:85, arsa:520, trend:"+15%", sektor:"elektronik,makine", grade:"A"},
+    {ad:"Gebze 2. OSB", score:83, arsa:460, trend:"+14%", sektor:"kimya,plastik", grade:"A"},
+    {ad:"Kocaeli 2. OSB", score:82, arsa:420, trend:"+16%", sektor:"petrokimya", grade:"A"}
+  ],
+  "Tekirdağ": [
+    {ad:"Çerkezköy OSB", score:80, arsa:180, trend:"+22%", sektor:"tekstil,kimya", grade:"B"},
+    {ad:"Çorlu OSB", score:78, arsa:160, trend:"+18%", sektor:"tekstil,deri", grade:"B"},
+    {ad:"Muratlı OSB", score:72, arsa:120, trend:"+15%", sektor:"gıda,ambalaj", grade:"C"}
+  ],
+  "Balıkesir": [
+    {ad:"Balıkesir OSB", score:74, arsa:140, trend:"+12%", sektor:"gıda,seramik", grade:"B"},
+    {ad:"Bandırma OSB", score:75, arsa:160, trend:"+14%", sektor:"kimya,gübre", grade:"B"},
+    {ad:"Gönen OSB", score:67, arsa:110, trend:"+11%", sektor:"deri,tekstil", grade:"C"}
+  ],
+  "İzmir": [
+    {ad:"Atatürk OSB", score:87, arsa:480, trend:"+14%", sektor:"makine,metal", grade:"A"},
+    {ad:"Kemalpaşa OSB", score:85, arsa:320, trend:"+18%", sektor:"gıda,tekstil", grade:"A"},
+    {ad:"Torbalı OSB", score:86, arsa:280, trend:"+22%", sektor:"otomotiv,metal", grade:"A"},
+    {ad:"Aliağa OSB", score:84, arsa:380, trend:"+20%", sektor:"petrokimya,gemi", grade:"A"},
+    {ad:"İzmir Serbest Bölge", score:86, arsa:580, trend:"+16%", sektor:"elektronik,lojistik", grade:"A"}
+  ],
+  "Manisa": [
+    {ad:"Manisa OSB", score:90, arsa:220, trend:"+16%", sektor:"elektronik,beyaz eşya", grade:"A"},
+    {ad:"Turgutlu OSB", score:76, arsa:160, trend:"+12%", sektor:"tekstil,gıda", grade:"B"},
+    {ad:"Akhisar OSB", score:73, arsa:140, trend:"+12%", sektor:"zeytin,gıda", grade:"B"}
+  ],
+  "Denizli": [
+    {ad:"Denizli OSB", score:82, arsa:180, trend:"+14%", sektor:"tekstil,hazır giyim", grade:"A"},
+    {ad:"Honaz OSB", score:74, arsa:140, trend:"+10%", sektor:"mermer,tekstil", grade:"B"}
+  ],
+  "Ankara": [
+    {ad:"ASO 1. OSB", score:86, arsa:320, trend:"+14%", sektor:"savunma,makine", grade:"A"},
+    {ad:"ASO 2. OSB", score:85, arsa:280, trend:"+16%", sektor:"otomotiv,savunma", grade:"A"},
+    {ad:"Ostim OSB", score:84, arsa:480, trend:"+12%", sektor:"savunma,elektronik", grade:"A"},
+    {ad:"Sincan OSB", score:83, arsa:260, trend:"+15%", sektor:"savunma,makine", grade:"A"},
+    {ad:"Polatlı OSB", score:74, arsa:180, trend:"+12%", sektor:"savunma,gıda", grade:"B"}
+  ],
+  "Konya": [
+    {ad:"Konya OSB", score:83, arsa:180, trend:"+15%", sektor:"makine,metal,gıda", grade:"A"},
+    {ad:"Konya 2. OSB", score:78, arsa:160, trend:"+13%", sektor:"gıda,plastik", grade:"B"},
+    {ad:"Konya 3. OSB", score:77, arsa:150, trend:"+13%", sektor:"makine,metal", grade:"B"}
+  ],
+  "Kayseri": [
+    {ad:"Kayseri OSB", score:82, arsa:160, trend:"+13%", sektor:"mobilya,tekstil", grade:"A"},
+    {ad:"Kayseri 2. OSB", score:76, arsa:140, trend:"+11%", sektor:"gıda,plastik", grade:"B"},
+    {ad:"Kayseri 3. OSB", score:74, arsa:130, trend:"+12%", sektor:"mobilya,gıda", grade:"B"}
+  ],
+  "Eskişehir": [
+    {ad:"ESOŞ OSB", score:84, arsa:240, trend:"+15%", sektor:"havacılık,savunma", grade:"A"},
+    {ad:"Eskişehir 2. OSB", score:79, arsa:200, trend:"+13%", sektor:"demiryolu,makine", grade:"B"}
+  ],
+  "Gaziantep": [
+    {ad:"Gaziantep OSB", score:89, arsa:180, trend:"+22%", sektor:"tekstil,plastik,metal", grade:"A"},
+    {ad:"Gaziantep 2. OSB", score:86, arsa:160, trend:"+20%", sektor:"tekstil,plastik", grade:"A"},
+    {ad:"İslahiye OSB", score:80, arsa:120, trend:"+18%", sektor:"tekstil,metal", grade:"B"},
+    {ad:"Nizip OSB", score:75, arsa:100, trend:"+15%", sektor:"gıda,plastik", grade:"B"},
+    {ad:"Gaziantep 3. OSB", score:80, arsa:140, trend:"+18%", sektor:"tekstil,metal", grade:"B"}
+  ],
+  "Mersin": [
+    {ad:"Mersin OSB", score:85, arsa:180, trend:"+18%", sektor:"gıda,kimya", grade:"A"},
+    {ad:"Tarsus OSB", score:78, arsa:140, trend:"+15%", sektor:"tekstil,plastik", grade:"B"},
+    {ad:"Mersin 2. OSB", score:79, arsa:160, trend:"+16%", sektor:"kimya,plastik", grade:"B"}
+  ],
+  "Adana": [
+    {ad:"Adana OSB", score:82, arsa:160, trend:"+14%", sektor:"tekstil,gıda,kimya", grade:"A"},
+    {ad:"Ceyhan OSB", score:83, arsa:200, trend:"+20%", sektor:"petrokimya,enerji", grade:"A"},
+    {ad:"Adana 2. OSB", score:78, arsa:140, trend:"+13%", sektor:"tekstil,gıda", grade:"B"}
+  ],
+  "Samsun": [
+    {ad:"Samsun OSB", score:78, arsa:180, trend:"+18%", sektor:"gıda,metal", grade:"B"},
+    {ad:"Bafra OSB", score:68, arsa:120, trend:"+12%", sektor:"gıda,ambalaj", grade:"C"},
+    {ad:"Samsun 2. OSB", score:72, arsa:160, trend:"+14%", sektor:"gıda,kimya", grade:"C"}
+  ],
+  "Trabzon": [
+    {ad:"Trabzon OSB", score:76, arsa:220, trend:"+25%", sektor:"gıda,metal", grade:"B"},
+    {ad:"Araklı OSB", score:69, arsa:180, trend:"+20%", sektor:"fındık,gıda", grade:"C"},
+    {ad:"Trabzon 2. OSB", score:74, arsa:200, trend:"+22%", sektor:"fındık,metal", grade:"B"}
+  ],
+  "Kahramanmaraş": [
+    {ad:"Kahramanmaraş OSB", score:78, arsa:140, trend:"+13%", sektor:"tekstil,çelik", grade:"B"},
+    {ad:"Kahramanmaraş 2. OSB", score:74, arsa:120, trend:"+12%", sektor:"tekstil,metal", grade:"B"}
+  ],
+  "Hatay": [
+    {ad:"İskenderun OSB", score:76, arsa:160, trend:"+14%", sektor:"çelik,liman", grade:"B"},
+    {ad:"Antakya OSB", score:72, arsa:130, trend:"+12%", sektor:"gıda,metal", grade:"B"},
+    {ad:"Dörtyol OSB", score:71, arsa:130, trend:"+13%", sektor:"çelik,liman", grade:"B"}
+  ]
+};
+
 // Map investment interaction
 (function(){
   const tooltip=document.getElementById('map-tooltip');
   const mapWrap=document.getElementById('map-wrap');
   const svgEl=document.getElementById('turkey-svg');
   const panel=document.getElementById('province-panel');
-  const panelContent=document.getElementById('panel-content');
   if(!svgEl||typeof TURKEY_INVESTMENT_DATA==='undefined') return;
 
   function normName(s){return s.replace(/\s*\(.*\)/,'').trim();}
@@ -1021,7 +1128,7 @@ document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=
       }
       activeG=g;
       g.querySelectorAll('path').forEach(p=>{p.style.fill=col.hover;p.style.stroke=col.color;p.style.opacity='1';});
-      openPanel(displayName,cat,data);
+      openProvincePanel(displayName);
     });
   });
 
@@ -1035,40 +1142,81 @@ document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=
     }
   });
 
-  function openPanel(name,cat,data){
-    const col=CATEGORY_COLORS[cat]||CATEGORY_COLORS.tarim;
-    let h='';
-    h+='<div class="panel-cat-badge" style="background:'+col.color+'22;color:'+col.color+'">'+col.label+'</div>';
-    h+='<h3 style="font-size:1.25rem;font-weight:600;color:#fff;margin:0 0 .6rem">'+name+'</h3>';
-    if(data){
-      h+='<div style="display:flex;gap:2rem;margin-bottom:.4rem">';
-      h+='<div><div style="font-size:.62rem;color:var(--text2);text-transform:uppercase;letter-spacing:.08em">Score</div><div style="font-size:1.5rem;font-weight:700;color:'+col.color+'">'+data.score+'</div></div>';
-      h+='<div><div style="font-size:.62rem;color:var(--text2);text-transform:uppercase;letter-spacing:.08em">Trend</div><div style="font-size:1.5rem;font-weight:700;color:#22C55E">'+data.trend+'</div></div>';
-      h+='</div>';
-      h+='<div class="panel-score-bar-bg"><div class="panel-score-bar-fill" style="width:'+data.score+'%;background:'+col.color+'"></div></div>';
-      if(data.highlights&&data.highlights.length){
-        h+='<div style="font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin-bottom:.4rem">Key Highlights</div>';
-        data.highlights.forEach(hl=>h+='<div class="panel-highlight">'+hl+'</div>');
-      }
+  function openProvincePanel(provinceName){
+    const data=TURKEY_INVESTMENT_DATA[provinceName]||null;
+    const osbs=OSB_BY_IL[provinceName]||[];
+    const cat=(data&&data.category)||getCat(provinceName)||'tarim';
+    const catStyle=CATEGORY_COLORS[cat]||CATEGORY_COLORS['tarim'];
+    const catColor=catStyle.color||'#C9973A';
+
+    // OSB cards
+    let osbHTML='';
+    if(osbs.length>0){
+      const gradeColors={A:'#2ECC8A',B:'#C9973A',C:'#BA7517'};
+      osbHTML='<div style="margin-top:1.2rem">'
+        +'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#6B7280;margin-bottom:.6rem">OSB &amp; SANAYİ BÖLGELERİ ('+osbs.length+')</div>'
+        +osbs.map(o=>
+          '<div style="background:#080D1A;border:1px solid rgba(255,255,255,0.06);padding:.7rem .9rem;margin-bottom:2px;display:flex;align-items:center;gap:.8rem">'
+          +'<div style="flex:1">'
+          +'<div style="font-size:.72rem;color:#F0EDE8;margin-bottom:.2rem">'+o.ad+'</div>'
+          +'<div style="font-size:.6rem;color:#6B7280">'+o.sektor+'</div>'
+          +'</div>'
+          +'<div style="text-align:right;flex-shrink:0">'
+          +'<div style="font-size:.65rem;font-weight:600;color:'+(gradeColors[o.grade]||'#C9973A')+'">'+o.grade+' · '+o.score+'</div>'
+          +'<div style="font-size:.58rem;color:#C9973A">$'+o.arsa+'/m² '+o.trend+'</div>'
+          +'</div>'
+          +'</div>'
+        ).join('')
+        +'</div>';
     } else {
-      h+='<div style="font-size:.8rem;color:var(--text2);margin:.5rem 0 1rem;line-height:1.6">Province tracked. Detailed investment data coming soon.</div>';
+      osbHTML='<div style="margin-top:1rem;font-size:.68rem;color:#3A404F;font-style:italic">Bu il için OSB verisi yükleniyor...</div>';
     }
-    const relNews=(typeof NEWS_ARCHIVE!=='undefined'?NEWS_ARCHIVE:[]).filter(n=>{
-      const pn=normName(n.province||'');
-      return pn===name||n.province===name||name.includes(pn)||pn.includes(name);
-    }).slice(0,3);
-    if(relNews.length){
-      h+='<div style="font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin:1.2rem 0 .45rem">Recent Signals</div>';
-      relNews.forEach(n=>{
-        const tc=n.type==='opportunity'?'#22C55E':n.type==='risk'?'#EF4444':'#6B7280';
-        h+='<div class="panel-news-item" style="border-left-color:'+tc+'">';
-        h+='<div class="panel-news-date">'+n.date+'</div>';
-        h+='<div class="panel-news-title">'+n.title+'</div>';
-        if(n.impact)h+='<div class="panel-news-impact">'+n.impact+'</div>';
-        h+='</div>';
-      });
+
+    // News items
+    const provinceNews=(typeof NEWS_ARCHIVE!=='undefined'?NEWS_ARCHIVE:[])
+      .filter(n=>{const pn=normName(n.province||'');return pn===provinceName||n.province===provinceName||provinceName.includes(pn)||pn.includes(provinceName);})
+      .slice(0,2);
+    let newsHTML='';
+    if(provinceNews.length>0){
+      const nc={opportunity:'#2ECC8A',risk:'#E8504A',threat:'#E8504A',neutral:'#6B7280'};
+      newsHTML='<div style="margin-top:1.2rem">'
+        +'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#6B7280;margin-bottom:.6rem">SON İSTİHBARAT</div>'
+        +provinceNews.map(n=>
+          '<div style="background:#080D1A;border-left:2px solid '+(nc[n.type]||'#6B7280')+';padding:.7rem .9rem;margin-bottom:2px">'
+          +'<div style="font-size:.58rem;color:'+(nc[n.type]||'#6B7280')+';letter-spacing:.12em;text-transform:uppercase;margin-bottom:.3rem">'+(n.type||'')+' · '+(n.date||'')+'</div>'
+          +'<div style="font-size:.7rem;color:#F0EDE8;line-height:1.4;margin-bottom:.3rem">'+n.title+'</div>'
+          +(n.impact?'<div style="font-size:.63rem;color:#9A7A3A;font-style:italic">'+n.impact+'</div>':'')
+          +'</div>'
+        ).join('')
+        +'</div>';
     }
-    panelContent.innerHTML=h;
+
+    const content=document.getElementById('province-panel-content');
+    if(!content) return;
+
+    content.innerHTML=
+      '<div style="padding:1.5rem;height:100%;overflow-y:auto;font-family:\'DM Sans\',sans-serif">'
+      +'<div style="display:inline-block;font-size:.58rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:'+catColor+';background:'+catColor+'18;border:1px solid '+catColor+'33;padding:.25rem .7rem;margin-bottom:1rem">'+catStyle.label+'</div>'
+      +'<h2 style="font-family:\'Playfair Display\',serif;font-size:1.6rem;font-weight:400;color:#F0EDE8;margin-bottom:.4rem">'+provinceName+'</h2>'
+      +(data?
+        '<div style="display:flex;align-items:baseline;gap:1rem;margin-bottom:1rem">'
+        +'<div><div style="font-size:.52rem;color:#6B7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem">SCORE</div><div style="font-family:\'Playfair Display\',serif;font-size:1.8rem;color:#C9973A;line-height:1">'+data.score+'</div></div>'
+        +'<div><div style="font-size:.52rem;color:#6B7280;letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem">TREND</div><div style="font-size:1rem;font-weight:500;color:#2ECC8A">'+data.trend+'</div></div>'
+        +'<div style="flex:1;height:3px;background:#1F2937;align-self:center"><div style="height:100%;width:'+data.score+'%;background:linear-gradient(90deg,rgba(201,151,58,0.4),#C9973A)"></div></div>'
+        +'</div>'
+        +(data.highlights&&data.highlights.length?
+          '<div style="margin-bottom:1rem">'
+          +data.highlights.map(h=>'<div style="display:flex;gap:.5rem;font-size:.7rem;color:#8A8F9E;padding:.3rem 0"><span style="color:#C9973A">›</span>'+h+'</div>').join('')
+          +'</div>':''
+        )
+      :'<p style="font-size:.7rem;color:#6B7280;margin-bottom:1rem;line-height:1.6">Bölge takip ediliyor. Yatırım verileri derleniyor.</p>')
+      +osbHTML
+      +newsHTML
+      +'<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">'
+      +'<button onclick="document.getElementById(\'contact\').scrollIntoView({behavior:\'smooth\'})" style="width:100%;background:#C9973A;color:#080D1A;border:none;padding:.75rem;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-family:inherit">Bu Bölge İçin Analiz Talep Et →</button>'
+      +'</div>'
+      +'</div>';
+
     panel.classList.add('open');
   }
 })();
