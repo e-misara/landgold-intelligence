@@ -930,6 +930,40 @@ function applyLang(lang){
 }
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 
+// Investment incentive regions
+const TESVIK_BOLGELERI = {
+  "1": {label:"1. Bölge", color:"#6B7280", desc:"Minimum teşvik"},
+  "2": {label:"2. Bölge", color:"#3B82F6", desc:"Temel teşvikler"},
+  "3": {label:"3. Bölge", color:"#8B5CF6", desc:"Genişletilmiş teşvik"},
+  "4": {label:"4. Bölge", color:"#F59E0B", desc:"Kapsamlı teşvik"},
+  "5": {label:"5. Bölge", color:"#EF4444", desc:"Maksimum teşvik"},
+  "6": {label:"6. Bölge", color:"#10B981", desc:"Özel teşvik bölgesi"}
+};
+
+const IL_TESVIK = {
+  "Ankara":1,"İstanbul":1,"İzmir":1,"Bursa":1,
+  "Antalya":1,"Muğla":1,"Eskişehir":1,
+  "Adana":2,"Tekirdağ":2,"Sakarya":2,"Kocaeli":2,
+  "Denizli":2,"Aydın":2,"Edirne":2,"Çanakkale":2,
+  "Balıkesir":2,"Kayseri":2,"Konya":2,"Mersin":2,
+  "Gaziantep":2,"Manisa":2,"Trabzon":2,"Samsun":2,
+  "Zonguldak":2,"Kırklareli":2,"Bolu":2,"Düzce":2,
+  "Kahramanmaraş":3,"Hatay":3,"Kırıkkale":3,"Karaman":3,
+  "Kütahya":3,"Uşak":3,"Isparta":3,"Afyonkarahisar":3,
+  "Yozgat":3,"Nevşehir":3,"Çorum":3,"Amasya":3,
+  "Kastamonu":3,"Tokat":3,"Karabük":3,"Bartın":3,
+  "Burdur":3,"Sinop":3,"Kırşehir":3,"Aksaray":3,
+  "Niğde":3,"Rize":3,"Artvin":3,
+  "Sivas":4,"Malatya":4,"Elazığ":4,"Erzincan":4,
+  "Çankırı":4,"Giresun":4,"Ordu":4,"Gümüşhane":4,
+  "Bayburt":4,"Bilecik":4,"Yalova":4,"Kilis":4,
+  "Osmaniye":4,"Adıyaman":4,
+  "Ardahan":5,"Iğdır":5,"Kars":5,"Erzurum":5,
+  "Ağrı":6,"Van":6,"Muş":6,"Bitlis":6,"Bingöl":6,
+  "Tunceli":5,"Hakkari":6,"Şırnak":6,"Siirt":6,
+  "Batman":5,"Mardin":5,"Şanlıurfa":5,"Diyarbakır":5
+};
+
 // OSB data per province
 const OSB_BY_IL = {
   "İstanbul": [
@@ -1191,6 +1225,14 @@ const OSB_BY_IL = {
         +'</div>';
     }
 
+    const bolgeNo=IL_TESVIK[provinceName]||'?';
+    const bolgeInfo=TESVIK_BOLGELERI[bolgeNo]||{};
+    const bolgeColor=bolgeInfo.color||'#6B7280';
+    const tesvikHTML='<div style="display:flex;align-items:center;gap:.6rem;margin-bottom:1rem;padding:.5rem .8rem;background:'+bolgeColor+'15;border:1px solid '+bolgeColor+'33">'
+      +'<div style="font-size:.6rem;font-weight:600;color:'+bolgeColor+';letter-spacing:.1em">YATIRIM TEŞVİK '+(bolgeInfo.label||'')+'</div>'
+      +'<div style="font-size:.6rem;color:#6B7280;margin-left:auto">'+(bolgeInfo.desc||'')+'</div>'
+      +'</div>';
+
     const content=document.getElementById('province-panel-content');
     if(!content) return;
 
@@ -1210,6 +1252,7 @@ const OSB_BY_IL = {
           +'</div>':''
         )
       :'<p style="font-size:.7rem;color:#6B7280;margin-bottom:1rem;line-height:1.6">Bölge takip ediliyor. Yatırım verileri derleniyor.</p>')
+      +tesvikHTML
       +osbHTML
       +newsHTML
       +'<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">'
