@@ -1,0 +1,74 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-03",
+  "source": "Kültür ve Turizm Bakanlığı, UNESCO",
+  "total_sit_alani": 18842,
+  "categories": {
+    "arkeolojik": {
+      "label": "Arkeolojik SIT Alanları",
+      "count": 12642,
+      "color": "#D97706",
+      "major_sites": [
+        {"ad":"Göbeklitepe","il":"Şanlıurfa","donem":"MÖ 10000","unesco":true,"yatirim_etkisi":"turizm altyapısı","ziyaretci_2024":680000},
+        {"ad":"Efes Antik Kenti","il":"İzmir","donem":"MÖ 1000","unesco":true,"yatirim_etkisi":"butik otel+restorasyon","ziyaretci_2024":3200000},
+        {"ad":"Truva","il":"Çanakkale","donem":"MÖ 3000","unesco":true,"yatirim_etkisi":"kültür turizmi","ziyaretci_2024":1800000},
+        {"ad":"Çatalhöyük","il":"Konya","donem":"MÖ 7500","unesco":true,"yatirim_etkisi":"arkeoloji turizmi","ziyaretci_2024":280000},
+        {"ad":"Arslantepe","il":"Malatya","donem":"MÖ 4300","unesco":true,"yatirim_etkisi":"bölge turizmi","ziyaretci_2024":180000},
+        {"ad":"Nemrut Dağı","il":"Adıyaman","donem":"MÖ 1. yy","unesco":true,"yatirim_etkisi":"otel+kamp","ziyaretci_2024":420000},
+        {"ad":"Afrodisias","il":"Aydın","donem":"MÖ 5. yy","unesco":false,"yatirim_etkisi":"turizm","ziyaretci_2024":380000},
+        {"ad":"Perge","il":"Antalya","donem":"MÖ 3. yy","unesco":false,"yatirim_etkisi":"turizm","ziyaretci_2024":850000},
+        {"ad":"Aspendos","il":"Antalya","donem":"MÖ 5. yy","unesco":false,"yatirim_etkisi":"festival+turizm","ziyaretci_2024":620000},
+        {"ad":"Xanthos-Letoon","il":"Muğla","donem":"MÖ 7. yy","unesco":true,"yatirim_etkisi":"turizm","ziyaretci_2024":480000}
+      ]
+    },
+    "tarihi_kent": {
+      "label": "Tarihi Kent Dokusu",
+      "count": 3842,
+      "color": "#7C3AED",
+      "major_sites": [
+        {"ad":"İstanbul Tarihi Yarımada","il":"İstanbul","donem":"Bizans+Osmanlı","unesco":true,"yatirim_etkisi":"butik otel+restorasyon","ziyaretci_2024":18500000},
+        {"ad":"Safranbolu","il":"Karabük","donem":"Osmanlı","unesco":true,"yatirim_etkisi":"konak restorasyon","ziyaretci_2024":1200000},
+        {"ad":"Mardin","il":"Mardin","donem":"Arami+Osmanlı","unesco":false,"yatirim_etkisi":"tarihi konut+otel","ziyaretci_2024":1800000},
+        {"ad":"Diyarbakır Surları","il":"Diyarbakır","donem":"Roma+Osmanlı","unesco":true,"yatirim_etkisi":"tarihi konut","ziyaretci_2024":980000},
+        {"ad":"Bursa tarihi merkez","il":"Bursa","donem":"Osmanlı","unesco":false,"yatirim_etkisi":"turizm+restorasyon","ziyaretci_2024":2800000},
+        {"ad":"Edirne Selimiye","il":"Edirne","donem":"Osmanlı","unesco":true,"yatirim_etkisi":"kültür turizmi","ziyaretci_2024":1200000},
+        {"ad":"Antakya","il":"Hatay","donem":"Helenistik+Roma","unesco":false,"yatirim_etkisi":"turizm altyapısı","ziyaretci_2024":850000}
+      ]
+    },
+    "dini_miras": {
+      "label": "Dini Miras Alanları",
+      "count": 2358,
+      "color": "#DB2777",
+      "major_sites": [
+        {"ad":"Ayasofya","il":"İstanbul","donem":"532 AD","unesco":true,"yatirim_etkisi":"çevre turizm","ziyaretci_2024":8500000},
+        {"ad":"Mevlana Müzesi","il":"Konya","donem":"13. yy","unesco":false,"yatirim_etkisi":"dini turizm","ziyaretci_2024":3800000},
+        {"ad":"Sümela Manastırı","il":"Trabzon","donem":"4. yy","unesco":false,"yatirim_etkisi":"turizm","ziyaretci_2024":680000},
+        {"ad":"Tarsus — Aziz Pavlus","il":"Mersin","donem":"Roma","unesco":false,"yatirim_etkisi":"dini turizm","ziyaretci_2024":420000},
+        {"ad":"Tarsus — Hz. Daniel","il":"Mersin","donem":"Antik","unesco":false,"yatirim_etkisi":"dini turizm","ziyaretci_2024":380000}
+      ]
+    }
+  },
+  "yatirim_firsatlari": [
+    {
+      "tip": "Tarihi Konut Restorasyon",
+      "iller": ["İstanbul","Safranbolu","Mardin","Bursa"],
+      "tesvikler": ["Vakıflar desteği","Vergi indirimi","Turizm teşvik"],
+      "ortalama_getiri": "%8-12 yıllık",
+      "tradia_notu": "En düşük riskli kültür turizmi yatırımı"
+    },
+    {
+      "tip": "Butik Otel — Arkeolojik Bölge",
+      "iller": ["Nevşehir","Şanlıurfa","Adıyaman","Çanakkale"],
+      "tesvikler": ["Kültür Bakanlığı teşvik","Turizm teşvik belgesi"],
+      "ortalama_getiri": "%10-18 yıllık",
+      "tradia_notu": "UNESCO yakınlığı premium getiri sağlıyor"
+    },
+    {
+      "tip": "Arkeoloji Oteli",
+      "iller": ["İzmir","Antalya","Muğla","Konya"],
+      "tesvikler": ["Turizm teşvik belgesi","Yatırım destek"],
+      "ortalama_getiri": "%9-14 yıllık",
+      "tradia_notu": "Antik alan çevresi butik — en yüksek talep"
+    }
+  ]
+}

@@ -812,6 +812,48 @@ class ResearchAgent(BaseAgent):
             self.log(f"Turizm error: {exc}")
             return []
 
+    def get_dogal_kaynaklar(self, il_adi: str | None = None) -> list[dict]:
+        """Return natural resources, optionally filtered by province."""
+        path = RESEARCH_DIR / "kaynaklar" / "dogal_kaynaklar.json"
+        try:
+            data    = json.loads(path.read_text(encoding="utf-8"))
+            results = []
+            for cat_key, cat in data.get("resources", {}).items():
+                for item in cat.get("items", []):
+                    if il_adi:
+                        if il_adi in item.get("il", ""):
+                            item["kategori"] = cat["label"]
+                            item["renk"]     = cat["color"]
+                            results.append(item)
+                    else:
+                        item["kategori"] = cat["label"]
+                        results.append(item)
+            return results
+        except Exception as exc:
+            self.log(f"Kaynak error: {exc}")
+            return []
+
+    def get_tarihi_alanlar(self, il_adi: str | None = None) -> list[dict]:
+        """Return historical sites, optionally filtered by province."""
+        path = RESEARCH_DIR / "kultur" / "tarihi_alanlar.json"
+        try:
+            data    = json.loads(path.read_text(encoding="utf-8"))
+            results = []
+            for cat_key, cat in data.get("categories", {}).items():
+                for site in cat.get("major_sites", []):
+                    if il_adi:
+                        if site.get("il") == il_adi:
+                            site["kategori"] = cat["label"]
+                            site["renk"]     = cat["color"]
+                            results.append(site)
+                    else:
+                        site["kategori"] = cat["label"]
+                        results.append(site)
+            return sorted(results, key=lambda x: x.get("ziyaretci_2024", 0), reverse=True)
+        except Exception as exc:
+            self.log(f"Tarihi alan error: {exc}")
+            return []
+
     def get_osb_summary_by_region(self, region: str | None = None) -> dict[str, Any]:
         """Return OSB summary stats per region or all regions."""
         osb_db_path = RESEARCH_DIR / "osb_database.json"
@@ -1027,6 +1069,24 @@ class ResearchAgent(BaseAgent):
             il    = action.split(":", 1)[1]
             zones = self.get_turizm_bolge(il_adi=il)
             return {"status": "OK", "il": il, "count": len(zones), "zones": zones}
+
+        if action == "kaynaklar":
+            items = self.get_dogal_kaynaklar()
+            return {"status": "OK", "count": len(items)}
+
+        if action.startswith("kaynaklar:"):
+            il    = action.split(":", 1)[1]
+            items = self.get_dogal_kaynaklar(il_adi=il)
+            return {"status": "OK", "il": il, "count": len(items), "kaynaklar": items}
+
+        if action == "tarihi":
+            sites = self.get_tarihi_alanlar()
+            return {"status": "OK", "count": len(sites), "top_site": sites[0]["ad"] if sites else None}
+
+        if action.startswith("tarihi:"):
+            il    = action.split(":", 1)[1]
+            sites = self.get_tarihi_alanlar(il_adi=il)
+            return {"status": "OK", "il": il, "count": len(sites), "sites": sites}
 
         if action == "full":
             marmara_report = self.research_all_marmara()

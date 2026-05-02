@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-03",
+  "source": "MTA, ETKB, Orman Genel Müdürlüğü",
+  "resources": {
+    "enerji": {
+      "label": "Enerji Kaynakları",
+      "color": "#F59E0B",
+      "items": [
+        {"il":"Zonguldak","kaynak":"Taş kömürü","rezerv":"400M ton","durum":"aktif","yatirim_etkisi":"sanayi arsa talebi","tradia_notu":"Ereğli Demir Çelik çevre parselleri değerli"},
+        {"il":"Afyonkarahisar","kaynak":"Jeotermal","rezerv":"850 MW","durum":"aktif","yatirim_etkisi":"termal otel talebi","tradia_notu":"Sandıklı-Ömer hattında otel yatırımı güçlü"},
+        {"il":"Çanakkale","kaynak":"Jeotermal","rezerv":"320 MW","durum":"gelişiyor","yatirim_etkisi":"turizm+enerji","tradia_notu":"Köprü etkisiyle beraber güçlü potansiyel"},
+        {"il":"Kütahya","kaynak":"Linyit","rezerv":"3.2B ton","durum":"aktif","yatirim_etkisi":"sanayi","tradia_notu":"Enerji yoğun sanayi için avantajlı"},
+        {"il":"Manisa","kaynak":"Jeotermal","rezerv":"480 MW","durum":"aktif","yatirim_etkisi":"sera+enerji","tradia_notu":"Salihli-Alaşehir jeotermal koridoru"},
+        {"il":"Aydın","kaynak":"Jeotermal","rezerv":"680 MW","durum":"aktif","yatirim_etkisi":"sera+turizm","tradia_notu":"Türkiye en yüksek jeotermal kapasitesi"},
+        {"il":"Denizli","kaynak":"Jeotermal","rezerv":"280 MW","durum":"aktif","yatirim_etkisi":"termal turizm","tradia_notu":"Pamukkale sinerjisi"},
+        {"il":"Batman","kaynak":"Petrol","rezerv":"280M varil","durum":"aktif","yatirim_etkisi":"sanayi+lojistik","tradia_notu":"TPAO operasyonları devam ediyor"},
+        {"il":"Adıyaman","kaynak":"Petrol","rezerv":"180M varil","durum":"aktif","yatirim_etkisi":"sanayi","tradia_notu":"Boru hattı güzergahında sanayi talebi"},
+        {"il":"Muğla","kaynak":"Linyit","rezerv":"1.8B ton","durum":"tartışmalı","yatirim_etkisi":"enerji","tradia_notu":"Çevre davaları devam ediyor — risk faktörü"}
+      ]
+    },
+    "maden": {
+      "label": "Maden ve Mineral Kaynakları",
+      "color": "#6366F1",
+      "items": [
+        {"il":"Kütahya","kaynak":"Bor","rezerv":"Dünya rezervinin %73","durum":"aktif","yatirim_etkisi":"kimya sanayi","tradia_notu":"Etibor tesisleri çevresi sanayi arsa"},
+        {"il":"Balıkesir","kaynak":"Altın-Gümüş","rezerv":"280 ton altın","durum":"aktif","yatirim_etkisi":"sanayi","tradia_notu":"Kaz Dağları bölgesi — çevre kısıtı var"},
+        {"il":"Uşak","kaynak":"Altın","rezerv":"180 ton","durum":"aktif","yatirim_etkisi":"sanayi","tradia_notu":"Murat Dağı maden operasyonları"},
+        {"il":"Erzincan","kaynak":"Altın","rezerv":"Anagold — aktif","durum":"aktif","yatirim_etkisi":"sanayi+lojistik","tradia_notu":"Çöpler altın madeni bölge ekonomisini canlandırdı"},
+        {"il":"Konya","kaynak":"Krom","rezerv":"12M ton","durum":"aktif","yatirim_etkisi":"metal sanayi","tradia_notu":"Doğanhisar-Beyşehir krom kuşağı"},
+        {"il":"Kahramanmaraş","kaynak":"Demir","rezerv":"480M ton","durum":"aktif","yatirim_etkisi":"çelik sanayi","tradia_notu":"İskenderun Körfezi çelik tesisleri"},
+        {"il":"Elazığ","kaynak":"Bakır","rezerv":"Murgul-Ergani","durum":"aktif","yatirim_etkisi":"metal","tradia_notu":"Ergani bakır işletmesi"},
+        {"il":"Trabzon","kaynak":"Bakır","rezerv":"Murgul","durum":"aktif","yatirim_etkisi":"metal","tradia_notu":"Murgul bakır madeni"},
+        {"il":"Çanakkale","kaynak":"Mermer","rezerv":"Yüksek kalite","durum":"aktif","yatirim_etkisi":"inşaat malzemeleri","tradia_notu":"Marmara adası mermer ihracatı"},
+        {"il":"Afyonkarahisar","kaynak":"Mermer","rezerv":"Türkiye 1.si","durum":"aktif","yatirim_etkisi":"inşaat+ihracat","tradia_notu":"İscehisar mermer bölgesi — ihracat odağı"},
+        {"il":"Muğla","kaynak":"Mermer","rezerv":"Yüksek","durum":"aktif","yatirim_etkisi":"inşaat malzemeleri","tradia_notu":"Milas mermer ihracatı"},
+        {"il":"Nevşehir","kaynak":"Volkanik Tüf","rezerv":"Geniş","durum":"aktif","yatirim_etkisi":"inşaat+turizm","tradia_notu":"Mağara yapılar için doğal kaynak"}
+      ]
+    },
+    "tarim": {
+      "label": "Tarımsal Kaynaklar",
+      "color": "#10B981",
+      "items": [
+        {"il":"Konya","kaynak":"Buğday-Arpa","rezerv":"Türkiye tahıl ambarı","durum":"aktif","yatirim_etkisi":"agro-sanayi","tradia_notu":"En büyük tarım ili — agro-sanayi fırsatı"},
+        {"il":"Şanlıurfa","kaynak":"Pamuk-Mısır","rezerv":"GAP sulama","durum":"gelişiyor","yatirim_etkisi":"tekstil+gıda","tradia_notu":"GAP tamamlanınca fiyatlar 3-5x artacak"},
+        {"il":"Ege bölgesi","kaynak":"Zeytin-Üzüm","rezerv":"Türkiye ihracatı","durum":"aktif","yatirim_etkisi":"gıda+turizm","tradia_notu":"Tarım turizmi gelişiyor"},
+        {"il":"Rize","kaynak":"Çay","rezerv":"Türkiye üretimi %65","durum":"aktif","yatirim_etkisi":"gıda işleme","tradia_notu":"Organik çay premium fırsat"},
+        {"il":"Trabzon","kaynak":"Fındık","rezerv":"Dünya üretimi %65","durum":"aktif","yatirim_etkisi":"gıda işleme","tradia_notu":"Fındık işleme tesisi yatırımı"},
+        {"il":"Gaziantep","kaynak":"Antep Fıstığı","rezerv":"Dünya 3.sü","durum":"aktif","yatirim_etkisi":"gıda+turizm","tradia_notu":"GI korumalı — premium marka değeri"},
+        {"il":"İzmir","kaynak":"İncir-Zeytin","rezerv":"İhracat lideri","durum":"aktif","yatirim_etkisi":"gıda+agro-turizm","tradia_notu":"Aydın inciri coğrafi işaret"},
+        {"il":"Isparta","kaynak":"Gül","rezerv":"Dünya gül yağı %70","durum":"aktif","yatirim_etkisi":"kozmetik+turizm","tradia_notu":"Gül vadisi turizmi gelişiyor"}
+      ]
+    },
+    "orman_su": {
+      "label": "Orman ve Su Kaynakları",
+      "color": "#059669",
+      "items": [
+        {"il":"Kastamonu","kaynak":"Orman","rezerv":"Türkiye en yüksek oran","durum":"koruma altında","yatirim_etkisi":"eko-turizm","tradia_notu":"Ahşap sanayi + eko turizm fırsatı"},
+        {"il":"Artvin","kaynak":"Orman+HES","rezerv":"Çoruh havzası","durum":"aktif","yatirim_etkisi":"enerji+turizm","tradia_notu":"Hidroelektrik potansiyeli kullanılıyor"},
+        {"il":"Rize","kaynak":"HES","rezerv":"Yüksek yağış","durum":"aktif","yatirim_etkisi":"enerji","tradia_notu":"Çok sayıda nehir — HES yatırımı"},
+        {"il":"Bolu","kaynak":"Orman+Su","rezerv":"İstanbul su havzası","durum":"koruma","yatirim_etkisi":"eko-turizm","tradia_notu":"Abant-Yedigöller turizm aksı"}
+      ]
+    }
+  }
+}
