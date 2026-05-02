@@ -22,34 +22,25 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: |
-          cd landgold-agents
-          pip install -r requirements.txt
+        run: pip install -r requirements.txt
 
       - name: Create .env file
         run: |
-          cd landgold-agents
           echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" > .env
-          echo "SITE_REPO_PATH=../LandGold" >> .env
+          echo "SITE_REPO_PATH=." >> .env
           echo "LOG_LEVEL=INFO" >> .env
           echo "DATA_PATH=data" >> .env
 
       - name: Run news agent
-        run: |
-          cd landgold-agents
-          python main.py --agent news --task full
+        run: python main.py --agent news --task full
         continue-on-error: true
 
       - name: Run property agent
-        run: |
-          cd landgold-agents
-          python main.py --agent property --task score
+        run: python main.py --agent property --task score
         continue-on-error: true
 
       - name: Run deploy
-        run: |
-          cd landgold-agents
-          python deploy_to_site.py
+        run: python deploy_to_site.py
         continue-on-error: true
 
       - name: Commit and push changes
@@ -57,6 +48,6 @@ jobs:
           git config --global user.email "bot@tradiaturkey.com"
           git config --global user.name "Tradia Bot"
           git add -A
-          git diff --staged --quiet || git commit -m "auto: agent update $(date -u +%Y-%m-%dT%H:%M)"
+          git diff --staged --quiet || git commit -m "auto: agent update $(date -u +%Y-%m-%dT%H:%MZ)"
           git push
         continue-on-error: true
