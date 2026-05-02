@@ -734,6 +734,123 @@ class ResearchAgent(BaseAgent):
 
     # ── Orchestration ──────────────────────────────────────────────────────
 
+    # ── OSB Database Methods ────────────────────────────────────────────────────
+
+    def get_osb_by_il(self, il_adi: str) -> list[dict]:
+        """Return all OSBs for a given province from the database."""
+        osb_db_path = RESEARCH_DIR / "osb_database.json"
+        try:
+            db = json.loads(osb_db_path.read_text(encoding="utf-8"))
+            results = []
+            for region, data in db.get("regions", {}).items():
+                for osb in data.get("osb_list", []):
+                    if osb.get("il", "").lower() == il_adi.lower():
+                        osb["region"] = region
+                        results.append(osb)
+            return sorted(results, key=lambda x: x.get("tradia_score", 0), reverse=True)
+        except Exception as exc:
+            self.log(f"OSB DB error: {exc}")
+            return []
+
+    def get_osb_summary_by_region(self, region: str | None = None) -> dict[str, Any]:
+        """Return OSB summary stats per region or all regions."""
+        osb_db_path = RESEARCH_DIR / "osb_database.json"
+        try:
+            db = json.loads(osb_db_path.read_text(encoding="utf-8"))
+            summary: dict[str, Any] = {}
+            for reg, data in db.get("regions", {}).items():
+                if region and reg != region:
+                    continue
+                osbs = data.get("osb_list", [])
+                if not osbs:
+                    continue
+                total_ihracat = sum(o.get("ihracat_milyon_usd", 0) for o in osbs)
+                avg_score     = sum(o.get("tradia_score", 0) for o in osbs) / len(osbs)
+                top_osbs      = sorted(osbs, key=lambda x: x.get("tradia_score", 0), reverse=True)[:3]
+                summary[reg] = {
+                    "total_osb":                 len(osbs),
+                    "total_ihracat_milyon_usd":  total_ihracat,
+                    "avg_tradia_score":           round(avg_score, 1),
+                    "grade_a":                   len([o for o in osbs if o.get("yatirim_notu") == "A"]),
+                    "grade_b":                   len([o for o in osbs if o.get("yatirim_notu") == "B"]),
+                    "grade_c":                   len([o for o in osbs if o.get("yatirim_notu") == "C"]),
+                    "top_osbs": [
+                        {
+                            "ad":         o["osb_adi"],
+                            "il":         o["il"],
+                            "score":      o["tradia_score"],
+                            "arsa_usd_m2": o["arsa_usd_m2"],
+                            "trend":      o["arsa_trend"],
+                            "sektor":     o["sektor"],
+                        }
+                        for o in top_osbs
+                    ],
+                }
+            return summary
+        except Exception as exc:
+            self.log(f"OSB summary error: {exc}")
+            return {}
+
+    def generate_osb_report(self) -> dict[str, Any]:
+        """Generate full OSB intelligence report for CEO."""
+        import datetime as _dt
+        summary      = self.get_osb_summary_by_region()
+        osb_db_path  = RESEARCH_DIR / "osb_database.json"
+        db           = json.loads(osb_db_path.read_text(encoding="utf-8"))
+
+        all_osbs: list[dict] = []
+        for reg, data in db.get("regions", {}).items():
+            for osb in data.get("osb_list", []):
+                osb["region"] = reg
+                all_osbs.append(osb)
+
+        top10 = sorted(all_osbs, key=lambda x: x.get("tradia_score", 0), reverse=True)[:10]
+        best_value = sorted(
+            [o for o in all_osbs if o.get("tradia_score", 0) >= 75],
+            key=lambda x: x.get("arsa_usd_m2", 9999),
+        )[:5]
+
+        report: dict[str, Any] = {
+            "date":                    str(_dt.date.today()),
+            "agent":                   "ResearchAgent",
+            "type":                    "osb_intelligence",
+            "total_osb_tracked":       len(all_osbs),
+            "region_summary":          summary,
+            "top10_by_score": [
+                {
+                    "rank":          i + 1,
+                    "osb":           o["osb_adi"],
+                    "il":            o["il"],
+                    "region":        o["region"],
+                    "score":         o["tradia_score"],
+                    "grade":         o["yatirim_notu"],
+                    "arsa_usd_m2":   o["arsa_usd_m2"],
+                    "trend":         o["arsa_trend"],
+                    "ihracat_musd":  o["ihracat_milyon_usd"],
+                    "sektor":        o["sektor"],
+                }
+                for i, o in enumerate(top10)
+            ],
+            "best_value_opportunities": [
+                {
+                    "osb":          o["osb_adi"],
+                    "il":           o["il"],
+                    "region":       o["region"],
+                    "score":        o["tradia_score"],
+                    "arsa_usd_m2":  o["arsa_usd_m2"],
+                    "trend":        o["arsa_trend"],
+                    "note":         "High score, affordable entry",
+                }
+                for o in best_value
+            ],
+        }
+
+        report_path = Config.REPORTS_DIR / f"osb_report_{report['date']}.json"
+        report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2), encoding="utf-8")
+        self.log(f"OSB report saved → osb_report_{report['date']}.json")
+        self.report_to_ceo(report)
+        return report
+
     def run_task(self, task: dict[str, Any]) -> dict[str, Any]:
         action = task.get("action", "marmara")
 
@@ -807,6 +924,25 @@ class ResearchAgent(BaseAgent):
             pid     = action.split(":", 1)[1]
             targets = self.generate_property_targets(pid)
             return {"status": "OK", "project_id": pid, "targets": targets}
+
+        if action == "osb_report":
+            report = self.generate_osb_report()
+            return {
+                "status":            "OK",
+                "total_osb_tracked": report["total_osb_tracked"],
+                "top1_osb":          report["top10_by_score"][0]["osb"] if report["top10_by_score"] else None,
+                "best_value_count":  len(report["best_value_opportunities"]),
+            }
+
+        if action.startswith("osb_il:"):
+            il_adi = action.split(":", 1)[1]
+            results = self.get_osb_by_il(il_adi)
+            return {
+                "status":  "OK",
+                "il":      il_adi,
+                "count":   len(results),
+                "osbs":    results,
+            }
 
         if action == "full":
             marmara_report = self.research_all_marmara()

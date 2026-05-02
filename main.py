@@ -122,7 +122,8 @@ def run_schedule() -> int:
     schedule.every().day.at("11:30").do(_job, "outreach",   "full",           "Outreach Full Cycle")
     schedule.every().day.at("12:00").do(_job, "__deploy__", "",               "Deploy → GitHub Pages")
     schedule.every().day.at("14:00").do(_job, "dev",        "full",           "Dev Full Cycle")
-    schedule.every().monday.at("07:00").do(_job, "ceo",     "investor_report","Weekly Investor Report")
+    schedule.every().monday.at("07:00").do(_job, "ceo",      "investor_report", "Weekly Investor Report")
+    schedule.every().monday.at("08:00").do(_job, "research", "osb_report",      "Research — Weekly OSB Report")
 
     W = 36
     next_job  = min(schedule.jobs, key=lambda j: j.next_run)
@@ -133,7 +134,7 @@ def run_schedule() -> int:
     print("LANDGOLD AGENT SYSTEM — SCHEDULER")
     print("=" * W)
     print(f"Jobs registered: {len(schedule.jobs)}")
-    print("Sabit schedule (12 iş):")
+    print("Sabit schedule (13 iş):")
     print("  08:00  CEO briefing")
     print("  09:00  News Agent — full scan")
     print("  10:00  Property Agent — full analysis")
@@ -146,6 +147,7 @@ def run_schedule() -> int:
     print("  12:00  Deploy → GitHub Pages")
     print("  14:00  Dev Agent — health + features")
     print("  Mon 07:00  Weekly investor report")
+    print("  Mon 08:00  Research — Weekly OSB Report")
     print("Manuel: python main.py --agent <news|property|outreach|dev> --task full")
     print("=" * W)
     print(f"Next run: {next_name} at {next_time}")

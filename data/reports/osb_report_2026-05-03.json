@@ -1,0 +1,381 @@
+{
+  "date": "2026-05-03",
+  "agent": "ResearchAgent",
+  "type": "osb_intelligence",
+  "total_osb_tracked": 200,
+  "region_summary": {
+    "Marmara": {
+      "total_osb": 45,
+      "total_ihracat_milyon_usd": 94850,
+      "avg_tradia_score": 76.5,
+      "grade_a": 12,
+      "grade_b": 25,
+      "grade_c": 8,
+      "top_osbs": [
+        {
+          "ad": "Kocaeli OSB (KOSBI)",
+          "il": "Kocaeli",
+          "score": 91,
+          "arsa_usd_m2": 480,
+          "trend": "+18%",
+          "sektor": "otomotiv,kimya,petrokimya"
+        },
+        {
+          "ad": "Bursa OSB (BOSB)",
+          "il": "Bursa",
+          "score": 89,
+          "arsa_usd_m2": 680,
+          "trend": "+14%",
+          "sektor": "otomotiv,tekstil,makine"
+        },
+        {
+          "ad": "İkitelli OSB",
+          "il": "İstanbul",
+          "score": 88,
+          "arsa_usd_m2": 1200,
+          "trend": "+15%",
+          "sektor": "tekstil,hazır giyim,metal"
+        }
+      ]
+    },
+    "Ege": {
+      "total_osb": 35,
+      "total_ihracat_milyon_usd": 57940,
+      "avg_tradia_score": 72.4,
+      "grade_a": 7,
+      "grade_b": 12,
+      "grade_c": 16,
+      "top_osbs": [
+        {
+          "ad": "Manisa OSB",
+          "il": "Manisa",
+          "score": 90,
+          "arsa_usd_m2": 220,
+          "trend": "+16%",
+          "sektor": "elektronik,beyaz eşya,otomotiv"
+        },
+        {
+          "ad": "Atatürk OSB",
+          "il": "İzmir",
+          "score": 87,
+          "arsa_usd_m2": 480,
+          "trend": "+14%",
+          "sektor": "makine,metal,kimya"
+        },
+        {
+          "ad": "Torbalı OSB",
+          "il": "İzmir",
+          "score": 86,
+          "arsa_usd_m2": 280,
+          "trend": "+22%",
+          "sektor": "otomotiv,metal"
+        }
+      ]
+    },
+    "Karadeniz": {
+      "total_osb": 31,
+      "total_ihracat_milyon_usd": 14040,
+      "avg_tradia_score": 64.6,
+      "grade_a": 0,
+      "grade_b": 5,
+      "grade_c": 26,
+      "top_osbs": [
+        {
+          "ad": "Samsun OSB",
+          "il": "Samsun",
+          "score": 78,
+          "arsa_usd_m2": 180,
+          "trend": "+18%",
+          "sektor": "gıda,metal,plastik"
+        },
+        {
+          "ad": "Trabzon OSB",
+          "il": "Trabzon",
+          "score": 76,
+          "arsa_usd_m2": 220,
+          "trend": "+25%",
+          "sektor": "gıda,metal,ambalaj"
+        },
+        {
+          "ad": "Trabzon 2. OSB",
+          "il": "Trabzon",
+          "score": 74,
+          "arsa_usd_m2": 200,
+          "trend": "+22%",
+          "sektor": "fındık,gıda,metal"
+        }
+      ]
+    },
+    "İç Anadolu": {
+      "total_osb": 34,
+      "total_ihracat_milyon_usd": 56000,
+      "avg_tradia_score": 71.0,
+      "grade_a": 7,
+      "grade_b": 15,
+      "grade_c": 12,
+      "top_osbs": [
+        {
+          "ad": "ASO 1. OSB",
+          "il": "Ankara",
+          "score": 86,
+          "arsa_usd_m2": 320,
+          "trend": "+14%",
+          "sektor": "savunma,makine,metal"
+        },
+        {
+          "ad": "ASO 2. OSB",
+          "il": "Ankara",
+          "score": 85,
+          "arsa_usd_m2": 280,
+          "trend": "+16%",
+          "sektor": "otomotiv,savunma,elektronik"
+        },
+        {
+          "ad": "Ostim OSB",
+          "il": "Ankara",
+          "score": 84,
+          "arsa_usd_m2": 480,
+          "trend": "+12%",
+          "sektor": "savunma,elektronik,makine"
+        }
+      ]
+    },
+    "Güneydoğu": {
+      "total_osb": 29,
+      "total_ihracat_milyon_usd": 75700,
+      "avg_tradia_score": 72.3,
+      "grade_a": 5,
+      "grade_b": 13,
+      "grade_c": 11,
+      "top_osbs": [
+        {
+          "ad": "Gaziantep OSB",
+          "il": "Gaziantep",
+          "score": 89,
+          "arsa_usd_m2": 180,
+          "trend": "+22%",
+          "sektor": "tekstil,plastik,metal,gıda"
+        },
+        {
+          "ad": "Gaziantep 2. OSB",
+          "il": "Gaziantep",
+          "score": 86,
+          "arsa_usd_m2": 160,
+          "trend": "+20%",
+          "sektor": "tekstil,plastik,metal"
+        },
+        {
+          "ad": "Mersin OSB",
+          "il": "Mersin",
+          "score": 85,
+          "arsa_usd_m2": 180,
+          "trend": "+18%",
+          "sektor": "gıda,kimya,plastik"
+        }
+      ]
+    },
+    "Doğu Anadolu": {
+      "total_osb": 26,
+      "total_ihracat_milyon_usd": 4880,
+      "avg_tradia_score": 53.7,
+      "grade_a": 0,
+      "grade_b": 0,
+      "grade_c": 26,
+      "top_osbs": [
+        {
+          "ad": "Malatya OSB",
+          "il": "Malatya",
+          "score": 65,
+          "arsa_usd_m2": 100,
+          "trend": "+11%",
+          "sektor": "gıda,tekstil,kayısı işleme"
+        },
+        {
+          "ad": "Erzurum OSB",
+          "il": "Erzurum",
+          "score": 62,
+          "arsa_usd_m2": 90,
+          "trend": "+10%",
+          "sektor": "gıda,inşaat malzemeleri"
+        },
+        {
+          "ad": "Malatya 2. OSB",
+          "il": "Malatya",
+          "score": 62,
+          "arsa_usd_m2": 95,
+          "trend": "+10%",
+          "sektor": "gıda,tekstil"
+        }
+      ]
+    }
+  },
+  "top10_by_score": [
+    {
+      "rank": 1,
+      "osb": "Kocaeli OSB (KOSBI)",
+      "il": "Kocaeli",
+      "region": "Marmara",
+      "score": 91,
+      "grade": "A",
+      "arsa_usd_m2": 480,
+      "trend": "+18%",
+      "ihracat_musd": 18000,
+      "sektor": "otomotiv,kimya,petrokimya"
+    },
+    {
+      "rank": 2,
+      "osb": "Manisa OSB",
+      "il": "Manisa",
+      "region": "Ege",
+      "score": 90,
+      "grade": "A",
+      "arsa_usd_m2": 220,
+      "trend": "+16%",
+      "ihracat_musd": 15000,
+      "sektor": "elektronik,beyaz eşya,otomotiv"
+    },
+    {
+      "rank": 3,
+      "osb": "Bursa OSB (BOSB)",
+      "il": "Bursa",
+      "region": "Marmara",
+      "score": 89,
+      "grade": "A",
+      "arsa_usd_m2": 680,
+      "trend": "+14%",
+      "ihracat_musd": 12000,
+      "sektor": "otomotiv,tekstil,makine"
+    },
+    {
+      "rank": 4,
+      "osb": "Gaziantep OSB",
+      "il": "Gaziantep",
+      "region": "Güneydoğu",
+      "score": 89,
+      "grade": "A",
+      "arsa_usd_m2": 180,
+      "trend": "+22%",
+      "ihracat_musd": 22000,
+      "sektor": "tekstil,plastik,metal,gıda"
+    },
+    {
+      "rank": 5,
+      "osb": "İkitelli OSB",
+      "il": "İstanbul",
+      "region": "Marmara",
+      "score": 88,
+      "grade": "A",
+      "arsa_usd_m2": 1200,
+      "trend": "+15%",
+      "ihracat_musd": 8500,
+      "sektor": "tekstil,hazır giyim,metal"
+    },
+    {
+      "rank": 6,
+      "osb": "Dilovası OSB",
+      "il": "Kocaeli",
+      "region": "Marmara",
+      "score": 87,
+      "grade": "A",
+      "arsa_usd_m2": 380,
+      "trend": "+20%",
+      "ihracat_musd": 5200,
+      "sektor": "kimya,plastik,metal"
+    },
+    {
+      "rank": 7,
+      "osb": "Atatürk OSB",
+      "il": "İzmir",
+      "region": "Ege",
+      "score": 87,
+      "grade": "A",
+      "arsa_usd_m2": 480,
+      "trend": "+14%",
+      "ihracat_musd": 8200,
+      "sektor": "makine,metal,kimya"
+    },
+    {
+      "rank": 8,
+      "osb": "Dudullu OSB",
+      "il": "İstanbul",
+      "region": "Marmara",
+      "score": 86,
+      "grade": "A",
+      "arsa_usd_m2": 1800,
+      "trend": "+18%",
+      "ihracat_musd": 2100,
+      "sektor": "elektronik,makine,plastik"
+    },
+    {
+      "rank": 9,
+      "osb": "Çorlu 2. OSB",
+      "il": "Tekirdağ",
+      "region": "Marmara",
+      "score": 86,
+      "grade": "A",
+      "arsa_usd_m2": 380,
+      "trend": "+14%",
+      "ihracat_musd": 1800,
+      "sektor": "tekstil,metal,otomotiv"
+    },
+    {
+      "rank": 10,
+      "osb": "Torbalı OSB",
+      "il": "İzmir",
+      "region": "Ege",
+      "score": 86,
+      "grade": "A",
+      "arsa_usd_m2": 280,
+      "trend": "+22%",
+      "ihracat_musd": 2400,
+      "sektor": "otomotiv,metal"
+    }
+  ],
+  "best_value_opportunities": [
+    {
+      "osb": "Nizip OSB",
+      "il": "Gaziantep",
+      "region": "Güneydoğu",
+      "score": 75,
+      "arsa_usd_m2": 100,
+      "trend": "+15%",
+      "note": "High score, affordable entry"
+    },
+    {
+      "osb": "İslahiye OSB",
+      "il": "Gaziantep",
+      "region": "Güneydoğu",
+      "score": 80,
+      "arsa_usd_m2": 120,
+      "trend": "+18%",
+      "note": "High score, affordable entry"
+    },
+    {
+      "osb": "Kayseri 2. OSB",
+      "il": "Kayseri",
+      "region": "İç Anadolu",
+      "score": 76,
+      "arsa_usd_m2": 140,
+      "trend": "+11%",
+      "note": "High score, affordable entry"
+    },
+    {
+      "osb": "Tarsus OSB",
+      "il": "Mersin",
+      "region": "Güneydoğu",
+      "score": 78,
+      "arsa_usd_m2": 140,
+      "trend": "+15%",
+      "note": "High score, affordable entry"
+    },
+    {
+      "osb": "Kahramanmaraş OSB",
+      "il": "Kahramanmaraş",
+      "region": "Güneydoğu",
+      "score": 78,
+      "arsa_usd_m2": 140,
+      "trend": "+13%",
+      "note": "High score, affordable entry"
+    }
+  ]
+}
