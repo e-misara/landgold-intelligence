@@ -791,6 +791,27 @@ class ResearchAgent(BaseAgent):
             self.log(f"İmar error: {exc}")
             return []
 
+    def get_turizm_bolge(self, il_adi: str | None = None) -> list[dict]:
+        """Return tourism zones, optionally filtered by province."""
+        turizm_path = RESEARCH_DIR / "turizm" / "turizm_bolgeleri.json"
+        try:
+            data    = json.loads(turizm_path.read_text(encoding="utf-8"))
+            results = []
+            for cat_key, cat in data.get("categories", {}).items():
+                for bolge in cat.get("bolgeler", []):
+                    if il_adi:
+                        if il_adi in bolge.get("iller", []):
+                            bolge["kategori"]      = cat["label"]
+                            bolge["kategori_renk"] = cat["color"]
+                            results.append(bolge)
+                    else:
+                        bolge["kategori"] = cat["label"]
+                        results.append(bolge)
+            return sorted(results, key=lambda x: x.get("tradia_score", 0), reverse=True)
+        except Exception as exc:
+            self.log(f"Turizm error: {exc}")
+            return []
+
     def get_osb_summary_by_region(self, region: str | None = None) -> dict[str, Any]:
         """Return OSB summary stats per region or all regions."""
         osb_db_path = RESEARCH_DIR / "osb_database.json"
@@ -988,14 +1009,24 @@ class ResearchAgent(BaseAgent):
             }
 
         if action.startswith("osb_il:"):
-            il_adi = action.split(":", 1)[1]
-            results = self.get_osb_by_il(il_adi)
+            il_adi  = action.split(":", 1)[1]
+            result  = self.get_osb_by_il(il_adi)
             return {
                 "status":  "OK",
                 "il":      il_adi,
-                "count":   len(results),
-                "osbs":    results,
+                "count":   len(result.get("osbs", [])),
+                "osbs":    result.get("osbs", []),
+                "tesvik":  result.get("tesvik", {}),
             }
+
+        if action == "turizm":
+            zones = self.get_turizm_bolge()
+            return {"status": "OK", "count": len(zones), "top_zone": zones[0]["name"] if zones else None}
+
+        if action.startswith("turizm:"):
+            il    = action.split(":", 1)[1]
+            zones = self.get_turizm_bolge(il_adi=il)
+            return {"status": "OK", "il": il, "count": len(zones), "zones": zones}
 
         if action == "full":
             marmara_report = self.research_all_marmara()
