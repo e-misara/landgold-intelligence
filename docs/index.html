@@ -75,6 +75,23 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif}
 .map-legend{display:flex;gap:1.5rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap}
 .legend-item{display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:var(--text2)}
 .legend-dot{width:10px;height:10px;border-radius:50%}
+.map-cat-filters{display:flex;gap:.5rem;justify-content:center;margin-bottom:1.1rem;flex-wrap:wrap}
+.cat-filter-btn{padding:.28rem .8rem;font-size:.68rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;border-radius:3px;border:1px solid rgba(255,255,255,.12);background:transparent;color:var(--text2);cursor:pointer;transition:all .2s}
+.cat-filter-btn[data-cat="all"]{border-color:rgba(201,151,58,.5);color:var(--gold)}
+.cat-filter-btn[data-cat="all"].active{background:var(--gold);color:#000}
+.province-panel{position:fixed;top:0;right:-380px;width:360px;height:100vh;background:#0A1120;border-left:1px solid var(--gold-bdr);padding:2rem 1.5rem 2rem;overflow-y:auto;z-index:2000;transition:right .32s cubic-bezier(.4,0,.2,1);box-shadow:-6px 0 32px rgba(0,0,0,.7)}
+.province-panel.open{right:0}
+.province-panel-close{position:absolute;top:1rem;right:1rem;background:none;border:1px solid rgba(255,255,255,.15);color:var(--text2);width:28px;height:28px;border-radius:50%;cursor:pointer;font-size:1rem;line-height:1;display:flex;align-items:center;justify-content:center;transition:border-color .2s}
+.province-panel-close:hover{border-color:var(--gold);color:var(--gold)}
+.panel-cat-badge{display:inline-block;padding:.22rem .65rem;font-size:.63rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;border-radius:2px;margin-bottom:.7rem}
+.panel-score-bar-bg{height:4px;background:rgba(255,255,255,.07);border-radius:2px;margin:.4rem 0 1.1rem}
+.panel-score-bar-fill{height:4px;border-radius:2px;transition:width .6s ease}
+.panel-highlight{display:flex;align-items:flex-start;gap:.45rem;font-size:.73rem;color:var(--text2);padding:.32rem 0;border-bottom:1px solid rgba(255,255,255,.04);line-height:1.45}
+.panel-highlight::before{content:'▸';color:var(--gold);flex-shrink:0;margin-top:.05rem}
+.panel-news-item{margin-top:.55rem;padding:.65rem .75rem;background:rgba(255,255,255,.03);border-radius:4px;border-left:2px solid var(--gold)}
+.panel-news-date{font-size:.61rem;color:var(--text2);margin-bottom:.2rem}
+.panel-news-title{font-size:.73rem;color:var(--text);line-height:1.5;font-weight:500}
+.panel-news-impact{font-size:.67rem;color:#9A7A3A;line-height:1.5;font-style:italic;margin-top:.28rem}
 /* DASHBOARD */
 #dashboard{padding:6rem 2rem;background:var(--bg)}
 .dash-grid{max-width:1300px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr 0.8fr;gap:1.5rem}
@@ -206,6 +223,14 @@ textarea.form-input{min-height:100px;resize:vertical}
     <div class="section-eyebrow" data-i18n="map_eyebrow">Interactive Province Map</div>
     <h2 class="section-title" data-i18n="map_title">Explore Turkey by Province</h2>
     <p class="section-sub" data-i18n="map_sub">Hover over any province to see key market indicators. Click to highlight.</p>
+  </div>
+  <div class="map-cat-filters">
+    <button class="cat-filter-btn active" data-cat="all">All</button>
+    <button class="cat-filter-btn" data-cat="turizm" style="border-color:#3B82F633;color:#3B82F6">Tourism</button>
+    <button class="cat-filter-btn" data-cat="sanayi" style="border-color:#F9731633;color:#F97316">Industrial</button>
+    <button class="cat-filter-btn" data-cat="tarim" style="border-color:#22C55E33;color:#22C55E">Agriculture</button>
+    <button class="cat-filter-btn" data-cat="konut" style="border-color:#A855F733;color:#A855F7">Residential</button>
+    <button class="cat-filter-btn" data-cat="teknoloji" style="border-color:#EAB30833;color:#EAB308">Technology</button>
   </div>
   <div class="map-wrap" id="map-wrap">
     <svg id="turkey-svg" style="width:100%;height:100%;display:block" preserveAspectRatio="xMidYMid meet" version="1.1" id="svg-turkiye-haritasi" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1007.478 527.323" xml:space="preserve">
@@ -487,9 +512,11 @@ textarea.form-input{min-height:100px;resize:vertical}
     <div class="map-tooltip" id="map-tooltip"></div>
   </div>
   <div class="map-legend">
-    <div class="legend-item"><div class="legend-dot" style="background:rgba(201,151,58,.35)"></div><span data-i18n="legend_active">Active market</span></div>
-    <div class="legend-item"><div class="legend-dot" style="background:#1e1e1e;border:1px solid #2a2a2a"></div><span data-i18n="legend_tracked">Tracked province</span></div>
-    <div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div><span data-i18n="legend_city">Major city</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3B82F6"></div><span>Tourism</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#F97316"></div><span>Industrial</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#22C55E"></div><span>Agriculture</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#A855F7"></div><span>Residential</span></div>
+    <div class="legend-item"><div class="legend-dot" style="background:#EAB308"></div><span>Technology</span></div>
   </div>
 </section>
 
@@ -762,6 +789,12 @@ This 420 m² commercial land parcel on a main boulevard in Esenyurt, Istanbul is
   </div>
 </footer>
 
+<div class="province-panel" id="province-panel">
+  <button class="province-panel-close" id="panel-close" aria-label="Close">×</button>
+  <div id="panel-content"></div>
+</div>
+
+<script src="turkey-data.js"></script>
 <script>
 const T={
 en:{nav_map:"MAP",nav_intel:"INTELLIGENCE",nav_how:"HOW IT WORKS",nav_score:"SCORECARD",nav_contact:"CONTACT",nav_brief:"REQUEST BRIEF",hero_eyebrow:"Turkey Property Intelligence — Powered by AI",hero_sub:"Real-time market signals, AI-scored opportunities, and institutional-grade analysis for every serious investor in Turkish real estate.",hero_cta1:"View Intelligence",hero_cta2:"Request Brief",stat_provinces:"Provinces Tracked",stat_criteria:"Score Criteria",stat_update:"Update Cycle",stat_langs:"Languages",map_eyebrow:"Interactive Province Map",map_title:"Explore Turkey by Province",map_sub:"Hover over any province to see key market indicators. Click to highlight.",legend_active:"Active market",legend_tracked:"Tracked province",legend_city:"Major city",dash_eyebrow:"Live Intelligence Feed",dash_title:"Market Signals & Opportunities",col_news:"Market News",badge_live:"LIVE",col_analysis:"Portfolio Analysis",col_props:"Top Opportunities",kpi_avg:"Avg Grade",kpi_score:"Avg Score",kpi_props:"Properties",ai_1t:"Ankara Cankaya — Office Hub",ai_1m:"Score 77 · High rental yield · Central district",ai_2t:"Istanbul Basaksehir — Residential",ai_2m:"Score 72 · New development zone · Metro access",ai_3t:"Izmir Alsancak — Seafront",ai_3m:"Score 70 · Tourism growth · Premium waterfront",ai_4t:"Istanbul Sariyer — Villa",ai_4m:"Score 69 · Bosphorus views · Luxury segment",ai_5t:"Istanbul Esenyurt — Mass Residential",ai_5m:"Score 62 · High supply risk · Affordable entry",placeholder_news:"Awaiting agent update…",placeholder_props:"Awaiting agent update…",how_eyebrow:"The Process",how_title:"How Tradia Works",how_sub:"Four automated agents work around the clock so you never miss a signal.",step1t:"Data Harvest",step1b:"News Agent monitors 40+ Turkish property, finance and macro sources every 24 hours.",step2t:"AI Analysis",step2b:"Property Agent scores each listing on 10 weighted criteria, returning an A–D grade.",step3t:"CEO Briefing",step3b:"CEO Agent synthesises all signals into a concise executive brief with ranked opportunities.",step4t:"Live Deploy",step4b:"Deploy Agent pushes the latest intelligence to this page within minutes.",score_eyebrow:"Our Methodology",score_title:"10-Criteria Scoring System",score_sub:"Every property is evaluated on ten dimensions, each weighted by market relevance.",sc1n:"Location",sc1d:"District tier, transport access, proximity to amenities",sc2n:"Yield",sc2d:"Gross and net rental yield vs district benchmarks",sc3n:"Capital Growth",sc3d:"3-year price appreciation trend and projections",sc4n:"Legal Status",sc4d:"Title deed clarity, encumbrances, foreign buyer eligibility",sc5n:"Build Quality",sc5d:"Construction standard, age, developer track record",sc6n:"Market Liquidity",sc6d:"Average days on market, transaction volume in area",sc7n:"Currency Risk",sc7d:"USD/TRY exposure, hedging feasibility, dollar pricing",sc8n:"Tourism Potential",sc8d:"Short-term rental demand, seasonal occupancy rates",sc9n:"Infrastructure",sc9d:"Planned metro, road, airport and urban development",sc10n:"Macro Signals",sc10d:"Interest rate, inflation, regulation and policy environment",contact_eyebrow:"Get In Touch",contact_title:"Request an Intelligence Brief",contact_info_h:"Institutional Intelligence, Personalised",contact_info_p:"Whether you are exploring Turkish real estate for the first time or managing an active portfolio, our team delivers tailored analysis.",contact_loc:"Istanbul, Turkey",form_name:"Full name",form_email:"Email address",form_budget:"Budget range (USD)",form_msg:"Tell us about your investment goals…",form_send:"Send Request",footer_copy:"© 2026 Tradia Turkey. Intelligence updated daily by autonomous agents.",footer_privacy:"Privacy",footer_terms:"Terms",footer_legacy:"Agent System"},
@@ -807,16 +840,78 @@ function applyLang(lang){
 }
 document.querySelectorAll('.lang-btn').forEach(b=>b.addEventListener('click',()=>applyLang(b.dataset.lang)));
 
-// Map interaction
-const tooltip=document.getElementById('map-tooltip');
-const mapWrap=document.getElementById('map-wrap');
-const svgEl=document.getElementById('turkey-svg');
-if(svgEl){
-  svgEl.querySelectorAll('g[id]').forEach(g=>{
-    const name=(g.getAttribute('data-iladi')||g.id.charAt(0).toUpperCase()+g.id.slice(1));
+// Map investment interaction
+(function(){
+  const tooltip=document.getElementById('map-tooltip');
+  const mapWrap=document.getElementById('map-wrap');
+  const svgEl=document.getElementById('turkey-svg');
+  const panel=document.getElementById('province-panel');
+  const panelContent=document.getElementById('panel-content');
+  if(!svgEl||typeof TURKEY_INVESTMENT_DATA==='undefined') return;
+
+  function normName(s){return s.replace(/\s*\(.*\)/,'').trim();}
+  function getInvestData(iladi){
+    const n=normName(iladi);
+    return TURKEY_INVESTMENT_DATA[n]||TURKEY_INVESTMENT_DATA[iladi]||null;
+  }
+  function getCat(iladi){
+    const n=normName(iladi);
+    return PROVINCE_CATEGORIES[n]||PROVINCE_CATEGORIES[iladi]||'tarim';
+  }
+  function setPathColors(g,col,dim){
+    g.querySelectorAll('path').forEach(p=>{
+      p.style.fill=dim?'rgba(30,30,30,0.35)':col.fill;
+      p.style.stroke=dim?'#252525':col.stroke;
+      p.style.opacity=dim?'0.35':'1';
+    });
+  }
+
+  // Color all provinces by category
+  svgEl.querySelectorAll('g[data-iladi]').forEach(g=>{
+    const cat=getCat(g.getAttribute('data-iladi'));
+    g.setAttribute('data-cat',cat);
+    setPathColors(g,CATEGORY_COLORS[cat],false);
+    g.style.cursor='pointer';
+  });
+
+  let activeFilter='all';
+  let activeG=null;
+
+  // Category filter buttons
+  document.querySelectorAll('.cat-filter-btn').forEach(btn=>{
+    btn.addEventListener('click',()=>{
+      activeFilter=btn.dataset.cat;
+      document.querySelectorAll('.cat-filter-btn').forEach(b=>{
+        b.classList.remove('active');
+        b.style.background='transparent';
+        b.style.color=b.dataset.cat==='all'?'var(--gold)':(b.style.color||'');
+      });
+      btn.classList.add('active');
+      if(btn.dataset.cat==='all'){btn.style.background='var(--gold)';btn.style.color='#000';}
+      else{btn.style.background=CATEGORY_COLORS[btn.dataset.cat].color+'33';btn.style.color=CATEGORY_COLORS[btn.dataset.cat].color;}
+      svgEl.querySelectorAll('g[data-cat]').forEach(g=>{
+        const cat=g.getAttribute('data-cat');
+        const dim=activeFilter!=='all'&&cat!==activeFilter;
+        if(g!==activeG)setPathColors(g,CATEGORY_COLORS[cat],dim);
+      });
+    });
+  });
+
+  // Hover & click
+  svgEl.querySelectorAll('g[data-iladi]').forEach(g=>{
+    const iladi=g.getAttribute('data-iladi');
+    const displayName=normName(iladi);
+    const cat=g.getAttribute('data-cat')||'tarim';
+    const col=CATEGORY_COLORS[cat];
+    const data=getInvestData(iladi);
+
     g.addEventListener('mouseenter',()=>{
-      tooltip.innerHTML='<strong>'+name+'</strong>';
+      let html='<strong style="color:#fff">'+displayName+'</strong>';
+      html+='<span style="display:inline-block;margin-left:.45rem;font-size:.61rem;padding:.1rem .38rem;border-radius:2px;background:'+col.color+'22;color:'+col.color+';font-weight:700">'+col.label+'</span>';
+      if(data)html+='<div style="font-size:.67rem;color:#9CA3AF;margin-top:.25rem">Score <strong style="color:'+col.color+'">'+data.score+'</strong>&ensp;Trend <strong style="color:#22C55E">'+data.trend+'</strong></div>';
+      tooltip.innerHTML=html;
       tooltip.classList.add('visible');
+      g.querySelectorAll('path').forEach(p=>{p.style.fill=col.hover;p.style.stroke=col.color;p.style.opacity='1';});
     });
     g.addEventListener('mousemove',e=>{
       const r=mapWrap.getBoundingClientRect();
@@ -824,13 +919,69 @@ if(svgEl){
       if(x+tooltip.offsetWidth>r.width-8)x=e.clientX-r.left-tooltip.offsetWidth-14;
       tooltip.style.left=x+'px';tooltip.style.top=y+'px';
     });
-    g.addEventListener('mouseleave',()=>tooltip.classList.remove('visible'));
+    g.addEventListener('mouseleave',()=>{
+      tooltip.classList.remove('visible');
+      if(g!==activeG){const dim=activeFilter!=='all'&&cat!==activeFilter;setPathColors(g,col,dim);}
+    });
     g.addEventListener('click',()=>{
-      svgEl.querySelectorAll('g.active').forEach(a=>a.classList.remove('active'));
-      g.classList.add('active');
+      if(activeG&&activeG!==g){
+        const pc=activeG.getAttribute('data-cat')||'tarim';
+        const dim=activeFilter!=='all'&&pc!==activeFilter;
+        setPathColors(activeG,CATEGORY_COLORS[pc],dim);
+      }
+      activeG=g;
+      g.querySelectorAll('path').forEach(p=>{p.style.fill=col.hover;p.style.stroke=col.color;p.style.opacity='1';});
+      openPanel(displayName,cat,data);
     });
   });
-}
+
+  document.getElementById('panel-close').addEventListener('click',()=>{
+    panel.classList.remove('open');
+    if(activeG){
+      const pc=activeG.getAttribute('data-cat')||'tarim';
+      const dim=activeFilter!=='all'&&pc!==activeFilter;
+      setPathColors(activeG,CATEGORY_COLORS[pc],dim);
+      activeG=null;
+    }
+  });
+
+  function openPanel(name,cat,data){
+    const col=CATEGORY_COLORS[cat]||CATEGORY_COLORS.tarim;
+    let h='';
+    h+='<div class="panel-cat-badge" style="background:'+col.color+'22;color:'+col.color+'">'+col.label+'</div>';
+    h+='<h3 style="font-size:1.25rem;font-weight:600;color:#fff;margin:0 0 .6rem">'+name+'</h3>';
+    if(data){
+      h+='<div style="display:flex;gap:2rem;margin-bottom:.4rem">';
+      h+='<div><div style="font-size:.62rem;color:var(--text2);text-transform:uppercase;letter-spacing:.08em">Score</div><div style="font-size:1.5rem;font-weight:700;color:'+col.color+'">'+data.score+'</div></div>';
+      h+='<div><div style="font-size:.62rem;color:var(--text2);text-transform:uppercase;letter-spacing:.08em">Trend</div><div style="font-size:1.5rem;font-weight:700;color:#22C55E">'+data.trend+'</div></div>';
+      h+='</div>';
+      h+='<div class="panel-score-bar-bg"><div class="panel-score-bar-fill" style="width:'+data.score+'%;background:'+col.color+'"></div></div>';
+      if(data.highlights&&data.highlights.length){
+        h+='<div style="font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin-bottom:.4rem">Key Highlights</div>';
+        data.highlights.forEach(hl=>h+='<div class="panel-highlight">'+hl+'</div>');
+      }
+    } else {
+      h+='<div style="font-size:.8rem;color:var(--text2);margin:.5rem 0 1rem;line-height:1.6">Province tracked. Detailed investment data coming soon.</div>';
+    }
+    const relNews=(typeof NEWS_ARCHIVE!=='undefined'?NEWS_ARCHIVE:[]).filter(n=>{
+      const pn=normName(n.province||'');
+      return pn===name||n.province===name||name.includes(pn)||pn.includes(name);
+    }).slice(0,3);
+    if(relNews.length){
+      h+='<div style="font-size:.62rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text2);margin:1.2rem 0 .45rem">Recent Signals</div>';
+      relNews.forEach(n=>{
+        const tc=n.type==='opportunity'?'#22C55E':n.type==='risk'?'#EF4444':'#6B7280';
+        h+='<div class="panel-news-item" style="border-left-color:'+tc+'">';
+        h+='<div class="panel-news-date">'+n.date+'</div>';
+        h+='<div class="panel-news-title">'+n.title+'</div>';
+        if(n.impact)h+='<div class="panel-news-impact">'+n.impact+'</div>';
+        h+='</div>';
+      });
+    }
+    panelContent.innerHTML=h;
+    panel.classList.add('open');
+  }
+})();
 </script>
 </body>
 </html>
