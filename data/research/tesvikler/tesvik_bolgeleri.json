@@ -1,0 +1,120 @@
+{
+  "version": "1.0",
+  "last_updated": "2026-05-02",
+  "source": "T.C. Sanayi ve Teknoloji Bakanlığı",
+  "description": "Yatırımlarda Devlet Yardımları Hakkında Karar — 6 Bölge Sistemi",
+  "incentives_by_region": {
+    "1": {
+      "label": "1. Bölge",
+      "description": "En gelişmiş iller — minimum teşvik",
+      "kdv_istisna": true,
+      "gmsi_destegi": false,
+      "faiz_destegi": false,
+      "sigorta_destegi": false,
+      "yatirim_yeri": false,
+      "iller": ["Ankara","İstanbul","İzmir","Bursa","Antalya","Muğla","Eskişehir"]
+    },
+    "2": {
+      "label": "2. Bölge",
+      "description": "Gelişmiş iller — temel teşvikler",
+      "kdv_istisna": true,
+      "gmsi_destegi": true,
+      "faiz_destegi": false,
+      "sigorta_destegi": false,
+      "yatirim_yeri": false,
+      "iller": ["Adana","Tekirdağ","Sakarya","Kocaeli","Denizli",
+                "Aydın","Edirne","Çanakkale","Balıkesir","Kayseri",
+                "Konya","Mersin","Gaziantep","Manisa","Trabzon",
+                "Samsun","Zonguldak","Kırklareli","Bolu","Düzce"]
+    },
+    "3": {
+      "label": "3. Bölge",
+      "description": "Orta gelişmişlik — genişletilmiş teşvik",
+      "kdv_istisna": true,
+      "gmsi_destegi": true,
+      "faiz_destegi": true,
+      "sigorta_destegi": false,
+      "yatirim_yeri": false,
+      "iller": ["Kahramanmaraş","Hatay","Kırıkkale","Karaman",
+                "Kütahya","Uşak","Isparta","Afyonkarahisar","Yozgat",
+                "Nevşehir","Çorum","Amasya","Kastamonu","Tokat",
+                "Karabük","Bartın","Burdur","Sinop","Kırşehir",
+                "Aksaray","Niğde","Rize","Artvin"]
+    },
+    "4": {
+      "label": "4. Bölge",
+      "description": "Gelişmekte olan iller — kapsamlı teşvik",
+      "kdv_istisna": true,
+      "gmsi_destegi": true,
+      "faiz_destegi": true,
+      "sigorta_destegi": true,
+      "yatirim_yeri": false,
+      "iller": ["Konya","Sivas","Malatya","Elazığ","Erzincan",
+                "Çankırı","Giresun","Ordu","Gümüşhane","Bayburt",
+                "Bilecik","Yalova","Kilis","Osmaniye","Adıyaman"]
+    },
+    "5": {
+      "label": "5. Bölge",
+      "description": "Az gelişmiş iller — maksimum teşvik paketi",
+      "kdv_istisna": true,
+      "gmsi_destegi": true,
+      "faiz_destegi": true,
+      "sigorta_destegi": true,
+      "yatirim_yeri": true,
+      "ek_istihdam_destegi": true,
+      "iller": ["Ardahan","Iğdır","Kars","Erzurum","Ağrı",
+                "Van","Muş","Bitlis","Bingöl","Tunceli",
+                "Hakkari","Şırnak","Siirt","Batman","Mardin",
+                "Şanlıurfa","Diyarbakır"]
+    },
+    "6": {
+      "label": "6. Bölge",
+      "description": "Özel teşvik bölgesi — en kapsamlı destek paketi",
+      "kdv_istisna": true,
+      "gmsi_destegi": true,
+      "faiz_destegi": true,
+      "sigorta_destegi": true,
+      "yatirim_yeri": true,
+      "ek_istihdam_destegi": true,
+      "vergi_indirimi_orani": 90,
+      "asgari_yatirim_tutari_tl": 500000,
+      "iller": ["Ağrı","Ardahan","Batman","Bingöl","Bitlis",
+                "Diyarbakır","Hakkari","Iğdır","Kars","Mardin",
+                "Muş","Şırnak","Şanlıurfa","Siirt","Tunceli","Van"]
+    }
+  },
+  "special_zones": [
+    {
+      "id": "oiz",
+      "name": "Organize Sanayi Bölgeleri (OSB)",
+      "count": 404,
+      "benefits": ["KDV istisnası","Kurumlar vergisi muafiyeti",
+                   "Ucuz altyapı","Çevre izin kolaylığı"],
+      "tradia_note": "OSB yatırımları tüm bölgelerde ek teşvik alır"
+    },
+    {
+      "id": "tkgb",
+      "name": "Teknoloji Geliştirme Bölgeleri (Teknopark)",
+      "count": 95,
+      "benefits": ["Gelir vergisi muafiyeti","KDV istisnası",
+                   "Gümrük muafiyeti","Ar-Ge desteği"],
+      "tradia_note": "Yazılım ve AR-GE yatırımları için ideal"
+    },
+    {
+      "id": "sb",
+      "name": "Serbest Bölgeler",
+      "count": 21,
+      "benefits": ["Gümrük vergisi muafiyeti","KDV istisnası",
+                   "Dövizle işlem serbestisi","%0 kurumlar vergisi"],
+      "tradia_note": "İhracat odaklı yatırımlar için en avantajlı yapı"
+    },
+    {
+      "id": "eb",
+      "name": "Endüstri Bölgeleri",
+      "count": 23,
+      "benefits": ["Çevre izin kolaylığı","Altyapı desteği",
+                   "Arsa tahsisi","Teşvik belgesi önceliği"],
+      "tradia_note": "Büyük ölçekli sanayi için OSB alternatifi"
+    }
+  ]
+}

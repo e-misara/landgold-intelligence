@@ -736,8 +736,8 @@ class ResearchAgent(BaseAgent):
 
     # ── OSB Database Methods ────────────────────────────────────────────────────
 
-    def get_osb_by_il(self, il_adi: str) -> list[dict]:
-        """Return all OSBs for a given province from the database."""
+    def get_osb_by_il(self, il_adi: str) -> dict[str, Any]:
+        """Return all OSBs and incentive region for a given province."""
         osb_db_path = RESEARCH_DIR / "osb_database.json"
         try:
             db = json.loads(osb_db_path.read_text(encoding="utf-8"))
@@ -747,9 +747,48 @@ class ResearchAgent(BaseAgent):
                     if osb.get("il", "").lower() == il_adi.lower():
                         osb["region"] = region
                         results.append(osb)
-            return sorted(results, key=lambda x: x.get("tradia_score", 0), reverse=True)
+            results = sorted(results, key=lambda x: x.get("tradia_score", 0), reverse=True)
         except Exception as exc:
             self.log(f"OSB DB error: {exc}")
+            results = []
+        tesvik = self.get_tesvik_bolge(il_adi)
+        return {"osbs": results, "tesvik": tesvik}
+
+    def get_tesvik_bolge(self, il_adi: str) -> dict[str, Any]:
+        """Return investment incentive region for a province."""
+        tesvik_path = RESEARCH_DIR / "tesvikler" / "tesvik_bolgeleri.json"
+        try:
+            data = json.loads(tesvik_path.read_text(encoding="utf-8"))
+            for bolge_no, bolge in data["incentives_by_region"].items():
+                if il_adi in bolge["iller"]:
+                    return {
+                        "bolge":           bolge_no,
+                        "label":           bolge["label"],
+                        "description":     bolge["description"],
+                        "kdv_istisna":     bolge.get("kdv_istisna"),
+                        "faiz_destegi":    bolge.get("faiz_destegi"),
+                        "sigorta_destegi": bolge.get("sigorta_destegi"),
+                        "yatirim_yeri":    bolge.get("yatirim_yeri"),
+                        "vergi_indirimi":  bolge.get("vergi_indirimi_orani"),
+                        "tradia_note":     f"Bölge {bolge_no} teşvikleri geçerli",
+                    }
+            return {"bolge": "?", "label": "Belirtilmemiş", "tradia_note": "Teşvik bölgesi verisi güncelleniyor"}
+        except Exception as exc:
+            self.log(f"Teşvik error: {exc}")
+            return {}
+
+    def get_imar_firsatlari(self, il: str | None = None, min_score: int = 70) -> list[dict]:
+        """Return zoning opportunity areas, optionally filtered by province."""
+        imar_path = RESEARCH_DIR / "tesvikler" / "imara_acilacak_alanlar.json"
+        try:
+            data  = json.loads(imar_path.read_text(encoding="utf-8"))
+            areas = data.get("areas", [])
+            if il:
+                areas = [a for a in areas if a.get("il") == il]
+            areas = [a for a in areas if a.get("tradia_score", 0) >= min_score]
+            return sorted(areas, key=lambda x: x.get("tradia_score", 0), reverse=True)
+        except Exception as exc:
+            self.log(f"İmar error: {exc}")
             return []
 
     def get_osb_summary_by_region(self, region: str | None = None) -> dict[str, Any]:
@@ -924,6 +963,20 @@ class ResearchAgent(BaseAgent):
             pid     = action.split(":", 1)[1]
             targets = self.generate_property_targets(pid)
             return {"status": "OK", "project_id": pid, "targets": targets}
+
+        if action.startswith("tesvik:"):
+            il = action.split(":", 1)[1]
+            result = self.get_tesvik_bolge(il)
+            return {"status": "OK", "il": il, **result}
+
+        if action == "imar":
+            areas = self.get_imar_firsatlari()
+            return {"status": "OK", "count": len(areas), "areas": areas}
+
+        if action.startswith("imar:"):
+            il = action.split(":", 1)[1]
+            areas = self.get_imar_firsatlari(il=il)
+            return {"status": "OK", "il": il, "count": len(areas), "areas": areas}
 
         if action == "osb_report":
             report = self.generate_osb_report()
