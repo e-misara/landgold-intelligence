@@ -222,95 +222,172 @@ def build_property_html(property_report: dict) -> tuple[str, int]:
 # ── 3b. Build research HTML block ────────────────────────────────────────────
 
 def build_research_html() -> tuple[str, int]:
-    archive_path = Config.DATA_PATH / "research" / "projects" / "marmara_archive.json"
-    if not archive_path.exists():
-        print(f"  ⚠ Research archive not found: {archive_path}")
-        return "", 0
+    import glob as _glob
 
-    try:
-        with archive_path.open(encoding="utf-8") as f:
-            data = json.load(f)
-    except Exception as exc:
-        print(f"  ⚠ Could not load research archive: {exc}")
-        return "", 0
+    archive_dir = os.path.join(
+        os.path.dirname(os.path.abspath(__file__)),
+        "data/research/projects",
+    )
 
-    projects = data.get("projects", [])[:4]
-    if not projects:
+    all_projects: list[dict] = []
+    region_order = ["Marmara", "Ege", "Karadeniz", "İç Anadolu"]
+
+    for region in region_order:
+        for f in _glob.glob(os.path.join(archive_dir, "*.json")):
+            try:
+                with open(f, encoding="utf-8") as fp:
+                    data = json.load(fp)
+                if data.get("region") == region:
+                    for p in data.get("projects", []):
+                        p["_region"] = region
+                    all_projects.extend(data.get("projects", []))
+                    break
+            except Exception:
+                continue
+
+    all_projects.sort(key=lambda x: x.get("tradia_score", 0), reverse=True)
+    top_projects = all_projects[:8]
+
+    if not top_projects:
+        print("  ⚠ No research archive projects found")
         return "", 0
 
     verdict_colors = {"BUY": "#2ECC8A", "WATCH": "#C9973A", "PASS": "#6B7280"}
+    category_colors = {
+        "tourism":               "#3B82F6",
+        "luxury_tourism":        "#8B5CF6",
+        "industrial":            "#F97316",
+        "logistics":             "#F59E0B",
+        "technology":            "#EAB308",
+        "urban_renewal":         "#EC4899",
+        "infrastructure":        "#14B8A6",
+        "residential":           "#2ECC8A",
+        "waterway":              "#06B6D4",
+        "bridge":                "#6366F1",
+        "airport":               "#F97316",
+        "agricultural_industrial": "#84CC16",
+        "luxury_coastal":        "#8B5CF6",
+    }
 
     cards = []
-    for p in projects:
-        verdict_word = "BUY" if p.get("tradia_verdict", "").startswith("BUY") else "WATCH"
+    for p in top_projects:
+        verdict_text = p.get("tradia_verdict", "WATCH")
+        verdict_word = "WATCH"
+        if verdict_text.startswith("BUY"):
+            verdict_word = "BUY"
+        elif verdict_text.startswith("PASS"):
+            verdict_word = "PASS"
+
         verdict_color = verdict_colors.get(verdict_word, "#C9973A")
-        score = p.get("tradia_score", 75)
+        score    = p.get("tradia_score", 75)
+        region   = p.get("_region", "")
+        category = p.get("category", "")
+        cat_color = category_colors.get(category, "#C9973A")
 
-        price_data = p.get("price_data", {}).get("data", [])
-        latest = price_data[-1] if price_data else {}
-        price_range = (
-            f"${latest.get('min', 0):,}–${latest.get('max', 0):,}/m²"
-            if latest else "—"
-        )
+        price_data  = p.get("price_data", {}).get("data", [])
+        latest      = price_data[-1] if price_data else {}
+        price_range = f"${latest.get('min',0):,}–${latest.get('max',0):,}/m²" if latest else "—"
 
-        hot_zones = p.get("hot_zones", [])[:3]
-        zones_html = "".join(
+        zones = p.get("hot_zones", [])[:3]
+        zones_html = "".join([
             f'<div style="display:flex;align-items:center;gap:.5rem;'
-            f'padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.04);'
-            f'font-size:.65rem">'
-            f'<span style="color:#C9973A">›</span>'
+            f'padding:.35rem 0;border-bottom:1px solid rgba(255,255,255,0.04);font-size:.62rem">'
+            f'<span style="color:#C9973A;flex-shrink:0">›</span>'
             f'<span style="color:#F0EDE8">{_esc(z["name"])}</span>'
-            f'<span style="color:#6B7280;margin-left:auto">{_esc(z.get("upside", ""))}</span>'
+            f'<span style="color:#2ECC8A;margin-left:auto;font-size:.6rem">{_esc(z.get("upside",""))}</span>'
             f'</div>'
-            for z in hot_zones
-        )
+            for z in zones
+        ])
 
-        summary = _esc(p.get("summary_en", "")[:180]) + "…"
+        zones_fallback = '<div style="font-size:.62rem;color:#3A404F">Data being compiled</div>'
+        zones_block = zones_html or zones_fallback
 
         cards.append(
-            f'<div style="background:#0D1525;border:1px solid rgba(201,151,58,0.12);padding:1.5rem">'
-            f'<div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem">'
-            f'<div>'
-            f'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#C9973A;margin-bottom:.4rem">'
-            f'{_esc(p.get("status","active").upper())}</div>'
-            f'<div style="font-family:Georgia,serif;font-size:1rem;font-weight:400;color:#F0EDE8;line-height:1.3">'
-            f'{_esc(p.get("name",""))}</div>'
+            f'<div style="background:#0D1525;border:1px solid rgba(255,255,255,0.06);'
+            f'padding:1.5rem;font-family:sans-serif;transition:border-color .2s">'
+            f'<div style="display:flex;align-items:center;gap:.5rem;margin-bottom:.8rem">'
+            f'<span style="font-size:.55rem;letter-spacing:.15em;text-transform:uppercase;'
+            f'color:{cat_color};background:{cat_color}18;'
+            f'border:1px solid {cat_color}33;padding:.2rem .6rem">'
+            f'{_esc(category.replace("_"," ").upper())}</span>'
+            f'<span style="font-size:.55rem;color:#3A404F;margin-left:auto">{_esc(region)}</span>'
             f'</div>'
-            f'<div style="text-align:right;flex-shrink:0;margin-left:1rem">'
-            f'<div style="font-family:Georgia,serif;font-size:1.6rem;color:#C9973A;line-height:1">{score}</div>'
-            f'<div style="font-size:.55rem;color:#6B7280">/100</div>'
+            f'<div style="display:flex;justify-content:space-between;'
+            f'align-items:flex-start;margin-bottom:.8rem">'
+            f'<div style="font-family:Georgia,serif;font-size:.95rem;'
+            f'font-weight:400;color:#F0EDE8;line-height:1.3;max-width:75%">'
+            f'{_esc(p.get("name",""))}</div>'
+            f'<div style="text-align:right;flex-shrink:0">'
+            f'<div style="font-family:Georgia,serif;font-size:1.5rem;'
+            f'color:#C9973A;line-height:1">{score}</div>'
+            f'<div style="font-size:.5rem;color:#6B7280">/100</div>'
             f'</div></div>'
-            f'<div style="font-size:.7rem;color:#8A8F9E;line-height:1.7;margin-bottom:1rem">{summary}</div>'
+            f'<div style="font-size:.68rem;color:#8A8F9E;line-height:1.7;'
+            f'margin-bottom:1rem;display:-webkit-box;'
+            f'-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden">'
+            f'{_esc(p.get("summary_en",""))}</div>'
             f'<div style="margin-bottom:1rem">'
-            f'<div style="font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:#6B7280;margin-bottom:.4rem">HOT ZONES</div>'
-            f'{zones_html}</div>'
-            f'<div style="display:flex;align-items:center;justify-content:space-between;'
+            f'<div style="font-size:.55rem;letter-spacing:.12em;text-transform:uppercase;'
+            f'color:#6B7280;margin-bottom:.4rem">HOT ZONES</div>'
+            f'{zones_block}'
+            f'</div>'
+            f'<div style="display:flex;align-items:center;'
+            f'justify-content:space-between;'
             f'padding-top:.8rem;border-top:1px solid rgba(255,255,255,0.04)">'
-            f'<div style="font-size:.62rem;color:#6B7280">{price_range} USD</div>'
-            f'<div style="font-size:.65rem;font-weight:600;letter-spacing:.1em;color:{verdict_color};'
-            f'border:1px solid {verdict_color}33;padding:.25rem .7rem">{verdict_word}</div>'
+            f'<div style="font-size:.6rem;color:#6B7280">{_esc(price_range)} USD</div>'
+            f'<div style="font-size:.62rem;font-weight:600;letter-spacing:.1em;'
+            f'color:{verdict_color};border:1px solid {verdict_color}44;'
+            f'padding:.2rem .7rem">{verdict_word}</div>'
             f'</div></div>'
         )
+
+    # Region summary bar
+    region_counts: dict[str, int] = {}
+    for p in all_projects:
+        r = p.get("_region", "")
+        region_counts[r] = region_counts.get(r, 0) + 1
+
+    region_bar = " · ".join([
+        f'<span style="color:#C9973A">{_esc(r)}</span>'
+        f' <span style="color:#6B7280">{c}</span>'
+        for r, c in region_counts.items()
+    ])
 
     grid = (
         '<section id="lg-research-feed" style="padding:4rem 2.5rem;'
         'background:#080D1A;border-top:1px solid rgba(255,255,255,0.05)">'
+        '<div style="display:flex;align-items:flex-end;'
+        'justify-content:space-between;margin-bottom:2rem;'
+        'flex-wrap:wrap;gap:1rem">'
+        '<div>'
         '<div style="font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;'
-        'color:#C9973A;margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem">'
+        'color:#C9973A;margin-bottom:.5rem;display:flex;align-items:center;gap:.6rem">'
         '<span style="width:18px;height:1px;background:#C9973A;display:inline-block"></span>'
-        'Mega Project Intelligence</div>'
-        '<h2 style="font-family:Georgia,serif;font-size:2.2rem;font-weight:400;'
-        'color:#F0EDE8;margin-bottom:.5rem">'
-        'Marmara Region <em style="font-style:italic;color:#E8C97A">Projects</em></h2>'
-        '<p style="font-size:.78rem;color:#6B7280;line-height:1.8;max-width:500px;margin-bottom:2rem">'
-        'Infrastructure and development projects driving property price movements '
-        'across the Marmara region — tracked and scored by Tradia Research Agent.</p>'
-        '<div style="display:grid;grid-template-columns:repeat(2,1fr);'
-        'gap:1px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.04)">'
+        'Regional Intelligence</div>'
+        '<h2 style="font-family:Georgia,serif;font-size:2rem;'
+        'font-weight:400;color:#F0EDE8;margin-bottom:.4rem">'
+        'Turkey Mega Project <em style="font-style:italic;color:#E8C97A">Intelligence</em></h2>'
+        f'<div style="font-size:.65rem;color:#6B7280">{region_bar}</div>'
+        '</div>'
+        f'<div style="font-size:.62rem;color:#3A404F;text-align:right">'
+        f'Scored by Tradia Research Agent<br>'
+        f'{len(all_projects)} projects · {len(region_counts)} regions</div>'
+        '</div>'
+        '<div style="display:grid;grid-template-columns:repeat(4,1fr);'
+        'gap:1px;background:rgba(255,255,255,0.04);'
+        'border:1px solid rgba(255,255,255,0.04)">'
         + "".join(cards)
-        + '</div></section>'
+        + '</div>'
+        '<div style="margin-top:1rem;text-align:center">'
+        '<button onclick="document.getElementById(\'survey\').scrollIntoView({behavior:\'smooth\'})"'
+        ' style="background:none;color:#C9973A;border:1px solid rgba(201,151,58,0.3);'
+        'padding:.6rem 2rem;font-size:.65rem;letter-spacing:.15em;'
+        'text-transform:uppercase;cursor:pointer;font-family:inherit">'
+        'Request Full Regional Analysis →</button>'
+        '</div>'
+        '</section>'
     )
-    return grid, len(projects)
+    return grid, len(top_projects)
 
 
 # ── 4 & 5. Inject / replace HTML in target file ───────────────────────────────
