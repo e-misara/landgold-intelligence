@@ -30,13 +30,36 @@ class WatchdogAgent:
     # ── Helpers ────────────────────────────────────────────────────────────
 
     def _file_age_hours(self, *glob_patterns: str) -> float:
+        """
+        Dosya yaşını saat cinsinden döndürür.
+        GitHub Actions'da checkout mtime'ı sıfırlar — bu durumda
+        dosya adından tarihi okuyarak gerçek yaşı hesaplar.
+        """
         files: list[Path] = []
         for pattern in glob_patterns:
             files.extend(_BASE_DIR.glob(pattern))
         if not files:
             return 999.0
-        latest = max(files, key=lambda f: f.stat().st_mtime)
-        return (datetime.now().timestamp() - latest.stat().st_mtime) / 3600
+
+        # Dosya adından tarih çıkarmayı dene: raw_2026-05-02.json
+        import re
+        best_age = 999.0
+        now = datetime.now()
+        date_re = re.compile(r"(\d{4}-\d{2}-\d{2})")
+        for f in files:
+            m = date_re.search(f.name)
+            if m:
+                try:
+                    file_date = datetime.strptime(m.group(1), "%Y-%m-%d")
+                    age = (now - file_date).total_seconds() / 3600
+                    best_age = min(best_age, age)
+                    continue
+                except ValueError:
+                    pass
+            # Fallback: mtime (lokal ortamda çalışır)
+            age = (now.timestamp() - f.stat().st_mtime) / 3600
+            best_age = min(best_age, age)
+        return best_age
 
     # ── Checks ─────────────────────────────────────────────────────────────
 

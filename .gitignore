@@ -1,9 +1,11 @@
-.env
-__pycache__/
+*.db
+*.log
 *.pyc
 *.pyo
-.venv/
-venv/
-data/
-*.log
 .DS_Store
+.env
+.venv/
+__pycache__/
+data/
+landgold.db
+venv/

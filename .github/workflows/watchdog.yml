@@ -2,11 +2,12 @@ name: Watchdog Hourly
 
 on:
   schedule:
-    - cron: '0 * * * *'   # Her saat başı
+    - cron: '0 * * * *'   # Her saat başı (UTC)
   workflow_dispatch:       # Manuel tetikleme
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  SITE_REPO_PATH: "."
 
 jobs:
   watch:
@@ -16,6 +17,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0   # watchdog'un git log'u kullanabilmesi için
 
       - uses: actions/setup-python@v5
         with:
@@ -25,16 +27,26 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
-      - name: Run Watchdog
-        env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-        run: python -m agents.watchdog
-        continue-on-error: true   # tetikleme bulamazsa 0 döner, 2 döner — her ikisi OK
+      - name: Create .env from secrets
+        run: |
+          echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" > .env
+          echo "SITE_REPO_PATH=." >> .env
+          echo "LOG_LEVEL=INFO" >> .env
+          echo "DATA_PATH=data" >> .env
 
-      - name: Commit watchdog log (if any)
+      - name: Ensure data directories exist
+        run: |
+          mkdir -p data/news data/properties data/leads data/reports/orchestrator logs/watchdog
+
+      - name: Run Watchdog
+        id: watchdog
+        run: python -m agents.watchdog
+        continue-on-error: true   # exit 0 = no triggers, exit 2 = triggers — both OK
+
+      - name: Commit agent outputs (if any)
         run: |
           git config user.name  "Watchdog Bot"
           git config user.email "bot@landgold.local"
-          git add logs/watchdog/ data/reports/orchestrator/ || true
-          git diff --cached --quiet || git commit -m "[bot] Watchdog $(date -u +%Y-%m-%dT%H:%MZ)"
+          git add data/ logs/watchdog/ docs/ || true
+          git diff --cached --quiet || git commit -m "[bot] Agent update $(date -u +%Y-%m-%dT%H:%MZ)"
           git push || true

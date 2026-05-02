@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LandGold Intelligence</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gold:    { DEFAULT: '#C9A84C', light: '#E8C96A', dark: '#A07828' },
+            obsidian:{ DEFAULT: '#0A0A0A', 1: '#111111', 2: '#1A1A1A', 3: '#242424' },
+          },
+          fontFamily: { serif: ['Georgia', 'serif'], sans: ['Inter', 'sans-serif'] },
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+    body { background: #0A0A0A; font-family: 'Inter', sans-serif; }
+    .gold-border { border: 1px solid #C9A84C44; }
+    .gold-glow   { box-shadow: 0 0 24px #C9A84C18; }
+    .lang-btn.active { background: #C9A84C; color: #0A0A0A; }
+    [dir="rtl"] .rtl-flip { transform: scaleX(-1); }
+    .signal-badge { animation: pulse 2.4s cubic-bezier(0.4,0,0.6,1) infinite; }
+    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.5} }
+    .placeholder-img {
+      background: linear-gradient(135deg, #1A1A1A 0%, #242424 50%, #1A1A1A 100%);
+      border: 1px dashed #C9A84C44;
+    }
+    .risk-low      { color: #4ade80; }
+    .risk-medium   { color: #facc15; }
+    .risk-high     { color: #fb923c; }
+    .risk-critical { color: #f87171; }
+    input, select { background: #1A1A1A !important; color: #e5e5e5 !important; }
+    input::placeholder { color: #555 !important; }
+  </style>
+</head>
+<body class="text-gray-200 min-h-screen">
+
+  <!-- ── NAV ── -->
+  <nav class="flex items-center justify-between px-8 py-4 border-b border-gold/20 bg-obsidian-1">
+    <div class="flex items-center gap-3">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <polygon points="14,2 26,24 2,24" fill="none" stroke="#C9A84C" stroke-width="1.5"/>
+        <polygon points="14,8 22,22 6,22" fill="#C9A84C" opacity="0.18"/>
+      </svg>
+      <span class="text-gold font-semibold tracking-widest text-sm uppercase">LandGold Intelligence</span>
+    </div>
+
+    <!-- Language switcher -->
+    <div class="flex gap-1 bg-obsidian-2 rounded p-1 gold-border" id="lang-switcher">
+      <button class="lang-btn active px-3 py-1 rounded text-xs font-medium transition-all" data-lang="en" onclick="setLang('en')">EN</button>
+      <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="ru" onclick="setLang('ru')">RU</button>
+      <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="ar" onclick="setLang('ar')">AR</button>
+      <button class="lang-btn px-3 py-1 rounded text-xs font-medium transition-all text-gray-400 hover:text-gold" data-lang="tr" onclick="setLang('tr')">TR</button>
+    </div>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <header class="text-center py-16 px-4">
+    <p class="text-gold/60 text-xs tracking-[0.3em] uppercase mb-3" id="txt-tagline">Sovereign Land Intelligence · TR Zoning Law 3194</p>
+    <h1 class="text-4xl md:text-5xl font-light text-white mb-4" id="txt-hero">
+      Strategic Land <span class="text-gold">Acquisition</span> Intelligence
+    </h1>
+    <p class="text-gray-500 text-sm max-w-xl mx-auto" id="txt-sub">
+      Real-time ROI analysis, government signal tracking, and multi-agent due diligence — denominated exclusively in USD.
+    </p>
+  </header>
+
+  <!-- ── PROJECTION VISUALS ── -->
+  <section class="max-w-5xl mx-auto px-6 mb-14">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+
+      <!-- Current State -->
+      <div class="placeholder-img rounded-lg p-6 flex flex-col justify-between min-h-56 gold-glow">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs text-gray-500 tracking-widest uppercase" id="txt-current-label">Current State</span>
+          <span class="text-xs bg-obsidian-3 text-gray-400 px-2 py-0.5 rounded border border-white/5">Agricultural / Bare</span>
+        </div>
+        <div class="flex-1 flex items-center justify-center">
+          <!-- SVG placeholder: field -->
+          <svg width="180" height="90" viewBox="0 0 180 90" fill="none" opacity="0.35">
+            <rect x="0" y="60" width="180" height="30" fill="#3a5a2a"/>
+            <line x1="0" y1="60" x2="180" y2="60" stroke="#4a7a3a" stroke-width="1"/>
+            <rect x="20" y="40" width="8" height="20" fill="#5a8a4a"/>
+            <rect x="60" y="35" width="8" height="25" fill="#5a8a4a"/>
+            <rect x="110" y="42" width="8" height="18" fill="#5a8a4a"/>
+            <rect x="150" y="38" width="8" height="22" fill="#5a8a4a"/>
+            <circle cx="90" cy="18" r="14" fill="#b8860b" opacity="0.3"/>
+          </svg>
+        </div>
+        <div class="mt-4 text-center">
+          <span class="text-gray-600 text-xs">[ Parcel Photo Placeholder ]</span>
+        </div>
+      </div>
+
+      <!-- Future Projection -->
+      <div class="placeholder-img rounded-lg p-6 flex flex-col justify-between min-h-56 gold-glow">
+        <div class="flex items-center justify-between mb-4">
+          <span class="text-xs text-gray-500 tracking-widest uppercase" id="txt-future-label">Future Projection</span>
+          <span class="text-xs bg-gold/10 text-gold px-2 py-0.5 rounded border border-gold/20" id="txt-zone-badge">Logistic / Commercial</span>
+        </div>
+        <div class="flex-1 flex items-center justify-center">
+          <!-- SVG placeholder: commercial/logistic -->
+          <svg width="180" height="90" viewBox="0 0 180 90" fill="none" opacity="0.45">
+            <rect x="0" y="65" width="180" height="25" fill="#1a1a1a"/>
+            <rect x="10" y="30" width="45" height="35" fill="#2a2a2a" stroke="#C9A84C" stroke-width="0.8"/>
+            <rect x="65" y="20" width="55" height="45" fill="#2a2a2a" stroke="#C9A84C" stroke-width="0.8"/>
+            <rect x="130" y="38" width="40" height="27" fill="#2a2a2a" stroke="#C9A84C" stroke-width="0.8"/>
+            <line x1="0" y1="65" x2="180" y2="65" stroke="#C9A84C" stroke-width="0.5" opacity="0.4"/>
+            <rect x="68" y="22" width="8" height="5" fill="#C9A84C" opacity="0.5"/>
+          </svg>
+        </div>
+        <div class="mt-4 text-center">
+          <span class="text-gray-600 text-xs">[ Gov Signal: Zoning Projection ]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ANALYSIS FORM ── -->
+  <section class="max-w-3xl mx-auto px-6 mb-14">
+    <div class="gold-border gold-glow rounded-lg p-8 bg-obsidian-1">
+      <h2 class="text-gold text-sm tracking-widest uppercase mb-6" id="txt-form-title">USD Investment Request Pool</h2>
+
+      <form id="analysis-form" onsubmit="submitAnalysis(event)" class="space-y-5">
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-name">Full Name</label>
+            <input type="text" name="name" required placeholder="Your Name"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-email">Email</label>
+            <input type="email" name="email" required placeholder="you@example.com"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-phone">Phone</label>
+            <input type="text" name="phone" placeholder="+1 000 000 0000"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-budget">Budget (USD)</label>
+            <input type="number" name="budget_usd" required placeholder="250000"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+        </div>
+
+        <hr class="border-white/5"/>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-landtype">Land Type</label>
+            <select name="land_type" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
+              <option value="agricultural">Agricultural</option>
+              <option value="zoned_commercial">Zoned Commercial</option>
+              <option value="zoned_residential">Zoned Residential</option>
+              <option value="industrial">Industrial</option>
+              <option value="tourism_zone">Tourism Zone</option>
+              <option value="forest_edge">Forest Edge</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-area">Area (m²)</label>
+            <input type="number" name="area_m2" required placeholder="5000"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-location">Location / Region</label>
+            <input type="text" name="location" placeholder="e.g. Konya, TR"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-road">Road Type</label>
+            <select name="road_type" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
+              <option value="provincial_road">Provincial Road</option>
+              <option value="state_road">State Road</option>
+              <option value="motorway">Motorway</option>
+              <option value="village_road">Village Road</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-proximity">Highway Proximity (m)</label>
+            <input type="number" name="highway_proximity_m" required placeholder="80"
+              class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50"/>
+          </div>
+          <div>
+            <label class="block text-xs text-gray-500 mb-1" id="lbl-signal">Gov Signal</label>
+            <select name="gov_signal" class="w-full rounded px-3 py-2 text-sm border border-white/8 focus:outline-none focus:border-gold/50">
+              <option value="none">None</option>
+              <option value="municipality_zoning_change">Zoning Change</option>
+              <option value="infrastructure_project_nearby">Infrastructure Nearby</option>
+              <option value="highway_extension">Highway Extension</option>
+              <option value="airport_expansion">Airport Expansion</option>
+              <option value="industrial_zone_declaration">Industrial Zone</option>
+              <option value="tourism_incentive_zone">Tourism Incentive</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-xs text-gray-500 mb-2" id="lbl-constraints">Title Deed Constraints</label>
+          <div class="flex flex-wrap gap-3">
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" name="constraints" value="mortgage" class="accent-gold"/> Mortgage
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" name="constraints" value="annotation" class="accent-gold"/> Annotation
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" name="constraints" value="court_injunction" class="accent-gold"/> Court Injunction
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" name="constraints" value="easement" class="accent-gold"/> Easement
+            </label>
+            <label class="flex items-center gap-1.5 text-xs text-gray-400 cursor-pointer">
+              <input type="checkbox" name="constraints" value="multiple_owners" class="accent-gold"/> Multiple Owners
+            </label>
+          </div>
+        </div>
+
+        <button type="submit"
+          class="w-full py-3 rounded bg-gold text-obsidian font-semibold text-sm tracking-widest uppercase hover:bg-gold-light transition-colors">
+          <span id="btn-submit-text">Run Intelligence Analysis</span>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ── RESULTS PANEL ── -->
+  <section class="max-w-3xl mx-auto px-6 mb-20 hidden" id="results-panel">
+    <div class="gold-border gold-glow rounded-lg p-8 bg-obsidian-1 space-y-6">
+      <h2 class="text-gold text-sm tracking-widest uppercase" id="txt-results-title">Intelligence Report</h2>
+
+      <!-- Metrics -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="metrics-grid"></div>
+
+      <!-- Risk bar -->
+      <div>
+        <div class="flex justify-between text-xs mb-1">
+          <span class="text-gray-500" id="txt-risk-label">Risk Score</span>
+          <span id="risk-score-val" class="font-medium"></span>
+        </div>
+        <div class="w-full bg-obsidian-3 rounded-full h-1.5">
+          <div id="risk-bar" class="h-1.5 rounded-full transition-all duration-700"></div>
+        </div>
+      </div>
+
+      <!-- Agent messages -->
+      <div class="space-y-4" id="agent-messages"></div>
+
+      <p class="text-xs text-gray-600 text-center" id="txt-pending-note">All agent outputs carry status: PENDING_APPROVAL</p>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer class="border-t border-gold/10 text-center py-6 text-gray-700 text-xs tracking-widest">
+    LANDGOLD INTELLIGENCE · USD DENOMINATED · TR LAW 3194
+  </footer>
+
+<script>
+const i18n = {
+  en: {
+    tagline: "Sovereign Land Intelligence · TR Zoning Law 3194",
+    hero: "Strategic Land <span class='text-gold'>Acquisition</span> Intelligence",
+    sub: "Real-time ROI analysis, government signal tracking, and multi-agent due diligence — denominated exclusively in USD.",
+    currentLabel: "Current State", futureLabel: "Future Projection",
+    zoneBadge: "Logistic / Commercial",
+    formTitle: "USD Investment Request Pool",
+    lblName: "Full Name", lblEmail: "Email", lblPhone: "Phone", lblBudget: "Budget (USD)",
+    lblLandType: "Land Type", lblArea: "Area (m²)", lblLocation: "Location / Region",
+    lblRoad: "Road Type", lblProximity: "Highway Proximity (m)", lblSignal: "Gov Signal",
+    lblConstraints: "Title Deed Constraints",
+    btnSubmit: "Run Intelligence Analysis",
+    resultsTitle: "Intelligence Report",
+    riskLabel: "Risk Score",
+    pendingNote: "All agent outputs carry status: PENDING_APPROVAL",
+    metrics: { current: "Current $/m²", projected: "Projected $/m²", total: "Total Value", roi: "ROI" },
+  },
+  ru: {
+    tagline: "Земельная аналитика · Закон TR 3194",
+    hero: "Стратегический анализ <span class='text-gold'>земельных</span> активов",
+    sub: "ROI в реальном времени, правительственные сигналы, многоагентный анализ — только в USD.",
+    currentLabel: "Текущее состояние", futureLabel: "Прогноз",
+    zoneBadge: "Логистика / Коммерция",
+    formTitle: "USD Инвестиционный пул",
+    lblName: "Полное имя", lblEmail: "Email", lblPhone: "Телефон", lblBudget: "Бюджет (USD)",
+    lblLandType: "Тип участка", lblArea: "Площадь (м²)", lblLocation: "Локация / Регион",
+    lblRoad: "Тип дороги", lblProximity: "Расстояние до шоссе (м)", lblSignal: "Гос. сигнал",
+    lblConstraints: "Обременения по праву собственности",
+    btnSubmit: "Запустить анализ",
+    resultsTitle: "Отчёт разведки",
+    riskLabel: "Уровень риска",
+    pendingNote: "Все сообщения агентов имеют статус: PENDING_APPROVAL",
+    metrics: { current: "Текущий $/м²", projected: "Прогноз $/м²", total: "Стоимость", roi: "ROI" },
+  },
+  ar: {
+    tagline: "استخبارات الأراضي السيادية · قانون التقسيم 3194",
+    hero: "استخبارات الاستحواذ <span class='text-gold'>الاستراتيجي</span> على الأراضي",
+    sub: "تحليل العائد الفوري، رصد الإشارات الحكومية، والعناية الواجبة متعددة الوكلاء — بالدولار الأمريكي حصراً.",
+    currentLabel: "الحالة الراهنة", futureLabel: "التوقع المستقبلي",
+    zoneBadge: "لوجستي / تجاري",
+    formTitle: "مجمّع طلبات الاستثمار بالدولار",
+    lblName: "الاسم الكامل", lblEmail: "البريد الإلكتروني", lblPhone: "الهاتف", lblBudget: "الميزانية (USD)",
+    lblLandType: "نوع الأرض", lblArea: "المساحة (م²)", lblLocation: "الموقع / المنطقة",
+    lblRoad: "نوع الطريق", lblProximity: "القرب من الطريق (م)", lblSignal: "الإشارة الحكومية",
+    lblConstraints: "قيود صك الملكية",
+    btnSubmit: "تشغيل التحليل الاستخباراتي",
+    resultsTitle: "تقرير الاستخبارات",
+    riskLabel: "مؤشر المخاطرة",
+    pendingNote: "جميع مخرجات الوكلاء تحمل الحالة: PENDING_APPROVAL",
+    metrics: { current: "$/م² الحالي", projected: "$/م² المتوقع", total: "القيمة الكلية", roi: "العائد" },
+  },
+  tr: {
+    tagline: "Egemen Arsa İstihbaratı · 3194 Sayılı İmar Kanunu",
+    hero: "Stratejik Arsa <span class='text-gold'>Edinim</span> İstihbaratı",
+    sub: "Anlık ROI analizi, hükümet sinyal takibi ve çok ajanlı durum tespiti — yalnızca USD cinsinden.",
+    currentLabel: "Mevcut Durum", futureLabel: "Gelecek Projeksiyon",
+    zoneBadge: "Lojistik / Ticari",
+    formTitle: "USD Yatırım Talep Havuzu",
+    lblName: "Ad Soyad", lblEmail: "E-posta", lblPhone: "Telefon", lblBudget: "Bütçe (USD)",
+    lblLandType: "Arazi Türü", lblArea: "Alan (m²)", lblLocation: "Konum / Bölge",
+    lblRoad: "Yol Tipi", lblProximity: "Yola Mesafe (m)", lblSignal: "Hükümet Sinyali",
+    lblConstraints: "Tapu Kütüğü Kısıtları",
+    btnSubmit: "İstihbarat Analizi Başlat",
+    resultsTitle: "İstihbarat Raporu",
+    riskLabel: "Risk Skoru",
+    pendingNote: "Tüm ajan çıktıları PENDING_APPROVAL statüsündedir",
+    metrics: { current: "Güncel $/m²", projected: "Projeksiyon $/m²", total: "Toplam Değer", roi: "ROI" },
+  },
+};
+
+let currentLang = 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  const t = i18n[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+
+  document.getElementById('txt-tagline').textContent   = t.tagline;
+  document.getElementById('txt-hero').innerHTML        = t.hero;
+  document.getElementById('txt-sub').textContent       = t.sub;
+  document.getElementById('txt-current-label').textContent = t.currentLabel;
+  document.getElementById('txt-future-label').textContent  = t.futureLabel;
+  document.getElementById('txt-zone-badge').textContent    = t.zoneBadge;
+  document.getElementById('txt-form-title').textContent   = t.formTitle;
+  document.getElementById('lbl-name').textContent      = t.lblName;
+  document.getElementById('lbl-email').textContent     = t.lblEmail;
+  document.getElementById('lbl-phone').textContent     = t.lblPhone;
+  document.getElementById('lbl-budget').textContent    = t.lblBudget;
+  document.getElementById('lbl-landtype').textContent  = t.lblLandType;
+  document.getElementById('lbl-area').textContent      = t.lblArea;
+  document.getElementById('lbl-location').textContent  = t.lblLocation;
+  document.getElementById('lbl-road').textContent      = t.lblRoad;
+  document.getElementById('lbl-proximity').textContent = t.lblProximity;
+  document.getElementById('lbl-signal').textContent    = t.lblSignal;
+  document.getElementById('lbl-constraints').textContent = t.lblConstraints;
+  document.getElementById('btn-submit-text').textContent = t.btnSubmit;
+  document.getElementById('txt-results-title').textContent = t.resultsTitle;
+  document.getElementById('txt-risk-label').textContent   = t.riskLabel;
+  document.getElementById('txt-pending-note').textContent  = t.pendingNote;
+
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.lang === lang);
+    b.classList.toggle('text-gray-400', b.dataset.lang !== lang);
+  });
+}
+
+function riskColor(label) {
+  return { LOW:'#4ade80', MEDIUM:'#facc15', HIGH:'#fb923c', CRITICAL:'#f87171' }[label] || '#C9A84C';
+}
+
+async function submitAnalysis(e) {
+  e.preventDefault();
+  const btn = document.getElementById('btn-submit-text');
+  btn.textContent = '...';
+
+  const form = e.target;
+  const constraints = [...form.querySelectorAll('input[name="constraints"]:checked')].map(i => i.value);
+
+  const payload = {
+    name:                form.name.value,
+    email:               form.email.value,
+    phone:               form.phone.value,
+    language:            currentLang,
+    budget_usd:          parseFloat(form.budget_usd.value),
+    land_type:           form.land_type.value,
+    area_m2:             parseFloat(form.area_m2.value),
+    location:            form.location.value,
+    road_type:           form.road_type.value,
+    highway_proximity_m: parseFloat(form.highway_proximity_m.value),
+    gov_signal:          form.gov_signal.value,
+    title_constraints:   constraints.length ? constraints : ['no_issue'],
+  };
+
+  try {
+    const res  = await fetch('/api/analyze', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(payload) });
+    const data = await res.json();
+    renderResults(data);
+  } catch {
+    alert('Server error — ensure backend is running.');
+  } finally {
+    btn.textContent = i18n[currentLang].btnSubmit;
+  }
+}
+
+function renderResults(data) {
+  const t = i18n[currentLang];
+  const { analysis, risk, messages } = data;
+  const panel = document.getElementById('results-panel');
+  panel.classList.remove('hidden');
+
+  const color = riskColor(risk.risk_label);
+
+  // Metrics
+  const mg = document.getElementById('metrics-grid');
+  mg.innerHTML = [
+    [t.metrics.current,    `$${analysis.current_usd_m2}/m²`],
+    [t.metrics.projected,  `$${analysis.projected_usd_m2}/m²`],
+    [t.metrics.total,      `$${analysis.total_projected_usd.toLocaleString()}`],
+    [t.metrics.roi,        `+${analysis.roi_percent}%`],
+  ].map(([label, val]) => `
+    <div class="bg-obsidian-2 rounded p-4 gold-border text-center">
+      <p class="text-gray-500 text-xs mb-1">${label}</p>
+      <p class="text-gold text-lg font-semibold">${val}</p>
+    </div>`).join('');
+
+  // Risk bar
+  document.getElementById('risk-score-val').textContent = `${risk.risk_score}/100 — ${risk.risk_label}`;
+  document.getElementById('risk-score-val').style.color = color;
+  const bar = document.getElementById('risk-bar');
+  bar.style.width = `${risk.risk_score}%`;
+  bar.style.background = color;
+
+  // Agent messages
+  const am = document.getElementById('agent-messages');
+  am.innerHTML = messages.map(m => `
+    <div class="bg-obsidian-2 rounded p-4 gold-border">
+      <div class="flex items-center justify-between mb-2">
+        <span class="text-gold text-xs font-semibold tracking-wider">${m.agent}</span>
+        <span class="text-xs bg-obsidian-3 text-gray-500 px-2 py-0.5 rounded signal-badge">${m.status}</span>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed" dir="${m.lang === 'ar' ? 'rtl' : 'ltr'}">${m.message}</p>
+    </div>`).join('');
+
+  panel.scrollIntoView({ behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
