@@ -1,0 +1,129 @@
+{
+  "version": "1.0",
+  "region": "İç Anadolu",
+  "last_updated": "2026-05-02",
+  "projects": [
+    {
+      "id": "ankara-teknoloji-usu",
+      "name": "Ankara Teknoloji ve Savunma Sanayi Üssü",
+      "name_en": "Ankara Technology & Defense Industry Hub",
+      "category": "technology",
+      "status": "active",
+      "tradia_score": 85,
+      "summary_en": "Ankara established as Turkey's defense technology capital. ASELSAN, Roketsan, TAI, TUSAŞ all headquartered in Ankara technology corridor. ODTÜ Teknokent expanding — 400+ tech companies. Government employee demand sustains residential market.",
+      "summary_ru": "Анкара утвердилась как столица оборонных технологий Турции. ASELSAN, Roketsan, TAI, TUSAŞ — все штаб-квартиры в технологическом коридоре Анкары. Технопарк ОДТУ расширяется — 400+ технологических компаний.",
+      "summary_ar": "أنقرة راسخة كعاصمة تركيا للتكنولوجيا الدفاعية. ASELSAN وRoketsan وTAI وTUSAŞ — مقارها جميعاً في الممر التكنولوجي لأنقرة. تقنوبارك ODTÜ يتوسع — 400+ شركة تقنية.",
+      "summary_tr": "Ankara Türkiye'nin savunma teknolojisi başkenti olarak konumlandı. ASELSAN, Roketsan, TAI, TUSAŞ Ankara teknoloji koridorunda. ODTÜ Teknokent büyüyor — 400'den fazla teknoloji şirketi.",
+      "key_events": [
+        {"date": "2021-06", "event_en": "TUSAŞ new campus — 15,000 engineer capacity", "price_impact": "+18%"},
+        {"date": "2022-03", "event_en": "Ankara metro Line 6 approved — Çankaya extension", "price_impact": "+22%"},
+        {"date": "2023-09", "event_en": "Defense export record $5.5B — sector employment boom", "price_impact": "+15%"},
+        {"date": "2024-05", "event_en": "ODTÜ Teknokent Phase 5 — 100,000m² new space", "price_impact": "+20%"},
+        {"date": "2025-02", "event_en": "Ankara-Istanbul HSR 1.5hr — commuter market opens", "price_impact": "+25%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 800, "max": 1400, "note": "Stable market"},
+          {"year": 2021, "min": 1000, "max": 1800, "note": "Tech sector growth"},
+          {"year": 2022, "min": 1300, "max": 2200, "note": "Defense boom"},
+          {"year": 2023, "min": 1600, "max": 2800, "note": "Export record"},
+          {"year": 2024, "min": 2000, "max": 3400, "note": "HSR effect"},
+          {"year": 2026, "min": 2400, "max": 4000, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Çankaya", "district": "Ankara", "type": "luxury_apartment", "price_usd_m2": 3200, "upside": "+20-28% (2yr)", "risk": "low"},
+        {"name": "Bilkent-ODTÜ koridoru", "district": "Çankaya", "type": "tech_residential", "price_usd_m2": 2800, "upside": "+25-35% (2yr)", "risk": "low"},
+        {"name": "İncek", "district": "Gölbaşı", "type": "villa_compound", "price_usd_m2": 1800, "upside": "+30-45% (3yr)", "risk": "low"},
+        {"name": "Sincan OSB çevresi", "district": "Sincan", "type": "industrial_land", "price_usd_m2": 380, "upside": "+35-50% (3yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Government policy dependency",
+        "Less liquid than Istanbul market",
+        "International buyer interest limited"
+      ],
+      "tradia_verdict": "BUY — Bilkent-ODTÜ corridor for tech professional rental demand. Çankaya luxury for capital preservation. Strong fundamentals, stable growth."
+    },
+    {
+      "id": "konya-tarim-lojistik",
+      "name": "Konya — Tarım Teknolojisi ve Lojistik Merkezi",
+      "name_en": "Konya — Agricultural Technology & Logistics Hub",
+      "category": "agricultural_industrial",
+      "status": "active",
+      "tradia_score": 76,
+      "summary_en": "Turkey's largest agricultural province transforming into agri-tech and food processing hub. Konya OSB among Turkey's largest. Strategic location on Ankara-Adana corridor with rail and highway access.",
+      "summary_ru": "Крупнейшая сельскохозяйственная провинция Турции превращается в центр агротехнологий и пищевой промышленности. ОИЗ Коньи — один из крупнейших в Турции.",
+      "summary_ar": "أكبر محافظة زراعية في تركيا تتحوّل إلى مركز للتقنية الزراعية وتصنيع الأغذية. منطقة كونيا الصناعية المنظمة من أكبر المناطق في تركيا.",
+      "summary_tr": "Türkiye'nin en büyük tarım ili tarım teknolojisi ve gıda işleme merkezine dönüşüyor. Konya OSB Türkiye'nin en büyükleri arasında.",
+      "key_events": [
+        {"date": "2021-11", "event_en": "Konya-Karaman HSR opened", "price_impact": "+18%"},
+        {"date": "2022-08", "event_en": "Agri-tech investment zone — EU funding", "price_impact": "+15%"},
+        {"date": "2023-05", "event_en": "Food processing cluster — 50 international companies", "price_impact": "+20%"},
+        {"date": "2024-09", "event_en": "Konya logistics center — Central Anatolia hub", "price_impact": "+22%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 200, "max": 380, "note": "Baseline"},
+          {"year": 2021, "min": 300, "max": 560, "note": "HSR effect"},
+          {"year": 2022, "min": 420, "max": 780, "note": "Agri-tech"},
+          {"year": 2024, "min": 580, "max": 1050, "note": "Logistics hub"},
+          {"year": 2026, "min": 680, "max": 1200, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Karatay OSB", "district": "Konya", "type": "industrial_land", "price_usd_m2": 240, "upside": "+35-50% (3yr)", "risk": "low"},
+        {"name": "Selçuklu", "district": "Konya", "type": "residential", "price_usd_m2": 820, "upside": "+20-30% (2yr)", "risk": "low"},
+        {"name": "Karaman", "district": "Karaman", "type": "agricultural_land", "price_usd_m2": 45, "upside": "+60-90% (5yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Agricultural land conversion restrictions",
+        "Limited international investment interest",
+        "Water scarcity risk for agricultural zones"
+      ],
+      "tradia_verdict": "WATCH — Karatay industrial solid domestic play. Not suited for international investors seeking liquid exit. Long-term agricultural land for patient capital only."
+    },
+    {
+      "id": "kayseri-organize-sanayi",
+      "name": "Kayseri Organize Sanayi — Mobilya ve Tekstil Merkezi",
+      "name_en": "Kayseri Industrial Zone — Furniture & Textile Hub",
+      "category": "industrial",
+      "status": "active",
+      "tradia_score": 77,
+      "summary_en": "Kayseri established as Turkey's furniture capital — 40% of national production. Textile cluster second largest after İstanbul. OSB expansion ongoing with strong export orientation. Affordable entry prices relative to western Turkey.",
+      "summary_ru": "Кайсери утвердился как мебельная столица Турции — 40% национального производства. Текстильный кластер второй по величине после Стамбула.",
+      "summary_ar": "قيصري راسخة كعاصمة الأثاث في تركيا — 40% من الإنتاج الوطني. المجموعة النسيجية الثانية بعد إسطنبول.",
+      "summary_tr": "Kayseri Türkiye'nin mobilya başkenti olarak konumlandı — ulusal üretimin yüzde 40'ı. Tekstil kümesi İstanbul'dan sonra ikinci büyük.",
+      "key_events": [
+        {"date": "2021-07", "event_en": "Kayseri OSB Phase 5 — 300 new lots", "price_impact": "+15%"},
+        {"date": "2022-11", "event_en": "Furniture export record $2.8B", "price_impact": "+18%"},
+        {"date": "2023-08", "event_en": "Airport capacity doubled — cargo expansion", "price_impact": "+12%"},
+        {"date": "2024-06", "event_en": "EU furniture quality certification cluster", "price_impact": "+15%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 180, "max": 320, "note": "Stable"},
+          {"year": 2021, "min": 260, "max": 460, "note": "OSB expansion"},
+          {"year": 2022, "min": 360, "max": 620, "note": "Export record"},
+          {"year": 2024, "min": 480, "max": 820, "note": "Airport expansion"},
+          {"year": 2026, "min": 560, "max": 960, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Kayseri OSB", "district": "Kayseri", "type": "industrial_land", "price_usd_m2": 180, "upside": "+30-45% (3yr)", "risk": "low"},
+        {"name": "Melikgazi", "district": "Kayseri", "type": "residential", "price_usd_m2": 720, "upside": "+18-28% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Single-sector dependency — furniture/textile",
+        "Limited international investment track record",
+        "Inland location — no coastal premium"
+      ],
+      "tradia_verdict": "WATCH — Industrial land solid value for domestic investors. International capital better deployed in Marmara or Ege coastal markets."
+    }
+  ]
+}

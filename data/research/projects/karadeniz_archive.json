@@ -1,0 +1,131 @@
+{
+  "version": "1.0",
+  "region": "Karadeniz",
+  "last_updated": "2026-05-02",
+  "projects": [
+    {
+      "id": "trabzon-gulf-demand",
+      "name": "Trabzon — Körfez Yatırımcı Talebi",
+      "name_en": "Trabzon — Gulf Investor Demand Zone",
+      "category": "residential",
+      "status": "active",
+      "tradia_score": 86,
+      "summary_en": "Trabzon prices up 340% in 3 years driven by Qatari and Saudi demand. Still 60% below Istanbul comparables. Sea view residential commanding strong premium. Direct flights from Gulf cities expanding.",
+      "summary_ru": "Цены в Трабзоне выросли на 340% за 3 года — спрос катарских и саудовских покупателей. Всё ещё на 60% ниже сопоставимых объектов в Стамбуле. Жильё с видом на море с высокой премией.",
+      "summary_ar": "أسعار طرابزون ارتفعت 340% في 3 سنوات بسبب الطلب القطري والسعودي. لا تزال أقل بنسبة 60% من المقارنات الاسطنبولية. المساكن ذات إطلالة البحر تحقق علاوة قوية.",
+      "summary_tr": "Trabzon fiyatları 3 yılda yüzde 340 arttı — Katar ve Suudi talebiyle. Hâlâ İstanbul emsallerinin yüzde 60 altında. Deniz manzaralı konut güçlü prim yapıyor.",
+      "key_events": [
+        {"date": "2020-06", "event_en": "Qatar Airways direct Doha-Trabzon route launched", "price_impact": "+25%"},
+        {"date": "2021-09", "event_en": "Gulf buyer surge — Trabzon tops foreign purchase charts", "price_impact": "+45%"},
+        {"date": "2022-04", "event_en": "Trabzon Airport international capacity doubled", "price_impact": "+20%"},
+        {"date": "2023-07", "event_en": "Saudi Investment Authority acquires Trabzon hotel portfolio", "price_impact": "+30%"},
+        {"date": "2024-11", "event_en": "Direct flights from 12 Gulf cities — record connections", "price_impact": "+18%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 280, "max": 450, "note": "Pre-Gulf demand"},
+          {"year": 2020, "min": 380, "max": 620, "note": "Direct flights"},
+          {"year": 2021, "min": 650, "max": 1100, "note": "Gulf surge"},
+          {"year": 2022, "min": 950, "max": 1600, "note": "Record purchases"},
+          {"year": 2024, "min": 1200, "max": 2000, "note": "Sustained demand"},
+          {"year": 2026, "min": 1400, "max": 2400, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Ortahisar", "district": "Trabzon", "type": "sea_view_apartment", "price_usd_m2": 1800, "upside": "+25-35% (2yr)", "risk": "low"},
+        {"name": "Akçaabat", "district": "Trabzon", "type": "residential_land", "price_usd_m2": 650, "upside": "+40-55% (3yr)", "risk": "medium"},
+        {"name": "Yomra", "district": "Trabzon", "type": "villa_land", "price_usd_m2": 480, "upside": "+45-65% (4yr)", "risk": "medium"},
+        {"name": "Of", "district": "Trabzon", "type": "land", "price_usd_m2": 220, "upside": "+60-90% (5yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Gulf demand concentrated — single buyer group dependency",
+        "Steep terrain limits development sites",
+        "Limited local rental demand — holiday market only",
+        "Currency volatility affects USD returns"
+      ],
+      "tradia_verdict": "BUY — Ortahisar sea view apartments for immediate Gulf buyer resale. Akçaabat land for medium-term hold. Strong momentum intact."
+    },
+    {
+      "id": "rize-artvin-hidroelektrik",
+      "name": "Rize-Artvin — Havalimanı ve Hidroelektrik Bölgesi",
+      "name_en": "Rize-Artvin Airport & Hydroelectric Development Zone",
+      "category": "infrastructure",
+      "status": "active",
+      "tradia_score": 74,
+      "summary_en": "Rize-Artvin Airport opened 2023 on reclaimed Black Sea land — engineering marvel. Multiple hydroelectric investments transforming eastern Black Sea economy. Early-stage opportunity with significant upside.",
+      "summary_ru": "Аэропорт Ризе-Артвин открылся в 2023 году на намывной территории Чёрного моря — инженерное чудо. Множество гидроэнергетических инвестиций трансформируют экономику восточного Черноморья.",
+      "summary_ar": "مطار ريزه-أرتفين افتُتح عام 2023 على أرض مستصلحة من البحر الأسود — معجزة هندسية. استثمارات هيدروكهربائية متعددة تحوّل اقتصاد شرق البحر الأسود.",
+      "summary_tr": "Rize-Artvin Havalimanı 2023'te Karadeniz'den kazanılan alanda açıldı — mühendislik harikası. Çok sayıda hidroelektrik yatırımı doğu Karadeniz ekonomisini dönüştürüyor.",
+      "key_events": [
+        {"date": "2020-01", "event_en": "Airport construction starts on sea platform", "price_impact": "+18%"},
+        {"date": "2023-05", "event_en": "Rize-Artvin Airport opens — first sea platform airport", "price_impact": "+35%"},
+        {"date": "2023-11", "event_en": "Hydroelectric cluster — 8 new plants approved", "price_impact": "+15%"},
+        {"date": "2024-08", "event_en": "Free trade zone application Rize submitted", "price_impact": "+20%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 150, "max": 280, "note": "Pre-airport"},
+          {"year": 2021, "min": 220, "max": 400, "note": "Construction effect"},
+          {"year": 2023, "min": 380, "max": 680, "note": "Airport opened"},
+          {"year": 2024, "min": 480, "max": 850, "note": "Free trade zone"},
+          {"year": 2026, "min": 560, "max": 980, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Rize merkez", "district": "Rize", "type": "commercial", "price_usd_m2": 680, "upside": "+35-50% (3yr)", "risk": "medium"},
+        {"name": "Pazar", "district": "Rize", "type": "industrial_land", "price_usd_m2": 280, "upside": "+50-70% (4yr)", "risk": "medium"},
+        {"name": "Hopa", "district": "Artvin", "type": "port_adjacent", "price_usd_m2": 320, "upside": "+45-65% (4yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Remote location — limited buyer pool",
+        "Seasonal weather affects accessibility",
+        "Free trade zone approval uncertain timeline"
+      ],
+      "tradia_verdict": "WATCH — Early stage. Rize commercial for patient capital. Monitor free trade zone approval — trigger for BUY signal."
+    },
+    {
+      "id": "samsun-karadeniz-hub",
+      "name": "Samsun — Karadeniz Lojistik ve Ticaret Merkezi",
+      "name_en": "Samsun — Black Sea Logistics & Trade Hub",
+      "category": "logistics",
+      "status": "active",
+      "tradia_score": 78,
+      "summary_en": "Samsun emerging as Turkey's primary Black Sea trade gateway. Port modernisation complete — 15M ton annual capacity. Rail connection to Central Asia via Trans-Caspian route generating sustained industrial demand.",
+      "summary_ru": "Самсун становится главными воротами Турции в Чёрное море. Модернизация порта завершена — 15 млн тонн в год. Железнодорожное соединение с Центральной Азией генерирует устойчивый промышленный спрос.",
+      "summary_ar": "سامسون يبرز كبوابة تركيا الرئيسية للبحر الأسود. اكتمل تحديث الميناء — 15 مليون طن سنوياً. الاتصال بالسكك الحديدية مع آسيا الوسطى يولّد طلباً صناعياً مستداماً.",
+      "summary_tr": "Samsun Türkiye'nin birincil Karadeniz ticaret kapısı olarak öne çıkıyor. Liman modernizasyonu tamamlandı — yıllık 15 milyon ton kapasite. Orta Asya'ya demiryolu bağlantısı süregelen sanayi talebini besliyor.",
+      "key_events": [
+        {"date": "2021-04", "event_en": "Port modernisation Phase 2 complete", "price_impact": "+20%"},
+        {"date": "2022-09", "event_en": "Trans-Caspian rail route activated", "price_impact": "+25%"},
+        {"date": "2023-06", "event_en": "Samsun OSB Phase 4 — 200 new industrial lots", "price_impact": "+18%"},
+        {"date": "2024-03", "event_en": "Grain corridor agreement — Samsun primary port", "price_impact": "+22%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 120, "max": 220, "note": "Baseline"},
+          {"year": 2021, "min": 200, "max": 380, "note": "Port modernisation"},
+          {"year": 2022, "min": 300, "max": 540, "note": "Trans-Caspian rail"},
+          {"year": 2024, "min": 420, "max": 720, "note": "Grain corridor"},
+          {"year": 2026, "min": 520, "max": 880, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Tekkeköy OSB", "district": "Samsun", "type": "industrial_land", "price_usd_m2": 280, "upside": "+35-50% (3yr)", "risk": "low"},
+        {"name": "Atakum", "district": "Samsun", "type": "residential", "price_usd_m2": 680, "upside": "+22-32% (2yr)", "risk": "low"},
+        {"name": "Liman çevresi", "district": "Samsun", "type": "logistics", "price_usd_m2": 420, "upside": "+30-45% (3yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Geopolitical risk — Black Sea trade route dependency",
+        "Limited foreign buyer interest historically",
+        "Weather disruptions affect port operations"
+      ],
+      "tradia_verdict": "WATCH — Tekkeköy industrial land solid value. Better suited for Turkish domestic investors. International buyers prefer Trabzon for lifestyle premium."
+    }
+  ]
+}

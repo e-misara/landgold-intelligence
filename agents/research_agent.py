@@ -157,6 +157,80 @@ class ResearchAgent(BaseAgent):
             "tradia_score":     83,
             "investment_horizon": "2-4 years",
         },
+        # ── Karadeniz Region ───────────────────────────────────────────────
+        {
+            "id":               "trabzon-gulf-demand",
+            "name":             "Trabzon Körfez Talebi",
+            "region":           "Karadeniz",
+            "category":         "residential",
+            "districts":        ["Trabzon", "Akçaabat", "Of"],
+            "status":           "active",
+            "keywords_tr":      ["trabzon", "trabzon konut", "trabzon arsa", "karadeniz yatırım"],
+            "keywords_en":      ["trabzon real estate", "trabzon property", "black sea investment"],
+            "impact_radius_km": 30,
+            "tradia_score":     86,
+        },
+        {
+            "id":               "samsun-karadeniz-hub",
+            "name":             "Samsun Lojistik Merkezi",
+            "region":           "Karadeniz",
+            "category":         "logistics",
+            "districts":        ["Samsun", "Tekkeköy", "Atakum"],
+            "status":           "active",
+            "keywords_tr":      ["samsun liman", "samsun osb", "karadeniz lojistik"],
+            "keywords_en":      ["samsun port", "black sea logistics", "samsun industrial"],
+            "impact_radius_km": 20,
+            "tradia_score":     78,
+        },
+        {
+            "id":               "rize-artvin-hidroelektrik",
+            "name":             "Rize-Artvin Havalimanı Bölgesi",
+            "region":           "Karadeniz",
+            "category":         "infrastructure",
+            "districts":        ["Rize", "Artvin", "Hopa"],
+            "status":           "active",
+            "keywords_tr":      ["rize artvin havalimanı", "rize serbest bölge", "hopa liman"],
+            "keywords_en":      ["rize artvin airport", "rize free trade zone"],
+            "impact_radius_km": 25,
+            "tradia_score":     74,
+        },
+        # ── İç Anadolu Region ──────────────────────────────────────────────
+        {
+            "id":               "ankara-teknoloji-usu",
+            "name":             "Ankara Teknoloji Üssü",
+            "region":           "İç Anadolu",
+            "category":         "technology",
+            "districts":        ["Çankaya", "Bilkent", "İncek", "Sincan"],
+            "status":           "active",
+            "keywords_tr":      ["ankara teknoloji", "odtü teknokent", "savunma sanayi ankara", "aselsan"],
+            "keywords_en":      ["ankara technology", "ODTU technopark", "defense industry ankara"],
+            "impact_radius_km": 20,
+            "tradia_score":     85,
+        },
+        {
+            "id":               "konya-tarim-lojistik",
+            "name":             "Konya Tarım ve Lojistik",
+            "region":           "İç Anadolu",
+            "category":         "agricultural_industrial",
+            "districts":        ["Konya", "Karatay", "Selçuklu", "Karaman"],
+            "status":           "active",
+            "keywords_tr":      ["konya osb", "konya lojistik", "konya tarım teknoloji"],
+            "keywords_en":      ["konya industrial", "konya logistics", "central anatolia hub"],
+            "impact_radius_km": 30,
+            "tradia_score":     76,
+        },
+        {
+            "id":               "kayseri-organize-sanayi",
+            "name":             "Kayseri OSB Mobilya Merkezi",
+            "region":           "İç Anadolu",
+            "category":         "industrial",
+            "districts":        ["Kayseri", "Melikgazi", "Kocasinan"],
+            "status":           "active",
+            "keywords_tr":      ["kayseri mobilya", "kayseri osb", "kayseri tekstil"],
+            "keywords_en":      ["kayseri furniture", "kayseri industrial", "kayseri OIZ"],
+            "impact_radius_km": 15,
+            "tradia_score":     77,
+        },
         # ── Ege Region ─────────────────────────────────────────────────────
         {
             "id":               "antalya-turizm-kusagi",
@@ -286,8 +360,10 @@ class ResearchAgent(BaseAgent):
         return float(m.group(1)) if m else 0.0
 
     ARCHIVE_FILES: dict[str, str] = {
-        "marmara": "marmara_archive.json",
-        "ege":     "ege_archive.json",
+        "marmara":     "marmara_archive.json",
+        "ege":         "ege_archive.json",
+        "karadeniz":   "karadeniz_archive.json",
+        "iç anadolu":  "ic_anadolu_archive.json",
     }
 
     def load_archive(self, region: str | None = None) -> dict[str, Any]:
@@ -486,16 +562,17 @@ class ResearchAgent(BaseAgent):
         return report
 
     def research_all_marmara(self) -> dict[str, Any]:
-        """Research all Marmara mega-projects and produce combined report."""
-        marmara = [p for p in self.MEGA_PROJECTS if p["region"] == "Marmara"]
-        self.log(f"Researching {len(marmara)} Marmara projects")
+        return self._research_all_region("Marmara")
+
+    def _research_all_region(self, region: str) -> dict[str, Any]:
+        """Generic: research all mega-projects for a given region label."""
+        projects = [p for p in self.MEGA_PROJECTS if p["region"] == region]
+        self.log(f"Researching {len(projects)} {region} projects")
 
         results: list[dict[str, Any]] = []
-        for project in marmara:
-            result = self.research_project(project["id"])
-            results.append(result)
+        for project in projects:
+            results.append(self.research_project(project["id"]))
 
-        # Top opportunity = highest tradia_score with positive sentiment
         positive = [r for r in results if r.get("overall_sentiment") == "positive"]
         ranked   = sorted(
             positive or results,
@@ -505,9 +582,10 @@ class ResearchAgent(BaseAgent):
         top_opportunity = ranked[0] if ranked else None
 
         date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+        slug = region.lower().replace(" ", "_").replace("ç", "c").replace("ı", "i")
         combined: dict[str, Any] = {
             "date":               date_str,
-            "region":             "Marmara",
+            "region":             region,
             "projects_analyzed":  len(results),
             "top_opportunity":    {
                 "project_id":   top_opportunity["project_id"],
@@ -519,12 +597,12 @@ class ResearchAgent(BaseAgent):
             "projects": results,
         }
 
-        out_path = RESEARCH_DIR / f"marmara_report_{date_str}.json"
+        out_path = RESEARCH_DIR / f"{slug}_report_{date_str}.json"
         out_path.write_text(json.dumps(combined, indent=2, ensure_ascii=False), encoding="utf-8")
-        self.log(f"Marmara combined report saved → {out_path.name}")
+        self.log(f"{region} combined report saved → {out_path.name}")
 
         self.report_to_ceo({
-            "action":            "marmara_research_complete",
+            "action":            f"{slug}_research_complete",
             "projects_analyzed": len(results),
             "top_opportunity":   combined["top_opportunity"],
             "priority":          "high",
@@ -532,49 +610,13 @@ class ResearchAgent(BaseAgent):
         return combined
 
     def research_all_ege(self) -> dict[str, Any]:
-        """Research all Ege mega-projects and produce combined report."""
-        ege = [p for p in self.MEGA_PROJECTS if p["region"] == "Ege"]
-        self.log(f"Researching {len(ege)} Ege projects")
+        return self._research_all_region("Ege")
 
-        results: list[dict[str, Any]] = []
-        for project in ege:
-            result = self.research_project(project["id"])
-            results.append(result)
+    def research_all_karadeniz(self) -> dict[str, Any]:
+        return self._research_all_region("Karadeniz")
 
-        positive = [r for r in results if r.get("overall_sentiment") == "positive"]
-        ranked   = sorted(
-            positive or results,
-            key=lambda r: r.get("tradia_score", 0),
-            reverse=True,
-        )
-        top_opportunity = ranked[0] if ranked else None
-
-        date_str = datetime.now(timezone.utc).strftime("%Y-%m-%d")
-        combined: dict[str, Any] = {
-            "date":               date_str,
-            "region":             "Ege",
-            "projects_analyzed":  len(results),
-            "top_opportunity":    {
-                "project_id":   top_opportunity["project_id"],
-                "project_name": top_opportunity["project_name"],
-                "tradia_score": top_opportunity["tradia_score"],
-                "sentiment":    top_opportunity["overall_sentiment"],
-                "price_signal": top_opportunity["price_signal_avg"],
-            } if top_opportunity else None,
-            "projects": results,
-        }
-
-        out_path = RESEARCH_DIR / f"ege_report_{date_str}.json"
-        out_path.write_text(json.dumps(combined, indent=2, ensure_ascii=False), encoding="utf-8")
-        self.log(f"Ege combined report saved → {out_path.name}")
-
-        self.report_to_ceo({
-            "action":            "ege_research_complete",
-            "projects_analyzed": len(results),
-            "top_opportunity":   combined["top_opportunity"],
-            "priority":          "high",
-        })
-        return combined
+    def research_all_ic_anadolu(self) -> dict[str, Any]:
+        return self._research_all_region("İç Anadolu")
 
     def generate_property_targets(self, project_id: str) -> list[dict[str, Any]]:
         """Generate 3 target property profiles for the given project via Claude."""
@@ -660,6 +702,29 @@ class ResearchAgent(BaseAgent):
                 "projects_analyzed": report["projects_analyzed"],
                 "top_opportunity":   report.get("top_opportunity"),
             }
+
+        if action == "karadeniz":
+            report = self.research_all_karadeniz()
+            return {
+                "status":            "OK",
+                "projects_analyzed": report["projects_analyzed"],
+                "top_opportunity":   report.get("top_opportunity"),
+            }
+
+        if action == "ic_anadolu":
+            report = self.research_all_ic_anadolu()
+            return {
+                "status":            "OK",
+                "projects_analyzed": report["projects_analyzed"],
+                "top_opportunity":   report.get("top_opportunity"),
+            }
+
+        if action == "all_regions":
+            totals: dict[str, Any] = {}
+            for region_action in ("marmara", "ege", "karadeniz", "ic_anadolu"):
+                result = self.run_task({"action": region_action})
+                totals[region_action] = result.get("projects_analyzed", 0)
+            return {"status": "OK", "regions": totals, "total": sum(totals.values())}
 
         if action.startswith("project:"):
             pid    = action.split(":", 1)[1]
