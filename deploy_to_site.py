@@ -219,6 +219,100 @@ def build_property_html(property_report: dict) -> tuple[str, int]:
     return html, len(opps)
 
 
+# ── 3b. Build research HTML block ────────────────────────────────────────────
+
+def build_research_html() -> tuple[str, int]:
+    archive_path = Config.DATA_PATH / "research" / "projects" / "marmara_archive.json"
+    if not archive_path.exists():
+        print(f"  ⚠ Research archive not found: {archive_path}")
+        return "", 0
+
+    try:
+        with archive_path.open(encoding="utf-8") as f:
+            data = json.load(f)
+    except Exception as exc:
+        print(f"  ⚠ Could not load research archive: {exc}")
+        return "", 0
+
+    projects = data.get("projects", [])[:4]
+    if not projects:
+        return "", 0
+
+    verdict_colors = {"BUY": "#2ECC8A", "WATCH": "#C9973A", "PASS": "#6B7280"}
+
+    cards = []
+    for p in projects:
+        verdict_word = "BUY" if p.get("tradia_verdict", "").startswith("BUY") else "WATCH"
+        verdict_color = verdict_colors.get(verdict_word, "#C9973A")
+        score = p.get("tradia_score", 75)
+
+        price_data = p.get("price_data", {}).get("data", [])
+        latest = price_data[-1] if price_data else {}
+        price_range = (
+            f"${latest.get('min', 0):,}–${latest.get('max', 0):,}/m²"
+            if latest else "—"
+        )
+
+        hot_zones = p.get("hot_zones", [])[:3]
+        zones_html = "".join(
+            f'<div style="display:flex;align-items:center;gap:.5rem;'
+            f'padding:.4rem 0;border-bottom:1px solid rgba(255,255,255,0.04);'
+            f'font-size:.65rem">'
+            f'<span style="color:#C9973A">›</span>'
+            f'<span style="color:#F0EDE8">{_esc(z["name"])}</span>'
+            f'<span style="color:#6B7280;margin-left:auto">{_esc(z.get("upside", ""))}</span>'
+            f'</div>'
+            for z in hot_zones
+        )
+
+        summary = _esc(p.get("summary_en", "")[:180]) + "…"
+
+        cards.append(
+            f'<div style="background:#0D1525;border:1px solid rgba(201,151,58,0.12);padding:1.5rem">'
+            f'<div style="display:flex;align-items:flex-start;justify-content:space-between;margin-bottom:1rem">'
+            f'<div>'
+            f'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#C9973A;margin-bottom:.4rem">'
+            f'{_esc(p.get("status","active").upper())}</div>'
+            f'<div style="font-family:Georgia,serif;font-size:1rem;font-weight:400;color:#F0EDE8;line-height:1.3">'
+            f'{_esc(p.get("name",""))}</div>'
+            f'</div>'
+            f'<div style="text-align:right;flex-shrink:0;margin-left:1rem">'
+            f'<div style="font-family:Georgia,serif;font-size:1.6rem;color:#C9973A;line-height:1">{score}</div>'
+            f'<div style="font-size:.55rem;color:#6B7280">/100</div>'
+            f'</div></div>'
+            f'<div style="font-size:.7rem;color:#8A8F9E;line-height:1.7;margin-bottom:1rem">{summary}</div>'
+            f'<div style="margin-bottom:1rem">'
+            f'<div style="font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:#6B7280;margin-bottom:.4rem">HOT ZONES</div>'
+            f'{zones_html}</div>'
+            f'<div style="display:flex;align-items:center;justify-content:space-between;'
+            f'padding-top:.8rem;border-top:1px solid rgba(255,255,255,0.04)">'
+            f'<div style="font-size:.62rem;color:#6B7280">{price_range} USD</div>'
+            f'<div style="font-size:.65rem;font-weight:600;letter-spacing:.1em;color:{verdict_color};'
+            f'border:1px solid {verdict_color}33;padding:.25rem .7rem">{verdict_word}</div>'
+            f'</div></div>'
+        )
+
+    grid = (
+        '<section id="lg-research-feed" style="padding:4rem 2.5rem;'
+        'background:#080D1A;border-top:1px solid rgba(255,255,255,0.05)">'
+        '<div style="font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;'
+        'color:#C9973A;margin-bottom:.6rem;display:flex;align-items:center;gap:.6rem">'
+        '<span style="width:18px;height:1px;background:#C9973A;display:inline-block"></span>'
+        'Mega Project Intelligence</div>'
+        '<h2 style="font-family:Georgia,serif;font-size:2.2rem;font-weight:400;'
+        'color:#F0EDE8;margin-bottom:.5rem">'
+        'Marmara Region <em style="font-style:italic;color:#E8C97A">Projects</em></h2>'
+        '<p style="font-size:.78rem;color:#6B7280;line-height:1.8;max-width:500px;margin-bottom:2rem">'
+        'Infrastructure and development projects driving property price movements '
+        'across the Marmara region — tracked and scored by Tradia Research Agent.</p>'
+        '<div style="display:grid;grid-template-columns:repeat(2,1fr);'
+        'gap:1px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.04)">'
+        + "".join(cards)
+        + '</div></section>'
+    )
+    return grid, len(projects)
+
+
 # ── 4 & 5. Inject / replace HTML in target file ───────────────────────────────
 
 def _esc(text: str) -> str:
@@ -272,21 +366,24 @@ def inject_section(html_content: str, section_id: str, new_block: str) -> tuple[
 
 
 def inject_into_site(
-    news_html:     str,
-    property_html: str,
-    feat_files:    list[Path],
-) -> tuple[str, str, int]:
-    """Returns (news_action, property_action, features_processed)."""
+    news_html:      str,
+    property_html:  str,
+    feat_files:     list[Path],
+    research_html:  str = "",
+) -> tuple[str, str, int, str]:
+    """Returns (news_action, property_action, features_processed, research_action)."""
     if not SITE_INDEX.exists():
         raise FileNotFoundError(f"Site index not found: {SITE_INDEX}")
 
     content = SITE_INDEX.read_text(encoding="utf-8")
 
-    news_action = prop_action = "skipped"
+    news_action = prop_action = research_action = "skipped"
     if news_html:
         content, news_action = inject_section(content, "lg-news-feed", news_html)
     if property_html:
         content, prop_action = inject_section(content, "lg-property-feed", property_html)
+    if research_html:
+        content, research_action = inject_section(content, "lg-research-feed", research_html)
 
     feats_done = 0
     for feat_path in feat_files:
@@ -304,7 +401,7 @@ def inject_into_site(
         feats_done += 1
 
     SITE_INDEX.write_text(content, encoding="utf-8")
-    return news_action, prop_action, feats_done
+    return news_action, prop_action, feats_done, research_action
 
 
 # ── 6. Git commit and push ─────────────────────────────────────────────────────
@@ -320,6 +417,13 @@ def git_commit_push(news_count: int, prop_count: int) -> bool:
             capture_output=True,
             text=True,
         )
+
+    _run(["git", "stash"])
+    pull = _run(["git", "pull", "--rebase", "origin", "main"])
+    _run(["git", "stash", "pop"])
+    if pull.returncode != 0:
+        print(f"  ⚠ git pull --rebase failed: {pull.stderr.strip()}")
+        return False
 
     _run(["git", "add", "docs/index.html"])
     commit = _run(["git", "commit", "-m", msg])
@@ -364,13 +468,14 @@ def verify_site() -> dict:
 
 # ── 8. Summary ────────────────────────────────────────────────────────────────
 
-def print_summary(news_n: int, prop_n: int, feat_n: int, git_ok: bool, health: str) -> None:
+def print_summary(news_n: int, prop_n: int, feat_n: int, research_n: int, git_ok: bool, health: str) -> None:
     w = 36
     print("\n" + "=" * w)
     print("LANDGOLD DEPLOY COMPLETE")
     print("=" * w)
     print(f"News items injected:    {news_n}")
     print(f"Properties injected:    {prop_n}")
+    print(f"Research projects:      {research_n}")
     print(f"Features processed:     {feat_n}")
     print(f"Git commit:             {'success' if git_ok else 'failed'}")
     print(f"Site health:            {health}")
@@ -407,14 +512,25 @@ def deploy() -> int:
     if not prop_html:
         print("  ⚠ No property opportunities — skipping property section")
 
+    print("[3b/7] Building research HTML block…")
+    research_html, research_count = build_research_html()
+    if research_html:
+        print(f"  ✓ Research archive: {research_count} projects")
+    else:
+        print("  ⚠ No research data — skipping research section")
+
     # 4+5. Inject into site
     print("[4/7] Injecting sections into site index…")
     try:
-        news_action, prop_action, feat_count = inject_into_site(news_html, prop_html, feat_files)
+        news_action, prop_action, feat_count, research_action = inject_into_site(
+            news_html, prop_html, feat_files, research_html
+        )
         if news_html:
             print(f"  ✓ News section {news_action}")
         if prop_html:
             print(f"  ✓ Property section {prop_action}")
+        if research_html:
+            print(f"  ✓ Research section {research_action}")
     except Exception as exc:
         print(f"  ✗ Inject failed: {exc}")
         return 1
@@ -429,7 +545,7 @@ def deploy() -> int:
     health = health_result.get("health", "unknown")
 
     # 8. Summary
-    print_summary(news_count, prop_count, feat_count, git_ok, health)
+    print_summary(news_count, prop_count, feat_count, research_count, git_ok, health)
     return 0 if git_ok else 1
 
 
