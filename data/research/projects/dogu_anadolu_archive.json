@@ -1,0 +1,85 @@
+{
+  "version": "1.0",
+  "region": "Doğu Anadolu",
+  "last_updated": "2026-05-02",
+  "projects": [
+    {
+      "id": "erzurum-dogu-ekspres",
+      "name": "Erzurum — Doğu Ekspres Turizm ve Kayak Bölgesi",
+      "name_en": "Erzurum — Eastern Express Tourism & Ski Zone",
+      "category": "tourism",
+      "status": "active",
+      "tradia_score": 72,
+      "summary_en": "Erzurum Palandöken ski resort among Turkey's best — 3,176m altitude. Eastern Express train route viral tourism phenomenon driving hospitality investment. Winter sports complex expansion approved.",
+      "summary_ru": "Горнолыжный курорт Паландёкен в Эрзуруме — один из лучших в Турции, высота 3176 м. Туристический феномен поезда Восточный Экспресс стимулирует инвестиции в гостеприимство.",
+      "summary_ar": "منتجع التزلج بالاندوكن في أرضروم — من أفضل المنتجعات في تركيا بارتفاع 3176 م. ظاهرة القطار الشرقي السياحية تدفع الاستثمار في الضيافة.",
+      "summary_tr": "Erzurum Palandöken kayak merkezi Türkiye'nin en iyileri arasında — 3.176m irtifa. Viral turizm fenomeni Doğu Ekspres treni konaklama yatırımını tetikliyor.",
+      "key_events": [
+        {"date": "2019-01", "event_en": "Eastern Express goes viral — 300% booking surge", "price_impact": "+22%"},
+        {"date": "2021-08", "event_en": "Palandöken new gondola — capacity doubled", "price_impact": "+15%"},
+        {"date": "2023-03", "event_en": "Winter Universiade candidate — infrastructure investment", "price_impact": "+18%"},
+        {"date": "2024-11", "event_en": "New boutique hotel zone — 50 licenses issued", "price_impact": "+20%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2018, "min": 180, "max": 320, "note": "Pre-viral"},
+          {"year": 2019, "min": 280, "max": 480, "note": "Viral tourism"},
+          {"year": 2021, "min": 380, "max": 620, "note": "Gondola expansion"},
+          {"year": 2023, "min": 480, "max": 780, "note": "Universiade bid"},
+          {"year": 2026, "min": 560, "max": 900, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Palandöken kayak bölgesi", "district": "Erzurum", "type": "ski_hotel_land", "price_usd_m2": 420, "upside": "+35-50% (3yr)", "risk": "medium"},
+        {"name": "Erzurum merkez", "district": "Erzurum", "type": "boutique_hotel", "price_usd_m2": 280, "upside": "+25-38% (3yr)", "risk": "medium"},
+        {"name": "Aziziye", "district": "Erzurum", "type": "residential", "price_usd_m2": 180, "upside": "+20-30% (3yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Severe winter weather limits construction season",
+        "Tourism seasonal — June-September low occupancy",
+        "Remote location limits buyer pool"
+      ],
+      "tradia_verdict": "WATCH — Palandöken ski hotel land for tourism investors. Long-term hold only. Eastern Express demand sustaining year-round interest."
+    },
+    {
+      "id": "malatya-kayisi-osb",
+      "name": "Malatya — Kayısı ve Gıda İşleme Sanayi",
+      "name_en": "Malatya — Apricot & Food Processing Industrial Zone",
+      "category": "agricultural_industrial",
+      "status": "active",
+      "tradia_score": 68,
+      "summary_en": "Malatya produces 65% of world's dried apricots. Food processing OSB expanding with EU export certification. Industrial land affordable entry point with steady appreciation.",
+      "summary_ru": "Малатья производит 65% мирового объёма сушёного абрикоса. ОИЗ пищевой промышленности расширяется с сертификацией ЕС. Промышленные земли — доступная точка входа со стабильным ростом.",
+      "summary_ar": "ملاطية تنتج 65% من مشمش العالم المجفف. منطقة الصناعات الغذائية الصناعية تتوسع بشهادات التصدير الأوروبية.",
+      "summary_tr": "Malatya dünya kuru kayısısının yüzde 65'ini üretiyor. Gıda işleme OSB'si AB ihracat sertifikasyonuyla genişliyor.",
+      "key_events": [
+        {"date": "2021-06", "event_en": "EU geographic indication — Malatya apricot certified", "price_impact": "+18%"},
+        {"date": "2022-09", "event_en": "OSB Phase 2 — 80 new food processing lots", "price_impact": "+15%"},
+        {"date": "2024-03", "event_en": "Logistics center — 200,000m² cold storage", "price_impact": "+20%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 60, "max": 120, "note": "Baseline"},
+          {"year": 2021, "min": 90, "max": 170, "note": "EU certification"},
+          {"year": 2022, "min": 120, "max": 220, "note": "OSB expansion"},
+          {"year": 2024, "min": 150, "max": 280, "note": "Logistics center"},
+          {"year": 2026, "min": 180, "max": 330, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Malatya OSB", "district": "Malatya", "type": "industrial_land", "price_usd_m2": 95, "upside": "+40-60% (4yr)", "risk": "medium"},
+        {"name": "Battalgazi", "district": "Malatya", "type": "logistics_land", "price_usd_m2": 120, "upside": "+35-50% (4yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Single crop dependency risk",
+        "Climate change affecting apricot production",
+        "Limited international investment interest"
+      ],
+      "tradia_verdict": "WATCH — Niche agricultural industrial play. Suitable for patient domestic capital. Not recommended for international investors seeking liquid exit."
+    }
+  ]
+}

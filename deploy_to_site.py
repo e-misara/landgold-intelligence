@@ -230,7 +230,7 @@ def build_research_html() -> tuple[str, int]:
     )
 
     all_projects: list[dict] = []
-    region_order = ["Marmara", "Ege", "Karadeniz", "İç Anadolu"]
+    region_order = ["Marmara", "Ege", "Karadeniz", "İç Anadolu", "Güneydoğu", "Doğu Anadolu"]
 
     for region in region_order:
         for f in _glob.glob(os.path.join(archive_dir, "*.json")):

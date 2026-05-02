@@ -409,11 +409,12 @@ class ResearchAgent(BaseAgent):
         return float(m.group(1)) if m else 0.0
 
     ARCHIVE_FILES: dict[str, str] = {
-        "marmara":     "marmara_archive.json",
-        "ege":         "ege_archive.json",
-        "karadeniz":   "karadeniz_archive.json",
-        "iç anadolu":  "ic_anadolu_archive.json",
-        "güneydoğu":   "guneydogu_archive.json",
+        "marmara":       "marmara_archive.json",
+        "ege":           "ege_archive.json",
+        "karadeniz":     "karadeniz_archive.json",
+        "iç anadolu":    "ic_anadolu_archive.json",
+        "güneydoğu":     "guneydogu_archive.json",
+        "doğu anadolu":  "dogu_anadolu_archive.json",
     }
 
     def load_archive(self, region: str | None = None) -> dict[str, Any]:
@@ -779,9 +780,12 @@ class ResearchAgent(BaseAgent):
                 "top_opportunity":   report.get("top_opportunity"),
             }
 
+        if action == "dogu_anadolu":
+            return self._research_all_region("Doğu Anadolu")
+
         if action == "all_regions":
             totals: dict[str, Any] = {}
-            for region_action in ("marmara", "ege", "karadeniz", "ic_anadolu", "guneydogu"):
+            for region_action in ("marmara", "ege", "karadeniz", "ic_anadolu", "guneydogu", "dogu_anadolu"):
                 result = self.run_task({"action": region_action})
                 totals[region_action] = result.get("projects_analyzed", 0)
             return {"status": "OK", "regions": totals, "total": sum(totals.values())}
