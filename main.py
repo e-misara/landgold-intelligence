@@ -15,6 +15,7 @@ from agents.news_agent     import NewsAgent
 from agents.property_agent import PropertyAgent
 from agents.outreach_agent import OutreachAgent
 from agents.dev_agent      import DevAgent
+from agents.research_agent import ResearchAgent
 
 colorama_init(autoreset=True)
 
@@ -51,8 +52,9 @@ def _build_system() -> CEOAgent:
     prop     = PropertyAgent()
     outreach = OutreachAgent()
     dev      = DevAgent()
+    research = ResearchAgent()
 
-    for agent in (news, prop, outreach, dev):
+    for agent in (news, prop, outreach, dev, research):
         ceo.register_agent(agent)
 
     return ceo
@@ -73,7 +75,7 @@ def run_agent(agent_name: str, task: str) -> int:
 
     agent = ceo._agents.get(agent_name)
     if agent is None:
-        print(f"Unknown agent: {agent_name!r}. Choose from: news property outreach dev ceo")
+        print(f"Unknown agent: {agent_name!r}. Choose from: news property outreach dev ceo research")
         return 1
 
     result = agent.run_task({"action": task})
@@ -115,6 +117,9 @@ def run_schedule() -> int:
     # Haftalık investor raporu — CEO sentezi, Pazartesi sabahı
     schedule.every().monday.at("07:00").do(_job, "ceo", "investor_report", "Weekly Investor Report")
 
+    # Günlük Marmara mega-proje taraması
+    schedule.every().day.at("10:30").do(_job, "research", "marmara", "Research — Marmara Scan")
+
     W = 36
     next_job  = min(schedule.jobs, key=lambda j: j.next_run)
     next_name = next_job.job_func.args[2]
@@ -127,7 +132,8 @@ def run_schedule() -> int:
     print("Reactive sistem aktif (Katman 1-2-3):")
     print("  Watchdog (crontab, saatlik) → tetikleme varsa Orchestrator")
     print("  Orchestrator → AI karar → gerekli ajanları çalıştırır")
-    print("Sabit schedule (2 iş):")
+    print("Sabit schedule (3 iş):")
+    print("  10:30  Research Agent — Marmara scan")
     print("  11:00  Dev Site Health (günlük, $0)")
     print("  Mon 07:00  Weekly Investor Report")
     print("Manuel: python main.py --agent <news|property|outreach|dev> --task full")
@@ -291,7 +297,7 @@ def run_all_tests() -> int:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="LandGold Intelligence Agent System")
-    parser.add_argument("--agent",    choices=["news", "property", "outreach", "dev", "ceo"],
+    parser.add_argument("--agent",    choices=["news", "property", "outreach", "dev", "ceo", "research"],
                         help="Agent to run")
     parser.add_argument("--task",     default="status_report",
                         help="Task action to execute (default: status_report)")
