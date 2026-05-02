@@ -1,0 +1,166 @@
+{
+  "version": "1.0",
+  "region": "Marmara",
+  "last_updated": "2026-05-02",
+  "projects": [
+    {
+      "id": "kanal-istanbul",
+      "name": "Kanal İstanbul",
+      "status": "planning",
+      "tradia_score": 92,
+      "summary_en": "43km artificial waterway from Küçükçekmece to Black Sea. 4 districts directly affected. Two new cities (500,000 residents) approved in Yenişehir zoning. Project currently in environmental review phase.",
+      "summary_ru": "Искусственный водный путь 43 км от Кючюкчекмедже до Чёрного моря. 4 района под прямым влиянием. Два новых города на 500 000 жителей одобрены в зонировании Йенишехира.",
+      "summary_ar": "ممر مائي اصطناعي 43 كم من كوتشوكشكمجة إلى البحر الأسود. 4 مناطق متأثرة مباشرة. مدينتان جديدتان لـ500,000 ساكن معتمدتان في تقسيم ينيشهير.",
+      "summary_tr": "Küçükçekmece'den Karadeniz'e 43 km'lik yapay su yolu. 4 ilçe doğrudan etkileniyor. Yenişehir imar planında 500.000 nüfuslu iki yeni kent onaylandı.",
+      "key_events": [
+        {"date": "2011-04", "event_tr": "Proje ilk kez kamuoyuna açıklandı", "event_en": "Project first announced publicly", "price_impact": "+15%"},
+        {"date": "2021-06", "event_tr": "ÇED süreci başladı, güzergah kesinleşti", "event_en": "Environmental review started, route confirmed", "price_impact": "+40%"},
+        {"date": "2021-09", "event_tr": "Yenişehir imar planı onaylandı", "event_en": "Yenişehir zoning approved", "price_impact": "+25%"},
+        {"date": "2022-03", "event_tr": "Metro ihalesi açıldı", "event_en": "Metro line tendered", "price_impact": "+15%"},
+        {"date": "2024-01", "event_tr": "Köprü ayakları görünür hale geldi", "event_en": "Bridge foundations visible", "price_impact": "+20%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2011, "min": 8, "max": 12, "note": "Pre-announcement"},
+          {"year": 2016, "min": 25, "max": 45, "note": "Route speculation"},
+          {"year": 2019, "min": 80, "max": 150, "note": "Route confirmed"},
+          {"year": 2021, "min": 180, "max": 280, "note": "ÇED approved"},
+          {"year": 2023, "min": 320, "max": 480, "note": "Zoning updates"},
+          {"year": 2026, "min": 420, "max": 680, "note": "Current — bridge foundations visible"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Sazlıbosna", "district": "Arnavutköy", "type": "land", "price_usd_m2": 130, "upside": "+80-120% (5yr)", "risk": "medium"},
+        {"name": "Dursunköy", "district": "Arnavutköy", "type": "land", "price_usd_m2": 95, "upside": "+60-90% (5yr)", "risk": "medium"},
+        {"name": "Kayabaşı", "district": "Başakşehir", "type": "residential", "price_usd_m2": 850, "upside": "+35-50% (3yr)", "risk": "low"},
+        {"name": "Ispartakule", "district": "Küçükçekmece", "type": "commercial", "price_usd_m2": 1200, "upside": "+25-40% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Project timeline uncertain — political dependency",
+        "Agricultural land requires rezoning approval",
+        "SIT and forest areas excluded from development",
+        "Hisseli (shared) titles require legal due diligence"
+      ],
+      "tradia_verdict": "WATCH — Position now in Ispartakule commercial (low risk, immediate development rights). Monitor Sazlıbosna for rezoning signals."
+    },
+    {
+      "id": "istanbul-havalimani",
+      "name": "İstanbul Havalimanı Gelişim Bölgesi",
+      "status": "active",
+      "tradia_score": 90,
+      "summary_en": "World's busiest airport by flight count (2024). Direct metro connection to city center under construction. 20km development radius showing sustained price growth.",
+      "summary_ru": "Самый загруженный аэропорт мира по числу рейсов (2024). Строится прямое метро до центра города. Зона развития 20 км показывает устойчивый рост цен.",
+      "summary_ar": "أكثر مطارات العالم ازدحاماً بعدد الرحلات (2024). مترو مباشر لوسط المدينة قيد الإنشاء. منطقة تطوير 20 كم تُظهر نمواً مستداماً للأسعار.",
+      "summary_tr": "2024'te uçuş sayısına göre dünyanın en yoğun havalimanı. Şehir merkezine doğrudan metro yapım aşamasında. 20 km'lik gelişim bölgesi istikrarlı fiyat artışı gösteriyor.",
+      "key_events": [
+        {"date": "2018-10", "event_en": "Airport opened Phase 1", "price_impact": "+30%"},
+        {"date": "2019-04", "event_en": "All flights transferred from Atatürk", "price_impact": "+20%"},
+        {"date": "2022-09", "event_en": "100M passenger milestone", "price_impact": "+15%"},
+        {"date": "2024-04", "event_en": "Surpassed Amsterdam — Europe busiest", "price_impact": "+12%"},
+        {"date": "2025-06", "event_en": "Metro line construction 60% complete", "price_impact": "+18%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2016, "min": 80, "max": 140, "note": "Construction phase"},
+          {"year": 2018, "min": 180, "max": 280, "note": "Airport opened"},
+          {"year": 2020, "min": 220, "max": 340, "note": "All flights transferred"},
+          {"year": 2022, "min": 380, "max": 580, "note": "Record passengers"},
+          {"year": 2024, "min": 520, "max": 820, "note": "Europe busiest"},
+          {"year": 2026, "min": 640, "max": 980, "note": "Current — metro under construction"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Bolluca", "district": "Arnavutköy", "type": "land", "price_usd_m2": 220, "upside": "+45-65% (3yr)", "risk": "low"},
+        {"name": "Haraççı", "district": "Arnavutköy", "type": "mixed", "price_usd_m2": 380, "upside": "+35-55% (3yr)", "risk": "low"},
+        {"name": "Taşoluk", "district": "Arnavutköy", "type": "residential", "price_usd_m2": 680, "upside": "+25-35% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Noise pollution concerns in closest zones",
+        "Traffic congestion without metro completion"
+      ],
+      "tradia_verdict": "BUY — Airport corridor consistently outperforms market. Bolluca land parcels strongest risk-adjusted opportunity."
+    },
+    {
+      "id": "canakkale-koprusu",
+      "name": "Çanakkale 1915 Köprüsü Etki Bölgesi",
+      "status": "active",
+      "tradia_score": 81,
+      "summary_en": "World's longest suspension bridge opened March 2022. Connects European and Asian sides of Dardanelles. Transforms Çanakkale, Lapseki and Gelibolu into accessible investment zones.",
+      "summary_ru": "Самый длинный подвесной мост в мире открылся в марте 2022 года. Соединяет европейский и азиатский берега Дарданелл. Превращает Чанаккале, Лапсеки и Гелиболу в доступные инвестиционные зоны.",
+      "summary_ar": "أطول جسر معلق في العالم افتُتح في مارس 2022. يربط الجانبين الأوروبي والآسيوي من الدردنيل. يحوّل جناق قلعة ولبسكي وجيليبولو إلى مناطق استثمارية يسهل الوصول إليها.",
+      "summary_tr": "Mart 2022'de açılan dünyanın en uzun asma köprüsü. Çanakkale Boğazı'nın Avrupa ve Asya yakalarını birleştiriyor. Çanakkale, Lapseki ve Gelibolu'yu erişilebilir yatırım bölgelerine dönüştürüyor.",
+      "key_events": [
+        {"date": "2017-03", "event_en": "Construction started — land prices react", "price_impact": "+35%"},
+        {"date": "2020-01", "event_en": "Bridge towers completed", "price_impact": "+20%"},
+        {"date": "2022-03", "event_en": "Bridge opened to traffic", "price_impact": "+45%"},
+        {"date": "2023-06", "event_en": "Tourism numbers triple in Çanakkale", "price_impact": "+25%"},
+        {"date": "2024-09", "event_en": "Industrial investment zone announced Lapseki", "price_impact": "+30%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2016, "min": 12, "max": 25, "note": "Pre-bridge baseline"},
+          {"year": 2018, "min": 35, "max": 65, "note": "Construction effect"},
+          {"year": 2020, "min": 65, "max": 120, "note": "Towers complete"},
+          {"year": 2022, "min": 140, "max": 260, "note": "Bridge opened"},
+          {"year": 2024, "min": 220, "max": 420, "note": "Tourism + industry"},
+          {"year": 2026, "min": 280, "max": 520, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Lapseki", "district": "Çanakkale", "type": "industrial_land", "price_usd_m2": 85, "upside": "+60-90% (4yr)", "risk": "medium"},
+        {"name": "Gelibolu", "district": "Çanakkale", "type": "tourism_commercial", "price_usd_m2": 140, "upside": "+40-60% (3yr)", "risk": "low"},
+        {"name": "Çanakkale merkez", "district": "Çanakkale", "type": "residential", "price_usd_m2": 380, "upside": "+25-40% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Seasonal tourism dependency",
+        "Limited public transport beyond bridge",
+        "Agricultural land conversion restrictions"
+      ],
+      "tradia_verdict": "WATCH — Lapseki industrial land strongest long-term play. Gelibolu tourism commercial showing immediate momentum."
+    },
+    {
+      "id": "gebze-kocaeli-oiz",
+      "name": "Gebze-Kocaeli Organize Sanayi Genişlemesi",
+      "status": "active",
+      "tradia_score": 83,
+      "summary_en": "Largest industrial zone cluster in Turkey's most industrialized corridor. Foreign direct investment surging — Samsung, Ford, Toyota, Hyundai all operating nearby. Industrial land prices up 400% since 2019.",
+      "summary_ru": "Крупнейший промышленный кластер в наиболее индустриализированном коридоре Турции. Иностранные инвестиции растут — рядом работают Samsung, Ford, Toyota, Hyundai. Цены на промышленные земли выросли на 400% с 2019 года.",
+      "summary_ar": "أكبر تجمع للمناطق الصناعية في أكثر ممرات تركيا صناعية. تتدفق الاستثمارات الأجنبية المباشرة — سامسونج وفورد وتويوتا وهيونداي كلها تعمل في المنطقة. أسعار الأراضي الصناعية ارتفعت 400% منذ 2019.",
+      "summary_tr": "Türkiye'nin en sanayileşmiş koridorundaki en büyük sanayi bölgesi kümesi. Yabancı yatırım artıyor — Samsung, Ford, Toyota, Hyundai yakın çevrede faaliyet gösteriyor. Sanayi arazi fiyatları 2019'dan bu yana yüzde 400 arttı.",
+      "key_events": [
+        {"date": "2019-06", "event_en": "OIZ Phase 4 expansion approved", "price_impact": "+25%"},
+        {"date": "2021-03", "event_en": "Samsung R&D center established", "price_impact": "+18%"},
+        {"date": "2022-11", "event_en": "Free trade zone status extended", "price_impact": "+20%"},
+        {"date": "2024-04", "event_en": "New logistics hub tender — 850,000m²", "price_impact": "+30%"},
+        {"date": "2025-09", "event_en": "Rail connection to port completed", "price_impact": "+22%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 45, "max": 80, "note": "OIZ expansion"},
+          {"year": 2021, "min": 95, "max": 160, "note": "Foreign investment"},
+          {"year": 2022, "min": 140, "max": 230, "note": "Free trade zone"},
+          {"year": 2024, "min": 220, "max": 380, "note": "Logistics hub"},
+          {"year": 2026, "min": 310, "max": 520, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Dilovası", "district": "Gebze", "type": "industrial_land", "price_usd_m2": 180, "upside": "+35-55% (3yr)", "risk": "low"},
+        {"name": "Çayırova", "district": "Gebze", "type": "logistics", "price_usd_m2": 240, "upside": "+30-45% (2yr)", "risk": "low"},
+        {"name": "Gebze merkez", "district": "Gebze", "type": "commercial", "price_usd_m2": 420, "upside": "+20-30% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Environmental regulations tightening",
+        "Labour cost increases affecting industrial demand"
+      ],
+      "tradia_verdict": "BUY — Most liquid industrial market in Marmara. Dilovası industrial land offers strongest entry point."
+    }
+  ]
+}
