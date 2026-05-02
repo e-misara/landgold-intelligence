@@ -111,14 +111,14 @@ def run_schedule() -> int:
     # Ajanlar sadece Orchestrator kararıyla çalışır — burada schedule YOK.
     # Manuel tetikleme: python main.py --agent <name> --task full
 
-    # KORUNAN: DevAgent site health — günlük izleme, API çağrısı yok
-    schedule.every().day.at("11:00").do(_job, "dev", "status_report", "Dev Site Health Check")
-
-    # Haftalık investor raporu — CEO sentezi, Pazartesi sabahı
-    schedule.every().monday.at("07:00").do(_job, "ceo", "investor_report", "Weekly Investor Report")
-
-    # Günlük Marmara mega-proje taraması
-    schedule.every().day.at("10:30").do(_job, "research", "marmara", "Research — Marmara Scan")
+    schedule.every().day.at("08:00").do(_job, "ceo",        "briefing",       "CEO Daily Briefing")
+    schedule.every().day.at("09:00").do(_job, "news",       "full",           "News Full Cycle")
+    schedule.every().day.at("10:00").do(_job, "property",   "full",           "Property Full Cycle")
+    schedule.every().day.at("10:30").do(_job, "research",   "marmara",        "Research — Marmara Scan")
+    schedule.every().day.at("11:00").do(_job, "outreach",   "full",           "Outreach Full Cycle")
+    schedule.every().day.at("12:00").do(_job, "__deploy__", "",               "Deploy → GitHub Pages")
+    schedule.every().day.at("14:00").do(_job, "dev",        "full",           "Dev Full Cycle")
+    schedule.every().monday.at("07:00").do(_job, "ceo",     "investor_report","Weekly Investor Report")
 
     W = 36
     next_job  = min(schedule.jobs, key=lambda j: j.next_run)
@@ -129,13 +129,15 @@ def run_schedule() -> int:
     print("LANDGOLD AGENT SYSTEM — SCHEDULER")
     print("=" * W)
     print(f"Jobs registered: {len(schedule.jobs)}")
-    print("Reactive sistem aktif (Katman 1-2-3):")
-    print("  Watchdog (crontab, saatlik) → tetikleme varsa Orchestrator")
-    print("  Orchestrator → AI karar → gerekli ajanları çalıştırır")
-    print("Sabit schedule (3 iş):")
+    print("Sabit schedule (8 iş):")
+    print("  08:00  CEO briefing")
+    print("  09:00  News Agent — full scan")
+    print("  10:00  Property Agent — full analysis")
     print("  10:30  Research Agent — Marmara scan")
-    print("  11:00  Dev Site Health (günlük, $0)")
-    print("  Mon 07:00  Weekly Investor Report")
+    print("  11:00  Outreach Agent — lead pipeline")
+    print("  12:00  Deploy → GitHub Pages")
+    print("  14:00  Dev Agent — health + features")
+    print("  Mon 07:00  Weekly investor report")
     print("Manuel: python main.py --agent <news|property|outreach|dev> --task full")
     print("=" * W)
     print(f"Next run: {next_name} at {next_time}")
