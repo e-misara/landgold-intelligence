@@ -961,6 +961,24 @@ const IL_TESVIK = {
   "Batman":5,"Mardin":5,"Şanlıurfa":5,"Diyarbakır":5
 };
 
+// Tourism zones per province
+const TURIZM_BY_IL = {
+  "Antalya":       [{ad:"Türk Rivierası",          turist:"15.2M/yıl", getiri:"%12", score:88}],
+  "Muğla":         [{ad:"Ege Lüks Kıyısı",         turist:"8.5M/yıl",  getiri:"%14", score:91}],
+  "İstanbul":      [{ad:"Tarihi Yarımada (UNESCO)", turist:"18.5M/yıl", getiri:"%13", score:86}],
+  "Nevşehir":      [{ad:"Kapadokya",               turist:"3.8M/yıl",  getiri:"%18", score:84}],
+  "İzmir":         [{ad:"Efes-Selçuk (UNESCO)",    turist:"3.2M/yıl",  getiri:"%10", score:78},
+                    {ad:"Çeşme-Alaçatı",           turist:"2.8M/yıl",  getiri:"%11", score:83}],
+  "Denizli":       [{ad:"Pamukkale (UNESCO)",       turist:"2.8M/yıl",  getiri:"%11", score:80}],
+  "Bursa":         [{ad:"Uludağ Kayak",             turist:"2.2M/yıl",  getiri:"%10", score:79}],
+  "Trabzon":       [{ad:"Karadeniz Turizm",         turist:"4.2M/yıl",  getiri:"%9",  score:74}],
+  "Şanlıurfa":     [{ad:"Göbeklitepe (UNESCO)",     turist:"680K/yıl",  getiri:"%9",  score:72}],
+  "Karabük":       [{ad:"Safranbolu (UNESCO)",      turist:"1.2M/yıl",  getiri:"%10", score:74}],
+  "Çanakkale":     [{ad:"Truva (UNESCO)",           turist:"1.8M/yıl",  getiri:"%9",  score:76}],
+  "Afyonkarahisar":[{ad:"Termal Turizm",            turist:"3.2M/yıl",  getiri:"%8",  score:76}],
+  "Adıyaman":      [{ad:"Nemrut (UNESCO)",          turist:"420K/yıl",  getiri:"%8",  score:68}]
+};
+
 // OSB data per province
 const OSB_BY_IL = {
   "İstanbul": [
@@ -1203,6 +1221,27 @@ const OSB_BY_IL = {
       osbHTML='<div style="margin-top:1rem;font-size:.68rem;color:#3A404F;font-style:italic">Bu il için OSB verisi yükleniyor...</div>';
     }
 
+    // Turizm cards
+    const turizmData=TURIZM_BY_IL[provinceName]||[];
+    let turizmHTML='';
+    if(turizmData.length>0){
+      turizmHTML='<div style="margin-top:1rem">'
+        +'<div style="font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;color:#6B7280;margin-bottom:.5rem">TURİZM POTANSİYELİ</div>'
+        +turizmData.map(t=>
+          '<div style="background:#080D1A;border:1px solid rgba(59,130,246,0.2);padding:.65rem .9rem;margin-bottom:2px;display:flex;align-items:center;gap:.8rem">'
+          +'<div style="flex:1">'
+          +'<div style="font-size:.7rem;color:#F0EDE8">'+t.ad+'</div>'
+          +'<div style="font-size:.58rem;color:#6B7280">'+t.turist+' ziyaretçi</div>'
+          +'</div>'
+          +'<div style="text-align:right;flex-shrink:0">'
+          +'<div style="font-size:.65rem;color:#3B82F6;font-weight:600">'+t.getiri+' getiri</div>'
+          +'<div style="font-size:.58rem;color:#C9973A">'+t.score+'/100</div>'
+          +'</div>'
+          +'</div>'
+        ).join('')
+        +'</div>';
+    }
+
     // News items
     const provinceNews=(typeof NEWS_ARCHIVE!=='undefined'?NEWS_ARCHIVE:[])
       .filter(n=>{const pn=normName(n.province||'');return pn===provinceName||n.province===provinceName||provinceName.includes(pn)||pn.includes(provinceName);})
@@ -1251,6 +1290,7 @@ const OSB_BY_IL = {
       :'<p style="font-size:.7rem;color:#6B7280;margin-bottom:1rem;line-height:1.6">Bölge takip ediliyor. Yatırım verileri derleniyor.</p>')
       +tesvikHTML
       +osbHTML
+      +turizmHTML
       +newsHTML
       +'<div style="margin-top:1.5rem;padding-top:1rem;border-top:1px solid rgba(255,255,255,0.05)">'
       +'<button onclick="document.getElementById(\'contact\').scrollIntoView({behavior:\'smooth\'})" style="width:100%;background:#C9973A;color:#080D1A;border:none;padding:.75rem;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;cursor:pointer;font-family:inherit">Bu Bölge İçin Analiz Talep Et →</button>'
