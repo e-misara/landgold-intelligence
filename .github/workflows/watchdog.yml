@@ -1,0 +1,40 @@
+name: Watchdog Hourly
+
+on:
+  schedule:
+    - cron: '0 * * * *'   # Her saat başı
+  workflow_dispatch:       # Manuel tetikleme
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  watch:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Watchdog
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python -m agents.watchdog
+        continue-on-error: true   # tetikleme bulamazsa 0 döner, 2 döner — her ikisi OK
+
+      - name: Commit watchdog log (if any)
+        run: |
+          git config user.name  "Watchdog Bot"
+          git config user.email "bot@landgold.local"
+          git add logs/watchdog/ data/reports/orchestrator/ || true
+          git diff --cached --quiet || git commit -m "[bot] Watchdog $(date -u +%Y-%m-%dT%H:%MZ)"
+          git push || true
