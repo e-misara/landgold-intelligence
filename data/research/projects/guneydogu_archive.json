@@ -1,0 +1,175 @@
+{
+  "version": "1.0",
+  "region": "Güneydoğu",
+  "last_updated": "2026-05-02",
+  "projects": [
+    {
+      "id": "gaziantep-osb-ihracat",
+      "name": "Gaziantep OSB — Tekstil ve İhracat Merkezi",
+      "name_en": "Gaziantep Industrial Zone — Textile & Export Hub",
+      "category": "industrial",
+      "status": "active",
+      "tradia_score": 83,
+      "summary_en": "Turkey's largest organized industrial zone by export volume. Gaziantep OSB exports $22B annually — textiles, food, plastics, chemicals. Strategic position on Middle East trade route. Gulf and European buyer interest growing in industrial land.",
+      "summary_ru": "Крупнейшая организованная промышленная зона Турции по объёму экспорта. Газиантеп ОИЗ экспортирует $22 млрд ежегодно — текстиль, продукты питания, пластик, химия.",
+      "summary_ar": "أكبر منطقة صناعية منظمة في تركيا من حيث حجم الصادرات. تصدّر غازي عنتاب الصناعية 22 مليار دولار سنوياً — نسيج وغذاء وبلاستيك وكيماويات.",
+      "summary_tr": "İhracat hacmine göre Türkiye'nin en büyük organize sanayi bölgesi. Gaziantep OSB yıllık 22 milyar dolar ihracat yapıyor — tekstil, gıda, plastik, kimya.",
+      "key_events": [
+        {"date": "2021-03", "event_en": "Gaziantep OSB Phase 6 — 500 new industrial lots", "price_impact": "+18%"},
+        {"date": "2022-07", "event_en": "Export record $22B — fastest growing Turkish OSB", "price_impact": "+22%"},
+        {"date": "2023-04", "event_en": "Gaziantep airport cargo capacity tripled", "price_impact": "+15%"},
+        {"date": "2023-11", "event_en": "Gulf investment delegation — $2B industrial commitment", "price_impact": "+28%"},
+        {"date": "2024-08", "event_en": "Free zone extension — 10yr tax exemption renewed", "price_impact": "+20%"},
+        {"date": "2025-03", "event_en": "Rail connection to Mersin Port completed", "price_impact": "+18%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 80, "max": 160, "note": "Baseline"},
+          {"year": 2021, "min": 130, "max": 240, "note": "OSB expansion"},
+          {"year": 2022, "min": 180, "max": 320, "note": "Export record"},
+          {"year": 2023, "min": 240, "max": 420, "note": "Gulf investment"},
+          {"year": 2024, "min": 300, "max": 520, "note": "Free zone"},
+          {"year": 2026, "min": 360, "max": 620, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "İslahiye OSB", "district": "Gaziantep", "type": "industrial_land", "price_usd_m2": 180, "upside": "+40-60% (3yr)", "risk": "low"},
+        {"name": "Şehitkamil", "district": "Gaziantep", "type": "commercial", "price_usd_m2": 480, "upside": "+25-35% (2yr)", "risk": "low"},
+        {"name": "Nizip", "district": "Gaziantep", "type": "logistics_land", "price_usd_m2": 120, "upside": "+50-70% (4yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Proximity to Syria border — geopolitical sensitivity",
+        "Single export market concentration risk",
+        "Limited international residential buyer interest"
+      ],
+      "tradia_verdict": "BUY — İslahiye industrial land strongest play. Gulf investors showing sustained interest. Rail-to-port connection adds logistics premium."
+    },
+    {
+      "id": "mersin-serbest-ticaret",
+      "name": "Mersin Serbest Ticaret Bölgesi ve Liman",
+      "name_en": "Mersin Free Trade Zone & Port",
+      "category": "logistics",
+      "status": "active",
+      "tradia_score": 86,
+      "summary_en": "Turkey's largest Mediterranean port handling 2.5M TEU annually. Free trade zone offers 20-year tax exemption. Strategic gateway for Middle East, North Africa and Gulf markets. Industrial and logistics land showing sustained appreciation.",
+      "summary_ru": "Крупнейший средиземноморский порт Турции — 2,5 млн TEU в год. Свободная торговая зона предлагает 20-летнее налоговое освобождение. Стратегические ворота для рынков Ближнего Востока, Северной Африки и Залива.",
+      "summary_ar": "أكبر ميناء متوسطي في تركيا — 2.5 مليون وحدة TEU سنوياً. المنطقة الحرة تقدم إعفاءً ضريبياً لمدة 20 عاماً. بوابة استراتيجية لأسواق الشرق الأوسط وشمال أفريقيا والخليج.",
+      "summary_tr": "Yıllık 2,5 milyon TEU kapasitesiyle Türkiye'nin en büyük Akdeniz limanı. Serbest ticaret bölgesi 20 yıllık vergi muafiyeti sunuyor. Orta Doğu, Kuzey Afrika ve Körfez pazarları için stratejik kapı.",
+      "key_events": [
+        {"date": "2021-06", "event_en": "Port capacity expanded to 2.5M TEU", "price_impact": "+20%"},
+        {"date": "2022-09", "event_en": "Free trade zone — 200 new company licenses", "price_impact": "+18%"},
+        {"date": "2023-04", "event_en": "Mersin-Gaziantep rail freight route activated", "price_impact": "+22%"},
+        {"date": "2024-02", "event_en": "Container terminal Phase 3 — $800M investment", "price_impact": "+25%"},
+        {"date": "2025-07", "event_en": "Mersin ranked top 5 Mediterranean port", "price_impact": "+15%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 120, "max": 220, "note": "Port baseline"},
+          {"year": 2021, "min": 180, "max": 320, "note": "Expansion"},
+          {"year": 2022, "min": 240, "max": 420, "note": "Free zone boom"},
+          {"year": 2023, "min": 300, "max": 520, "note": "Rail connection"},
+          {"year": 2024, "min": 380, "max": 640, "note": "Phase 3"},
+          {"year": 2026, "min": 460, "max": 780, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Serbest Bölge çevresi", "district": "Mersin", "type": "logistics_land", "price_usd_m2": 320, "upside": "+35-50% (3yr)", "risk": "low"},
+        {"name": "Tarsus OSB", "district": "Tarsus", "type": "industrial_land", "price_usd_m2": 180, "upside": "+40-60% (3yr)", "risk": "low"},
+        {"name": "Mezitli", "district": "Mersin", "type": "residential", "price_usd_m2": 680, "upside": "+22-32% (2yr)", "risk": "low"},
+        {"name": "Silifke", "district": "Mersin", "type": "tourism_land", "price_usd_m2": 280, "upside": "+35-50% (4yr)", "risk": "medium"}
+      ],
+      "risk_factors": [
+        "Competition from Iskenderun and Limak ports",
+        "Geopolitical risk — Eastern Mediterranean tensions",
+        "Industrial zoning restrictions near coastal areas"
+      ],
+      "tradia_verdict": "BUY — Free trade zone logistics land strongest opportunity. Tarsus OSB for industrial exposure. Mezitli residential for stable rental yield."
+    },
+    {
+      "id": "gap-sanliurfa-tarim",
+      "name": "GAP Projesi — Şanlıurfa Sulama ve Tarım Dönüşümü",
+      "name_en": "GAP Project — Şanlıurfa Irrigation & Agricultural Transformation",
+      "category": "agricultural_industrial",
+      "status": "active",
+      "tradia_score": 74,
+      "summary_en": "Southeast Anatolia Project (GAP) completing final irrigation phases — transforming 1.8M hectares into productive agricultural land. Şanlıurfa emerging as agri-processing hub. Land prices up 400% since irrigation activated.",
+      "summary_ru": "Проект Юго-Восточной Анатолии (GAP) завершает последние ирригационные фазы — превращая 1,8 млн гектаров в продуктивные сельхозугодья. Шанлыурфа становится центром агропереработки.",
+      "summary_ar": "مشروع جنوب شرق الأناضول (GAP) يكمل مراحل الري الأخيرة — تحويل 1.8 مليون هكتار إلى أراضٍ زراعية منتجة. شانلي أورفا تبرز كمركز لمعالجة المنتجات الزراعية.",
+      "summary_tr": "Güneydoğu Anadolu Projesi (GAP) son sulama aşamalarını tamamlıyor — 1,8 milyon hektarı verimli tarım arazisine dönüştürüyor. Şanlıurfa tarımsal işleme merkezi olarak öne çıkıyor.",
+      "key_events": [
+        {"date": "2020-08", "event_en": "GAP Phase 4 irrigation — 400,000 hectares activated", "price_impact": "+30%"},
+        {"date": "2022-03", "event_en": "Atatürk Dam spillway reconstruction complete", "price_impact": "+15%"},
+        {"date": "2023-07", "event_en": "Şanlıurfa agri-processing OSB — 80 food companies", "price_impact": "+22%"},
+        {"date": "2024-05", "event_en": "GAP final phase — remaining 600,000 hectares", "price_impact": "+25%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2018, "min": 8, "max": 20, "note": "Pre-irrigation"},
+          {"year": 2020, "min": 20, "max": 55, "note": "Phase 4 activated"},
+          {"year": 2022, "min": 45, "max": 110, "note": "OSB established"},
+          {"year": 2024, "min": 80, "max": 180, "note": "Final phase"},
+          {"year": 2026, "min": 100, "max": 220, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Harran Ovası", "district": "Şanlıurfa", "type": "irrigated_agricultural", "price_usd_m2": 35, "upside": "+80-120% (5yr)", "risk": "medium"},
+        {"name": "Şanlıurfa OSB", "district": "Şanlıurfa", "type": "agri_industrial", "price_usd_m2": 120, "upside": "+50-70% (4yr)", "risk": "medium"},
+        {"name": "Birecik", "district": "Şanlıurfa", "type": "agricultural_land", "price_usd_m2": 25, "upside": "+100-150% (6yr)", "risk": "high"}
+      ],
+      "risk_factors": [
+        "Very long investment horizon — 5-10 years minimum",
+        "Water rights complexity",
+        "Remote location — limited exit liquidity",
+        "Political instability risk in border region"
+      ],
+      "tradia_verdict": "WATCH — Patient capital only. Harran Ovası irrigated land for agricultural investors. Not suitable for short-medium term international capital."
+    },
+    {
+      "id": "adana-ceyhan-enerji",
+      "name": "Adana-Ceyhan Enerji ve Petrokimya Koridoru",
+      "name_en": "Adana-Ceyhan Energy & Petrochemical Corridor",
+      "category": "industrial",
+      "status": "active",
+      "tradia_score": 80,
+      "summary_en": "Ceyhan established as Turkey's energy export terminal — BTC pipeline terminus handling 1.2M barrels/day. Petrochemical investment zone expanding. Adana as regional capital showing strong residential demand from energy sector employees.",
+      "summary_ru": "Джейхан утвердился как энергетический экспортный терминал Турции — конечный пункт трубопровода BTC, обрабатывающего 1,2 млн баррелей в день. Зона нефтехимических инвестиций расширяется.",
+      "summary_ar": "جيهان راسخة كمحطة تصدير الطاقة في تركيا — نهاية خط أنابيب BTC بطاقة 1.2 مليون برميل يومياً. منطقة الاستثمار البتروكيماوي تتوسع.",
+      "summary_tr": "Ceyhan Türkiye'nin enerji ihracat terminali olarak konumlandı — günlük 1,2 milyon varil kapasiteli BTC boru hattı son noktası. Petrokimya yatırım bölgesi genişliyor.",
+      "key_events": [
+        {"date": "2021-05", "event_en": "Ceyhan petrochemical zone Phase 2 approved", "price_impact": "+20%"},
+        {"date": "2022-11", "event_en": "STAR Refinery full capacity — 10M ton/year", "price_impact": "+18%"},
+        {"date": "2023-08", "event_en": "Adana metro Line 2 construction started", "price_impact": "+15%"},
+        {"date": "2024-04", "event_en": "New LNG terminal — Ceyhan energy hub expansion", "price_impact": "+22%"}
+      ],
+      "price_data": {
+        "currency": "USD",
+        "unit": "per_m2",
+        "data": [
+          {"year": 2019, "min": 250, "max": 450, "note": "Regional baseline"},
+          {"year": 2021, "min": 360, "max": 640, "note": "Petrochemical zone"},
+          {"year": 2022, "min": 480, "max": 840, "note": "Refinery full cap"},
+          {"year": 2023, "min": 580, "max": 1000, "note": "Metro start"},
+          {"year": 2024, "min": 680, "max": 1180, "note": "LNG terminal"},
+          {"year": 2026, "min": 780, "max": 1350, "note": "Current"}
+        ]
+      },
+      "hot_zones": [
+        {"name": "Ceyhan enerji bölgesi", "district": "Ceyhan", "type": "industrial_land", "price_usd_m2": 280, "upside": "+40-55% (3yr)", "risk": "low"},
+        {"name": "Seyhan", "district": "Adana", "type": "residential", "price_usd_m2": 820, "upside": "+20-30% (2yr)", "risk": "low"},
+        {"name": "Yüreğir", "district": "Adana", "type": "commercial", "price_usd_m2": 650, "upside": "+25-35% (2yr)", "risk": "low"}
+      ],
+      "risk_factors": [
+        "Energy sector dependency — oil price sensitivity",
+        "Industrial pollution concerns near Ceyhan",
+        "Limited international residential demand"
+      ],
+      "tradia_verdict": "WATCH — Ceyhan industrial land for energy sector investors. Seyhan residential solid domestic play. Monitor LNG expansion for BUY signal."
+    }
+  ]
+}

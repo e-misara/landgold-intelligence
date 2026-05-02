@@ -231,6 +231,55 @@ class ResearchAgent(BaseAgent):
             "impact_radius_km": 15,
             "tradia_score":     77,
         },
+        # ── Güneydoğu Region ──────────────────────────────────────────────
+        {
+            "id":               "gaziantep-osb-ihracat",
+            "name":             "Gaziantep OSB İhracat Merkezi",
+            "region":           "Güneydoğu",
+            "category":         "industrial",
+            "districts":        ["Gaziantep", "Nizip", "İslahiye"],
+            "status":           "active",
+            "keywords_tr":      ["gaziantep osb", "gaziantep tekstil", "gaziantep ihracat", "nizip sanayi"],
+            "keywords_en":      ["gaziantep industrial", "gaziantep export", "gaziantep OIZ"],
+            "impact_radius_km": 25,
+            "tradia_score":     83,
+        },
+        {
+            "id":               "mersin-serbest-ticaret",
+            "name":             "Mersin Serbest Ticaret Bölgesi",
+            "region":           "Güneydoğu",
+            "category":         "logistics",
+            "districts":        ["Mersin", "Tarsus", "Silifke"],
+            "status":           "active",
+            "keywords_tr":      ["mersin liman", "mersin serbest bölge", "tarsus osb", "mersin konteyner"],
+            "keywords_en":      ["mersin port", "mersin free trade zone", "mediterranean logistics turkey"],
+            "impact_radius_km": 20,
+            "tradia_score":     86,
+        },
+        {
+            "id":               "gap-sanliurfa-tarim",
+            "name":             "GAP Şanlıurfa Tarım Dönüşümü",
+            "region":           "Güneydoğu",
+            "category":         "agricultural_industrial",
+            "districts":        ["Şanlıurfa", "Harran", "Birecik"],
+            "status":           "active",
+            "keywords_tr":      ["gap projesi", "şanlıurfa sulama", "harran ovası", "güneydoğu tarım"],
+            "keywords_en":      ["GAP project", "sanliurfa irrigation", "southeast anatolia agricultural"],
+            "impact_radius_km": 40,
+            "tradia_score":     74,
+        },
+        {
+            "id":               "adana-ceyhan-enerji",
+            "name":             "Adana-Ceyhan Enerji Koridoru",
+            "region":           "Güneydoğu",
+            "category":         "industrial",
+            "districts":        ["Adana", "Ceyhan", "Seyhan", "Yüreğir"],
+            "status":           "active",
+            "keywords_tr":      ["ceyhan boru hattı", "adana petrokimya", "btc terminali", "ceyhan lng"],
+            "keywords_en":      ["ceyhan pipeline", "adana energy", "BTC terminal turkey", "ceyhan LNG"],
+            "impact_radius_km": 30,
+            "tradia_score":     80,
+        },
         # ── Ege Region ─────────────────────────────────────────────────────
         {
             "id":               "antalya-turizm-kusagi",
@@ -364,6 +413,7 @@ class ResearchAgent(BaseAgent):
         "ege":         "ege_archive.json",
         "karadeniz":   "karadeniz_archive.json",
         "iç anadolu":  "ic_anadolu_archive.json",
+        "güneydoğu":   "guneydogu_archive.json",
     }
 
     def load_archive(self, region: str | None = None) -> dict[str, Any]:
@@ -721,9 +771,17 @@ class ResearchAgent(BaseAgent):
                 "top_opportunity":   report.get("top_opportunity"),
             }
 
+        if action == "guneydogu":
+            report = self._research_all_region("Güneydoğu")
+            return {
+                "status":            "OK",
+                "projects_analyzed": report["projects_analyzed"],
+                "top_opportunity":   report.get("top_opportunity"),
+            }
+
         if action == "all_regions":
             totals: dict[str, Any] = {}
-            for region_action in ("marmara", "ege", "karadeniz", "ic_anadolu"):
+            for region_action in ("marmara", "ege", "karadeniz", "ic_anadolu", "guneydogu"):
                 result = self.run_task({"action": region_action})
                 totals[region_action] = result.get("projects_analyzed", 0)
             return {"status": "OK", "regions": totals, "total": sum(totals.values())}
