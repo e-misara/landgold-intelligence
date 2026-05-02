@@ -2,51 +2,61 @@ name: Watchdog Hourly
 
 on:
   schedule:
-    - cron: '0 * * * *'   # Her saat başı (UTC)
-  workflow_dispatch:       # Manuel tetikleme
-
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  SITE_REPO_PATH: "."
+    - cron: '0 * * * *'
+  workflow_dispatch:
 
 jobs:
   watch:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          fetch-depth: 0   # watchdog'un git log'u kullanabilmesi için
+          fetch-depth: 0
 
-      - uses: actions/setup-python@v5
+      - name: Set up Python
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-          cache: 'pip'
 
       - name: Install dependencies
-        run: pip install -r requirements.txt
-
-      - name: Create .env from secrets
         run: |
+          cd landgold-agents
+          pip install -r requirements.txt
+
+      - name: Create .env file
+        run: |
+          cd landgold-agents
           echo "ANTHROPIC_API_KEY=${{ secrets.ANTHROPIC_API_KEY }}" > .env
-          echo "SITE_REPO_PATH=." >> .env
+          echo "SITE_REPO_PATH=../LandGold" >> .env
           echo "LOG_LEVEL=INFO" >> .env
           echo "DATA_PATH=data" >> .env
 
-      - name: Ensure data directories exist
+      - name: Run news agent
         run: |
-          mkdir -p data/news data/properties data/leads data/reports/orchestrator logs/watchdog
+          cd landgold-agents
+          python main.py --agent news --task full
+        continue-on-error: true
 
-      - name: Run Watchdog
-        id: watchdog
-        run: python -m agents.watchdog
-        continue-on-error: true   # exit 0 = no triggers, exit 2 = triggers — both OK
-
-      - name: Commit agent outputs (if any)
+      - name: Run property agent
         run: |
-          git config user.name  "Watchdog Bot"
-          git config user.email "bot@landgold.local"
-          git add data/ logs/watchdog/ docs/ || true
-          git diff --cached --quiet || git commit -m "[bot] Agent update $(date -u +%Y-%m-%dT%H:%MZ)"
-          git push || true
+          cd landgold-agents
+          python main.py --agent property --task score
+        continue-on-error: true
+
+      - name: Run deploy
+        run: |
+          cd landgold-agents
+          python deploy_to_site.py
+        continue-on-error: true
+
+      - name: Commit and push changes
+        run: |
+          git config --global user.email "bot@tradiaturkey.com"
+          git config --global user.name "Tradia Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "auto: agent update $(date -u +%Y-%m-%dT%H:%M)"
+          git push
+        continue-on-error: true
