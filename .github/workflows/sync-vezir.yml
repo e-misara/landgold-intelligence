@@ -27,7 +27,7 @@ jobs:
       - name: Pull Vezir directives
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
-          GITHUB_TOKEN_VEZIR_READ: ${{ secrets.GITHUB_TOKEN_VEZIR_READ }}
+          GITHUB_TOKEN_VEZIR_READ: ${{ secrets.TOKEN_VEZIR_READ }}
         run: python scripts/pull_directives.py --days 7
 
       - name: Update status
