@@ -12,6 +12,8 @@ from bs4 import BeautifulSoup
 
 from core.config import Config
 from .base_agent import BaseAgent
+from services.heat_calculator import HeatCalculator
+from services.price_projector import PriceProjector
 
 _HEADERS = {
     "User-Agent": (
@@ -113,6 +115,8 @@ class PropertyAgent(BaseAgent):
         self._usd_rate: float | None = None
         self._parcels_analysed: int = 0
         self._llm = anthropic.Anthropic(api_key=Config.ANTHROPIC_API_KEY)
+        self.heat = HeatCalculator()
+        self.proj = PriceProjector()
 
     # ── Currency ───────────────────────────────────────────────────────────
 
@@ -644,6 +648,39 @@ class PropertyAgent(BaseAgent):
             }
 
         return {"status": "UNKNOWN_ACTION", "action": action}
+
+    # ── İlçe istihbarat servisi ────────────────────────────────────────────
+
+    def get_ilce_intel(self, ilce_kodu: str) -> dict:
+        """
+        Bir ilçenin tüm istihbarat verisini topla.
+        Kontrat: docs/havuz/ADIM-2-ISI-PROJEKSIYON-V1.md
+        """
+        from zoneinfo import ZoneInfo
+        TR = ZoneInfo("Europe/Istanbul")
+        try:
+            temp = self.heat.get_temperature(ilce_kodu)
+            proj_3 = self.proj.project(ilce_kodu, 3)
+            proj_12 = self.proj.project(ilce_kodu, 12)
+            events = self.heat.get_active_events(ilce_kodu)
+
+            return {
+                "ilce": ilce_kodu,
+                "isi_son_6_ay": temp["mevcut_isi"],
+                "tarihsel_ortalama": temp["tarihsel_ortalama"],
+                "sicaklik_orani": temp["sicaklik_orani"],
+                "seviye": temp["seviye"],
+                "projeksiyon_3_ay": proj_3,
+                "projeksiyon_12_ay": proj_12,
+                "aktif_olaylar": events,
+                "guncelleme_zamani": datetime.now(TR).isoformat(),
+            }
+        except Exception as e:
+            return {
+                "ilce": ilce_kodu,
+                "hata": str(e),
+                "guncelleme_zamani": datetime.now(TR).isoformat(),
+            }
 
     # ── Legacy stubs (kept for CEO orchestration compatibility) ────────────
 

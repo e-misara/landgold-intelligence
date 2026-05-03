@@ -1,0 +1,29 @@
+# Tradia Makroekonomik Varsayımlar
+# Aylık güncelle: TCMB Beklenti Anketi sonuçlarına göre
+# Son güncelleme: 2026-05-03
+
+inflation:
+  tufe_12_ay_beklenti: 35.0   # %, TCMB Mayıs 2026 anketi
+  guncellenme: "2026-05-03"
+
+# Çarpanlar (kalibrasyon sonrası ince ayarlanacak)
+multipliers:
+  nufus_carpani: 3.0          # Nüfus %1 artışı → talep %3
+  arz_carpani: 0.5            # İnşaat %1 artışı → arz baskısı %0.5
+  havuz_carpani: 0.05         # log(sıcaklık) çarpanı
+
+# Olay etki yüzdeleri
+event_impacts:
+  cok-buyuk: 0.15             # +%15
+  buyuk: 0.08
+  orta: 0.04
+  kucuk: 0.02
+
+# Sıcaklık seviye eşikleri
+temperature_levels:
+  donmus: 0.5
+  soguk: 0.8
+  normal: 1.5
+  sicak: 2.5
+  cok_sicak: 4.0
+  # > 4.0 = patlamis
