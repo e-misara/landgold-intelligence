@@ -712,6 +712,60 @@
       "goc_saldosu": "-4000",
       "medyan_yas": 37.2,
       "universite_sayisi": 2
+    },
+    {
+      "il": "Aydın",
+      "nufus": 1148627,
+      "yogunluk_km2": 97,
+      "buyume_yuzde": 1.2,
+      "goc_saldosu": "+8000",
+      "medyan_yas": 36.2,
+      "universite_sayisi": 3
+    },
+    {
+      "il": "Denizli",
+      "nufus": 1066786,
+      "yogunluk_km2": 81,
+      "buyume_yuzde": 1.1,
+      "goc_saldosu": "+6000",
+      "medyan_yas": 34.4,
+      "universite_sayisi": 2
+    },
+    {
+      "il": "Kahramanmaraş",
+      "nufus": 1177436,
+      "yogunluk_km2": 69,
+      "buyume_yuzde": 0.6,
+      "goc_saldosu": "-3000",
+      "medyan_yas": 28.8,
+      "universite_sayisi": 2
+    },
+    {
+      "il": "Kütahya",
+      "nufus": 576765,
+      "yogunluk_km2": 43,
+      "buyume_yuzde": 0.2,
+      "goc_saldosu": "-2000",
+      "medyan_yas": 34.2,
+      "universite_sayisi": 2
+    },
+    {
+      "il": "Sivas",
+      "nufus": 639333,
+      "yogunluk_km2": 20,
+      "buyume_yuzde": -0.3,
+      "goc_saldosu": "-6000",
+      "medyan_yas": 33.2,
+      "universite_sayisi": 2
+    },
+    {
+      "il": "Van",
+      "nufus": 1136572,
+      "yogunluk_km2": 58,
+      "buyume_yuzde": 1.4,
+      "goc_saldosu": "-8000",
+      "medyan_yas": 21.8,
+      "universite_sayisi": 2
     }
   ]
 }

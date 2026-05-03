@@ -942,6 +942,86 @@
       "istihdam_endeksi": 48,
       "kira_getiri_endeksi": 55,
       "yatirim_cezbediciligi": "B"
+    },
+    {
+      "il": "Aydın",
+      "refah_endeksi": 62,
+      "gelir_endeksi": 62,
+      "egitim_endeksi": 62,
+      "altyapi_endeksi": 66,
+      "istihdam_endeksi": 58,
+      "kira_getiri_endeksi": 68,
+      "yatirim_cezbediciligi": "B"
+    },
+    {
+      "il": "Denizli",
+      "refah_endeksi": 64,
+      "gelir_endeksi": 64,
+      "egitim_endeksi": 62,
+      "altyapi_endeksi": 68,
+      "istihdam_endeksi": 62,
+      "kira_getiri_endeksi": 70,
+      "yatirim_cezbediciligi": "B"
+    },
+    {
+      "il": "Elazığ",
+      "refah_endeksi": 44,
+      "gelir_endeksi": 42,
+      "egitim_endeksi": 46,
+      "altyapi_endeksi": 48,
+      "istihdam_endeksi": 36,
+      "kira_getiri_endeksi": 50,
+      "yatirim_cezbediciligi": "C"
+    },
+    {
+      "il": "Hatay",
+      "refah_endeksi": 50,
+      "gelir_endeksi": 50,
+      "egitim_endeksi": 48,
+      "altyapi_endeksi": 54,
+      "istihdam_endeksi": 44,
+      "kira_getiri_endeksi": 58,
+      "yatirim_cezbediciligi": "B"
+    },
+    {
+      "il": "Kahramanmaraş",
+      "refah_endeksi": 52,
+      "gelir_endeksi": 52,
+      "egitim_endeksi": 48,
+      "altyapi_endeksi": 56,
+      "istihdam_endeksi": 50,
+      "kira_getiri_endeksi": 60,
+      "yatirim_cezbediciligi": "B"
+    },
+    {
+      "il": "Kütahya",
+      "refah_endeksi": 50,
+      "gelir_endeksi": 50,
+      "egitim_endeksi": 52,
+      "altyapi_endeksi": 54,
+      "istihdam_endeksi": 46,
+      "kira_getiri_endeksi": 55,
+      "yatirim_cezbediciligi": "B"
+    },
+    {
+      "il": "Sivas",
+      "refah_endeksi": 46,
+      "gelir_endeksi": 44,
+      "egitim_endeksi": 48,
+      "altyapi_endeksi": 50,
+      "istihdam_endeksi": 38,
+      "kira_getiri_endeksi": 50,
+      "yatirim_cezbediciligi": "C"
+    },
+    {
+      "il": "Van",
+      "refah_endeksi": 36,
+      "gelir_endeksi": 34,
+      "egitim_endeksi": 34,
+      "altyapi_endeksi": 40,
+      "istihdam_endeksi": 26,
+      "kira_getiri_endeksi": 44,
+      "yatirim_cezbediciligi": "C"
     }
   ]
 }
