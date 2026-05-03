@@ -1,0 +1,45 @@
+name: Sync Vezir Status
+
+on:
+  schedule:
+    - cron: "5 * * * *"   # Her saat XX:05'te çalışır (TR = UTC+3)
+  workflow_dispatch:        # Manuel tetikleme
+
+jobs:
+  update-status:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Pull Vezir directives
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GITHUB_TOKEN_VEZIR_READ: ${{ secrets.GITHUB_TOKEN_VEZIR_READ }}
+        run: python scripts/pull_directives.py --days 7
+
+      - name: Update status
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          DATA_PATH: data
+        run: python scripts/update_status.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "tradia-bot"
+          git config user.email "bot@tradiaturkey.com"
+          git add vezir/status.json vezir/signals.jsonl data/directives_inbox/ data/last_directive_processed.txt || true
+          git diff --cached --quiet && echo "nothing to commit" || \
+            git commit -m "status: hourly update [skip ci]" && git push

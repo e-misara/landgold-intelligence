@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "system": {
+    "deploy_status": "live",
+    "last_deploy_at": "2026-05-03T10:03:43+03:00",
+    "last_deploy_url": "https://e-misara.github.io/landgold-intelligence/",
+    "uptime_check": "ok",
+    "errors_24h": 0
+  },
+  "agents": {
+    "news_agent": {
+      "status": "active",
+      "last_run_at": "2026-05-01T16:58:35+03:00",
+      "next_scheduled_at": null,
+      "last_output_count": 20,
+      "errors_7d": 0
+    },
+    "property_agent": {
+      "status": "active",
+      "last_run_at": "2026-05-03T10:03:43+03:00",
+      "data_source": "demo",
+      "real_data_count": 0,
+      "demo_data_count": 13,
+      "errors_7d": 0
+    },
+    "ceo_agent": {
+      "status": "active",
+      "last_brief_at": null,
+      "frequency": "daily"
+    },
+    "outreach_agent": {
+      "status": "active",
+      "last_run_at": "2026-04-30T21:30:59+03:00",
+      "errors_7d": 0
+    },
+    "dev_agent": {
+      "status": "active",
+      "last_run_at": "2026-05-03T14:00:26+03:00",
+      "note": ""
+    },
+    "research_agent": {
+      "status": "active",
+      "last_run_at": null,
+      "errors_7d": 0
+    }
+  },
+  "metrics_7d": {
+    "site_visits": 0,
+    "unique_visitors": 0,
+    "content_published": 20,
+    "leads_captured": 0,
+    "affiliate_clicks": 0,
+    "revenue_usd": 0
+  },
+  "open_issues": [
+    {
+      "id": "P0_property_no_real_data",
+      "priority": "P0",
+      "title": "PropertyAgent gerçek veri kaynağı yok",
+      "opened_at": "2026-05-02",
+      "owner": "tradia",
+      "blocked_by": null
+    }
+  ],
+  "pending_directives": [],
+  "last_directive_id_processed": null,
+  "notes_to_vezir": "",
+  "last_updated": "2026-05-03T16:38:08+03:00"
+}
