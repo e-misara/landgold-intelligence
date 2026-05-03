@@ -9,3 +9,5 @@ __pycache__/
 data/
 landgold.db
 venv/
+vezir/*.tmp
+data/directives_inbox/

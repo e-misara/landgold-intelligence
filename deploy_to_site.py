@@ -17,6 +17,11 @@ load_dotenv()
 from core.config import Config
 from core.logger import configure_root
 
+try:
+    from scripts.append_signal import append_signal as _signal
+except Exception:
+    def _signal(t, **kw): pass
+
 # ── Config ─────────────────────────────────────────────────────────────────────
 
 SITE_REPO_PATH = Path(os.getenv("SITE_REPO_PATH", "../LandGold"))
@@ -623,6 +628,14 @@ def deploy() -> int:
 
     # 8. Summary
     print_summary(news_count, prop_count, feat_count, research_count, git_ok, health)
+    try:
+        _signal("deploy",
+                status="success" if git_ok else "failed",
+                url="https://e-misara.github.io/landgold-intelligence/",
+                news_count=news_count,
+                prop_count=prop_count)
+    except Exception as e:
+        print(f"⚠️  Signal yazılamadı (deploy başarılı): {e}")
     return 0 if git_ok else 1
 
 
