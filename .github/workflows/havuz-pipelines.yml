@@ -1,0 +1,75 @@
+name: Tradia Havuz Pipelines
+
+on:
+  schedule:
+    # Günlük: 02:00 UTC = 05:00 TR
+    - cron: '0 2 * * *'
+    # Haftalık: Pazartesi 23:00 UTC = Salı 02:00 TR
+    - cron: '0 23 * * 1'
+  workflow_dispatch:
+    inputs:
+      pipeline_type:
+        description: 'Pipeline türü'
+        required: true
+        default: 'daily'
+        type: choice
+        options:
+          - daily
+          - weekly
+          - bootstrap
+
+jobs:
+  pipeline:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Bağımlılıkları kur
+        run: pip install -r requirements.txt
+
+      - name: Pipeline türünü belirle
+        id: ptype
+        run: |
+          if [[ "${{ github.event.schedule }}" == "0 2 * * *" ]]; then
+            echo "type=daily" >> $GITHUB_OUTPUT
+          elif [[ "${{ github.event.schedule }}" == "0 23 * * 1" ]]; then
+            echo "type=weekly" >> $GITHUB_OUTPUT
+          else
+            echo "type=${{ inputs.pipeline_type }}" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Günlük pipeline çalıştır
+        if: steps.ptype.outputs.type == 'daily'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/daily_havuz_pipeline.py
+
+      - name: Haftalık pipeline çalıştır
+        if: steps.ptype.outputs.type == 'weekly'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/weekly_bulletin_pipeline.py
+
+      - name: Bootstrap çalıştır (sadece manuel)
+        if: steps.ptype.outputs.type == 'bootstrap'
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: python scripts/bootstrap_havuz.py --dry-run
+
+      - name: Değişiklik varsa commit et
+        run: |
+          git config user.name "tradia-pipeline-bot"
+          git config user.email "tradia-pipeline-bot@users.noreply.github.com"
+          git add data/havuz/ vezir/ data/bultenler/ 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok, commit atlanıyor"
+            exit 0
+          fi
+          git commit -m "pipeline: ${{ steps.ptype.outputs.type }} run [skip ci]"
+          git push
