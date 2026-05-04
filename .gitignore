@@ -6,8 +6,20 @@
 .env
 .venv/
 __pycache__/
-data/
+
+# data/ klasoru: cogu ignore, pipeline ciktilari track
+data/news/
+data/properties/
+data/directives_inbox/
+
+# Pipeline ciktilari ve research dosyalari track edilir
+!data/havuz/
+!data/research/
+!data/bultenler/
+!data/havuz/**
+!data/research/**
+!data/bultenler/**
+
 landgold.db
 venv/
 vezir/*.tmp
-data/directives_inbox/
