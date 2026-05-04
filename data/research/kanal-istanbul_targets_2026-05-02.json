@@ -1,0 +1,29 @@
+[
+  {
+    "type": "Residential Apartment (New Development)",
+    "district": "Arnavutköy",
+    "size_range_m2": "85-130",
+    "price_range_usd": "120,000-220,000",
+    "investment_horizon": "5-8 years",
+    "expected_return_pct": "35-55%",
+    "key_risk": "Project timeline delays may postpone capital appreciation; current neutral sentiment suggests entry is early-stage with execution uncertainty"
+  },
+  {
+    "type": "Commercial Land Plot",
+    "district": "Başakşehir",
+    "size_range_m2": "500-2000",
+    "price_range_usd": "250,000-750,000",
+    "investment_horizon": "6-10 years",
+    "expected_return_pct": "60-90%",
+    "key_risk": "Zoning regulations may shift during planning phase; land liquidity is low if canal route is officially revised or scaled back"
+  },
+  {
+    "type": "Mixed-Use Small Commercial Unit (Shop/Office)",
+    "district": "Küçükçekmece",
+    "size_range_m2": "45-90",
+    "price_range_usd": "95,000-180,000",
+    "investment_horizon": "4-7 years",
+    "expected_return_pct": "25-40%",
+    "key_risk": "Küçükçekmece sits at the canal's southern entry point; environmental impact studies and potential displacement of local businesses could suppress short-term rental yields"
+  }
+]

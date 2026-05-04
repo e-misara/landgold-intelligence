@@ -1,0 +1,118 @@
+{
+  "project_id": "trabzon-gulf-demand",
+  "project_name": "Trabzon Körfez Talebi",
+  "status": "active",
+  "tradia_score": 86,
+  "districts": [
+    "Trabzon",
+    "Akçaabat",
+    "Of"
+  ],
+  "news_items": [
+    {
+      "title": "Uygulamalı mevzuat eğitiminin ikincisi Trabzon’da gerçekleştirildi",
+      "link": "https://bik.gov.tr/kurumsal-haberler/uygulamali-mevzuat-egitiminin-ikincisi-trabzonda-gerceklestirildi/",
+      "published": "Wed, 15 Apr 2026 13:59:09 +0000",
+      "summary": "Basın İlan Kurumu Genel Müdürlüğü tarafından resmî ilan ile reklam yayımlayan basın kuruluşlarına yönelik düzenlenen Bölgesel Uygulamalı Mevzuat Eğitimlerinin ikinci durağı Trabzon oldu.",
+      "project_id": "trabzon-gulf-demand",
+      "source_name": "BİK Resmi İlanlar",
+      "source_url": "https://bik.gov.tr/rss",
+      "fetched_at": "2026-05-03T08:01:00.764428+00:00",
+      "relevance_score": 100,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "long-term",
+        "affected_zones": [
+          "Trabzon"
+        ],
+        "price_signal": "0%",
+        "summary": "A regional applied legislation training event organized by the Press Advertisement Authority was held in Trabzon, with no direct impact on property prices."
+      }
+    },
+    {
+      "title": "Berlin'de yaşayan üç Türk kardeş metropollerde yol güvenliği için yapay zekayla profesyonel çözümler sunuyor",
+      "link": "https://www.aa.com.tr/tr/ekonomi/berlinde-yasayan-uc-turk-kardes-metropollerde-yol-guvenligi-icin-yapay-zekayla-profesyonel-cozumler-sunuyor/3924751",
+      "published": "Sat, 02 May 2026 11:11:47 +0300",
+      "summary": "Berlin doğumlu üç Türk kardeşin 20 yıl önce kurdukları hayal, Almanya’nın yol güvenliği ve lojistik sektöründe parlayan başarı öyküsüne dönüştü.",
+      "project_id": "trabzon-gulf-demand",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-03T08:00:59.769038+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "long-term",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "A news story about three Turkish-German siblings offering AI-based road safety solutions in Berlin has no direct relevance to the Trabzon Körfez Talebi real estate project or property prices in Trabzon."
+      }
+    },
+    {
+      "title": "Bu yaz çok sıcak geçecek",
+      "link": "https://www.hurriyet.com.tr/gundem/bu-yaz-cok-sicak-gececek-43164636",
+      "published": "Sun, 03 May 2026 04:00:00 Z",
+      "summary": "Yüzey sıcaklıklarındaki artışlar nedeniyle bu yıl Türkiye’yi sıcak bir yaz bekliyor. Prof. Dr. Murat Türkeş, bu yıl kuvvetli bir El Nino olasılığına dikkati çekip, “Türkiye’de bu yıl yüksek sıcaklık rekorları kırılma olasılığı söz konusu” dedi.",
+      "project_id": "trabzon-gulf-demand",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:01:01.369887+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Trabzon Merkez",
+          "Ortahisar",
+          "Yomra",
+          "Arsin",
+          "Akçaabat"
+        ],
+        "price_signal": "+0%",
+        "summary": "A forecast of a hot summer in Turkey due to El Niño has no direct impact on property prices in the Trabzon coastal demand market."
+      }
+    },
+    {
+      "title": "İki yaşındaki hastaya milimetrik cerrahi",
+      "link": "https://www.hurriyet.com.tr/gundem/iki-yasindaki-hastaya-milimetrik-cerrahi-43164642",
+      "published": "Sun, 03 May 2026 04:00:00 Z",
+      "summary": "ÇOCUK Cerrahı Prof. Dr. Fatih Akbıyık, iki yaşındaki bir hastanın böbrek üstü bezi tümörünün laparoskopik (kapalı) yöntemle çıkarıldığını açıkladı.",
+      "project_id": "trabzon-gulf-demand",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:01:01.369916+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "+0%",
+        "summary": "A medical news story about a pediatric laparoscopic surgery has no relevance to property prices in the Trabzon Körfez Talebi project."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Uygulamalı mevzuat eğitiminin ikincisi Trabzon’da gerçekleştirildi",
+    "link": "https://bik.gov.tr/kurumsal-haberler/uygulamali-mevzuat-egitiminin-ikincisi-trabzonda-gerceklestirildi/",
+    "published": "Wed, 15 Apr 2026 13:59:09 +0000",
+    "summary": "Basın İlan Kurumu Genel Müdürlüğü tarafından resmî ilan ile reklam yayımlayan basın kuruluşlarına yönelik düzenlenen Bölgesel Uygulamalı Mevzuat Eğitimlerinin ikinci durağı Trabzon oldu.",
+    "project_id": "trabzon-gulf-demand",
+    "source_name": "BİK Resmi İlanlar",
+    "source_url": "https://bik.gov.tr/rss",
+    "fetched_at": "2026-05-03T08:01:00.764428+00:00",
+    "relevance_score": 100,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "long-term",
+      "affected_zones": [
+        "Trabzon"
+      ],
+      "price_signal": "0%",
+      "summary": "A regional applied legislation training event organized by the Press Advertisement Authority was held in Trabzon, with no direct impact on property prices."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:01:13.584330+00:00"
+}

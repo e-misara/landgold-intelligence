@@ -1,0 +1,122 @@
+{
+  "project_id": "gebze-kocaeli-oiz",
+  "project_name": "Gebze-Kocaeli Organize Sanayi Genişlemesi",
+  "status": "active",
+  "tradia_score": 83,
+  "districts": [
+    "Gebze",
+    "Dilovası",
+    "Darıca",
+    "Çayırova"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "gebze-kocaeli-oiz",
+    "name": "Gebze-Kocaeli Organize Sanayi Genişlemesi",
+    "status": "active",
+    "tradia_score": 83,
+    "summary_en": "Largest industrial zone cluster in Turkey's most industrialized corridor. Foreign direct investment surging — Samsung, Ford, Toyota, Hyundai all operating nearby. Industrial land prices up 400% since 2019.",
+    "summary_ru": "Крупнейший промышленный кластер в наиболее индустриализированном коридоре Турции. Иностранные инвестиции растут — рядом работают Samsung, Ford, Toyota, Hyundai. Цены на промышленные земли выросли на 400% с 2019 года.",
+    "summary_ar": "أكبر تجمع للمناطق الصناعية في أكثر ممرات تركيا صناعية. تتدفق الاستثمارات الأجنبية المباشرة — سامسونج وفورد وتويوتا وهيونداي كلها تعمل في المنطقة. أسعار الأراضي الصناعية ارتفعت 400% منذ 2019.",
+    "summary_tr": "Türkiye'nin en sanayileşmiş koridorundaki en büyük sanayi bölgesi kümesi. Yabancı yatırım artıyor — Samsung, Ford, Toyota, Hyundai yakın çevrede faaliyet gösteriyor. Sanayi arazi fiyatları 2019'dan bu yana yüzde 400 arttı.",
+    "key_events": [
+      {
+        "date": "2019-06",
+        "event_en": "OIZ Phase 4 expansion approved",
+        "price_impact": "+25%"
+      },
+      {
+        "date": "2021-03",
+        "event_en": "Samsung R&D center established",
+        "price_impact": "+18%"
+      },
+      {
+        "date": "2022-11",
+        "event_en": "Free trade zone status extended",
+        "price_impact": "+20%"
+      },
+      {
+        "date": "2024-04",
+        "event_en": "New logistics hub tender — 850,000m²",
+        "price_impact": "+30%"
+      },
+      {
+        "date": "2025-09",
+        "event_en": "Rail connection to port completed",
+        "price_impact": "+22%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2019,
+          "min": 45,
+          "max": 80,
+          "note": "OIZ expansion"
+        },
+        {
+          "year": 2021,
+          "min": 95,
+          "max": 160,
+          "note": "Foreign investment"
+        },
+        {
+          "year": 2022,
+          "min": 140,
+          "max": 230,
+          "note": "Free trade zone"
+        },
+        {
+          "year": 2024,
+          "min": 220,
+          "max": 380,
+          "note": "Logistics hub"
+        },
+        {
+          "year": 2026,
+          "min": 310,
+          "max": 520,
+          "note": "Current"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Dilovası",
+        "district": "Gebze",
+        "type": "industrial_land",
+        "price_usd_m2": 180,
+        "upside": "+35-55% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Çayırova",
+        "district": "Gebze",
+        "type": "logistics",
+        "price_usd_m2": 240,
+        "upside": "+30-45% (2yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Gebze merkez",
+        "district": "Gebze",
+        "type": "commercial",
+        "price_usd_m2": 420,
+        "upside": "+20-30% (2yr)",
+        "risk": "low"
+      }
+    ],
+    "risk_factors": [
+      "Environmental regulations tightening",
+      "Labour cost increases affecting industrial demand"
+    ],
+    "tradia_verdict": "BUY — Most liquid industrial market in Marmara. Dilovası industrial land offers strongest entry point."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-03T07:31:30.068968+00:00"
+}

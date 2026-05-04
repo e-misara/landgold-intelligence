@@ -1,0 +1,61 @@
+{
+  "project_id": "kuzey-marmara-otoyolu",
+  "project_name": "Kuzey Marmara Otoyolu",
+  "status": "active",
+  "tradia_score": 85,
+  "districts": [
+    "Arnavutköy",
+    "Çatalca",
+    "Silivri",
+    "Kırklareli"
+  ],
+  "news_items": [
+    {
+      "title": "Yola dökülen vidalar trafiği felç etti! Polis ve esnaf seferber oldu",
+      "link": "https://www.hurriyet.com.tr/gundem/yola-dokulen-vidalar-trafigi-felc-etti-polis-ve-esnaf-seferber-oldu-43164256",
+      "published": "Sat, 02 May 2026 10:36:00 Z",
+      "summary": "Silivri’de inşaat malzemesi taşıyan bir kamyondan yola dökülen vidalar nedeniyle trafikte aksama yaşandı. Yaklaşık 4 kilometrelik alana yayılan vidalar nedeniyle çok sayıda aracın lastiği patlarken, D-100 kara yolunda uzun araç kuyrukları oluştu. Yoldaki vidalar; trafik polisleri, karayolları ekipleri ve çevredeki esnaf tarafından el birliğiyle toplandı",
+      "project_id": "kuzey-marmara-otoyolu",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-02T20:05:13.945274+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Silivri",
+          "D-100 Karayolu"
+        ],
+        "price_signal": "0%",
+        "summary": "Screws spilled from a construction truck on the D-100 highway in Silivri caused temporary traffic disruption with multiple flat tires, but the incident was resolved by police, road crews, and local tradespeople with no lasting impact on property values."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Yola dökülen vidalar trafiği felç etti! Polis ve esnaf seferber oldu",
+    "link": "https://www.hurriyet.com.tr/gundem/yola-dokulen-vidalar-trafigi-felc-etti-polis-ve-esnaf-seferber-oldu-43164256",
+    "published": "Sat, 02 May 2026 10:36:00 Z",
+    "summary": "Silivri’de inşaat malzemesi taşıyan bir kamyondan yola dökülen vidalar nedeniyle trafikte aksama yaşandı. Yaklaşık 4 kilometrelik alana yayılan vidalar nedeniyle çok sayıda aracın lastiği patlarken, D-100 kara yolunda uzun araç kuyrukları oluştu. Yoldaki vidalar; trafik polisleri, karayolları ekipleri ve çevredeki esnaf tarafından el birliğiyle toplandı",
+    "project_id": "kuzey-marmara-otoyolu",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-02T20:05:13.945274+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Silivri",
+        "D-100 Karayolu"
+      ],
+      "price_signal": "0%",
+      "summary": "Screws spilled from a construction truck on the D-100 highway in Silivri caused temporary traffic disruption with multiple flat tires, but the incident was resolved by police, road crews, and local tradespeople with no lasting impact on property values."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-02T20:05:19.858198+00:00"
+}

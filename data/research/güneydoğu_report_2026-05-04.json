@@ -1,0 +1,318 @@
+{
+  "date": "2026-05-04",
+  "region": "Güneydoğu",
+  "projects_analyzed": 4,
+  "top_opportunity": {
+    "project_id": "mersin-serbest-ticaret",
+    "project_name": "Mersin Serbest Ticaret Bölgesi",
+    "tradia_score": 86,
+    "sentiment": "positive",
+    "price_signal": 2.0
+  },
+  "projects": [
+    {
+      "project_id": "gaziantep-osb-ihracat",
+      "project_name": "Gaziantep OSB İhracat Merkezi",
+      "status": "active",
+      "tradia_score": 83,
+      "districts": [
+        "Gaziantep",
+        "Nizip",
+        "İslahiye"
+      ],
+      "news_items": [
+        {
+          "title": "Gaziantep ve Şanlıurfa'da \"süper hücre\" fırtınası... Bir ölü, 40 yaralı!",
+          "link": "https://www.hurriyet.com.tr/gundem/gaziantepte-super-hucre-firtinasi-catilar-uctu-dereler-tasti-43165276",
+          "published": "Sun, 03 May 2026 16:38:00 Z",
+          "summary": "Gaziantep ve Şanlıurfa kent genelinde \"süper hücre\" fırtınası etkili oldu. Aynı anda bastıran yağmur, dolu, hortum ve fırtına sonrası çatılar uçtu, dereler taştı, ağaçlar kökünden söküldü. Gaziantep, Şanlıurfa ve Afyonkarahisar'da hasar gören okullar ve kar yağışı nedeniyle bazı ilçelerde eğitime 1 gün ara verildi. Şanlıurfa Valiliği, kent genelinde etkili olan fırtınada 1 kişinin hayatını kaybettiğini, 40 kişinin de yaralandığını açıkladı.",
+          "project_id": "gaziantep-osb-ihracat",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:15:48.533548+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Gaziantep geneli",
+              "Şanlıurfa geneli",
+              "Gaziantep OSB"
+            ],
+            "price_signal": "-3%",
+            "summary": "A severe supercell storm caused widespread structural damage, flooding, and casualties across Gaziantep and Şanlıurfa, negatively impacting property values in affected areas including the OSB export center zone."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Gaziantep ve Şanlıurfa'da \"süper hücre\" fırtınası... Bir ölü, 40 yaralı!",
+        "link": "https://www.hurriyet.com.tr/gundem/gaziantepte-super-hucre-firtinasi-catilar-uctu-dereler-tasti-43165276",
+        "published": "Sun, 03 May 2026 16:38:00 Z",
+        "summary": "Gaziantep ve Şanlıurfa kent genelinde \"süper hücre\" fırtınası etkili oldu. Aynı anda bastıran yağmur, dolu, hortum ve fırtına sonrası çatılar uçtu, dereler taştı, ağaçlar kökünden söküldü. Gaziantep, Şanlıurfa ve Afyonkarahisar'da hasar gören okullar ve kar yağışı nedeniyle bazı ilçelerde eğitime 1 gün ara verildi. Şanlıurfa Valiliği, kent genelinde etkili olan fırtınada 1 kişinin hayatını kaybettiğini, 40 kişinin de yaralandığını açıkladı.",
+        "project_id": "gaziantep-osb-ihracat",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-04T09:15:48.533548+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "negative",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Gaziantep geneli",
+            "Şanlıurfa geneli",
+            "Gaziantep OSB"
+          ],
+          "price_signal": "-3%",
+          "summary": "A severe supercell storm caused widespread structural damage, flooding, and casualties across Gaziantep and Şanlıurfa, negatively impacting property values in affected areas including the OSB export center zone."
+        }
+      },
+      "overall_sentiment": "negative",
+      "price_signal_avg": -3.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:15:54.506719+00:00"
+    },
+    {
+      "project_id": "mersin-serbest-ticaret",
+      "project_name": "Mersin Serbest Ticaret Bölgesi",
+      "status": "active",
+      "tradia_score": 86,
+      "districts": [
+        "Mersin",
+        "Tarsus",
+        "Silifke"
+      ],
+      "news_items": [
+        {
+          "title": "Yapay zeka destekli topraksız serada üretilen beyaz çilek 5 ülkeye ihraç ediliyor",
+          "link": "https://www.aa.com.tr/tr/ekonomi/yapay-zeka-destekli-topraksiz-serada-uretilen-beyaz-cilek-5-ulkeye-ihrac-ediliyor/3925504",
+          "published": "Sun, 03 May 2026 12:24:45 +0300",
+          "summary": "Mersin'in Tarsus ilçesinde ziraat mühendisi ve yazılım mühendisi iki kardeş tarafından kurulan yapay zeka destekli topraksız serada yetiştirilen beyaz çilekler, iç piyasanın yanı sıra yurt dışına da gönderiliyor.",
+          "project_id": "mersin-serbest-ticaret",
+          "source_name": "AA Ekonomi",
+          "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+          "fetched_at": "2026-05-04T09:15:54.674057+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "medium",
+            "affected_zones": [
+              "Tarsus",
+              "Mersin"
+            ],
+            "price_signal": "+2%",
+            "summary": "AI-supported soilless greenhouse technology in Tarsus producing white strawberries exported to 5 countries signals growing agricultural innovation and economic activity that may modestly boost local property values."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Yapay zeka destekli topraksız serada üretilen beyaz çilek 5 ülkeye ihraç ediliyor",
+        "link": "https://www.aa.com.tr/tr/ekonomi/yapay-zeka-destekli-topraksiz-serada-uretilen-beyaz-cilek-5-ulkeye-ihrac-ediliyor/3925504",
+        "published": "Sun, 03 May 2026 12:24:45 +0300",
+        "summary": "Mersin'in Tarsus ilçesinde ziraat mühendisi ve yazılım mühendisi iki kardeş tarafından kurulan yapay zeka destekli topraksız serada yetiştirilen beyaz çilekler, iç piyasanın yanı sıra yurt dışına da gönderiliyor.",
+        "project_id": "mersin-serbest-ticaret",
+        "source_name": "AA Ekonomi",
+        "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+        "fetched_at": "2026-05-04T09:15:54.674057+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "positive",
+          "urgency": "medium",
+          "affected_zones": [
+            "Tarsus",
+            "Mersin"
+          ],
+          "price_signal": "+2%",
+          "summary": "AI-supported soilless greenhouse technology in Tarsus producing white strawberries exported to 5 countries signals growing agricultural innovation and economic activity that may modestly boost local property values."
+        }
+      },
+      "overall_sentiment": "positive",
+      "price_signal_avg": 2.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:16:01.058203+00:00"
+    },
+    {
+      "project_id": "gap-sanliurfa-tarim",
+      "project_name": "GAP Şanlıurfa Tarım Dönüşümü",
+      "status": "active",
+      "tradia_score": 74,
+      "districts": [
+        "Şanlıurfa",
+        "Harran",
+        "Birecik"
+      ],
+      "news_items": [
+        {
+          "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+          "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+          "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+          "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+          "project_id": "gap-sanliurfa-tarim",
+          "source_name": "BİK Resmi İlanlar",
+          "source_url": "https://bik.gov.tr/rss",
+          "fetched_at": "2026-05-04T09:16:01.985316+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Şanlıurfa Merkez"
+            ],
+            "price_signal": "+0%",
+            "summary": "A courtesy visit by the Press Advertising Authority management to the Şanlıurfa Governor has no direct impact on property prices in the region."
+          }
+        },
+        {
+          "title": "Şanlıurfa'da sağanak ve dolu: 12 yaralı",
+          "link": "https://www.hurriyet.com.tr/gundem/sanliurfada-saganak-ve-dolu-12-yarali-43165284",
+          "published": "Sun, 03 May 2026 16:48:00 Z",
+          "summary": "Şanlıurfa'nın Birecik ilçesinde dolu yağışı ve fırtına, günlük yaşamı olumsuz etkiledi. Birecik Köprüsü’nde bir kamyonetin devrildiği fırtınada duba restoranların halatları koptu, bir caminin minaresi yıkıldı, ağaçlar araçların üzerine devrildi. Hava muhalefetinden kaynaklı olumsuzluklarda 12 kişi yaralandı.",
+          "project_id": "gap-sanliurfa-tarim",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:16:02.430076+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Birecik",
+              "Birecik Köprüsü"
+            ],
+            "price_signal": "-2%",
+            "summary": "A severe hailstorm and storm in Birecik district of Şanlıurfa caused significant infrastructure damage, injuring 12 people and disrupting daily life."
+          }
+        },
+        {
+          "title": "Gaziantep ve Şanlıurfa'da \"süper hücre\" fırtınası... Bir ölü, 40 yaralı!",
+          "link": "https://www.hurriyet.com.tr/gundem/gaziantepte-super-hucre-firtinasi-catilar-uctu-dereler-tasti-43165276",
+          "published": "Sun, 03 May 2026 16:38:00 Z",
+          "summary": "Gaziantep ve Şanlıurfa kent genelinde \"süper hücre\" fırtınası etkili oldu. Aynı anda bastıran yağmur, dolu, hortum ve fırtına sonrası çatılar uçtu, dereler taştı, ağaçlar kökünden söküldü. Gaziantep, Şanlıurfa ve Afyonkarahisar'da hasar gören okullar ve kar yağışı nedeniyle bazı ilçelerde eğitime 1 gün ara verildi. Şanlıurfa Valiliği, kent genelinde etkili olan fırtınada 1 kişinin hayatını kaybettiğini, 40 kişinin de yaralandığını açıkladı.",
+          "project_id": "gap-sanliurfa-tarim",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:16:02.430090+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Şanlıurfa Merkez",
+              "Gaziantep Merkez",
+              "Şanlıurfa geneli",
+              "Gaziantep geneli"
+            ],
+            "price_signal": "-3%",
+            "summary": "A severe supercell storm caused widespread destruction across Şanlıurfa and Gaziantep, resulting in one death, 40 injuries, roof collapses, flooding, and school closures, negatively impacting short-term property values in affected districts."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+        "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+        "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+        "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+        "project_id": "gap-sanliurfa-tarim",
+        "source_name": "BİK Resmi İlanlar",
+        "source_url": "https://bik.gov.tr/rss",
+        "fetched_at": "2026-05-04T09:16:01.985316+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Şanlıurfa Merkez"
+          ],
+          "price_signal": "+0%",
+          "summary": "A courtesy visit by the Press Advertising Authority management to the Şanlıurfa Governor has no direct impact on property prices in the region."
+        }
+      },
+      "overall_sentiment": "negative",
+      "price_signal_avg": -1.7,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:16:12.628232+00:00"
+    },
+    {
+      "project_id": "adana-ceyhan-enerji",
+      "project_name": "Adana-Ceyhan Enerji Koridoru",
+      "status": "active",
+      "tradia_score": 80,
+      "districts": [
+        "Adana",
+        "Ceyhan",
+        "Seyhan",
+        "Yüreğir"
+      ],
+      "news_items": [
+        {
+          "title": "İzmir'deki görüntüler büyük tepki toplamıştı: Bir benzer olay da Adana'da yaşandı",
+          "link": "https://www.hurriyet.com.tr/gundem/izmirdeki-goruntuler-buyuk-tepki-toplamisti-bin-benzer-olay-da-adanada-yasandi-43165651",
+          "published": "Mon, 04 May 2026 08:31:00 Z",
+          "summary": "Geçtiğimiz günlerde 2 çocuğun yerde yatan yaşlı adamla dalga geçip yüzüne tekme atarak o anları kayda alması sosyal medyayı ayağa kaldırmıştı. Bir çocuk vakası da Adana'da yaşandı. Sokaklarda yaşayan Aziz Coşkun (52), tartıştığı kimliği belirsiz 3 çocuk tarafından darbedildi. Olay, güvenlik kamerasına yansıdı.",
+          "project_id": "adana-ceyhan-enerji",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:16:14.197666+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Adana"
+            ],
+            "price_signal": "0%",
+            "summary": "A social incident involving children assaulting a homeless man in Adana has no direct relevance to the Adana-Ceyhan Enerji Koridoru project or property prices."
+          }
+        },
+        {
+          "title": "Adana'daki DEAŞ operasyonunda 5 tutuklama kararı",
+          "link": "https://www.hurriyet.com.tr/gundem/adanadaki-deas-operasyonunda-5-tutuklama-karari-41748970",
+          "published": "Thu, 25 Feb 2021 06:48:44 Z",
+          "summary": "ADANA’da terör örgütü DEAŞ’a yönelik operasyonda gözaltına alınan 9 şüpheliden 5’i tutuklandı, 1’i adli kontrol şartıyla, 4 kişi serbest bırakıldı. Şüphelilerden Muhammed Velid A.’nın (24), örgütün eğitim yapılanması içinde Arapça Dili ve Edebiyatı öğretmenliği yaptığı ve 100 dolar maaş aldığı, Abdurrahman Raad B.’nin (22) ise babasının Irak’ta sözde zekat divanı başkanı olduğu ortaya çıktı.",
+          "project_id": "adana-ceyhan-enerji",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:16:14.198171+00:00",
+          "relevance_score": 10,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Adana",
+              "Merkez"
+            ],
+            "price_signal": "-2%",
+            "summary": "A counter-terrorism operation against ISIS in Adana resulting in 5 arrests creates short-term security concerns that may negatively impact local property prices."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "İzmir'deki görüntüler büyük tepki toplamıştı: Bir benzer olay da Adana'da yaşandı",
+        "link": "https://www.hurriyet.com.tr/gundem/izmirdeki-goruntuler-buyuk-tepki-toplamisti-bin-benzer-olay-da-adanada-yasandi-43165651",
+        "published": "Mon, 04 May 2026 08:31:00 Z",
+        "summary": "Geçtiğimiz günlerde 2 çocuğun yerde yatan yaşlı adamla dalga geçip yüzüne tekme atarak o anları kayda alması sosyal medyayı ayağa kaldırmıştı. Bir çocuk vakası da Adana'da yaşandı. Sokaklarda yaşayan Aziz Coşkun (52), tartıştığı kimliği belirsiz 3 çocuk tarafından darbedildi. Olay, güvenlik kamerasına yansıdı.",
+        "project_id": "adana-ceyhan-enerji",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-04T09:16:14.197666+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Adana"
+          ],
+          "price_signal": "0%",
+          "summary": "A social incident involving children assaulting a homeless man in Adana has no direct relevance to the Adana-Ceyhan Enerji Koridoru project or property prices."
+        }
+      },
+      "overall_sentiment": "negative",
+      "price_signal_avg": -1.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:16:20.922648+00:00"
+    }
+  ]
+}

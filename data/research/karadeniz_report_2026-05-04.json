@@ -1,0 +1,202 @@
+{
+  "date": "2026-05-04",
+  "region": "Karadeniz",
+  "projects_analyzed": 3,
+  "top_opportunity": {
+    "project_id": "trabzon-gulf-demand",
+    "project_name": "Trabzon Körfez Talebi",
+    "tradia_score": 86,
+    "sentiment": "neutral",
+    "price_signal": 0.0
+  },
+  "projects": [
+    {
+      "project_id": "trabzon-gulf-demand",
+      "project_name": "Trabzon Körfez Talebi",
+      "status": "active",
+      "tradia_score": 86,
+      "districts": [
+        "Trabzon",
+        "Akçaabat",
+        "Of"
+      ],
+      "news_items": [
+        {
+          "title": "Uygulamalı mevzuat eğitiminin ikincisi Trabzon’da gerçekleştirildi",
+          "link": "https://bik.gov.tr/kurumsal-haberler/uygulamali-mevzuat-egitiminin-ikincisi-trabzonda-gerceklestirildi/",
+          "published": "Wed, 15 Apr 2026 13:59:09 +0000",
+          "summary": "Basın İlan Kurumu Genel Müdürlüğü tarafından resmî ilan ile reklam yayımlayan basın kuruluşlarına yönelik düzenlenen Bölgesel Uygulamalı Mevzuat Eğitimlerinin ikinci durağı Trabzon oldu.",
+          "project_id": "trabzon-gulf-demand",
+          "source_name": "BİK Resmi İlanlar",
+          "source_url": "https://bik.gov.tr/rss",
+          "fetched_at": "2026-05-04T09:15:06.854484+00:00",
+          "relevance_score": 100,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "long-term",
+            "affected_zones": [],
+            "price_signal": "0%",
+            "summary": "A regional applied legislation training event for press organizations was held in Trabzon, with no direct relevance to property prices."
+          }
+        },
+        {
+          "title": "Alt geçit suyla doldu; mahsur kalan TIR şoförünü itfaiyeciler kurtardı",
+          "link": "https://www.hurriyet.com.tr/gundem/alt-gecit-suyla-doldu-mahsur-kalan-tir-soforunu-itfaiyeciler-kurtardi-43165667",
+          "published": "Mon, 04 May 2026 08:46:51 Z",
+          "summary": "Kocaeli’nin Başiskele ilçesinde, sağanak nedeniyle derenin taşması sonucu suyla dolan alt geçitte TIR’ın içerisinde mahsur kalan şoför, itfaiyeciler tarafından kurtarıldı.",
+          "project_id": "trabzon-gulf-demand",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:15:07.428781+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Başiskele"
+            ],
+            "price_signal": "0%",
+            "summary": "A TIR driver was rescued by firefighters after becoming trapped in a flooded underpass in Başiskele, Kocaeli, due to heavy rainfall causing a stream to overflow — unrelated to Trabzon Körfez Talebi project."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Uygulamalı mevzuat eğitiminin ikincisi Trabzon’da gerçekleştirildi",
+        "link": "https://bik.gov.tr/kurumsal-haberler/uygulamali-mevzuat-egitiminin-ikincisi-trabzonda-gerceklestirildi/",
+        "published": "Wed, 15 Apr 2026 13:59:09 +0000",
+        "summary": "Basın İlan Kurumu Genel Müdürlüğü tarafından resmî ilan ile reklam yayımlayan basın kuruluşlarına yönelik düzenlenen Bölgesel Uygulamalı Mevzuat Eğitimlerinin ikinci durağı Trabzon oldu.",
+        "project_id": "trabzon-gulf-demand",
+        "source_name": "BİK Resmi İlanlar",
+        "source_url": "https://bik.gov.tr/rss",
+        "fetched_at": "2026-05-04T09:15:06.854484+00:00",
+        "relevance_score": 100,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "long-term",
+          "affected_zones": [],
+          "price_signal": "0%",
+          "summary": "A regional applied legislation training event for press organizations was held in Trabzon, with no direct relevance to property prices."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:15:15.593359+00:00"
+    },
+    {
+      "project_id": "samsun-karadeniz-hub",
+      "project_name": "Samsun Lojistik Merkezi",
+      "status": "active",
+      "tradia_score": 78,
+      "districts": [
+        "Samsun",
+        "Tekkeköy",
+        "Atakum"
+      ],
+      "news_items": [
+        {
+          "title": "Son dakika haberi: Sakarya merkezli 10 ilde FETÖ/PDY operasyonu",
+          "link": "https://www.hurriyet.com.tr/gundem/son-dakika-haberi-sakarya-merkezli-10-ilde-feto-pdy-operasyonu-41630745",
+          "published": "Thu, 08 Oct 2020 06:40:00 Z",
+          "summary": "Gelen son dakika haberine göre, Sakarya merkezli 10 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda 21 kişi gözaltına alındı. Öte yandan Samsun merkezli 8 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda gözaltına alınan 21 eski emniyet mensubundan 11'i adliyeye sevk edildi.",
+          "project_id": "samsun-karadeniz-hub",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:15:16.966097+00:00",
+          "relevance_score": 10,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Samsun",
+              "Sakarya"
+            ],
+            "price_signal": "0%",
+            "summary": "A FETÖ/PDY counter-terrorism operation centered in Sakarya and Samsun resulted in 21 arrests across 10 provinces, with no direct impact on the Samsun Lojistik Merkezi project or regional property prices."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Son dakika haberi: Sakarya merkezli 10 ilde FETÖ/PDY operasyonu",
+        "link": "https://www.hurriyet.com.tr/gundem/son-dakika-haberi-sakarya-merkezli-10-ilde-feto-pdy-operasyonu-41630745",
+        "published": "Thu, 08 Oct 2020 06:40:00 Z",
+        "summary": "Gelen son dakika haberine göre, Sakarya merkezli 10 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda 21 kişi gözaltına alındı. Öte yandan Samsun merkezli 8 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda gözaltına alınan 21 eski emniyet mensubundan 11'i adliyeye sevk edildi.",
+        "project_id": "samsun-karadeniz-hub",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-04T09:15:16.966097+00:00",
+        "relevance_score": 10,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Samsun",
+            "Sakarya"
+          ],
+          "price_signal": "0%",
+          "summary": "A FETÖ/PDY counter-terrorism operation centered in Sakarya and Samsun resulted in 21 arrests across 10 provinces, with no direct impact on the Samsun Lojistik Merkezi project or regional property prices."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:15:22.041980+00:00"
+    },
+    {
+      "project_id": "rize-artvin-hidroelektrik",
+      "project_name": "Rize-Artvin Havalimanı Bölgesi",
+      "status": "active",
+      "tradia_score": 74,
+      "districts": [
+        "Rize",
+        "Artvin",
+        "Hopa"
+      ],
+      "news_items": [
+        {
+          "title": "FETÖ'nün fişleme kodları şoke etti",
+          "link": "https://www.hurriyet.com.tr/gundem/fetonun-fisleme-kodlari-soke-etti-41817125",
+          "published": "Mon, 24 May 2021 09:32:14 Z",
+          "summary": "Fetullahçı Terör Örgütü'nün (FETÖ) adliye ve cezaevi yapılanmasına ilişkin aralarında örgütün mahrem imamlarının da bulunduğu 71 sanık hakkındaki iddianamede, örgütün Adalet Bakanlığı personeline ilişkin fişleme amaçlı bilgileri \"Tarak\" adı verdikleri sistemle kayıt altına aldığı ortaya çıktı. İddianamedeki detaylara göre '0' olarak kodlanan kişi Ateist, '1' Allah inancı olup ibadet yapmayan, '2' Cuma namazına giden erkek ve orucunu tutan kadın, '8' paraya zaafı olan kişi olarak kategorize edild",
+          "project_id": "rize-artvin-hidroelektrik",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-04T09:15:23.503573+00:00",
+          "relevance_score": 10,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [],
+            "price_signal": "0%",
+            "summary": "A court indictment revealed that FETÖ (Gülenist Terror Organization) used a system called 'Tarak' to categorize and profile Turkish Ministry of Justice personnel, with no direct relevance to the Rize-Artvin Airport region's property market."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "FETÖ'nün fişleme kodları şoke etti",
+        "link": "https://www.hurriyet.com.tr/gundem/fetonun-fisleme-kodlari-soke-etti-41817125",
+        "published": "Mon, 24 May 2021 09:32:14 Z",
+        "summary": "Fetullahçı Terör Örgütü'nün (FETÖ) adliye ve cezaevi yapılanmasına ilişkin aralarında örgütün mahrem imamlarının da bulunduğu 71 sanık hakkındaki iddianamede, örgütün Adalet Bakanlığı personeline ilişkin fişleme amaçlı bilgileri \"Tarak\" adı verdikleri sistemle kayıt altına aldığı ortaya çıktı. İddianamedeki detaylara göre '0' olarak kodlanan kişi Ateist, '1' Allah inancı olup ibadet yapmayan, '2' Cuma namazına giden erkek ve orucunu tutan kadın, '8' paraya zaafı olan kişi olarak kategorize edild",
+        "project_id": "rize-artvin-hidroelektrik",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-04T09:15:23.503573+00:00",
+        "relevance_score": 10,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [],
+          "price_signal": "0%",
+          "summary": "A court indictment revealed that FETÖ (Gülenist Terror Organization) used a system called 'Tarak' to categorize and profile Turkish Ministry of Justice personnel, with no direct relevance to the Rize-Artvin Airport region's property market."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-04T09:15:28.698753+00:00"
+    }
+  ]
+}

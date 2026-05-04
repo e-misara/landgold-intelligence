@@ -1,0 +1,55 @@
+{
+  "project_id": "izmir-alsancak-gelisim",
+  "project_name": "İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı",
+  "status": "active",
+  "tradia_score": 79,
+  "districts": [
+    "Alsancak",
+    "Bayraklı",
+    "Karşıyaka",
+    "Bornova"
+  ],
+  "news_items": [
+    {
+      "title": "11 SORUDA SAÇ BOYALARI DOSYASI | Ciddi alerjik reaksiyona neden olabilir mi? Kimler risk altında? Saçları boyamadan önce nelere dikkat edilmeli?",
+      "link": "https://www.hurriyet.com.tr/kelebek/saglik/11-soruda-sac-boyalari-dosyasi-ciddi-alerjik-reaksiyona-neden-olabilir-mi-kimler-risk-altinda-saclari-boyamadan-once-nelere-dikkat-edilmeli-42315520",
+      "published": "Sun, 20 Aug 2023 05:56:00 Z",
+      "summary": "Geçtiğimiz günlerde İzmir’de evde saçını boyarken fenalaşıp hayatını kaybeden Deniz Demirbayraklı'nın, saç boyasına alerjik reaksiyon gösterdiği iddia edildi. Ölüm nedeni adli tıpta yapılacak otopsinin ardından belirlenecek olan Demirbayraklı'nın babası, kızının saçını ilk defa boyamadığını ve mevsimsel alerji dışında başka bir şeye alerjisi olmadığını belirtti. Peki saç boyası gerçekten böyle ciddi bir reaksiyona neden olabilir mi? Defalarca kullanılmasına rağmen bir gün aniden alerji gelişebil",
+      "project_id": "izmir-alsancak-gelisim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-02T21:00:02.804391+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "This news article is unrelated to real estate or the İzmir Alsancak-Bayraklı urban transformation project, covering instead a medical incident involving hair dye allergies."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "11 SORUDA SAÇ BOYALARI DOSYASI | Ciddi alerjik reaksiyona neden olabilir mi? Kimler risk altında? Saçları boyamadan önce nelere dikkat edilmeli?",
+    "link": "https://www.hurriyet.com.tr/kelebek/saglik/11-soruda-sac-boyalari-dosyasi-ciddi-alerjik-reaksiyona-neden-olabilir-mi-kimler-risk-altinda-saclari-boyamadan-once-nelere-dikkat-edilmeli-42315520",
+    "published": "Sun, 20 Aug 2023 05:56:00 Z",
+    "summary": "Geçtiğimiz günlerde İzmir’de evde saçını boyarken fenalaşıp hayatını kaybeden Deniz Demirbayraklı'nın, saç boyasına alerjik reaksiyon gösterdiği iddia edildi. Ölüm nedeni adli tıpta yapılacak otopsinin ardından belirlenecek olan Demirbayraklı'nın babası, kızının saçını ilk defa boyamadığını ve mevsimsel alerji dışında başka bir şeye alerjisi olmadığını belirtti. Peki saç boyası gerçekten böyle ciddi bir reaksiyona neden olabilir mi? Defalarca kullanılmasına rağmen bir gün aniden alerji gelişebil",
+    "project_id": "izmir-alsancak-gelisim",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-02T21:00:02.804391+00:00",
+    "relevance_score": 10,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [],
+      "price_signal": "0%",
+      "summary": "This news article is unrelated to real estate or the İzmir Alsancak-Bayraklı urban transformation project, covering instead a medical incident involving hair dye allergies."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-02T21:00:07.969684+00:00"
+}

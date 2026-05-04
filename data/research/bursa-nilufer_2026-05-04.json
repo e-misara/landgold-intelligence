@@ -1,0 +1,18 @@
+{
+  "project_id": "bursa-nilufer",
+  "project_name": "Bursa Nilüfer Teknoloji ve Sanayi Bölgesi",
+  "status": "active",
+  "tradia_score": 83,
+  "districts": [
+    "Nilüfer",
+    "Osmangazi",
+    "Gemlik"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-04T09:14:14.376708+00:00"
+}

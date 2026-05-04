@@ -1,0 +1,19 @@
+{
+  "project_id": "konya-tarim-lojistik",
+  "project_name": "Konya Tarım ve Lojistik",
+  "status": "active",
+  "tradia_score": 76,
+  "districts": [
+    "Konya",
+    "Karatay",
+    "Selçuklu",
+    "Karaman"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-04T09:15:36.417897+00:00"
+}

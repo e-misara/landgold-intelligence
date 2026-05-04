@@ -1,0 +1,90 @@
+{
+  "project_id": "cerkezkoy-trakya",
+  "project_name": "Çerkezköy-Trakya Sanayi Aksı",
+  "status": "active",
+  "tradia_score": 78,
+  "districts": [
+    "Çerkezköy",
+    "Tekirdağ",
+    "Muratlı",
+    "Çorlu"
+  ],
+  "news_items": [
+    {
+      "title": "Trakya'dan nisanda 244,4 milyon dolarlık ihracat yapıldı",
+      "link": "https://www.aa.com.tr/tr/ekonomi/trakyadan-nisanda-244-4-milyon-dolarlik-ihracat-yapildi/3926031",
+      "published": "Mon, 04 May 2026 09:13:06 +0300",
+      "summary": "Kırklareli, Edirne ve Tekirdağ'dan geçen ay 244 milyon 391 bin 460 dolarlık ihracat gerçekleştirildi.",
+      "project_id": "cerkezkoy-trakya",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-04T09:14:00.919154+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "medium",
+        "affected_zones": [
+          "Çerkezköy",
+          "Tekirdağ",
+          "Kırklareli",
+          "Edirne",
+          "Trakya Sanayi Bölgesi"
+        ],
+        "price_signal": "+2%",
+        "summary": "Strong export performance of $244.4 million from the Thrace region in April signals robust industrial activity, supporting property demand and prices along the Çerkezköy-Trakya industrial corridor."
+      }
+    },
+    {
+      "title": "TPAO'nun 4 şehirdeki bazı sahaları için kamulaştırma kararı alındı",
+      "link": "https://www.aa.com.tr/tr/ekonomi/tpaonun-4-sehirdeki-bazi-sahalari-icin-kamulastirma-karari-alindi/3925402",
+      "published": "Sun, 03 May 2026 10:04:14 +0300",
+      "summary": "Türkiye Petrolleri Anonim Ortaklığının (TPAO) Tekirdağ, İstanbul, Kırklareli ve Adıyaman'da bulunan sahaları kamulaştırılacak.",
+      "project_id": "cerkezkoy-trakya",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-04T09:14:00.919237+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "medium",
+        "affected_zones": [
+          "Tekirdağ",
+          "Çerkezköy",
+          "Kırklareli",
+          "İstanbul"
+        ],
+        "price_signal": "+1%",
+        "summary": "TPAO field expropriation decisions in Tekirdağ, Istanbul, Kırklareli, and Adıyaman may slightly boost industrial land values along the Çerkezköy-Trakya industrial corridor by clarifying land use and enabling infrastructure development."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Trakya'dan nisanda 244,4 milyon dolarlık ihracat yapıldı",
+    "link": "https://www.aa.com.tr/tr/ekonomi/trakyadan-nisanda-244-4-milyon-dolarlik-ihracat-yapildi/3926031",
+    "published": "Mon, 04 May 2026 09:13:06 +0300",
+    "summary": "Kırklareli, Edirne ve Tekirdağ'dan geçen ay 244 milyon 391 bin 460 dolarlık ihracat gerçekleştirildi.",
+    "project_id": "cerkezkoy-trakya",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-04T09:14:00.919154+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "positive",
+      "urgency": "medium",
+      "affected_zones": [
+        "Çerkezköy",
+        "Tekirdağ",
+        "Kırklareli",
+        "Edirne",
+        "Trakya Sanayi Bölgesi"
+      ],
+      "price_signal": "+2%",
+      "summary": "Strong export performance of $244.4 million from the Thrace region in April signals robust industrial activity, supporting property demand and prices along the Çerkezköy-Trakya industrial corridor."
+    }
+  },
+  "overall_sentiment": "positive",
+  "price_signal_avg": 1.5,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:14:10.668589+00:00"
+}

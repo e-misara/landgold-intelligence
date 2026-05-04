@@ -1,0 +1,63 @@
+{
+  "project_id": "konya-tarim-lojistik",
+  "project_name": "Konya Tarım ve Lojistik",
+  "status": "active",
+  "tradia_score": 76,
+  "districts": [
+    "Konya",
+    "Karatay",
+    "Selçuklu",
+    "Karaman"
+  ],
+  "news_items": [
+    {
+      "title": "Bakan Uraloğlu: (Karaman Çevre Yolu 1. Kısım) Modern mühendisliğin en güzel örneklerinden birini hayata geçirdik",
+      "link": "https://www.aa.com.tr/tr/ekonomi/bakan-uraloglu-karaman-cevre-yolu-1-kisim-modern-muhendisligin-en-guzel-orneklerinden-birini-hayata-gecirdik/3924414",
+      "published": "Fri, 01 May 2026 18:10:48 +0300",
+      "summary": "Bakan Uraloğlu, \"(Karaman Çevre Yolu 1. Kısım) Hizmete sunduğumuz bu kesimde 3 köprülü kavşak, 1 hemzemin kavşak, 1 viyadük, 2 köprü, 3 alt geçit ve 20 menfez inşa ederek, modern mühendisliğin en güzel örneklerinden birini hayata geçirdik.\" dedi.",
+      "project_id": "konya-tarim-lojistik",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-03T08:15:32.196773+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Karaman",
+          "Karaman Çevre Yolu",
+          "Karaman Merkez"
+        ],
+        "price_signal": "+3%",
+        "summary": "The inauguration of the first section of Karaman Bypass Road, featuring modern engineering structures including bridges, viaducts and underpasses, is expected to boost property values in Karaman by improving connectivity and reducing urban traffic congestion."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Bakan Uraloğlu: (Karaman Çevre Yolu 1. Kısım) Modern mühendisliğin en güzel örneklerinden birini hayata geçirdik",
+    "link": "https://www.aa.com.tr/tr/ekonomi/bakan-uraloglu-karaman-cevre-yolu-1-kisim-modern-muhendisligin-en-guzel-orneklerinden-birini-hayata-gecirdik/3924414",
+    "published": "Fri, 01 May 2026 18:10:48 +0300",
+    "summary": "Bakan Uraloğlu, \"(Karaman Çevre Yolu 1. Kısım) Hizmete sunduğumuz bu kesimde 3 köprülü kavşak, 1 hemzemin kavşak, 1 viyadük, 2 köprü, 3 alt geçit ve 20 menfez inşa ederek, modern mühendisliğin en güzel örneklerinden birini hayata geçirdik.\" dedi.",
+    "project_id": "konya-tarim-lojistik",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-03T08:15:32.196773+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "positive",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Karaman",
+        "Karaman Çevre Yolu",
+        "Karaman Merkez"
+      ],
+      "price_signal": "+3%",
+      "summary": "The inauguration of the first section of Karaman Bypass Road, featuring modern engineering structures including bridges, viaducts and underpasses, is expected to boost property values in Karaman by improving connectivity and reducing urban traffic congestion."
+    }
+  },
+  "overall_sentiment": "positive",
+  "price_signal_avg": 3.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:15:38.172411+00:00"
+}

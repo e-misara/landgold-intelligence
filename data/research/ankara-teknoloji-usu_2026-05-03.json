@@ -1,0 +1,19 @@
+{
+  "project_id": "ankara-teknoloji-usu",
+  "project_name": "Ankara Teknoloji Üssü",
+  "status": "active",
+  "tradia_score": 85,
+  "districts": [
+    "Çankaya",
+    "Bilkent",
+    "İncek",
+    "Sincan"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-03T08:15:32.060156+00:00"
+}

@@ -1,0 +1,496 @@
+{
+  "date": "2026-05-02",
+  "region": "Marmara",
+  "projects_analyzed": 8,
+  "top_opportunity": {
+    "project_id": "kanal-istanbul",
+    "project_name": "Kanal İstanbul",
+    "tradia_score": 92,
+    "sentiment": "neutral",
+    "price_signal": 0.0
+  },
+  "projects": [
+    {
+      "project_id": "kanal-istanbul",
+      "project_name": "Kanal İstanbul",
+      "status": "planning",
+      "tradia_score": 92,
+      "districts": [
+        "Arnavutköy",
+        "Başakşehir",
+        "Küçükçekmece",
+        "Avcılar"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": {
+        "id": "kanal-istanbul",
+        "name": "Kanal İstanbul",
+        "status": "planning",
+        "tradia_score": 92,
+        "summary_en": "43km artificial waterway from Küçükçekmece to Black Sea. 4 districts directly affected. Two new cities (500,000 residents) approved in Yenişehir zoning. Project currently in environmental review phase.",
+        "summary_ru": "Искусственный водный путь 43 км от Кючюкчекмедже до Чёрного моря. 4 района под прямым влиянием. Два новых города на 500 000 жителей одобрены в зонировании Йенишехира.",
+        "summary_ar": "ممر مائي اصطناعي 43 كم من كوتشوكشكمجة إلى البحر الأسود. 4 مناطق متأثرة مباشرة. مدينتان جديدتان لـ500,000 ساكن معتمدتان في تقسيم ينيشهير.",
+        "summary_tr": "Küçükçekmece'den Karadeniz'e 43 km'lik yapay su yolu. 4 ilçe doğrudan etkileniyor. Yenişehir imar planında 500.000 nüfuslu iki yeni kent onaylandı.",
+        "key_events": [
+          {
+            "date": "2011-04",
+            "event_tr": "Proje ilk kez kamuoyuna açıklandı",
+            "event_en": "Project first announced publicly",
+            "price_impact": "+15%"
+          },
+          {
+            "date": "2021-06",
+            "event_tr": "ÇED süreci başladı, güzergah kesinleşti",
+            "event_en": "Environmental review started, route confirmed",
+            "price_impact": "+40%"
+          },
+          {
+            "date": "2021-09",
+            "event_tr": "Yenişehir imar planı onaylandı",
+            "event_en": "Yenişehir zoning approved",
+            "price_impact": "+25%"
+          },
+          {
+            "date": "2022-03",
+            "event_tr": "Metro ihalesi açıldı",
+            "event_en": "Metro line tendered",
+            "price_impact": "+15%"
+          },
+          {
+            "date": "2024-01",
+            "event_tr": "Köprü ayakları görünür hale geldi",
+            "event_en": "Bridge foundations visible",
+            "price_impact": "+20%"
+          }
+        ],
+        "price_data": {
+          "currency": "USD",
+          "unit": "per_m2",
+          "data": [
+            {
+              "year": 2011,
+              "min": 8,
+              "max": 12,
+              "note": "Pre-announcement"
+            },
+            {
+              "year": 2016,
+              "min": 25,
+              "max": 45,
+              "note": "Route speculation"
+            },
+            {
+              "year": 2019,
+              "min": 80,
+              "max": 150,
+              "note": "Route confirmed"
+            },
+            {
+              "year": 2021,
+              "min": 180,
+              "max": 280,
+              "note": "ÇED approved"
+            },
+            {
+              "year": 2023,
+              "min": 320,
+              "max": 480,
+              "note": "Zoning updates"
+            },
+            {
+              "year": 2026,
+              "min": 420,
+              "max": 680,
+              "note": "Current — bridge foundations visible"
+            }
+          ]
+        },
+        "hot_zones": [
+          {
+            "name": "Sazlıbosna",
+            "district": "Arnavutköy",
+            "type": "land",
+            "price_usd_m2": 130,
+            "upside": "+80-120% (5yr)",
+            "risk": "medium"
+          },
+          {
+            "name": "Dursunköy",
+            "district": "Arnavutköy",
+            "type": "land",
+            "price_usd_m2": 95,
+            "upside": "+60-90% (5yr)",
+            "risk": "medium"
+          },
+          {
+            "name": "Kayabaşı",
+            "district": "Başakşehir",
+            "type": "residential",
+            "price_usd_m2": 850,
+            "upside": "+35-50% (3yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Ispartakule",
+            "district": "Küçükçekmece",
+            "type": "commercial",
+            "price_usd_m2": 1200,
+            "upside": "+25-40% (2yr)",
+            "risk": "low"
+          }
+        ],
+        "risk_factors": [
+          "Project timeline uncertain — political dependency",
+          "Agricultural land requires rezoning approval",
+          "SIT and forest areas excluded from development",
+          "Hisseli (shared) titles require legal due diligence"
+        ],
+        "tradia_verdict": "WATCH — Position now in Ispartakule commercial (low risk, immediate development rights). Monitor Sazlıbosna for rezoning signals."
+      },
+      "data_source": "archive",
+      "research_date": "2026-05-02T20:05:13.053604+00:00"
+    },
+    {
+      "project_id": "kuzey-marmara-otoyolu",
+      "project_name": "Kuzey Marmara Otoyolu",
+      "status": "active",
+      "tradia_score": 85,
+      "districts": [
+        "Arnavutköy",
+        "Çatalca",
+        "Silivri",
+        "Kırklareli"
+      ],
+      "news_items": [
+        {
+          "title": "Yola dökülen vidalar trafiği felç etti! Polis ve esnaf seferber oldu",
+          "link": "https://www.hurriyet.com.tr/gundem/yola-dokulen-vidalar-trafigi-felc-etti-polis-ve-esnaf-seferber-oldu-43164256",
+          "published": "Sat, 02 May 2026 10:36:00 Z",
+          "summary": "Silivri’de inşaat malzemesi taşıyan bir kamyondan yola dökülen vidalar nedeniyle trafikte aksama yaşandı. Yaklaşık 4 kilometrelik alana yayılan vidalar nedeniyle çok sayıda aracın lastiği patlarken, D-100 kara yolunda uzun araç kuyrukları oluştu. Yoldaki vidalar; trafik polisleri, karayolları ekipleri ve çevredeki esnaf tarafından el birliğiyle toplandı",
+          "project_id": "kuzey-marmara-otoyolu",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-02T20:05:13.945274+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Silivri",
+              "D-100 Karayolu"
+            ],
+            "price_signal": "0%",
+            "summary": "Screws spilled from a construction truck on the D-100 highway in Silivri caused temporary traffic disruption with multiple flat tires, but the incident was resolved by police, road crews, and local tradespeople with no lasting impact on property values."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Yola dökülen vidalar trafiği felç etti! Polis ve esnaf seferber oldu",
+        "link": "https://www.hurriyet.com.tr/gundem/yola-dokulen-vidalar-trafigi-felc-etti-polis-ve-esnaf-seferber-oldu-43164256",
+        "published": "Sat, 02 May 2026 10:36:00 Z",
+        "summary": "Silivri’de inşaat malzemesi taşıyan bir kamyondan yola dökülen vidalar nedeniyle trafikte aksama yaşandı. Yaklaşık 4 kilometrelik alana yayılan vidalar nedeniyle çok sayıda aracın lastiği patlarken, D-100 kara yolunda uzun araç kuyrukları oluştu. Yoldaki vidalar; trafik polisleri, karayolları ekipleri ve çevredeki esnaf tarafından el birliğiyle toplandı",
+        "project_id": "kuzey-marmara-otoyolu",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-02T20:05:13.945274+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Silivri",
+            "D-100 Karayolu"
+          ],
+          "price_signal": "0%",
+          "summary": "Screws spilled from a construction truck on the D-100 highway in Silivri caused temporary traffic disruption with multiple flat tires, but the incident was resolved by police, road crews, and local tradespeople with no lasting impact on property values."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-02T20:05:19.858198+00:00"
+    },
+    {
+      "project_id": "istanbul-havalimani",
+      "project_name": "İstanbul Havalimanı Bölgesi",
+      "status": "active",
+      "tradia_score": 90,
+      "districts": [
+        "Arnavutköy",
+        "Eyüpsultan",
+        "Başakşehir"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": {
+        "id": "istanbul-havalimani",
+        "name": "İstanbul Havalimanı Gelişim Bölgesi",
+        "status": "active",
+        "tradia_score": 90,
+        "summary_en": "World's busiest airport by flight count (2024). Direct metro connection to city center under construction. 20km development radius showing sustained price growth.",
+        "summary_ru": "Самый загруженный аэропорт мира по числу рейсов (2024). Строится прямое метро до центра города. Зона развития 20 км показывает устойчивый рост цен.",
+        "summary_ar": "أكثر مطارات العالم ازدحاماً بعدد الرحلات (2024). مترو مباشر لوسط المدينة قيد الإنشاء. منطقة تطوير 20 كم تُظهر نمواً مستداماً للأسعار.",
+        "summary_tr": "2024'te uçuş sayısına göre dünyanın en yoğun havalimanı. Şehir merkezine doğrudan metro yapım aşamasında. 20 km'lik gelişim bölgesi istikrarlı fiyat artışı gösteriyor.",
+        "key_events": [
+          {
+            "date": "2018-10",
+            "event_en": "Airport opened Phase 1",
+            "price_impact": "+30%"
+          },
+          {
+            "date": "2019-04",
+            "event_en": "All flights transferred from Atatürk",
+            "price_impact": "+20%"
+          },
+          {
+            "date": "2022-09",
+            "event_en": "100M passenger milestone",
+            "price_impact": "+15%"
+          },
+          {
+            "date": "2024-04",
+            "event_en": "Surpassed Amsterdam — Europe busiest",
+            "price_impact": "+12%"
+          },
+          {
+            "date": "2025-06",
+            "event_en": "Metro line construction 60% complete",
+            "price_impact": "+18%"
+          }
+        ],
+        "price_data": {
+          "currency": "USD",
+          "unit": "per_m2",
+          "data": [
+            {
+              "year": 2016,
+              "min": 80,
+              "max": 140,
+              "note": "Construction phase"
+            },
+            {
+              "year": 2018,
+              "min": 180,
+              "max": 280,
+              "note": "Airport opened"
+            },
+            {
+              "year": 2020,
+              "min": 220,
+              "max": 340,
+              "note": "All flights transferred"
+            },
+            {
+              "year": 2022,
+              "min": 380,
+              "max": 580,
+              "note": "Record passengers"
+            },
+            {
+              "year": 2024,
+              "min": 520,
+              "max": 820,
+              "note": "Europe busiest"
+            },
+            {
+              "year": 2026,
+              "min": 640,
+              "max": 980,
+              "note": "Current — metro under construction"
+            }
+          ]
+        },
+        "hot_zones": [
+          {
+            "name": "Bolluca",
+            "district": "Arnavutköy",
+            "type": "land",
+            "price_usd_m2": 220,
+            "upside": "+45-65% (3yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Haraççı",
+            "district": "Arnavutköy",
+            "type": "mixed",
+            "price_usd_m2": 380,
+            "upside": "+35-55% (3yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Taşoluk",
+            "district": "Arnavutköy",
+            "type": "residential",
+            "price_usd_m2": 680,
+            "upside": "+25-35% (2yr)",
+            "risk": "low"
+          }
+        ],
+        "risk_factors": [
+          "Noise pollution concerns in closest zones",
+          "Traffic congestion without metro completion"
+        ],
+        "tradia_verdict": "BUY — Airport corridor consistently outperforms market. Bolluca land parcels strongest risk-adjusted opportunity."
+      },
+      "data_source": "archive",
+      "research_date": "2026-05-02T20:05:23.457626+00:00"
+    },
+    {
+      "project_id": "gebze-oiz",
+      "project_name": "Gebze Organize Sanayi Bölgesi Genişlemesi",
+      "status": "active",
+      "tradia_score": 82,
+      "districts": [
+        "Gebze",
+        "Dilovası",
+        "Darıca"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-02T20:05:26.637312+00:00"
+    },
+    {
+      "project_id": "cerkezkoy-trakya",
+      "project_name": "Çerkezköy-Trakya Sanayi Aksı",
+      "status": "active",
+      "tradia_score": 78,
+      "districts": [
+        "Çerkezköy",
+        "Tekirdağ",
+        "Muratlı",
+        "Çorlu"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-02T20:05:30.282187+00:00"
+    },
+    {
+      "project_id": "bursa-nilufer",
+      "project_name": "Bursa Nilüfer Teknoloji ve Sanayi Bölgesi",
+      "status": "active",
+      "tradia_score": 83,
+      "districts": [
+        "Nilüfer",
+        "Osmangazi",
+        "Gemlik"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-02T20:05:33.395370+00:00"
+    },
+    {
+      "project_id": "yavuz-sultan-selim-koprusu",
+      "project_name": "Yavuz Sultan Selim Köprüsü Etki Bölgesi",
+      "status": "active",
+      "tradia_score": 80,
+      "districts": [
+        "Sarıyer",
+        "Beykoz",
+        "Garipçe",
+        "Poyrazköy"
+      ],
+      "news_items": [
+        {
+          "title": "İstanbul'un bir ilçesinde 4 gündür su yok: Bidonlarla evlerine su taşıyorlar",
+          "link": "https://www.hurriyet.com.tr/gundem/istanbulun-bir-ilcesinde-4-gundur-su-yok-bidonlarla-evlerine-su-tasiyorlar-43164408",
+          "published": "Sat, 02 May 2026 14:04:25 Z",
+          "summary": "Beykoz'da İstanbul Su ve Kanalizasyon İdaresi (İSKİ) hatlarında meydana gelen arıza nedeniyle 4 gündür su kesintisi yaşandı. Mahalle sakinleri bidonlarla evlerine su taşımak için uzun kuyruk oluşturdu.",
+          "project_id": "yavuz-sultan-selim-koprusu",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-02T20:05:34.842185+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Beykoz"
+            ],
+            "price_signal": "-2%",
+            "summary": "A 4-day water outage in Beykoz district due to an İSKİ infrastructure failure has forced residents to carry water in containers, negatively impacting short-term livability and property appeal in the area."
+          }
+        },
+        {
+          "title": "Televizyon izlerken bir anda görme kaybı yaşadı! Hiperbarik oksijen tedavisiyle görmeye başladı... 'Sağ gözümde bir karartı ve baş dönmesi oldu'",
+          "link": "https://www.hurriyet.com.tr/gundem/televizyon-izlerken-bir-anda-gorme-kaybi-yasadi-hiperbarik-oksijen-tedavisiyle-gormeye-basladi-sag-gozumde-bir-kararti-ve-bas-43164065",
+          "published": "Sat, 02 May 2026 07:22:00 Z",
+          "summary": "İstanbul Sarıyer'de televizyon izlerken sağ gözünde ani görme kaybı yaşayan Gülşen Şenol, hiperbarik oksijen tedavisiyle yeniden görmeye başladı. Şenol'un 50 yaş üzerinde binde bir görülen santral retinal arter tıkanıklığı yaşadığı belirlendi. Doktorlar tarafından acil olarak hiperbarik oksijen tedavisi uygulanması gerektiği belirtildi. Gülşen Şenol, \"14 seanstan sonra çok güzel görmeye başladım. Görebiliyorum. Ben sadece aşağıda bir ışık görüyordum. Işık tamamen değil, komple açıldı. Tavanı da ",
+          "project_id": "yavuz-sultan-selim-koprusu",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-02T20:05:34.842361+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [],
+            "price_signal": "0%",
+            "summary": "A medical news story about a patient recovering vision through hyperbaric oxygen therapy in Sarıyer has no relevance to property prices in the Yavuz Sultan Selim Bridge impact zone."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "İstanbul'un bir ilçesinde 4 gündür su yok: Bidonlarla evlerine su taşıyorlar",
+        "link": "https://www.hurriyet.com.tr/gundem/istanbulun-bir-ilcesinde-4-gundur-su-yok-bidonlarla-evlerine-su-tasiyorlar-43164408",
+        "published": "Sat, 02 May 2026 14:04:25 Z",
+        "summary": "Beykoz'da İstanbul Su ve Kanalizasyon İdaresi (İSKİ) hatlarında meydana gelen arıza nedeniyle 4 gündür su kesintisi yaşandı. Mahalle sakinleri bidonlarla evlerine su taşımak için uzun kuyruk oluşturdu.",
+        "project_id": "yavuz-sultan-selim-koprusu",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-02T20:05:34.842185+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "negative",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Beykoz"
+          ],
+          "price_signal": "-2%",
+          "summary": "A 4-day water outage in Beykoz district due to an İSKİ infrastructure failure has forced residents to carry water in containers, negatively impacting short-term livability and property appeal in the area."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": -1.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-02T20:05:42.669324+00:00"
+    },
+    {
+      "project_id": "osmangazi-koprusu",
+      "project_name": "Osmangazi Köprüsü — Gemlik Körfezi Aksı",
+      "status": "active",
+      "tradia_score": 79,
+      "districts": [
+        "Gemlik",
+        "Orhangazi",
+        "İznik",
+        "Yalova"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-02T20:05:46.467630+00:00"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "project_id": "antalya-turizm-kusagi",
+  "project_name": "Antalya Turizm Kuşağı Gelişim Aksı",
+  "status": "active",
+  "tradia_score": 88,
+  "districts": [
+    "Antalya",
+    "Alanya",
+    "Serik",
+    "Kaş"
+  ],
+  "news_items": [
+    {
+      "title": "Genç iletişimciler 15 Temmuz’u yeniden manşetlere taşıdı",
+      "link": "https://bik.gov.tr/kurumsal-haberler/genc-iletisimciler-15-temmuzu-yeniden-mansetlere-tasidi/",
+      "published": "Wed, 29 Apr 2026 16:35:52 +0000",
+      "summary": "Basın İlan Kurumu tarafından ‘Hafızayı Koru, Hakikati Yaz’ temasıyla iletişim fakültelerinde öğrenim gören geleceğin gazetecilerine yönelik hayata geçirilen ‘15 Temmuz Manşetleri Gazetecilik Atölyesi’nin ilk etkinliği Antalya’da gerçekleştirildi.",
+      "project_id": "antalya-turizm-kusagi",
+      "source_name": "BİK Resmi İlanlar",
+      "source_url": "https://bik.gov.tr/rss",
+      "fetched_at": "2026-05-04T09:14:34.943665+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "long-term",
+        "affected_zones": [],
+        "price_signal": "+0%",
+        "summary": "A journalism workshop themed around the July 15th coup attempt was held in Antalya for communication students, with no direct relevance to the Antalya Turizm Kuşağı Gelişim Aksı project or property prices."
+      }
+    },
+    {
+      "title": "Falezlerdeki işgal son bulacak! 16’sına yıkım kararı verildi",
+      "link": "https://www.hurriyet.com.tr/gundem/falezlerdeki-isgal-son-bulacak-16sina-yikim-karari-verildi-43165424",
+      "published": "Mon, 04 May 2026 04:00:00 Z",
+      "summary": "Antalya’nın Muratpaşa ilçesi sınırlarında denize sıfır, kentin en önemli doğal güzelliklerinden olan falezlerde son yıllarda kaçak yapı ve işgal sorunu yaşanıyor.",
+      "project_id": "antalya-turizm-kusagi",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:14:35.506354+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Muratpaşa",
+          "Falezler",
+          "Antalya Kıyı Şeridi"
+        ],
+        "price_signal": "+4%",
+        "summary": "Demolition orders issued for 16 illegal structures on Antalya's iconic coastal cliffs in Muratpaşa, expected to restore natural beauty and boost legitimate property values in the area."
+      }
+    },
+    {
+      "title": "Son dakika... Muhittin Böcek'in gelini Zuhal Böcek tutuklandı",
+      "link": "https://www.hurriyet.com.tr/gundem/son-dakika-muhittin-bocekin-gelini-zuhal-boceke-tutuklama-talebi-43165270",
+      "published": "Sun, 03 May 2026 16:23:00 Z",
+      "summary": "İstanbul Cumhuriyet Başsavcılığı tarafından yürütülen soruşturma kapsamında görevinden uzaklaştırılan Antalya Büyükşehir Belediye Başkanı Muhittin Böcek'in gelini Zuhal Böcek'in de aralarında olduğu 3 şüpheli gözaltına alındı. Emniyetteki işlemlerin ardından adliyeye sevk edilen Böcek çıkarıldığı mahkemece tutuklanırken, diğer iki şüpheli ise savcılık ifadesinin ardından serbest bırakıldı.",
+      "project_id": "antalya-turizm-kusagi",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:14:35.506450+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Antalya Merkez",
+          "Muratpaşa",
+          "Kepez",
+          "Konyaaltı",
+          "Lara"
+        ],
+        "price_signal": "-2%",
+        "summary": "The arrest of Antalya Metropolitan Mayor Muhittin Böcek's daughter-in-law amid an ongoing corruption investigation creates political uncertainty that may temporarily dampen investor confidence and property prices in the Antalya Tourism Development Corridor project area."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Genç iletişimciler 15 Temmuz’u yeniden manşetlere taşıdı",
+    "link": "https://bik.gov.tr/kurumsal-haberler/genc-iletisimciler-15-temmuzu-yeniden-mansetlere-tasidi/",
+    "published": "Wed, 29 Apr 2026 16:35:52 +0000",
+    "summary": "Basın İlan Kurumu tarafından ‘Hafızayı Koru, Hakikati Yaz’ temasıyla iletişim fakültelerinde öğrenim gören geleceğin gazetecilerine yönelik hayata geçirilen ‘15 Temmuz Manşetleri Gazetecilik Atölyesi’nin ilk etkinliği Antalya’da gerçekleştirildi.",
+    "project_id": "antalya-turizm-kusagi",
+    "source_name": "BİK Resmi İlanlar",
+    "source_url": "https://bik.gov.tr/rss",
+    "fetched_at": "2026-05-04T09:14:34.943665+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "long-term",
+      "affected_zones": [],
+      "price_signal": "+0%",
+      "summary": "A journalism workshop themed around the July 15th coup attempt was held in Antalya for communication students, with no direct relevance to the Antalya Turizm Kuşağı Gelişim Aksı project or property prices."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": 0.7,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:14:47.316386+00:00"
+}

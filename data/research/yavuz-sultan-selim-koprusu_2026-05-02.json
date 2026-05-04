@@ -1,0 +1,77 @@
+{
+  "project_id": "yavuz-sultan-selim-koprusu",
+  "project_name": "Yavuz Sultan Selim Köprüsü Etki Bölgesi",
+  "status": "active",
+  "tradia_score": 80,
+  "districts": [
+    "Sarıyer",
+    "Beykoz",
+    "Garipçe",
+    "Poyrazköy"
+  ],
+  "news_items": [
+    {
+      "title": "İstanbul'un bir ilçesinde 4 gündür su yok: Bidonlarla evlerine su taşıyorlar",
+      "link": "https://www.hurriyet.com.tr/gundem/istanbulun-bir-ilcesinde-4-gundur-su-yok-bidonlarla-evlerine-su-tasiyorlar-43164408",
+      "published": "Sat, 02 May 2026 14:04:25 Z",
+      "summary": "Beykoz'da İstanbul Su ve Kanalizasyon İdaresi (İSKİ) hatlarında meydana gelen arıza nedeniyle 4 gündür su kesintisi yaşandı. Mahalle sakinleri bidonlarla evlerine su taşımak için uzun kuyruk oluşturdu.",
+      "project_id": "yavuz-sultan-selim-koprusu",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-02T20:05:34.842185+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Beykoz"
+        ],
+        "price_signal": "-2%",
+        "summary": "A 4-day water outage in Beykoz district due to an İSKİ infrastructure failure has forced residents to carry water in containers, negatively impacting short-term livability and property appeal in the area."
+      }
+    },
+    {
+      "title": "Televizyon izlerken bir anda görme kaybı yaşadı! Hiperbarik oksijen tedavisiyle görmeye başladı... 'Sağ gözümde bir karartı ve baş dönmesi oldu'",
+      "link": "https://www.hurriyet.com.tr/gundem/televizyon-izlerken-bir-anda-gorme-kaybi-yasadi-hiperbarik-oksijen-tedavisiyle-gormeye-basladi-sag-gozumde-bir-kararti-ve-bas-43164065",
+      "published": "Sat, 02 May 2026 07:22:00 Z",
+      "summary": "İstanbul Sarıyer'de televizyon izlerken sağ gözünde ani görme kaybı yaşayan Gülşen Şenol, hiperbarik oksijen tedavisiyle yeniden görmeye başladı. Şenol'un 50 yaş üzerinde binde bir görülen santral retinal arter tıkanıklığı yaşadığı belirlendi. Doktorlar tarafından acil olarak hiperbarik oksijen tedavisi uygulanması gerektiği belirtildi. Gülşen Şenol, \"14 seanstan sonra çok güzel görmeye başladım. Görebiliyorum. Ben sadece aşağıda bir ışık görüyordum. Işık tamamen değil, komple açıldı. Tavanı da ",
+      "project_id": "yavuz-sultan-selim-koprusu",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-02T20:05:34.842361+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "A medical news story about a patient recovering vision through hyperbaric oxygen therapy in Sarıyer has no relevance to property prices in the Yavuz Sultan Selim Bridge impact zone."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "İstanbul'un bir ilçesinde 4 gündür su yok: Bidonlarla evlerine su taşıyorlar",
+    "link": "https://www.hurriyet.com.tr/gundem/istanbulun-bir-ilcesinde-4-gundur-su-yok-bidonlarla-evlerine-su-tasiyorlar-43164408",
+    "published": "Sat, 02 May 2026 14:04:25 Z",
+    "summary": "Beykoz'da İstanbul Su ve Kanalizasyon İdaresi (İSKİ) hatlarında meydana gelen arıza nedeniyle 4 gündür su kesintisi yaşandı. Mahalle sakinleri bidonlarla evlerine su taşımak için uzun kuyruk oluşturdu.",
+    "project_id": "yavuz-sultan-selim-koprusu",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-02T20:05:34.842185+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "negative",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Beykoz"
+      ],
+      "price_signal": "-2%",
+      "summary": "A 4-day water outage in Beykoz district due to an İSKİ infrastructure failure has forced residents to carry water in containers, negatively impacting short-term livability and property appeal in the area."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": -1.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-02T20:05:42.669324+00:00"
+}

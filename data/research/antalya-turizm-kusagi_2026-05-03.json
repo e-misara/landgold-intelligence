@@ -1,0 +1,75 @@
+{
+  "project_id": "antalya-turizm-kusagi",
+  "project_name": "Antalya Turizm Kuşağı Gelişim Aksı",
+  "status": "active",
+  "tradia_score": 88,
+  "districts": [
+    "Antalya",
+    "Alanya",
+    "Serik",
+    "Kaş"
+  ],
+  "news_items": [
+    {
+      "title": "Genç iletişimciler 15 Temmuz’u yeniden manşetlere taşıdı",
+      "link": "https://bik.gov.tr/kurumsal-haberler/genc-iletisimciler-15-temmuzu-yeniden-mansetlere-tasidi/",
+      "published": "Wed, 29 Apr 2026 16:35:52 +0000",
+      "summary": "Basın İlan Kurumu tarafından ‘Hafızayı Koru, Hakikati Yaz’ temasıyla iletişim fakültelerinde öğrenim gören geleceğin gazetecilerine yönelik hayata geçirilen ‘15 Temmuz Manşetleri Gazetecilik Atölyesi’nin ilk etkinliği Antalya’da gerçekleştirildi.",
+      "project_id": "antalya-turizm-kusagi",
+      "source_name": "BİK Resmi İlanlar",
+      "source_url": "https://bik.gov.tr/rss",
+      "fetched_at": "2026-05-03T07:45:31.984064+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "A journalism workshop themed around the July 15 coup attempt was held in Antalya for communication faculty students, with no direct relevance to the Antalya Turizm Kuşağı Gelişim Aksı project or property prices."
+      }
+    },
+    {
+      "title": "Cebinden telefonunu çıkarırken düşürdü: Duyarlı vatandaş sayesinde parasına kavuştu",
+      "link": "https://www.hurriyet.com.tr/gundem/cebinden-telefonunu-cikarirken-dusurdu-duyarli-vatandas-sayesinde-parasina-kavustu-43164206",
+      "published": "Sat, 02 May 2026 09:33:08 Z",
+      "summary": "Antalya’nın Alanya ilçesinde iş yerinin önünde cebindeki 700 avroyu düşüren Hıdır Ersan, bir kadın tarafından bulunup zabıtaya teslim edilmesiyle parasına ulaşmanın mutluluğunu yaşadı.",
+      "project_id": "antalya-turizm-kusagi",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T07:45:32.687505+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Alanya"
+        ],
+        "price_signal": "+0%",
+        "summary": "A citizen in Alanya, Antalya lost 700 euros which was found and returned by a vigilant woman, an event unrelated to property market dynamics."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Genç iletişimciler 15 Temmuz’u yeniden manşetlere taşıdı",
+    "link": "https://bik.gov.tr/kurumsal-haberler/genc-iletisimciler-15-temmuzu-yeniden-mansetlere-tasidi/",
+    "published": "Wed, 29 Apr 2026 16:35:52 +0000",
+    "summary": "Basın İlan Kurumu tarafından ‘Hafızayı Koru, Hakikati Yaz’ temasıyla iletişim fakültelerinde öğrenim gören geleceğin gazetecilerine yönelik hayata geçirilen ‘15 Temmuz Manşetleri Gazetecilik Atölyesi’nin ilk etkinliği Antalya’da gerçekleştirildi.",
+    "project_id": "antalya-turizm-kusagi",
+    "source_name": "BİK Resmi İlanlar",
+    "source_url": "https://bik.gov.tr/rss",
+    "fetched_at": "2026-05-03T07:45:31.984064+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [],
+      "price_signal": "0%",
+      "summary": "A journalism workshop themed around the July 15 coup attempt was held in Antalya for communication faculty students, with no direct relevance to the Antalya Turizm Kuşağı Gelişim Aksı project or property prices."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T07:45:40.785588+00:00"
+}

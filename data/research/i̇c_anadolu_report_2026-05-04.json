@@ -1,0 +1,70 @@
+{
+  "date": "2026-05-04",
+  "region": "İç Anadolu",
+  "projects_analyzed": 3,
+  "top_opportunity": {
+    "project_id": "ankara-teknoloji-usu",
+    "project_name": "Ankara Teknoloji Üssü",
+    "tradia_score": 85,
+    "sentiment": "neutral",
+    "price_signal": 0.0
+  },
+  "projects": [
+    {
+      "project_id": "ankara-teknoloji-usu",
+      "project_name": "Ankara Teknoloji Üssü",
+      "status": "active",
+      "tradia_score": 85,
+      "districts": [
+        "Çankaya",
+        "Bilkent",
+        "İncek",
+        "Sincan"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-04T09:15:33.174544+00:00"
+    },
+    {
+      "project_id": "konya-tarim-lojistik",
+      "project_name": "Konya Tarım ve Lojistik",
+      "status": "active",
+      "tradia_score": 76,
+      "districts": [
+        "Konya",
+        "Karatay",
+        "Selçuklu",
+        "Karaman"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-04T09:15:36.417897+00:00"
+    },
+    {
+      "project_id": "kayseri-organize-sanayi",
+      "project_name": "Kayseri OSB Mobilya Merkezi",
+      "status": "active",
+      "tradia_score": 77,
+      "districts": [
+        "Kayseri",
+        "Melikgazi",
+        "Kocasinan"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-04T09:15:40.162850+00:00"
+    }
+  ]
+}

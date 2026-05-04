@@ -1,0 +1,143 @@
+{
+  "project_id": "kanal-istanbul",
+  "project_name": "Kanal İstanbul",
+  "status": "planning",
+  "tradia_score": 92,
+  "districts": [
+    "Arnavutköy",
+    "Başakşehir",
+    "Küçükçekmece",
+    "Avcılar"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "kanal-istanbul",
+    "name": "Kanal İstanbul",
+    "status": "planning",
+    "tradia_score": 92,
+    "summary_en": "43km artificial waterway from Küçükçekmece to Black Sea. 4 districts directly affected. Two new cities (500,000 residents) approved in Yenişehir zoning. Project currently in environmental review phase.",
+    "summary_ru": "Искусственный водный путь 43 км от Кючюкчекмедже до Чёрного моря. 4 района под прямым влиянием. Два новых города на 500 000 жителей одобрены в зонировании Йенишехира.",
+    "summary_ar": "ممر مائي اصطناعي 43 كم من كوتشوكشكمجة إلى البحر الأسود. 4 مناطق متأثرة مباشرة. مدينتان جديدتان لـ500,000 ساكن معتمدتان في تقسيم ينيشهير.",
+    "summary_tr": "Küçükçekmece'den Karadeniz'e 43 km'lik yapay su yolu. 4 ilçe doğrudan etkileniyor. Yenişehir imar planında 500.000 nüfuslu iki yeni kent onaylandı.",
+    "key_events": [
+      {
+        "date": "2011-04",
+        "event_tr": "Proje ilk kez kamuoyuna açıklandı",
+        "event_en": "Project first announced publicly",
+        "price_impact": "+15%"
+      },
+      {
+        "date": "2021-06",
+        "event_tr": "ÇED süreci başladı, güzergah kesinleşti",
+        "event_en": "Environmental review started, route confirmed",
+        "price_impact": "+40%"
+      },
+      {
+        "date": "2021-09",
+        "event_tr": "Yenişehir imar planı onaylandı",
+        "event_en": "Yenişehir zoning approved",
+        "price_impact": "+25%"
+      },
+      {
+        "date": "2022-03",
+        "event_tr": "Metro ihalesi açıldı",
+        "event_en": "Metro line tendered",
+        "price_impact": "+15%"
+      },
+      {
+        "date": "2024-01",
+        "event_tr": "Köprü ayakları görünür hale geldi",
+        "event_en": "Bridge foundations visible",
+        "price_impact": "+20%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2011,
+          "min": 8,
+          "max": 12,
+          "note": "Pre-announcement"
+        },
+        {
+          "year": 2016,
+          "min": 25,
+          "max": 45,
+          "note": "Route speculation"
+        },
+        {
+          "year": 2019,
+          "min": 80,
+          "max": 150,
+          "note": "Route confirmed"
+        },
+        {
+          "year": 2021,
+          "min": 180,
+          "max": 280,
+          "note": "ÇED approved"
+        },
+        {
+          "year": 2023,
+          "min": 320,
+          "max": 480,
+          "note": "Zoning updates"
+        },
+        {
+          "year": 2026,
+          "min": 420,
+          "max": 680,
+          "note": "Current — bridge foundations visible"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Sazlıbosna",
+        "district": "Arnavutköy",
+        "type": "land",
+        "price_usd_m2": 130,
+        "upside": "+80-120% (5yr)",
+        "risk": "medium"
+      },
+      {
+        "name": "Dursunköy",
+        "district": "Arnavutköy",
+        "type": "land",
+        "price_usd_m2": 95,
+        "upside": "+60-90% (5yr)",
+        "risk": "medium"
+      },
+      {
+        "name": "Kayabaşı",
+        "district": "Başakşehir",
+        "type": "residential",
+        "price_usd_m2": 850,
+        "upside": "+35-50% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Ispartakule",
+        "district": "Küçükçekmece",
+        "type": "commercial",
+        "price_usd_m2": 1200,
+        "upside": "+25-40% (2yr)",
+        "risk": "low"
+      }
+    ],
+    "risk_factors": [
+      "Project timeline uncertain — political dependency",
+      "Agricultural land requires rezoning approval",
+      "SIT and forest areas excluded from development",
+      "Hisseli (shared) titles require legal due diligence"
+    ],
+    "tradia_verdict": "WATCH — Position now in Ispartakule commercial (low risk, immediate development rights). Monitor Sazlıbosna for rezoning signals."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-04T09:13:43.420790+00:00"
+}

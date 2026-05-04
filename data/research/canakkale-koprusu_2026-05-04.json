@@ -1,0 +1,129 @@
+{
+  "project_id": "canakkale-koprusu",
+  "project_name": "Çanakkale 1915 Köprüsü Etki Bölgesi",
+  "status": "active",
+  "tradia_score": 81,
+  "districts": [
+    "Çanakkale",
+    "Lapseki",
+    "Gelibolu",
+    "Biga"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "canakkale-koprusu",
+    "name": "Çanakkale 1915 Köprüsü Etki Bölgesi",
+    "status": "active",
+    "tradia_score": 81,
+    "summary_en": "World's longest suspension bridge opened March 2022. Connects European and Asian sides of Dardanelles. Transforms Çanakkale, Lapseki and Gelibolu into accessible investment zones.",
+    "summary_ru": "Самый длинный подвесной мост в мире открылся в марте 2022 года. Соединяет европейский и азиатский берега Дарданелл. Превращает Чанаккале, Лапсеки и Гелиболу в доступные инвестиционные зоны.",
+    "summary_ar": "أطول جسر معلق في العالم افتُتح في مارس 2022. يربط الجانبين الأوروبي والآسيوي من الدردنيل. يحوّل جناق قلعة ولبسكي وجيليبولو إلى مناطق استثمارية يسهل الوصول إليها.",
+    "summary_tr": "Mart 2022'de açılan dünyanın en uzun asma köprüsü. Çanakkale Boğazı'nın Avrupa ve Asya yakalarını birleştiriyor. Çanakkale, Lapseki ve Gelibolu'yu erişilebilir yatırım bölgelerine dönüştürüyor.",
+    "key_events": [
+      {
+        "date": "2017-03",
+        "event_en": "Construction started — land prices react",
+        "price_impact": "+35%"
+      },
+      {
+        "date": "2020-01",
+        "event_en": "Bridge towers completed",
+        "price_impact": "+20%"
+      },
+      {
+        "date": "2022-03",
+        "event_en": "Bridge opened to traffic",
+        "price_impact": "+45%"
+      },
+      {
+        "date": "2023-06",
+        "event_en": "Tourism numbers triple in Çanakkale",
+        "price_impact": "+25%"
+      },
+      {
+        "date": "2024-09",
+        "event_en": "Industrial investment zone announced Lapseki",
+        "price_impact": "+30%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2016,
+          "min": 12,
+          "max": 25,
+          "note": "Pre-bridge baseline"
+        },
+        {
+          "year": 2018,
+          "min": 35,
+          "max": 65,
+          "note": "Construction effect"
+        },
+        {
+          "year": 2020,
+          "min": 65,
+          "max": 120,
+          "note": "Towers complete"
+        },
+        {
+          "year": 2022,
+          "min": 140,
+          "max": 260,
+          "note": "Bridge opened"
+        },
+        {
+          "year": 2024,
+          "min": 220,
+          "max": 420,
+          "note": "Tourism + industry"
+        },
+        {
+          "year": 2026,
+          "min": 280,
+          "max": 520,
+          "note": "Current"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Lapseki",
+        "district": "Çanakkale",
+        "type": "industrial_land",
+        "price_usd_m2": 85,
+        "upside": "+60-90% (4yr)",
+        "risk": "medium"
+      },
+      {
+        "name": "Gelibolu",
+        "district": "Çanakkale",
+        "type": "tourism_commercial",
+        "price_usd_m2": 140,
+        "upside": "+40-60% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Çanakkale merkez",
+        "district": "Çanakkale",
+        "type": "residential",
+        "price_usd_m2": 380,
+        "upside": "+25-40% (2yr)",
+        "risk": "low"
+      }
+    ],
+    "risk_factors": [
+      "Seasonal tourism dependency",
+      "Limited public transport beyond bridge",
+      "Agricultural land conversion restrictions"
+    ],
+    "tradia_verdict": "WATCH — Lapseki industrial land strongest long-term play. Gelibolu tourism commercial showing immediate momentum."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-04T09:14:29.680221+00:00"
+}

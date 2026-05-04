@@ -1,0 +1,58 @@
+{
+  "project_id": "bursa-nilufer",
+  "project_name": "Bursa Nilüfer Teknoloji ve Sanayi Bölgesi",
+  "status": "active",
+  "tradia_score": 83,
+  "districts": [
+    "Nilüfer",
+    "Osmangazi",
+    "Gemlik"
+  ],
+  "news_items": [
+    {
+      "title": "Bursa'da otomobilin çarptığı yaya ağır yaralandı",
+      "link": "https://www.hurriyet.com.tr/gundem/bursada-otomobilin-carptigi-yaya-agir-yaralandi-43164701",
+      "published": "Sun, 03 May 2026 05:47:15 Z",
+      "summary": "BURSA'nın Osmangazi ilçesinde yolun karşısına geçmeye çalışan M.B. (46), otomobilin çarpması sonucu ağır yaralandı. Kazanın ardından aracını park ederek kaçan sürücü G.U., polis tarafından yakalanırken, yapılan kontrolde 1.34 promil alkollü olduğu tespit edildi.",
+      "project_id": "bursa-nilufer",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T07:31:08.212733+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Osmangazi"
+        ],
+        "price_signal": "0%",
+        "summary": "A pedestrian was seriously injured in a hit-and-run accident in Osmangazi district, Bursa, with the drunk driver later apprehended by police, having no significant impact on property prices in the Nilüfer Technology and Industrial Zone."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Bursa'da otomobilin çarptığı yaya ağır yaralandı",
+    "link": "https://www.hurriyet.com.tr/gundem/bursada-otomobilin-carptigi-yaya-agir-yaralandi-43164701",
+    "published": "Sun, 03 May 2026 05:47:15 Z",
+    "summary": "BURSA'nın Osmangazi ilçesinde yolun karşısına geçmeye çalışan M.B. (46), otomobilin çarpması sonucu ağır yaralandı. Kazanın ardından aracını park ederek kaçan sürücü G.U., polis tarafından yakalanırken, yapılan kontrolde 1.34 promil alkollü olduğu tespit edildi.",
+    "project_id": "bursa-nilufer",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-03T07:31:08.212733+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Osmangazi"
+      ],
+      "price_signal": "0%",
+      "summary": "A pedestrian was seriously injured in a hit-and-run accident in Osmangazi district, Bursa, with the drunk driver later apprehended by police, having no significant impact on property prices in the Nilüfer Technology and Industrial Zone."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T07:31:13.205933+00:00"
+}

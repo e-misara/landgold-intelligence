@@ -1,0 +1,72 @@
+{
+  "project_id": "gaziantep-osb-ihracat",
+  "project_name": "Gaziantep OSB İhracat Merkezi",
+  "status": "active",
+  "tradia_score": 83,
+  "districts": [
+    "Gaziantep",
+    "Nizip",
+    "İslahiye"
+  ],
+  "news_items": [
+    {
+      "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+      "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+      "published": "Sun, 03 May 2026 10:03:01 +0300",
+      "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+      "project_id": "gaziantep-osb-ihracat",
+      "source_name": "Sabah Ekonomi",
+      "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "fetched_at": "2026-05-03T08:45:57.499289+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "long-term",
+        "affected_zones": [
+          "Gaziantep OSB",
+          "Şehitkamil",
+          "Şahinbey",
+          "Islahiye",
+          "Nurdağı",
+          "Osmaniye",
+          "Adana",
+          "Mersin"
+        ],
+        "price_signal": "+8%",
+        "summary": "Turkey's Transport Minister reviewed progress on the Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, which is expected to boost property values and logistics appeal around Gaziantep OSB İhracat Merkezi over the long term."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+    "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+    "published": "Sun, 03 May 2026 10:03:01 +0300",
+    "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+    "project_id": "gaziantep-osb-ihracat",
+    "source_name": "Sabah Ekonomi",
+    "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+    "fetched_at": "2026-05-03T08:45:57.499289+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "positive",
+      "urgency": "long-term",
+      "affected_zones": [
+        "Gaziantep OSB",
+        "Şehitkamil",
+        "Şahinbey",
+        "Islahiye",
+        "Nurdağı",
+        "Osmaniye",
+        "Adana",
+        "Mersin"
+      ],
+      "price_signal": "+8%",
+      "summary": "Turkey's Transport Minister reviewed progress on the Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, which is expected to boost property values and logistics appeal around Gaziantep OSB İhracat Merkezi over the long term."
+    }
+  },
+  "overall_sentiment": "positive",
+  "price_signal_avg": 8.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:46:03.216070+00:00"
+}

@@ -1,0 +1,62 @@
+{
+  "project_id": "gaziantep-osb-ihracat",
+  "project_name": "Gaziantep OSB İhracat Merkezi",
+  "status": "active",
+  "tradia_score": 83,
+  "districts": [
+    "Gaziantep",
+    "Nizip",
+    "İslahiye"
+  ],
+  "news_items": [
+    {
+      "title": "Gaziantep ve Şanlıurfa'da \"süper hücre\" fırtınası... Bir ölü, 40 yaralı!",
+      "link": "https://www.hurriyet.com.tr/gundem/gaziantepte-super-hucre-firtinasi-catilar-uctu-dereler-tasti-43165276",
+      "published": "Sun, 03 May 2026 16:38:00 Z",
+      "summary": "Gaziantep ve Şanlıurfa kent genelinde \"süper hücre\" fırtınası etkili oldu. Aynı anda bastıran yağmur, dolu, hortum ve fırtına sonrası çatılar uçtu, dereler taştı, ağaçlar kökünden söküldü. Gaziantep, Şanlıurfa ve Afyonkarahisar'da hasar gören okullar ve kar yağışı nedeniyle bazı ilçelerde eğitime 1 gün ara verildi. Şanlıurfa Valiliği, kent genelinde etkili olan fırtınada 1 kişinin hayatını kaybettiğini, 40 kişinin de yaralandığını açıkladı.",
+      "project_id": "gaziantep-osb-ihracat",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:15:48.533548+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Gaziantep geneli",
+          "Şanlıurfa geneli",
+          "Gaziantep OSB"
+        ],
+        "price_signal": "-3%",
+        "summary": "A severe supercell storm caused widespread structural damage, flooding, and casualties across Gaziantep and Şanlıurfa, negatively impacting property values in affected areas including the OSB export center zone."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Gaziantep ve Şanlıurfa'da \"süper hücre\" fırtınası... Bir ölü, 40 yaralı!",
+    "link": "https://www.hurriyet.com.tr/gundem/gaziantepte-super-hucre-firtinasi-catilar-uctu-dereler-tasti-43165276",
+    "published": "Sun, 03 May 2026 16:38:00 Z",
+    "summary": "Gaziantep ve Şanlıurfa kent genelinde \"süper hücre\" fırtınası etkili oldu. Aynı anda bastıran yağmur, dolu, hortum ve fırtına sonrası çatılar uçtu, dereler taştı, ağaçlar kökünden söküldü. Gaziantep, Şanlıurfa ve Afyonkarahisar'da hasar gören okullar ve kar yağışı nedeniyle bazı ilçelerde eğitime 1 gün ara verildi. Şanlıurfa Valiliği, kent genelinde etkili olan fırtınada 1 kişinin hayatını kaybettiğini, 40 kişinin de yaralandığını açıkladı.",
+    "project_id": "gaziantep-osb-ihracat",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-04T09:15:48.533548+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "negative",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Gaziantep geneli",
+        "Şanlıurfa geneli",
+        "Gaziantep OSB"
+      ],
+      "price_signal": "-3%",
+      "summary": "A severe supercell storm caused widespread structural damage, flooding, and casualties across Gaziantep and Şanlıurfa, negatively impacting property values in affected areas including the OSB export center zone."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -3.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:15:54.506719+00:00"
+}

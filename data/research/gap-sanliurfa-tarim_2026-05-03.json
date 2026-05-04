@@ -1,0 +1,98 @@
+{
+  "project_id": "gap-sanliurfa-tarim",
+  "project_name": "GAP Şanlıurfa Tarım Dönüşümü",
+  "status": "active",
+  "tradia_score": 74,
+  "districts": [
+    "Şanlıurfa",
+    "Harran",
+    "Birecik"
+  ],
+  "news_items": [
+    {
+      "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+      "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+      "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+      "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+      "project_id": "gap-sanliurfa-tarim",
+      "source_name": "BİK Resmi İlanlar",
+      "source_url": "https://bik.gov.tr/rss",
+      "fetched_at": "2026-05-03T08:46:24.113394+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Şanlıurfa Merkez"
+        ],
+        "price_signal": "+0%",
+        "summary": "A routine official visit by the Press Advertisement Authority management to Şanlıurfa Governor has no direct impact on property prices in the region."
+      }
+    },
+    {
+      "title": "Evini basan alacaklıları tarafından tabancayla vurularak öldürüldü",
+      "link": "https://www.hurriyet.com.tr/gundem/evini-basan-alacaklilari-tarafindan-tabancayla-vurularak-olduruldu-43164677",
+      "published": "Sat, 02 May 2026 23:28:57 Z",
+      "summary": "Şanlıurfa’nın Halfeti ilçesinde, alacaklıları tarafından evine baskın yapılıp, silahlı saldırıya uğrayan Mehmet Arslan (58), hayatını kaybetti.",
+      "project_id": "gap-sanliurfa-tarim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:46:24.607826+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Halfeti"
+        ],
+        "price_signal": "-2%",
+        "summary": "A fatal armed attack by creditors in Halfeti district of Şanlıurfa raises security concerns that may negatively impact local property values."
+      }
+    },
+    {
+      "title": "Şanlıurfa'da feci kaza: 2 ölü, 2 yaralı",
+      "link": "https://www.hurriyet.com.tr/gundem/sanliurfada-feci-kaza-2-olu-2-yarali-43164514",
+      "published": "Sat, 02 May 2026 17:20:00 Z",
+      "summary": "Şanlıurfa’nın Siverek ilçesinde meydana gelen zincirleme trafik kazasında 2 kişi hayatını kaybetti, 2 kişi yaralandı.",
+      "project_id": "gap-sanliurfa-tarim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:46:24.607858+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Siverek"
+        ],
+        "price_signal": "0%",
+        "summary": "A fatal chain-reaction traffic accident in Siverek district of Şanlıurfa resulted in 2 deaths and 2 injuries, with no meaningful impact on property prices."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+    "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+    "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+    "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+    "project_id": "gap-sanliurfa-tarim",
+    "source_name": "BİK Resmi İlanlar",
+    "source_url": "https://bik.gov.tr/rss",
+    "fetched_at": "2026-05-03T08:46:24.113394+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Şanlıurfa Merkez"
+      ],
+      "price_signal": "+0%",
+      "summary": "A routine official visit by the Press Advertisement Authority management to Şanlıurfa Governor has no direct impact on property prices in the region."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": -0.7,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:46:33.838414+00:00"
+}

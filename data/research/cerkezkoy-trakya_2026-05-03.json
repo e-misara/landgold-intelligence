@@ -1,0 +1,91 @@
+{
+  "project_id": "cerkezkoy-trakya",
+  "project_name": "Çerkezköy-Trakya Sanayi Aksı",
+  "status": "active",
+  "tradia_score": 78,
+  "districts": [
+    "Çerkezköy",
+    "Tekirdağ",
+    "Muratlı",
+    "Çorlu"
+  ],
+  "news_items": [
+    {
+      "title": "TPAO'nun 4 şehirdeki bazı sahaları için kamulaştırma kararı alındı",
+      "link": "https://www.aa.com.tr/tr/ekonomi/tpaonun-4-sehirdeki-bazi-sahalari-icin-kamulastirma-karari-alindi/3925402",
+      "published": "Sun, 03 May 2026 10:04:14 +0300",
+      "summary": "Türkiye Petrolleri Anonim Ortaklığının (TPAO) Tekirdağ, İstanbul, Kırklareli ve Adıyaman'da bulunan sahaları kamulaştırılacak.",
+      "project_id": "cerkezkoy-trakya",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-03T07:30:57.624833+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "medium",
+        "affected_zones": [
+          "Tekirdağ",
+          "Çerkezköy",
+          "Kırklareli",
+          "İstanbul",
+          "Adıyaman"
+        ],
+        "price_signal": "+1%",
+        "summary": "TPAO's expropriation of oil fields in Tekirdağ, Istanbul, Kırklareli, and Adıyaman has a marginally positive effect on the Çerkezköy-Trakya industrial corridor as land reallocation may open new development opportunities."
+      }
+    },
+    {
+      "title": "TPAO'dan 4 şehirde kamulaştırma kararı",
+      "link": "https://www.sabah.com.tr/ekonomi/tpaodan-4-sehirde-kamulastirma-karari-7575852",
+      "published": "Sun, 03 May 2026 10:06:40 +0300",
+      "summary": "Türkiye Petrolleri Anonim Ortaklığının (TPAO) Tekirdağ, İstanbul, Kırklareli ve Adıyaman'da bulunan sahaları kamulaştırılacak. Devamı için tıklayınız",
+      "project_id": "cerkezkoy-trakya",
+      "source_name": "Sabah Ekonomi",
+      "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "fetched_at": "2026-05-03T07:30:59.816653+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Tekirdağ",
+          "Çerkezköy",
+          "Kırklareli",
+          "İstanbul",
+          "Adıyaman"
+        ],
+        "price_signal": "-5%",
+        "summary": "TPAO's expropriation decision across four cities including Tekirdağ creates uncertainty and negative pressure on property values in affected zones along the Çerkezköy-Trakya industrial corridor."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "TPAO'nun 4 şehirdeki bazı sahaları için kamulaştırma kararı alındı",
+    "link": "https://www.aa.com.tr/tr/ekonomi/tpaonun-4-sehirdeki-bazi-sahalari-icin-kamulastirma-karari-alindi/3925402",
+    "published": "Sun, 03 May 2026 10:04:14 +0300",
+    "summary": "Türkiye Petrolleri Anonim Ortaklığının (TPAO) Tekirdağ, İstanbul, Kırklareli ve Adıyaman'da bulunan sahaları kamulaştırılacak.",
+    "project_id": "cerkezkoy-trakya",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-03T07:30:57.624833+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "medium",
+      "affected_zones": [
+        "Tekirdağ",
+        "Çerkezköy",
+        "Kırklareli",
+        "İstanbul",
+        "Adıyaman"
+      ],
+      "price_signal": "+1%",
+      "summary": "TPAO's expropriation of oil fields in Tekirdağ, Istanbul, Kırklareli, and Adıyaman has a marginally positive effect on the Çerkezköy-Trakya industrial corridor as land reallocation may open new development opportunities."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -2.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T07:31:06.755666+00:00"
+}

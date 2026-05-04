@@ -1,0 +1,18 @@
+{
+  "project_id": "gebze-oiz",
+  "project_name": "Gebze Organize Sanayi Bölgesi Genişlemesi",
+  "status": "active",
+  "tradia_score": 82,
+  "districts": [
+    "Gebze",
+    "Dilovası",
+    "Darıca"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-02T20:05:26.637312+00:00"
+}

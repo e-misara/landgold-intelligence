@@ -1,0 +1,73 @@
+{
+  "project_id": "izmir-alsancak-gelisim",
+  "project_name": "İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı",
+  "status": "active",
+  "tradia_score": 79,
+  "districts": [
+    "Alsancak",
+    "Bayraklı",
+    "Karşıyaka",
+    "Bornova"
+  ],
+  "news_items": [
+    {
+      "title": "İstanbul Boğazı'nda gemi arızası: Deniz trafiği çift yönlü durdu",
+      "link": "https://www.hurriyet.com.tr/gundem/istanbul-bogazinda-gemi-arizasi-deniz-trafigi-cift-yonlu-durdu-43165224",
+      "published": "Sun, 03 May 2026 14:13:00 Z",
+      "summary": "İstanbul Boğazı'ndan geçiş yapan Panama bayraklı kuru yük gemisi makine arızası yaptı. Boğaz trafiği çift yönlü askıya alınırken gemi bölgeye sevk edilen Kıyı Emniyeti Genel Müdürlüğü'ne bağlı ekiplerin müdahalesiyle 'Ahırkapı' açıklarına çekiliyor.",
+      "project_id": "izmir-alsancak-gelisim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:14:55.364444+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "A Panama-flagged cargo ship suffered engine failure in the Istanbul Strait, temporarily halting two-way maritime traffic, with no direct relevance to the İzmir Alsancak-Bayraklı urban transformation project."
+      }
+    },
+    {
+      "title": "11 SORUDA SAÇ BOYALARI DOSYASI | Ciddi alerjik reaksiyona neden olabilir mi? Kimler risk altında? Saçları boyamadan önce nelere dikkat edilmeli?",
+      "link": "https://www.hurriyet.com.tr/kelebek/saglik/11-soruda-sac-boyalari-dosyasi-ciddi-alerjik-reaksiyona-neden-olabilir-mi-kimler-risk-altinda-saclari-boyamadan-once-nelere-dikkat-edilmeli-42315520",
+      "published": "Sun, 20 Aug 2023 05:56:00 Z",
+      "summary": "Geçtiğimiz günlerde İzmir’de evde saçını boyarken fenalaşıp hayatını kaybeden Deniz Demirbayraklı'nın, saç boyasına alerjik reaksiyon gösterdiği iddia edildi. Ölüm nedeni adli tıpta yapılacak otopsinin ardından belirlenecek olan Demirbayraklı'nın babası, kızının saçını ilk defa boyamadığını ve mevsimsel alerji dışında başka bir şeye alerjisi olmadığını belirtti. Peki saç boyası gerçekten böyle ciddi bir reaksiyona neden olabilir mi? Defalarca kullanılmasına rağmen bir gün aniden alerji gelişebil",
+      "project_id": "izmir-alsancak-gelisim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:14:55.364578+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "This news article is about hair dye allergies and a related death in İzmir, with no relevance to the İzmir Alsancak-Bayraklı Urban Transformation Axis real estate project."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "İstanbul Boğazı'nda gemi arızası: Deniz trafiği çift yönlü durdu",
+    "link": "https://www.hurriyet.com.tr/gundem/istanbul-bogazinda-gemi-arizasi-deniz-trafigi-cift-yonlu-durdu-43165224",
+    "published": "Sun, 03 May 2026 14:13:00 Z",
+    "summary": "İstanbul Boğazı'ndan geçiş yapan Panama bayraklı kuru yük gemisi makine arızası yaptı. Boğaz trafiği çift yönlü askıya alınırken gemi bölgeye sevk edilen Kıyı Emniyeti Genel Müdürlüğü'ne bağlı ekiplerin müdahalesiyle 'Ahırkapı' açıklarına çekiliyor.",
+    "project_id": "izmir-alsancak-gelisim",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-04T09:14:55.364444+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [],
+      "price_signal": "0%",
+      "summary": "A Panama-flagged cargo ship suffered engine failure in the Istanbul Strait, temporarily halting two-way maritime traffic, with no direct relevance to the İzmir Alsancak-Bayraklı urban transformation project."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:15:02.585937+00:00"
+}

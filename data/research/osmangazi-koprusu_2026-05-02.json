@@ -1,0 +1,19 @@
+{
+  "project_id": "osmangazi-koprusu",
+  "project_name": "Osmangazi Köprüsü — Gemlik Körfezi Aksı",
+  "status": "active",
+  "tradia_score": 79,
+  "districts": [
+    "Gemlik",
+    "Orhangazi",
+    "İznik",
+    "Yalova"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-02T20:05:46.467630+00:00"
+}

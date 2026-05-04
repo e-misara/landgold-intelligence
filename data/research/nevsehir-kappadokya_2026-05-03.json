@@ -1,0 +1,140 @@
+{
+  "project_id": "nevsehir-kappadokya",
+  "project_name": "Nevşehir Kapadokya Turizm Yatırım Bölgesi",
+  "status": "active",
+  "tradia_score": 84,
+  "districts": [
+    "Göreme",
+    "Ürgüp",
+    "Uçhisar",
+    "Avanos"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "nevsehir-kappadokya",
+    "name": "Nevşehir — Kapadokya Turizm Yatırım Bölgesi",
+    "name_en": "Nevsehir — Cappadocia Tourism Investment Zone",
+    "category": "tourism",
+    "status": "active",
+    "tradia_score": 84,
+    "summary_en": "Cappadocia emerging as Turkey's most unique tourism investment market. 340 boutique hotel licenses issued Q1 2024 alone. Hot air balloon tourism generating 18%+ Airbnb yields. Land with accommodation license potential at significant premium.",
+    "summary_ru": "Каппадокия становится наиболее уникальным туристическим инвестиционным рынком Турции. В одном только 1 квартале 2024 года выдано 340 лицензий на бутик-отели. Воздухоплавание генерирует 18%+ доходность Airbnb.",
+    "summary_ar": "كابادوكيا تبرز كأكثر أسواق الاستثمار السياحي تميزاً في تركيا. 340 ترخيص فندق بوتيك في الربع الأول من 2024 وحده. سياحة البالون يولّد عوائد Airbnb تتجاوز 18%.",
+    "summary_tr": "Kapadokya Türkiye'nin en özgün turizm yatırım pazarı olarak öne çıkıyor. Sadece 2024 ilk çeyreğinde 340 butik otel lisansı verildi. Balon turizminde Airbnb getirisi yüzde 18 üzerinde.",
+    "key_events": [
+      {
+        "date": "2021-03",
+        "event_en": "UNESCO application for expanded heritage zone",
+        "price_impact": "+25%"
+      },
+      {
+        "date": "2022-08",
+        "event_en": "International direct flights — 8 new routes",
+        "price_impact": "+20%"
+      },
+      {
+        "date": "2023-11",
+        "event_en": "Boutique hotel licenses — highest demand ever",
+        "price_impact": "+35%"
+      },
+      {
+        "date": "2024-01",
+        "event_en": "340 licenses Q1 — record quarterly issuance",
+        "price_impact": "+28%"
+      },
+      {
+        "date": "2025-06",
+        "event_en": "Göreme cave dwelling renovation program",
+        "price_impact": "+22%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2018,
+          "min": 200,
+          "max": 500,
+          "note": "Pre-boom"
+        },
+        {
+          "year": 2020,
+          "min": 350,
+          "max": 800,
+          "note": "COVID — domestic tourism"
+        },
+        {
+          "year": 2022,
+          "min": 700,
+          "max": 1600,
+          "note": "International return"
+        },
+        {
+          "year": 2023,
+          "min": 1200,
+          "max": 2800,
+          "note": "License premium"
+        },
+        {
+          "year": 2024,
+          "min": 1800,
+          "max": 4200,
+          "note": "Record licenses"
+        },
+        {
+          "year": 2026,
+          "min": 2400,
+          "max": 5500,
+          "note": "Current"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Göreme",
+        "district": "Nevşehir",
+        "type": "cave_boutique",
+        "price_usd_m2": 4800,
+        "upside": "+20-30% (2yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Ürgüp",
+        "district": "Nevşehir",
+        "type": "boutique_hotel_land",
+        "price_usd_m2": 2200,
+        "upside": "+35-50% (3yr)",
+        "risk": "medium"
+      },
+      {
+        "name": "Uçhisar",
+        "district": "Nevşehir",
+        "type": "viewpoint_villa",
+        "price_usd_m2": 3500,
+        "upside": "+25-38% (2yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Avanos",
+        "district": "Nevşehir",
+        "type": "guesthouse_land",
+        "price_usd_m2": 800,
+        "upside": "+50-70% (4yr)",
+        "risk": "medium"
+      }
+    ],
+    "risk_factors": [
+      "UNESCO restrictions limit development options",
+      "Seasonal — 85% occupancy April-October only",
+      "Cave property maintenance costs high",
+      "License availability tightening"
+    ],
+    "tradia_verdict": "BUY — Ürgüp boutique hotel land strongest entry. Avanos for long-term hold. Göreme cave properties for immediate rental yield but high entry price."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-03T07:45:59.487464+00:00"
+}

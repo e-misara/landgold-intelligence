@@ -1,0 +1,19 @@
+{
+  "project_id": "yavuz-sultan-selim-koprusu",
+  "project_name": "Yavuz Sultan Selim Köprüsü Etki Bölgesi",
+  "status": "active",
+  "tradia_score": 80,
+  "districts": [
+    "Sarıyer",
+    "Beykoz",
+    "Garipçe",
+    "Poyrazköy"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-04T09:14:17.398142+00:00"
+}

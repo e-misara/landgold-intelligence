@@ -1,0 +1,593 @@
+{
+  "date": "2026-05-03",
+  "region": "Ege",
+  "projects_analyzed": 5,
+  "top_opportunity": {
+    "project_id": "mugla-bodrum-marmaris",
+    "project_name": "Muğla Lüks Kıyı Kuşağı",
+    "tradia_score": 91,
+    "sentiment": "neutral",
+    "price_signal": 0.0
+  },
+  "projects": [
+    {
+      "project_id": "antalya-turizm-kusagi",
+      "project_name": "Antalya Turizm Kuşağı Gelişim Aksı",
+      "status": "active",
+      "tradia_score": 88,
+      "districts": [
+        "Antalya",
+        "Alanya",
+        "Serik",
+        "Kaş"
+      ],
+      "news_items": [
+        {
+          "title": "Genç iletişimciler 15 Temmuz’u yeniden manşetlere taşıdı",
+          "link": "https://bik.gov.tr/kurumsal-haberler/genc-iletisimciler-15-temmuzu-yeniden-mansetlere-tasidi/",
+          "published": "Wed, 29 Apr 2026 16:35:52 +0000",
+          "summary": "Basın İlan Kurumu tarafından ‘Hafızayı Koru, Hakikati Yaz’ temasıyla iletişim fakültelerinde öğrenim gören geleceğin gazetecilerine yönelik hayata geçirilen ‘15 Temmuz Manşetleri Gazetecilik Atölyesi’nin ilk etkinliği Antalya’da gerçekleştirildi.",
+          "project_id": "antalya-turizm-kusagi",
+          "source_name": "BİK Resmi İlanlar",
+          "source_url": "https://bik.gov.tr/rss",
+          "fetched_at": "2026-05-03T07:45:31.984064+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [],
+            "price_signal": "0%",
+            "summary": "A journalism workshop themed around the July 15 coup attempt was held in Antalya for communication faculty students, with no direct relevance to the Antalya Turizm Kuşağı Gelişim Aksı project or property prices."
+          }
+        },
+        {
+          "title": "Cebinden telefonunu çıkarırken düşürdü: Duyarlı vatandaş sayesinde parasına kavuştu",
+          "link": "https://www.hurriyet.com.tr/gundem/cebinden-telefonunu-cikarirken-dusurdu-duyarli-vatandas-sayesinde-parasina-kavustu-43164206",
+          "published": "Sat, 02 May 2026 09:33:08 Z",
+          "summary": "Antalya’nın Alanya ilçesinde iş yerinin önünde cebindeki 700 avroyu düşüren Hıdır Ersan, bir kadın tarafından bulunup zabıtaya teslim edilmesiyle parasına ulaşmanın mutluluğunu yaşadı.",
+          "project_id": "antalya-turizm-kusagi",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T07:45:32.687505+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Alanya"
+            ],
+            "price_signal": "+0%",
+            "summary": "A citizen in Alanya, Antalya lost 700 euros which was found and returned by a vigilant woman, an event unrelated to property market dynamics."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Genç iletişimciler 15 Temmuz’u yeniden manşetlere taşıdı",
+        "link": "https://bik.gov.tr/kurumsal-haberler/genc-iletisimciler-15-temmuzu-yeniden-mansetlere-tasidi/",
+        "published": "Wed, 29 Apr 2026 16:35:52 +0000",
+        "summary": "Basın İlan Kurumu tarafından ‘Hafızayı Koru, Hakikati Yaz’ temasıyla iletişim fakültelerinde öğrenim gören geleceğin gazetecilerine yönelik hayata geçirilen ‘15 Temmuz Manşetleri Gazetecilik Atölyesi’nin ilk etkinliği Antalya’da gerçekleştirildi.",
+        "project_id": "antalya-turizm-kusagi",
+        "source_name": "BİK Resmi İlanlar",
+        "source_url": "https://bik.gov.tr/rss",
+        "fetched_at": "2026-05-03T07:45:31.984064+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [],
+          "price_signal": "0%",
+          "summary": "A journalism workshop themed around the July 15 coup attempt was held in Antalya for communication faculty students, with no direct relevance to the Antalya Turizm Kuşağı Gelişim Aksı project or property prices."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T07:45:40.785588+00:00"
+    },
+    {
+      "project_id": "mugla-bodrum-marmaris",
+      "project_name": "Muğla Lüks Kıyı Kuşağı",
+      "status": "active",
+      "tradia_score": 91,
+      "districts": [
+        "Bodrum",
+        "Marmaris",
+        "Fethiye",
+        "Göcek"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": {
+        "id": "mugla-bodrum-marmaris",
+        "name": "Muğla — Bodrum, Marmaris, Fethiye Lüks Kuşağı",
+        "name_en": "Mugla Luxury Coast — Bodrum, Marmaris, Fethiye",
+        "category": "luxury_tourism",
+        "status": "active",
+        "tradia_score": 91,
+        "summary_en": "Turkey's highest-value coastal real estate market. Bodrum consistently outperforms all Turkish markets in USD terms. International celebrity and UHNW buyer demand. Limited coastal supply driving prices to Aegean Mediterranean levels.",
+        "summary_ru": "Рынок прибрежной недвижимости с самыми высокими ценами в Турции. Бодрум стабильно опережает все турецкие рынки в долларовом выражении. Спрос со стороны международных знаменитостей и UHNW-покупателей.",
+        "summary_ar": "سوق العقارات الساحلية الأعلى قيمة في تركيا. بودروم يتفوق باستمرار على جميع الأسواق التركية بالدولار. طلب من المشاهير الدوليين والأثرياء جداً.",
+        "summary_tr": "Türkiye'nin en yüksek değerli kıyı gayrimenkul piyasası. Bodrum USD bazında tüm Türk piyasalarını sürekli geride bırakıyor. Uluslararası ünlü ve UHNW alıcı talebi. Sınırlı kıyı arzı fiyatları Ege Akdeniz seviyelerine taşıyor.",
+        "key_events": [
+          {
+            "date": "2021-08",
+            "event_en": "Bodrum villa prices surpass $10,000/m² for first time",
+            "price_impact": "+45%"
+          },
+          {
+            "date": "2022-05",
+            "event_en": "International yacht marina capacity doubled",
+            "price_impact": "+20%"
+          },
+          {
+            "date": "2023-07",
+            "event_en": "Fethiye Ölüdeniz designated UNESCO heritage zone",
+            "price_impact": "+30%"
+          },
+          {
+            "date": "2024-03",
+            "event_en": "Bodrum airport new terminal — capacity 8M/year",
+            "price_impact": "+18%"
+          },
+          {
+            "date": "2025-04",
+            "event_en": "Luxury brand hotels — Aman, Six Senses opening",
+            "price_impact": "+25%"
+          }
+        ],
+        "price_data": {
+          "currency": "USD",
+          "unit": "per_m2",
+          "data": [
+            {
+              "year": 2019,
+              "min": 2500,
+              "max": 5000,
+              "note": "Pre-COVID"
+            },
+            {
+              "year": 2021,
+              "min": 4500,
+              "max": 9000,
+              "note": "COVID boom"
+            },
+            {
+              "year": 2022,
+              "min": 6000,
+              "max": 12000,
+              "note": "Record prices"
+            },
+            {
+              "year": 2023,
+              "min": 7500,
+              "max": 15000,
+              "note": "UHNW demand"
+            },
+            {
+              "year": 2024,
+              "min": 9000,
+              "max": 18000,
+              "note": "Luxury brands"
+            },
+            {
+              "year": 2026,
+              "min": 11000,
+              "max": 22000,
+              "note": "Current"
+            }
+          ]
+        },
+        "hot_zones": [
+          {
+            "name": "Yalıkavak",
+            "district": "Bodrum",
+            "type": "luxury_villa",
+            "price_usd_m2": 12000,
+            "upside": "+18-25% (2yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Türkbükü",
+            "district": "Bodrum",
+            "type": "luxury_villa",
+            "price_usd_m2": 15000,
+            "upside": "+15-22% (2yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Göcek",
+            "district": "Fethiye",
+            "type": "marina_villa",
+            "price_usd_m2": 5500,
+            "upside": "+30-40% (3yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Hisarönü",
+            "district": "Fethiye",
+            "type": "villa_land",
+            "price_usd_m2": 1800,
+            "upside": "+40-60% (4yr)",
+            "risk": "medium"
+          },
+          {
+            "name": "İçmeler",
+            "district": "Marmaris",
+            "type": "apartment",
+            "price_usd_m2": 2200,
+            "upside": "+25-35% (2yr)",
+            "risk": "low"
+          }
+        ],
+        "risk_factors": [
+          "Highest entry prices in Turkey — capital intensive",
+          "Illiquid market — longer sale timelines",
+          "Coastal zoning extremely restrictive",
+          "Seasonal rental market — 4-5 month peak season only"
+        ],
+        "tradia_verdict": "BUY — Göcek marina and Hisarönü land offer best entry points for new investors. Yalıkavak and Türkbükü for UHNW capital preservation."
+      },
+      "data_source": "archive",
+      "research_date": "2026-05-03T07:45:44.481882+00:00"
+    },
+    {
+      "project_id": "izmir-lojistik-aksi",
+      "project_name": "İzmir Lojistik ve Sanayi Aksı",
+      "status": "active",
+      "tradia_score": 82,
+      "districts": [
+        "Torbalı",
+        "Kemalpaşa",
+        "Aliağa",
+        "Gaziemir"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": {
+        "id": "izmir-lojistik-aksi",
+        "name": "İzmir Lojistik ve Sanayi Aksı",
+        "name_en": "Izmir Logistics & Industrial Corridor",
+        "category": "industrial",
+        "status": "active",
+        "tradia_score": 82,
+        "summary_en": "Turkey's third largest city emerging as major logistics hub. New container port at Çandarlı (capacity 1.5M TEU) transforms İzmir's industrial geography. Torbalı and Kemalpaşa OSB zones seeing sustained foreign investment.",
+        "summary_ru": "Третий по величине город Турции становится крупным логистическим узлом. Новый контейнерный порт в Чандарлы (мощность 1,5 млн TEU) меняет промышленную географию Измира.",
+        "summary_ar": "ثالث أكبر مدينة في تركيا تبرز كمركز لوجستي رئيسي. ميناء حاويات جديد في تشاندارلي (طاقة 1.5 مليون وحدة) يحوّل الجغرافيا الصناعية لإزمير.",
+        "summary_tr": "Türkiye'nin üçüncü büyük şehri önemli bir lojistik merkez olarak öne çıkıyor. Çandarlı'daki yeni konteyner limanı (1,5 milyon TEU kapasitesi) İzmir'in sanayi coğrafyasını dönüştürüyor.",
+        "key_events": [
+          {
+            "date": "2021-09",
+            "event_en": "Çandarlı Port Phase 1 construction started",
+            "price_impact": "+22%"
+          },
+          {
+            "date": "2022-11",
+            "event_en": "Kemalpaşa OSB Phase 3 expansion — 450 new lots",
+            "price_impact": "+18%"
+          },
+          {
+            "date": "2023-06",
+            "event_en": "İzmir-Ankara high speed rail tender",
+            "price_impact": "+15%"
+          },
+          {
+            "date": "2024-02",
+            "event_en": "BMW supplier cluster established Torbalı",
+            "price_impact": "+25%"
+          },
+          {
+            "date": "2025-03",
+            "event_en": "Çandarlı Port first commercial operations",
+            "price_impact": "+30%"
+          }
+        ],
+        "price_data": {
+          "currency": "USD",
+          "unit": "per_m2",
+          "data": [
+            {
+              "year": 2019,
+              "min": 80,
+              "max": 150,
+              "note": "Industrial baseline"
+            },
+            {
+              "year": 2021,
+              "min": 140,
+              "max": 250,
+              "note": "Port announced"
+            },
+            {
+              "year": 2022,
+              "min": 200,
+              "max": 380,
+              "note": "OSB expansion"
+            },
+            {
+              "year": 2023,
+              "min": 280,
+              "max": 520,
+              "note": "Rail tender"
+            },
+            {
+              "year": 2024,
+              "min": 380,
+              "max": 680,
+              "note": "BMW cluster"
+            },
+            {
+              "year": 2026,
+              "min": 480,
+              "max": 850,
+              "note": "Current — port operational"
+            }
+          ]
+        },
+        "hot_zones": [
+          {
+            "name": "Torbalı OSB",
+            "district": "Torbalı",
+            "type": "industrial_land",
+            "price_usd_m2": 280,
+            "upside": "+40-60% (3yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Kemalpaşa OSB",
+            "district": "Kemalpaşa",
+            "type": "industrial_land",
+            "price_usd_m2": 320,
+            "upside": "+35-50% (3yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Çandarlı çevresi",
+            "district": "Aliağa",
+            "type": "logistics_land",
+            "price_usd_m2": 180,
+            "upside": "+55-80% (4yr)",
+            "risk": "medium"
+          },
+          {
+            "name": "Gaziemir",
+            "district": "İzmir",
+            "type": "commercial",
+            "price_usd_m2": 650,
+            "upside": "+20-30% (2yr)",
+            "risk": "low"
+          }
+        ],
+        "risk_factors": [
+          "Port operational delays possible",
+          "Environmental regulations near coastal industrial zones",
+          "Competition from Mersin port for cargo volume"
+        ],
+        "tradia_verdict": "BUY — Çandarlı port hinterland strongest long-term play. Torbalı and Kemalpaşa OSB zones offer immediate industrial demand with low risk."
+      },
+      "data_source": "archive",
+      "research_date": "2026-05-03T07:45:47.708532+00:00"
+    },
+    {
+      "project_id": "izmir-alsancak-gelisim",
+      "project_name": "İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı",
+      "status": "active",
+      "tradia_score": 79,
+      "districts": [
+        "Alsancak",
+        "Bayraklı",
+        "Karşıyaka",
+        "Bornova"
+      ],
+      "news_items": [
+        {
+          "title": "İzmir'de dehşet! 73 yaşındaki baba, oğlunu bıçaklayarak öldürdü",
+          "link": "https://www.hurriyet.com.tr/gundem/73-yasindaki-baba-oglunu-bicaklayarak-oldurdu-43164676",
+          "published": "Sun, 03 May 2026 04:30:00 Z",
+          "summary": "İzmir'in Bayraklı ilçesinde İ.A. (73), evde tartıştığı oğlu Kemal Arbasun’u (46) bıçaklayarak öldürdü.",
+          "project_id": "izmir-alsancak-gelisim",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T07:45:49.111789+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Bayraklı"
+            ],
+            "price_signal": "-1%",
+            "summary": "A violent domestic homicide in Bayraklı district may slightly dampen local buyer sentiment in the short term."
+          }
+        },
+        {
+          "title": "11 SORUDA SAÇ BOYALARI DOSYASI | Ciddi alerjik reaksiyona neden olabilir mi? Kimler risk altında? Saçları boyamadan önce nelere dikkat edilmeli?",
+          "link": "https://www.hurriyet.com.tr/kelebek/saglik/11-soruda-sac-boyalari-dosyasi-ciddi-alerjik-reaksiyona-neden-olabilir-mi-kimler-risk-altinda-saclari-boyamadan-once-nelere-dikkat-edilmeli-42315520",
+          "published": "Sun, 20 Aug 2023 05:56:00 Z",
+          "summary": "Geçtiğimiz günlerde İzmir’de evde saçını boyarken fenalaşıp hayatını kaybeden Deniz Demirbayraklı'nın, saç boyasına alerjik reaksiyon gösterdiği iddia edildi. Ölüm nedeni adli tıpta yapılacak otopsinin ardından belirlenecek olan Demirbayraklı'nın babası, kızının saçını ilk defa boyamadığını ve mevsimsel alerji dışında başka bir şeye alerjisi olmadığını belirtti. Peki saç boyası gerçekten böyle ciddi bir reaksiyona neden olabilir mi? Defalarca kullanılmasına rağmen bir gün aniden alerji gelişebil",
+          "project_id": "izmir-alsancak-gelisim",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T07:45:49.112160+00:00",
+          "relevance_score": 10,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [],
+            "price_signal": "0%",
+            "summary": "This news item is unrelated to real estate or the İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı project, covering a hair dye allergic reaction incident instead."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "İzmir'de dehşet! 73 yaşındaki baba, oğlunu bıçaklayarak öldürdü",
+        "link": "https://www.hurriyet.com.tr/gundem/73-yasindaki-baba-oglunu-bicaklayarak-oldurdu-43164676",
+        "published": "Sun, 03 May 2026 04:30:00 Z",
+        "summary": "İzmir'in Bayraklı ilçesinde İ.A. (73), evde tartıştığı oğlu Kemal Arbasun’u (46) bıçaklayarak öldürdü.",
+        "project_id": "izmir-alsancak-gelisim",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-03T07:45:49.111789+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "negative",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Bayraklı"
+          ],
+          "price_signal": "-1%",
+          "summary": "A violent domestic homicide in Bayraklı district may slightly dampen local buyer sentiment in the short term."
+        }
+      },
+      "overall_sentiment": "negative",
+      "price_signal_avg": -0.5,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T07:45:55.837801+00:00"
+    },
+    {
+      "project_id": "nevsehir-kappadokya",
+      "project_name": "Nevşehir Kapadokya Turizm Yatırım Bölgesi",
+      "status": "active",
+      "tradia_score": 84,
+      "districts": [
+        "Göreme",
+        "Ürgüp",
+        "Uçhisar",
+        "Avanos"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": {
+        "id": "nevsehir-kappadokya",
+        "name": "Nevşehir — Kapadokya Turizm Yatırım Bölgesi",
+        "name_en": "Nevsehir — Cappadocia Tourism Investment Zone",
+        "category": "tourism",
+        "status": "active",
+        "tradia_score": 84,
+        "summary_en": "Cappadocia emerging as Turkey's most unique tourism investment market. 340 boutique hotel licenses issued Q1 2024 alone. Hot air balloon tourism generating 18%+ Airbnb yields. Land with accommodation license potential at significant premium.",
+        "summary_ru": "Каппадокия становится наиболее уникальным туристическим инвестиционным рынком Турции. В одном только 1 квартале 2024 года выдано 340 лицензий на бутик-отели. Воздухоплавание генерирует 18%+ доходность Airbnb.",
+        "summary_ar": "كابادوكيا تبرز كأكثر أسواق الاستثمار السياحي تميزاً في تركيا. 340 ترخيص فندق بوتيك في الربع الأول من 2024 وحده. سياحة البالون يولّد عوائد Airbnb تتجاوز 18%.",
+        "summary_tr": "Kapadokya Türkiye'nin en özgün turizm yatırım pazarı olarak öne çıkıyor. Sadece 2024 ilk çeyreğinde 340 butik otel lisansı verildi. Balon turizminde Airbnb getirisi yüzde 18 üzerinde.",
+        "key_events": [
+          {
+            "date": "2021-03",
+            "event_en": "UNESCO application for expanded heritage zone",
+            "price_impact": "+25%"
+          },
+          {
+            "date": "2022-08",
+            "event_en": "International direct flights — 8 new routes",
+            "price_impact": "+20%"
+          },
+          {
+            "date": "2023-11",
+            "event_en": "Boutique hotel licenses — highest demand ever",
+            "price_impact": "+35%"
+          },
+          {
+            "date": "2024-01",
+            "event_en": "340 licenses Q1 — record quarterly issuance",
+            "price_impact": "+28%"
+          },
+          {
+            "date": "2025-06",
+            "event_en": "Göreme cave dwelling renovation program",
+            "price_impact": "+22%"
+          }
+        ],
+        "price_data": {
+          "currency": "USD",
+          "unit": "per_m2",
+          "data": [
+            {
+              "year": 2018,
+              "min": 200,
+              "max": 500,
+              "note": "Pre-boom"
+            },
+            {
+              "year": 2020,
+              "min": 350,
+              "max": 800,
+              "note": "COVID — domestic tourism"
+            },
+            {
+              "year": 2022,
+              "min": 700,
+              "max": 1600,
+              "note": "International return"
+            },
+            {
+              "year": 2023,
+              "min": 1200,
+              "max": 2800,
+              "note": "License premium"
+            },
+            {
+              "year": 2024,
+              "min": 1800,
+              "max": 4200,
+              "note": "Record licenses"
+            },
+            {
+              "year": 2026,
+              "min": 2400,
+              "max": 5500,
+              "note": "Current"
+            }
+          ]
+        },
+        "hot_zones": [
+          {
+            "name": "Göreme",
+            "district": "Nevşehir",
+            "type": "cave_boutique",
+            "price_usd_m2": 4800,
+            "upside": "+20-30% (2yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Ürgüp",
+            "district": "Nevşehir",
+            "type": "boutique_hotel_land",
+            "price_usd_m2": 2200,
+            "upside": "+35-50% (3yr)",
+            "risk": "medium"
+          },
+          {
+            "name": "Uçhisar",
+            "district": "Nevşehir",
+            "type": "viewpoint_villa",
+            "price_usd_m2": 3500,
+            "upside": "+25-38% (2yr)",
+            "risk": "low"
+          },
+          {
+            "name": "Avanos",
+            "district": "Nevşehir",
+            "type": "guesthouse_land",
+            "price_usd_m2": 800,
+            "upside": "+50-70% (4yr)",
+            "risk": "medium"
+          }
+        ],
+        "risk_factors": [
+          "UNESCO restrictions limit development options",
+          "Seasonal — 85% occupancy April-October only",
+          "Cave property maintenance costs high",
+          "License availability tightening"
+        ],
+        "tradia_verdict": "BUY — Ürgüp boutique hotel land strongest entry. Avanos for long-term hold. Göreme cave properties for immediate rental yield but high entry price."
+      },
+      "data_source": "archive",
+      "research_date": "2026-05-03T07:45:59.487464+00:00"
+    }
+  ]
+}

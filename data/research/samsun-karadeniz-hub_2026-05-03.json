@@ -1,0 +1,60 @@
+{
+  "project_id": "samsun-karadeniz-hub",
+  "project_name": "Samsun Lojistik Merkezi",
+  "status": "active",
+  "tradia_score": 78,
+  "districts": [
+    "Samsun",
+    "Tekkeköy",
+    "Atakum"
+  ],
+  "news_items": [
+    {
+      "title": "Son dakika haberi: Sakarya merkezli 10 ilde FETÖ/PDY operasyonu",
+      "link": "https://www.hurriyet.com.tr/gundem/son-dakika-haberi-sakarya-merkezli-10-ilde-feto-pdy-operasyonu-41630745",
+      "published": "Thu, 08 Oct 2020 06:40:00 Z",
+      "summary": "Gelen son dakika haberine göre, Sakarya merkezli 10 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda 21 kişi gözaltına alındı. Öte yandan Samsun merkezli 8 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda gözaltına alınan 21 eski emniyet mensubundan 11'i adliyeye sevk edildi.",
+      "project_id": "samsun-karadeniz-hub",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:01:14.954500+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Samsun",
+          "Sakarya"
+        ],
+        "price_signal": "0%",
+        "summary": "A FETÖ/PDY counter-terrorism operation based in Sakarya and Samsun resulted in 21 arrests across 10 provinces, with no direct impact on the Samsun Lojistik Merkezi property market."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Son dakika haberi: Sakarya merkezli 10 ilde FETÖ/PDY operasyonu",
+    "link": "https://www.hurriyet.com.tr/gundem/son-dakika-haberi-sakarya-merkezli-10-ilde-feto-pdy-operasyonu-41630745",
+    "published": "Thu, 08 Oct 2020 06:40:00 Z",
+    "summary": "Gelen son dakika haberine göre, Sakarya merkezli 10 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda 21 kişi gözaltına alındı. Öte yandan Samsun merkezli 8 ilde FETÖ/PDY'ye yönelik düzenlenen operasyonda gözaltına alınan 21 eski emniyet mensubundan 11'i adliyeye sevk edildi.",
+    "project_id": "samsun-karadeniz-hub",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-03T08:01:14.954500+00:00",
+    "relevance_score": 10,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Samsun",
+        "Sakarya"
+      ],
+      "price_signal": "0%",
+      "summary": "A FETÖ/PDY counter-terrorism operation based in Sakarya and Samsun resulted in 21 arrests across 10 provinces, with no direct impact on the Samsun Lojistik Merkezi property market."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:01:19.698137+00:00"
+}

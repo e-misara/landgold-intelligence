@@ -1,0 +1,59 @@
+{
+  "project_id": "yavuz-sultan-selim-koprusu",
+  "project_name": "Yavuz Sultan Selim Köprüsü Etki Bölgesi",
+  "status": "active",
+  "tradia_score": 80,
+  "districts": [
+    "Sarıyer",
+    "Beykoz",
+    "Garipçe",
+    "Poyrazköy"
+  ],
+  "news_items": [
+    {
+      "title": "İstanbul'un bir ilçesinde 4 gündür su yok: Bidonlarla evlerine su taşıyorlar",
+      "link": "https://www.hurriyet.com.tr/gundem/istanbulun-bir-ilcesinde-4-gundur-su-yok-bidonlarla-evlerine-su-tasiyorlar-43164408",
+      "published": "Sat, 02 May 2026 14:04:25 Z",
+      "summary": "Beykoz'da İstanbul Su ve Kanalizasyon İdaresi (İSKİ) hatlarında meydana gelen arıza nedeniyle 4 gündür su kesintisi yaşandı. Mahalle sakinleri bidonlarla evlerine su taşımak için uzun kuyruk oluşturdu.",
+      "project_id": "yavuz-sultan-selim-koprusu",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T07:31:14.676901+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Beykoz"
+        ],
+        "price_signal": "-2%",
+        "summary": "A 4-day water outage in Beykoz due to an İSKİ infrastructure failure has forced residents to carry water in jugs, negatively impacting short-term livability and property appeal in the district."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "İstanbul'un bir ilçesinde 4 gündür su yok: Bidonlarla evlerine su taşıyorlar",
+    "link": "https://www.hurriyet.com.tr/gundem/istanbulun-bir-ilcesinde-4-gundur-su-yok-bidonlarla-evlerine-su-tasiyorlar-43164408",
+    "published": "Sat, 02 May 2026 14:04:25 Z",
+    "summary": "Beykoz'da İstanbul Su ve Kanalizasyon İdaresi (İSKİ) hatlarında meydana gelen arıza nedeniyle 4 gündür su kesintisi yaşandı. Mahalle sakinleri bidonlarla evlerine su taşımak için uzun kuyruk oluşturdu.",
+    "project_id": "yavuz-sultan-selim-koprusu",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-03T07:31:14.676901+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "negative",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Beykoz"
+      ],
+      "price_signal": "-2%",
+      "summary": "A 4-day water outage in Beykoz due to an İSKİ infrastructure failure has forced residents to carry water in jugs, negatively impacting short-term livability and property appeal in the district."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -2.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T07:31:19.554255+00:00"
+}

@@ -1,0 +1,58 @@
+{
+  "project_id": "kayseri-organize-sanayi",
+  "project_name": "Kayseri OSB Mobilya Merkezi",
+  "status": "active",
+  "tradia_score": 77,
+  "districts": [
+    "Kayseri",
+    "Melikgazi",
+    "Kocasinan"
+  ],
+  "news_items": [
+    {
+      "title": "Sokak ortasında tüfekle dolaşan çocuk, kovalamaca sonucu yakalandı",
+      "link": "https://www.hurriyet.com.tr/gundem/sokak-ortasinda-tufekle-dolasan-cocuk-kovalamaca-sonucu-yakalandi-43164674",
+      "published": "Sat, 02 May 2026 23:21:57 Z",
+      "summary": "Kayseri’nin Kocasinan ilçesinde elinde pompalı tüfekle dolaşan bir çocuk, polis ekiplerini görünce silahı atarak kaçtı. Şüpheli çocuk ve yanındaki 3 arkadaşı, yaşanan kovalamaca sonucu yakalandı.",
+      "project_id": "kayseri-organize-sanayi",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:15:39.666078+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Kocasinan"
+        ],
+        "price_signal": "-2%",
+        "summary": "A child caught roaming the streets with a shotgun in Kocasinan district of Kayseri raises public safety concerns that may negatively affect local property values."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Sokak ortasında tüfekle dolaşan çocuk, kovalamaca sonucu yakalandı",
+    "link": "https://www.hurriyet.com.tr/gundem/sokak-ortasinda-tufekle-dolasan-cocuk-kovalamaca-sonucu-yakalandi-43164674",
+    "published": "Sat, 02 May 2026 23:21:57 Z",
+    "summary": "Kayseri’nin Kocasinan ilçesinde elinde pompalı tüfekle dolaşan bir çocuk, polis ekiplerini görünce silahı atarak kaçtı. Şüpheli çocuk ve yanındaki 3 arkadaşı, yaşanan kovalamaca sonucu yakalandı.",
+    "project_id": "kayseri-organize-sanayi",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-03T08:15:39.666078+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "negative",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Kocasinan"
+      ],
+      "price_signal": "-2%",
+      "summary": "A child caught roaming the streets with a shotgun in Kocasinan district of Kayseri raises public safety concerns that may negatively affect local property values."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -2.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:15:44.003790+00:00"
+}

@@ -1,0 +1,55 @@
+{
+  "project_id": "osmangazi-koprusu",
+  "project_name": "Osmangazi Köprüsü — Gemlik Körfezi Aksı",
+  "status": "active",
+  "tradia_score": 79,
+  "districts": [
+    "Gemlik",
+    "Orhangazi",
+    "İznik",
+    "Yalova"
+  ],
+  "news_items": [
+    {
+      "title": "AK Parti Genel Başkan Yardımcısı Büyükgümüş: Görevler davamız için bir araçtır",
+      "link": "https://www.hurriyet.com.tr/gundem/ak-parti-genel-baskan-yardimcisi-buyukgumus-gorevler-davamiz-icin-bir-aractir-43165257",
+      "published": "Sun, 03 May 2026 15:57:05 Z",
+      "summary": "AK Parti Genel Başkan Yardımcısı, Teşkilat Başkanı ve Yalova Milletvekili Ahmet Büyükgümüş, \"AK Partimiz aramızdan bazıları milletvekili olsun, belediye başkanı olsun, bakan olsun diye yola çıktığımız bir siyasi hareket değildir. Biz büyük ve güçlü Türkiye'yi gerçekleştirmek, dünya mazlumlarına umut olmak heyecanıyla, coşkusuyla, mücadele azmiyle Anadolu insanının gelecek azmini inşallah nesillerle buluşturmak için görev üstlenmiş kadrolarız\" dedi.",
+      "project_id": "osmangazi-koprusu",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:14:18.794193+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "long-term",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "AK Party Vice Chairman Büyükgümüş delivered a motivational speech about the party's mission and values, with no direct relevance to the Osmangazi Bridge–Gemlik Bay corridor or regional property markets."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "AK Parti Genel Başkan Yardımcısı Büyükgümüş: Görevler davamız için bir araçtır",
+    "link": "https://www.hurriyet.com.tr/gundem/ak-parti-genel-baskan-yardimcisi-buyukgumus-gorevler-davamiz-icin-bir-aractir-43165257",
+    "published": "Sun, 03 May 2026 15:57:05 Z",
+    "summary": "AK Parti Genel Başkan Yardımcısı, Teşkilat Başkanı ve Yalova Milletvekili Ahmet Büyükgümüş, \"AK Partimiz aramızdan bazıları milletvekili olsun, belediye başkanı olsun, bakan olsun diye yola çıktığımız bir siyasi hareket değildir. Biz büyük ve güçlü Türkiye'yi gerçekleştirmek, dünya mazlumlarına umut olmak heyecanıyla, coşkusuyla, mücadele azmiyle Anadolu insanının gelecek azmini inşallah nesillerle buluşturmak için görev üstlenmiş kadrolarız\" dedi.",
+    "project_id": "osmangazi-koprusu",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-04T09:14:18.794193+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "long-term",
+      "affected_zones": [],
+      "price_signal": "0%",
+      "summary": "AK Party Vice Chairman Büyükgümüş delivered a motivational speech about the party's mission and values, with no direct relevance to the Osmangazi Bridge–Gemlik Bay corridor or regional property markets."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:14:26.030048+00:00"
+}

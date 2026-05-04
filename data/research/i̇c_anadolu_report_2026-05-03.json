@@ -1,0 +1,154 @@
+{
+  "date": "2026-05-03",
+  "region": "İç Anadolu",
+  "projects_analyzed": 3,
+  "top_opportunity": {
+    "project_id": "konya-tarim-lojistik",
+    "project_name": "Konya Tarım ve Lojistik",
+    "tradia_score": 76,
+    "sentiment": "positive",
+    "price_signal": 3.0
+  },
+  "projects": [
+    {
+      "project_id": "ankara-teknoloji-usu",
+      "project_name": "Ankara Teknoloji Üssü",
+      "status": "active",
+      "tradia_score": 85,
+      "districts": [
+        "Çankaya",
+        "Bilkent",
+        "İncek",
+        "Sincan"
+      ],
+      "news_items": [],
+      "top_signal": null,
+      "overall_sentiment": "neutral",
+      "price_signal_avg": 0.0,
+      "archive_data": null,
+      "data_source": "none",
+      "research_date": "2026-05-03T08:15:32.060156+00:00"
+    },
+    {
+      "project_id": "konya-tarim-lojistik",
+      "project_name": "Konya Tarım ve Lojistik",
+      "status": "active",
+      "tradia_score": 76,
+      "districts": [
+        "Konya",
+        "Karatay",
+        "Selçuklu",
+        "Karaman"
+      ],
+      "news_items": [
+        {
+          "title": "Bakan Uraloğlu: (Karaman Çevre Yolu 1. Kısım) Modern mühendisliğin en güzel örneklerinden birini hayata geçirdik",
+          "link": "https://www.aa.com.tr/tr/ekonomi/bakan-uraloglu-karaman-cevre-yolu-1-kisim-modern-muhendisligin-en-guzel-orneklerinden-birini-hayata-gecirdik/3924414",
+          "published": "Fri, 01 May 2026 18:10:48 +0300",
+          "summary": "Bakan Uraloğlu, \"(Karaman Çevre Yolu 1. Kısım) Hizmete sunduğumuz bu kesimde 3 köprülü kavşak, 1 hemzemin kavşak, 1 viyadük, 2 köprü, 3 alt geçit ve 20 menfez inşa ederek, modern mühendisliğin en güzel örneklerinden birini hayata geçirdik.\" dedi.",
+          "project_id": "konya-tarim-lojistik",
+          "source_name": "AA Ekonomi",
+          "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+          "fetched_at": "2026-05-03T08:15:32.196773+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Karaman",
+              "Karaman Çevre Yolu",
+              "Karaman Merkez"
+            ],
+            "price_signal": "+3%",
+            "summary": "The inauguration of the first section of Karaman Bypass Road, featuring modern engineering structures including bridges, viaducts and underpasses, is expected to boost property values in Karaman by improving connectivity and reducing urban traffic congestion."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Bakan Uraloğlu: (Karaman Çevre Yolu 1. Kısım) Modern mühendisliğin en güzel örneklerinden birini hayata geçirdik",
+        "link": "https://www.aa.com.tr/tr/ekonomi/bakan-uraloglu-karaman-cevre-yolu-1-kisim-modern-muhendisligin-en-guzel-orneklerinden-birini-hayata-gecirdik/3924414",
+        "published": "Fri, 01 May 2026 18:10:48 +0300",
+        "summary": "Bakan Uraloğlu, \"(Karaman Çevre Yolu 1. Kısım) Hizmete sunduğumuz bu kesimde 3 köprülü kavşak, 1 hemzemin kavşak, 1 viyadük, 2 köprü, 3 alt geçit ve 20 menfez inşa ederek, modern mühendisliğin en güzel örneklerinden birini hayata geçirdik.\" dedi.",
+        "project_id": "konya-tarim-lojistik",
+        "source_name": "AA Ekonomi",
+        "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+        "fetched_at": "2026-05-03T08:15:32.196773+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "positive",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Karaman",
+            "Karaman Çevre Yolu",
+            "Karaman Merkez"
+          ],
+          "price_signal": "+3%",
+          "summary": "The inauguration of the first section of Karaman Bypass Road, featuring modern engineering structures including bridges, viaducts and underpasses, is expected to boost property values in Karaman by improving connectivity and reducing urban traffic congestion."
+        }
+      },
+      "overall_sentiment": "positive",
+      "price_signal_avg": 3.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T08:15:38.172411+00:00"
+    },
+    {
+      "project_id": "kayseri-organize-sanayi",
+      "project_name": "Kayseri OSB Mobilya Merkezi",
+      "status": "active",
+      "tradia_score": 77,
+      "districts": [
+        "Kayseri",
+        "Melikgazi",
+        "Kocasinan"
+      ],
+      "news_items": [
+        {
+          "title": "Sokak ortasında tüfekle dolaşan çocuk, kovalamaca sonucu yakalandı",
+          "link": "https://www.hurriyet.com.tr/gundem/sokak-ortasinda-tufekle-dolasan-cocuk-kovalamaca-sonucu-yakalandi-43164674",
+          "published": "Sat, 02 May 2026 23:21:57 Z",
+          "summary": "Kayseri’nin Kocasinan ilçesinde elinde pompalı tüfekle dolaşan bir çocuk, polis ekiplerini görünce silahı atarak kaçtı. Şüpheli çocuk ve yanındaki 3 arkadaşı, yaşanan kovalamaca sonucu yakalandı.",
+          "project_id": "kayseri-organize-sanayi",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:15:39.666078+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Kocasinan"
+            ],
+            "price_signal": "-2%",
+            "summary": "A child caught roaming the streets with a shotgun in Kocasinan district of Kayseri raises public safety concerns that may negatively affect local property values."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Sokak ortasında tüfekle dolaşan çocuk, kovalamaca sonucu yakalandı",
+        "link": "https://www.hurriyet.com.tr/gundem/sokak-ortasinda-tufekle-dolasan-cocuk-kovalamaca-sonucu-yakalandi-43164674",
+        "published": "Sat, 02 May 2026 23:21:57 Z",
+        "summary": "Kayseri’nin Kocasinan ilçesinde elinde pompalı tüfekle dolaşan bir çocuk, polis ekiplerini görünce silahı atarak kaçtı. Şüpheli çocuk ve yanındaki 3 arkadaşı, yaşanan kovalamaca sonucu yakalandı.",
+        "project_id": "kayseri-organize-sanayi",
+        "source_name": "Hürriyet Gündem",
+        "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+        "fetched_at": "2026-05-03T08:15:39.666078+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "negative",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Kocasinan"
+          ],
+          "price_signal": "-2%",
+          "summary": "A child caught roaming the streets with a shotgun in Kocasinan district of Kayseri raises public safety concerns that may negatively affect local property values."
+        }
+      },
+      "overall_sentiment": "negative",
+      "price_signal_avg": -2.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T08:15:44.003790+00:00"
+    }
+  ]
+}

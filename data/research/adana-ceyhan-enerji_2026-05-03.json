@@ -1,0 +1,134 @@
+{
+  "project_id": "adana-ceyhan-enerji",
+  "project_name": "Adana-Ceyhan Enerji Koridoru",
+  "status": "active",
+  "tradia_score": 80,
+  "districts": [
+    "Adana",
+    "Ceyhan",
+    "Seyhan",
+    "Yüreğir"
+  ],
+  "news_items": [
+    {
+      "title": "Adana ve Mersin'deki KOBİ'lerin \"yeşil dönüşümü\"ne temiz üretim ve dijitalleşme odaklı destek",
+      "link": "https://www.aa.com.tr/tr/ekonomi/adana-ve-mersindeki-kobilerin-yesil-donusumune-temiz-uretim-ve-dijitallesme-odakli-destek/3924721",
+      "published": "Sat, 02 May 2026 11:01:42 +0300",
+      "summary": "Sanayi ve Teknoloji Bakanlığınca, Çukurova Kalkınma Ajansı (ÇKA) aracılığıyla Adana ve Mersin'deki faaliyet gösteren KOBİ'lerin, yeşil geçişe konu faaliyetleri için 400 milyon lira destek verilerek yatırımların büyümesine katkı sağlanacak.",
+      "project_id": "adana-ceyhan-enerji",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-03T08:46:33.867590+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "medium",
+        "affected_zones": [
+          "Adana Organize Sanayi Bölgesi",
+          "Mersin Organize Sanayi Bölgesi",
+          "Ceyhan",
+          "Tarsus",
+          "Çukurova"
+        ],
+        "price_signal": "+3%",
+        "summary": "A 400 million TL green transition and digitalization support package for SMEs in Adana and Mersin, channeled through the Çukurova Development Agency, is expected to boost industrial activity and moderately uplift property prices in affected zones."
+      }
+    },
+    {
+      "title": "Aracın altına topunu almak için giren çocuk, son anda kurtarıldı",
+      "link": "https://www.hurriyet.com.tr/gundem/aracin-altina-topunu-almak-icin-giren-cocuk-son-anda-kurtarildi-43164436",
+      "published": "Sat, 02 May 2026 14:38:00 Z",
+      "summary": "Adana'nın Yüreğir ilçesinde park halindeki bir aracın altına giren küçük çocuk, sürücüsünün fark etmeden aracı hareket ettirmesiyle çevrede bulunan bir vatandaşın dikkati sayesinde ezilmekten son anda kurtarıldı.",
+      "project_id": "adana-ceyhan-enerji",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:46:35.391794+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Yüreğir"
+        ],
+        "price_signal": "0%",
+        "summary": "A child was rescued at the last moment from under a moving vehicle in Yüreğir district of Adana, an incident unrelated to the Adana-Ceyhan Energy Corridor project or property prices."
+      }
+    },
+    {
+      "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+      "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+      "published": "Sun, 03 May 2026 10:03:01 +0300",
+      "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+      "project_id": "adana-ceyhan-enerji",
+      "source_name": "Sabah Ekonomi",
+      "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "fetched_at": "2026-05-03T08:46:36.286934+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "long-term",
+        "affected_zones": [
+          "Ceyhan",
+          "Adana Merkez",
+          "Seyhan",
+          "Yüreğir",
+          "Osmaniye",
+          "İskenderun Yolu Güzergahı",
+          "Gaziantep Bağlantı Noktası"
+        ],
+        "price_signal": "+8%",
+        "summary": "Turkey's Transport Minister inspected ongoing works on the Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, signaling long-term property value increases along the corridor, particularly in Ceyhan and surrounding districts."
+      }
+    },
+    {
+      "title": "Adana'daki DEAŞ operasyonunda 5 tutuklama kararı",
+      "link": "https://www.hurriyet.com.tr/gundem/adanadaki-deas-operasyonunda-5-tutuklama-karari-41748970",
+      "published": "Thu, 25 Feb 2021 06:48:44 Z",
+      "summary": "ADANA’da terör örgütü DEAŞ’a yönelik operasyonda gözaltına alınan 9 şüpheliden 5’i tutuklandı, 1’i adli kontrol şartıyla, 4 kişi serbest bırakıldı. Şüphelilerden Muhammed Velid A.’nın (24), örgütün eğitim yapılanması içinde Arapça Dili ve Edebiyatı öğretmenliği yaptığı ve 100 dolar maaş aldığı, Abdurrahman Raad B.’nin (22) ise babasının Irak’ta sözde zekat divanı başkanı olduğu ortaya çıktı.",
+      "project_id": "adana-ceyhan-enerji",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:46:35.392044+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Adana",
+          "Ceyhan"
+        ],
+        "price_signal": "-2%",
+        "summary": "A counter-terrorism operation in Adana resulting in ISIS-related arrests creates short-term security concerns that may negatively impact property prices in the Adana-Ceyhan energy corridor area."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Adana ve Mersin'deki KOBİ'lerin \"yeşil dönüşümü\"ne temiz üretim ve dijitalleşme odaklı destek",
+    "link": "https://www.aa.com.tr/tr/ekonomi/adana-ve-mersindeki-kobilerin-yesil-donusumune-temiz-uretim-ve-dijitallesme-odakli-destek/3924721",
+    "published": "Sat, 02 May 2026 11:01:42 +0300",
+    "summary": "Sanayi ve Teknoloji Bakanlığınca, Çukurova Kalkınma Ajansı (ÇKA) aracılığıyla Adana ve Mersin'deki faaliyet gösteren KOBİ'lerin, yeşil geçişe konu faaliyetleri için 400 milyon lira destek verilerek yatırımların büyümesine katkı sağlanacak.",
+    "project_id": "adana-ceyhan-enerji",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-03T08:46:33.867590+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "positive",
+      "urgency": "medium",
+      "affected_zones": [
+        "Adana Organize Sanayi Bölgesi",
+        "Mersin Organize Sanayi Bölgesi",
+        "Ceyhan",
+        "Tarsus",
+        "Çukurova"
+      ],
+      "price_signal": "+3%",
+      "summary": "A 400 million TL green transition and digitalization support package for SMEs in Adana and Mersin, channeled through the Çukurova Development Agency, is expected to boost industrial activity and moderately uplift property prices in affected zones."
+    }
+  },
+  "overall_sentiment": "positive",
+  "price_signal_avg": 2.2,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:46:50.326104+00:00"
+}

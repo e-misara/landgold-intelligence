@@ -1,0 +1,18 @@
+{
+  "project_id": "kayseri-organize-sanayi",
+  "project_name": "Kayseri OSB Mobilya Merkezi",
+  "status": "active",
+  "tradia_score": 77,
+  "districts": [
+    "Kayseri",
+    "Melikgazi",
+    "Kocasinan"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-04T09:15:40.162850+00:00"
+}

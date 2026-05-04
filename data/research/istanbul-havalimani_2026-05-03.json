@@ -1,0 +1,127 @@
+{
+  "project_id": "istanbul-havalimani",
+  "project_name": "İstanbul Havalimanı Bölgesi",
+  "status": "active",
+  "tradia_score": 90,
+  "districts": [
+    "Arnavutköy",
+    "Eyüpsultan",
+    "Başakşehir"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "istanbul-havalimani",
+    "name": "İstanbul Havalimanı Gelişim Bölgesi",
+    "status": "active",
+    "tradia_score": 90,
+    "summary_en": "World's busiest airport by flight count (2024). Direct metro connection to city center under construction. 20km development radius showing sustained price growth.",
+    "summary_ru": "Самый загруженный аэропорт мира по числу рейсов (2024). Строится прямое метро до центра города. Зона развития 20 км показывает устойчивый рост цен.",
+    "summary_ar": "أكثر مطارات العالم ازدحاماً بعدد الرحلات (2024). مترو مباشر لوسط المدينة قيد الإنشاء. منطقة تطوير 20 كم تُظهر نمواً مستداماً للأسعار.",
+    "summary_tr": "2024'te uçuş sayısına göre dünyanın en yoğun havalimanı. Şehir merkezine doğrudan metro yapım aşamasında. 20 km'lik gelişim bölgesi istikrarlı fiyat artışı gösteriyor.",
+    "key_events": [
+      {
+        "date": "2018-10",
+        "event_en": "Airport opened Phase 1",
+        "price_impact": "+30%"
+      },
+      {
+        "date": "2019-04",
+        "event_en": "All flights transferred from Atatürk",
+        "price_impact": "+20%"
+      },
+      {
+        "date": "2022-09",
+        "event_en": "100M passenger milestone",
+        "price_impact": "+15%"
+      },
+      {
+        "date": "2024-04",
+        "event_en": "Surpassed Amsterdam — Europe busiest",
+        "price_impact": "+12%"
+      },
+      {
+        "date": "2025-06",
+        "event_en": "Metro line construction 60% complete",
+        "price_impact": "+18%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2016,
+          "min": 80,
+          "max": 140,
+          "note": "Construction phase"
+        },
+        {
+          "year": 2018,
+          "min": 180,
+          "max": 280,
+          "note": "Airport opened"
+        },
+        {
+          "year": 2020,
+          "min": 220,
+          "max": 340,
+          "note": "All flights transferred"
+        },
+        {
+          "year": 2022,
+          "min": 380,
+          "max": 580,
+          "note": "Record passengers"
+        },
+        {
+          "year": 2024,
+          "min": 520,
+          "max": 820,
+          "note": "Europe busiest"
+        },
+        {
+          "year": 2026,
+          "min": 640,
+          "max": 980,
+          "note": "Current — metro under construction"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Bolluca",
+        "district": "Arnavutköy",
+        "type": "land",
+        "price_usd_m2": 220,
+        "upside": "+45-65% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Haraççı",
+        "district": "Arnavutköy",
+        "type": "mixed",
+        "price_usd_m2": 380,
+        "upside": "+35-55% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Taşoluk",
+        "district": "Arnavutköy",
+        "type": "residential",
+        "price_usd_m2": 680,
+        "upside": "+25-35% (2yr)",
+        "risk": "low"
+      }
+    ],
+    "risk_factors": [
+      "Noise pollution concerns in closest zones",
+      "Traffic congestion without metro completion"
+    ],
+    "tradia_verdict": "BUY — Airport corridor consistently outperforms market. Bolluca land parcels strongest risk-adjusted opportunity."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-03T07:30:54.502114+00:00"
+}

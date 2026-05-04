@@ -1,0 +1,60 @@
+{
+  "project_id": "mersin-serbest-ticaret",
+  "project_name": "Mersin Serbest Ticaret Bölgesi",
+  "status": "active",
+  "tradia_score": 86,
+  "districts": [
+    "Mersin",
+    "Tarsus",
+    "Silifke"
+  ],
+  "news_items": [
+    {
+      "title": "Yapay zeka destekli topraksız serada üretilen beyaz çilek 5 ülkeye ihraç ediliyor",
+      "link": "https://www.aa.com.tr/tr/ekonomi/yapay-zeka-destekli-topraksiz-serada-uretilen-beyaz-cilek-5-ulkeye-ihrac-ediliyor/3925504",
+      "published": "Sun, 03 May 2026 12:24:45 +0300",
+      "summary": "Mersin'in Tarsus ilçesinde ziraat mühendisi ve yazılım mühendisi iki kardeş tarafından kurulan yapay zeka destekli topraksız serada yetiştirilen beyaz çilekler, iç piyasanın yanı sıra yurt dışına da gönderiliyor.",
+      "project_id": "mersin-serbest-ticaret",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-04T09:15:54.674057+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "medium",
+        "affected_zones": [
+          "Tarsus",
+          "Mersin"
+        ],
+        "price_signal": "+2%",
+        "summary": "AI-supported soilless greenhouse technology in Tarsus producing white strawberries exported to 5 countries signals growing agricultural innovation and economic activity that may modestly boost local property values."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Yapay zeka destekli topraksız serada üretilen beyaz çilek 5 ülkeye ihraç ediliyor",
+    "link": "https://www.aa.com.tr/tr/ekonomi/yapay-zeka-destekli-topraksiz-serada-uretilen-beyaz-cilek-5-ulkeye-ihrac-ediliyor/3925504",
+    "published": "Sun, 03 May 2026 12:24:45 +0300",
+    "summary": "Mersin'in Tarsus ilçesinde ziraat mühendisi ve yazılım mühendisi iki kardeş tarafından kurulan yapay zeka destekli topraksız serada yetiştirilen beyaz çilekler, iç piyasanın yanı sıra yurt dışına da gönderiliyor.",
+    "project_id": "mersin-serbest-ticaret",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-04T09:15:54.674057+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "positive",
+      "urgency": "medium",
+      "affected_zones": [
+        "Tarsus",
+        "Mersin"
+      ],
+      "price_signal": "+2%",
+      "summary": "AI-supported soilless greenhouse technology in Tarsus producing white strawberries exported to 5 countries signals growing agricultural innovation and economic activity that may modestly boost local property values."
+    }
+  },
+  "overall_sentiment": "positive",
+  "price_signal_avg": 2.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:16:01.058203+00:00"
+}

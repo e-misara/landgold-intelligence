@@ -1,0 +1,74 @@
+{
+  "project_id": "trabzon-gulf-demand",
+  "project_name": "Trabzon Körfez Talebi",
+  "status": "active",
+  "tradia_score": 86,
+  "districts": [
+    "Trabzon",
+    "Akçaabat",
+    "Of"
+  ],
+  "news_items": [
+    {
+      "title": "Uygulamalı mevzuat eğitiminin ikincisi Trabzon’da gerçekleştirildi",
+      "link": "https://bik.gov.tr/kurumsal-haberler/uygulamali-mevzuat-egitiminin-ikincisi-trabzonda-gerceklestirildi/",
+      "published": "Wed, 15 Apr 2026 13:59:09 +0000",
+      "summary": "Basın İlan Kurumu Genel Müdürlüğü tarafından resmî ilan ile reklam yayımlayan basın kuruluşlarına yönelik düzenlenen Bölgesel Uygulamalı Mevzuat Eğitimlerinin ikinci durağı Trabzon oldu.",
+      "project_id": "trabzon-gulf-demand",
+      "source_name": "BİK Resmi İlanlar",
+      "source_url": "https://bik.gov.tr/rss",
+      "fetched_at": "2026-05-04T09:15:06.854484+00:00",
+      "relevance_score": 100,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "long-term",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "A regional applied legislation training event for press organizations was held in Trabzon, with no direct relevance to property prices."
+      }
+    },
+    {
+      "title": "Alt geçit suyla doldu; mahsur kalan TIR şoförünü itfaiyeciler kurtardı",
+      "link": "https://www.hurriyet.com.tr/gundem/alt-gecit-suyla-doldu-mahsur-kalan-tir-soforunu-itfaiyeciler-kurtardi-43165667",
+      "published": "Mon, 04 May 2026 08:46:51 Z",
+      "summary": "Kocaeli’nin Başiskele ilçesinde, sağanak nedeniyle derenin taşması sonucu suyla dolan alt geçitte TIR’ın içerisinde mahsur kalan şoför, itfaiyeciler tarafından kurtarıldı.",
+      "project_id": "trabzon-gulf-demand",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:15:07.428781+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Başiskele"
+        ],
+        "price_signal": "0%",
+        "summary": "A TIR driver was rescued by firefighters after becoming trapped in a flooded underpass in Başiskele, Kocaeli, due to heavy rainfall causing a stream to overflow — unrelated to Trabzon Körfez Talebi project."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Uygulamalı mevzuat eğitiminin ikincisi Trabzon’da gerçekleştirildi",
+    "link": "https://bik.gov.tr/kurumsal-haberler/uygulamali-mevzuat-egitiminin-ikincisi-trabzonda-gerceklestirildi/",
+    "published": "Wed, 15 Apr 2026 13:59:09 +0000",
+    "summary": "Basın İlan Kurumu Genel Müdürlüğü tarafından resmî ilan ile reklam yayımlayan basın kuruluşlarına yönelik düzenlenen Bölgesel Uygulamalı Mevzuat Eğitimlerinin ikinci durağı Trabzon oldu.",
+    "project_id": "trabzon-gulf-demand",
+    "source_name": "BİK Resmi İlanlar",
+    "source_url": "https://bik.gov.tr/rss",
+    "fetched_at": "2026-05-04T09:15:06.854484+00:00",
+    "relevance_score": 100,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "long-term",
+      "affected_zones": [],
+      "price_signal": "0%",
+      "summary": "A regional applied legislation training event for press organizations was held in Trabzon, with no direct relevance to property prices."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:15:15.593359+00:00"
+}

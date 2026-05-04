@@ -1,0 +1,102 @@
+{
+  "project_id": "gap-sanliurfa-tarim",
+  "project_name": "GAP Şanlıurfa Tarım Dönüşümü",
+  "status": "active",
+  "tradia_score": 74,
+  "districts": [
+    "Şanlıurfa",
+    "Harran",
+    "Birecik"
+  ],
+  "news_items": [
+    {
+      "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+      "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+      "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+      "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+      "project_id": "gap-sanliurfa-tarim",
+      "source_name": "BİK Resmi İlanlar",
+      "source_url": "https://bik.gov.tr/rss",
+      "fetched_at": "2026-05-04T09:16:01.985316+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Şanlıurfa Merkez"
+        ],
+        "price_signal": "+0%",
+        "summary": "A courtesy visit by the Press Advertising Authority management to the Şanlıurfa Governor has no direct impact on property prices in the region."
+      }
+    },
+    {
+      "title": "Şanlıurfa'da sağanak ve dolu: 12 yaralı",
+      "link": "https://www.hurriyet.com.tr/gundem/sanliurfada-saganak-ve-dolu-12-yarali-43165284",
+      "published": "Sun, 03 May 2026 16:48:00 Z",
+      "summary": "Şanlıurfa'nın Birecik ilçesinde dolu yağışı ve fırtına, günlük yaşamı olumsuz etkiledi. Birecik Köprüsü’nde bir kamyonetin devrildiği fırtınada duba restoranların halatları koptu, bir caminin minaresi yıkıldı, ağaçlar araçların üzerine devrildi. Hava muhalefetinden kaynaklı olumsuzluklarda 12 kişi yaralandı.",
+      "project_id": "gap-sanliurfa-tarim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:16:02.430076+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Birecik",
+          "Birecik Köprüsü"
+        ],
+        "price_signal": "-2%",
+        "summary": "A severe hailstorm and storm in Birecik district of Şanlıurfa caused significant infrastructure damage, injuring 12 people and disrupting daily life."
+      }
+    },
+    {
+      "title": "Gaziantep ve Şanlıurfa'da \"süper hücre\" fırtınası... Bir ölü, 40 yaralı!",
+      "link": "https://www.hurriyet.com.tr/gundem/gaziantepte-super-hucre-firtinasi-catilar-uctu-dereler-tasti-43165276",
+      "published": "Sun, 03 May 2026 16:38:00 Z",
+      "summary": "Gaziantep ve Şanlıurfa kent genelinde \"süper hücre\" fırtınası etkili oldu. Aynı anda bastıran yağmur, dolu, hortum ve fırtına sonrası çatılar uçtu, dereler taştı, ağaçlar kökünden söküldü. Gaziantep, Şanlıurfa ve Afyonkarahisar'da hasar gören okullar ve kar yağışı nedeniyle bazı ilçelerde eğitime 1 gün ara verildi. Şanlıurfa Valiliği, kent genelinde etkili olan fırtınada 1 kişinin hayatını kaybettiğini, 40 kişinin de yaralandığını açıkladı.",
+      "project_id": "gap-sanliurfa-tarim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:16:02.430090+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Şanlıurfa Merkez",
+          "Gaziantep Merkez",
+          "Şanlıurfa geneli",
+          "Gaziantep geneli"
+        ],
+        "price_signal": "-3%",
+        "summary": "A severe supercell storm caused widespread destruction across Şanlıurfa and Gaziantep, resulting in one death, 40 injuries, roof collapses, flooding, and school closures, negatively impacting short-term property values in affected districts."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+    "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+    "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+    "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+    "project_id": "gap-sanliurfa-tarim",
+    "source_name": "BİK Resmi İlanlar",
+    "source_url": "https://bik.gov.tr/rss",
+    "fetched_at": "2026-05-04T09:16:01.985316+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Şanlıurfa Merkez"
+      ],
+      "price_signal": "+0%",
+      "summary": "A courtesy visit by the Press Advertising Authority management to the Şanlıurfa Governor has no direct impact on property prices in the region."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -1.7,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:16:12.628232+00:00"
+}

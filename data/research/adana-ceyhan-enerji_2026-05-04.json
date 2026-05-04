@@ -1,0 +1,80 @@
+{
+  "project_id": "adana-ceyhan-enerji",
+  "project_name": "Adana-Ceyhan Enerji Koridoru",
+  "status": "active",
+  "tradia_score": 80,
+  "districts": [
+    "Adana",
+    "Ceyhan",
+    "Seyhan",
+    "Yüreğir"
+  ],
+  "news_items": [
+    {
+      "title": "İzmir'deki görüntüler büyük tepki toplamıştı: Bir benzer olay da Adana'da yaşandı",
+      "link": "https://www.hurriyet.com.tr/gundem/izmirdeki-goruntuler-buyuk-tepki-toplamisti-bin-benzer-olay-da-adanada-yasandi-43165651",
+      "published": "Mon, 04 May 2026 08:31:00 Z",
+      "summary": "Geçtiğimiz günlerde 2 çocuğun yerde yatan yaşlı adamla dalga geçip yüzüne tekme atarak o anları kayda alması sosyal medyayı ayağa kaldırmıştı. Bir çocuk vakası da Adana'da yaşandı. Sokaklarda yaşayan Aziz Coşkun (52), tartıştığı kimliği belirsiz 3 çocuk tarafından darbedildi. Olay, güvenlik kamerasına yansıdı.",
+      "project_id": "adana-ceyhan-enerji",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:16:14.197666+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Adana"
+        ],
+        "price_signal": "0%",
+        "summary": "A social incident involving children assaulting a homeless man in Adana has no direct relevance to the Adana-Ceyhan Enerji Koridoru project or property prices."
+      }
+    },
+    {
+      "title": "Adana'daki DEAŞ operasyonunda 5 tutuklama kararı",
+      "link": "https://www.hurriyet.com.tr/gundem/adanadaki-deas-operasyonunda-5-tutuklama-karari-41748970",
+      "published": "Thu, 25 Feb 2021 06:48:44 Z",
+      "summary": "ADANA’da terör örgütü DEAŞ’a yönelik operasyonda gözaltına alınan 9 şüpheliden 5’i tutuklandı, 1’i adli kontrol şartıyla, 4 kişi serbest bırakıldı. Şüphelilerden Muhammed Velid A.’nın (24), örgütün eğitim yapılanması içinde Arapça Dili ve Edebiyatı öğretmenliği yaptığı ve 100 dolar maaş aldığı, Abdurrahman Raad B.’nin (22) ise babasının Irak’ta sözde zekat divanı başkanı olduğu ortaya çıktı.",
+      "project_id": "adana-ceyhan-enerji",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:16:14.198171+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Adana",
+          "Merkez"
+        ],
+        "price_signal": "-2%",
+        "summary": "A counter-terrorism operation against ISIS in Adana resulting in 5 arrests creates short-term security concerns that may negatively impact local property prices."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "İzmir'deki görüntüler büyük tepki toplamıştı: Bir benzer olay da Adana'da yaşandı",
+    "link": "https://www.hurriyet.com.tr/gundem/izmirdeki-goruntuler-buyuk-tepki-toplamisti-bin-benzer-olay-da-adanada-yasandi-43165651",
+    "published": "Mon, 04 May 2026 08:31:00 Z",
+    "summary": "Geçtiğimiz günlerde 2 çocuğun yerde yatan yaşlı adamla dalga geçip yüzüne tekme atarak o anları kayda alması sosyal medyayı ayağa kaldırmıştı. Bir çocuk vakası da Adana'da yaşandı. Sokaklarda yaşayan Aziz Coşkun (52), tartıştığı kimliği belirsiz 3 çocuk tarafından darbedildi. Olay, güvenlik kamerasına yansıdı.",
+    "project_id": "adana-ceyhan-enerji",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-04T09:16:14.197666+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Adana"
+      ],
+      "price_signal": "0%",
+      "summary": "A social incident involving children assaulting a homeless man in Adana has no direct relevance to the Adana-Ceyhan Enerji Koridoru project or property prices."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -1.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:16:20.922648+00:00"
+}

@@ -1,0 +1,475 @@
+{
+  "date": "2026-05-03",
+  "region": "Güneydoğu",
+  "projects_analyzed": 4,
+  "top_opportunity": {
+    "project_id": "mersin-serbest-ticaret",
+    "project_name": "Mersin Serbest Ticaret Bölgesi",
+    "tradia_score": 86,
+    "sentiment": "positive",
+    "price_signal": 2.8
+  },
+  "projects": [
+    {
+      "project_id": "gaziantep-osb-ihracat",
+      "project_name": "Gaziantep OSB İhracat Merkezi",
+      "status": "active",
+      "tradia_score": 83,
+      "districts": [
+        "Gaziantep",
+        "Nizip",
+        "İslahiye"
+      ],
+      "news_items": [
+        {
+          "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+          "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+          "published": "Sun, 03 May 2026 10:03:01 +0300",
+          "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+          "project_id": "gaziantep-osb-ihracat",
+          "source_name": "Sabah Ekonomi",
+          "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+          "fetched_at": "2026-05-03T08:45:57.499289+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "long-term",
+            "affected_zones": [
+              "Gaziantep OSB",
+              "Şehitkamil",
+              "Şahinbey",
+              "Islahiye",
+              "Nurdağı",
+              "Osmaniye",
+              "Adana",
+              "Mersin"
+            ],
+            "price_signal": "+8%",
+            "summary": "Turkey's Transport Minister reviewed progress on the Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, which is expected to boost property values and logistics appeal around Gaziantep OSB İhracat Merkezi over the long term."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+        "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+        "published": "Sun, 03 May 2026 10:03:01 +0300",
+        "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+        "project_id": "gaziantep-osb-ihracat",
+        "source_name": "Sabah Ekonomi",
+        "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+        "fetched_at": "2026-05-03T08:45:57.499289+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "positive",
+          "urgency": "long-term",
+          "affected_zones": [
+            "Gaziantep OSB",
+            "Şehitkamil",
+            "Şahinbey",
+            "Islahiye",
+            "Nurdağı",
+            "Osmaniye",
+            "Adana",
+            "Mersin"
+          ],
+          "price_signal": "+8%",
+          "summary": "Turkey's Transport Minister reviewed progress on the Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, which is expected to boost property values and logistics appeal around Gaziantep OSB İhracat Merkezi over the long term."
+        }
+      },
+      "overall_sentiment": "positive",
+      "price_signal_avg": 8.0,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T08:46:03.216070+00:00"
+    },
+    {
+      "project_id": "mersin-serbest-ticaret",
+      "project_name": "Mersin Serbest Ticaret Bölgesi",
+      "status": "active",
+      "tradia_score": 86,
+      "districts": [
+        "Mersin",
+        "Tarsus",
+        "Silifke"
+      ],
+      "news_items": [
+        {
+          "title": "Mersin, yılın ilk çeyreğinde turunçgil ihracatında zirvede yer aldı",
+          "link": "https://www.aa.com.tr/tr/ekonomi/mersin-yilin-ilk-ceyreginde-turuncgil-ihracatinda-zirvede-yer-aldi-/3924737",
+          "published": "Sat, 02 May 2026 11:06:10 +0300",
+          "summary": "Türkiye'nin turunçgil ihracatının yüzde 46,7'sinin yapıldığı Mersin'den yılın ilk çeyreğinde 325 milyon 600 bin dolarlık dış satım gerçekleştirildi.",
+          "project_id": "mersin-serbest-ticaret",
+          "source_name": "AA Ekonomi",
+          "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+          "fetched_at": "2026-05-03T08:46:03.264016+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "medium",
+            "affected_zones": [
+              "Mersin Serbest Ticaret Bölgesi",
+              "Mersin Liman",
+              "Akdeniz",
+              "Toroslar"
+            ],
+            "price_signal": "+2%",
+            "summary": "Mersin's dominance in Turkey's citrus exports, accounting for 46.7% of national exports worth $325.6 million in Q1 2026, signals strong regional economic activity that supports commercial and industrial property demand near the free trade zone."
+          }
+        },
+        {
+          "title": "Adana ve Mersin'deki KOBİ'lerin \"yeşil dönüşümü\"ne temiz üretim ve dijitalleşme odaklı destek",
+          "link": "https://www.aa.com.tr/tr/ekonomi/adana-ve-mersindeki-kobilerin-yesil-donusumune-temiz-uretim-ve-dijitallesme-odakli-destek/3924721",
+          "published": "Sat, 02 May 2026 11:01:42 +0300",
+          "summary": "Sanayi ve Teknoloji Bakanlığınca, Çukurova Kalkınma Ajansı (ÇKA) aracılığıyla Adana ve Mersin'deki faaliyet gösteren KOBİ'lerin, yeşil geçişe konu faaliyetleri için 400 milyon lira destek verilerek yatırımların büyümesine katkı sağlanacak.",
+          "project_id": "mersin-serbest-ticaret",
+          "source_name": "AA Ekonomi",
+          "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+          "fetched_at": "2026-05-03T08:46:03.264026+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "medium",
+            "affected_zones": [
+              "Mersin Serbest Ticaret Bölgesi",
+              "Mersin Organize Sanayi Bölgesi",
+              "Adana Organize Sanayi Bölgesi",
+              "Çukurova"
+            ],
+            "price_signal": "+3%",
+            "summary": "A 400 million TRY government support package for green transition and digitalization of SMEs in Adana and Mersin is expected to boost industrial investment and positively influence commercial and industrial property prices in the region."
+          }
+        },
+        {
+          "title": "TBB’nin Başkanı Vahap Seçer oldu",
+          "link": "https://www.hurriyet.com.tr/gundem/tbbnin-baskani-vahap-secer-oldu-43164641",
+          "published": "Sun, 03 May 2026 04:00:00 Z",
+          "summary": "Türkiye Belediyeler Birliği (TBB) Başkanlığı’na, Mersin Büyükşehir Belediye Başkanı Vahap Seçer seçildi.",
+          "project_id": "mersin-serbest-ticaret",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:46:04.741990+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "long-term",
+            "affected_zones": [
+              "Mersin Merkez",
+              "Yenişehir",
+              "Mezitli",
+              "Toroslar",
+              "Akdeniz"
+            ],
+            "price_signal": "+1%",
+            "summary": "Mersin Mayor Vahap Seçer's election as President of the Union of Municipalities of Turkey may marginally boost the city's political profile and infrastructure investment prospects over the long term."
+          }
+        },
+        {
+          "title": "Türkiye Belediyeler Birliği Meclis toplantısında 'İmamoğlu' gerginliği",
+          "link": "https://www.hurriyet.com.tr/gundem/turkiye-belediyeler-birligi-meclis-toplantisinda-imamoglu-gerginligi-43164341",
+          "published": "Sat, 02 May 2026 12:50:00 Z",
+          "summary": "Türkiye Belediyeler Birliği yeni yönetimi seçimi öncesi tutuklu bulunan ve görevinden uzaklaştırılan İstanbul Büyükşehir Belediye (İBB) Başkanı Ekrem İmamoğlu'nun mektubu okununca, salonda AK Parti ve CHP'li belediye başkanları arasında tartışma yaşandı. Arbedenin sona ermesi ardından toplantı devam etti. Mersin Büyükşehir Belediye Başkanı Vahap Seçer, TBB Başkanı seçildi.",
+          "project_id": "mersin-serbest-ticaret",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:46:04.742150+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Mersin Serbest Ticaret Bölgesi",
+              "Mersin Büyükşehir"
+            ],
+            "price_signal": "+0%",
+            "summary": "A political dispute erupted at the Turkish Municipalities Union assembly meeting, where Mersin Metropolitan Mayor Vahap Seçer was elected as the new TBB president, an event with no direct impact on property prices in the Mersin Free Trade Zone."
+          }
+        },
+        {
+          "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+          "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+          "published": "Sun, 03 May 2026 10:03:01 +0300",
+          "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+          "project_id": "mersin-serbest-ticaret",
+          "source_name": "Sabah Ekonomi",
+          "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+          "fetched_at": "2026-05-03T08:46:05.528216+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "long-term",
+            "affected_zones": [
+              "Mersin Merkez",
+              "Yenişehir",
+              "Mezitli",
+              "Toroslar",
+              "Akdeniz",
+              "Mersin Serbest Ticaret Bölgesi"
+            ],
+            "price_signal": "+8%",
+            "summary": "Turkey's Transport Minister inspected the ongoing Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, which is expected to significantly boost property values in Mersin's commercial and residential districts by improving regional connectivity."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Mersin, yılın ilk çeyreğinde turunçgil ihracatında zirvede yer aldı",
+        "link": "https://www.aa.com.tr/tr/ekonomi/mersin-yilin-ilk-ceyreginde-turuncgil-ihracatinda-zirvede-yer-aldi-/3924737",
+        "published": "Sat, 02 May 2026 11:06:10 +0300",
+        "summary": "Türkiye'nin turunçgil ihracatının yüzde 46,7'sinin yapıldığı Mersin'den yılın ilk çeyreğinde 325 milyon 600 bin dolarlık dış satım gerçekleştirildi.",
+        "project_id": "mersin-serbest-ticaret",
+        "source_name": "AA Ekonomi",
+        "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+        "fetched_at": "2026-05-03T08:46:03.264016+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "positive",
+          "urgency": "medium",
+          "affected_zones": [
+            "Mersin Serbest Ticaret Bölgesi",
+            "Mersin Liman",
+            "Akdeniz",
+            "Toroslar"
+          ],
+          "price_signal": "+2%",
+          "summary": "Mersin's dominance in Turkey's citrus exports, accounting for 46.7% of national exports worth $325.6 million in Q1 2026, signals strong regional economic activity that supports commercial and industrial property demand near the free trade zone."
+        }
+      },
+      "overall_sentiment": "positive",
+      "price_signal_avg": 2.8,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T08:46:23.083842+00:00"
+    },
+    {
+      "project_id": "gap-sanliurfa-tarim",
+      "project_name": "GAP Şanlıurfa Tarım Dönüşümü",
+      "status": "active",
+      "tradia_score": 74,
+      "districts": [
+        "Şanlıurfa",
+        "Harran",
+        "Birecik"
+      ],
+      "news_items": [
+        {
+          "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+          "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+          "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+          "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+          "project_id": "gap-sanliurfa-tarim",
+          "source_name": "BİK Resmi İlanlar",
+          "source_url": "https://bik.gov.tr/rss",
+          "fetched_at": "2026-05-03T08:46:24.113394+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Şanlıurfa Merkez"
+            ],
+            "price_signal": "+0%",
+            "summary": "A routine official visit by the Press Advertisement Authority management to Şanlıurfa Governor has no direct impact on property prices in the region."
+          }
+        },
+        {
+          "title": "Evini basan alacaklıları tarafından tabancayla vurularak öldürüldü",
+          "link": "https://www.hurriyet.com.tr/gundem/evini-basan-alacaklilari-tarafindan-tabancayla-vurularak-olduruldu-43164677",
+          "published": "Sat, 02 May 2026 23:28:57 Z",
+          "summary": "Şanlıurfa’nın Halfeti ilçesinde, alacaklıları tarafından evine baskın yapılıp, silahlı saldırıya uğrayan Mehmet Arslan (58), hayatını kaybetti.",
+          "project_id": "gap-sanliurfa-tarim",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:46:24.607826+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Halfeti"
+            ],
+            "price_signal": "-2%",
+            "summary": "A fatal armed attack by creditors in Halfeti district of Şanlıurfa raises security concerns that may negatively impact local property values."
+          }
+        },
+        {
+          "title": "Şanlıurfa'da feci kaza: 2 ölü, 2 yaralı",
+          "link": "https://www.hurriyet.com.tr/gundem/sanliurfada-feci-kaza-2-olu-2-yarali-43164514",
+          "published": "Sat, 02 May 2026 17:20:00 Z",
+          "summary": "Şanlıurfa’nın Siverek ilçesinde meydana gelen zincirleme trafik kazasında 2 kişi hayatını kaybetti, 2 kişi yaralandı.",
+          "project_id": "gap-sanliurfa-tarim",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:46:24.607858+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Siverek"
+            ],
+            "price_signal": "0%",
+            "summary": "A fatal chain-reaction traffic accident in Siverek district of Şanlıurfa resulted in 2 deaths and 2 injuries, with no meaningful impact on property prices."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Basın İlan Kurumu Yönetiminden Vali Hasan Şıldak’a ziyaret",
+        "link": "https://bik.gov.tr/kurumsal-haberler/basin-ilan-kurumu-yonetiminden-sanliurfa-valisi-hasan-sildaka-ziyaret/",
+        "published": "Sat, 11 Apr 2026 13:43:52 +0000",
+        "summary": "Genel Müdür Abdulkadir Çay ve Yönetim Kurulu üyeleri, Şanlıurfa Valisi Hasan Şıldak’ı ziyaret etti.",
+        "project_id": "gap-sanliurfa-tarim",
+        "source_name": "BİK Resmi İlanlar",
+        "source_url": "https://bik.gov.tr/rss",
+        "fetched_at": "2026-05-03T08:46:24.113394+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "neutral",
+          "urgency": "immediate",
+          "affected_zones": [
+            "Şanlıurfa Merkez"
+          ],
+          "price_signal": "+0%",
+          "summary": "A routine official visit by the Press Advertisement Authority management to Şanlıurfa Governor has no direct impact on property prices in the region."
+        }
+      },
+      "overall_sentiment": "neutral",
+      "price_signal_avg": -0.7,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T08:46:33.838414+00:00"
+    },
+    {
+      "project_id": "adana-ceyhan-enerji",
+      "project_name": "Adana-Ceyhan Enerji Koridoru",
+      "status": "active",
+      "tradia_score": 80,
+      "districts": [
+        "Adana",
+        "Ceyhan",
+        "Seyhan",
+        "Yüreğir"
+      ],
+      "news_items": [
+        {
+          "title": "Adana ve Mersin'deki KOBİ'lerin \"yeşil dönüşümü\"ne temiz üretim ve dijitalleşme odaklı destek",
+          "link": "https://www.aa.com.tr/tr/ekonomi/adana-ve-mersindeki-kobilerin-yesil-donusumune-temiz-uretim-ve-dijitallesme-odakli-destek/3924721",
+          "published": "Sat, 02 May 2026 11:01:42 +0300",
+          "summary": "Sanayi ve Teknoloji Bakanlığınca, Çukurova Kalkınma Ajansı (ÇKA) aracılığıyla Adana ve Mersin'deki faaliyet gösteren KOBİ'lerin, yeşil geçişe konu faaliyetleri için 400 milyon lira destek verilerek yatırımların büyümesine katkı sağlanacak.",
+          "project_id": "adana-ceyhan-enerji",
+          "source_name": "AA Ekonomi",
+          "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+          "fetched_at": "2026-05-03T08:46:33.867590+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "medium",
+            "affected_zones": [
+              "Adana Organize Sanayi Bölgesi",
+              "Mersin Organize Sanayi Bölgesi",
+              "Ceyhan",
+              "Tarsus",
+              "Çukurova"
+            ],
+            "price_signal": "+3%",
+            "summary": "A 400 million TL green transition and digitalization support package for SMEs in Adana and Mersin, channeled through the Çukurova Development Agency, is expected to boost industrial activity and moderately uplift property prices in affected zones."
+          }
+        },
+        {
+          "title": "Aracın altına topunu almak için giren çocuk, son anda kurtarıldı",
+          "link": "https://www.hurriyet.com.tr/gundem/aracin-altina-topunu-almak-icin-giren-cocuk-son-anda-kurtarildi-43164436",
+          "published": "Sat, 02 May 2026 14:38:00 Z",
+          "summary": "Adana'nın Yüreğir ilçesinde park halindeki bir aracın altına giren küçük çocuk, sürücüsünün fark etmeden aracı hareket ettirmesiyle çevrede bulunan bir vatandaşın dikkati sayesinde ezilmekten son anda kurtarıldı.",
+          "project_id": "adana-ceyhan-enerji",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:46:35.391794+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "neutral",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Yüreğir"
+            ],
+            "price_signal": "0%",
+            "summary": "A child was rescued at the last moment from under a moving vehicle in Yüreğir district of Adana, an incident unrelated to the Adana-Ceyhan Energy Corridor project or property prices."
+          }
+        },
+        {
+          "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+          "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+          "published": "Sun, 03 May 2026 10:03:01 +0300",
+          "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+          "project_id": "adana-ceyhan-enerji",
+          "source_name": "Sabah Ekonomi",
+          "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+          "fetched_at": "2026-05-03T08:46:36.286934+00:00",
+          "relevance_score": 30,
+          "classification": {
+            "impact": "positive",
+            "urgency": "long-term",
+            "affected_zones": [
+              "Ceyhan",
+              "Adana Merkez",
+              "Seyhan",
+              "Yüreğir",
+              "Osmaniye",
+              "İskenderun Yolu Güzergahı",
+              "Gaziantep Bağlantı Noktası"
+            ],
+            "price_signal": "+8%",
+            "summary": "Turkey's Transport Minister inspected ongoing works on the Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, signaling long-term property value increases along the corridor, particularly in Ceyhan and surrounding districts."
+          }
+        },
+        {
+          "title": "Adana'daki DEAŞ operasyonunda 5 tutuklama kararı",
+          "link": "https://www.hurriyet.com.tr/gundem/adanadaki-deas-operasyonunda-5-tutuklama-karari-41748970",
+          "published": "Thu, 25 Feb 2021 06:48:44 Z",
+          "summary": "ADANA’da terör örgütü DEAŞ’a yönelik operasyonda gözaltına alınan 9 şüpheliden 5’i tutuklandı, 1’i adli kontrol şartıyla, 4 kişi serbest bırakıldı. Şüphelilerden Muhammed Velid A.’nın (24), örgütün eğitim yapılanması içinde Arapça Dili ve Edebiyatı öğretmenliği yaptığı ve 100 dolar maaş aldığı, Abdurrahman Raad B.’nin (22) ise babasının Irak’ta sözde zekat divanı başkanı olduğu ortaya çıktı.",
+          "project_id": "adana-ceyhan-enerji",
+          "source_name": "Hürriyet Gündem",
+          "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+          "fetched_at": "2026-05-03T08:46:35.392044+00:00",
+          "relevance_score": 10,
+          "classification": {
+            "impact": "negative",
+            "urgency": "immediate",
+            "affected_zones": [
+              "Adana",
+              "Ceyhan"
+            ],
+            "price_signal": "-2%",
+            "summary": "A counter-terrorism operation in Adana resulting in ISIS-related arrests creates short-term security concerns that may negatively impact property prices in the Adana-Ceyhan energy corridor area."
+          }
+        }
+      ],
+      "top_signal": {
+        "title": "Adana ve Mersin'deki KOBİ'lerin \"yeşil dönüşümü\"ne temiz üretim ve dijitalleşme odaklı destek",
+        "link": "https://www.aa.com.tr/tr/ekonomi/adana-ve-mersindeki-kobilerin-yesil-donusumune-temiz-uretim-ve-dijitallesme-odakli-destek/3924721",
+        "published": "Sat, 02 May 2026 11:01:42 +0300",
+        "summary": "Sanayi ve Teknoloji Bakanlığınca, Çukurova Kalkınma Ajansı (ÇKA) aracılığıyla Adana ve Mersin'deki faaliyet gösteren KOBİ'lerin, yeşil geçişe konu faaliyetleri için 400 milyon lira destek verilerek yatırımların büyümesine katkı sağlanacak.",
+        "project_id": "adana-ceyhan-enerji",
+        "source_name": "AA Ekonomi",
+        "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+        "fetched_at": "2026-05-03T08:46:33.867590+00:00",
+        "relevance_score": 30,
+        "classification": {
+          "impact": "positive",
+          "urgency": "medium",
+          "affected_zones": [
+            "Adana Organize Sanayi Bölgesi",
+            "Mersin Organize Sanayi Bölgesi",
+            "Ceyhan",
+            "Tarsus",
+            "Çukurova"
+          ],
+          "price_signal": "+3%",
+          "summary": "A 400 million TL green transition and digitalization support package for SMEs in Adana and Mersin, channeled through the Çukurova Development Agency, is expected to boost industrial activity and moderately uplift property prices in affected zones."
+        }
+      },
+      "overall_sentiment": "positive",
+      "price_signal_avg": 2.2,
+      "archive_data": null,
+      "data_source": "live_rss",
+      "research_date": "2026-05-03T08:46:50.326104+00:00"
+    }
+  ]
+}

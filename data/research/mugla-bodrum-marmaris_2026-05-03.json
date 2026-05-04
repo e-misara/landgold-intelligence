@@ -1,0 +1,148 @@
+{
+  "project_id": "mugla-bodrum-marmaris",
+  "project_name": "Muğla Lüks Kıyı Kuşağı",
+  "status": "active",
+  "tradia_score": 91,
+  "districts": [
+    "Bodrum",
+    "Marmaris",
+    "Fethiye",
+    "Göcek"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "mugla-bodrum-marmaris",
+    "name": "Muğla — Bodrum, Marmaris, Fethiye Lüks Kuşağı",
+    "name_en": "Mugla Luxury Coast — Bodrum, Marmaris, Fethiye",
+    "category": "luxury_tourism",
+    "status": "active",
+    "tradia_score": 91,
+    "summary_en": "Turkey's highest-value coastal real estate market. Bodrum consistently outperforms all Turkish markets in USD terms. International celebrity and UHNW buyer demand. Limited coastal supply driving prices to Aegean Mediterranean levels.",
+    "summary_ru": "Рынок прибрежной недвижимости с самыми высокими ценами в Турции. Бодрум стабильно опережает все турецкие рынки в долларовом выражении. Спрос со стороны международных знаменитостей и UHNW-покупателей.",
+    "summary_ar": "سوق العقارات الساحلية الأعلى قيمة في تركيا. بودروم يتفوق باستمرار على جميع الأسواق التركية بالدولار. طلب من المشاهير الدوليين والأثرياء جداً.",
+    "summary_tr": "Türkiye'nin en yüksek değerli kıyı gayrimenkul piyasası. Bodrum USD bazında tüm Türk piyasalarını sürekli geride bırakıyor. Uluslararası ünlü ve UHNW alıcı talebi. Sınırlı kıyı arzı fiyatları Ege Akdeniz seviyelerine taşıyor.",
+    "key_events": [
+      {
+        "date": "2021-08",
+        "event_en": "Bodrum villa prices surpass $10,000/m² for first time",
+        "price_impact": "+45%"
+      },
+      {
+        "date": "2022-05",
+        "event_en": "International yacht marina capacity doubled",
+        "price_impact": "+20%"
+      },
+      {
+        "date": "2023-07",
+        "event_en": "Fethiye Ölüdeniz designated UNESCO heritage zone",
+        "price_impact": "+30%"
+      },
+      {
+        "date": "2024-03",
+        "event_en": "Bodrum airport new terminal — capacity 8M/year",
+        "price_impact": "+18%"
+      },
+      {
+        "date": "2025-04",
+        "event_en": "Luxury brand hotels — Aman, Six Senses opening",
+        "price_impact": "+25%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2019,
+          "min": 2500,
+          "max": 5000,
+          "note": "Pre-COVID"
+        },
+        {
+          "year": 2021,
+          "min": 4500,
+          "max": 9000,
+          "note": "COVID boom"
+        },
+        {
+          "year": 2022,
+          "min": 6000,
+          "max": 12000,
+          "note": "Record prices"
+        },
+        {
+          "year": 2023,
+          "min": 7500,
+          "max": 15000,
+          "note": "UHNW demand"
+        },
+        {
+          "year": 2024,
+          "min": 9000,
+          "max": 18000,
+          "note": "Luxury brands"
+        },
+        {
+          "year": 2026,
+          "min": 11000,
+          "max": 22000,
+          "note": "Current"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Yalıkavak",
+        "district": "Bodrum",
+        "type": "luxury_villa",
+        "price_usd_m2": 12000,
+        "upside": "+18-25% (2yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Türkbükü",
+        "district": "Bodrum",
+        "type": "luxury_villa",
+        "price_usd_m2": 15000,
+        "upside": "+15-22% (2yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Göcek",
+        "district": "Fethiye",
+        "type": "marina_villa",
+        "price_usd_m2": 5500,
+        "upside": "+30-40% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Hisarönü",
+        "district": "Fethiye",
+        "type": "villa_land",
+        "price_usd_m2": 1800,
+        "upside": "+40-60% (4yr)",
+        "risk": "medium"
+      },
+      {
+        "name": "İçmeler",
+        "district": "Marmaris",
+        "type": "apartment",
+        "price_usd_m2": 2200,
+        "upside": "+25-35% (2yr)",
+        "risk": "low"
+      }
+    ],
+    "risk_factors": [
+      "Highest entry prices in Turkey — capital intensive",
+      "Illiquid market — longer sale timelines",
+      "Coastal zoning extremely restrictive",
+      "Seasonal rental market — 4-5 month peak season only"
+    ],
+    "tradia_verdict": "BUY — Göcek marina and Hisarönü land offer best entry points for new investors. Yalıkavak and Türkbükü for UHNW capital preservation."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-03T07:45:44.481882+00:00"
+}

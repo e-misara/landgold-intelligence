@@ -1,0 +1,77 @@
+{
+  "project_id": "izmir-alsancak-gelisim",
+  "project_name": "İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı",
+  "status": "active",
+  "tradia_score": 79,
+  "districts": [
+    "Alsancak",
+    "Bayraklı",
+    "Karşıyaka",
+    "Bornova"
+  ],
+  "news_items": [
+    {
+      "title": "İzmir'de dehşet! 73 yaşındaki baba, oğlunu bıçaklayarak öldürdü",
+      "link": "https://www.hurriyet.com.tr/gundem/73-yasindaki-baba-oglunu-bicaklayarak-oldurdu-43164676",
+      "published": "Sun, 03 May 2026 04:30:00 Z",
+      "summary": "İzmir'in Bayraklı ilçesinde İ.A. (73), evde tartıştığı oğlu Kemal Arbasun’u (46) bıçaklayarak öldürdü.",
+      "project_id": "izmir-alsancak-gelisim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T07:45:49.111789+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "negative",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Bayraklı"
+        ],
+        "price_signal": "-1%",
+        "summary": "A violent domestic homicide in Bayraklı district may slightly dampen local buyer sentiment in the short term."
+      }
+    },
+    {
+      "title": "11 SORUDA SAÇ BOYALARI DOSYASI | Ciddi alerjik reaksiyona neden olabilir mi? Kimler risk altında? Saçları boyamadan önce nelere dikkat edilmeli?",
+      "link": "https://www.hurriyet.com.tr/kelebek/saglik/11-soruda-sac-boyalari-dosyasi-ciddi-alerjik-reaksiyona-neden-olabilir-mi-kimler-risk-altinda-saclari-boyamadan-once-nelere-dikkat-edilmeli-42315520",
+      "published": "Sun, 20 Aug 2023 05:56:00 Z",
+      "summary": "Geçtiğimiz günlerde İzmir’de evde saçını boyarken fenalaşıp hayatını kaybeden Deniz Demirbayraklı'nın, saç boyasına alerjik reaksiyon gösterdiği iddia edildi. Ölüm nedeni adli tıpta yapılacak otopsinin ardından belirlenecek olan Demirbayraklı'nın babası, kızının saçını ilk defa boyamadığını ve mevsimsel alerji dışında başka bir şeye alerjisi olmadığını belirtti. Peki saç boyası gerçekten böyle ciddi bir reaksiyona neden olabilir mi? Defalarca kullanılmasına rağmen bir gün aniden alerji gelişebil",
+      "project_id": "izmir-alsancak-gelisim",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T07:45:49.112160+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "This news item is unrelated to real estate or the İzmir Alsancak-Bayraklı Kentsel Dönüşüm Aksı project, covering a hair dye allergic reaction incident instead."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "İzmir'de dehşet! 73 yaşındaki baba, oğlunu bıçaklayarak öldürdü",
+    "link": "https://www.hurriyet.com.tr/gundem/73-yasindaki-baba-oglunu-bicaklayarak-oldurdu-43164676",
+    "published": "Sun, 03 May 2026 04:30:00 Z",
+    "summary": "İzmir'in Bayraklı ilçesinde İ.A. (73), evde tartıştığı oğlu Kemal Arbasun’u (46) bıçaklayarak öldürdü.",
+    "project_id": "izmir-alsancak-gelisim",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-03T07:45:49.111789+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "negative",
+      "urgency": "immediate",
+      "affected_zones": [
+        "Bayraklı"
+      ],
+      "price_signal": "-1%",
+      "summary": "A violent domestic homicide in Bayraklı district may slightly dampen local buyer sentiment in the short term."
+    }
+  },
+  "overall_sentiment": "negative",
+  "price_signal_avg": -0.5,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T07:45:55.837801+00:00"
+}

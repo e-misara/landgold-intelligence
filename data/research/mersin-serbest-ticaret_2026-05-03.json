@@ -1,0 +1,157 @@
+{
+  "project_id": "mersin-serbest-ticaret",
+  "project_name": "Mersin Serbest Ticaret Bölgesi",
+  "status": "active",
+  "tradia_score": 86,
+  "districts": [
+    "Mersin",
+    "Tarsus",
+    "Silifke"
+  ],
+  "news_items": [
+    {
+      "title": "Mersin, yılın ilk çeyreğinde turunçgil ihracatında zirvede yer aldı",
+      "link": "https://www.aa.com.tr/tr/ekonomi/mersin-yilin-ilk-ceyreginde-turuncgil-ihracatinda-zirvede-yer-aldi-/3924737",
+      "published": "Sat, 02 May 2026 11:06:10 +0300",
+      "summary": "Türkiye'nin turunçgil ihracatının yüzde 46,7'sinin yapıldığı Mersin'den yılın ilk çeyreğinde 325 milyon 600 bin dolarlık dış satım gerçekleştirildi.",
+      "project_id": "mersin-serbest-ticaret",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-03T08:46:03.264016+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "medium",
+        "affected_zones": [
+          "Mersin Serbest Ticaret Bölgesi",
+          "Mersin Liman",
+          "Akdeniz",
+          "Toroslar"
+        ],
+        "price_signal": "+2%",
+        "summary": "Mersin's dominance in Turkey's citrus exports, accounting for 46.7% of national exports worth $325.6 million in Q1 2026, signals strong regional economic activity that supports commercial and industrial property demand near the free trade zone."
+      }
+    },
+    {
+      "title": "Adana ve Mersin'deki KOBİ'lerin \"yeşil dönüşümü\"ne temiz üretim ve dijitalleşme odaklı destek",
+      "link": "https://www.aa.com.tr/tr/ekonomi/adana-ve-mersindeki-kobilerin-yesil-donusumune-temiz-uretim-ve-dijitallesme-odakli-destek/3924721",
+      "published": "Sat, 02 May 2026 11:01:42 +0300",
+      "summary": "Sanayi ve Teknoloji Bakanlığınca, Çukurova Kalkınma Ajansı (ÇKA) aracılığıyla Adana ve Mersin'deki faaliyet gösteren KOBİ'lerin, yeşil geçişe konu faaliyetleri için 400 milyon lira destek verilerek yatırımların büyümesine katkı sağlanacak.",
+      "project_id": "mersin-serbest-ticaret",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-03T08:46:03.264026+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "medium",
+        "affected_zones": [
+          "Mersin Serbest Ticaret Bölgesi",
+          "Mersin Organize Sanayi Bölgesi",
+          "Adana Organize Sanayi Bölgesi",
+          "Çukurova"
+        ],
+        "price_signal": "+3%",
+        "summary": "A 400 million TRY government support package for green transition and digitalization of SMEs in Adana and Mersin is expected to boost industrial investment and positively influence commercial and industrial property prices in the region."
+      }
+    },
+    {
+      "title": "TBB’nin Başkanı Vahap Seçer oldu",
+      "link": "https://www.hurriyet.com.tr/gundem/tbbnin-baskani-vahap-secer-oldu-43164641",
+      "published": "Sun, 03 May 2026 04:00:00 Z",
+      "summary": "Türkiye Belediyeler Birliği (TBB) Başkanlığı’na, Mersin Büyükşehir Belediye Başkanı Vahap Seçer seçildi.",
+      "project_id": "mersin-serbest-ticaret",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:46:04.741990+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "long-term",
+        "affected_zones": [
+          "Mersin Merkez",
+          "Yenişehir",
+          "Mezitli",
+          "Toroslar",
+          "Akdeniz"
+        ],
+        "price_signal": "+1%",
+        "summary": "Mersin Mayor Vahap Seçer's election as President of the Union of Municipalities of Turkey may marginally boost the city's political profile and infrastructure investment prospects over the long term."
+      }
+    },
+    {
+      "title": "Türkiye Belediyeler Birliği Meclis toplantısında 'İmamoğlu' gerginliği",
+      "link": "https://www.hurriyet.com.tr/gundem/turkiye-belediyeler-birligi-meclis-toplantisinda-imamoglu-gerginligi-43164341",
+      "published": "Sat, 02 May 2026 12:50:00 Z",
+      "summary": "Türkiye Belediyeler Birliği yeni yönetimi seçimi öncesi tutuklu bulunan ve görevinden uzaklaştırılan İstanbul Büyükşehir Belediye (İBB) Başkanı Ekrem İmamoğlu'nun mektubu okununca, salonda AK Parti ve CHP'li belediye başkanları arasında tartışma yaşandı. Arbedenin sona ermesi ardından toplantı devam etti. Mersin Büyükşehir Belediye Başkanı Vahap Seçer, TBB Başkanı seçildi.",
+      "project_id": "mersin-serbest-ticaret",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:46:04.742150+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Mersin Serbest Ticaret Bölgesi",
+          "Mersin Büyükşehir"
+        ],
+        "price_signal": "+0%",
+        "summary": "A political dispute erupted at the Turkish Municipalities Union assembly meeting, where Mersin Metropolitan Mayor Vahap Seçer was elected as the new TBB president, an event with no direct impact on property prices in the Mersin Free Trade Zone."
+      }
+    },
+    {
+      "title": "Bakan Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'ni inceledi",
+      "link": "https://www.sabah.com.tr/ekonomi/bakan-uraloglu-mersin-adana-osmaniye-gaziantep-hizli-tren-projesinde-incelemelerde-bulundu-7575851",
+      "published": "Sun, 03 May 2026 10:03:01 +0300",
+      "summary": "Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, Mersin-Adana-Osmaniye-Gaziantep Hızlı Tren Projesi'nde devam eden çalışmaları inceledi. Devamı için tıklayınız",
+      "project_id": "mersin-serbest-ticaret",
+      "source_name": "Sabah Ekonomi",
+      "source_url": "https://www.sabah.com.tr/rss/ekonomi.xml",
+      "fetched_at": "2026-05-03T08:46:05.528216+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "positive",
+        "urgency": "long-term",
+        "affected_zones": [
+          "Mersin Merkez",
+          "Yenişehir",
+          "Mezitli",
+          "Toroslar",
+          "Akdeniz",
+          "Mersin Serbest Ticaret Bölgesi"
+        ],
+        "price_signal": "+8%",
+        "summary": "Turkey's Transport Minister inspected the ongoing Mersin-Adana-Osmaniye-Gaziantep High-Speed Rail Project, which is expected to significantly boost property values in Mersin's commercial and residential districts by improving regional connectivity."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Mersin, yılın ilk çeyreğinde turunçgil ihracatında zirvede yer aldı",
+    "link": "https://www.aa.com.tr/tr/ekonomi/mersin-yilin-ilk-ceyreginde-turuncgil-ihracatinda-zirvede-yer-aldi-/3924737",
+    "published": "Sat, 02 May 2026 11:06:10 +0300",
+    "summary": "Türkiye'nin turunçgil ihracatının yüzde 46,7'sinin yapıldığı Mersin'den yılın ilk çeyreğinde 325 milyon 600 bin dolarlık dış satım gerçekleştirildi.",
+    "project_id": "mersin-serbest-ticaret",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-03T08:46:03.264016+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "positive",
+      "urgency": "medium",
+      "affected_zones": [
+        "Mersin Serbest Ticaret Bölgesi",
+        "Mersin Liman",
+        "Akdeniz",
+        "Toroslar"
+      ],
+      "price_signal": "+2%",
+      "summary": "Mersin's dominance in Turkey's citrus exports, accounting for 46.7% of national exports worth $325.6 million in Q1 2026, signals strong regional economic activity that supports commercial and industrial property demand near the free trade zone."
+    }
+  },
+  "overall_sentiment": "positive",
+  "price_signal_avg": 2.8,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:46:23.083842+00:00"
+}

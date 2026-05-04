@@ -1,0 +1,106 @@
+{
+  "project_id": "kuzey-marmara-otoyolu",
+  "project_name": "Kuzey Marmara Otoyolu",
+  "status": "active",
+  "tradia_score": 85,
+  "districts": [
+    "Arnavutköy",
+    "Çatalca",
+    "Silivri",
+    "Kırklareli"
+  ],
+  "news_items": [
+    {
+      "title": "Trakya'dan nisanda 244,4 milyon dolarlık ihracat yapıldı",
+      "link": "https://www.aa.com.tr/tr/ekonomi/trakyadan-nisanda-244-4-milyon-dolarlik-ihracat-yapildi/3926031",
+      "published": "Mon, 04 May 2026 09:13:06 +0300",
+      "summary": "Kırklareli, Edirne ve Tekirdağ'dan geçen ay 244 milyon 391 bin 460 dolarlık ihracat gerçekleştirildi.",
+      "project_id": "kuzey-marmara-otoyolu",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-04T09:13:43.450841+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "medium",
+        "affected_zones": [
+          "Kırklareli",
+          "Edirne",
+          "Tekirdağ"
+        ],
+        "price_signal": "+1%",
+        "summary": "Export activity of $244.4 million from Thrace region in April 2026 reflects economic vitality along the Kuzey Marmara Otoyolu corridor, with marginal positive implications for regional property values."
+      }
+    },
+    {
+      "title": "TPAO'nun 4 şehirdeki bazı sahaları için kamulaştırma kararı alındı",
+      "link": "https://www.aa.com.tr/tr/ekonomi/tpaonun-4-sehirdeki-bazi-sahalari-icin-kamulastirma-karari-alindi/3925402",
+      "published": "Sun, 03 May 2026 10:04:14 +0300",
+      "summary": "Türkiye Petrolleri Anonim Ortaklığının (TPAO) Tekirdağ, İstanbul, Kırklareli ve Adıyaman'da bulunan sahaları kamulaştırılacak.",
+      "project_id": "kuzey-marmara-otoyolu",
+      "source_name": "AA Ekonomi",
+      "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+      "fetched_at": "2026-05-04T09:13:43.450925+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "medium",
+        "affected_zones": [
+          "Tekirdağ",
+          "İstanbul",
+          "Kırklareli",
+          "Adıyaman"
+        ],
+        "price_signal": "-2%",
+        "summary": "TPAO oil field expropriation decisions in four Turkish cities may create minor uncertainty for nearby real estate markets, with limited direct impact on Kuzey Marmara Otoyolu corridor property values."
+      }
+    },
+    {
+      "title": "İlim Yayma Ödüllü akademisyenlerden ‘Bilim Diplomasisi’",
+      "link": "https://www.hurriyet.com.tr/gundem/ilim-yayma-odullu-akademisyenlerden-bilim-diplomasisi-43165385",
+      "published": "Mon, 04 May 2026 04:00:00 Z",
+      "summary": "Türkiye’nin akademik alandaki en prestijli ödüllerinden biri olarak kabul edilen İlim Yayma Ödülleri’nin istişare kampının ikincisi Silivri’de gerçekleştirildi.",
+      "project_id": "kuzey-marmara-otoyolu",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-04T09:13:44.230364+00:00",
+      "relevance_score": 30,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [
+          "Silivri"
+        ],
+        "price_signal": "+0%",
+        "summary": "An academic award consultation camp held in Silivri has no direct relevance to the Kuzey Marmara Otoyolu project or property prices in the region."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "Trakya'dan nisanda 244,4 milyon dolarlık ihracat yapıldı",
+    "link": "https://www.aa.com.tr/tr/ekonomi/trakyadan-nisanda-244-4-milyon-dolarlik-ihracat-yapildi/3926031",
+    "published": "Mon, 04 May 2026 09:13:06 +0300",
+    "summary": "Kırklareli, Edirne ve Tekirdağ'dan geçen ay 244 milyon 391 bin 460 dolarlık ihracat gerçekleştirildi.",
+    "project_id": "kuzey-marmara-otoyolu",
+    "source_name": "AA Ekonomi",
+    "source_url": "https://www.aa.com.tr/tr/rss/default?cat=ekonomi",
+    "fetched_at": "2026-05-04T09:13:43.450841+00:00",
+    "relevance_score": 30,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "medium",
+      "affected_zones": [
+        "Kırklareli",
+        "Edirne",
+        "Tekirdağ"
+      ],
+      "price_signal": "+1%",
+      "summary": "Export activity of $244.4 million from Thrace region in April 2026 reflects economic vitality along the Kuzey Marmara Otoyolu corridor, with marginal positive implications for regional property values."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": -0.3,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-04T09:13:54.079684+00:00"
+}

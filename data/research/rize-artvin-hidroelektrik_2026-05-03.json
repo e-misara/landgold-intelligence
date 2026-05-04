@@ -1,0 +1,54 @@
+{
+  "project_id": "rize-artvin-hidroelektrik",
+  "project_name": "Rize-Artvin Havalimanı Bölgesi",
+  "status": "active",
+  "tradia_score": 74,
+  "districts": [
+    "Rize",
+    "Artvin",
+    "Hopa"
+  ],
+  "news_items": [
+    {
+      "title": "FETÖ'nün fişleme kodları şoke etti",
+      "link": "https://www.hurriyet.com.tr/gundem/fetonun-fisleme-kodlari-soke-etti-41817125",
+      "published": "Mon, 24 May 2021 09:32:14 Z",
+      "summary": "Fetullahçı Terör Örgütü'nün (FETÖ) adliye ve cezaevi yapılanmasına ilişkin aralarında örgütün mahrem imamlarının da bulunduğu 71 sanık hakkındaki iddianamede, örgütün Adalet Bakanlığı personeline ilişkin fişleme amaçlı bilgileri \"Tarak\" adı verdikleri sistemle kayıt altına aldığı ortaya çıktı. İddianamedeki detaylara göre '0' olarak kodlanan kişi Ateist, '1' Allah inancı olup ibadet yapmayan, '2' Cuma namazına giden erkek ve orucunu tutan kadın, '8' paraya zaafı olan kişi olarak kategorize edild",
+      "project_id": "rize-artvin-hidroelektrik",
+      "source_name": "Hürriyet Gündem",
+      "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+      "fetched_at": "2026-05-03T08:01:21.033332+00:00",
+      "relevance_score": 10,
+      "classification": {
+        "impact": "neutral",
+        "urgency": "immediate",
+        "affected_zones": [],
+        "price_signal": "0%",
+        "summary": "A court indictment revealed that FETÖ used a system called 'Tarak' to categorize and profile Ministry of Justice personnel, which has no direct relevance to property prices in the Rize-Artvin Airport region."
+      }
+    }
+  ],
+  "top_signal": {
+    "title": "FETÖ'nün fişleme kodları şoke etti",
+    "link": "https://www.hurriyet.com.tr/gundem/fetonun-fisleme-kodlari-soke-etti-41817125",
+    "published": "Mon, 24 May 2021 09:32:14 Z",
+    "summary": "Fetullahçı Terör Örgütü'nün (FETÖ) adliye ve cezaevi yapılanmasına ilişkin aralarında örgütün mahrem imamlarının da bulunduğu 71 sanık hakkındaki iddianamede, örgütün Adalet Bakanlığı personeline ilişkin fişleme amaçlı bilgileri \"Tarak\" adı verdikleri sistemle kayıt altına aldığı ortaya çıktı. İddianamedeki detaylara göre '0' olarak kodlanan kişi Ateist, '1' Allah inancı olup ibadet yapmayan, '2' Cuma namazına giden erkek ve orucunu tutan kadın, '8' paraya zaafı olan kişi olarak kategorize edild",
+    "project_id": "rize-artvin-hidroelektrik",
+    "source_name": "Hürriyet Gündem",
+    "source_url": "https://www.hurriyet.com.tr/rss/gundem",
+    "fetched_at": "2026-05-03T08:01:21.033332+00:00",
+    "relevance_score": 10,
+    "classification": {
+      "impact": "neutral",
+      "urgency": "immediate",
+      "affected_zones": [],
+      "price_signal": "0%",
+      "summary": "A court indictment revealed that FETÖ used a system called 'Tarak' to categorize and profile Ministry of Justice personnel, which has no direct relevance to property prices in the Rize-Artvin Airport region."
+    }
+  },
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "live_rss",
+  "research_date": "2026-05-03T08:01:25.973836+00:00"
+}

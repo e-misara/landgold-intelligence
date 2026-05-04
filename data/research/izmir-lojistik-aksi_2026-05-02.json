@@ -1,0 +1,139 @@
+{
+  "project_id": "izmir-lojistik-aksi",
+  "project_name": "İzmir Lojistik ve Sanayi Aksı",
+  "status": "active",
+  "tradia_score": 82,
+  "districts": [
+    "Torbalı",
+    "Kemalpaşa",
+    "Aliağa",
+    "Gaziemir"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": {
+    "id": "izmir-lojistik-aksi",
+    "name": "İzmir Lojistik ve Sanayi Aksı",
+    "name_en": "Izmir Logistics & Industrial Corridor",
+    "category": "industrial",
+    "status": "active",
+    "tradia_score": 82,
+    "summary_en": "Turkey's third largest city emerging as major logistics hub. New container port at Çandarlı (capacity 1.5M TEU) transforms İzmir's industrial geography. Torbalı and Kemalpaşa OSB zones seeing sustained foreign investment.",
+    "summary_ru": "Третий по величине город Турции становится крупным логистическим узлом. Новый контейнерный порт в Чандарлы (мощность 1,5 млн TEU) меняет промышленную географию Измира.",
+    "summary_ar": "ثالث أكبر مدينة في تركيا تبرز كمركز لوجستي رئيسي. ميناء حاويات جديد في تشاندارلي (طاقة 1.5 مليون وحدة) يحوّل الجغرافيا الصناعية لإزمير.",
+    "summary_tr": "Türkiye'nin üçüncü büyük şehri önemli bir lojistik merkez olarak öne çıkıyor. Çandarlı'daki yeni konteyner limanı (1,5 milyon TEU kapasitesi) İzmir'in sanayi coğrafyasını dönüştürüyor.",
+    "key_events": [
+      {
+        "date": "2021-09",
+        "event_en": "Çandarlı Port Phase 1 construction started",
+        "price_impact": "+22%"
+      },
+      {
+        "date": "2022-11",
+        "event_en": "Kemalpaşa OSB Phase 3 expansion — 450 new lots",
+        "price_impact": "+18%"
+      },
+      {
+        "date": "2023-06",
+        "event_en": "İzmir-Ankara high speed rail tender",
+        "price_impact": "+15%"
+      },
+      {
+        "date": "2024-02",
+        "event_en": "BMW supplier cluster established Torbalı",
+        "price_impact": "+25%"
+      },
+      {
+        "date": "2025-03",
+        "event_en": "Çandarlı Port first commercial operations",
+        "price_impact": "+30%"
+      }
+    ],
+    "price_data": {
+      "currency": "USD",
+      "unit": "per_m2",
+      "data": [
+        {
+          "year": 2019,
+          "min": 80,
+          "max": 150,
+          "note": "Industrial baseline"
+        },
+        {
+          "year": 2021,
+          "min": 140,
+          "max": 250,
+          "note": "Port announced"
+        },
+        {
+          "year": 2022,
+          "min": 200,
+          "max": 380,
+          "note": "OSB expansion"
+        },
+        {
+          "year": 2023,
+          "min": 280,
+          "max": 520,
+          "note": "Rail tender"
+        },
+        {
+          "year": 2024,
+          "min": 380,
+          "max": 680,
+          "note": "BMW cluster"
+        },
+        {
+          "year": 2026,
+          "min": 480,
+          "max": 850,
+          "note": "Current — port operational"
+        }
+      ]
+    },
+    "hot_zones": [
+      {
+        "name": "Torbalı OSB",
+        "district": "Torbalı",
+        "type": "industrial_land",
+        "price_usd_m2": 280,
+        "upside": "+40-60% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Kemalpaşa OSB",
+        "district": "Kemalpaşa",
+        "type": "industrial_land",
+        "price_usd_m2": 320,
+        "upside": "+35-50% (3yr)",
+        "risk": "low"
+      },
+      {
+        "name": "Çandarlı çevresi",
+        "district": "Aliağa",
+        "type": "logistics_land",
+        "price_usd_m2": 180,
+        "upside": "+55-80% (4yr)",
+        "risk": "medium"
+      },
+      {
+        "name": "Gaziemir",
+        "district": "İzmir",
+        "type": "commercial",
+        "price_usd_m2": 650,
+        "upside": "+20-30% (2yr)",
+        "risk": "low"
+      }
+    ],
+    "risk_factors": [
+      "Port operational delays possible",
+      "Environmental regulations near coastal industrial zones",
+      "Competition from Mersin port for cargo volume"
+    ],
+    "tradia_verdict": "BUY — Çandarlı port hinterland strongest long-term play. Torbalı and Kemalpaşa OSB zones offer immediate industrial demand with low risk."
+  },
+  "data_source": "archive",
+  "research_date": "2026-05-02T21:00:01.386039+00:00"
+}

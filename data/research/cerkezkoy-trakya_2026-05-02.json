@@ -1,0 +1,19 @@
+{
+  "project_id": "cerkezkoy-trakya",
+  "project_name": "Çerkezköy-Trakya Sanayi Aksı",
+  "status": "active",
+  "tradia_score": 78,
+  "districts": [
+    "Çerkezköy",
+    "Tekirdağ",
+    "Muratlı",
+    "Çorlu"
+  ],
+  "news_items": [],
+  "top_signal": null,
+  "overall_sentiment": "neutral",
+  "price_signal_avg": 0.0,
+  "archive_data": null,
+  "data_source": "none",
+  "research_date": "2026-05-02T20:05:30.282187+00:00"
+}
