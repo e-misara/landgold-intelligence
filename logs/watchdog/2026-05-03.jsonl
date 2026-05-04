@@ -1,0 +1,20 @@
+{"ts": "2026-05-03T00:00:02.981708", "triggers": [["news", "Son haber dosyası 24 saat eski"], ["property", "Son property listing 24 saat eski"], ["deploy", "36 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T01:00:02.062924", "triggers": [["news", "Son haber dosyası 25 saat eski"], ["property", "Son property listing 25 saat eski"], ["deploy", "43 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T02:00:01.830747", "triggers": [["news", "Son haber dosyası 26 saat eski"], ["property", "Son property listing 26 saat eski"], ["deploy", "47 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T03:00:01.722580", "triggers": [["news", "Son haber dosyası 27 saat eski"], ["property", "Son property listing 27 saat eski"], ["deploy", "55 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T04:00:02.231192", "triggers": [["news", "Son haber dosyası 28 saat eski"], ["property", "Son property listing 28 saat eski"], ["deploy", "61 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T05:00:02.230010", "triggers": [["news", "Son haber dosyası 29 saat eski"], ["property", "Son property listing 29 saat eski"], ["deploy", "62 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T06:00:02.102642", "triggers": [["news", "Son haber dosyası 30 saat eski"], ["property", "Son property listing 30 saat eski"], ["deploy", "63 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T09:00:02.320433", "triggers": [["news", "Son haber dosyası 33 saat eski"], ["property", "Son property listing 33 saat eski"], ["deploy", "64 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T10:00:02.714185", "triggers": [["property", "Son property listing 34 saat eski"], ["deploy", "66 dosya deploy bekliyor"]], "trigger_count": 2}
+{"ts": "2026-05-03T11:00:02.139501", "triggers": [["deploy", "85 dosya deploy bekliyor"]], "trigger_count": 1}
+{"ts": "2026-05-03T12:00:02.154651", "triggers": [["news", "Son haber dosyası 12 saat eski"], ["deploy", "100 dosya deploy bekliyor"]], "trigger_count": 2}
+{"ts": "2026-05-03T14:00:01.660910", "triggers": [["news", "Son haber dosyası 14 saat eski"], ["deploy", "101 dosya deploy bekliyor"]], "trigger_count": 2}
+{"ts": "2026-05-03T15:00:02.034882", "triggers": [["news", "Son haber dosyası 15 saat eski"], ["deploy", "102 dosya deploy bekliyor"]], "trigger_count": 2}
+{"ts": "2026-05-03T16:00:01.558554", "triggers": [["news", "Son haber dosyası 16 saat eski"], ["deploy", "103 dosya deploy bekliyor"]], "trigger_count": 2}
+{"ts": "2026-05-03T17:00:01.607343", "triggers": [["news", "Son haber dosyası 17 saat eski"], ["deploy", "104 dosya deploy bekliyor"]], "trigger_count": 2}
+{"ts": "2026-05-03T18:00:01.703767", "triggers": [["news", "Son haber dosyası 18 saat eski"], ["property", "Son property listing 18 saat eski"], ["deploy", "105 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T20:00:02.449676", "triggers": [["news", "Son haber dosyası 20 saat eski"], ["property", "Son property listing 20 saat eski"], ["deploy", "106 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T21:00:02.293100", "triggers": [["news", "Son haber dosyası 21 saat eski"], ["property", "Son property listing 21 saat eski"], ["deploy", "107 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T22:00:02.004692", "triggers": [["news", "Son haber dosyası 22 saat eski"], ["property", "Son property listing 22 saat eski"], ["deploy", "108 dosya deploy bekliyor"]], "trigger_count": 3}
+{"ts": "2026-05-03T23:00:02.880711", "triggers": [["news", "Son haber dosyası 23 saat eski"], ["property", "Son property listing 23 saat eski"], ["deploy", "109 dosya deploy bekliyor"]], "trigger_count": 3}

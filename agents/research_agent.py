@@ -985,6 +985,55 @@ class ResearchAgent(BaseAgent):
         self.report_to_ceo(report)
         return report
 
+    # ── Havuz entegrasyonu ─────────────────────────────────────────────────
+
+    def process_news_pool(self, news_list: list) -> dict:
+        """
+        Yeni haberleri sınıflandır, ilce_haber_havuzu.jsonl'a ekle.
+        Hata toleranslı: tek haber fail olursa diğerleri devam.
+        Returns: {"classified": N, "skipped": N, "errors_count": N, "errors_sample": [...]}
+        """
+        from agents.news_classifier import NewsClassifier
+
+        classifier = NewsClassifier()
+        havuz_path = Path("data/havuz/ilce_haber_havuzu.jsonl")
+        havuz_path.parent.mkdir(parents=True, exist_ok=True)
+
+        classified_count = 0
+        skipped_count = 0
+        errors: list[dict] = []
+
+        for haber in news_list:
+            try:
+                labeled = classifier.classify_news(haber)
+
+                if labeled.get("kategori") == "BELIRSIZ":
+                    skipped_count += 1
+                    continue
+
+                if not labeled.get("ilce"):
+                    skipped_count += 1
+                    continue
+
+                with havuz_path.open("a", encoding="utf-8") as f:
+                    f.write(json.dumps(labeled, ensure_ascii=False) + "\n")
+
+                classified_count += 1
+
+            except Exception as e:
+                errors.append({
+                    "haber_baslik": str(haber.get("baslik", "?"))[:60],
+                    "hata": str(e)[:200],
+                })
+                continue
+
+        return {
+            "classified": classified_count,
+            "skipped": skipped_count,
+            "errors_count": len(errors),
+            "errors_sample": errors[:3],
+        }
+
     def run_task(self, task: dict[str, Any]) -> dict[str, Any]:
         action = task.get("action", "marmara")
 

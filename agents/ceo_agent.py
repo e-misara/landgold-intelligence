@@ -564,6 +564,243 @@ class CEOAgent(BaseAgent):
             "agents":   list(self._agents.keys()),
         }
 
+    # ── Haftalık bülten ────────────────────────────────────────────────────
+
+    def generate_weekly_bulletin(self, week_no: int | None = None) -> dict:
+        """
+        Haftalık salı bülteni üret. İki çıktı:
+        1. data/bultenler/YYYY-WXX.md (kamuya açık markdown)
+        2. vezir/havuz_raporu.json (Vezir brief entegrasyonu)
+        """
+        import math
+        from datetime import timedelta
+        from pathlib import Path
+        from zoneinfo import ZoneInfo
+        from services.heat_calculator import HeatCalculator
+        from services.price_projector import PriceProjector
+
+        TR = ZoneInfo("Europe/Istanbul")
+        bugun = datetime.now(TR)
+
+        if week_no is None:
+            week_no = bugun.isocalendar()[1]
+
+        heat = HeatCalculator()
+        proj = PriceProjector()
+
+        top5 = self._find_hottest_ilceler(heat, n=5)
+        big_events = self._collect_big_events(heat, days=7)
+
+        md_path = self._write_public_bulletin(top5, big_events, week_no, proj, bugun)
+        json_path = self._write_vezir_havuz_raporu(top5, big_events, week_no, bugun)
+
+        return {
+            "public_bulletin": str(md_path),
+            "vezir_module": str(json_path),
+            "top5_ilceler": [t["ilce"] for t in top5],
+            "big_events_count": len(big_events),
+        }
+
+    def _find_hottest_ilceler(self, heat, n: int = 5) -> list:
+        """En yüksek sıcaklık oranına sahip N ilçe"""
+        from pathlib import Path
+        isi_path = Path("data/havuz/ilce_isi_son_6_ay.json")
+        if not isi_path.exists():
+            return []
+
+        isi_data = json.loads(isi_path.read_text(encoding="utf-8"))
+        sorted_ilceler = sorted(
+            isi_data.items(),
+            key=lambda x: x[1].get("sicaklik", 0),
+            reverse=True,
+        )
+        return [
+            {
+                "ilce": kod,
+                "sicaklik": data.get("sicaklik"),
+                "seviye": data.get("seviye"),
+                "isi": data.get("isi"),
+            }
+            for kod, data in sorted_ilceler[:n]
+        ]
+
+    def _collect_big_events(self, heat, days: int = 7) -> list:
+        """Son N gün içinde ağırlık 8+ olaylar"""
+        from datetime import timedelta
+        from pathlib import Path
+        from zoneinfo import ZoneInfo
+
+        TR = ZoneInfo("Europe/Istanbul")
+        bugun = datetime.now(TR)
+        cutoff = bugun - timedelta(days=days)
+
+        havuz_path = Path("data/havuz/ilce_haber_havuzu.jsonl")
+        if not havuz_path.exists():
+            return []
+
+        big_events = []
+        with havuz_path.open("r", encoding="utf-8") as f:
+            for line in f:
+                try:
+                    h = json.loads(line)
+                    if h.get("agirlik_puani", 0) < 8:
+                        continue
+                    tarih_str = h.get("tarih_referansi") or h.get("tarih")
+                    if not tarih_str:
+                        continue
+                    ht = datetime.fromisoformat(tarih_str.replace("Z", "+00:00"))
+                    if ht.tzinfo is None:
+                        ht = ht.replace(tzinfo=TR)
+                    if ht > cutoff:
+                        big_events.append(h)
+                except (json.JSONDecodeError, ValueError):
+                    continue
+
+        return sorted(big_events, key=lambda x: x.get("agirlik_puani", 0), reverse=True)
+
+    def _generate_ilce_comment(self, ilce_data: dict, proj: dict, olaylar: list) -> str:
+        """Template-bazlı ilçe yorumu (API kullanmadan)"""
+        ilce = ilce_data.get("ilce", "")
+        seviye = ilce_data.get("seviye", "normal")
+        nominal = proj.get("nominal_artis_yuzde", 0) if proj else 0
+        reel = proj.get("reel_artis_yuzde", 0) if proj else 0
+
+        seviye_mesaj = {
+            "patlamis": "aşırı aktivite gösteriyor",
+            "cok-sicak": "yoğun haber akışıyla dikkat çekiyor",
+            "sicak": "aktif bir dönemden geçiyor",
+            "normal": "tipik aktivite seviyesinde",
+            "soguk": "normalin altında aktivite gösteriyor",
+            "donmus": "aktivite çok düşük",
+        }.get(seviye, "izleniyor")
+
+        reel_str = f"+%{reel:.1f}" if reel >= 0 else f"%{reel:.1f}"
+        return (
+            f"{ilce} {seviye_mesaj}. "
+            f"12 aylık projeksiyon: nominal %{nominal:.1f}, reel (TÜFE üstü) {reel_str}."
+        )
+
+    def _write_public_bulletin(
+        self, top5: list, big_events: list, week_no: int, proj, bugun
+    ):
+        """Kamuya açık markdown bülten yaz"""
+        from pathlib import Path
+        from datetime import timedelta
+
+        bulten_dir = Path("data/bultenler")
+        bulten_dir.mkdir(parents=True, exist_ok=True)
+
+        week_start = bugun - timedelta(days=bugun.weekday())
+        week_end = week_start + timedelta(days=6)
+        week_range = (
+            f"{week_start.strftime('%d')}-{week_end.strftime('%d %B %Y')}"
+        )
+
+        lines = [
+            f"# Tradia Salı Bülteni — Hafta {week_no} ({week_range})",
+            "",
+            f"> Bu bülten {bugun.strftime('%d %B %Y')} TR tarihli verilerden üretildi.",
+            "",
+            "---",
+            "",
+            "## 🔥 Bu Hafta En Sıcak İlçeler",
+            "",
+        ]
+
+        for i, ilce_data in enumerate(top5, 1):
+            ilce = ilce_data["ilce"]
+            sicaklik = ilce_data.get("sicaklik", 0)
+            seviye = ilce_data.get("seviye", "?")
+
+            ilce_proj = {}
+            try:
+                ilce_proj = proj.project(ilce, 12)
+            except Exception:
+                pass
+
+            olaylar = []
+            yorum = self._generate_ilce_comment(ilce_data, ilce_proj, olaylar)
+
+            lines += [
+                f"### {i}. {ilce} — sıcaklık {sicaklik:.1f}x ({seviye})",
+                "",
+                yorum,
+                "",
+            ]
+
+            if ilce_proj:
+                lines += [
+                    f"**12 ay m² projeksiyonu:** "
+                    f"{ilce_proj.get('bugunku_m2', '?')} → "
+                    f"{ilce_proj.get('projeksiyon_m2', '?')} TL "
+                    f"(nominal %{ilce_proj.get('nominal_artis_yuzde', 0):.1f})",
+                    "",
+                ]
+
+        if big_events:
+            lines += ["---", "", "## 📊 Öne Çıkan Büyük Olaylar (Son 7 Gün)", ""]
+            for ev in big_events[:3]:
+                lines += [
+                    f"- **{ev.get('ozet', '?')}** "
+                    f"({ev.get('ilce', '?')}, ağırlık: {ev.get('agirlik_puani', '?')})",
+                ]
+
+        lines += [
+            "",
+            "---",
+            "",
+            "## 📌 Bilinen Sınırlar",
+            "",
+            "- Projeksiyonlar AI tahminleridir, yatırım tavsiyesi değildir",
+            "- Çarpanlar v1 (kalibrasyon devam ediyor)",
+            "",
+            "---",
+            "",
+            "*Tradia — Türkiye gayrimenkul istihbarat platformu*",
+            f"*Bu bülten her Salı sabah 07:00 TR'de yayınlanır.*",
+        ]
+
+        md_path = bulten_dir / f"{bugun.strftime('%Y')}-W{week_no:02d}.md"
+        md_path.write_text("\n".join(lines), encoding="utf-8")
+        return md_path
+
+    def _write_vezir_havuz_raporu(
+        self, top5: list, big_events: list, week_no: int, bugun
+    ):
+        """Vezir için havuz raporu JSON yaz"""
+        from pathlib import Path
+
+        rapor = {
+            "schema_version": "1.0",
+            "olusturulma": bugun.isoformat(),
+            "hafta_no": week_no,
+            "ozet": {
+                "top5_ilce_sayisi": len(top5),
+                "buyuk_olay_son_7_gun": len(big_events),
+            },
+            "en_sicak_5": top5,
+            "buyuk_olaylar_son_7_gun": [
+                {
+                    "tarih": h.get("tarih_referansi") or h.get("tarih"),
+                    "kategori": h.get("kategori"),
+                    "alt_kategori": h.get("alt_kategori"),
+                    "agirlik": h.get("agirlik_puani"),
+                    "ilce": h.get("ilce"),
+                    "ozet": h.get("ozet"),
+                    "etki_tipi": h.get("etki_tipi"),
+                }
+                for h in big_events[:10]
+            ],
+        }
+
+        vezir_dir = Path("vezir")
+        vezir_dir.mkdir(parents=True, exist_ok=True)
+        json_path = vezir_dir / "havuz_raporu.json"
+        json_path.write_text(
+            json.dumps(rapor, ensure_ascii=False, indent=2), encoding="utf-8"
+        )
+        return json_path
+
     # ── BaseAgent abstract ─────────────────────────────────────────────────
 
     def run_task(self, task: dict[str, Any]) -> dict[str, Any]:

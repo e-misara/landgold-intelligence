@@ -456,6 +456,10 @@ class NewsAgent(BaseAgent):
         self.log(f"Raw total: {len(combined)} items from {len(self.SOURCES)} sources")
         return combined
 
+    def fetch_today(self) -> list[dict[str, Any]]:
+        """Bugünün haberlerini çek (fetch_all_sources wrapper)."""
+        return self.fetch_all_sources()
+
     # ── Deduplication ──────────────────────────────────────────────────────
 
     def deduplicate(self, items: list[dict[str, Any]]) -> list[dict[str, Any]]:

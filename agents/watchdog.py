@@ -118,6 +118,51 @@ class WatchdogAgent:
             pass
         return None
 
+    # ── Havuz pipeline sağlık kontrolü ────────────────────────────────────
+
+    def check_pipeline_health(self) -> dict:
+        """
+        Günlük pipeline'ın çalıştığını doğrula.
+        Son pipeline_complete sinyali 26 saatten eskiyse alarm üretir.
+        """
+        signals_path = _BASE_DIR / "vezir" / "signals.jsonl"
+        if not signals_path.exists():
+            return {"status": "unknown", "alarm": None}
+
+        bugun = datetime.now()
+        cutoff = bugun - __import__("datetime").timedelta(hours=26)
+
+        last_pipeline = None
+        try:
+            with signals_path.open("r", encoding="utf-8") as f:
+                for line in f:
+                    try:
+                        ev = json.loads(line)
+                        if ev.get("type") == "pipeline_complete":
+                            ts = datetime.fromisoformat(
+                                ev["ts"].replace("Z", "+00:00")
+                            )
+                            if last_pipeline is None or ts > last_pipeline:
+                                last_pipeline = ts
+                    except (json.JSONDecodeError, KeyError, ValueError):
+                        continue
+        except OSError:
+            return {"status": "unknown", "alarm": None}
+
+        if last_pipeline is None:
+            return {"status": "never_run", "alarm": "P0"}
+
+        # Timezone-naive karşılaştırma için offset kaldır
+        lp_naive = last_pipeline.replace(tzinfo=None)
+        if lp_naive < cutoff:
+            return {
+                "status": "stale",
+                "last_run": last_pipeline.isoformat(),
+                "alarm": "P1",
+            }
+
+        return {"status": "ok", "last_run": last_pipeline.isoformat(), "alarm": None}
+
     # ── Core ───────────────────────────────────────────────────────────────
 
     def run(self) -> list[tuple[str, str]]:

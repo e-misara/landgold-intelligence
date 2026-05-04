@@ -206,6 +206,23 @@ def build_status() -> dict:
         "notes_to_vezir": "",
     }
 
+    # Havuz özet entegrasyonu — daily_havuz_pipeline.py tarafından üretilir
+    havuz_summary_path = DATA_PATH / "havuz" / "havuz_summary.json"
+    if havuz_summary_path.exists():
+        try:
+            havuz = json.loads(havuz_summary_path.read_text(encoding="utf-8"))
+            status["havuz"] = {
+                "toplam_haber": havuz.get("toplam_haber", 0),
+                "son_24h_haber": havuz.get("son_24h_haber", 0),
+                "en_sicak_5_ilce": havuz.get("en_sicak_5_ilce", []),
+                "guncellenme": havuz.get("guncellenme"),
+            }
+        except Exception as e:
+            import sys
+            print(f"⚠️  Havuz summary okuma hatası: {e}", file=sys.stderr)
+
+    return status
+
 
 # ── Idempotent write ───────────────────────────────────────────────────────
 
