@@ -102,10 +102,10 @@ class NewsClassifier:
     def classify_news(self, haber: dict[str, Any]) -> dict[str, Any]:
         """Tek haberi sınıflandırır. Gerekli alanlar: baslik, kaynak, tarih, metin."""
         user_prompt = USER_PROMPT_TEMPLATE.format(
-            baslik=haber.get("baslik", ""),
-            kaynak=haber.get("kaynak", ""),
-            tarih=haber.get("tarih", ""),
-            metin=haber.get("metin", ""),
+            baslik=haber.get("baslik") or haber.get("title", ""),
+            kaynak=haber.get("kaynak") or haber.get("source", ""),
+            tarih=haber.get("tarih") or haber.get("published", ""),
+            metin=haber.get("metin") or haber.get("summary", ""),
         )
 
         message = self._client.messages.create(
