@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "guncellenme": "2026-05-05T12:36:00.655337+03:00",
+  "toplam_haber": 1,
+  "son_24h_haber": 0,
+  "en_sicak_5_ilce": [
+    {
+      "ilce": "01-Aladağ",
+      "sicaklik": 0.0,
+      "seviye": "donmus"
+    },
+    {
+      "ilce": "01-Ceyhan",
+      "sicaklik": 0.0,
+      "seviye": "donmus"
+    },
+    {
+      "ilce": "01-Çukurova",
+      "sicaklik": 0.0,
+      "seviye": "donmus"
+    },
+    {
+      "ilce": "01-Feke",
+      "sicaklik": 0.0,
+      "seviye": "donmus"
+    },
+    {
+      "ilce": "01-İmamoğlu",
+      "sicaklik": 0.0,
+      "seviye": "donmus"
+    }
+  ]
+}

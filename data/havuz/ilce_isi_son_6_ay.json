@@ -1,0 +1,5840 @@
+{
+  "01-Aladağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Ceyhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Çukurova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Feke": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-İmamoğlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Karaisalı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Karataş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Kozan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Pozantı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Saimbeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Sarıçam": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Seyhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Tufanbeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Yumurtalık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "01-Yüreğir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Besni": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Çelikhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Gerger": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Gölbaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Kâhta": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Samsat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Sincik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "02-Tut": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Başmakçı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Bayat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Bolvadin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Çay": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Çobanlar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Dazkırı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Dinar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Emirdağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Evciler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Hocalar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-İhsaniye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-İscehisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Kızılören": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Sandıklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Sinanpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Sultandağı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "03-Şuhut": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Diyadin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Doğubayazıt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Eleşkirt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Hamur": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Patnos": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Taşlıçay": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "04-Tutak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Göynücek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Gümüşhacıköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Hamamözü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Merzifon": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Suluova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "05-Taşova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Akyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Altındağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Ayaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Bala": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Beypazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Çamlıdere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Çankaya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Çubuk": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Elmadağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Etimesgut": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Evren": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Gölbaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Güdül": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Haymana": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Kalecik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Kazan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Keçiören": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Kızılcahamam": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Mamak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Nallıhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Polatlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Pursaklar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Sincan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Şereflikoçhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "06-Yenimahalle": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Akseki": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Aksu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Alanya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Demre": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Döşemealtı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Elmalı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Finike": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Gazipaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Gündoğmuş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-İbradı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Kaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Kemer": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Kepez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Konyaaltı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Korkuteli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Kumluca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Manavgat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Muratpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "07-Serik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Ardanuç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Arhavi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Borçka": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Hopa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Kemalpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Murgul": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Şavşat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "08-Yusufeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Bozdoğan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Buharkent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Çine": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Didim": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Efeler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Germencik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-İncirliova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Karacasu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Karpuzlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Koçarlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Köşk": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Kuşadası": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Kuyucak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Nazilli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Söke": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Sultanhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "09-Yenipazar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Altıeylül": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Ayvalık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Balya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Bandırma": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Bigadiç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Burhaniye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Dursunbey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Edremit": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Erdek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Gömeç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Gönen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Havran": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-İvrindi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Karesi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Kepsut": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Manyas": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Marmara": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Savaştepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Sındırgı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "10-Susurluk": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Bozüyük": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Gölpazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-İnhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Osmaneli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Pazaryeri": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Söğüt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "11-Yenipazar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Adaklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Genç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Karlıova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Kiğı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Solhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Yayladere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "12-Yedisu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Adilcevaz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Ahlat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Güroymak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Hizan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Mutki": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "13-Tatvan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Dörtdivan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Gerede": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Göynük": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Kıbrıscık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Mengen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Mudurnu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Seben": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "14-Yeniçağa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Ağlasun": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Altınyayla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Bucak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Çavdır": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Çeltikçi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Gölhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Karamanlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Kemer": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Tefenni": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "15-Yeşilova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Büyükorhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Gemlik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Gürsu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Harmancık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-İnegöl": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-İznik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Karacabey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Keles": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Kestel": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Mudanya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Mustafakemalpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Nilüfer": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Orhaneli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Orhangazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Osmangazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Yenişehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "16-Yıldırım": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Ayvacık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Bayramiç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Biga": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Bozcaada": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Çan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Eceabat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Ezine": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Gelibolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Gökçeada": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Lapseki": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "17-Yenice": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Atkaracalar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Bayramören": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Çerkeş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Eldivan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Ilgaz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Kızılırmak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Korgun": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Kurşunlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Orta": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Şabanözü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "18-Yapraklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Alaca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Bayat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Boğazkale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Dodurga": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-İskilip": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Kargı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Laçin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Mecitözü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Oğuzlar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Ortaköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Osmancık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Sungurlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "19-Uğurludağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Acıpayam": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Babadağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Baklan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Bekilli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Beyağaç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Bozkurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Buldan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Çal": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Çameli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Çardak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Çivril": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Güney": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Honaz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Kale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Merkezefendi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Pamukkale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Sarayköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Serinhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "20-Tavas": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Bağlar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Bismil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Çermik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Çınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Çüngüş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Dicle": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Eğil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Ergani": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Hani": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Hazro": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Kayapınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Kocaköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Kulp": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Lice": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Silvan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Sur": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "21-Yenişehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Enez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Havsa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-İpsala": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Keşan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Lalapaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Meriç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Süloğlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "22-Uzunköprü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Ağın": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Alacakaya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Arıcak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Baskil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Karakoçan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Keban": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Kovancılar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Maden": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Palu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "23-Sivrice": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Çayırlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-İliç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Kemah": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Kemaliye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Otlukbeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Refahiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Tercan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "24-Üzümlü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Aşkale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Aziziye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Çat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Hınıs": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Horasan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-İspir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Karaçoban": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Karayazı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Köprüköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Narman": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Oltu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Olur": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Palandöken": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Pasinler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Pazaryolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Şenkaya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Tekman": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Tortum": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Uzundere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "25-Yakutiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Alpu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Beylikova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Çifteler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Günyüzü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Han": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-İnönü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Mahmudiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Mihalgazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Mihalıççık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Odunpazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Sarıcakaya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Seyitgazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Sivrihisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "26-Tepebaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Araban": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-İslahiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Karkamış": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Nizip": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Nurdağı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Oğuzeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Şahinbey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Şehitkamil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "27-Yavuzeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Alucra": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Bulancak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Çamoluk": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Çanakçı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Dereli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Doğankent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Espiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Eynesil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Görele": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Güce": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Keşap": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Piraziz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Şebinkarahisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Tirebolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "28-Yağlıdere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "29-Kelkit": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "29-Köse": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "29-Kürtün": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "29-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "29-Şiran": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "29-Torul": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "30-Çukurca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "30-Derecik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "30-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "30-Şemdinli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "30-Yüksekova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Altınözü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Antakya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Arsuz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Belen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Defne": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Dörtyol": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Erzin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Hassa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-İskenderun": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Kırıkhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Kumlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Payas": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Reyhanlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Samandağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "31-Yayladağı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Aksu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Atabey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Eğirdir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Gelendost": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Gönen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Keçiborlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Senirkent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Sütçüler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Şarkikaraağaç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Uluborlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Yalvaç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "32-Yenişarbademli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Akdeniz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Anamur": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Aydıncık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Bozyazı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Çamlıyayla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Erdemli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Gülnar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Mezitli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Mut": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Silifke": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Tarsus": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Toroslar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "33-Yenişehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Adalar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Arnavutköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Ataşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Avcılar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Bağcılar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Bahçelievler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Bakırköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Başakşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Bayrampaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Beşiktaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Beykoz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Beylikdüzü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Beyoğlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Büyükçekmece": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Çatalca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Çekmeköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Esenler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Esenyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Eyüpsultan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Fatih": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Gaziosmanpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Güngören": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Kadıköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Kağıthane": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Kartal": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Küçükçekmece": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Maltepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Pendik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Sancaktepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Sarıyer": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Silivri": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Sultanbeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Sultangazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Şile": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Şişli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Tuzla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Ümraniye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Üsküdar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "34-Zeytinburnu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Aliağa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Balçova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Bayındır": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Bayraklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Bergama": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Beydağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Bornova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Buca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Çeşme": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Çiğli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Dikili": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Foça": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Gaziemir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Güzelbahçe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Karabağlar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Karaburun": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Karşıyaka": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Kemalpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Kınık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Kiraz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Konak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Menderes": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Menemen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Narlıdere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Ödemiş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Seferihisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Selçuk": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Tire": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Torbalı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "35-Urla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Akyaka": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Arpaçay": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Digor": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Kağızman": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Sarıkamış": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Selim": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "36-Susuz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Abana": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Ağlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Araç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Azdavay": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Bozkurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Cide": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Çatalzeytin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Daday": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Devrekani": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Doğanyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Hanönü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-İhsangazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-İnebolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Küre": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Pınarbaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Seydiler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Şenpazar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Taşköprü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "37-Tosya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Akkışla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Bünyan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Develi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Felahiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Hacılar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-İncesu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Kocasinan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Melikgazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Özvatan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Pınarbaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Sarıoğlan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Sarız": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Talas": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Tomarza": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Yahyalı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "38-Yeşilhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Babaeski": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Demirköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Kofçaz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Lüleburgaz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Pehlivanköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Pınarhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "39-Vize": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Akçakent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Akpınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Boztepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Çiçekdağı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Kaman": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "40-Mucur": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Başiskele": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Çayırova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Darıca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Derince": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Dilovası": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Gebze": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Gölcük": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-İzmit": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Kandıra": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Karamürsel": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Kartepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "41-Körfez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Ahırlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Akören": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Akşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Altınekin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Beyşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Bozkır": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Cihanbeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Çeltik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Çumra": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Derbent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Derebucak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Doğanhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Emirgazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Ereğli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Güneysınır": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Hadim": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Halkapınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Hüyük": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Ilgın": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Kadınhanı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Karapınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Karatay": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Kulu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Meram": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Sarayönü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Selçuklu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Seydişehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Taşkent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Tuzlukçu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Yalıhüyük": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "42-Yunak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Altıntaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Aslanapa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Çavdarhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Domaniç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Dumlupınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Emet": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Gediz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Hisarcık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Pazarlar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Simav": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Şaphane": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "43-Tavşanlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Akçadağ": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Arapgir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Arguvan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Battalgazi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Darende": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Doğanşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Doğanyol": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Hekimhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Kale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Kuluncak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Pütürge": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Yazıhan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "44-Yeşilyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Ahmetli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Akhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Alaşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Demirci": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Gölmarmara": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Gördes": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Kırkağaç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Köprübaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Kula": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Salihli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Sarıgöl": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Saruhanlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Selendi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Soma": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Şehzadeler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Turgutlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "45-Yunusemre": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Afşin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Andırın": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Çağlayancerit": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Dulkadiroğlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Ekinözü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Elbistan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Göksun": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Nurhak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Onikişubat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Pazarcık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "46-Türkoğlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Artuklu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Dargeçit": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Derik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Kızıltepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Mazıdağı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Midyat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Nusaybin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Ömerli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Savur": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "47-Yeşilli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Bodrum": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Dalaman": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Datça": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Fethiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Kavaklıdere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Köyceğiz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Marmaris": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Menteşe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Milas": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Ortaca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Seydikemer": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Ula": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "48-Yatağan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "49-Bulanık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "49-Hasköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "49-Korkut": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "49-Malazgirt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "49-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "49-Varto": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Acıgöl": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Avanos": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Derinkuyu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Gülşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Hacıbektaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Kozaklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "50-Ürgüp": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "51-Altunhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "51-Bor": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "51-Çamardı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "51-Çiftlik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "51-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "51-Ulukışla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Akkuş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Altınordu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Aybastı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Çamaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Çatalpınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Çaybaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Fatsa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Gölköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Gülyalı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Gürgentepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-İkizce": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Kabadüz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Kabataş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Korgan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Kumru": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Mesudiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Perşembe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Ulubey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "52-Ünye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Ardeşen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Çamlıhemşin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Çayeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Derepazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Fındıklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Güneysu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Hemşin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-İkizdere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-İyidere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Kalkandere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "53-Pazar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Adapazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Akyazı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Arifiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Erenler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Ferizli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Geyve": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Hendek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Karapürçek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Karasu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Kaynarca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Kocaali": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Pamukova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Sapanca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Serdivan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Söğütlü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "54-Taraklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-19 Mayıs": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Alaçam": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Asarcık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Atakum": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Ayvacık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Bafra": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Canik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Çarşamba": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Havza": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-İlkadım": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Kavak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Ladik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Salıpazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Tekkeköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Terme": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Vezirköprü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "55-Yakakent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Baykan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Eruh": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Kurtalan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Pervari": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Şirvan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "56-Tillo": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Ayancık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Boyabat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Dikmen": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Durağan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Erfelek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Gerze": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Saraydüzü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "57-Türkeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Akıncılar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Altınyayla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Divriği": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Doğanşar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Gemerek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Gölova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Gürün": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Hafik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-İmranlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Kangal": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Koyulhisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Suşehri": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Şarkışla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Ulaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Yıldızeli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "58-Zara": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Çerkezköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Çorlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Ergene": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Hayrabolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Kapaklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Malkara": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Marmaraereğlisi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Muratlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Saray": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Süleymanpaşa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "59-Şarköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Almus": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Artova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Başçiftlik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Erbaa": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Niksar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Pazar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Reşadiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Sulusaray": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Turhal": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Yeşilyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "60-Zile": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Akçaabat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Araklı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Arsin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Beşikdüzü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Çarşıbaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Çaykara": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Dernekpazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Düzköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Hayrat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Köprübaşı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Maçka": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Of": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Ortahisar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Sürmene": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Şalpazarı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Tonya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Vakfıkebir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "61-Yomra": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Çemişgezek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Hozat": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Mazgirt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Nazımiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Ovacık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Pertek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "62-Pülümür": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Akçakale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Birecik": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Bozova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Ceylanpınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Eyyübiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Halfeti": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Haliliye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Harran": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Hilvan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Karaköprü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Siverek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Suruç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "63-Viranşehir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "64-Banaz": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "64-Eşme": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "64-Karahallı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "64-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "64-Sivaslı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "64-Ulubey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Bahçesaray": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Başkale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Çaldıran": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Çatak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Edremit": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Erciş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Gevaş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Gürpınar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-İpekyolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Muradiye": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Özalp": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Saray": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "65-Tuşba": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Akdağmadeni": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Aydıncık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Boğazlıyan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Çandır": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Çayıralan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Çekerek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Kadışehri": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Saraykent": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Sarıkaya": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Sorgun": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Şefaatli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Yenifakılı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "66-Yerköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Alaplı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Çaycuma": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Devrek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Ereğli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Gökçebey": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Kilimli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Kozlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "67-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Ağaçören": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Eskil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Gülağaç": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Güzelyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Ortaköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Sarıyahşi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "68-Sultanhanı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "69-Aydıntepe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "69-Demirözü": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "69-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "70-Ayrancı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "70-Başyayla": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "70-Ermenek": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "70-Kazımkarabekir": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "70-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "70-Sarıveliler": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Bahşili": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Balışeyh": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Çelebi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Delice": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Karakeçili": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Keskin": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Sulakyurt": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "71-Yahşihan": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "72-Beşiri": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "72-Gercüş": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "72-Hasankeyf": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "72-Kozluk": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "72-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "72-Sason": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-Beytüşşebap": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-Cizre": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-Güçlükonak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-İdil": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-Silopi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "73-Uludere": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "74-Amasra": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "74-Kurucaşile": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "74-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "74-Ulus": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "75-Çıldır": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "75-Damal": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "75-Göle": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "75-Hanak": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "75-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "75-Posof": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "76-Aralık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "76-Karakoyunlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "76-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "76-Tuzluca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "77-Altınova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "77-Armutlu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "77-Çınarcık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "77-Çiftlikköy": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "77-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "77-Termal": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "78-Eflani": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "78-Eskipazar": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "78-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "78-Ovacık": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "78-Safranbolu": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "78-Yenice": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "79-Elbeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "79-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "79-Musabeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "79-Polateli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Bahçe": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Düziçi": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Hasanbeyli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Kadirli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Sumbas": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "80-Toprakkale": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Akçakoca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Cumayeri": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Çilimli": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Gölyaka": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Gümüşova": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Kaynaşlı": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Merkez": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  },
+  "81-Yığılca": {
+    "isi": 0.0,
+    "tarihsel_ort": 1.0,
+    "sicaklik": 0.0,
+    "seviye": "donmus"
+  }
+}
