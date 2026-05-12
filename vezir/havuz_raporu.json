@@ -1,11 +1,42 @@
 {
   "schema_version": "1.0",
-  "olusturulma": "2026-05-05T09:37:50.733658+03:00",
-  "hafta_no": 19,
+  "olusturulma": "2026-05-12T11:15:02.614654+03:00",
+  "hafta_no": 20,
   "ozet": {
-    "top5_ilce_sayisi": 0,
+    "top5_ilce_sayisi": 5,
     "buyuk_olay_son_7_gun": 0
   },
-  "en_sicak_5": [],
+  "en_sicak_5": [
+    {
+      "ilce": "01-Aladağ",
+      "sicaklik": 0.0,
+      "seviye": "donmus",
+      "isi": 0.0
+    },
+    {
+      "ilce": "01-Ceyhan",
+      "sicaklik": 0.0,
+      "seviye": "donmus",
+      "isi": 0.0
+    },
+    {
+      "ilce": "01-Çukurova",
+      "sicaklik": 0.0,
+      "seviye": "donmus",
+      "isi": 0.0
+    },
+    {
+      "ilce": "01-Feke",
+      "sicaklik": 0.0,
+      "seviye": "donmus",
+      "isi": 0.0
+    },
+    {
+      "ilce": "01-İmamoğlu",
+      "sicaklik": 0.0,
+      "seviye": "donmus",
+      "isi": 0.0
+    }
+  ],
   "buyuk_olaylar_son_7_gun": []
 }
