@@ -450,7 +450,7 @@ const MEGA_PROJELER = [
     aciklama:'Kuzey İstanbul\'u Anadolu\'ya bağlayan yeni güzergah. 427 km. 3. Köprü bağlantısı dahil.',
     etki:'+30-50% — Çatalca kuzey ve Silivri tarım arazileri',
     fiyat:[{yil:'2017',fiyat:25},{yil:'2020',fiyat:60},{yil:'2023',fiyat:120},{yil:'2026',fiyat:160}],
-    verdict:'WATCH — İmar henüz tamamlanmadı, erken pozisyon fırsatı',
+    verdict:'WATCH — İmar süreci devam ediyor, erken pozisyon fırsatı',
     renk:'#06b6d4',
   },
   {
@@ -1740,18 +1740,18 @@ function HomePage({ setPage, setSelectedIl, setSelectedIlce, showGlobe, setShowG
              style={{backgroundImage:'linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px)',backgroundSize:'60px 60px'}} />
         <Ticker />
         <div className="max-w-7xl mx-auto px-4 text-center relative z-10 mt-6">
-          <Tag color="red">Yapay Zeka Destekli Yatırım İstihbaratı</Tag>
+          <Tag color="red">Gayrimenkul · Mega Proje · Makro Veri</Tag>
           <h1 className="font-grotesk font-black text-5xl md:text-6xl lg:text-7xl mt-5 mb-5 leading-tight">
-            Türkiye yükseliyor<br />
-            <span className="grad-text">dünyanın merkezi</span>
+            Türkiye<br />
+            <span className="grad-text">Yatırım İstihbaratı</span>
           </h1>
           <p className="font-body text-xl text-gray-400 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Değer artışını önceden hesaplıyoruz. 81 il, 973 ilçe, 25 mega proje.
+            81 ilde gayrimenkul piyasası, mega projeler ve makro veri tek platformda.
             Habere yansımadan pozisyon alın.
           </p>
           <div className="flex gap-4 justify-center flex-wrap mb-10">
-            <Btn onClick={() => setPage('mega')} variant="primary" size="lg">{'Mega Projeleri Keşfet →'}</Btn>
-            <Btn onClick={() => setPage('uyelik')} variant="ghost" size="lg">Pro Üye Ol</Btn>
+            <Btn onClick={() => { document.querySelector('section.bg-\\[\\#060b18\\]')?.scrollIntoView({behavior:'smooth'}); }} variant="primary" size="lg">{'Haritaya Git →'}</Btn>
+            <Btn onClick={() => setPage('mega')} variant="ghost" size="lg">Mega Projeler</Btn>
           </div>
           {/* Quick stats */}
           <div className="flex items-center justify-center gap-8 flex-wrap">
@@ -1770,15 +1770,15 @@ function HomePage({ setPage, setSelectedIl, setSelectedIlce, showGlobe, setShowG
         </div>
       </section>
 
-      {/* Kapsam Bandı (Sahibinden aggregate) */}
+      {/* Kapsam Bandı */}
       <section className="bg-[#0a1020] border-y border-gray-800">
         <div className="max-w-7xl mx-auto px-4 py-5">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
-              { l:'Aktif İlan Analizi', v: fmtNum(KONUT_PIYASA_META.toplam_ilan), c:'text-amber-400', sub:'sahaya inilmiş veri' },
-              { l:'Kapsanan İlçe', v: KONUT_PIYASA_META.kapsanan_ilce_sayisi + ' / 973', c:'text-emerald-400', sub:'sürekli artıyor' },
-              { l:'Mega Proje İzlem', v: fmtNum(MEGA_PROJELER.length), c:'text-red-400', sub:'Türkiye geneli' },
-              { l:'Veri Güncellenme', v: 'Aylık', c:'text-blue-400', sub: KONUT_PIYASA_META.son_guncelleme + ' itibarıyla' },
+              { l:'İzlenen İlan',       v: fmtNum(KONUT_PIYASA_META.toplam_ilan) + '+', c:'text-amber-400', sub:'gayrimenkul piyasası' },
+              { l:'Mega Proje Arşivi',  v: MEGA_PROJELER.length + '+',                  c:'text-red-400',   sub:'Türkiye geneli izlem' },
+              { l:'Coğrafi Kapsam',     v: ILLER.length + ' İl · 973 İlçe',              c:'text-emerald-400', sub:'Marmara — Doğu Anadolu' },
+              { l:'Veri Güncellenme',   v: 'Aylık',                                      c:'text-blue-400',  sub:'düzenli yenileme' },
             ].map(k => (
               <div key={k.l} className="text-center md:text-left border-r border-gray-800 last:border-r-0 pr-4">
                 <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest">{k.l}</div>
@@ -1981,7 +1981,7 @@ function HomePage({ setPage, setSelectedIl, setSelectedIlce, showGlobe, setShowG
             <div>
               <Tag color="gold">Piyasa Terminali</Tag>
               <h2 className="font-grotesk font-black text-3xl mt-3">Endeks & Sinyal Paneli</h2>
-              <p className="font-mono text-[10px] text-gray-700 mt-1 uppercase tracking-wider">Güncelleme: 04 Mayıs 2026 — 09:15 TSİ</p>
+              <p className="font-mono text-[10px] text-gray-700 mt-1 uppercase tracking-wider">Konut endeksleri · Yatırım sinyalleri · Bölgesel trend</p>
             </div>
             <div className="font-mono text-[10px] text-emerald-400 border border-emerald-800/60 px-3 py-1.5 rounded flex items-center gap-2 bg-emerald-900/10">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block" style={{animation:'pulseDot 2s ease infinite'}} />
@@ -2576,7 +2576,7 @@ function IlPage({ il, setPage, setSelectedIl, setSelectedIlce }) {
               <Tag color="gold">Piyasa Karşılaştırma</Tag>
               <h2 className="font-grotesk font-black text-2xl text-white mt-2">{il.ad} İlçeleri</h2>
               <p className="font-mono text-[10px] text-gray-600 mt-1">
-                {piyasaIlceler.length} ilçe {'·'} Son güncelleme: {KONUT_PIYASA_META.son_guncelleme}
+                {piyasaIlceler.length} ilçe karşılaştırma
               </p>
             </div>
             <div className="flex gap-1">
@@ -2709,7 +2709,7 @@ function IlcePage({ ilce, setPage }) {
               <Tag color="gold">Sahaya İnilmiş Veri</Tag>
               <h2 className="font-grotesk font-black text-2xl text-white mt-2">Piyasa Verileri</h2>
               <p className="font-mono text-[10px] text-gray-600 mt-1">
-                Son güncelleme: {KONUT_PIYASA_META.son_guncelleme} {'·'} Veri kaynağı: kamuya açık ilan platformları (aggregate only)
+                Veri kaynağı: kamuya açık ilan platformları (aggregate only)
               </p>
             </div>
             <div className="text-right">
@@ -2825,16 +2825,138 @@ function IlcePage({ ilce, setPage }) {
             ⓘ Tüm rakamlar toplulaştırılmış istatistiklerdir. Hiçbir ilan başlığı veya kimliği saklanmaz. Aykırı değerler temizlendi (m² 20–1000, fiyat p1–p99).
           </p>
         </div>
-      ) : (
-        <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-8 mb-8 text-center">
-          <Tag color="muted">Piyasa Verisi</Tag>
-          <div className="font-grotesk font-bold text-white text-xl mt-3">Bu ilçede henüz piyasa verisi toplanmadı</div>
-          <p className="font-body text-sm text-gray-500 mt-2 max-w-md mx-auto">
-            Tradia şu an 52 ilçeden sahaya inilmiş ilan analizi sunuyor.
-            Önümüzdeki haftalarda <span className="text-amber-400">{ilce.ad}</span> bu kapsama dahil edilecek.
-          </p>
-        </div>
-      )}
+      ) : (() => {
+        // Aggregate verisi olmayan ilçeler için: bölgesel görünüm
+        const ilObj = ILLER.find(x => x.ad === ilce.il) || null;
+        const ilPiyasa = konutPiyasaIlceleriIcin(ilce.il);
+        const ilIlceler = ILCELER.filter(x => x.il === ilce.il && x.id !== ilce.id);
+        const komsuIller = ilObj
+          ? ILLER.filter(x => x.bolge === ilObj.bolge && x.id !== ilObj.id).sort((a,b) => b.isi - a.isi).slice(0, 4)
+          : [];
+        const ilOrtm2 = ilPiyasa.length
+          ? Math.round(ilPiyasa.reduce((a, b) => a + (b.ortalama_m2_fiyat_daire_satilik || 0), 0) /
+                       (ilPiyasa.filter(r => r.ortalama_m2_fiyat_daire_satilik).length || 1))
+          : null;
+        const ilToplamIlan = ilPiyasa.reduce((a, b) => a + (b.toplam_ilan || 0), 0);
+
+        return (
+          <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-6 mb-8" style={{animation:'fadeIn 0.4s ease'}}>
+            <div className="flex items-end justify-between mb-5 flex-wrap gap-2">
+              <div>
+                <Tag color="gold">Bölgesel Görünüm</Tag>
+                <h2 className="font-grotesk font-black text-2xl text-white mt-2">{ilce.ad} — {ilce.il} Genelinde</h2>
+                <p className="font-mono text-[10px] text-gray-600 mt-1">
+                  {ilObj?.bolge || ''} {ilObj?.bolge ? '·' : ''} İl ortalaması ve komşu ilçe karşılaştırması
+                </p>
+              </div>
+              {ilObj && (
+                <div className="text-right">
+                  <div className="font-grotesk font-black text-4xl" style={{ color: heatColor(ilObj.isi) }}>{ilObj.isi.toFixed(1)}</div>
+                  <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest">{ilce.il} Isı Skoru</div>
+                </div>
+              )}
+            </div>
+
+            {/* İl-seviyesi KPI rozet şeridi */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+              {[
+                { l: 'İl Nüfus',         v: ilObj ? (ilObj.nufus > 1e6 ? (ilObj.nufus/1e6).toFixed(1)+'M' : (ilObj.nufus/1e3).toFixed(0)+'K') : '—', c: 'text-gray-200' },
+                { l: 'Refah Endeksi',    v: ilObj ? ilObj.refah + '/100' : '—', c: 'text-blue-400' },
+                { l: 'OSB Skoru',        v: ilObj && ilObj.osb ? ilObj.osb + '/100' : '—', c: 'text-emerald-400' },
+                { l: 'İl Büyüme',        v: ilObj ? (ilObj.buyume > 0 ? '+' : '') + ilObj.buyume + '%' : '—', c: ilObj && ilObj.buyume > 0 ? 'text-emerald-400' : 'text-amber-400' },
+              ].map(s => (
+                <div key={s.l} className="border border-gray-800 rounded-lg p-3 bg-[#070b14]">
+                  <div className={'font-grotesk font-black text-xl ' + s.c}>{s.v}</div>
+                  <div className="font-mono text-[9px] text-gray-600 uppercase tracking-wider mt-0.5">{s.l}</div>
+                </div>
+              ))}
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {/* Sol: İl genelinde piyasa görünümü (varsa) */}
+              {ilOrtm2 ? (
+                <div className="border border-gray-800 rounded-lg p-4 bg-[#070b14]">
+                  <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">{ilce.il} Piyasa Görünümü</div>
+                  <div className="space-y-3">
+                    <div className="flex justify-between items-end">
+                      <span className="font-mono text-[10px] text-gray-500">İl Ortalama m² (daire)</span>
+                      <span className="font-grotesk font-black text-2xl text-amber-300">{fmtNum(ilOrtm2)} ₺</span>
+                    </div>
+                    <div className="flex justify-between items-end">
+                      <span className="font-mono text-[10px] text-gray-500">Aktif İlan (il toplamı)</span>
+                      <span className="font-grotesk font-bold text-lg text-emerald-400">{fmtNum(ilToplamIlan)}</span>
+                    </div>
+                    <div className="flex justify-between items-end">
+                      <span className="font-mono text-[10px] text-gray-500">Aktif İlçe Verisi</span>
+                      <span className="font-grotesk font-bold text-lg text-gray-200">{ilPiyasa.length}</span>
+                    </div>
+                  </div>
+                  <p className="font-mono text-[9px] text-gray-700 mt-3 leading-relaxed">
+                    {ilce.ad} için ilçe-seviye aggregate analiz {ilce.il} portföyüne hızla genişliyor. İl içindeki diğer ilçe verileri yandaki listede.
+                  </p>
+                </div>
+              ) : (
+                <div className="border border-gray-800 rounded-lg p-4 bg-[#070b14]">
+                  <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">{ilce.il} Tetikleyici Projeler</div>
+                  {(() => {
+                    const ilMega = MEGA_PROJELER.filter(mp => mp.il === ilce.il).slice(0, 5);
+                    if (ilMega.length === 0) {
+                      return (
+                        <p className="font-body text-xs text-gray-500">{ilce.il} için makro veri panelini sağdaki kart üzerinden inceleyin.</p>
+                      );
+                    }
+                    return (
+                      <div className="space-y-2.5">
+                        {ilMega.map(mp => (
+                          <div key={mp.id} className="flex items-start gap-3">
+                            <div className="w-2 h-2 rounded-full mt-1.5 flex-shrink-0" style={{background: mp.renk}} />
+                            <div className="flex-1 min-w-0">
+                              <div className="font-grotesk font-semibold text-sm text-white truncate">{mp.ad}</div>
+                              <div className="font-mono text-[10px] text-gray-500">{mp.yatirim} {'·'} {mp.durum}</div>
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
+
+              {/* Sağ: Komşu ilçeler */}
+              <div className="border border-gray-800 rounded-lg p-4 bg-[#070b14]">
+                <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Komşu İlçeler — Isı Sıralaması</div>
+                {ilIlceler.length > 0 ? (
+                  <div className="space-y-1.5">
+                    {ilIlceler.sort((a,b) => b.isi - a.isi).slice(0, 6).map(x => (
+                      <div key={x.id}
+                           onClick={() => { setPage('ilce'); }}
+                           className="flex items-center gap-3 px-2 py-1.5 rounded hover:bg-gray-800/60 cursor-pointer transition-colors">
+                        <HeatBadge isi={x.isi} />
+                        <span className="font-grotesk font-medium text-sm text-gray-200 flex-1 truncate">{x.ad}</span>
+                        <span className="font-mono text-[10px] text-emerald-400">{x.trend}</span>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  /* İlçe seed verisi yoksa bölge illeri göster */
+                  <div className="space-y-1.5">
+                    {komsuIller.map(b => (
+                      <div key={b.id} className="flex items-center gap-3 px-2 py-1.5">
+                        <HeatBadge isi={b.isi} />
+                        <span className="font-grotesk font-medium text-sm text-gray-200 flex-1 truncate">{b.ad}</span>
+                        <span className="font-mono text-[10px]" style={{color: heatColor(b.isi)}}>{b.isi.toFixed(1)}</span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+            <p className="font-mono text-[9px] text-gray-700 mt-4 leading-relaxed">
+              ⓘ Bölgesel görünüm il-seviyesi makro veri ve komşu ilçe karşılaştırmasıyla oluşturulur. İlçe-seviye piyasa aggregate'i {ilce.il} portföyüne sürekli ekleniyor.
+            </p>
+          </div>
+        );
+      })()}
 
       <div className="grid lg:grid-cols-3 gap-6">
         <div className="lg:col-span-2 space-y-6">
