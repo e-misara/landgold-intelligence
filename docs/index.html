@@ -1513,51 +1513,107 @@ function Header({ page, setPage }) {
 }
 
 function Footer({ setPage }) {
+  const [fEmail, setFEmail] = useState('');
+  const [fKvkk, setFKvkk] = useState(false);
+  const [fSent, setFSent] = useState(false);
+
+  const linkCls = "font-body text-sm text-gray-500 hover:text-amber-400 cursor-pointer mb-2 transition-colors text-left block";
+
+  const handleSubscribe = () => {
+    if (!fEmail || !fKvkk) return;
+    try {
+      const list = JSON.parse(localStorage.getItem('tradia_newsletter_pending') || '[]');
+      list.push({ email: fEmail, ts: new Date().toISOString(), source: 'footer' });
+      localStorage.setItem('tradia_newsletter_pending', JSON.stringify(list));
+    } catch (e) {}
+    setFSent(true);
+  };
+
   return (
     <footer className="bg-[#070b14] border-t border-gray-800 mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+        {/* Brand satırı */}
+        <div className="mb-10 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
-            <div className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-3">
               <div className="w-6 h-6 rounded bg-red-600 flex items-center justify-center">
                 <span className="font-grotesk font-black text-white text-xs">T</span>
               </div>
-              <span className="font-grotesk font-bold text-white">TRADIA</span>
+              <span className="font-grotesk font-bold text-white tracking-tight">TRADIA</span>
             </div>
-            <p className="font-body text-sm text-gray-500 leading-relaxed">
+            <p className="font-body text-sm text-gray-500 leading-relaxed max-w-md">
               Türkiye'nin yapay zeka destekli yatırım istihbarat platformu.
             </p>
             <p className="font-mono text-[10px] text-amber-400 mt-3 uppercase tracking-wider">
               Haberden değer artışına
             </p>
           </div>
-          <div>
-            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-4">Platform</div>
-            {['Mega Projeler','Koridorlar','İl Analizi','İlçe Analizi','Bülten'].map(l => (
-              <div key={l} className="font-body text-sm text-gray-500 hover:text-gray-300 cursor-pointer mb-2">{l}</div>
-            ))}
-          </div>
+        </div>
+
+        {/* 3 sütun + bülten */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-10">
+          {/* Şirket */}
           <div>
             <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-4">Şirket</div>
-            {['Hakkımızda','Metodoloji','Ekip','Kariyer','İletişim'].map(l => (
-              <div key={l} className="font-body text-sm text-gray-500 hover:text-gray-300 cursor-pointer mb-2">{l}</div>
-            ))}
+            <button onClick={() => setPage('hakkimizda')} className={linkCls}>Hakkımızda</button>
+            <a href="mailto:ahmetcolak.53@hotmail.com" className={linkCls}>İletişim</a>
           </div>
+
+          {/* Hizmetler */}
+          <div>
+            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-4">Hizmetler</div>
+            <button onClick={() => setPage('bulten')} className={linkCls}>Bültenler</button>
+            <button onClick={() => setPage('uyelik')} className={linkCls}>Üyelik</button>
+            <button onClick={() => setPage('mega')} className={linkCls}>Mega Projeler</button>
+            <button onClick={() => setPage('koridor')} className={linkCls}>Koridorlar</button>
+          </div>
+
+          {/* Yasal */}
+          <div>
+            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-4">Yasal</div>
+            <button onClick={() => setPage('gizlilik')} className={linkCls}>Gizlilik Politikası</button>
+            <button onClick={() => setPage('kvkk')} className={linkCls}>KVKK Aydınlatma</button>
+            <button onClick={() => setPage('sartlar')} className={linkCls}>Kullanım Şartları</button>
+            <button onClick={() => setPage('cerez')} className={linkCls}>Çerez Politikası</button>
+          </div>
+
+          {/* Bülten */}
           <div>
             <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-4">Bülten</div>
-            <p className="font-body text-sm text-gray-500 mb-3">Haftalık analiz, habere yansımadan.</p>
-            <div className="flex gap-2">
-              <input type="email" placeholder="e-posta" className="flex-1 bg-gray-900 border border-gray-700 rounded px-3 py-2 text-sm text-gray-300 font-body focus:outline-none focus:border-red-600" />
-              <Btn variant="primary" size="sm">→</Btn>
-            </div>
+            {fSent ? (
+              <p className="font-body text-sm text-emerald-400">✓ Teşekkürler, sizinle iletişime geçeceğiz.</p>
+            ) : (
+              <>
+                <p className="font-body text-sm text-gray-500 mb-3">Haftalık analiz, habere yansımadan.</p>
+                <div className="flex gap-2 mb-2">
+                  <input type="email" value={fEmail} onChange={e => setFEmail(e.target.value)}
+                         placeholder="e-posta"
+                         className="flex-1 bg-gray-900 border border-gray-700 rounded px-3 py-2 text-sm text-gray-300 font-body focus:outline-none focus:border-red-600" />
+                  <Btn variant="primary" size="sm" onClick={handleSubscribe}
+                       className={(!fEmail || !fKvkk) ? 'opacity-50 cursor-not-allowed' : ''}>→</Btn>
+                </div>
+                <label className="flex gap-2 text-[10px] text-gray-500 mt-1 cursor-pointer leading-snug">
+                  <input type="checkbox" checked={fKvkk}
+                         onChange={e => setFKvkk(e.target.checked)}
+                         className="mt-0.5 accent-red-600 flex-shrink-0" />
+                  <span>
+                    <button type="button" onClick={() => setPage('kvkk')}
+                            className="text-red-400 underline hover:text-red-300">KVKK Aydınlatma Metni</button>
+                    'ni okudum, kişisel verilerimin işlenmesine açık rıza veriyorum.
+                  </span>
+                </label>
+              </>
+            )}
           </div>
         </div>
+
+        {/* Alt satır — copyright + iletişim */}
         <div className="border-t border-gray-800 pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-mono text-xs text-gray-600">
-            © 2026 Tradia Turkey Intelligence. Tüm hakları saklıdır.
+            © 2026 Tradia · Anastasiya Cholak · İstanbul, Türkiye
           </div>
           <div className="font-mono text-xs text-gray-500">
-            <a href="mailto:info@tradiaturkey.com" className="hover:text-amber-400 transition-colors">info@tradiaturkey.com</a>
+            <a href="mailto:ahmetcolak.53@hotmail.com" className="hover:text-amber-400 transition-colors">ahmetcolak.53@hotmail.com</a>
             <span className="mx-2 text-gray-700">·</span>
             <span className="text-gray-700">tradiaturkey.com</span>
           </div>
@@ -2083,9 +2139,8 @@ function HomePage({ setPage, setSelectedIl, setSelectedIlce, showGlobe, setShowG
                 12.000+ yatırımcı okuyucu.
               </p>
               <div className="flex gap-3 max-w-md">
-                <input type="email" placeholder="e-posta adresiniz"
-                       className="flex-1 bg-[#0d1424] border border-gray-700 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-red-600 font-body" />
-                <Btn variant="primary">Abone Ol</Btn>
+                <Btn variant="primary" size="lg" onClick={() => setPage('bulten')}>Bültene Abone Ol →</Btn>
+                <Btn variant="ghost" size="lg" onClick={() => setPage('bulten')}>Arşivi Gör</Btn>
               </div>
               <p className="font-mono text-[10px] text-gray-600 mt-3 uppercase tracking-wider">
                 Ücretsiz · Spam yok · İstediğiniz zaman çıkın
@@ -3052,6 +3107,17 @@ function IlcePage({ ilce, setPage }) {
 function BultenPage({ setPage }) {
   const [email, setEmail] = useState('');
   const [sent, setSent] = useState(false);
+  const [kvkkChecked, setKvkkChecked] = useState(false);
+  const canSubmit = !!email && kvkkChecked;
+  const handleSubscribe = () => {
+    if (!canSubmit) return;
+    try {
+      const list = JSON.parse(localStorage.getItem('tradia_newsletter_pending') || '[]');
+      list.push({ email, ts: new Date().toISOString(), source: 'bulten' });
+      localStorage.setItem('tradia_newsletter_pending', JSON.stringify(list));
+    } catch (e) {}
+    setSent(true);
+  };
   return (
     <div className="max-w-5xl mx-auto px-4 py-10">
       <div className="mb-10 text-center">
@@ -3079,7 +3145,18 @@ function BultenPage({ setPage }) {
             <input type="email" value={email} onChange={e => setEmail(e.target.value)}
                    placeholder="e-posta adresiniz"
                    className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-3 text-sm text-gray-300 focus:outline-none focus:border-red-600 mb-3 font-body" />
-            <Btn onClick={() => email && setSent(true)} variant="primary" className="w-full justify-center">
+            <label className="flex gap-2 text-xs text-gray-400 mt-2 mb-4 cursor-pointer text-left leading-snug">
+              <input type="checkbox" checked={kvkkChecked}
+                     onChange={e => setKvkkChecked(e.target.checked)}
+                     className="mt-0.5 accent-red-600 flex-shrink-0" />
+              <span>
+                <button type="button" onClick={() => setPage('kvkk')}
+                        className="text-red-400 underline hover:text-red-300">KVKK Aydınlatma Metni</button>
+                'ni okudum, kişisel verilerimin işlenmesine açık rıza veriyorum.
+              </span>
+            </label>
+            <Btn onClick={handleSubscribe} variant="primary"
+                 className={'w-full justify-center ' + (!canSubmit ? 'opacity-50 cursor-not-allowed' : '')}>
               Ücretsiz Abone Ol
             </Btn>
             <p className="font-mono text-[9px] text-gray-600 mt-3 uppercase tracking-wider">Spam yok · İstediğiniz zaman çıkın</p>
@@ -3198,16 +3275,17 @@ function HakkimizdaPage({ setPage }) {
 
 function UyelikPage({ setPage }) {
   const [periyot, setPeriyot] = useState('aylik');
+  const [modalPlan, setModalPlan] = useState(null);
   const plans = [
     {
       plan:'Free', fiyat:'₺0', yillik:'₺0', periyot:'sonsuza kadar',
       ozellik:['İnteraktif Türkiye haritası','5 il analizi / ay','Mega proje listesi (isim + il)','Haftalık bülten özeti','Mobil uygulama'],
-      cta:'Ücretsiz Başla', variant:'ghost', featured:false,
+      cta:'Ön Kayıt', variant:'ghost', featured:false,
     },
     {
       plan:'Pro', fiyat:'₺499', yillik:'₺399', periyot:'/ay',
       ozellik:['Tüm 81 il tam analizi','Tüm 973 ilçe ısı skoru','Mega proje tam detay + modal','9 faktör breakdown paneli','Haftalık bülten tam erişim','Excel / CSV dışa aktarım','Proje sinyal uyarıları (email)','Öncelikli destek'],
-      cta:'Pro Ol', variant:'primary', featured:true,
+      cta:'Pro Ön Kayıt', variant:'primary', featured:true,
     },
     {
       plan:'Enterprise', fiyat:'Özel', yillik:'Özel', periyot:'fiyatlandırma',
@@ -3265,7 +3343,8 @@ function UyelikPage({ setPage }) {
                 </div>
               ))}
             </div>
-            <Btn variant={p.variant} className="w-full justify-center">{p.cta}</Btn>
+            <Btn variant={p.variant} className="w-full justify-center"
+                 onClick={() => setModalPlan(p)}>{p.cta}</Btn>
           </div>
         ))}
       </div>
@@ -3285,6 +3364,452 @@ function UyelikPage({ setPage }) {
               <div className="font-body text-sm text-gray-400 leading-relaxed">{c}</div>
             </div>
           ))}
+        </div>
+      </div>
+
+      {modalPlan && <UyelikOnKayitModal plan={modalPlan} setPage={setPage} onClose={() => setModalPlan(null)} />}
+    </div>
+  );
+}
+
+function UyelikOnKayitModal({ plan, setPage, onClose }) {
+  const [email, setEmail] = useState('');
+  const [ad, setAd] = useState('');
+  const [kvkkChecked, setKvkkChecked] = useState(false);
+  const [sent, setSent] = useState(false);
+  const canSubmit = !!email && kvkkChecked;
+  const submit = () => {
+    if (!canSubmit) return;
+    try {
+      const list = JSON.parse(localStorage.getItem('tradia_uyelik_pending') || '[]');
+      list.push({ plan: plan.plan, ad, email, ts: new Date().toISOString() });
+      localStorage.setItem('tradia_uyelik_pending', JSON.stringify(list));
+    } catch (e) {}
+    setSent(true);
+  };
+  return (
+    <div className="modal-overlay" onClick={onClose}>
+      <div className="modal-box" onClick={e => e.stopPropagation()} style={{maxWidth: 480}}>
+        <button onClick={onClose}
+                className="float-right font-mono text-sm text-gray-500 hover:text-white">✕</button>
+        {sent ? (
+          <div className="text-center py-8">
+            <div className="text-5xl mb-4">✓</div>
+            <div className="font-grotesk font-black text-2xl text-white mb-3">Teşekkürler!</div>
+            <p className="font-body text-gray-400 mb-6 leading-relaxed">
+              {plan.plan} planı için ön kaydınız alındı. Üyelik akışı aktive olduğunda sizinle iletişime geçeceğiz.
+            </p>
+            <Btn variant="ghost" onClick={onClose}>Kapat</Btn>
+          </div>
+        ) : (
+          <>
+            <Tag color={plan.variant === 'primary' ? 'red' : plan.variant === 'gold' ? 'gold' : 'muted'}>{plan.plan} Planı</Tag>
+            <h2 className="font-grotesk font-black text-2xl text-white mt-2 mb-1">Ön Kayıt</h2>
+            <p className="font-body text-sm text-gray-400 mb-6">
+              Tradia üyelik akışı şu an açılış öncesinde. E-postanı bırak, hazır olduğumuzda ilk sen haberdar ol.
+            </p>
+
+            <label className="block font-mono text-[10px] text-gray-500 uppercase tracking-wider mb-1">Ad (opsiyonel)</label>
+            <input type="text" value={ad} onChange={e => setAd(e.target.value)}
+                   placeholder="Adınız"
+                   className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-gray-200 focus:outline-none focus:border-red-600 mb-4 font-body" />
+
+            <label className="block font-mono text-[10px] text-gray-500 uppercase tracking-wider mb-1">E-posta *</label>
+            <input type="email" value={email} onChange={e => setEmail(e.target.value)}
+                   placeholder="ornek@email.com" required
+                   className="w-full bg-gray-900 border border-gray-700 rounded-lg px-4 py-2.5 text-sm text-gray-200 focus:outline-none focus:border-red-600 mb-3 font-body" />
+
+            <label className="flex gap-2 text-xs text-gray-400 mb-5 cursor-pointer leading-snug">
+              <input type="checkbox" checked={kvkkChecked}
+                     onChange={e => setKvkkChecked(e.target.checked)}
+                     className="mt-0.5 accent-red-600 flex-shrink-0" />
+              <span>
+                <button type="button" onClick={() => setPage('kvkk')}
+                        className="text-red-400 underline hover:text-red-300">KVKK Aydınlatma Metni</button>
+                'ni okudum, kişisel verilerimin işlenmesine açık rıza veriyorum.
+              </span>
+            </label>
+
+            <Btn variant="primary" onClick={submit}
+                 className={'w-full justify-center ' + (!canSubmit ? 'opacity-50 cursor-not-allowed' : '')}>
+              Beni Bilgilendir
+            </Btn>
+            <p className="font-mono text-[9px] text-gray-600 mt-3 uppercase tracking-wider text-center">
+              Spam yok · Tek seferlik bildirim
+            </p>
+          </>
+        )}
+      </div>
+    </div>
+  );
+}
+
+/* ===== legal.jsx — Yasal sayfalar ===== */
+
+function LegalShell({ setPage, title, eyebrow, children, lastUpdated }) {
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12 font-body">
+      <div className="mb-8">
+        <Tag color="muted">{eyebrow}</Tag>
+        <h1 className="font-grotesk font-black text-4xl md:text-5xl text-white mt-3">{title}</h1>
+      </div>
+      <div className="border border-gray-800 bg-[#0d1424] rounded-2xl p-6 md:p-10 legal-prose">
+        {children}
+        <div className="border-t border-gray-800 mt-8 pt-4">
+          <p className="font-mono text-[10px] text-gray-600 uppercase tracking-wider">Son Güncelleme: {lastUpdated}</p>
+        </div>
+      </div>
+      <div className="mt-8">
+        <button onClick={() => setPage('home')} className="font-mono text-sm text-gray-500 hover:text-red-400 transition-colors">
+          ← Anasayfaya dön
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function GizlilikPage({ setPage }) {
+  return (
+    <LegalShell setPage={setPage} eyebrow="Yasal" title="Gizlilik Politikası" lastUpdated="Mayıs 2026">
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Tradia (&quot;biz&quot;, &quot;Tradia&quot;, &quot;platform&quot;) olarak kişisel verilerinizin korunmasına önem veriyoruz. Bu Gizlilik Politikası, tradiaturkey.com adresinde (&quot;Site&quot;) sunduğumuz hizmetler kapsamında topladığımız bilgileri nasıl kullandığımızı açıklar.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">1. Veri Sorumlusu</h2>
+      <div className="text-gray-300 leading-relaxed mb-6 space-y-1">
+        <p><strong className="text-white">Anastasiya Cholak</strong> (Tradia)</p>
+        <p>Necip Fazıl Mahallesi, Gün Batımı Sokak, Kasrı Lena Sitesi, No: 1 E Blok, İç Kapı No: 16, Ümraniye / İstanbul</p>
+        <p>Vergi Dairesi: Sarıgazi Vergi Dairesi</p>
+        <p>Vergi Kimlik No: 6480561804</p>
+        <p>E-posta: <a href="mailto:ahmetcolak.53@hotmail.com" className="text-red-400 hover:underline">ahmetcolak.53@hotmail.com</a></p>
+        <p>Telefon: 0532 160 97 53</p>
+      </div>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">2. Topladığımız Veriler</h2>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.1 Doğrudan Sağladığınız Veriler</h3>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-4">
+        <li>Bülten aboneliği: E-posta adresiniz</li>
+        <li>Üyelik: Ad, e-posta adresi, opsiyonel profil bilgileri</li>
+        <li>İletişim: Bize gönderdiğiniz mesajların içeriği</li>
+      </ul>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.2 Otomatik Olarak Topladığımız Veriler</h3>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Teknik veriler: IP adresi, tarayıcı tipi, işletim sistemi, ziyaret saati</li>
+        <li>Kullanım verileri: Görüntülenen sayfalar, tıklamalar, oturum süresi</li>
+        <li>Çerez verileri: Çerez Politikası'nda detaylı açıklanmıştır</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">3. Verilerinizi Nasıl Kullanırız</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">Topladığımız verileri yalnızca aşağıdaki amaçlarla kullanırız:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Bülten ve içerik gönderimi</li>
+        <li>Üyelik hesabınızın yönetimi</li>
+        <li>Hizmet kalitesinin iyileştirilmesi</li>
+        <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+        <li>Sizden gelen taleplerin yanıtlanması</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">4. Verilerinizi Paylaşır mıyız?</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">Kişisel verilerinizi üçüncü taraflarla satmıyoruz. Verileriniz yalnızca aşağıdaki durumlarda paylaşılabilir:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Hizmet sağlayıcılar: Bülten dağıtımı, web analizi (yalnızca anonim veri), barındırma (GitHub Pages)</li>
+        <li>Yasal zorunluluk: Mahkeme kararı veya yetkili kurum talebi durumunda</li>
+        <li>Açık rızanız: Yukarıdaki haller dışında verileriniz açık rızanız olmadan paylaşılmaz</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">5. Verilerin Saklanma Süresi</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Bülten abone listesi: Aboneliğiniz aktif olduğu sürece + iptal sonrası 1 yıl</li>
+        <li>Üyelik verileri: Hesabınız aktif olduğu sürece + hesap silme sonrası 6 ay (yasal yükümlülük)</li>
+        <li>Teknik kayıt verileri: 12 ay</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">6. Haklarınız (KVKK Madde 11)</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">KVKK kapsamında aşağıdaki haklara sahipsiniz:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-4">
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+        <li>İşlenen verileriniz hakkında bilgi talep etme</li>
+        <li>Verilerinizin işlenme amacını öğrenme</li>
+        <li>Verilerinizin yurtiçi veya yurtdışına aktarılan üçüncü taraflarını bilme</li>
+        <li>Eksik veya yanlış işlenmiş verilerinizin düzeltilmesini isteme</li>
+        <li>Verilerinizin silinmesini veya yok edilmesini isteme</li>
+        <li>Otomatik sistemlerle yapılan analizler aleyhinize sonuç doğuruyorsa itiraz etme</li>
+        <li>Verilerinizin kanuna aykırı işlenmesi nedeniyle zarara uğramışsanız tazminat talep etme</li>
+      </ul>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Bu haklarınızı kullanmak için <a href="mailto:ahmetcolak.53@hotmail.com" className="text-red-400 hover:underline">ahmetcolak.53@hotmail.com</a> adresine yazılı başvuruda bulunabilirsiniz. Başvurunuz en geç 30 gün içinde yanıtlanacaktır.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">7. Veri Güvenliği</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Verilerinizi korumak için makul teknik ve idari önlemler alıyoruz: SSL şifreleme (HTTPS), erişim kontrolü, düzenli güvenlik incelemeleri. Ancak internet üzerinden veri iletiminin %100 güvenli olmadığını belirtmek isteriz.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">8. Çocukların Gizliliği</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Tradia, 18 yaşından küçük kullanıcılara yönelik bir hizmet değildir. 18 yaş altı kişilerden bilerek veri toplamayız.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">9. Politika Değişiklikleri</h2>
+      <p className="text-gray-300 leading-relaxed">
+        Bu Gizlilik Politikası'nda değişiklik yapma hakkımız saklıdır. Önemli değişiklikleri Site üzerinden duyuracağız.
+      </p>
+    </LegalShell>
+  );
+}
+
+function KvkkPage({ setPage }) {
+  return (
+    <LegalShell setPage={setPage} eyebrow="Yasal" title="KVKK Aydınlatma Metni" lastUpdated="Mayıs 2026">
+      <p className="text-gray-300 leading-relaxed mb-6">
+        6698 sayılı Kişisel Verilerin Korunması Kanunu (&quot;KVKK&quot;) kapsamında, Anastasiya Cholak (Tradia) olarak veri sorumlusu sıfatıyla, kişisel verilerinizin işlenmesine ilişkin sizi bilgilendirmek isteriz.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">1. Veri Sorumlusunun Kimliği</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Veri Sorumlusu: <strong className="text-white">Anastasiya Cholak</strong> (Tradia)</li>
+        <li>Adres: Necip Fazıl Mahallesi, Gün Batımı Sokak, Kasrı Lena Sitesi, No: 1 E Blok, İç Kapı No: 16, Ümraniye / İstanbul</li>
+        <li>Vergi Dairesi: Sarıgazi Vergi Dairesi</li>
+        <li>Vergi Kimlik No: 6480561804</li>
+        <li>E-posta: <a href="mailto:ahmetcolak.53@hotmail.com" className="text-red-400 hover:underline">ahmetcolak.53@hotmail.com</a></li>
+        <li>Telefon: 0532 160 97 53</li>
+        <li>Site: tradiaturkey.com</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">2. İşlenen Kişisel Veriler</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Kimlik: Ad, soyad (opsiyonel)</li>
+        <li>İletişim: E-posta adresi, telefon (opsiyonel)</li>
+        <li>Müşteri İşlem: Bülten abonelik durumu, hesap bilgileri</li>
+        <li>İşlem Güvenliği: IP adresi, çerez verileri, oturum kayıtları</li>
+        <li>Pazarlama: Site kullanım analitiği (anonim)</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">3. Verilerin İşlenme Amacı</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Bülten ve içerik gönderimi (açık rıza ile)</li>
+        <li>Üyelik kaydı ve hesap yönetimi</li>
+        <li>Hizmet sunumu ve iyileştirme</li>
+        <li>Yasal yükümlülüklerin yerine getirilmesi</li>
+        <li>İletişim taleplerinin yanıtlanması</li>
+        <li>Site güvenliğinin sağlanması</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">4. İşlemenin Hukuki Sebepleri</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">KVKK Madde 5 ve 6 kapsamında:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Açık rıza: Bülten aboneliği, pazarlama iletişimi</li>
+        <li>Sözleşmenin kurulması/ifası: Üyelik hizmeti</li>
+        <li>Veri sorumlusunun meşru menfaati: Site güvenliği, hizmet iyileştirme</li>
+        <li>Yasal yükümlülük: Vergi mevzuatı, KVKK gereklilikleri</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">5. Verilerin Aktarılması</h2>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">5.1 Yurtiçi Aktarım</h3>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-4">
+        <li>Yetkili kurumlar: Yasal yükümlülük durumunda mahkeme, savcılık, denetleme kurumları</li>
+        <li>Bankalar/ödeme kuruluşları: Ücretli üyelik durumunda</li>
+      </ul>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">5.2 Yurtdışı Aktarım</h3>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>GitHub Pages (ABD): Site barındırma</li>
+        <li>Plausible Analytics (Almanya/AB): Web analizi (anonim)</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">6. Verilerin Toplanma Yöntemi</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Site üzerindeki formlar (üyelik, bülten aboneliği, iletişim)</li>
+        <li>Site kullanımı sırasında otomatik (çerezler, log kayıtları)</li>
+        <li>E-posta veya telefon yoluyla doğrudan iletişim</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">7. Haklarınız</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">KVKK Madde 11 kapsamında:</p>
+      <ol className="list-decimal pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Kişisel verilerinizin işlenip işlenmediğini öğrenme</li>
+        <li>Verileriniz işlenmişse buna ilişkin bilgi talep etme</li>
+        <li>İşlenme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+        <li>Yurtiçinde veya yurtdışında verilerinizin aktarıldığı üçüncü kişileri bilme</li>
+        <li>Eksik veya yanlış işlenmiş verilerinizin düzeltilmesini isteme</li>
+        <li>Verilerinizin silinmesini, yok edilmesini veya anonim hale getirilmesini isteme</li>
+        <li>Yapılan işlemlerin aktarıldığı üçüncü kişilere bildirilmesini isteme</li>
+        <li>Otomatik sistemler vasıtasıyla yapılan analizin aleyhinize bir sonuç doğurması halinde itiraz etme</li>
+        <li>Kanuna aykırı işlenmesi nedeniyle zarara uğramanız halinde tazminat talep etme</li>
+      </ol>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">8. Başvuru Yöntemi</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">KVKK Madde 13 uyarınca haklarınızı kullanmak için:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-4">
+        <li>E-posta: <a href="mailto:ahmetcolak.53@hotmail.com" className="text-red-400 hover:underline">ahmetcolak.53@hotmail.com</a></li>
+        <li>Posta: Necip Fazıl Mahallesi, Gün Batımı Sokak, Kasrı Lena Sitesi, No: 1 E Blok, Daire 16, Ümraniye / İstanbul</li>
+      </ul>
+      <p className="text-gray-300 leading-relaxed">
+        Başvurunuzda adınız, soyadınız, imzanız, T.C. Kimlik Numaranız, tebligat adresiniz, varsa e-posta/telefonunuz ve talep konusu bulunmalıdır. Başvurunuz en geç 30 gün içinde ücretsiz olarak yanıtlanacaktır.
+      </p>
+    </LegalShell>
+  );
+}
+
+function SartlarPage({ setPage }) {
+  return (
+    <LegalShell setPage={setPage} eyebrow="Yasal" title="Kullanım Şartları" lastUpdated="Mayıs 2026">
+      <p className="text-gray-300 leading-relaxed mb-6">
+        tradiaturkey.com adresinde sunulan Tradia platformunu (&quot;Site&quot;, &quot;Hizmet&quot;) kullanırken aşağıdaki şartlar geçerlidir. Siteyi kullanarak bu şartları kabul etmiş sayılırsınız.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">1. Hizmet Tanımı</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Tradia, Türkiye gayrimenkul piyasası, mega projeler ve makro veri analizine yönelik bir istihbarat platformudur. Site içeriği bilgilendirme amaçlıdır ve yatırım tavsiyesi niteliği taşımaz.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">2. İçerik ve Veri Kullanımı</h2>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.1 Bilgi Niteliği</h3>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        Sitedeki tüm analizler, projeksiyonlar ve yorumlar açık kaynaklardan derlenen veriye dayanır. Tradia, bilgilerin güncelliği için makul çaba gösterir; ancak verilerin %100 doğruluğunu, tamlığını veya güncelliğini garanti etmez.
+      </p>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.2 Yatırım Sorumluluğu</h3>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        Sitedeki içerikler kişisel yatırım tavsiyesi değildir. Gayrimenkul veya başka bir yatırım kararı vermeden önce konunun uzmanlarından profesyonel danışmanlık alınız. Tradia, Site içeriğine dayanılarak alınan kararların sonuçlarından sorumlu tutulamaz.
+      </p>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.3 Telif Hakları</h3>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Site içeriği (metinler, analiz raporları, görseller, tasarım) Tradia'ya aittir veya lisanslı kullanılmaktadır. İçeriğin izinsiz çoğaltılması, dağıtılması veya ticari amaçla kullanılması yasaktır. Kaynak göstererek alıntı yapma, eğitim veya kişisel kullanım için içerikleri okuma ve paylaşma serbesttir.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">3. Kullanıcı Yükümlülükleri</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Yasalara ve ahlak kurallarına uygun davranmalısınız</li>
+        <li>Üyelik bilgilerinizin gizliliğini korumalısınız</li>
+        <li>Siteye zarar verecek faaliyetlerden kaçınmalısınız</li>
+        <li>Diğer kullanıcıların haklarına saygı göstermelisiniz</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">4. Üyelik</h2>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">4.1 Kayıt</h3>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        Üyelik için doğru ve güncel bilgi vermeniz beklenir. Yanlış bilgiyle açılan hesaplar uyarı yapılmaksızın kapatılabilir.
+      </p>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">4.2 Hesap Güvenliği</h3>
+      <p className="text-gray-300 leading-relaxed mb-4">
+        Hesabınızla yapılan tüm işlemlerden siz sorumlusunuz. Şüpheli bir erişim fark ettiğinizde derhal bizimle iletişime geçin.
+      </p>
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">4.3 Hesap Kapatma</h3>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Hesabınızı dilediğiniz zaman kapatabilirsiniz. Tradia, kullanım şartlarını ihlal eden hesapları önceden bildirmeksizin kapatma hakkını saklı tutar.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">5. Bülten ve İletişim</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Bülten aboneliği açık rızanıza dayalıdır. Her e-postada bulunan &quot;abonelikten çık&quot; bağlantısıyla aboneliğinizi sonlandırabilirsiniz.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">6. Sorumluluğun Sınırlandırılması</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">Tradia, aşağıdaki durumlardan sorumlu tutulamaz:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Yatırım kararlarınızın sonuçları</li>
+        <li>Site içeriğindeki olası hata veya eksiklikler</li>
+        <li>Site erişiminde yaşanan kesintiler</li>
+        <li>Üçüncü taraflarca verilen hizmetler</li>
+        <li>Site içeriğinin yorumlanmasından doğan zararlar</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">7. Değişiklikler</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Bu Kullanım Şartları zaman zaman güncellenebilir. Önemli değişikliklerde Site üzerinden duyuru yapılır.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">8. Geçerli Hukuk ve Yetkili Mahkeme</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Bu şartlar Türkiye Cumhuriyeti hukukuna tabidir. Doğabilecek uyuşmazlıklarda İstanbul Anadolu Mahkemeleri ve İcra Daireleri yetkilidir.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">9. İletişim</h2>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1">
+        <li>E-posta: <a href="mailto:ahmetcolak.53@hotmail.com" className="text-red-400 hover:underline">ahmetcolak.53@hotmail.com</a></li>
+        <li>Telefon: 0532 160 97 53</li>
+      </ul>
+    </LegalShell>
+  );
+}
+
+function CerezPage({ setPage }) {
+  return (
+    <LegalShell setPage={setPage} eyebrow="Yasal" title="Çerez Politikası" lastUpdated="Mayıs 2026">
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-2 mb-4">1. Çerez Nedir?</h2>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Çerezler, web sitesi tarafından tarayıcınıza gönderilen ve cihazınızda saklanan küçük metin dosyalarıdır. Tarayıcınızın sonraki ziyaretlerinizde siteyi daha iyi sunmasına yardımcı olurlar.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">2. Kullandığımız Çerezler</h2>
+
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.1 Zorunlu Çerezler</h3>
+      <p className="text-gray-300 leading-relaxed mb-2">Sitenin temel işlevleri için gereklidir. Bunları devre dışı bırakamazsınız.</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-4">
+        <li>Oturum çerezleri: Sayfa geçişlerini yönetmek için</li>
+        <li>Güvenlik çerezleri: Güvenlik kontrolleri</li>
+      </ul>
+
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.2 Analitik Çerezler (rıza ile)</h3>
+      <p className="text-gray-300 leading-relaxed mb-2">Site kullanımını anlamak için anonim veri toplar.</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-4">
+        <li>Plausible Analytics: Sayfa görüntüleme, referans kaynak, cihaz türü (çerezsiz çalışır)</li>
+      </ul>
+
+      <h3 className="font-grotesk font-semibold text-lg text-white mt-4 mb-2">2.3 Pazarlama Çerezleri</h3>
+      <p className="text-gray-300 leading-relaxed mb-6">
+        Şu an kullanılmamaktadır. Reklam kampanyaları başlatıldığında bu bölüm güncellenecek ve onay alınacaktır.
+      </p>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">3. Çerezleri Yönetme</h2>
+      <p className="text-gray-300 leading-relaxed mb-2">Tarayıcı ayarlarınızdan çerezleri yönetebilir veya silebilirsiniz:</p>
+      <ul className="list-disc pl-6 text-gray-300 leading-relaxed space-y-1 mb-6">
+        <li>Chrome: Ayarlar → Gizlilik ve güvenlik → Çerezler</li>
+        <li>Safari: Tercihler → Gizlilik</li>
+        <li>Firefox: Ayarlar → Gizlilik ve Güvenlik</li>
+      </ul>
+
+      <h2 className="font-grotesk font-bold text-2xl text-white mt-8 mb-4">4. Üçüncü Taraf Çerezleri</h2>
+      <p className="text-gray-300 leading-relaxed">
+        Tradia, üçüncü taraf çerez kullanımını minimumda tutar.
+      </p>
+    </LegalShell>
+  );
+}
+
+/* ===== cookie-banner.jsx ===== */
+
+function CookieBanner({ setPage }) {
+  const [accepted, setAccepted] = useState(() => {
+    try {
+      return localStorage.getItem('tradia_cookie_consent') === 'accepted';
+    } catch (e) { return false; }
+  });
+
+  if (accepted) return null;
+
+  const handleAccept = () => {
+    try { localStorage.setItem('tradia_cookie_consent', 'accepted'); } catch (e) {}
+    setAccepted(true);
+  };
+
+  return (
+    <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#0A0E1A]/95 backdrop-blur-md border-t border-white/10 p-4 md:p-6">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row md:items-center gap-4">
+        <div className="flex-1 text-sm text-gray-300">
+          <p>
+            Bu site, deneyiminizi iyileştirmek için zorunlu çerezleri ve anonim analitik kullanır. Detay için{' '}
+            <button onClick={() => setPage('cerez')} className="text-red-400 hover:underline">Çerez Politikası</button>{' '}
+            ve{' '}
+            <button onClick={() => setPage('gizlilik')} className="text-red-400 hover:underline">Gizlilik Politikası</button>
+            'nı inceleyebilirsiniz.
+          </p>
+        </div>
+        <div className="flex gap-2">
+          <button
+            onClick={handleAccept}
+            className="bg-red-600 hover:bg-red-700 text-white px-6 py-2 rounded-md text-sm font-medium transition">
+            Anladım
+          </button>
         </div>
       </div>
     </div>
@@ -3320,6 +3845,14 @@ function App() {
         return <HakkimizdaPage setPage={setPage} />;
       case 'uyelik':
         return <UyelikPage setPage={setPage} />;
+      case 'gizlilik':
+        return <GizlilikPage setPage={setPage} />;
+      case 'kvkk':
+        return <KvkkPage setPage={setPage} />;
+      case 'sartlar':
+        return <SartlarPage setPage={setPage} />;
+      case 'cerez':
+        return <CerezPage setPage={setPage} />;
       default:
         return <HomePage setPage={setPage} setSelectedIl={setSelectedIl} setSelectedIlce={setSelectedIlce} showGlobe={showGlobe} setShowGlobe={setShowGlobe} />;
     }
@@ -3331,7 +3864,8 @@ function App() {
       <main style={{ animation: 'fadeIn 0.4s ease forwards' }}>
         {renderPage()}
       </main>
-      {page !== 'home' && <Footer setPage={setPage} />}
+      <Footer setPage={setPage} />
+      <CookieBanner setPage={setPage} />
     </div>
   );
 }
