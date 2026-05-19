@@ -4,8 +4,9 @@ on:
   schedule:
     # Günlük: 02:00 UTC = 05:00 TR
     - cron: '0 2 * * *'
-    # Haftalık: Pazartesi 23:00 UTC = Salı 02:00 TR
-    - cron: '0 23 * * 1'
+    # Haftalık DURAKLATILDI — manuel onay öncesi boş yayın engeli
+    # Pazartesi 23:00 UTC = Salı 02:00 TR (workflow_dispatch ile manuel tetiklenebilir)
+    # - cron: '0 23 * * 1'
   workflow_dispatch:
     inputs:
       pipeline_type:
