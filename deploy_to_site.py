@@ -570,6 +570,17 @@ def deploy() -> int:
     configure_root()
     Config.ensure_dirs()
 
+    # ── Kill-switch ────────────────────────────────────────────────────────────
+    # docs/index.html artık Tradia v2 React SPA. Eski stil <section id="lg-*">
+    # enjeksiyonu React kapsamı dışına orphan HTML bırakıyor. Yeniden tasarım
+    # yapana kadar deploy() no-op. Aktive etmek için .deploy_disabled dosyasını
+    # repo kökünden sil veya TRADIA_DEPLOY_DISABLED=0 yap.
+    _disabled_marker = Path(__file__).resolve().parent / ".deploy_disabled"
+    if os.environ.get("TRADIA_DEPLOY_DISABLED", "1") != "0" or _disabled_marker.exists():
+        print("⏸ deploy_to_site: DISABLED (Tradia v2 React SPA — eski enjeksiyon devre dışı).")
+        print(f"   Aktive etmek için: rm {_disabled_marker}  veya  TRADIA_DEPLOY_DISABLED=0")
+        return 0
+
     print("\n=== LANDGOLD DEPLOY STARTING ===\n")
     print(f"Site repo:  {SITE_REPO_PATH.resolve()}")
     print(f"Index:      {SITE_INDEX}\n")
