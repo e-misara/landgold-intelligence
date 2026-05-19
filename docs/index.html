@@ -22,6 +22,40 @@
   <meta name="twitter:title" content="Tradia — Türkiye Yatırım İstihbaratı">
   <meta name="twitter:description" content="Türkiye'nin yapay zeka destekli gayrimenkul ve yatırım istihbarat platformu.">
   <meta name="twitter:image" content="https://tradiaturkey.com/og-image.jpg">
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tradia",
+    "alternateName": "Tradia Türkiye Yatırım İstihbaratı",
+    "url": "https://tradiaturkey.com",
+    "logo": "https://tradiaturkey.com/og-image.jpg",
+    "description": "Türkiye gayrimenkul piyasası, mega projeler ve makro veri analizine yönelik istihbarat platformu",
+    "founder": {
+      "@type": "Person",
+      "name": "Anastasiya Cholak"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ümraniye",
+      "addressRegion": "İstanbul",
+      "addressCountry": "TR"
+    },
+    "email": "ahmetcolak.53@hotmail.com",
+    "telephone": "+90 532 160 97 53",
+    "sameAs": []
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Tradia",
+    "url": "https://tradiaturkey.com",
+    "inLanguage": "tr-TR"
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -2515,6 +2549,18 @@ function IlPage({ il, setPage, setSelectedIl, setSelectedIlce }) {
   const ilIlceler = ILCELER.filter(ilce => ilce.il === il.ad);
   const topIlceler = [...ilIlceler].sort((a,b) => b.isi - a.isi);
   const bolgeIller = ILLER.filter(x => x.bolge === il.bolge && x.id !== il.id).sort((a,b) => b.isi - a.isi).slice(0, 5);
+  // Saha verisi canlı olan komşu il önerileri (ILCELER seed'inde olan iller)
+  const ilcelerSeedCities = [...new Set(ILCELER.map(x => x.il))];
+  let dataLiveNeighbors = ILLER.filter(x =>
+    x.bolge === il.bolge && ilcelerSeedCities.includes(x.ad) && x.id !== il.id
+  ).sort((a,b) => b.isi - a.isi).slice(0, 2);
+  if (dataLiveNeighbors.length < 2) {
+    const more = ILLER.filter(x =>
+      ilcelerSeedCities.includes(x.ad) && x.id !== il.id &&
+      !dataLiveNeighbors.find(n => n.id === x.id)
+    ).sort((a,b) => b.isi - a.isi).slice(0, 2 - dataLiveNeighbors.length);
+    dataLiveNeighbors = [...dataLiveNeighbors, ...more];
+  }
   const piyasaIlceler = konutPiyasaIlceleriIcin(il.ad);
   const [piyasaSort, setPiyasaSort] = useState('m2');  // 'm2' | 'ilan' | 'medyan'
 
@@ -2590,9 +2636,9 @@ function IlPage({ il, setPage, setSelectedIl, setSelectedIlce }) {
         </div>
 
         <div className="space-y-4">
-          <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-5">
-            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Sıcak İlçeler</div>
-            {topIlceler.length > 0 ? (
+          {topIlceler.length > 0 ? (
+            <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-5">
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Sıcak İlçeler</div>
               <div className="space-y-2">
                 {topIlceler.map((ilce, i) => (
                   <div key={ilce.id} onClick={() => { setSelectedIlce(ilce); setPage('ilce'); }}
@@ -2604,10 +2650,80 @@ function IlPage({ il, setPage, setSelectedIl, setSelectedIlce }) {
                   </div>
                 ))}
               </div>
-            ) : (
-              <p className="font-body text-xs text-gray-500 py-2">Bu il için örnek veri mevcut değil.</p>
-            )}
-          </div>
+            </div>
+          ) : (
+            <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-5">
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-4">İl Görünümü</div>
+
+              {/* Bölüm 1: Bölge Bağlamı */}
+              <div className="mb-4">
+                <div className="font-mono text-[9px] text-amber-500/80 uppercase tracking-wider mb-1.5">Bölge Bağlamı</div>
+                <p className="font-body text-xs text-gray-300 leading-relaxed">
+                  {il.ad}, <strong className="text-white">{il.bolge}</strong> bölgesinde yer alır.
+                  {bolgeIller.length > 0 && (() => {
+                    const avgNufus = Math.round(bolgeIller.reduce((a,b) => a + b.nufus, 0) / bolgeIller.length / 1000);
+                    const avgRefah = Math.round(bolgeIller.reduce((a,b) => a + b.refah, 0) / bolgeIller.length);
+                    return ' Bölge ortalaması: nüfus ~' + avgNufus.toLocaleString('tr') + 'K · refah skoru ' + avgRefah + '/100.';
+                  })()}
+                </p>
+              </div>
+
+              {/* Bölüm 2: Mega Proje Etkisi */}
+              <div className="mb-4 pb-4 border-b border-gray-800/60">
+                <div className="font-mono text-[9px] text-amber-500/80 uppercase tracking-wider mb-1.5">Mega Proje Etkisi</div>
+                {ilMegaProje.length > 0 ? (
+                  <div className="space-y-1.5">
+                    {ilMegaProje.slice(0, 3).map(mp => (
+                      <div key={mp.id} className="flex gap-2 items-start">
+                        <div className="w-1.5 h-1.5 rounded-full mt-1.5 flex-shrink-0" style={{background: mp.renk}} />
+                        <div className="font-body text-xs text-gray-300 leading-snug">
+                          <span className="font-grotesk font-semibold text-white">{mp.ad}</span>
+                          <span className="text-gray-600"> · {mp.yatirim}</span>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                    {il.ad}, {il.bolge} bölgesinin stratejik yatırım koridoru içinde. Bölgedeki mega projeler komşu illeri besliyor.
+                  </p>
+                )}
+              </div>
+
+              {/* Bölüm 3: Saha Verisi Linkleri */}
+              <div>
+                <div className="font-mono text-[9px] text-amber-500/80 uppercase tracking-wider mb-1.5">Saha Verisi</div>
+                {dataLiveNeighbors.length >= 2 ? (
+                  <p className="font-body text-xs text-gray-300 leading-relaxed">
+                    Daha derin saha verimiz{' '}
+                    <button onClick={() => setSelectedIl(dataLiveNeighbors[0])}
+                            className="font-grotesk font-semibold text-amber-400 hover:text-amber-300 underline">
+                      {dataLiveNeighbors[0].ad}
+                    </button>
+                    {' '}ve{' '}
+                    <button onClick={() => setSelectedIl(dataLiveNeighbors[1])}
+                            className="font-grotesk font-semibold text-amber-400 hover:text-amber-300 underline">
+                      {dataLiveNeighbors[1].ad}
+                    </button>
+                    {' '}için canlı — bu illeri keşfedin.
+                  </p>
+                ) : dataLiveNeighbors.length === 1 ? (
+                  <p className="font-body text-xs text-gray-300 leading-relaxed">
+                    Daha derin saha verimiz{' '}
+                    <button onClick={() => setSelectedIl(dataLiveNeighbors[0])}
+                            className="font-grotesk font-semibold text-amber-400 hover:text-amber-300 underline">
+                      {dataLiveNeighbors[0].ad}
+                    </button>
+                    {' '}için canlı — keşfedin.
+                  </p>
+                ) : (
+                  <p className="font-body text-xs text-gray-400 leading-relaxed">
+                    Saha verimiz Türkiye geneline genişliyor — Marmara ve Ege merkezli iller önde.
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
 
           <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-5">
             <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">{il.bolge} Bölgesi</div>
