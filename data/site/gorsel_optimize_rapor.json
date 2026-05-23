@@ -1,0 +1,198 @@
+{
+  "projeler": {
+    "akkuyu_nukleer": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/akkuyu_nukleer/20260520_akkuyu_nukleer_01.png",
+        "thumb": "images/mega/akkuyu_nukleer/01-thumb.webp",
+        "full": "images/mega/akkuyu_nukleer/01-full.webp",
+        "thumb_size": 15960,
+        "full_size": 177480,
+        "orig_size": 2104631,
+        "skipped": true
+      }
+    ],
+    "avrasya_tuneli": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/avrasya_tuneli/20260520_avrasya_tuneli_01.png",
+        "thumb": "images/mega/avrasya_tuneli/01-thumb.webp",
+        "full": "images/mega/avrasya_tuneli/01-full.webp",
+        "thumb_size": 14716,
+        "full_size": 228516,
+        "orig_size": 2791959,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/avrasya_tuneli/20260520_avrasya_tuneli_02.png",
+        "thumb": "images/mega/avrasya_tuneli/02-thumb.webp",
+        "full": "images/mega/avrasya_tuneli/02-full.webp",
+        "thumb_size": 10158,
+        "full_size": 74610,
+        "orig_size": 1570389,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/avrasya_tuneli/20260520_avrasya_tuneli_03.png",
+        "thumb": "images/mega/avrasya_tuneli/03-thumb.webp",
+        "full": "images/mega/avrasya_tuneli/03-full.webp",
+        "thumb_size": 6448,
+        "full_size": 79068,
+        "orig_size": 1682690,
+        "skipped": true
+      }
+    ],
+    "cam_sakura_hastanesi": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/cam_sakura_hastanesi/20260520_cam_sakura_01.png",
+        "thumb": "images/mega/cam_sakura_hastanesi/01-thumb.webp",
+        "full": "images/mega/cam_sakura_hastanesi/01-full.webp",
+        "thumb_size": 22680,
+        "full_size": 270196,
+        "orig_size": 2853953,
+        "skipped": true
+      }
+    ],
+    "canakkale_koprusu_1915": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/canakkale_koprusu_1915/20260520_canakkale_koprusu_1915_01.png",
+        "thumb": "images/mega/canakkale_koprusu_1915/01-thumb.webp",
+        "full": "images/mega/canakkale_koprusu_1915/01-full.webp",
+        "thumb_size": 11516,
+        "full_size": 208938,
+        "orig_size": 3010192,
+        "skipped": true
+      }
+    ],
+    "filyos_limani": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/filyos_limani/20260520_filyos_limani_01.png",
+        "thumb": "images/mega/filyos_limani/01-thumb.webp",
+        "full": "images/mega/filyos_limani/01-full.webp",
+        "thumb_size": 15720,
+        "full_size": 159584,
+        "orig_size": 1801906,
+        "skipped": true
+      }
+    ],
+    "istanbul_havalimani": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/istanbul_havalimani/20260520_istanbul_havalimani_01.png",
+        "thumb": "images/mega/istanbul_havalimani/01-thumb.webp",
+        "full": "images/mega/istanbul_havalimani/01-full.webp",
+        "thumb_size": 7104,
+        "full_size": 298964,
+        "orig_size": 3714645,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/istanbul_havalimani/20260520_istanbul_havalimani_02.png",
+        "thumb": "images/mega/istanbul_havalimani/02-thumb.webp",
+        "full": "images/mega/istanbul_havalimani/02-full.webp",
+        "thumb_size": 15994,
+        "full_size": 179538,
+        "orig_size": 2614913,
+        "skipped": true
+      }
+    ],
+    "kanal_istanbul": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/kanal_istanbul/20260519_kanal_istanbul_01.png",
+        "thumb": "images/mega/kanal_istanbul/01-thumb.webp",
+        "full": "images/mega/kanal_istanbul/01-full.webp",
+        "thumb_size": 17686,
+        "full_size": 262306,
+        "orig_size": 2832625,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/kanal_istanbul/20260519_kanal_istanbul_02.png",
+        "thumb": "images/mega/kanal_istanbul/02-thumb.webp",
+        "full": "images/mega/kanal_istanbul/02-full.webp",
+        "thumb_size": 17686,
+        "full_size": 262306,
+        "orig_size": 2832625,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/kanal_istanbul/20260520_kanal_istanbul_03.png",
+        "thumb": "images/mega/kanal_istanbul/03-thumb.webp",
+        "full": "images/mega/kanal_istanbul/03-full.webp",
+        "thumb_size": 19464,
+        "full_size": 270908,
+        "orig_size": 2559229,
+        "skipped": true
+      }
+    ],
+    "karadeniz_gazi": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/karadeniz_gazi/20260520_karadeniz_01.png",
+        "thumb": "images/mega/karadeniz_gazi/01-thumb.webp",
+        "full": "images/mega/karadeniz_gazi/01-full.webp",
+        "thumb_size": 8648,
+        "full_size": 124630,
+        "orig_size": 1835357,
+        "skipped": true
+      }
+    ],
+    "marmaray": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/marmaray/20260520_marmaray_01.png",
+        "thumb": "images/mega/marmaray/01-thumb.webp",
+        "full": "images/mega/marmaray/01-full.webp",
+        "thumb_size": 13462,
+        "full_size": 118026,
+        "orig_size": 1856062,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/marmaray/20260520_marmaray_02.png",
+        "thumb": "images/mega/marmaray/02-thumb.webp",
+        "full": "images/mega/marmaray/02-full.webp",
+        "thumb_size": 10490,
+        "full_size": 197676,
+        "orig_size": 2196801,
+        "skipped": true
+      }
+    ],
+    "osmangazi_koprusu": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/osmangazi_koprusu/20260520_izmit_korfez_koprusu_01.png",
+        "thumb": "images/mega/osmangazi_koprusu/01-thumb.webp",
+        "full": "images/mega/osmangazi_koprusu/01-full.webp",
+        "thumb_size": 17774,
+        "full_size": 295222,
+        "orig_size": 3234202,
+        "skipped": true
+      },
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/osmangazi_koprusu/20260520_izmit_korfez_koprusu_02.png",
+        "thumb": "images/mega/osmangazi_koprusu/02-thumb.webp",
+        "full": "images/mega/osmangazi_koprusu/02-full.webp",
+        "thumb_size": 15388,
+        "full_size": 316792,
+        "orig_size": 3420671,
+        "skipped": true
+      }
+    ],
+    "yusufeli_baraji": [
+      {
+        "src": "Desktop/tradia_gorsel_arsiv/01_mega_projeler/yusufeli_baraji/20260520_yusufeli_01.png",
+        "thumb": "images/mega/yusufeli_baraji/01-thumb.webp",
+        "full": "images/mega/yusufeli_baraji/01-full.webp",
+        "thumb_size": 16858,
+        "full_size": 253796,
+        "orig_size": 3064236,
+        "skipped": true
+      }
+    ]
+  },
+  "ozet": {
+    "proje_sayisi": 11,
+    "toplam_orig_byte": 52216412,
+    "toplam_thumb_byte": 306888,
+    "toplam_full_byte": 4416482,
+    "toplam_orig_mb": 49.8,
+    "toplam_thumb_mb": 0.29,
+    "toplam_full_mb": 4.21,
+    "kazanc_orani": 0.91
+  }
+}

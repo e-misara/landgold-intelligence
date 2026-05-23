@@ -426,6 +426,41 @@ const ILLER = [
   {id:81, ad:'Düzce',          lon:31.16, lat:40.83, nufus:415716,  isi:6.5, refah:56.0, buyume:1.2,  bolge:'Karadeniz',    osb:73},
 ];
 
+/* === Mega Proje Görsel + Eşleşme + Yeni 5 Proje === */
+
+const MEGA_GORSEL = {"akkuyu_nukleer":{"count":1,"thumb":"images/mega/akkuyu_nukleer/01-thumb.webp","full":"images/mega/akkuyu_nukleer/01-full.webp","tum_gorseller":[{"thumb":"images/mega/akkuyu_nukleer/01-thumb.webp","full":"images/mega/akkuyu_nukleer/01-full.webp"}]},"avrasya_tuneli":{"count":3,"thumb":"images/mega/avrasya_tuneli/01-thumb.webp","full":"images/mega/avrasya_tuneli/01-full.webp","tum_gorseller":[{"thumb":"images/mega/avrasya_tuneli/01-thumb.webp","full":"images/mega/avrasya_tuneli/01-full.webp"},{"thumb":"images/mega/avrasya_tuneli/02-thumb.webp","full":"images/mega/avrasya_tuneli/02-full.webp"},{"thumb":"images/mega/avrasya_tuneli/03-thumb.webp","full":"images/mega/avrasya_tuneli/03-full.webp"}]},"cam_sakura_hastanesi":{"count":1,"thumb":"images/mega/cam_sakura_hastanesi/01-thumb.webp","full":"images/mega/cam_sakura_hastanesi/01-full.webp","tum_gorseller":[{"thumb":"images/mega/cam_sakura_hastanesi/01-thumb.webp","full":"images/mega/cam_sakura_hastanesi/01-full.webp"}]},"canakkale_koprusu_1915":{"count":1,"thumb":"images/mega/canakkale_koprusu_1915/01-thumb.webp","full":"images/mega/canakkale_koprusu_1915/01-full.webp","tum_gorseller":[{"thumb":"images/mega/canakkale_koprusu_1915/01-thumb.webp","full":"images/mega/canakkale_koprusu_1915/01-full.webp"}]},"filyos_limani":{"count":1,"thumb":"images/mega/filyos_limani/01-thumb.webp","full":"images/mega/filyos_limani/01-full.webp","tum_gorseller":[{"thumb":"images/mega/filyos_limani/01-thumb.webp","full":"images/mega/filyos_limani/01-full.webp"}]},"istanbul_havalimani":{"count":2,"thumb":"images/mega/istanbul_havalimani/01-thumb.webp","full":"images/mega/istanbul_havalimani/01-full.webp","tum_gorseller":[{"thumb":"images/mega/istanbul_havalimani/01-thumb.webp","full":"images/mega/istanbul_havalimani/01-full.webp"},{"thumb":"images/mega/istanbul_havalimani/02-thumb.webp","full":"images/mega/istanbul_havalimani/02-full.webp"}]},"kanal_istanbul":{"count":3,"thumb":"images/mega/kanal_istanbul/01-thumb.webp","full":"images/mega/kanal_istanbul/01-full.webp","tum_gorseller":[{"thumb":"images/mega/kanal_istanbul/01-thumb.webp","full":"images/mega/kanal_istanbul/01-full.webp"},{"thumb":"images/mega/kanal_istanbul/02-thumb.webp","full":"images/mega/kanal_istanbul/02-full.webp"},{"thumb":"images/mega/kanal_istanbul/03-thumb.webp","full":"images/mega/kanal_istanbul/03-full.webp"}]},"karadeniz_gazi":{"count":1,"thumb":"images/mega/karadeniz_gazi/01-thumb.webp","full":"images/mega/karadeniz_gazi/01-full.webp","tum_gorseller":[{"thumb":"images/mega/karadeniz_gazi/01-thumb.webp","full":"images/mega/karadeniz_gazi/01-full.webp"}]},"marmaray":{"count":2,"thumb":"images/mega/marmaray/01-thumb.webp","full":"images/mega/marmaray/01-full.webp","tum_gorseller":[{"thumb":"images/mega/marmaray/01-thumb.webp","full":"images/mega/marmaray/01-full.webp"},{"thumb":"images/mega/marmaray/02-thumb.webp","full":"images/mega/marmaray/02-full.webp"}]},"osmangazi_koprusu":{"count":2,"thumb":"images/mega/osmangazi_koprusu/01-thumb.webp","full":"images/mega/osmangazi_koprusu/01-full.webp","tum_gorseller":[{"thumb":"images/mega/osmangazi_koprusu/01-thumb.webp","full":"images/mega/osmangazi_koprusu/01-full.webp"},{"thumb":"images/mega/osmangazi_koprusu/02-thumb.webp","full":"images/mega/osmangazi_koprusu/02-full.webp"}]},"yusufeli_baraji":{"count":1,"thumb":"images/mega/yusufeli_baraji/01-thumb.webp","full":"images/mega/yusufeli_baraji/01-full.webp","tum_gorseller":[{"thumb":"images/mega/yusufeli_baraji/01-thumb.webp","full":"images/mega/yusufeli_baraji/01-full.webp"}]},"_kolaj":{"thumb":"images/mega/_genel/kolaj-thumb.webp","full":"images/mega/_genel/kolaj-full.webp"},"_saglik_kapak":{"thumb":"images/mega/_genel/saglik-thumb.webp","full":"images/mega/_genel/saglik-full.webp"}};
+
+const MEGA_ID_META = {"1":{"slug":"kanal_istanbul","grup":"Su"},"2":{"slug":"istanbul_havalimani","grup":"Ulaşım"},"3":{"slug":"canakkale_koprusu_1915","grup":"Ulaşım"},"4":{"slug":"halkali_kapikule_yht","grup":"Ulaşım"},"5":{"slug":"akkuyu_nukleer","grup":"Enerji"},"6":{"slug":"yss_kopru_kuzey_marmara","grup":"Ulaşım"},"7":{"slug":"btk_demiryolu","grup":"Ulaşım"},"8":{"slug":"marmaray","grup":"Ulaşım"},"9":{"slug":"mersin_limani","grup":"Lojistik"},"10":{"slug":"tanap","grup":"Enerji"},"11":{"slug":"candarli_limani","grup":"Lojistik"},"12":{"slug":"gap","grup":"Su"},"13":{"slug":"osmangazi_koprusu","grup":"Ulaşım"},"14":{"slug":"star_rafinerisi","grup":"Lojistik"},"15":{"slug":"galataport","grup":"Kentsel"},"16":{"slug":"filyos_petrokimya","grup":"Lojistik"},"17":{"slug":"kapadokya_premium","grup":"Kentsel"},"18":{"slug":"istanbul_finans_merkezi","grup":"Kentsel"},"19":{"slug":"3_koprusu","grup":"Ulaşım"},"20":{"slug":"bursa_kentsel_donusum","grup":"Kentsel"},"21":{"slug":"kapadokya_butik_turizm","grup":"Kentsel"},"22":{"slug":"trabzon_sehir_hastanesi","grup":"Sağlık"},"23":{"slug":"manisa_elektronik_osb","grup":"Lojistik"},"24":{"slug":"gaziantep_sanayi","grup":"Lojistik"},"25":{"slug":"mugla_luks_kiyi","grup":"Kentsel"}};
+
+const MEGA_GRUP_RENK = {
+  "Ulaşım":  "#3B82F6",
+  "Enerji":  "#D97706",
+  "Su":      "#06B6D4",
+  "Sağlık":  "#2D7A3E",
+  "Kentsel": "#DC2626",
+  "Lojistik":"#8B5CF6",
+  "Diğer":   "#6B7280",
+};
+
+const MEGA_GRUP_IKON = {
+  "Ulaşım":  "🛣️",
+  "Enerji":  "⚡",
+  "Su":      "💧",
+  "Sağlık":  "🏥",
+  "Kentsel": "🏙️",
+  "Lojistik":"⚓",
+  "Diğer":   "◈",
+};
+
+/* 5 yeni proje (görsel-zengin, metin placeholder) */
+const MEGA_EK_PROJELER = [
+  {"id": 26, "ad": "Avrasya Tüneli", "slug": "avrasya_tuneli", "kategori": "ulaşım", "ana_grup": "Ulaşım", "il": "İstanbul", "lon": 29.02, "lat": 41.0, "durum": "tamamlandı", "yatirim": "Detay yakında", "isi": 7.5, "ilceler": [], "aciklama": "Tradia tarafından zenginleştiriliyor — projenin detaylı analizi yakında.", "etki": "Etki analizi hazırlanıyor", "fiyat": [], "verdict": "Yakında", "renk": "#3B82F6", "placeholder": true},
+  {"id": 27, "ad": "Çam-Sakura Şehir Hastanesi", "slug": "cam_sakura_hastanesi", "kategori": "sanayi", "ana_grup": "Sağlık", "il": "İstanbul", "lon": 29.11, "lat": 41.05, "durum": "tamamlandı", "yatirim": "Detay yakında", "isi": 7.5, "ilceler": [], "aciklama": "Tradia tarafından zenginleştiriliyor — projenin detaylı analizi yakında.", "etki": "Etki analizi hazırlanıyor", "fiyat": [], "verdict": "Yakında", "renk": "#10B981", "placeholder": true},
+  {"id": 28, "ad": "Filyos Limanı", "slug": "filyos_limani", "kategori": "sanayi", "ana_grup": "Lojistik", "il": "Zonguldak", "lon": 32.04, "lat": 41.57, "durum": "yapım", "yatirim": "Detay yakında", "isi": 7.5, "ilceler": [], "aciklama": "Tradia tarafından zenginleştiriliyor — projenin detaylı analizi yakında.", "etki": "Etki analizi hazırlanıyor", "fiyat": [], "verdict": "Yakında", "renk": "#06B6D4", "placeholder": true},
+  {"id": 29, "ad": "Sakarya Karadeniz Doğal Gazı", "slug": "karadeniz_gazi", "kategori": "enerji", "ana_grup": "Enerji", "il": "Zonguldak", "lon": 32.1, "lat": 41.8, "durum": "yapım", "yatirim": "Detay yakında", "isi": 7.5, "ilceler": [], "aciklama": "Tradia tarafından zenginleştiriliyor — projenin detaylı analizi yakında.", "etki": "Etki analizi hazırlanıyor", "fiyat": [], "verdict": "Yakında", "renk": "#F59E0B", "placeholder": true},
+  {"id": 30, "ad": "Yusufeli Barajı", "slug": "yusufeli_baraji", "kategori": "enerji", "ana_grup": "Su", "il": "Artvin", "lon": 41.62, "lat": 40.83, "durum": "tamamlandı", "yatirim": "Detay yakında", "isi": 7.5, "ilceler": [], "aciklama": "Tradia tarafından zenginleştiriliyor — projenin detaylı analizi yakında.", "etki": "Etki analizi hazırlanıyor", "fiyat": [], "verdict": "Yakında", "renk": "#06B6D4", "placeholder": true}
+];
+
 const MEGA_PROJELER = [
   {
     id:1, ad:'Kanal İstanbul', kategori:'ulaşım', durum:'planlama', isi:9.2,
@@ -677,6 +712,8 @@ const MEGA_PROJELER = [
     verdict:'BUY — Muğla küresel lüks gayrimenkul haritasına girdi',
     renk:'#ec4899',
   },
+  ,
+  ...MEGA_EK_PROJELER
 ];
 
 const KORIDORLAR = [
@@ -2275,208 +2312,372 @@ function HomePage({ setPage, setSelectedIl, setSelectedIlce, showGlobe, setShowG
 
 /* ===== mega.jsx ===== */
 
+/* === Mega proje helper'ları (hash route + grup/görsel lookup) === */
+function megaGrupOf(mp) {
+  if (mp.ana_grup) return mp.ana_grup;
+  const meta = MEGA_ID_META[String(mp.id)];
+  return meta ? meta.grup : 'Diğer';
+}
+function megaSlugOf(mp) {
+  if (mp.slug) return mp.slug;
+  const meta = MEGA_ID_META[String(mp.id)];
+  return meta ? meta.slug : ('proje-' + mp.id);
+}
+function megaGorselOf(mp) {
+  const slug = megaSlugOf(mp);
+  return MEGA_GORSEL[slug] || null;
+}
+
+function useMegaHashRoute() {
+  const [slug, setSlug] = useState(() => {
+    const m = (typeof window !== 'undefined' ? window.location.hash : '').match(/^#\/mega-projeler\/([^/?]+)/);
+    return m ? m[1] : null;
+  });
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const onHash = () => {
+      const m = window.location.hash.match(/^#\/mega-projeler\/([^/?]+)/);
+      setSlug(m ? m[1] : null);
+    };
+    window.addEventListener('hashchange', onHash);
+    return () => window.removeEventListener('hashchange', onHash);
+  }, []);
+  return [slug, (newSlug) => {
+    if (newSlug) window.location.hash = '#/mega-projeler/' + newSlug;
+    else if (window.location.hash.startsWith('#/mega-projeler/')) window.location.hash = '#/mega-projeler';
+  }];
+}
+
+function MegaProjeKart({ mp, onClick }) {
+  const grup = megaGrupOf(mp);
+  const gorsel = megaGorselOf(mp);
+  const grupRenk = MEGA_GRUP_RENK[grup] || mp.renk || '#6B7280';
+  const grupIkon = MEGA_GRUP_IKON[grup] || '◈';
+  const placeholder = !!mp.placeholder;
+  const durum = (mp.durum || '').toLowerCase();
+  const durumLabel = mp.durum || 'belirsiz';
+  return (
+    <div onClick={onClick}
+         className="border border-gray-800 bg-[#0d1424] rounded-xl overflow-hidden card-hover cursor-pointer group">
+      {/* Kapak */}
+      <div className="relative h-44 overflow-hidden" style={{ background: grupRenk + '15' }}>
+        {gorsel ? (
+          <img src={gorsel.thumb} alt={mp.ad || 'mega proje'} loading="lazy"
+               onError={(e) => { e.currentTarget.style.display = 'none'; }}
+               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+        ) : (
+          <div className="w-full h-full flex items-center justify-center"
+               style={{ background: 'linear-gradient(135deg, ' + grupRenk + '33 0%, #0a0e1a 100%)' }}>
+            <div className="text-center">
+              <div className="text-5xl mb-2 opacity-80">{grupIkon}</div>
+              <div className="font-mono text-[10px] uppercase tracking-widest" style={{ color: grupRenk }}>{grup}</div>
+            </div>
+          </div>
+        )}
+        {/* Üst rozet */}
+        <div className="absolute top-2 left-2 flex gap-1.5">
+          <span className="font-mono text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded backdrop-blur-sm"
+                style={{ background: grupRenk + 'cc', color: '#fff' }}>{grup}</span>
+          {placeholder && (
+            <span className="font-mono text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-amber-500/90 text-black backdrop-blur-sm">Yeni</span>
+          )}
+        </div>
+        {/* Sağ üst durum */}
+        <div className="absolute top-2 right-2">
+          <span className={'font-mono text-[9px] font-bold uppercase tracking-wider px-2 py-0.5 rounded backdrop-blur-sm ' + (
+            durum === 'tamamlandı' ? 'bg-emerald-900/90 text-emerald-200' :
+            durum === 'planlama'   ? 'bg-amber-900/90 text-amber-200' :
+            durum === 'yapım'      ? 'bg-blue-900/90 text-blue-200' :
+            'bg-gray-800/90 text-gray-200'
+          )}>{durumLabel}</span>
+        </div>
+        {/* Alt gradient overlay (görselli için okunabilirlik) */}
+        {gorsel && (
+          <div className="absolute inset-x-0 bottom-0 h-20 pointer-events-none"
+               style={{ background: 'linear-gradient(to top, rgba(13,20,36,0.95) 0%, transparent 100%)' }} />
+        )}
+      </div>
+
+      {/* İçerik */}
+      <div className="p-5">
+        <h3 className="font-grotesk font-bold text-lg text-white mb-1 group-hover:text-red-400 transition-colors line-clamp-1">
+          {mp.ad || 'İsimsiz Proje'}
+        </h3>
+        <div className="font-mono text-[10px] text-gray-500 mb-3">📍 {mp.il || '—'}</div>
+        {placeholder ? (
+          <p className="font-body text-xs text-amber-500/80 italic line-clamp-2 mb-3">
+            Tradia tarafından zenginleştiriliyor — projenin detayları yakında.
+          </p>
+        ) : (
+          <p className="font-body text-sm text-gray-400 leading-relaxed line-clamp-2 mb-3">{mp.aciklama || 'Detay yakında'}</p>
+        )}
+        <div className="flex items-center justify-between pt-3 border-t border-gray-800">
+          <div className="font-mono text-xs font-bold text-amber-400">{mp.yatirim || '—'}</div>
+          {!placeholder && mp.isi != null && <HeatBadge isi={mp.isi} />}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MegaProjeDetay({ mp, onBack }) {
+  // Defensive: tüm alanlar için fallback
+  const grup = megaGrupOf(mp);
+  const gorsel = megaGorselOf(mp);
+  const grupRenk = MEGA_GRUP_RENK[grup] || mp.renk || '#6B7280';
+  const placeholder = !!mp.placeholder;
+  const tumGorseller = gorsel && Array.isArray(gorsel.tum_gorseller) && gorsel.tum_gorseller.length
+    ? gorsel.tum_gorseller
+    : (gorsel && gorsel.thumb ? [{ thumb: gorsel.thumb, full: gorsel.full }] : []);
+  const [aktifIdx, setAktifIdx] = useState(0);
+
+  const ad      = mp.ad || 'İsimsiz Proje';
+  const il      = mp.il || '—';
+  const durum   = mp.durum || 'belirsiz';
+  const durumU  = String(durum).toUpperCase();
+  const aciklama = mp.aciklama || 'Tradia tarafından zenginleştiriliyor.';
+  const yatirim  = mp.yatirim || '—';
+  const fiyatData = Array.isArray(mp.fiyat) ? mp.fiyat : [];
+  const ilceler   = Array.isArray(mp.ilceler) ? mp.ilceler : [];
+  const safeAktifIdx = Math.min(aktifIdx, Math.max(0, tumGorseller.length - 1));
+
+  return (
+    <div className="max-w-6xl mx-auto px-4 py-10">
+      <button onClick={onBack}
+              className="font-mono text-xs text-gray-500 hover:text-white mb-6 flex items-center gap-2">
+        ← Mega projeler
+      </button>
+
+      {/* Hero görsel */}
+      {tumGorseller.length > 0 ? (
+        <div className="relative rounded-2xl overflow-hidden border border-gray-800 mb-6" style={{ aspectRatio: '16/9' }}>
+          <img src={tumGorseller[safeAktifIdx].full} alt={ad} loading="lazy"
+               onError={(e) => { e.currentTarget.style.display = 'none'; }}
+               className="w-full h-full object-cover" />
+          <div className="absolute inset-x-0 bottom-0 p-6 pointer-events-none"
+               style={{ background: 'linear-gradient(to top, rgba(10,14,26,0.95) 0%, transparent 100%)' }}>
+            <span className="font-mono text-[10px] uppercase tracking-widest px-2 py-1 rounded inline-block mb-2"
+                  style={{ background: grupRenk + 'cc', color: '#fff' }}>{grup}</span>
+            <h1 className="font-grotesk font-black text-4xl md:text-5xl text-white">{ad}</h1>
+          </div>
+          {tumGorseller.length > 1 && (
+            <div className="absolute bottom-4 right-4 flex flex-wrap gap-1.5 max-w-[60%] justify-end">
+              {tumGorseller.map((_, i) => (
+                <button key={i} onClick={() => setAktifIdx(i)}
+                        aria-label={'Görsel ' + (i+1)}
+                        className="h-1.5 rounded-full transition-all"
+                        style={{
+                          width: i === safeAktifIdx ? 28 : 14,
+                          background: i === safeAktifIdx ? grupRenk : 'rgba(255,255,255,0.3)'
+                        }} />
+              ))}
+            </div>
+          )}
+        </div>
+      ) : (
+        <div className="rounded-2xl overflow-hidden border border-gray-800 mb-6 p-12 flex items-center"
+             style={{ background: 'linear-gradient(135deg, ' + grupRenk + '22 0%, #0a0e1a 100%)', minHeight: 320 }}>
+          <div>
+            <span className="font-mono text-[10px] uppercase tracking-widest px-2 py-1 rounded inline-block mb-3"
+                  style={{ background: grupRenk + 'cc', color: '#fff' }}>{grup}</span>
+            <h1 className="font-grotesk font-black text-4xl md:text-5xl text-white mb-2">{ad}</h1>
+            <div className="font-mono text-xs text-gray-500">📍 {il} {'·'} {durum}</div>
+          </div>
+        </div>
+      )}
+
+      {/* Stats şeridi */}
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+        {[
+          { l: 'Yatırım',  v: yatirim, c: 'text-amber-400' },
+          { l: 'Durum',    v: durumU, c: durum === 'tamamlandı' ? 'text-emerald-400' : durum === 'planlama' ? 'text-amber-400' : durum === 'yapım' ? 'text-blue-400' : 'text-gray-300' },
+          { l: 'İl',       v: il, c: 'text-gray-200' },
+          { l: 'Isı Skoru',v: (placeholder || mp.isi == null) ? '—' : mp.isi + '/10', c: 'text-red-400' },
+        ].map(s => (
+          <div key={s.l} className="border border-gray-800 bg-[#0d1424] rounded-lg p-3">
+            <div className={'font-grotesk font-black text-xl ' + s.c}>{s.v}</div>
+            <div className="font-mono text-[9px] text-gray-600 uppercase tracking-wider mt-0.5">{s.l}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* İçerik 2 sütun */}
+      <div className="grid md:grid-cols-3 gap-6">
+        <div className="md:col-span-2 space-y-6">
+          <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-6">
+            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Proje Açıklaması</div>
+            <p className="font-body text-base text-gray-300 leading-relaxed">{aciklama}</p>
+          </div>
+
+          {!placeholder && mp.etki && (
+            <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-6">
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Beklenen Etki</div>
+              <p className="font-body text-base text-emerald-400 leading-relaxed">{mp.etki}</p>
+            </div>
+          )}
+
+          {!placeholder && fiyatData.length > 1 && (
+            <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-6">
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Arsa Fiyat Geçmişi ($/m²)</div>
+              <ResponsiveContainer width="100%" height={220}>
+                <AreaChart data={fiyatData}>
+                  <CartesianGrid strokeDasharray="3 3" stroke="#1f2937" />
+                  <XAxis dataKey="yil" stroke="#6b7280" fontSize={11} />
+                  <YAxis stroke="#6b7280" fontSize={11} />
+                  <RTooltip contentStyle={{ background:'#0d1424', border:'1px solid #374151', borderRadius:8 }}
+                            formatter={(v) => ['$' + Number(v).toLocaleString(), 'Değer']} />
+                  <defs>
+                    <linearGradient id={'detGrad' + mp.id} x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="0%" stopColor={grupRenk} stopOpacity={0.4} />
+                      <stop offset="100%" stopColor={grupRenk} stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
+                  <Area type="monotone" dataKey="fiyat" stroke={grupRenk} strokeWidth={2.5}
+                        fill={'url(#detGrad' + mp.id + ')'} />
+                </AreaChart>
+              </ResponsiveContainer>
+            </div>
+          )}
+
+          {placeholder && (
+            <div className="border border-amber-900/40 bg-amber-900/10 rounded-xl p-6">
+              <div className="font-mono text-[10px] text-amber-500 uppercase tracking-widest mb-2">Detay Hazırlanıyor</div>
+              <p className="font-body text-sm text-amber-200/80 leading-relaxed">
+                Bu proje Tradia portföyüne yeni eklendi. Saha verisi, etki analizi ve fiyat geçmişi yakında bu sayfada paylaşılacak.
+              </p>
+            </div>
+          )}
+        </div>
+
+        <div className="space-y-4">
+          {!placeholder && mp.verdict && (
+            <div className="border rounded-xl p-5" style={{ borderColor: grupRenk + '55', background: grupRenk + '0a' }}>
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-2">Tradia Kararı</div>
+              <div className="font-grotesk font-black text-sm leading-snug" style={{ color: grupRenk }}>
+                {mp.verdict}
+              </div>
+            </div>
+          )}
+
+          {ilceler.length > 0 && (
+            <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-5">
+              <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Etkilenen İlçeler</div>
+              <div className="flex flex-wrap gap-2">
+                {ilceler.map(ilce => (
+                  <span key={ilce} className="font-mono text-xs bg-gray-800 rounded px-2 py-1 text-gray-300">{ilce}</span>
+                ))}
+              </div>
+            </div>
+          )}
+
+          <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-5">
+            <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-2">Paylaş</div>
+            <p className="font-body text-xs text-gray-500 mb-3">Sayfa URL'si paylaşılabilir:</p>
+            <div className="font-mono text-[10px] text-amber-400 bg-[#070b14] rounded p-2 break-all">
+              tradiaturkey.com/#/mega-projeler/{megaSlugOf(mp)}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
 function MegaPage({ setPage, setSelectedIl }) {
-  const [selected, setSelected] = useState(null);
-  const [filterKat, setFilterKat] = useState('all');
+  const [hashSlug, setHashSlug] = useMegaHashRoute();
+  const [filterGrup, setFilterGrup] = useState('all');
   const [filterDurum, setFilterDurum] = useState('all');
   const [sortBy, setSortBy] = useState('isi');
 
-  const filtered = MEGA_PROJELER
-    .filter(m => filterKat === 'all' || m.kategori === filterKat)
-    .filter(m => filterDurum === 'all' || m.durum === filterDurum)
-    .sort((a, b) => sortBy === 'isi' ? b.isi - a.isi : a.ad.localeCompare(b.ad));
+  // Detay görünümü — key={hashSlug} ile yeni proje açıldığında re-mount (galeri state reset)
+  if (hashSlug) {
+    const mp = MEGA_PROJELER.find(p => megaSlugOf(p) === hashSlug);
+    if (mp) return <MegaProjeDetay key={hashSlug} mp={mp} onBack={() => setHashSlug(null)} />;
+    // Bilinmeyen slug → URL'i temizle, listeye dön
+    if (typeof window !== 'undefined' && window.location.hash.startsWith('#/mega-projeler/')) {
+      window.location.hash = '#/mega-projeler';
+    }
+  }
 
-  const KATEGORI_ICON = { ulaşım:'🚂', enerji:'⚡', sanayi:'🏭', turizm:'★', tarım:'🌾', sağlık:'🏥' };
-  const DURUM_RENK = { tamamlandı: 'green', yapım: 'blue', planlama: 'gold', aktif: 'blue' };
+  const ANA_GRUPLAR = ['Ulaşım','Enerji','Su','Sağlık','Kentsel','Lojistik'];
+  const filtered = MEGA_PROJELER
+    .filter(m => filterGrup === 'all' || megaGrupOf(m) === filterGrup)
+    .filter(m => filterDurum === 'all' || m.durum === filterDurum)
+    .sort((a, b) => {
+      // placeholder olanlar sonda
+      if (!!a.placeholder !== !!b.placeholder) return a.placeholder ? 1 : -1;
+      return sortBy === 'isi' ? (b.isi || 0) - (a.isi || 0) : a.ad.localeCompare(b.ad);
+    });
+
+  // Grup başına proje sayısı
+  const grupSayilari = {};
+  for (const g of ANA_GRUPLAR) grupSayilari[g] = MEGA_PROJELER.filter(m => megaGrupOf(m) === g).length;
 
   return (
     <div className="max-w-7xl mx-auto px-4 py-10">
       <div className="mb-8">
         <Tag color="red">Platform</Tag>
         <h1 className="font-grotesk font-black text-4xl mt-3 mb-2">Mega Projeler</h1>
-        <p className="font-body text-gray-400">Türkiye'nin dönüşüm altyapısı. {MEGA_PROJELER.length} kritik yatırım, toplam $142+ Milyar.</p>
+        <p className="font-body text-gray-400">
+          Tradia'nın izlediği {MEGA_PROJELER.length} mega proje. Türkiye'nin dönüşüm altyapısı, toplam $142+ Milyar yatırım.
+        </p>
       </div>
 
-      {/* Filters */}
-      <div className="flex flex-wrap gap-2 mb-8">
-        <div className="flex gap-1 flex-wrap">
-          {['all','ulaşım','enerji','sanayi','turizm','tarım','sağlık'].map(k => (
-            <button key={k} onClick={() => setFilterKat(k)}
-                    className={`layer-btn ${filterKat === k ? 'active' : ''}`}>
-              {k === 'all' ? 'Tümü' : `${KATEGORI_ICON[k] || ''} ${k}`}
-            </button>
-          ))}
-        </div>
-        <div className="flex gap-1 ml-auto flex-wrap">
-          {['all','aktif','yapım','tamamlandı','planlama'].map(d => (
-            <button key={d} onClick={() => setFilterDurum(d)}
-                    className={`layer-btn ${filterDurum === d ? 'active' : ''}`}>
-              {d === 'all' ? 'Tüm Durum' : d}
-            </button>
-          ))}
-          <button onClick={() => setSortBy(v => v === 'isi' ? 'ad' : 'isi')}
-                  className="layer-btn active">
-            {sortBy === 'isi' ? '↓ Skor' : 'A-Z'}
+      {/* Grup filtre bar */}
+      <div className="flex flex-wrap gap-2 mb-4">
+        <button onClick={() => setFilterGrup('all')}
+                className={'layer-btn ' + (filterGrup === 'all' ? 'active' : '')}>
+          Tümü <span className="font-mono text-[9px] opacity-60 ml-1">{MEGA_PROJELER.length}</span>
+        </button>
+        {ANA_GRUPLAR.map(g => (
+          <button key={g} onClick={() => setFilterGrup(g)}
+                  className={'layer-btn ' + (filterGrup === g ? 'active' : '')}
+                  style={filterGrup === g ? { borderColor: MEGA_GRUP_RENK[g] + '88', color: MEGA_GRUP_RENK[g] } : {}}>
+            <span className="mr-1">{MEGA_GRUP_IKON[g]}</span>{g}
+            <span className="font-mono text-[9px] opacity-60 ml-1">{grupSayilari[g]}</span>
           </button>
-        </div>
+        ))}
       </div>
 
-      {/* Stats bar */}
+      {/* Alt filtre: durum + sort */}
+      <div className="flex flex-wrap gap-1 mb-8">
+        {['all','aktif','yapım','tamamlandı','planlama'].map(d => (
+          <button key={d} onClick={() => setFilterDurum(d)}
+                  className={'layer-btn ' + (filterDurum === d ? 'active' : '')}>
+            {d === 'all' ? 'Tüm Durum' : d}
+          </button>
+        ))}
+        <button onClick={() => setSortBy(v => v === 'isi' ? 'ad' : 'isi')}
+                className="layer-btn active ml-auto">
+          {sortBy === 'isi' ? '↓ Skor' : 'A-Z'}
+        </button>
+      </div>
+
+      {/* Stats şeridi */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
         {[
-          { l:'Aktif', v: MEGA_PROJELER.filter(m=>m.durum==='aktif').length, c:'text-blue-400' },
-          { l:'Yapım', v: MEGA_PROJELER.filter(m=>m.durum==='yapım').length, c:'text-amber-400' },
-          { l:'Planlama', v: MEGA_PROJELER.filter(m=>m.durum==='planlama').length, c:'text-gray-400' },
+          { l:'Aktif',      v: MEGA_PROJELER.filter(m=>m.durum==='aktif').length, c:'text-blue-400' },
+          { l:'Yapım',      v: MEGA_PROJELER.filter(m=>m.durum==='yapım').length, c:'text-amber-400' },
+          { l:'Planlama',   v: MEGA_PROJELER.filter(m=>m.durum==='planlama').length, c:'text-gray-400' },
           { l:'Tamamlandı', v: MEGA_PROJELER.filter(m=>m.durum==='tamamlandı').length, c:'text-emerald-400' },
         ].map(s => (
           <div key={s.l} className="border border-gray-800 bg-[#0d1424] rounded-lg p-4 text-center">
-            <div className={`font-grotesk font-black text-3xl ${s.c}`}>{s.v}</div>
+            <div className={'font-grotesk font-black text-3xl ' + s.c}>{s.v}</div>
             <div className="font-mono text-[10px] text-gray-500 uppercase tracking-widest mt-1">{s.l}</div>
           </div>
         ))}
       </div>
 
-      {/* Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
-        {filtered.map(mp => (
-          <div key={mp.id}
-               onClick={() => setSelected(mp)}
-               className="border border-gray-800 bg-[#0d1424] rounded-xl p-5 card-hover cursor-pointer group">
-            <div className="flex items-start justify-between mb-4">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg flex items-center justify-center text-xl"
-                     style={{ background: mp.renk + '1a', border: `1px solid ${mp.renk}33` }}>
-                  {KATEGORI_ICON[mp.kategori] || '◈'}
-                </div>
-                <div>
-                  <div className="font-mono text-[9px] text-gray-600 uppercase tracking-widest">{mp.kategori}</div>
-                  <Tag color={DURUM_RENK[mp.durum] || 'muted'}>{mp.durum}</Tag>
-                </div>
-              </div>
-              <div className="text-right">
-                <div className="font-mono text-xs font-bold text-amber-400">{mp.yatirim}</div>
-                <HeatBadge isi={mp.isi} />
-              </div>
-            </div>
-
-            <h3 className="font-grotesk font-bold text-lg text-white mb-1 group-hover:text-red-400 transition-colors">
-              {mp.ad}
-            </h3>
-            <div className="font-mono text-xs text-gray-500 mb-3">📍 {mp.il}</div>
-            <p className="font-body text-sm text-gray-400 leading-relaxed mb-4 line-clamp-2">
-              {mp.aciklama}
-            </p>
-
-            {/* Fiyat mini chart */}
-            {mp.fiyat && mp.fiyat.length > 1 && (
-              <div className="border-t border-gray-800 pt-3">
-                <div className="font-mono text-[9px] text-gray-600 uppercase tracking-widest mb-2">Arsa $/m²</div>
-                <div className="flex items-end gap-1 h-8">
-                  {mp.fiyat.map((f, i) => {
-                    const max = Math.max(...mp.fiyat.map(x=>x.fiyat));
-                    const pct = (f.fiyat / max) * 100;
-                    return (
-                      <div key={i} className="flex-1 flex flex-col items-center gap-0.5">
-                        <div className="w-full rounded-sm transition-all"
-                             style={{ height: `${pct}%`, background: mp.renk, opacity: i === mp.fiyat.length-1 ? 1 : 0.4 }} />
-                      </div>
-                    );
-                  })}
-                </div>
-                <div className="flex justify-between mt-1">
-                  <span className="font-mono text-[9px] text-gray-600">{mp.fiyat[0].yil}</span>
-                  <span className="font-mono text-[9px] text-gray-300">${mp.fiyat[mp.fiyat.length-1].fiyat.toLocaleString()}</span>
-                </div>
-              </div>
-            )}
-
-            <div className="mt-3 font-mono text-[10px] uppercase tracking-widest"
-                 style={{ color: mp.renk }}>
-              {mp.verdict}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* Modal */}
-      {selected && (
-        <div className="modal-overlay" onClick={() => setSelected(null)}>
-          <div className="modal-box" onClick={e => e.stopPropagation()}>
-            <button onClick={() => setSelected(null)}
-                    className="float-right font-mono text-sm text-gray-500 hover:text-white">✕</button>
-            <div className="flex items-start gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center text-2xl flex-shrink-0"
-                   style={{ background: selected.renk + '1a', border: `1px solid ${selected.renk}44` }}>
-                {KATEGORI_ICON[selected.kategori] || '◈'}
-              </div>
-              <div>
-                <Tag color={DURUM_RENK[selected.durum] || 'muted'}>{selected.durum}</Tag>
-                <h2 className="font-grotesk font-black text-2xl text-white mt-1">{selected.ad}</h2>
-                <div className="flex items-center gap-3 mt-1">
-                  <span className="font-mono text-xs text-gray-500">📍 {selected.il}</span>
-                  <span className="font-mono text-xs font-bold text-amber-400">{selected.yatirim}</span>
-                  <HeatBadge isi={selected.isi} />
-                </div>
-              </div>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
-              <div>
-                <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-2">Proje Açıklaması</div>
-                <p className="font-body text-sm text-gray-300 leading-relaxed">{selected.aciklama}</p>
-                {selected.ilceler && selected.ilceler.length > 0 && (
-                  <div className="mt-4">
-                    <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-2">Etkilenen İlçeler</div>
-                    <div className="flex flex-wrap gap-2">
-                      {selected.ilceler.map(ilce => (
-                        <span key={ilce} className="font-mono text-xs bg-gray-800 rounded px-2 py-1 text-gray-300">{ilce}</span>
-                      ))}
-                    </div>
-                  </div>
-                )}
-                <div className="mt-4 border border-gray-800 rounded-lg p-3"
-                     style={{ borderLeftColor: selected.renk, borderLeftWidth: 3 }}>
-                  <div className="font-mono text-[9px] text-gray-600 uppercase tracking-widest mb-1">Yatırımcı Kararı</div>
-                  <div className="font-grotesk font-bold text-sm" style={{ color: selected.renk }}>
-                    {selected.verdict}
-                  </div>
-                </div>
-                <div className="mt-3">
-                  <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-1">Beklenen Etki</div>
-                  <div className="font-body text-sm text-emerald-400">{selected.etki}</div>
-                </div>
-              </div>
-              <div>
-                {selected.fiyat && selected.fiyat.length > 1 && (
-                  <>
-                    <div className="font-mono text-[10px] text-gray-600 uppercase tracking-widest mb-3">Arsa Fiyat Geçmişi ($/m²)</div>
-                    <ResponsiveContainer width="100%" height={180}>
-                      <AreaChart data={selected.fiyat}>
-                        <CartesianGrid strokeDasharray="3 3" />
-                        <XAxis dataKey="yil" />
-                        <YAxis />
-                        <RTooltip contentStyle={{ background: '#0d1424', border: '1px solid #374151', borderRadius: 8 }}
-                                  labelStyle={{ color: '#9ca3af', fontSize: 10 }}
-                                  itemStyle={{ color: selected.renk }} />
-                        <defs>
-                          <linearGradient id={`aGrad${selected.id}`} x1="0" y1="0" x2="0" y2="1">
-                            <stop offset="0%" stopColor={selected.renk} stopOpacity={0.3} />
-                            <stop offset="100%" stopColor={selected.renk} stopOpacity={0} />
-                          </linearGradient>
-                        </defs>
-                        <Area type="monotone" dataKey="fiyat" stroke={selected.renk} strokeWidth={2}
-                              fill={`url(#aGrad${selected.id})`} />
-                      </AreaChart>
-                    </ResponsiveContainer>
-                  </>
-                )}
-                <div className="mt-4 grid grid-cols-2 gap-3">
-                  <KPICard label="Isı Skoru" value={`${selected.isi}/10`} />
-                  <KPICard label="Yatırım" value={selected.yatirim} />
-                </div>
-              </div>
-            </div>
-          </div>
+      {/* Kart grid */}
+      {filtered.length === 0 ? (
+        <div className="border border-gray-800 bg-[#0d1424] rounded-xl p-12 text-center">
+          <p className="font-body text-gray-500">Bu filtre kombinasyonunda proje bulunmadı.</p>
+        </div>
+      ) : (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          {filtered.map(mp => (
+            <MegaProjeKart key={mp.id} mp={mp} onClick={() => setHashSlug(megaSlugOf(mp))} />
+          ))}
         </div>
       )}
     </div>
@@ -3935,7 +4136,16 @@ function CookieBanner({ setPage }) {
 /* ===== app.jsx ===== */
 
 function App() {
-  const [page, setPage] = useState('home');
+  const [page, setPageRaw] = useState('home');
+  // setPage wrapper: page değişikliğinde eski mega-projeler/X hash'ini temizle.
+  // (Header'dan listeye dönerken stale detay açılmasını engeller.)
+  // hash atama hashchange event'i tetikler → useMegaHashRoute state'i de senkronize olur.
+  const setPage = useCallback((newPage) => {
+    if (typeof window !== 'undefined' && window.location.hash.startsWith('#/mega-projeler/')) {
+      window.location.hash = newPage === 'mega' ? '#/mega-projeler' : '';
+    }
+    setPageRaw(newPage);
+  }, []);
   const [selectedIl, setSelectedIl] = useState(null);
   const [selectedIlce, setSelectedIlce] = useState(null);
   const [showGlobe, setShowGlobe] = useState(true);
