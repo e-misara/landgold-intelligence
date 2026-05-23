@@ -323,11 +323,22 @@ window.addEventListener('unhandledrejection', function(e) {
 </script>
 <script type="text/babel">
 const { useState, useEffect, useRef, useCallback, useMemo } = React;
-// Recharts guard — CDN yüklenmezse boş obje
-const _RC = (typeof Recharts !== 'undefined') ? Recharts : {};
-const { LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis,
-        Tooltip: RTooltip, ResponsiveContainer, CartesianGrid,
-        PieChart, Pie, Cell } = _RC;
+// Recharts guard — CDN async yüklenebilir, var ile bind et, _renderTradiaApp'te ata
+var LineChart, Line, AreaChart, Area, BarChart, Bar, XAxis, YAxis,
+    RTooltip, ResponsiveContainer, CartesianGrid,
+    PieChart, Pie, Cell;
+function _bindRecharts() {
+  if (typeof Recharts === 'undefined') return false;
+  LineChart = Recharts.LineChart; Line = Recharts.Line;
+  AreaChart = Recharts.AreaChart; Area = Recharts.Area;
+  BarChart  = Recharts.BarChart;  Bar  = Recharts.Bar;
+  XAxis = Recharts.XAxis; YAxis = Recharts.YAxis;
+  RTooltip = Recharts.Tooltip;
+  ResponsiveContainer = Recharts.ResponsiveContainer;
+  CartesianGrid = Recharts.CartesianGrid;
+  PieChart = Recharts.PieChart; Pie = Recharts.Pie; Cell = Recharts.Cell;
+  return typeof AreaChart !== 'undefined';
+}
 
 /* ===== data.jsx ===== */
 
@@ -4218,7 +4229,15 @@ function App() {
   );
 }
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+// Recharts CDN async yüklenebilir — Recharts global hazır olana kadar render'ı geciktir.
+// var binding'ler _bindRecharts() ile atanır → JSX evaluate zamanında doğru component referansları.
+function _renderTradiaApp() {
+  if (!_bindRecharts()) {
+    return setTimeout(_renderTradiaApp, 60);
+  }
+  ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+}
+_renderTradiaApp();
 </script>
 </body>
 </html>
