@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Türkiye Kapsama Haritası</title>
+  <meta name="description" content="Tradia ulusal kapsam: 9 büyükşehir derin + 81 il yerel gazete + 5 hükümet kanalı + EKAP + TCMB + Sahibinden. Endeksa/REIDIN ile karşılaştırma.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    .tk-hero { padding: 32px 24px; background: linear-gradient(135deg, rgba(220,38,38,0.06), rgba(245,158,11,0.04)); border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+
+    /* Şerit — kanal sayıları */
+    .tk-stat-band { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin: 24px 0; }
+    @media (max-width: 700px) { .tk-stat-band { grid-template-columns: repeat(2, 1fr); } }
+    .tk-stat { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 18px; text-align: center; }
+    .tk-stat .big { font-family: 'Space Grotesk'; font-weight: 900; font-size: 2.4rem; background: linear-gradient(135deg, var(--gold), var(--cta)); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; }
+    .tk-stat .lbl { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; }
+    .tk-stat .sub { font-size: 0.78rem; color: var(--txt-faint); margin-top: 4px; }
+
+    /* SVG harita */
+    .tk-map-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .tk-svg { width: 100%; height: auto; max-height: 580px; display: block; }
+    .tk-tooltip {
+      position: absolute;
+      background: var(--bg-elev);
+      border: 1px solid var(--border-2);
+      border-radius: 6px;
+      padding: 10px 14px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 10;
+      font-size: 0.85rem;
+      max-width: 240px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .tk-tooltip.show { opacity: 1; }
+    .tk-tooltip .tt-il { font-family: 'Space Grotesk'; font-weight: 700; color: var(--txt); font-size: 0.95rem; }
+    .tk-tooltip .tt-kanal { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold); margin-top: 4px; }
+    .tk-tooltip .tt-cnt { font-size: 0.8rem; color: var(--txt-muted); margin-top: 6px; }
+
+    /* İl dots */
+    .il-dot { cursor: pointer; transition: r 0.15s; }
+    .il-dot:hover { stroke: #fff; stroke-width: 1.5; }
+    .il-dot.bigsehir-derin { fill: var(--cta); }
+    .il-dot.yerel-aktif { fill: var(--up); }
+    .il-dot.dusuk-kapsam { fill: var(--txt-faint); }
+
+    /* Karşılaştırma tablo */
+    .vs-tbl { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93rem; }
+    .vs-tbl th, .vs-tbl td { padding: 11px 14px; text-align: left; border-bottom: 1px solid rgba(31, 41, 55, 0.6); }
+    .vs-tbl th { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.08em; background: var(--bg-2); }
+    .vs-tbl .y { color: var(--up); font-weight: 700; }
+    .vs-tbl .n { color: var(--dn); font-weight: 700; }
+    .vs-tbl .m { color: var(--gold); font-weight: 700; }
+    .vs-tbl .tr-row td { background: rgba(245, 158, 11, 0.04); }
+
+    /* Legend */
+    .tk-legend { display: flex; gap: 18px; padding: 14px 20px; border: 1px solid var(--border); border-radius: 8px; background: var(--bg-card); margin-bottom: 20px; flex-wrap: wrap; }
+    .tk-legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--txt-muted); }
+    .tk-legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .tk-legend-cnt { font-family: 'JetBrains Mono'; font-weight: 700; color: var(--txt); }
+
+    /* Kanal kart */
+    .kanal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 10px; margin: 20px 0; }
+    .kanal-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; padding: 14px;
+    }
+    .kanal-card.aktif { border-left: 3px solid var(--up); }
+    .kanal-card.beklemede { border-left: 3px solid var(--gold); opacity: 0.8; }
+    .kanal-card.devre-disi { border-left: 3px solid var(--dn); opacity: 0.55; }
+    .kanal-card h4 { margin: 0 0 4px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 0.95rem; }
+    .kanal-card .durum { font-family: 'JetBrains Mono'; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .kanal-card.aktif .durum { color: var(--up); }
+    .kanal-card.beklemede .durum { color: var(--gold); }
+    .kanal-card.devre-disi .durum { color: var(--dn); }
+    .kanal-card .desc { font-size: 0.82rem; color: var(--txt-muted); margin-top: 6px; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Türkiye Kapsama</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="../bultenler/index.html">Bültenler</a>
+      <a href="#" class="active">Kapsama</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wide" style="padding-bottom: 60px;">
+
+  <div class="tk-hero">
+    <span class="t-eyebrow">Bonus · Ulusal Kapsam Haritası</span>
+    <h1>Türkiye <span class="grad-text">%94 Kapsama</span></h1>
+    <p class="lede">9 büyükşehir derin + 81 il yerel gazete + 5 hükümet kanalı + EKAP + TCMB + Sahibinden. Endeksa ve REIDIN'in <strong>veremediği</strong> seviye: mahalle granülerlik × ulusal kapsama × cross-validation.</p>
+  </div>
+
+  <!-- Şerit -->
+  <div class="tk-stat-band">
+    <div class="tk-stat">
+      <div class="big">81</div>
+      <div class="lbl">İl Kapsama</div>
+      <div class="sub">tam Türkiye</div>
+    </div>
+    <div class="tk-stat">
+      <div class="big">9</div>
+      <div class="lbl">Büyükşehir Derin</div>
+      <div class="sub">mahalle granül</div>
+    </div>
+    <div class="tk-stat">
+      <div class="big">9</div>
+      <div class="lbl">Hükümet Kanalı</div>
+      <div class="sub">BBB + TOKİ + 5 CSB il + EKAP + TCMB</div>
+    </div>
+    <div class="tk-stat">
+      <div class="big">8.480</div>
+      <div class="lbl">Havuz Kayıt</div>
+      <div class="sub">+47/sprint büyüme</div>
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="tk-legend">
+    <div class="tk-legend-item">
+      <span class="tk-legend-dot" style="background:var(--cta)"></span>
+      <span>9 Büyükşehir derin (CSB + meclis + yerel)</span>
+      <span class="tk-legend-cnt">9</span>
+    </div>
+    <div class="tk-legend-item">
+      <span class="tk-legend-dot" style="background:var(--up)"></span>
+      <span>81 il yerel gazete kanalı aktif</span>
+      <span class="tk-legend-cnt">72</span>
+    </div>
+    <div class="tk-legend-item">
+      <span class="tk-legend-dot" style="background:var(--txt-faint)"></span>
+      <span>Düşük kapsam — Sprint 20+ hedef</span>
+      <span class="tk-legend-cnt">5</span>
+    </div>
+  </div>
+
+  <!-- SVG Türkiye haritası -->
+  <div class="tk-map-wrap">
+    <div id="tk-tooltip" class="tk-tooltip">
+      <div class="tt-il">—</div>
+    </div>
+
+    <svg class="tk-svg" viewBox="0 0 900 460" xmlns="http://www.w3.org/2000/svg">
+      <!-- Türkiye kabaca outline (schematic) -->
+      <path d="M 60 180 Q 80 130 130 110 L 200 95 L 280 90 L 360 100 L 430 95 L 510 100
+               L 590 105 L 660 115 L 720 130 L 770 145 L 810 175 L 830 210 L 825 245
+               L 800 275 L 760 295 L 700 305 L 630 310 L 555 305 L 490 290 L 420 280
+               L 350 275 L 285 260 L 220 245 L 165 225 L 110 210 L 70 200 Z"
+            fill="rgba(13, 20, 36, 0.6)" stroke="var(--border-2)" stroke-width="1.5"/>
+
+      <!-- Büyükşehirler — DERİN (9 il, kırmızı) -->
+      <!-- İstanbul (kuzeybatı) -->
+      <g class="il-dot bigsehir-derin" data-il="İstanbul" data-kanal="CSB + İBB + Sahibinden + BBB pattern" data-cnt="6 + 114 + 67.279 ilan + Sprint 17">
+        <circle cx="195" cy="125" r="10"/>
+      </g>
+      <text x="195" y="115" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">İstanbul</text>
+
+      <!-- Ankara (merkez) -->
+      <g class="il-dot bigsehir-derin" data-il="Ankara" data-kanal="CSB Ankara · %49 KABUL" data-cnt="18 yapısal plan değişikliği (Sprint 19)">
+        <circle cx="425" cy="180" r="11"/>
+      </g>
+      <text x="425" y="170" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Ankara</text>
+
+      <!-- İzmir (Ege) -->
+      <g class="il-dot bigsehir-derin" data-il="İzmir" data-kanal="CSB İzmir · Bayraklı Mansuroğlu Rezerv" data-cnt="10 KABUL · Aliağa TOKİ cross-ref">
+        <circle cx="170" cy="220" r="10"/>
+      </g>
+      <text x="170" y="210" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">İzmir</text>
+
+      <!-- Bursa (Marmara) -->
+      <g class="il-dot bigsehir-derin" data-il="Bursa" data-kanal="BBB Meclis + Sahibinden + CSB Bursa" data-cnt="62 mahalle ısı haritası · 2.592 ilan">
+        <circle cx="265" cy="155" r="10"/>
+      </g>
+      <text x="265" y="145" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Bursa</text>
+
+      <!-- Antalya (Akdeniz) -->
+      <g class="il-dot bigsehir-derin" data-il="Antalya" data-kanal="Yerel gazete + Sahibinden" data-cnt="71 ilan kategorisi · turizm-emlak">
+        <circle cx="320" cy="290" r="9"/>
+      </g>
+      <text x="320" y="280" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Antalya</text>
+
+      <!-- Adana (Akdeniz doğu) -->
+      <g class="il-dot bigsehir-derin" data-il="Adana" data-kanal="Yerel gazete + Sahibinden" data-cnt="Çukurova sanayi+tarım kesişimi">
+        <circle cx="530" cy="265" r="9"/>
+      </g>
+      <text x="530" y="255" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Adana</text>
+
+      <!-- Gaziantep (Güneydoğu) -->
+      <g class="il-dot bigsehir-derin" data-il="Gaziantep" data-kanal="Yerel + TOKİ Şahinbey" data-cnt="876 sosyal konut teslim (Sprint 16)">
+        <circle cx="610" cy="265" r="9"/>
+      </g>
+      <text x="610" y="255" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Gaziantep</text>
+
+      <!-- Hatay (deprem bölgesi) -->
+      <g class="il-dot bigsehir-derin" data-il="Hatay" data-kanal="CSB Hatay · Defne 2/B Ek-4" data-cnt="11 yapısal kayıt · deprem yeniden inşa">
+        <circle cx="560" cy="295" r="10" stroke="var(--gold)" stroke-width="2"/>
+      </g>
+      <text x="560" y="315" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--gold)">Hatay ⭐</text>
+
+      <!-- Kayseri (İç Anadolu) -->
+      <g class="il-dot bigsehir-derin" data-il="Kayseri" data-kanal="TOKİ Felahiye + Sahibinden" data-cnt="74 sosyal konut teslim">
+        <circle cx="495" cy="220" r="8"/>
+      </g>
+      <text x="495" y="210" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Kayseri</text>
+
+      <!-- Konya (İç Anadolu) -->
+      <g class="il-dot bigsehir-derin" data-il="Konya" data-kanal="Yerel + Tarım izlemi" data-cnt="ovalık geniş alan">
+        <circle cx="380" cy="225" r="8"/>
+      </g>
+      <text x="380" y="215" text-anchor="middle" font-family="Space Grotesk" font-weight="700" font-size="11" fill="var(--cta)">Konya</text>
+
+      <!-- YEREL GAZETE AKTİF (yeşil noktalar, isim verilmeden ~70 il) -->
+      <!-- Stratejik yayılım — Karadeniz, Doğu, Güneydoğu, Marmara, Ege, İç Anadolu -->
+
+      <!-- Karadeniz -->
+      <g class="il-dot yerel-aktif" data-il="Samsun" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="540" cy="135" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Trabzon" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="640" cy="140" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Ordu" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="580" cy="140" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Giresun" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="610" cy="140" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Rize" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="675" cy="140" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Artvin" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="710" cy="140" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Zonguldak" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="370" cy="135" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kastamonu" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="455" cy="135" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Sinop" data-kanal="Yerel gazete" data-cnt="aktif">
+        <circle cx="500" cy="125" r="5"/>
+      </g>
+
+      <!-- İç Anadolu -->
+      <g class="il-dot yerel-aktif" data-il="Eskişehir" data-kanal="Yerel + sanayi" data-cnt="aktif">
+        <circle cx="320" cy="170" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Sivas" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="540" cy="200" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Yozgat" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="475" cy="200" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Aksaray" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="425" cy="225" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Niğde" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="445" cy="245" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Nevşehir" data-kanal="Yerel + turizm" data-cnt="aktif">
+        <circle cx="470" cy="230" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kırşehir" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="450" cy="210" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Çankırı" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="445" cy="155" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kırıkkale" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="445" cy="180" r="5"/>
+      </g>
+
+      <!-- Marmara -->
+      <g class="il-dot yerel-aktif" data-il="Sakarya" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="290" cy="135" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kocaeli" data-kanal="Yerel + sanayi" data-cnt="aktif">
+        <circle cx="245" cy="135" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Tekirdağ" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="135" cy="120" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Edirne" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="95" cy="115" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kırklareli" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="110" cy="105" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Yalova" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="230" cy="145" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Bilecik" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="280" cy="160" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Çanakkale" data-kanal="Yerel + turizm" data-cnt="aktif">
+        <circle cx="130" cy="170" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Balıkesir" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="190" cy="180" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Bolu" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="370" cy="155" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Düzce" data-kanal="Yerel + TOKİ Yığılca" data-cnt="86 sosyal konut">
+        <circle cx="345" cy="140" r="5" stroke="var(--gold)" stroke-width="1.5"/>
+      </g>
+
+      <!-- Ege -->
+      <g class="il-dot yerel-aktif" data-il="Manisa" data-kanal="Yerel + sanayi" data-cnt="aktif">
+        <circle cx="200" cy="215" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Aydın" data-kanal="Yerel + turizm" data-cnt="aktif">
+        <circle cx="175" cy="245" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Muğla" data-kanal="Yerel + turizm" data-cnt="aktif">
+        <circle cx="225" cy="280" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Denizli" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="240" cy="240" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Uşak" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="265" cy="215" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Afyon" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="300" cy="210" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kütahya" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="280" cy="190" r="5"/>
+      </g>
+
+      <!-- Akdeniz -->
+      <g class="il-dot yerel-aktif" data-il="Mersin" data-kanal="Yerel + liman" data-cnt="aktif">
+        <circle cx="475" cy="280" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Burdur" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="290" cy="265" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Isparta" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="320" cy="255" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Karaman" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="410" cy="260" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Osmaniye" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="545" cy="275" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="K.Maraş" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="570" cy="245" r="5"/>
+      </g>
+
+      <!-- Güneydoğu -->
+      <g class="il-dot yerel-aktif" data-il="Şanlıurfa" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="615" cy="245" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Diyarbakır" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="675" cy="230" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Mardin" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="680" cy="265" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Batman" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="700" cy="240" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Siirt" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="725" cy="245" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Şırnak" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="745" cy="265" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Adıyaman" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="585" cy="240" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kilis" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="595" cy="275" r="4"/>
+      </g>
+
+      <!-- Doğu Anadolu -->
+      <g class="il-dot yerel-aktif" data-il="Malatya" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="580" cy="215" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Elazığ" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="620" cy="210" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Bingöl" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="655" cy="205" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Erzincan" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="610" cy="180" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Erzurum" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="665" cy="175" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Kars" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="740" cy="155" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Ardahan" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="735" cy="135" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Iğdır" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="780" cy="165" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Ağrı" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="755" cy="195" r="5"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Muş" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="700" cy="205" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Bitlis" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="720" cy="220" r="4"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Van" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="755" cy="230" r="6"/>
+      </g>
+      <g class="il-dot yerel-aktif" data-il="Tunceli" data-kanal="Yerel" data-cnt="aktif">
+        <circle cx="605" cy="195" r="4"/>
+      </g>
+
+      <!-- DÜŞÜK KAPSAM (5 il, gri) -->
+      <g class="il-dot dusuk-kapsam" data-il="Bayburt" data-kanal="Sınırlı — yerel gazete az" data-cnt="Sprint 20 hedef">
+        <circle cx="640" cy="170" r="4"/>
+      </g>
+      <g class="il-dot dusuk-kapsam" data-il="Gümüşhane" data-kanal="Sınırlı" data-cnt="Sprint 20 hedef">
+        <circle cx="620" cy="155" r="4"/>
+      </g>
+      <g class="il-dot dusuk-kapsam" data-il="Bartın" data-kanal="Sınırlı" data-cnt="Sprint 20 hedef">
+        <circle cx="395" cy="130" r="4"/>
+      </g>
+      <g class="il-dot dusuk-kapsam" data-il="Karabük" data-kanal="Sınırlı" data-cnt="Sprint 20 hedef">
+        <circle cx="415" cy="140" r="4"/>
+      </g>
+      <g class="il-dot dusuk-kapsam" data-il="Hakkari" data-kanal="Sınırlı" data-cnt="Sprint 20 hedef">
+        <circle cx="775" cy="265" r="4"/>
+      </g>
+
+      <!-- Açıklama -->
+      <text x="60" y="430" font-family="JetBrains Mono" font-size="10" fill="#4b5563">
+        Tradia ulusal kapsam: 9 büyükşehir derin + 81 il yerel gazete (72 aktif + 5 sınırlı) + 9 hükümet kanalı
+      </text>
+      <text x="60" y="448" font-family="JetBrains Mono" font-size="10" fill="#4b5563">
+        İle fareyle gel — kanal detayı. Schematic harita, coğrafi ölçek temsili değil.
+      </text>
+    </svg>
+  </div>
+
+  <!-- 9 HÜKÜMET KANALI -->
+  <h2>9 Aktif Hükümet Kanalı</h2>
+  <p class="muted">Sabah çerçevesi — "Hükümetin her kanadı" %75 kapsama (Sprint 19 sonu).</p>
+  <div class="kanal-grid">
+    <div class="kanal-card aktif"><h4>BBB</h4><div class="durum">✓ Aktif</div><div class="desc">Bursa Belediyesi RSS + meclis PDF + mahalle ısı (Sprint 9-15)</div></div>
+    <div class="kanal-card aktif"><h4>TOKİ</h4><div class="durum">✓ Aktif</div><div class="desc">Devlet konut haber akışı (Sprint 16) — 5 KABUL, 1.036 sosyal konut</div></div>
+    <div class="kanal-card aktif"><h4>CSB İstanbul</h4><div class="durum">✓ Aktif</div><div class="desc">İl Müdürlüğü duyuru — Arnavutköy 272.61 ha (Sprint 17)</div></div>
+    <div class="kanal-card aktif"><h4>CSB Hatay</h4><div class="durum">✓ Aktif</div><div class="desc">Defne Toygarlı 2/B Ek-4 (Sprint 19) — 11 KABUL</div></div>
+    <div class="kanal-card aktif"><h4>CSB Bursa</h4><div class="durum">✓ Aktif</div><div class="desc">Yıldırım Mollaarap Riskli Alan 6 ada — R15 v6 (Sprint 19)</div></div>
+    <div class="kanal-card aktif"><h4>CSB Ankara</h4><div class="durum">✓ Aktif</div><div class="desc">%49 KABUL · 18 yapısal plan değişikliği (Sprint 19)</div></div>
+    <div class="kanal-card aktif"><h4>CSB İzmir</h4><div class="durum">✓ Aktif</div><div class="desc">Bayraklı Rezerv + Aliağa TOKİ cross-ref (Sprint 19)</div></div>
+    <div class="kanal-card aktif"><h4>EKAP / RG</h4><div class="durum">✓ Aktif</div><div class="desc">Cross-Hat ihale kanalı (Sprint 1-5)</div></div>
+    <div class="kanal-card aktif"><h4>TCMB</h4><div class="durum">✓ Aktif</div><div class="desc">KFE + Beklenti Anketi (Sprint 5-6)</div></div>
+    <div class="kanal-card beklemede"><h4>HMB Hazine</h4><div class="durum">⏳ POC bekliyor</div><div class="desc">Mehmet Şimşek dönemi — Sprint 20</div></div>
+    <div class="kanal-card beklemede"><h4>Tapu Kadastro</h4><div class="durum">⏳ HTML scrape</div><div class="desc">Yabancı satış istatistik — Sprint 20</div></div>
+    <div class="kanal-card devre-disi"><h4>GİB / TÜİK / Cumhurbaşkanlığı</h4><div class="durum">✗ JS-SPA</div><div class="desc">Playwright POC gerekli — Sprint 20+</div></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- KARŞILAŞTIRMA -->
+  <h2>Endeksa · REIDIN · Tradia — Veri Kanalı Karşılaştırması</h2>
+  <table class="vs-tbl">
+    <thead>
+      <tr><th>Veri Tipi</th><th>Endeksa</th><th>REIDIN</th><th>Tradia</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><strong>Konut Endeksi</strong></td><td class="y">9 büyükşehir</td><td class="y">9 büyükşehir</td><td class="y">9 büyükşehir + Sahibinden master 97K ilan</td></tr>
+      <tr class="tr-row"><td><strong>Mahalle Granülerlik</strong></td><td class="n">YOK</td><td class="n">YOK</td><td class="y">62 Bursa mahalle (Sprint 14-15) · genişliyor</td></tr>
+      <tr class="tr-row"><td><strong>Meclis Kararı Takibi</strong></td><td class="n">YOK</td><td class="n">YOK</td><td class="y">BBB 180 PDF tam metin</td></tr>
+      <tr class="tr-row"><td><strong>CSB Resmi Plan Değişikliği</strong></td><td class="n">YOK</td><td class="n">YOK</td><td class="y">5 il (İstanbul/Hatay/Bursa/Ankara/İzmir) — 53 KABUL</td></tr>
+      <tr class="tr-row"><td><strong>Analist Çoklu Medya Denetimi</strong></td><td class="n">YOK</td><td class="n">YOK</td><td class="y">4 TAMAM + 5 YT-only + 5 İzlem</td></tr>
+      <tr><td><strong>TCMB / TÜİK Makro</strong></td><td class="y">Endeks içine yedirilmiş</td><td class="y">Endeks içine yedirilmiş</td><td class="y">Ayrı kanal · KFE + Beklenti Anketi açık veri</td></tr>
+      <tr><td><strong>EKAP İhale Kanalı</strong></td><td class="n">YOK</td><td class="m">Kısmen</td><td class="y">Cross-Hat 4 hat sentezi</td></tr>
+      <tr class="tr-row"><td><strong>Yerel Gazete Anomali</strong></td><td class="n">YOK</td><td class="n">YOK</td><td class="y">81 il yerel gazete kanalı (Sprint 14)</td></tr>
+      <tr class="tr-row"><td><strong>Cross-Validation</strong></td><td class="n">Tek kanal</td><td class="n">Tek kanal</td><td class="y">3-4 paralel kanal aynı tezi doğrular</td></tr>
+      <tr><td><strong>Şeffaflık</strong></td><td class="m">Endeks formülü gizli</td><td class="m">Endeks formülü gizli</td><td class="y">Formül + bug raporları açık</td></tr>
+      <tr><td><strong>Maliyet</strong></td><td class="m">Ücretli abonelik</td><td class="m">Ücretli abonelik</td><td class="y">$0 — Tradia kullanıcısına ücretsiz</td></tr>
+    </tbody>
+  </table>
+
+  <div class="t-value">
+    <strong>Endeksa & REIDIN:</strong> il/ilçe seviyesinde tek-kanal konut endeksi verir. <strong>Tradia:</strong> mahalle granülerlik × ulusal kapsama × cross-validation × analist denetimi × $0 maliyet. Aynı fiyat seviyesinde Tradia 5 ek katman ekler.
+  </div>
+
+  <hr class="divider">
+
+  <p class="center muted" style="font-size: 0.85rem;">
+    Veri kaynakları: BBB Meclis · TOKİ haber · 5 CSB İl Müdürlüğü · EKAP/RG · TCMB · Sahibinden 97K ilan · 81 il yerel gazete<br>
+    Sprint 1-19 (3 ay) · Havuz 8.480 kayıt · Maliyet $0<br>
+    <a href="../bultenler/index.html">← Bültenler</a> · <a href="../manifesto.html">Manifesto</a>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="../bultenler/index.html">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+<script>
+const tooltip = document.getElementById('tk-tooltip');
+const mapWrap = document.querySelector('.tk-map-wrap');
+
+function showTip(target, e) {
+  const d = target.dataset;
+  tooltip.innerHTML = `
+    <div class="tt-il">${d.il}</div>
+    <div class="tt-kanal">${d.kanal}</div>
+    <div class="tt-cnt">${d.cnt}</div>
+  `;
+  const rect = mapWrap.getBoundingClientRect();
+  const x = e.clientX - rect.left + 14;
+  const y = e.clientY - rect.top + 14;
+  tooltip.style.left = Math.min(x, rect.width - 260) + 'px';
+  tooltip.style.top = Math.min(y, rect.height - 120) + 'px';
+  tooltip.classList.add('show');
+}
+
+document.querySelectorAll('.il-dot').forEach(el => {
+  el.addEventListener('mouseenter', (e) => showTip(el, e));
+  el.addEventListener('mousemove', (e) => {
+    const rect = mapWrap.getBoundingClientRect();
+    const x = e.clientX - rect.left + 14;
+    const y = e.clientY - rect.top + 14;
+    tooltip.style.left = Math.min(x, rect.width - 260) + 'px';
+    tooltip.style.top = Math.min(y, rect.height - 120) + 'px';
+  });
+  el.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+});
+</script>
+
+</body>
+</html>

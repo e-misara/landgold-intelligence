@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Analist Skor Paneli</title>
+  <meta name="description" content="Tradia abone paneli — analist tutarlılık skorları. Reusable komponent.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    /* Komponent-spesifik genişletmeler */
+    .ap-hero { padding: 32px 24px; background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(245,158,11,0.04)); border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+    .ap-grid { display: grid; grid-template-columns: 1fr 320px; gap: 24px; }
+    @media (max-width: 900px) { .ap-grid { grid-template-columns: 1fr; } }
+
+    /* Hover detay (sapma vakaları) */
+    .ap-row { position: relative; cursor: pointer; }
+    .ap-row .ap-detail {
+      position: absolute; left: 0; right: 0; top: 100%;
+      background: var(--bg-elev); border: 1px solid var(--border-2);
+      border-radius: 6px; padding: 14px 18px; margin-top: 4px;
+      font-family: 'Inter'; font-size: 0.85rem; color: var(--txt-muted);
+      display: none; z-index: 5;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+    }
+    .ap-row.expanded .ap-detail { display: block; }
+    .ap-row .ap-detail strong { color: var(--gold); font-family: 'JetBrains Mono'; font-size: 11px; }
+    .ap-row .ap-detail ul { list-style: none; padding-left: 0; }
+    .ap-row .ap-detail li { padding: 3px 0; }
+    .ap-row .ap-detail li::before { content: "▸ "; color: var(--gold); }
+    .ap-row .ap-detail .close-hint { display: block; margin-top: 8px; font-family: 'JetBrains Mono'; font-size: 9px; color: var(--txt-faint); text-align: right; }
+
+    /* Filtre + sıralama */
+    .ap-filter { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 20px; border-bottom: 1px solid var(--border); }
+    .ap-filter button {
+      background: var(--bg-2); border: 1px solid var(--border); color: var(--txt-muted);
+      padding: 6px 12px; border-radius: 4px; font-family: 'JetBrains Mono'; font-size: 10px;
+      text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: all 0.15s;
+    }
+    .ap-filter button:hover { color: var(--txt); border-color: var(--border-2); }
+    .ap-filter button.active { background: var(--cta); color: #fff; border-color: var(--cta); }
+
+    /* Side info */
+    .ap-side { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; }
+    .ap-side h4 { font-family: 'Space Grotesk'; font-weight: 700; color: var(--txt); margin: 0 0 8px; }
+    .ap-side p { font-size: 0.88rem; color: var(--txt-muted); }
+    .ap-stat-line { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid var(--border); font-size: 0.85rem; }
+    .ap-stat-line:last-child { border-bottom: none; }
+    .ap-stat-line .lbl { color: var(--txt-muted); font-family: 'JetBrains Mono'; font-size: 11px; }
+    .ap-stat-line .val { color: var(--txt); font-weight: 700; }
+
+    .ap-cta { background: var(--cta); color: #fff; padding: 12px 18px; border-radius: 6px; text-align: center; font-family: 'Space Grotesk'; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px; display: block; margin-top: 16px; transition: background 0.15s; }
+    .ap-cta:hover { background: #b91c1c; color: #fff; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Komponent — Analist Paneli</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="../bultenler/index.html">Bültenler</a>
+      <a href="#" class="active">Analist Panel</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wide">
+
+  <div class="ap-hero">
+    <span class="t-eyebrow">Abone Paneli · Mockup</span>
+    <h1>Analist Tutarlılık Paneli</h1>
+    <p class="lede">Tradia abonesi için: 4 TAMAM analistin canlı skoru, panel yorumcuları, izlenemez listesi. Sapma vakaları için satıra tıklayın.</p>
+  </div>
+
+  <div class="t-wide" style="padding-bottom: 60px;">
+  <div class="ap-grid">
+
+    <!-- Sol: panel -->
+    <div class="t-panel">
+      <div class="t-panel-head">
+        <span class="t-panel-title">Çoklu Medya Analist Skoru</span>
+        <span class="t-panel-meta">14 isim · 6 profil · Haziran 2026</span>
+      </div>
+
+      <!-- Filtre -->
+      <div class="ap-filter">
+        <button class="active" data-filter="all">Tümü</button>
+        <button data-filter="tamam">TAMAM (4)</button>
+        <button data-filter="yt">YT-only (5)</button>
+        <button data-filter="kisitli">Kısıtlı (1)</button>
+        <button data-filter="izlenemez">İzlenemez (4)</button>
+      </div>
+
+      <!-- Mahfi -->
+      <div class="t-row ap-row" data-cat="tamam" onclick="toggleRow(this)">
+        <span class="dot anchor"></span>
+        <span class="lbl">Anchor</span>
+        <span class="name">Mahfi Eğilmez</span>
+        <div class="bar"><div class="bar-fill" style="width:67%"></div></div>
+        <span class="score">67/100</span>
+        <div class="ap-detail">
+          <strong>Sapma vakaları:</strong>
+          <ul>
+            <li>USD/TRY tahmini <strong>45-54 TL</strong> → TCMB konsensüs 54.69 ile tam uyum</li>
+            <li>2023 cari açık <strong>45M$</strong> → TÜİK 45.4M (sapma %1)</li>
+            <li>CDS düşüş gözlemi → gerçekle uyumlu</li>
+          </ul>
+          <span class="close-hint">Detay sayfası: <a href="../bultenler/sayi-1-v2-analist-denetimi.html#mahfi">bülten</a></span>
+        </div>
+      </div>
+
+      <!-- Kerem -->
+      <div class="t-row ap-row" data-cat="tamam" onclick="toggleRow(this)">
+        <span class="dot global"></span>
+        <span class="lbl">Global</span>
+        <span class="name">Kerem Alkin <span class="star">⭐</span></span>
+        <div class="bar"><div class="bar-fill" style="width:67%"></div></div>
+        <span class="score">67/100</span>
+        <div class="ap-detail">
+          <strong>Sapma vakaları:</strong>
+          <ul>
+            <li>Sabah'ta jeopolitik, YouTube'da Türkiye makro — paralel temalar</li>
+            <li>Konu eşleşmesi <strong>0.62</strong> — havuzdaki EN YÜKSEK Jaccard</li>
+            <li>5 son manşet: Şi-Trump, Yalta, Tukidides, Türkiye sanayi, İst. Enerji</li>
+          </ul>
+          <span class="close-hint">Detay: <a href="../bultenler/sayi-1-v2-analist-denetimi.html#kerem">bülten</a></span>
+        </div>
+      </div>
+
+      <!-- Atilla -->
+      <div class="t-row ap-row" data-cat="tamam" onclick="toggleRow(this)">
+        <span class="dot outlier"></span>
+        <span class="lbl">Outlier</span>
+        <span class="name">Atilla Yeşilada</span>
+        <div class="bar"><div class="bar-fill" style="width:46%;background:linear-gradient(90deg,var(--gold),var(--cta));"></div></div>
+        <span class="score">46/100</span>
+        <div class="ap-detail">
+          <strong>Uç tahminler (konsensüs sapması):</strong>
+          <ul>
+            <li>USD/TRY <strong>250 TL</strong> → konsensüs 54.69 (5× uzak)</li>
+            <li>Politika faizi <strong>%63</strong> → konsensüs %37 (+21 puan)</li>
+            <li>Petrol <strong>$150-200</strong> (savaş senaryosu)</li>
+          </ul>
+          <span class="close-hint">Detay: <a href="../bultenler/sayi-1-v2-analist-denetimi.html#atilla">bülten</a></span>
+        </div>
+      </div>
+
+      <!-- Murat -->
+      <div class="t-row ap-row" data-cat="tamam" onclick="toggleRow(this)">
+        <span class="dot ytonly"></span>
+        <span class="lbl">YT-only</span>
+        <span class="name">Murat Muratoğlu</span>
+        <div class="bar"><div class="bar-fill" style="width:24%;background:var(--gold);"></div></div>
+        <span class="score">24/100</span>
+        <div class="ap-detail">
+          <strong>Erişim sorunu:</strong>
+          <ul>
+            <li>Sözcü köşesi JS-rendered, scraping yok</li>
+            <li>Kendi kanalı: 205 video (en üretkenler)</li>
+            <li>Skor yanıltıcı — sadece 12 eski yazı + 1 konuk geçişiyle hesaplanmış</li>
+          </ul>
+          <span class="close-hint">Sprint 30+'da Sözcü manual link toplama planlı</span>
+        </div>
+      </div>
+
+      <!-- YT-only panel (5 isim) -->
+      <div class="t-row ap-row" data-cat="yt" onclick="toggleRow(this)">
+        <span class="dot ytonly"></span>
+        <span class="lbl">YT-only</span>
+        <span class="name">Barış Soydan</span>
+        <div></div>
+        <span class="score score-none">216 video</span>
+        <div class="ap-detail">
+          <strong>Profil:</strong> BIST + emtia. CEO/CFO konukları sık.
+          <ul>
+            <li>2025-05 → 2026-05 yoğun haftalık</li>
+            <li>Top konu: borsa (28), enflasyon (26), altın (19)</li>
+          </ul>
+          <span class="close-hint">Tradia: borsa + altın hareket takibi</span>
+        </div>
+      </div>
+
+      <div class="t-row ap-row" data-cat="yt" onclick="toggleRow(this)">
+        <span class="dot ytonly"></span>
+        <span class="lbl">YT-only</span>
+        <span class="name">Emre Alkin</span>
+        <div></div>
+        <span class="score score-none">154 video</span>
+        <div class="ap-detail">
+          <strong>Profil:</strong> Akademisyen, Kerem'in kardeşi. 3 yıl düzenli üretim.
+          <ul>
+            <li>enflasyon (22), döviz kuru (6), cari açık (4)</li>
+            <li>Yazılı kaynak araştırılırsa <strong>5. TAMAM olabilir</strong></li>
+          </ul>
+          <span class="close-hint">Sprint 30+: Hürriyet/Sabah RSS denenir</span>
+        </div>
+      </div>
+
+      <div class="t-row ap-row" data-cat="yt" onclick="toggleRow(this)">
+        <span class="dot ytonly"></span>
+        <span class="lbl">YT-only</span>
+        <span class="name">Özlem Gürses</span>
+        <div></div>
+        <span class="score score-none">57 video</span>
+        <div class="ap-detail">
+          <strong>Profil:</strong> Enerji + jeopolitik (Atilla ile örtüşme).
+          <ul>
+            <li>Hürmüz Boğazı, doğalgaz, petrol, enerji</li>
+            <li>Top konu: enflasyon (19), petrol (5), doğalgaz (5)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-row ap-row" data-cat="yt" onclick="toggleRow(this)">
+        <span class="dot ytonly"></span>
+        <span class="lbl">YT-only</span>
+        <span class="name">Cüneyt Özdemir</span>
+        <div></div>
+        <span class="score score-none">41 video</span>
+        <div class="ap-detail">
+          <strong>Profil:</strong> Gazeteci-yorumcu, çeşitli konuk.
+          <ul>
+            <li>5G (3), telekomünikasyon (3), ihracat (3), Golden Visa (2)</li>
+            <li>Golden Visa → gayrimenkul-vatandaşlık kesişimi</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="t-row ap-row" data-cat="yt" onclick="toggleRow(this)">
+        <span class="dot ytonly"></span>
+        <span class="lbl">YT-only</span>
+        <span class="name">Selçuk Geçer</span>
+        <div></div>
+        <span class="score score-none">26 video</span>
+        <div class="ap-detail">
+          <strong>Profil:</strong> Bağımsız yorumcu.
+          <ul>
+            <li>Tradia havuzunda alakali kayıt az (1 video)</li>
+            <li>Düşük öncelik, gelecekte yeniden değerlendirme</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Hakan KISITLI -->
+      <div class="t-row ap-row" data-cat="kisitli" onclick="toggleRow(this)">
+        <span class="dot kisitli"></span>
+        <span class="lbl">Kısıtlı</span>
+        <span class="name">Hakan Kara</span>
+        <div></div>
+        <span class="score score-none">YT-only (17)</span>
+        <div class="ap-detail">
+          <strong>Profil:</strong> Eski TCMB Başekonomist, Bilkent akademisyeni.
+          <ul>
+            <li>YouTube konuk olarak <strong>artan trend</strong>: 2023→2 / 2024→5 / 2025→24 / 2026→26</li>
+            <li>Yazılı tarafta RSS yok (akademik dergi)</li>
+            <li>Ayrı tutarlılık skoru hesaplanamıyor</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- İzlenemez -->
+      <div class="t-row ap-row" data-cat="izlenemez" onclick="toggleRow(this)">
+        <span class="dot izlenemez"></span>
+        <span class="lbl">İzlenemez</span>
+        <span class="name">4 isim — pasif liste</span>
+        <div></div>
+        <span class="score score-none">—</span>
+        <div class="ap-detail">
+          <strong>İzlenemez analistler:</strong>
+          <ul>
+            <li><strong>Şant Manukyan</strong> — blog Nisan 2024'te durdu</li>
+            <li><strong>Cüneyt Başaran</strong> — Habertürk TV, yazılı yok</li>
+            <li><strong>Refik Erduran</strong> — eski köşe yazarı (1965-84)</li>
+            <li><strong>Servet Yıldırım</strong> — Ekonomi Gazetesi (Sprint 30 yeniden dene)</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Sağ: özet + CTA -->
+    <aside>
+      <div class="ap-side">
+        <h4>Sayı 1 İstatistikleri</h4>
+        <div class="ap-stat-line"><span class="lbl">TAMAM analist</span><span class="val" style="color:var(--up)">4</span></div>
+        <div class="ap-stat-line"><span class="lbl">YT-only panel</span><span class="val" style="color:var(--gold)">5</span></div>
+        <div class="ap-stat-line"><span class="lbl">Kısıtlı</span><span class="val" style="color:#facc15">1</span></div>
+        <div class="ap-stat-line"><span class="lbl">İzlenemez</span><span class="val" style="color:var(--dn)">4</span></div>
+        <div class="ap-stat-line"><span class="lbl">Toplam</span><span class="val">14</span></div>
+        <div class="ap-stat-line"><span class="lbl">YouTube havuzu</span><span class="val">3.001 video</span></div>
+        <div class="ap-stat-line"><span class="lbl">Maliyet</span><span class="val" style="color:var(--up)">$0</span></div>
+
+        <h4 style="margin-top:20px">Profil Tipleri</h4>
+        <div style="display: flex; flex-wrap: wrap; gap: 4px; font-family:'JetBrains Mono'; font-size:10px;">
+          <span class="t-tag anchor">Anchor</span>
+          <span class="t-tag global">Global</span>
+          <span class="t-tag outlier">Outlier</span>
+          <span class="t-tag ytonly">YT-only</span>
+        </div>
+
+        <a href="../bultenler/sayi-1-v2-analist-denetimi.html" class="ap-cta">Tam Bültene Git →</a>
+        <p class="faint mono" style="font-size:10px; margin-top:8px; text-align:center;">Pro üyelik gelince eklenir: hover detay, e-posta uyarı, sapma alarmı.</p>
+      </div>
+
+      <div class="ap-side" style="margin-top: 16px;">
+        <h4>Metodoloji (kısa)</h4>
+        <p class="mono" style="font-size:11px; background:var(--bg-2); padding:8px; border-radius:4px; color:var(--gold); margin: 8px 0;">
+          Skor = (konu × 0.4 + rakam × 0.4 + doğrulama × 0.2) × 100
+        </p>
+        <p>Her ortak ay için <strong>Jaccard benzerliği</strong>, tam metin oranı, TCMB+TÜİK doğrulaması.</p>
+      </div>
+    </aside>
+
+  </div>
+  </div>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Çoklu Medya Denetimi · Bağımsız · Otomatik · Kanıtlı · Şeffaf</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="../bultenler/index.html">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+<script>
+function toggleRow(row) {
+  document.querySelectorAll('.ap-row.expanded').forEach(r => {
+    if (r !== row) r.classList.remove('expanded');
+  });
+  row.classList.toggle('expanded');
+}
+
+// Filtre
+document.querySelectorAll('.ap-filter button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.ap-filter button').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.getAttribute('data-filter');
+    document.querySelectorAll('.ap-row').forEach(r => {
+      r.style.display = (f === 'all' || r.getAttribute('data-cat') === f) ? '' : 'none';
+    });
+  });
+});
+</script>
+
+</body>
+</html>

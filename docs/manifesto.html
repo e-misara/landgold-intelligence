@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Manifesto</title>
+  <meta name="description" content="Tradia Çoklu Medya Analist Denetimi — Türk medyasında bir ilk. Veri kalitesi > veri hacmi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bultenler/_tradia_tema.css">
+  <style>
+    .mf-hero {
+      padding: 80px 24px 60px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(220, 38, 38, 0.10) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 50% 80%, rgba(245, 158, 11, 0.06) 0%, transparent 70%),
+        var(--bg);
+    }
+    .mf-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.5rem; }
+    .mf-hero .lede { font-size: 1.2rem; color: var(--txt-muted); max-width: 700px; margin: 0 auto; line-height: 1.7; }
+    .mf-quote {
+      max-width: 760px; margin: 32px auto;
+      padding: 28px;
+      border-left: 3px solid var(--cta);
+      background: linear-gradient(90deg, rgba(220, 38, 38, 0.06), transparent 60%);
+      border-radius: 0 4px 4px 0;
+      text-align: left;
+    }
+    .mf-quote p { font-family: 'Space Grotesk'; font-weight: 500; font-size: 1.25rem; line-height: 1.6; color: var(--txt); font-style: italic; }
+    .mf-quote .by { display: block; margin-top: 14px; font-family: 'JetBrains Mono'; font-size: 11px; color: var(--gold); font-style: normal; text-transform: uppercase; letter-spacing: 0.1em; }
+
+    .mf-numbers {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+      max-width: 900px;
+      margin: 48px auto;
+      padding: 0 24px;
+    }
+    @media (max-width: 700px) { .mf-numbers { grid-template-columns: repeat(2, 1fr); } }
+    .mf-num {
+      text-align: center;
+      padding: 22px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+    .mf-num .big {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 2.4rem;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+      line-height: 1;
+    }
+    .mf-num .lbl { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 8px; }
+
+    .mf-prensip {
+      max-width: 800px; margin: 48px auto;
+      padding: 0 24px;
+    }
+    .mf-prensip-card {
+      display: grid; grid-template-columns: 50px 1fr; gap: 16px;
+      padding: 18px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border-radius: 8px;
+      margin-bottom: 12px;
+    }
+    .mf-prensip-num {
+      font-family: 'Space Grotesk'; font-weight: 900; font-size: 2rem;
+      color: var(--gold); text-align: center;
+    }
+    .mf-prensip-card h3 { margin: 0 0 4px; font-size: 1.1rem; }
+    .mf-prensip-card p { font-size: 0.92rem; color: var(--txt-muted); margin: 0; }
+
+    .mf-vs {
+      max-width: 800px; margin: 48px auto;
+      padding: 0 24px;
+    }
+    .mf-vs-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    @media (max-width: 700px) { .mf-vs-grid { grid-template-columns: 1fr; } }
+    .mf-vs-col { padding: 20px; }
+    .mf-vs-col.bad { border-right: 1px solid var(--border); }
+    @media (max-width: 700px) { .mf-vs-col.bad { border-right: none; border-bottom: 1px solid var(--border); } }
+    .mf-vs-col h4 { font-family: 'JetBrains Mono'; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; margin: 0 0 12px; }
+    .mf-vs-col.bad h4 { color: var(--dn); }
+    .mf-vs-col.good h4 { color: var(--up); }
+    .mf-vs-col ul { list-style: none; padding-left: 0; }
+    .mf-vs-col li { padding: 6px 0; font-size: 0.9rem; color: var(--txt-muted); }
+    .mf-vs-col.bad li::before { content: "× "; color: var(--dn); font-weight: 700; }
+    .mf-vs-col.good li::before { content: "✓ "; color: var(--up); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Manifesto</span>
+    </div>
+    <nav class="t-nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="bultenler/index.html">Bültenler</a>
+      <a href="komponentler/analist_skor_panel.html">Analist Panel</a>
+      <a href="#" class="active">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="mf-hero">
+    <span class="t-eyebrow">Manifesto · Haziran 2026</span>
+    <h1><span class="grad-text">Veri kalitesi</span> &gt; veri hacmi</h1>
+    <p class="lede">Tradia, Türkiye yatırım istihbaratı için yeni bir standart kuruyor. Şeffaf, otomatik, bağımsız. Analist tutarlılığını kanıtlı şekilde ölçmek — Türk medyasında bir ilk.</p>
+
+    <div class="mf-quote">
+      <p>"Aynı analistin video ve yazılarındaki tutarlılığı, kanıtlı ve otomatik ölçer. Bir analist bir hafta TL'nin yükseleceğini söyleyip ertesi hafta düşeceğini söylediğinde — Tradia bunu Jaccard benzerliği ile gösterir. Yatırımcı her analiste güvenmek zorunda değil; tutarlı olanı seçmek için verisi var."</p>
+      <span class="by">Tradia Çoklu Medya Analist Denetimi</span>
+    </div>
+  </section>
+
+  <!-- 5 SAYI -->
+  <div class="mf-numbers">
+    <div class="mf-num"><div class="big">4</div><div class="lbl">TAMAM analist</div></div>
+    <div class="mf-num"><div class="big">6</div><div class="lbl">Profil tipi</div></div>
+    <div class="mf-num"><div class="big">14</div><div class="lbl">İsim incelendi</div></div>
+    <div class="mf-num"><div class="big">%0</div><div class="lbl">Maliyet</div></div>
+    <div class="mf-num"><div class="big">%100</div><div class="lbl">Dürüstlük</div></div>
+  </div>
+
+  <!-- 5 PRENSİP -->
+  <div class="mf-prensip">
+    <h2 class="center">5 Prensip</h2>
+
+    <div class="mf-prensip-card">
+      <div class="mf-prensip-num">1</div>
+      <div>
+        <h3>Şeffaflık</h3>
+        <p>Her skor değişkeni dosyalanmış. Manipülasyon değil ölçüm — formül, veri kaynağı, eşik değerler tüm bültende açık.</p>
+      </div>
+    </div>
+
+    <div class="mf-prensip-card">
+      <div class="mf-prensip-num">2</div>
+      <div>
+        <h3>Otomatik İzlem</h3>
+        <p>3.001 YouTube transkripti + Atom RSS + Cloudscraper + HTML scrape. Manuel yorum yok; algoritmik tutarlılık ölçümü.</p>
+      </div>
+    </div>
+
+    <div class="mf-prensip-card">
+      <div class="mf-prensip-num">3</div>
+      <div>
+        <h3>Bağımsızlık</h3>
+        <p>Hiçbir analiste maddi/manevi bağ yok. Tradia sadece kamuya açık içerik üzerinden ölçüm yapar.</p>
+      </div>
+    </div>
+
+    <div class="mf-prensip-card">
+      <div class="mf-prensip-num">4</div>
+      <div>
+        <h3>Kanıt Zinciri</h3>
+        <p>Her sapma vakası TCMB Beklenti Anketi, TÜİK ve Tradia haber havuzu ile çapraz doğrulanır. Tahmin değil — doğrulanmış gözlem.</p>
+      </div>
+    </div>
+
+    <div class="mf-prensip-card">
+      <div class="mf-prensip-num">5</div>
+      <div>
+        <h3>Profil Çoğulluğu</h3>
+        <p>Anchor, Global, Outlier, YT-only — tek "en iyi analist" yok. Her profil farklı soruya cevap; yatırımcı kendi ihtiyacına göre seçer.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VS -->
+  <div class="mf-vs">
+    <h2 class="center">Klasik Analiz vs. Tradia</h2>
+    <div class="mf-vs-grid">
+      <div class="mf-vs-col bad">
+        <h4>Klasik Yorum Sitesi</h4>
+        <ul>
+          <li>"En iyi analist" listesi (subjektif)</li>
+          <li>Bir tahmin yapılır, doğrulama yok</li>
+          <li>Geçmiş skor opak — manipüle edilebilir</li>
+          <li>Tek kaynak (sadece YouTube veya sadece yazı)</li>
+          <li>Konsensüs ve outlier ayrımı yok</li>
+        </ul>
+      </div>
+      <div class="mf-vs-col good">
+        <h4>Tradia Yaklaşımı</h4>
+        <ul>
+          <li>Profil bazlı: Anchor / Global / Outlier / YT-only</li>
+          <li>Her tahmin TCMB+TÜİK ile çapraz kontrol</li>
+          <li>Skor formülü açık (konu × 0.4 + rakam × 0.4 + doğrulama × 0.2)</li>
+          <li>Çoklu medya: YouTube + yazı + sosyal kanal</li>
+          <li>Sapma vakası şeffaf — 250 TL tahmini de görünür</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- BİZ NE OKUYORUZ -->
+  <section class="t-wrap">
+    <h2 class="center">Tradia Ne Yapıyor?</h2>
+    <p class="muted" style="text-align: center; max-width: 720px; margin: 12px auto 32px;">Her ay <strong style="color: var(--gold)">binlerce yorumcu</strong> Türkiye ekonomisi hakkında konuşuyor. Hangisi tutarlı, hangisi savruk — Tradia ölçer.</p>
+
+    <div class="t-comp-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+      <div class="t-comp">
+        <div class="t-comp-lbl">Konu Eşleşmesi</div>
+        <div class="t-comp-val">0.40 → 0.62</div>
+        <div class="muted" style="font-size:11px; margin-top:6px">Analist video ve yazıdaki konuların aynılığı (Jaccard).</div>
+      </div>
+      <div class="t-comp">
+        <div class="t-comp-lbl">Rakam Zenginliği</div>
+        <div class="t-comp-val">0.53 → 0.80</div>
+        <div class="muted" style="font-size:11px; margin-top:6px">İçeriğin tam metin oranı + spesifik rakam içermesi.</div>
+      </div>
+      <div class="t-comp">
+        <div class="t-comp-lbl">Tradia Doğrulama</div>
+        <div class="t-comp-val">0.45 → 0.80</div>
+        <div class="muted" style="font-size:11px; margin-top:6px">Tahminlerin TCMB+TÜİK ile uyumu.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="max-width: 760px; margin: 60px auto; padding: 0 24px;">
+    <div class="t-manifesto">
+      <h2>İlk Sayı Yayında</h2>
+      <p>4 TAMAM analist — Mahfi 67, Kerem 67, Atilla 46, Murat 24. Profil bazlı okuyup karşılaştırın.</p>
+      <p style="margin-top: 18px; font-style: normal;">
+        <a href="bultenler/sayi-1-v2-analist-denetimi.html" style="display: inline-block; padding: 12px 28px; background: var(--cta); color: #fff; border-radius: 6px; font-family: 'Space Grotesk'; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px;">Sayı 1 Bültenini Oku →</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="t-footer">
+  <p><strong>Tradia</strong> · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">Bağımsız · Otomatik · Kanıtlı · Şeffaf</p>
+  <p style="margin-top:12px">
+    <a href="index.html">Ana Sayfa</a> ·
+    <a href="bultenler/index.html">Bültenler</a> ·
+    <a href="komponentler/analist_skor_panel.html">Analist Panel</a>
+  </p>
+</footer>
+
+</body>
+</html>

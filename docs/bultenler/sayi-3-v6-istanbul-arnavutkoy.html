@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Arnavutköy 272.61 Ha — Sayı 3 v6</title>
+  <meta name="description" content="Arnavutköy Dursunköy 272.61 hektar (2.7 milyon m²) — 2026 İstanbul'un EN BÜYÜK plan değişikliği. CSB + İBB + Sahibinden 3 paralel kanal cross-validation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_tradia_tema.css">
+  <style>
+    /* 272.61 ha görselleştirme — referans karşılaştırma */
+    .alan-vis {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 24px; margin: 20px 0; text-align: center;
+    }
+    .alan-vis .büyük {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 4rem; line-height: 1;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      margin: 8px 0;
+    }
+    .alan-vis .alt { font-family: 'JetBrains Mono'; font-size: 0.85rem; color: var(--txt-muted); }
+    .alan-vis .ref {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px;
+      margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border);
+    }
+    @media (max-width: 600px) { .alan-vis .ref { grid-template-columns: 1fr; } }
+    .alan-vis .ref-card { background: var(--bg-2); padding: 10px; border-radius: 4px; }
+    .alan-vis .ref-card .v { font-family: 'JetBrains Mono'; font-weight: 700; font-size: 1rem; color: var(--gold); }
+    .alan-vis .ref-card .l { font-size: 0.78rem; color: var(--txt-muted); }
+
+    /* 3 kanal cross-validation grid */
+    .ch-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 20px 0; }
+    @media (max-width: 800px) { .ch-grid { grid-template-columns: 1fr; } }
+    .ch-card {
+      background: var(--bg-card); border: 1px solid var(--border); border-left: 3px solid var(--gold);
+      border-radius: 6px; padding: 18px;
+    }
+    .ch-card.csb { border-left-color: var(--cta); }
+    .ch-card.ibb { border-left-color: var(--blue); }
+    .ch-card.shb { border-left-color: var(--up); }
+    .ch-card h3 { margin: 0 0 8px; font-family: 'JetBrains Mono'; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; }
+    .ch-card.csb h3 { color: var(--cta); }
+    .ch-card.ibb h3 { color: var(--blue); }
+    .ch-card.shb h3 { color: var(--up); }
+    .ch-card .src { font-size: 0.78rem; color: var(--txt-faint); margin-bottom: 12px; font-family: 'JetBrains Mono'; }
+    .ch-card ul { list-style: none; padding-left: 0; font-size: 0.88rem; }
+    .ch-card li { padding: 4px 0; border-bottom: 1px solid rgba(31,41,55,0.5); }
+    .ch-card li:last-child { border-bottom: none; }
+    .ch-card .key { font-weight: 700; color: var(--txt); }
+
+    /* 5 mega plan listesi */
+    .mp-card {
+      display: grid; grid-template-columns: 60px 1fr auto; gap: 16px; align-items: start;
+      padding: 18px; border: 1px solid var(--border); background: var(--bg-card);
+      border-radius: 8px; margin-bottom: 12px;
+    }
+    .mp-card.hero { border-color: var(--cta); background: linear-gradient(90deg, rgba(220,38,38,0.06), transparent); }
+    .mp-card .pin { font-size: 1.6rem; text-align: center; }
+    .mp-card h4 { margin: 0 0 4px; font-size: 1.05rem; color: var(--txt); }
+    .mp-card .meta { font-family: 'JetBrains Mono'; font-size: 11px; color: var(--gold); }
+    .mp-card p { margin: 6px 0 0; font-size: 0.9rem; color: var(--txt-muted); }
+    .mp-card .alan { font-family: 'Space Grotesk'; font-weight: 900; font-size: 1.6rem; color: var(--gold); white-space: nowrap; }
+    .mp-card.hero .alan { color: var(--cta); font-size: 2.2rem; }
+
+    /* Cross-Hat 4/4 hat görselleştirme */
+    .ch4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 16px 0; }
+    .ch4-cell {
+      background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 12px; border-radius: 6px; text-align: center;
+    }
+    .ch4-cell .hat { font-family: 'JetBrains Mono'; font-size: 9px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.1em; }
+    .ch4-cell .sig { font-family: 'Space Grotesk'; font-weight: 900; font-size: 1rem; color: var(--up); margin: 6px 0; }
+    .ch4-cell .det { font-size: 0.78rem; color: var(--txt-muted); }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">İstanbul · Arnavutköy 272.61 Ha</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="index.html">Bültenler</a>
+      <a href="#" class="active">Sayı 3</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Bülten · Sayı 3 v6 · Haziran 2026</span>
+    <h1>Arnavutköy <span class="grad-text">272.61 Hektar</span></h1>
+    <p class="lede"><strong>2026 İstanbul'un EN BÜYÜK plan değişikliği.</strong> Dursunköy Mahallesi 2.7 milyon m² alanda 1/5000 nazım + 1/1000 uygulama plan değişikliği. CSB İstanbul + İBB Google News + Sahibinden master — <strong>3 paralel kanal aynı tezi doğruluyor</strong>. Sprint 7 Cross-Hat 4/4 hat GUCLU_POZITIF tezi resmi CSB kanalı ile mühürlendi.</p>
+  </section>
+
+  <!-- ALAN GÖRSELLEŞTİRME -->
+  <div class="alan-vis">
+    <div class="alt">Tek karar · CSB İstanbul İl Müdürlüğü · 2026-05-15</div>
+    <div class="büyük">272.61 ha</div>
+    <div class="alt">= 2.726.100 m² = 2.7 milyon m²</div>
+
+    <div class="ref">
+      <div class="ref-card">
+        <div class="v">~3.5×</div>
+        <div class="l">Galataport (78 ha)</div>
+      </div>
+      <div class="ref-card">
+        <div class="v">~2×</div>
+        <div class="l">Yıldız Parkı (138 ha)</div>
+      </div>
+      <div class="ref-card">
+        <div class="v">~1×</div>
+        <div class="l">Beykoz Çiftliği (272 ha)</div>
+      </div>
+    </div>
+    <p class="muted" style="font-size: 0.8rem; margin-top: 12px;">Tek bir plan değişikliği. Tradia'nın <strong>gördüğü en büyük tek-karar İstanbul alanı</strong>.</p>
+  </div>
+
+  <!-- MANŞET -->
+  <div class="t-manset">
+    <h3>"Tradia'nın Arnavutköy manşet adayı kararı sağlam"</h3>
+    <p>Sprint 7 Cross-Hat raporu 6 ay önce Arnavutköy için <strong>GUCLU_POZITIF/GUCLU (4/4 hat)</strong> sinyali vermişti: 2.252 aktif ilan, medyan 4.65M TL, TL/m² <strong>0.65× (henüz fiyatlanmamış)</strong>. Sprint 17'de CSB İstanbul İl Müdürlüğü kanalında <strong>iki büyük plan değişikliği</strong> — Haraççı 6356 ada parsel bazlı + <strong>Dursunköy 272.61 hektar bölgesel plan</strong>. Sprint 10'da İBB Google News kanalında İmamoğlu 12+ açıklama + TOKİ 500 bin sosyal konut. 3 kanal cross-validation tamamlandı.</p>
+  </div>
+
+  <!-- ÖZET METRİK ŞERİDİ -->
+  <div class="t-comp-grid" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="t-comp"><div class="t-comp-lbl">Arnavutköy alan</div><div class="t-comp-val">272.61 ha</div><div class="muted" style="font-size:10px">tek plan değişikliği</div></div>
+    <div class="t-comp"><div class="t-comp-lbl">Sahibinden ilan</div><div class="t-comp-val">2.252</div><div class="muted" style="font-size:10px">aktif kayıt</div></div>
+    <div class="t-comp"><div class="t-comp-lbl">TL/m² endeks</div><div class="t-comp-val">0.65×</div><div class="muted" style="font-size:10px">İstanbul ort. altı</div></div>
+    <div class="t-comp"><div class="t-comp-lbl">Cross-Hat hat</div><div class="t-comp-val cat-erken">4/4</div><div class="muted" style="font-size:10px">GUCLU_POZITIF</div></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- 3 KANAL CROSS-VALIDATION -->
+  <h2>3 Paralel Kanal — Cross-Validation</h2>
+  <p class="muted">Tradia'nın "veri kalitesi" disiplini: aynı tez 3 farklı kaynakta görünüyorsa <strong>kesinleşmiş</strong>.</p>
+
+  <div class="ch-grid">
+
+    <div class="ch-card csb">
+      <h3>1 · CSB İstanbul</h3>
+      <div class="src">İl Müdürlüğü resmi duyuru · Sprint 17 · 6 KABUL kayıt</div>
+      <ul>
+        <li><span class="key">2026-05-21:</span> Haraççı Mah. 6356 ada 1 parsel 1/1000 plan değişikliği</li>
+        <li><span class="key">2026-05-15:</span> <strong style="color:var(--cta)">Dursunköy 272.61 ha alan 1/5000 + 1/1000</strong> ⭐⭐</li>
+        <li><span class="key">2026-05-13:</span> Küçükçekmece Halkalı Rezerv Yapı Alanı</li>
+        <li><span class="key">2026-05-15:</span> Beylikdüzü Adnan Kahveci 1648 ada 4 parsel sosyal tesis</li>
+      </ul>
+    </div>
+
+    <div class="ch-card ibb">
+      <h3>2 · İBB Google News</h3>
+      <div class="src">Multi-query scraper · Sprint 10 · 114 yeni kayıt</div>
+      <ul>
+        <li><span class="key">12+</span> İmamoğlu açıklaması (30 günde, politik tansiyon)</li>
+        <li><span class="key">TOKİ:</span> 500 bin sosyal konut hedefi · İstanbul payı netleşiyor</li>
+        <li><span class="key">2026-05-12:</span> Büyükçekmece 40 riskli yapı yıkıldı (Habertürk)</li>
+        <li><span class="key">"Yarısı Bizden":</span> kampanya 6 ayrı kaynakta gündem</li>
+      </ul>
+    </div>
+
+    <div class="ch-card shb">
+      <h3>3 · Sahibinden Master</h3>
+      <div class="src">İstanbul agg · Sprint 7 Cross-Hat · 67.279 ilan</div>
+      <ul>
+        <li><span class="key">Arnavutköy:</span> 2.252 aktif ilan</li>
+        <li><span class="key">Medyan:</span> 4.65M ₺ (premium segment)</li>
+        <li><span class="key">TL/m²:</span> <strong style="color:var(--up)">0.65× İstanbul ort.</strong></li>
+        <li><span class="key">Yorum:</span> "henüz fiyatlanmamış" — kıvılcım fazı</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <!-- 5 MEGA PLAN -->
+  <h2>5 Mega Plan Lokasyonu</h2>
+  <p class="muted">CSB İstanbul Mayıs 2026 KABUL listesi — Tradia havuzuna eklenmiş resmi imar değişiklikleri.</p>
+
+  <div class="mp-card hero">
+    <div class="pin">📍</div>
+    <div>
+      <h4>Arnavutköy / Dursunköy ⭐⭐</h4>
+      <div class="meta">CSB İstanbul · 2026-05-15 · 1/5000 nazım + 1/1000 uygulama</div>
+      <p><strong>272.61 hektar bölgesel imar plan değişikliği</strong>. Tradia'nın gördüğü en büyük tek-karar İstanbul alanı. Sprint 7 GUCLU_POZITIF tezi ile resmi cross-validation tamamlandı.</p>
+    </div>
+    <div class="alan">272.61 ha</div>
+  </div>
+
+  <div class="mp-card">
+    <div class="pin">🗺️</div>
+    <div>
+      <h4>Arnavutköy / Haraççı ⭐</h4>
+      <div class="meta">CSB İstanbul · 2026-05-21 · 1/1000 plan değişikliği</div>
+      <p>6356 ada 1 parsel imar plan değişikliği. Arnavutköy ilçesinde 2 hafta içinde 2. CSB kararı — koridor sinyali güçleniyor.</p>
+    </div>
+    <div class="alan">6356 ada</div>
+  </div>
+
+  <div class="mp-card">
+    <div class="pin">🏗️</div>
+    <div>
+      <h4>Küçükçekmece / Halkalı Rezerv Yapı Alanı</h4>
+      <div class="meta">CSB İstanbul · 2026-05-13 · Rezerv yapı planı</div>
+      <p>Halkalı mevkisinde Rezerv Yapı Alanı tanımlaması. Kentsel dönüşüm hazırlık aşaması. TOKİ + CSB kesişim sinyali.</p>
+    </div>
+    <div class="alan">Rezerv</div>
+  </div>
+
+  <div class="mp-card">
+    <div class="pin">🏥</div>
+    <div>
+      <h4>Beylikdüzü / Adnan Kahveci</h4>
+      <div class="meta">CSB İstanbul · 2026-05-15 · Sosyal tesis planı</div>
+      <p>1648 ada 4 parsel sosyal tesis amaçlı plan değişikliği. İlçenin sosyal donatı altyapısı genişliyor.</p>
+    </div>
+    <div class="alan">1648 ada</div>
+  </div>
+
+  <div class="mp-card">
+    <div class="pin">🚧</div>
+    <div>
+      <h4>Büyükçekmece / 40 Riskli Yapı Yıkıldı</h4>
+      <div class="meta">İBB Google News · Habertürk 2026-05-12 · Kentsel dönüşüm</div>
+      <p>3 riskli yapıdan toplam <strong>40 bağımsız bölüm</strong> yıkıldı. İstanbul'un riskli stok envanteri azalıyor — TOKİ "Yarısı Bizden" kampanyasıyla cross-ref.</p>
+    </div>
+    <div class="alan">40 birim</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- CROSS-HAT 4/4 -->
+  <h2>Cross-Hat Sprint 7 — GUCLU_POZITIF 4/4 Hat</h2>
+  <p class="muted">6 ay önce Tradia Cross-Hat sistemi Arnavutköy için 4 paralel hat sinyali üretmişti. Sprint 17 CSB resmi kanalı bu tezi mühürledi.</p>
+
+  <div class="ch4">
+    <div class="ch4-cell">
+      <div class="hat">Hat 1 · EKAP</div>
+      <div class="sig">POZİTİF</div>
+      <div class="det">Aktif kamulaştırma ihale</div>
+    </div>
+    <div class="ch4-cell">
+      <div class="hat">Hat 2 · İmar</div>
+      <div class="sig">POZİTİF</div>
+      <div class="det">Çoklu plan değişikliği</div>
+    </div>
+    <div class="ch4-cell">
+      <div class="hat">Hat 3 · Piyasa</div>
+      <div class="sig">POZİTİF</div>
+      <div class="det">İlan hacmi yüksek</div>
+    </div>
+    <div class="ch4-cell">
+      <div class="hat">Hat 4 · Fiyat</div>
+      <div class="sig">POZİTİF</div>
+      <div class="det">TL/m² 0.65× (henüz)</div>
+    </div>
+  </div>
+
+  <div class="t-value">
+    <strong>Cross-Hat sonucu:</strong> Arnavutköy GUCLU_POZITIF/GUCLU (4/4 hat) — 4 hat aynı yönde, sıfır çakışma. Sprint 7 (Kasım 2025) → Sprint 17 (Mayıs 2026) <strong>6 aylık takip + resmi CSB onayı</strong> = tez kesinleşmiş.
+  </div>
+
+  <hr class="divider">
+
+  <!-- POLİTİK TANSİYON KISMI -->
+  <h2>Politik Tansiyon — İmamoğlu Açıklamaları</h2>
+  <p class="muted">İBB Google News kanalında son 30 günde 12+ açıklama. Tradia bu sinyali yatırım kararına yansıtmaz ama <strong>dolaylı etki</strong> olarak izler.</p>
+
+  <table class="t-tbl">
+    <thead><tr><th>Tarih</th><th>Kanal</th><th>Konu</th></tr></thead>
+    <tbody>
+      <tr><td class="mono">2026-05-24</td><td class="muted">Halk TV</td><td>İmamoğlu polis CHP'ye girerken açıklama yaptı</td></tr>
+      <tr><td class="mono">2026-05-21</td><td class="muted">Yeniçağ</td><td>Ekrem İmamoğlu'ndan mutlak butlan kararına tepki</td></tr>
+      <tr><td class="mono">2026-05-14</td><td class="muted">Haberdar</td><td>Şişli'de kentsel dönüşüm toplantısı</td></tr>
+      <tr><td class="mono">2026-05-06</td><td class="muted">Emlak Pencerem</td><td>İstanbul "Yarısı Bizden" Kampanyası süre uzatımı</td></tr>
+      <tr><td class="mono">2026-04-25</td><td class="muted">NTV</td><td>TOKİ İstanbul kura çekim heyecanı</td></tr>
+      <tr><td class="mono">2026-05-20</td><td class="muted">Yeni Şafak</td><td>TOKİ 500 Bin Sosyal Konut — İstanbul payı</td></tr>
+    </tbody>
+  </table>
+
+  <p class="muted" style="font-size: 0.88rem; margin-top: 12px;">
+    <strong>Tradia not:</strong> Politik açıklamalar gayrimenkul kararlarını <strong>dolaylı</strong> etkiler — bu bültende manşet olarak alınmıyor, makro bağlam olarak izleniyor. Manşet kararı imar + ilan + fiyat kesişimi.
+  </p>
+
+  <hr class="divider">
+
+  <!-- İNTERAKTİF HARİTA LİNKİ -->
+  <div class="t-manifesto">
+    <h2>İstanbul Mega Plan Haritası — İnteraktif</h2>
+    <p>5 lokasyon işaretlenmiş, koridor görselleştirilmiş. Arnavutköy 272.61 ha hero alan, Halkalı Rezerv, Beylikdüzü Adnan Kahveci, Büyükçekmece riskli yapı:</p>
+    <p style="margin-top: 18px; font-style: normal;">
+      <a href="../komponentler/istanbul_mega_plan_haritasi.html" style="display: inline-block; padding: 12px 28px; background: var(--cta); color: #fff; border-radius: 6px; font-family: 'Space Grotesk'; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px;">İnteraktif Haritayı Aç →</a>
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- METODOLOJİ -->
+  <h2>Metodoloji</h2>
+  <div class="t-card">
+    <h4>3 Kanal Cross-Validation Mantığı</h4>
+    <p>Bir gayrimenkul tezi, üç farklı veri kanalında aynı yönde sinyal verirse <strong>kesinleşmiş</strong> sayılır. Tradia'nın "tek-kanal tezi yok" disiplinin temeli.</p>
+    <ol style="padding-left: 20px; margin-top: 10px;">
+      <li class="muted" style="padding:6px 0;"><strong style="color:var(--cta)">Resmi planlama (CSB):</strong> İl Müdürlüğü duyuruları — devlet kararı verilmiş.</li>
+      <li class="muted" style="padding:6px 0;"><strong style="color:var(--blue)">Makro çerçeve (İBB Google News):</strong> Politika + medya yansıması.</li>
+      <li class="muted" style="padding:6px 0;"><strong style="color:var(--up)">Piyasa (Sahibinden):</strong> İlan hacmi + fiyat endeks (henüz / olgun ayrımı).</li>
+    </ol>
+
+    <h4 style="margin-top: 20px;">Veri Boyutu</h4>
+    <ul style="list-style: none; padding-left: 0; font-size: 0.9rem;">
+      <li class="muted" style="padding:3px 0;">▸ CSB İstanbul: <strong style="color:var(--cta)">39 duyuru taranmış · 6 KABUL</strong> (Sprint 17)</li>
+      <li class="muted" style="padding:3px 0;">▸ İBB Google News: <strong style="color:var(--blue)">273 item · 115 KABUL · 114 havuza eklendi</strong> (Sprint 10)</li>
+      <li class="muted" style="padding:3px 0;">▸ Sahibinden İstanbul master: <strong style="color:var(--up)">67.279 aktif ilan · 39 ilçe</strong></li>
+      <li class="muted" style="padding:3px 0;">▸ Tradia havuzu Sprint 19 sonu: <strong>8.480 kayıt</strong></li>
+    </ul>
+
+    <h4 style="margin-top: 20px;">Cross-Hat Mantığı</h4>
+    <p class="muted" style="font-size: 0.9rem;">4 hat = EKAP ihale + İmar plan + Piyasa hacim + Fiyat endeksi. Hepsi aynı yönde POZİTİF/NEGATİF ise sinyal güçlenir. Arnavutköy 4/4 POZİTİF = GUCLU_POZITIF. Sahibinden TL/m² <strong>0.65×</strong> = İstanbul ortalamasının %35 altı, hâlâ fiyatlanmamış kıvılcım bölgesi.</p>
+  </div>
+
+  <!-- TRADIA FELSEFE -->
+  <div class="t-manifesto">
+    <h2>"Tek-kanal tezi yok"</h2>
+    <p>Endeksa/REIDIN il/ilçe seviyesinde tek-kanal endeks. Tradia: <strong>CSB + İBB + Sahibinden + Cross-Hat = 3-4 paralel kanal</strong>. Sinyal güveni: bir kanalda olabilir, iki kanalda gözlemleniyor, <strong>üç kanalda kesinleşmiştir</strong>.</p>
+    <p style="margin-top:14px; font-style: normal; color: var(--txt); font-family: 'JetBrains Mono'; font-size: 0.95rem; letter-spacing: 0.04em;">
+      <strong>5 mega plan</strong> · <strong>3 kanal</strong> · <strong>4/4 Cross-Hat</strong> · <strong>$0 maliyet</strong>
+    </p>
+  </div>
+
+  <!-- SONRAKİ -->
+  <h2>Sonraki Sayı Aday Konular</h2>
+  <ul style="list-style:none; padding-left:0;">
+    <li style="padding:10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom:8px;">
+      <strong style="color:var(--gold)">Sayı 4 (Deprem):</strong> Hatay Defne Toygarlı 2/B Ek-4 + EKAP Faz 4 +21 ilan. Deprem sonrası yeniden inşa süreci aktif.
+    </li>
+    <li style="padding:10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom:8px;">
+      <strong style="color:var(--gold)">Sayı 5-9 (Büyükşehir):</strong> Ankara (CSB %49 — Çankaya/Lodumlu, Alacaatlı, Gölbaşı), İzmir (Bayraklı Mansuroğlu Rezerv, Aliağa TOKİ), Antalya, Kayseri, Konya.
+    </li>
+    <li style="padding:10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;">
+      <strong style="color:var(--gold)">Yol Haritası:</strong> CSB 76 il yatay genişleme (Sprint 20-22, 600+ ek kayıt/ay). HMB + Tapu + Playwright SPA kanalları.
+    </li>
+  </ul>
+
+  <hr class="divider">
+
+  <p class="center muted mono" style="font-size: 0.85rem; padding: 20px 0;">
+    <strong>Tradia İstanbul · Arnavutköy 272.61 Ha</strong><br>
+    Bağımsız · Otomatik · Kanıtlı · Şeffaf · 3 Kanal Cross-Validation<br>
+    <span class="faint">Sayı 3 v6 — Haziran 2026</span>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="index.html">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a> ·
+    <a href="../komponentler/istanbul_mega_plan_haritasi.html">İstanbul Plan Haritası</a>
+  </p>
+</footer>
+
+</body>
+</html>

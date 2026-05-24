@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Bursa Mahalle Isı Haritası — Sayı 2 v6</title>
+  <meta name="description" content="Bursa 62 mahalle × 3 kategori (SICAK · OLGUNLAŞMIŞ · ERKEN SİNYAL). Akpınar paradoksu 4 kanal mührü, Mollaarap Riskli Alan R15 v6, Nilüfer 14 mahalle lokomotifi.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_tradia_tema.css">
+  <style>
+    /* Sayı 2'ye özel — kategori renkleri */
+    .cat-sicak    { color: var(--cta); }
+    .cat-olgun    { color: var(--gold); }
+    .cat-erken    { color: var(--up); }
+    .cat-bg-sicak { background: rgba(220, 38, 38, 0.08); border-color: rgba(220, 38, 38, 0.3); }
+    .cat-bg-olgun { background: rgba(245, 158, 11, 0.06); border-color: rgba(245, 158, 11, 0.25); }
+    .cat-bg-erken { background: rgba(16, 185, 129, 0.06); border-color: rgba(16, 185, 129, 0.25); }
+
+    /* 3 kategori şerit (Sprint 15 özet) */
+    .kat-band { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0; }
+    @media (max-width: 700px) { .kat-band { grid-template-columns: 1fr; } }
+    .kat-card { border: 1px solid; border-radius: 8px; padding: 16px; }
+    .kat-card .ikon { font-size: 1.6rem; margin-bottom: 8px; }
+    .kat-card h3 { margin: 4px 0; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; font-family: 'JetBrains Mono'; font-weight: 700; }
+    .kat-card .big { font-family: 'Space Grotesk'; font-weight: 900; font-size: 2.4rem; margin: 4px 0; }
+    .kat-card .desc { font-size: 0.85rem; color: var(--txt-muted); }
+
+    /* Mahalle tablo */
+    .mh-tbl { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.93rem; }
+    .mh-tbl th, .mh-tbl td { padding: 9px 12px; text-align: left; border-bottom: 1px solid rgba(31, 41, 55, 0.6); }
+    .mh-tbl th { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+    .mh-tbl td.num { text-align: right; font-family: 'JetBrains Mono'; }
+    .mh-tbl .mh-mahalle { font-weight: 600; color: var(--txt); }
+    .mh-tbl .mh-ilce { font-size: 0.78rem; color: var(--txt-faint); }
+    .mh-tbl .hot { color: var(--cta); }
+    .mh-tbl tr:hover td { background: rgba(255,255,255,0.02); }
+
+    /* R15 version timeline */
+    .r15-tl { display: grid; grid-template-columns: 80px 1fr; gap: 14px; margin: 10px 0; padding: 12px; border-left: 2px solid var(--border-2); }
+    .r15-tl.cur { border-left-color: var(--cta); background: rgba(220, 38, 38, 0.04); }
+    .r15-tl .ver { font-family: 'JetBrains Mono'; font-weight: 700; color: var(--gold); font-size: 0.9rem; }
+    .r15-tl .ver .date { display: block; color: var(--txt-faint); font-size: 10px; margin-top: 2px; text-transform: uppercase; letter-spacing: 0.06em; font-weight: 400; }
+    .r15-tl .desc { font-size: 0.92rem; color: var(--txt); }
+    .r15-tl.cur .desc { color: #fef3c7; }
+    .r15-tl .desc strong { color: var(--gold); }
+
+    /* Akpınar 4 kanal grid */
+    .ap-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin: 16px 0; }
+    @media (max-width: 700px) { .ap-grid { grid-template-columns: 1fr; } }
+    .ap-cell { border: 1px solid var(--border); background: var(--bg-card); border-radius: 6px; padding: 14px; }
+    .ap-cell .lbl { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+    .ap-cell .val { font-family: 'Space Grotesk'; font-weight: 900; font-size: 1.6rem; margin: 4px 0; }
+    .ap-cell .sub { font-size: 0.85rem; color: var(--txt-muted); }
+    .ap-cell.zero .val { color: var(--dn); }
+    .ap-cell.active .val { color: var(--up); }
+
+    /* Mollaarap ada listesi */
+    .mlrp-adalar { display: flex; gap: 6px; flex-wrap: wrap; margin: 10px 0; }
+    .mlrp-adalar span { background: var(--bg-elev); border: 1px solid var(--cta); color: var(--cta); padding: 4px 10px; border-radius: 4px; font-family: 'JetBrains Mono'; font-size: 11px; font-weight: 700; }
+
+    /* Nilüfer keşif barı */
+    .nlf-bar { display: grid; grid-template-columns: 120px 1fr 50px; gap: 10px; align-items: center; padding: 6px 0; }
+    .nlf-bar .name { font-family: 'Space Grotesk'; font-weight: 600; font-size: 0.9rem; color: var(--txt); }
+    .nlf-bar .progress { height: 8px; background: var(--border); border-radius: 4px; overflow: hidden; }
+    .nlf-bar .progress-fill { height: 100%; background: linear-gradient(90deg, var(--up), var(--gold)); }
+    .nlf-bar .num { text-align: right; font-family: 'JetBrains Mono'; font-weight: 700; color: var(--gold); font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Bursa Mahalle Isı Haritası</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="index.html">Bültenler</a>
+      <a href="#" class="active">Sayı 2</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Bülten · Sayı 2 v6 · Haziran 2026</span>
+    <h1>Bursa Mahalle Isı Haritası <span class="grad-text">v6 — 62 mahalle</span></h1>
+    <p class="lede">5 sprint, 3 resmi kanal, 1 paradoks mührü. Tradia'nın Bursa'da mahalle granülerlik analizi: <strong>1 SICAK · 15 OLGUNLAŞMIŞ · 20 ERKEN SİNYAL</strong>. Akpınar 4 kanal cross-validation, Yıldırım Mollaarap 6 ada Riskli Alan, Nilüfer'in 120 yakalanmış gizli piyasası.</p>
+  </section>
+
+  <!-- 3 KATEGORI ŞERİT -->
+  <div class="kat-band">
+    <div class="kat-card cat-bg-sicak">
+      <div class="ikon">🔥</div>
+      <h3 class="cat-sicak">Sıcak</h3>
+      <div class="big cat-sicak">1</div>
+      <div class="desc"><strong>Demirtaş Sakarya</strong> · 187 ilan · medyan 4.5M ₺</div>
+    </div>
+    <div class="kat-card cat-bg-olgun">
+      <div class="ikon">🏛️</div>
+      <h3 class="cat-olgun">Olgunlaşmış</h3>
+      <div class="big cat-olgun">15</div>
+      <div class="desc">Akpınar, Altınova, Kovukçınar — premium pocket'lar</div>
+    </div>
+    <div class="kat-card cat-bg-erken">
+      <div class="ikon">🌱</div>
+      <h3 class="cat-erken">Erken Sinyal</h3>
+      <div class="big cat-erken">20</div>
+      <div class="desc">Erikli kompozit, <strong>Mollaarap Riskli Alan</strong>, Nilüfer 14 mahalle</div>
+    </div>
+  </div>
+
+  <!-- MANŞET -->
+  <div class="t-manset">
+    <h3>"İki seviye plan birlikte — Mollaarap Riskli Alan 6 ada bulundu"</h3>
+    <p>Sprint 19'da Bursa CSB İl Müdürlüğü kanalında <strong>Yıldırım Mollaarap Mahallesi 'Riskli Alan' 557–559–560–561–579–612 adalar</strong> 1/5000 + 1/1000 plan değişikliği ilanı keşfedildi. 5 sprintlik R15 (Yıldırım 30 bin konut) tezi <strong>resmi lokalizasyona kavuştu</strong>: BBB meclis küçük parsel kararları + CSB Bursa büyük Riskli Alan ilanı = iki seviye plan birlikte. Aynı sprintte Akpınar paradoksu 4. kanal doğrulamasıyla mühürlendi.</p>
+  </div>
+
+  <!-- ÖZET METRİKLER -->
+  <div class="t-comp-grid" style="grid-template-columns: repeat(4, 1fr);">
+    <div class="t-comp"><div class="t-comp-lbl">Sahibinden Bursa</div><div class="t-comp-val">2.592</div><div class="muted" style="font-size:10px">aktif ilan kayıt</div></div>
+    <div class="t-comp"><div class="t-comp-lbl">NULL kurtarma</div><div class="t-comp-val">198</div><div class="muted" style="font-size:10px">regex yakalama (Nilüfer %64)</div></div>
+    <div class="t-comp"><div class="t-comp-lbl">BBB Meclis PDF</div><div class="t-comp-val">62</div><div class="muted" style="font-size:10px">mahalle ısı haritası v1</div></div>
+    <div class="t-comp"><div class="t-comp-lbl">CSB Bursa KABUL</div><div class="t-comp-val">8</div><div class="muted" style="font-size:10px">yapısal duyuru (Sprint 19)</div></div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- SICAK MAHALLE -->
+  <h2 class="cat-sicak">🔥 Sıcak Mahalle — Demirtaş Sakarya</h2>
+  <div class="t-card cat-bg-sicak">
+    <div class="t-card-head">
+      <h3>Osmangazi / Demirtaş Sakarya</h3>
+      <span class="t-card-skor cat-sicak">187 ilan</span>
+    </div>
+    <div class="t-comp-grid">
+      <div class="t-comp"><div class="t-comp-lbl">Aktif ilan</div><div class="t-comp-val cat-sicak">187</div></div>
+      <div class="t-comp"><div class="t-comp-lbl">Medyan</div><div class="t-comp-val">4.5M ₺</div></div>
+      <div class="t-comp"><div class="t-comp-lbl">Meclis kararı</div><div class="t-comp-val cat-erken">2</div></div>
+    </div>
+    <p>Sprint 15 v2'de keşfedilen tek SICAK mahalle. Sprint 14 v1'deki Osmangazi/Yunuseli SICAK kategorisi düzeltildi (multi-word birleştirme bug → ERKEN SİNYAL'e döndü). Demirtaş bölgesi toplamı ~327 ilan (Sakarya 187 + Cumhuriyet 91 + Demirtaş tek 49 + Barbaros 47), Osmangazi'nin en yoğun mahalle ailesi.</p>
+    <div class="t-gap"><strong>Şeffaflık:</strong> v2'de "Demirtaş Sakarya" + "Demirtaş Cumhuriyet" + "Demirtaş" 3 entry kısmi-eşleşmeyle 187 görüntüledi. Sprint 16 normalize gerekli. Bu Sayı'da gerçek master DOLU değerler kullanıldı.</div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- OLGUNLAŞMIŞ -->
+  <h2 class="cat-olgun">🏛️ Olgunlaşmış — Top 15 Mahalle</h2>
+  <p class="muted">Meclis kararı tamamlanmış + uygulama + satış aktif. Fiyat olgunlaşmış, hareket yatay.</p>
+
+  <table class="mh-tbl">
+    <thead>
+      <tr><th>#</th><th>Mahalle</th><th class="num">İlan</th><th class="num">Medyan ₺</th><th class="num">TL/m²</th><th>Not</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">1</td><td><span class="mh-mahalle">Kovukçınar</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">193</td><td class="num">7.000.000</td><td class="num">99.538</td><td class="muted">en yüksek hacim</td></tr>
+      <tr><td class="num">2</td><td><span class="mh-mahalle">Tayakadın</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">178</td><td class="num">2.700.000</td><td class="num">46.462</td><td class="muted">orta segment</td></tr>
+      <tr><td class="num">3</td><td><span class="mh-mahalle">Çekirge</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">140</td><td class="num">6.770.000</td><td class="num">52.456</td><td class="muted">turistik tarihi</td></tr>
+      <tr><td class="num">4</td><td><span class="mh-mahalle">Bağlarbaşı</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">138</td><td class="num">6.325.000</td><td class="num">79.529</td><td>—</td></tr>
+      <tr><td class="num">5</td><td><span class="mh-mahalle">Altıparmak</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">124</td><td class="num">2.235.000</td><td class="num">57.626</td><td>—</td></tr>
+      <tr><td class="num">6</td><td><span class="mh-mahalle">Ulucami</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">84</td><td class="num">4.500.000</td><td class="num"><span class="hot">102.806</span></td><td class="muted">tarihi merkez</td></tr>
+      <tr><td class="num">7</td><td><span class="mh-mahalle">Soğanlı</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">63</td><td class="num">7.850.000</td><td class="num">68.109</td><td>—</td></tr>
+      <tr style="background:rgba(245,158,11,0.06)"><td class="num">8</td><td><span class="mh-mahalle">Altınova</span> ⭐ <span class="mh-ilce">Osmangazi</span></td><td class="num">53</td><td class="num">8.000.000</td><td class="num cat-olgun"><strong>140.412</strong></td><td class="cat-olgun"><strong>EN PREMİUM TL/m²</strong></td></tr>
+      <tr><td class="num">9</td><td><span class="mh-mahalle">Panayır</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">51</td><td class="num">5.395.000</td><td class="num">78.739</td><td>—</td></tr>
+      <tr style="background:rgba(245,158,11,0.06)"><td class="num">10</td><td><span class="mh-mahalle">Akpınar</span> ⭐ <span class="mh-ilce">Osmangazi</span></td><td class="num">49</td><td class="num">7.550.000</td><td class="num cat-olgun"><strong>88.301</strong></td><td class="cat-olgun"><strong>Sprint 7 tezi — 4 kanal mührü</strong></td></tr>
+      <tr><td class="num">11</td><td><span class="mh-mahalle">Köyler</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">48</td><td class="num">35.000.000</td><td class="num"><span class="hot">102.587</span></td><td class="muted">villa kategorisi</td></tr>
+      <tr><td class="num">12</td><td><span class="mh-mahalle">Emek</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">49</td><td class="num">4.200.000</td><td class="num">47.681</td><td>—</td></tr>
+      <tr><td class="num">13</td><td><span class="mh-mahalle">Demirtaş Barbaros</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">47</td><td class="num">4.000.000</td><td class="num">29.862</td><td class="muted">Demirtaş ailesi</td></tr>
+      <tr><td class="num">14</td><td><span class="mh-mahalle">Görükle</span> 🆕 <span class="mh-ilce">Nilüfer</span></td><td class="num">44</td><td class="num">—</td><td class="num">—</td><td class="cat-erken"><strong>Sprint 15 keşfi (NULL regex)</strong></td></tr>
+      <tr><td class="num">15</td><td><span class="mh-mahalle">Mudanya (NULL)</span> <span class="mh-ilce">Mudanya</span></td><td class="num">43</td><td class="num">6.300.000</td><td class="num">55.138</td><td class="muted">deniz erişimi</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider">
+
+  <!-- ERKEN SİNYAL -->
+  <h2 class="cat-erken">🌱 Erken Sinyal — Top Mahalleler</h2>
+  <p class="muted">BBB Meclis kararı ≥ 3 + Sahibinden ilan az veya yok. <strong>Planlama hazır, piyasa 6-12 ay geride.</strong> Altın yatırım sinyali.</p>
+
+  <table class="mh-tbl">
+    <thead>
+      <tr><th>#</th><th>Mahalle</th><th class="num">Meclis</th><th class="num">İlan</th><th>Önemli detay</th></tr>
+    </thead>
+    <tbody>
+      <tr><td class="num">1</td><td><span class="mh-mahalle">Yunuseli</span> <span class="mh-ilce">Osmangazi</span></td><td class="num">6</td><td class="num">9 (regex)</td><td class="muted">v1 SICAK→ERKEN, multi-word düzeltme</td></tr>
+      <tr><td class="num">2</td><td><span class="mh-mahalle">Fethiye</span> <span class="mh-ilce">Nilüfer</span></td><td class="num">3</td><td class="num">7</td><td class="cat-erken">Sprint 15 NULL'tan 7 ilan yakalandı</td></tr>
+      <tr><td class="num">3</td><td><span class="mh-mahalle">Ertuğrul</span> <span class="mh-ilce">Nilüfer</span></td><td class="num">3</td><td class="num">0</td><td class="cat-erken"><strong>Sıfır ilan — saf erken sinyal</strong></td></tr>
+      <tr><td class="num">4</td><td><span class="mh-mahalle">Gümüştepe</span> <span class="mh-ilce">Nilüfer</span></td><td class="num">3</td><td class="num">0</td><td class="cat-erken"><strong>Sıfır ilan — saf erken sinyal</strong></td></tr>
+      <tr><td class="num">5</td><td><span class="mh-mahalle">Hasanağa</span> <span class="mh-ilce">Nilüfer</span></td><td class="num">3</td><td class="num">0</td><td class="cat-erken"><strong>Sıfır ilan — saf erken sinyal</strong></td></tr>
+      <tr style="background:rgba(16,185,129,0.06)"><td class="num">6</td><td><span class="mh-mahalle">Erikli</span> ⭐ <span class="mh-ilce">Yıldırım</span></td><td class="num">3</td><td class="num">0</td><td class="cat-erken"><strong>R15 takip — kompozit ölçek (1/25000+1/5000+1/1000)</strong></td></tr>
+      <tr style="background:rgba(220,38,38,0.06)"><td class="num">7</td><td><span class="mh-mahalle">Mollaarap</span> ⭐⭐ <span class="mh-ilce">Yıldırım</span></td><td class="num">CSB</td><td class="num">—</td><td class="cat-sicak"><strong>R15 v6 — Riskli Alan 6 ada (Sprint 19)</strong></td></tr>
+      <tr><td class="num">8</td><td><span class="mh-mahalle">Millet</span> <span class="mh-ilce">Yıldırım</span></td><td class="num">3</td><td class="num">4</td><td class="muted">R15 mahalle, ilan az</td></tr>
+    </tbody>
+  </table>
+
+  <hr class="divider">
+
+  <!-- R15 6 VERSİYON HİKAYESİ -->
+  <h2>R15 — Yıldırım 30 Bin Konut: 6 Sprint, 6 Versiyon</h2>
+  <p class="muted">Basın projeksiyonu → meclis küçük parselleri → resmi Riskli Alan lokalizasyonu. Tradia hipotezin nasıl çürütüldüğünü ve doğrulandığını şeffafça raporlar.</p>
+
+  <div class="r15-tl">
+    <div class="ver">v1<span class="date">22 May gece</span></div>
+    <div class="desc">"30 bin konut Yıldırım'da" — <strong>basın projeksiyonu (Habertürk, Sabah, Star)</strong>. Tradia ilk yakalama.</div>
+  </div>
+  <div class="r15-tl">
+    <div class="ver">v2<span class="date">Sprint 11/12</span></div>
+    <div class="desc">Yön doğru, mahalle haritası belirgin. <strong>4 mahalle aday</strong>: Erikli, Karapınar, Millet, Siteler.</div>
+  </div>
+  <div class="r15-tl">
+    <div class="ver">v3<span class="date">Sprint 13</span></div>
+    <div class="desc">"<strong>Rakam basın projeksiyon, meclis onayı YOK</strong>" — BBB PDF tam metin 0/180 Akpınar, 0/180 Erikli isim geçişi. <span style="color:var(--cta)">Hipotez çürütüldü.</span></div>
+  </div>
+  <div class="r15-tl">
+    <div class="ver">v4<span class="date">Sprint 14</span></div>
+    <div class="desc">Erikli <strong>kompozit ölçek pattern</strong> (1/25000+1/5000+1/1000), Sahibinden 0 ilan. Planlama hazır, piyasa yok.</div>
+  </div>
+  <div class="r15-tl">
+    <div class="ver">v5<span class="date">Sprint 15</span></div>
+    <div class="desc">Yıldırım 4 mahalle regex sonrası: <strong>Millet 4 ilan, Erikli 0, Siteler 0</strong>. Piyasa 6-12 ay geride. Gerçekleşme <strong>2026-08'den itibaren</strong> beklenir.</div>
+  </div>
+  <div class="r15-tl cur">
+    <div class="ver" style="color:var(--cta)">v6<span class="date" style="color:var(--cta)">Sprint 19 · 24 May</span></div>
+    <div class="desc">
+      <strong>Mollaarap Riskli Alan 6 ada bulundu!</strong> CSB Bursa İl Müdürlüğü 2026-02-13 duyurusu:<br>
+      <em>"Yıldırım/Mollaarap Mahallesi 'Riskli Alan' sınırları dahilinde 557-559-560-561-579-612 adalar muhtelif parseller 1/5000 + 1/1000 plan değişikliği"</em>
+      <div class="mlrp-adalar">
+        <span>557</span><span>559</span><span>560</span><span>561</span><span>579</span><span>612</span>
+      </div>
+      R15'in 30 bin konut hedefi <strong>resmi lokalize edildi</strong>. BBB küçük parseller + CSB büyük Riskli Alan = iki seviye plan birlikte.
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- AKPINAR PARADOKSU -->
+  <h2>Akpınar Paradoksu — 4 Kanal Mührü</h2>
+  <p class="muted">Sprint 7'den Sprint 19'a 12 sprintlik tez. <strong>3 resmi kanalda sıfır</strong>, 1 piyasa kanalında aktif. Tradia "olgunlaşmış premium pocket" örüntüsünün canlı vakası.</p>
+
+  <div class="ap-grid">
+    <div class="ap-cell zero">
+      <div class="lbl">Sprint 13 — BBB Meclis PDF</div>
+      <div class="val">0/180</div>
+      <div class="sub">Tam metin "Akpınar" geçişi yok</div>
+    </div>
+    <div class="ap-cell zero">
+      <div class="lbl">Sprint 19 — CSB Bursa İl Müd.</div>
+      <div class="val">0/37</div>
+      <div class="sub">Yapısal duyurularda geçmiyor</div>
+    </div>
+    <div class="ap-cell zero">
+      <div class="lbl">EKAP/RG (Cross-Hat ihale)</div>
+      <div class="val">0</div>
+      <div class="sub">Aktif ihale ilanı yok</div>
+    </div>
+    <div class="ap-cell active">
+      <div class="lbl">Sprint 14/15 — Sahibinden</div>
+      <div class="val">49 ilan</div>
+      <div class="sub">TL/m² <strong>88.301</strong> (Osmangazi 2.1× üstü)</div>
+    </div>
+  </div>
+
+  <div class="t-value">
+    <strong>4 kanal cross-validation sonuç:</strong> "Akpınar dönüşüm projesi <strong>2022-2024 dönemde tamamlanmış</strong>, şu an uygulama + satış aşaması. Bugünkü resmi süreçte (BBB meclis + CSB Bursa + EKAP) izi yok, sadece <strong>piyasa aktif</strong>. Bu Tradia 'Olgunlaşmış Premium Pocket' örüntüsünün canlı vakası — 12 sprintlik kesin tanımlama."
+  </div>
+
+  <hr class="divider">
+
+  <!-- NİLÜFER LOKOMOTİF -->
+  <h2>Nilüfer 14 Mahalle Lokomotif</h2>
+  <p class="muted">Sprint 15'te Sahibinden master Nilüfer'in <strong>187 NULL kaydından 120'si</strong> mahalle regex ile kurtarıldı. Nilüfer'in <strong>gerçek piyasası ortaya çıktı</strong> — Sprint 14 BBB meclis listesinde olmayan mahalleler büyük hacimle aktif.</p>
+
+  <div class="t-card">
+    <h4 class="cat-erken">NULL'tan Regex ile Yakalanan — Top 11</h4>
+
+    <div class="nlf-bar"><span class="name">Görükle</span><div class="progress"><div class="progress-fill" style="width:100%"></div></div><span class="num">44</span></div>
+    <div class="nlf-bar"><span class="name">Kayapa</span><div class="progress"><div class="progress-fill" style="width:41%"></div></div><span class="num">18</span></div>
+    <div class="nlf-bar"><span class="name">Balat</span><div class="progress"><div class="progress-fill" style="width:36%"></div></div><span class="num">16</span></div>
+    <div class="nlf-bar"><span class="name">Özlüce</span><div class="progress"><div class="progress-fill" style="width:18%"></div></div><span class="num">8</span></div>
+    <div class="nlf-bar"><span class="name">Fethiye</span><div class="progress"><div class="progress-fill" style="width:16%"></div></div><span class="num">7</span></div>
+    <div class="nlf-bar"><span class="name">Balkan</span><div class="progress"><div class="progress-fill" style="width:14%"></div></div><span class="num">6</span></div>
+    <div class="nlf-bar"><span class="name">Yolçatı</span><div class="progress"><div class="progress-fill" style="width:11%"></div></div><span class="num">5</span></div>
+    <div class="nlf-bar"><span class="name">İhsaniye</span><div class="progress"><div class="progress-fill" style="width:11%"></div></div><span class="num">5</span></div>
+    <div class="nlf-bar"><span class="name">Ataevler</span><div class="progress"><div class="progress-fill" style="width:9%"></div></div><span class="num">4</span></div>
+    <div class="nlf-bar"><span class="name">Üçevler</span><div class="progress"><div class="progress-fill" style="width:9%"></div></div><span class="num">4</span></div>
+    <div class="nlf-bar"><span class="name">Mihraplı</span><div class="progress"><div class="progress-fill" style="width:7%"></div></div><span class="num">3</span></div>
+
+    <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border);"><strong class="cat-erken">187 NULL → 120 kurtarıldı (%64)</strong>. Nilüfer'in en yoğun mahallesi olan <strong>Görükle (44 ilan)</strong> BBB Meclis Sprint 14 listesinde yer almıyordu — Tradia regex pipeline ile keşfedildi.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- İNTERAKTİF HARİTA LİNKİ -->
+  <div class="t-manifesto">
+    <h2>Bursa Mahalle Isı Haritası — İnteraktif</h2>
+    <p>62 mahalle, 17 ilçe, 3 kategori filtreli görsel inceleme:</p>
+    <p style="margin-top: 18px; font-style: normal;">
+      <a href="../komponentler/bursa_mahalle_haritasi.html" style="display: inline-block; padding: 12px 28px; background: var(--cta); color: #fff; border-radius: 6px; font-family: 'Space Grotesk'; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; font-size: 13px;">İnteraktif Haritayı Aç →</a>
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- METODOLOJİ -->
+  <h2>Metodoloji</h2>
+  <div class="t-card">
+    <h4>3 Resmi Kanal Cross-Validation</h4>
+    <ol style="padding-left: 20px;">
+      <li class="muted" style="padding:6px 0;"><strong style="color:var(--gold)">BBB Meclis Kararları</strong> — Bursa Büyükşehir Belediyesi PDF tam metin (Sprint 11-15), 180 karar dosyası.</li>
+      <li class="muted" style="padding:6px 0;"><strong style="color:var(--gold)">Sahibinden Master</strong> — Bursa 2.592 aktif ilan kaydı, mahalle alanı %55 DOLU + %45 regex kurtarma.</li>
+      <li class="muted" style="padding:6px 0;"><strong style="color:var(--gold)">CSB İl Müdürlüğü</strong> — Bursa Çevre Şehircilik 37 duyuru (Sprint 19), Riskli Alan ilanları için resmi tek kaynak.</li>
+    </ol>
+
+    <h4 style="margin-top: 18px;">Kategori Tanımı</h4>
+    <ul style="list-style: none; padding-left: 0;">
+      <li style="padding: 8px 0; border-bottom: 1px solid var(--border);"><strong class="cat-sicak">🔥 SICAK:</strong> meclis ≥2 + ilan ≥50 → planlama + piyasa eşzamanlı hareket</li>
+      <li style="padding: 8px 0; border-bottom: 1px solid var(--border);"><strong class="cat-olgun">🏛️ OLGUNLAŞMIŞ:</strong> ilan ≥40 + meclis aktif değil → kararlar tamamlanmış, satış aktif</li>
+      <li style="padding: 8px 0;"><strong class="cat-erken">🌱 ERKEN SİNYAL:</strong> meclis ≥3 + ilan ≤10 → planlama hazır, piyasa 6-12 ay geride</li>
+    </ul>
+
+    <h4 style="margin-top: 18px;">Şeffaflık Notu</h4>
+    <p class="muted" style="font-size: 0.9rem;">Sprint 15'te <strong>multi-word mahalle birleştirme bug'ı</strong> tespit edildi ("Demirtaş Sakarya" + "Demirtaş Cumhuriyet" karışıyordu). Bu Sayı 2'de gerçek master DOLU değerler raporlandı, Sprint 16 normalize ile düzeltilecek. Endeksa/REIDIN tek-kanal endeks verir; Tradia <strong>5 sprint çevriminde bug bulur, raporlar, düzeltmek için Sprint 16 planlar</strong>.</p>
+  </div>
+
+  <!-- 5 SPRINT DİSİPLİNİ -->
+  <h2>5 Sprint Disiplini — Sayı 2 v6'ya Giden Yol</h2>
+  <table class="mh-tbl">
+    <thead><tr><th>Sprint</th><th>Eylem</th><th>Kazanım</th></tr></thead>
+    <tbody>
+      <tr><td>11</td><td>BBB HTML scrape</td><td>107 başlık-bazlı meclis kararı</td></tr>
+      <tr><td>12</td><td>Mahalle başlık regex</td><td>46 mahalle haritası</td></tr>
+      <tr><td>13</td><td>PDF tam metin hedefli</td><td>Akpınar 0/180 doğrulama</td></tr>
+      <tr><td>14</td><td>PDF tam metin + Sahibinden agg</td><td>62 mahalle + ısı haritası v1 (2 SICAK + 18 OLGUN + 19 ERKEN)</td></tr>
+      <tr style="background:rgba(245,158,11,0.05)"><td><strong class="cat-olgun">15</strong></td><td>Sahibinden NULL regex</td><td><strong>120 Nilüfer yakalandı + R15 v5 + bug raporu</strong></td></tr>
+      <tr style="background:rgba(220,38,38,0.05)"><td><strong class="cat-sicak">19</strong></td><td>CSB 4 İl genişleme</td><td><strong>Mollaarap Riskli Alan + Akpınar 4. mühür</strong></td></tr>
+    </tbody>
+  </table>
+
+  <!-- TRADIA FELSEFE -->
+  <div class="t-manifesto">
+    <h2>"Veri kalitesi > veri hacmi"</h2>
+    <p>Endeksa/REIDIN: il/ilçe seviyesinde endeks. Tradia: <strong>mahalle granülerlik</strong> + 3 resmi kanal cross-validation + bug'larını şeffafça raporlama.</p>
+    <p style="margin-top:14px; font-style: normal; color: var(--txt); font-family: 'JetBrains Mono'; font-size: 0.95rem; letter-spacing: 0.04em;">
+      <strong>62 mahalle</strong> · <strong>3 kanal</strong> · <strong>5 sprint</strong> · <strong>$0 maliyet</strong>
+    </p>
+  </div>
+
+  <hr class="divider">
+
+  <p class="center muted mono" style="font-size: 0.85rem; padding: 20px 0;">
+    <strong>Tradia Bursa Mahalle Isı Haritası</strong><br>
+    Bağımsız · Otomatik · Kanıtlı · Şeffaf<br>
+    <span class="faint">Sayı 2 v6 — Haziran 2026</span>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="index.html">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a> ·
+    <a href="../komponentler/bursa_mahalle_haritasi.html">Bursa İnteraktif Harita</a>
+  </p>
+</footer>
+
+</body>
+</html>

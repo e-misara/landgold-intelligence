@@ -1530,6 +1530,7 @@ const NAV_ITEMS = [
   { id: 'mega',         label: 'Mega Projeler' },
   { id: 'koridor',      label: 'Koridorlar' },
   { id: 'bulten',       label: 'Bülten' },
+  { id: 'istihbarat',   label: 'İstihbarat', extern: 'bultenler/' },
   { id: 'hakkimizda',   label: 'Hakkımızda' },
 ];
 
@@ -1554,11 +1555,13 @@ function Header({ page, setPage }) {
         <nav className="hidden md:flex items-center gap-1">
           {NAV_ITEMS.map(item => (
             <button key={item.id}
-                    onClick={() => setPage(item.id)}
+                    onClick={() => item.extern ? (window.location.href = item.extern) : setPage(item.id)}
                     className={`px-4 py-2 font-body text-sm rounded transition-all ${
                       page === item.id
                         ? 'text-white bg-gray-800'
-                        : 'text-gray-400 hover:text-gray-200 hover:bg-gray-900'
+                        : item.extern
+                          ? 'text-amber-400 hover:text-amber-300 hover:bg-gray-900'
+                          : 'text-gray-400 hover:text-gray-200 hover:bg-gray-900'
                     }`}>
               {item.label}
             </button>
@@ -1583,9 +1586,9 @@ function Header({ page, setPage }) {
       {menuOpen && (
         <div className="md:hidden border-t border-gray-800 bg-[#070b14]">
           {NAV_ITEMS.map(item => (
-            <button key={item.id} onClick={() => { setPage(item.id); setMenuOpen(false); }}
-                    className="w-full text-left px-4 py-3 text-gray-300 border-b border-gray-800/50 font-body text-sm">
-              {item.label}
+            <button key={item.id} onClick={() => { if (item.extern) window.location.href = item.extern; else { setPage(item.id); setMenuOpen(false); } }}
+                    className={'w-full text-left px-4 py-3 border-b border-gray-800/50 font-body text-sm ' + (item.extern ? 'text-amber-400' : 'text-gray-300')}>
+              {item.label}{item.extern ? ' ↗' : ''}
             </button>
           ))}
         </div>

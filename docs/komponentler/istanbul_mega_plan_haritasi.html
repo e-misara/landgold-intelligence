@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · İstanbul Mega Plan Haritası</title>
+  <meta name="description" content="İstanbul 5 mega plan değişikliği — Arnavutköy 272.61 ha hero, Haraççı, Halkalı Rezerv, Beylikdüzü, Büyükçekmece riskli yıkım.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    .ist-hero { padding: 32px 24px; background: linear-gradient(135deg, rgba(220,38,38,0.06), rgba(245,158,11,0.04)); border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+
+    .ist-map-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      position: relative;
+    }
+    .ist-svg { width: 100%; height: auto; max-height: 580px; display: block; }
+
+    .ilce-shape { fill: var(--bg-elev); stroke: var(--border-2); stroke-width: 1; transition: fill 0.2s; }
+    .ilce-shape:hover { fill: var(--bg-2); }
+    .ilce-label { font-family: 'Space Grotesk'; font-weight: 600; font-size: 11px; fill: var(--txt-muted); text-anchor: middle; pointer-events: none; }
+    .ilce-label.hero { fill: var(--cta); font-weight: 700; font-size: 12px; }
+
+    .bogazici { fill: var(--bg); stroke: none; opacity: 0.6; }
+    .marmara { fill: rgba(59, 130, 246, 0.04); stroke: none; }
+    .bogazici-label { font-family: 'JetBrains Mono'; font-size: 11px; fill: var(--blue); text-anchor: middle; pointer-events: none; opacity: 0.7; font-style: italic; }
+
+    .plan-pin {
+      cursor: pointer;
+    }
+    .plan-pin circle { transition: r 0.2s; }
+    .plan-pin:hover circle { r: 18; }
+    .plan-pin .pin-num {
+      font-family: 'Space Grotesk'; font-weight: 900; font-size: 13px;
+      fill: #fff; text-anchor: middle; dominant-baseline: central; pointer-events: none;
+    }
+    .plan-pin .pin-label {
+      font-family: 'JetBrains Mono'; font-size: 10px;
+      fill: var(--txt); text-anchor: start;
+      pointer-events: none;
+    }
+    .plan-pin.hero circle { stroke: #fff; stroke-width: 2; }
+
+    .alan-ring { fill: rgba(220, 38, 38, 0.12); stroke: var(--cta); stroke-width: 2; stroke-dasharray: 6 4; pointer-events: none; }
+
+    /* Liste */
+    .ist-liste { background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px; padding: 20px; margin-bottom: 24px; }
+    .ist-liste h3 { margin: 0 0 16px; }
+    .ist-row {
+      display: grid; grid-template-columns: 36px 1fr auto; gap: 14px; align-items: center;
+      padding: 12px 0; border-bottom: 1px solid rgba(31, 41, 55, 0.5);
+    }
+    .ist-row:last-child { border-bottom: none; }
+    .ist-row .num {
+      width: 32px; height: 32px; border-radius: 50%;
+      background: var(--cta); color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk'; font-weight: 900; font-size: 13px;
+    }
+    .ist-row .num.alt { background: var(--gold); color: #000; }
+    .ist-row .mid h4 { margin: 0 0 2px; font-size: 1rem; }
+    .ist-row .mid .meta { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+    .ist-row .alan { font-family: 'Space Grotesk'; font-weight: 900; color: var(--gold); }
+    .ist-row.hero { background: rgba(220, 38, 38, 0.04); padding: 12px; border-radius: 6px; border: 1px solid rgba(220, 38, 38, 0.2); margin: 4px -8px; }
+    .ist-row.hero .alan { color: var(--cta); font-size: 1.6rem; }
+
+    /* Legend */
+    .ist-legend {
+      display: flex; gap: 24px; padding: 16px 20px;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg-card); margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .ist-legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; color: var(--txt-muted); }
+    .ist-legend-pin {
+      width: 16px; height: 16px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Space Grotesk'; font-weight: 900; font-size: 9px; color: #fff;
+    }
+
+    /* Tooltip */
+    .ist-tooltip {
+      position: absolute;
+      background: var(--bg-elev);
+      border: 1px solid var(--border-2);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 10;
+      max-width: 320px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .ist-tooltip.show { opacity: 1; }
+    .ist-tooltip .tt-h4 { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1rem; color: var(--txt); margin-bottom: 4px; }
+    .ist-tooltip .tt-meta { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold); margin-bottom: 8px; }
+    .ist-tooltip .tt-desc { color: var(--txt-muted); font-size: 0.82rem; line-height: 1.4; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">İstanbul Mega Plan</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="../bultenler/index.html">Bültenler</a>
+      <a href="../bultenler/sayi-3-v6-istanbul-arnavutkoy.html">Sayı 3</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wide" style="padding-bottom: 60px;">
+
+  <div class="ist-hero">
+    <span class="t-eyebrow">İnteraktif Harita · Sayı 3 v6</span>
+    <h1>İstanbul <span class="grad-text">Mega Plan Haritası</span></h1>
+    <p class="lede">5 plan değişikliği lokasyonu Avrupa yakası batı koridorunda. Arnavutköy 272.61 hektar hero alan etrafında halka, Halkalı Rezerv, Beylikdüzü Adnan Kahveci, Büyükçekmece riskli yapı yıkımı.</p>
+  </div>
+
+  <!-- Legend -->
+  <div class="ist-legend">
+    <div class="ist-legend-item">
+      <span class="ist-legend-pin" style="background:var(--cta)">1</span>
+      <strong style="color:var(--cta)">Arnavutköy / Dursunköy</strong> · 272.61 ha hero
+    </div>
+    <div class="ist-legend-item">
+      <span class="ist-legend-pin" style="background:var(--gold);color:#000">2-5</span>
+      Diğer plan değişiklikleri
+    </div>
+    <div class="ist-legend-item" style="margin-left:auto"><span style="font-family:'JetBrains Mono';font-size:10px;color:var(--txt-faint)">Veri: CSB İstanbul + İBB Google News + Sahibinden</span></div>
+  </div>
+
+  <!-- SVG Harita -->
+  <div class="ist-map-wrap">
+    <div id="ist-tooltip" class="ist-tooltip">
+      <div class="tt-h4">—</div>
+    </div>
+
+    <svg class="ist-svg" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Marmara denizi (alt) -->
+      <rect class="marmara" x="0" y="380" width="900" height="160"/>
+      <text class="bogazici-label" x="450" y="475" style="font-size:14px;">Marmara Denizi</text>
+
+      <!-- Boğaziçi (dikey) -->
+      <path class="bogazici" d="M 580 60 Q 600 200 580 380 Q 570 250 580 60 Z" fill="rgba(59,130,246,0.08)"/>
+      <text class="bogazici-label" x="580" y="220" transform="rotate(-90, 580, 220)">Boğaziçi</text>
+
+      <!-- AVRUPA YAKASI -->
+
+      <!-- Çatalca (en uç batı) -->
+      <path class="ilce-shape" d="M 20 110 L 130 110 L 130 220 L 20 220 Z" />
+      <text class="ilce-label" x="75" y="170">Çatalca</text>
+
+      <!-- Büyükçekmece -->
+      <path class="ilce-shape" d="M 130 220 L 230 220 L 230 360 L 130 360 Z" />
+      <text class="ilce-label" x="180" y="295">Büyükçekmece</text>
+
+      <!-- Beylikdüzü -->
+      <path class="ilce-shape" d="M 230 290 L 320 290 L 320 380 L 230 380 Z" />
+      <text class="ilce-label" x="275" y="338">Beylikdüzü</text>
+
+      <!-- Silivri (sol uç güney) -->
+      <path class="ilce-shape" d="M 20 290 L 130 290 L 130 380 L 20 380 Z" />
+      <text class="ilce-label" x="75" y="338">Silivri</text>
+
+      <!-- Arnavutköy (kuzey, mega bölge - HERO) -->
+      <path class="ilce-shape hero" d="M 130 60 L 350 60 L 350 220 L 230 220 L 130 220 Z" style="fill:rgba(220, 38, 38, 0.05); stroke:rgba(220, 38, 38, 0.3); stroke-width:1.5"/>
+      <text class="ilce-label hero" x="240" y="135">Arnavutköy</text>
+      <text class="ilce-label" x="240" y="155" style="font-size:9px;font-family:'JetBrains Mono';fill:var(--gold)">— Tradia hero —</text>
+
+      <!-- Avcılar/Küçükçekmece (orta-batı) -->
+      <path class="ilce-shape" d="M 230 220 L 350 220 L 350 290 L 230 290 Z" />
+      <text class="ilce-label" x="290" y="260">Küçükçekmece</text>
+      <text class="ilce-label" x="290" y="276" style="font-size:9px">Halkalı</text>
+
+      <!-- Bahçelievler/Bakırköy (merkez-batı) -->
+      <path class="ilce-shape" d="M 350 220 L 460 220 L 460 380 L 350 380 Z" />
+      <text class="ilce-label" x="405" y="298">Bahçelievler /</text>
+      <text class="ilce-label" x="405" y="316">Bakırköy</text>
+
+      <!-- Eyüp/Fatih (merkez kuzey) -->
+      <path class="ilce-shape" d="M 350 60 L 460 60 L 460 220 L 350 220 Z" />
+      <text class="ilce-label" x="405" y="130">Eyüpsultan /</text>
+      <text class="ilce-label" x="405" y="148">Fatih</text>
+
+      <!-- Şişli/Beşiktaş (Boğaz yakını) -->
+      <path class="ilce-shape" d="M 460 110 L 575 110 L 575 280 L 460 280 Z" />
+      <text class="ilce-label" x="517" y="190">Şişli /</text>
+      <text class="ilce-label" x="517" y="208">Beşiktaş</text>
+
+      <!-- ANADOLU YAKASI -->
+
+      <!-- Beykoz (kuzey) -->
+      <path class="ilce-shape" d="M 605 60 L 720 60 L 720 200 L 605 200 Z" />
+      <text class="ilce-label" x="662" y="135">Beykoz</text>
+
+      <!-- Üsküdar/Kadıköy -->
+      <path class="ilce-shape" d="M 605 200 L 720 200 L 720 320 L 605 320 Z" />
+      <text class="ilce-label" x="662" y="255">Üsküdar /</text>
+      <text class="ilce-label" x="662" y="273">Kadıköy</text>
+
+      <!-- Maltepe/Kartal -->
+      <path class="ilce-shape" d="M 720 200 L 830 200 L 830 320 L 720 320 Z" />
+      <text class="ilce-label" x="775" y="265">Maltepe /</text>
+      <text class="ilce-label" x="775" y="283">Kartal</text>
+
+      <!-- Ümraniye/Çekmeköy -->
+      <path class="ilce-shape" d="M 720 80 L 830 80 L 830 200 L 720 200 Z" />
+      <text class="ilce-label" x="775" y="135">Ümraniye /</text>
+      <text class="ilce-label" x="775" y="153">Çekmeköy</text>
+
+      <!-- Pendik/Tuzla -->
+      <path class="ilce-shape" d="M 830 200 L 880 200 L 880 380 L 720 380 L 720 320 L 830 320 Z" />
+      <text class="ilce-label" x="820" y="350">Pendik/Tuzla</text>
+
+      <!-- ============ HERO ALAN (272.61 HA) ============ -->
+      <!-- Dursunköy yaklaşık konumu Arnavutköy içinde sol-merkez -->
+      <ellipse class="alan-ring" cx="220" cy="120" rx="50" ry="32"/>
+
+      <!-- ============ PİNLER (5 PLAN) ============ -->
+
+      <!-- 1 · Arnavutköy/Dursunköy 272.61 ha (HERO) -->
+      <g class="plan-pin hero" data-h4="Arnavutköy / Dursunköy" data-meta="2026-05-15 · 272.61 hektar · 1/5000 + 1/1000" data-desc="Tradia'nın gördüğü en büyük tek-karar İstanbul alanı. 2.726.100 m² (2.7 milyon m²). Sprint 7 Cross-Hat 4/4 hat GUCLU_POZITIF tezi resmi CSB kanalı ile mühürlendi.">
+        <circle cx="220" cy="120" r="16" fill="var(--cta)"/>
+        <text class="pin-num" x="220" y="120">1</text>
+        <text class="pin-label" x="242" y="124" style="font-weight:700;fill:var(--cta);font-size:11px">272.61 ha ⭐⭐</text>
+      </g>
+
+      <!-- 2 · Arnavutköy/Haraççı 6356 ada -->
+      <g class="plan-pin" data-h4="Arnavutköy / Haraççı" data-meta="2026-05-21 · 6356 ada 1 parsel · 1/1000" data-desc="Arnavutköy ikinci CSB kararı. 2 hafta içinde aynı ilçede 2 plan değişikliği — koridor sinyali güçleniyor.">
+        <circle cx="290" cy="100" r="13" fill="var(--gold)"/>
+        <text class="pin-num" x="290" y="100" style="fill:#000">2</text>
+        <text class="pin-label" x="307" y="103" style="font-size:10px">Haraççı 6356</text>
+      </g>
+
+      <!-- 3 · Halkalı Rezerv (Küçükçekmece) -->
+      <g class="plan-pin" data-h4="Küçükçekmece / Halkalı Rezerv" data-meta="2026-05-13 · Rezerv Yapı Alanı" data-desc="Halkalı mevkisinde Rezerv Yapı Alanı tanımlaması. Kentsel dönüşüm hazırlık aşaması, TOKİ + CSB kesişim sinyali.">
+        <circle cx="290" cy="250" r="13" fill="var(--gold)"/>
+        <text class="pin-num" x="290" y="250" style="fill:#000">3</text>
+        <text class="pin-label" x="307" y="253" style="font-size:10px">Halkalı Rezerv</text>
+      </g>
+
+      <!-- 4 · Beylikdüzü / Adnan Kahveci -->
+      <g class="plan-pin" data-h4="Beylikdüzü / Adnan Kahveci" data-meta="2026-05-15 · 1648 ada 4 parsel · sosyal tesis" data-desc="1648 ada 4 parsel sosyal tesis amaçlı plan değişikliği. İlçenin sosyal donatı altyapısı genişliyor.">
+        <circle cx="280" cy="335" r="13" fill="var(--gold)"/>
+        <text class="pin-num" x="280" y="335" style="fill:#000">4</text>
+        <text class="pin-label" x="297" y="338" style="font-size:10px">Adnan Kahveci</text>
+      </g>
+
+      <!-- 5 · Büyükçekmece riskli yapı -->
+      <g class="plan-pin" data-h4="Büyükçekmece / 40 Riskli Yapı" data-meta="2026-05-12 · Habertürk · 3 yapı yıkıldı" data-desc="3 riskli yapıdan toplam 40 bağımsız bölüm yıkıldı. İstanbul'un riskli stok envanteri azalıyor — TOKİ 'Yarısı Bizden' kampanyasıyla cross-ref.">
+        <circle cx="180" cy="290" r="13" fill="var(--gold)"/>
+        <text class="pin-num" x="180" y="290" style="fill:#000">5</text>
+        <text class="pin-label" x="197" y="293" style="font-size:10px">Riskli yıkım</text>
+      </g>
+
+      <!-- Açıklama altta -->
+      <text x="20" y="510" font-family="JetBrains Mono" font-size="10" fill="#4b5563">
+        Veri: CSB İstanbul İl Müdürlüğü (Sprint 17) + İBB Google News (Sprint 10) + Sahibinden master (Sprint 7)
+      </text>
+      <text x="20" y="528" font-family="JetBrains Mono" font-size="10" fill="#4b5563">
+        Pinlere fareyle gel — detay tooltip. Schematic harita, coğrafi ölçek temsili değil.
+      </text>
+
+    </svg>
+  </div>
+
+  <!-- LİSTE -->
+  <div class="ist-liste">
+    <h3>5 Mega Plan Lokasyonu — Detay</h3>
+
+    <div class="ist-row hero">
+      <div class="num">1</div>
+      <div class="mid">
+        <h4 style="color:var(--cta)">Arnavutköy / Dursunköy ⭐⭐</h4>
+        <div class="meta">2026-05-15 · CSB İstanbul · 1/5000 nazım + 1/1000 uygulama</div>
+        <p style="margin: 6px 0 0; color: var(--txt-muted); font-size: 0.88rem;">Tradia'nın gördüğü en büyük tek-karar İstanbul alanı. 2.7 milyon m². Sprint 7 GUCLU_POZITIF + CSB resmi onay.</p>
+      </div>
+      <div class="alan">272.61 ha</div>
+    </div>
+
+    <div class="ist-row">
+      <div class="num alt">2</div>
+      <div class="mid">
+        <h4>Arnavutköy / Haraççı</h4>
+        <div class="meta">2026-05-21 · CSB İstanbul · 1/1000 plan</div>
+        <p style="margin: 6px 0 0; color: var(--txt-muted); font-size: 0.88rem;">6356 ada 1 parsel imar plan değişikliği. Arnavutköy'de 2 hafta içinde 2. CSB kararı.</p>
+      </div>
+      <div class="alan">6356 ada</div>
+    </div>
+
+    <div class="ist-row">
+      <div class="num alt">3</div>
+      <div class="mid">
+        <h4>Küçükçekmece / Halkalı Rezerv</h4>
+        <div class="meta">2026-05-13 · CSB İstanbul · Rezerv Yapı Alanı</div>
+        <p style="margin: 6px 0 0; color: var(--txt-muted); font-size: 0.88rem;">Halkalı mevkisinde Rezerv Yapı Alanı tanımlaması — kentsel dönüşüm hazırlık aşaması.</p>
+      </div>
+      <div class="alan">Rezerv</div>
+    </div>
+
+    <div class="ist-row">
+      <div class="num alt">4</div>
+      <div class="mid">
+        <h4>Beylikdüzü / Adnan Kahveci</h4>
+        <div class="meta">2026-05-15 · CSB İstanbul · 1648 ada 4 parsel</div>
+        <p style="margin: 6px 0 0; color: var(--txt-muted); font-size: 0.88rem;">Sosyal tesis amaçlı plan değişikliği. Sosyal donatı altyapısı genişliyor.</p>
+      </div>
+      <div class="alan">1648 ada</div>
+    </div>
+
+    <div class="ist-row">
+      <div class="num alt">5</div>
+      <div class="mid">
+        <h4>Büyükçekmece / 40 Riskli Yapı Yıkıldı</h4>
+        <div class="meta">2026-05-12 · İBB Google News (Habertürk) · Kentsel dönüşüm</div>
+        <p style="margin: 6px 0 0; color: var(--txt-muted); font-size: 0.88rem;">3 yapıdan 40 bağımsız bölüm yıkıldı. TOKİ "Yarısı Bizden" kampanyasıyla cross-ref.</p>
+      </div>
+      <div class="alan">40 birim</div>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <p class="center muted" style="font-size: 0.85rem;">
+    Veri kaynağı: CSB İstanbul (39 duyuru · 6 KABUL) · İBB Google News (273 item · 114 havuza eklendi) · Sahibinden İstanbul master (67.279 ilan)<br>
+    <a href="../bultenler/sayi-3-v6-istanbul-arnavutkoy.html">← Sayı 3 v6 Bülten</a>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="../bultenler/index.html">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+<script>
+const tooltip = document.getElementById('ist-tooltip');
+const mapWrap = document.querySelector('.ist-map-wrap');
+
+function showTip(target, e) {
+  const d = target.dataset;
+  tooltip.innerHTML = `
+    <div class="tt-h4">${d.h4}</div>
+    <div class="tt-meta">${d.meta}</div>
+    <div class="tt-desc">${d.desc}</div>
+  `;
+  const rect = mapWrap.getBoundingClientRect();
+  const x = e.clientX - rect.left + 14;
+  const y = e.clientY - rect.top + 14;
+  tooltip.style.left = Math.min(x, rect.width - 340) + 'px';
+  tooltip.style.top = Math.min(y, rect.height - 180) + 'px';
+  tooltip.classList.add('show');
+}
+
+document.querySelectorAll('.plan-pin').forEach(el => {
+  el.addEventListener('mouseenter', (e) => showTip(el, e));
+  el.addEventListener('mousemove', (e) => {
+    const rect = mapWrap.getBoundingClientRect();
+    const x = e.clientX - rect.left + 14;
+    const y = e.clientY - rect.top + 14;
+    tooltip.style.left = Math.min(x, rect.width - 340) + 'px';
+    tooltip.style.top = Math.min(y, rect.height - 180) + 'px';
+  });
+  el.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Bursa Mahalle Isı Haritası — İnteraktif</title>
+  <meta name="description" content="Bursa 62 mahalle × 3 kategori (SICAK · OLGUNLAŞMIŞ · ERKEN SİNYAL) interaktif harita.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    .bh-hero { padding: 32px 24px; background: linear-gradient(135deg, rgba(220,38,38,0.06), rgba(245,158,11,0.04)); border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+
+    .bh-controls {
+      display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 20px;
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 8px;
+      margin-bottom: 20px; align-items: center;
+    }
+    .bh-controls button {
+      background: var(--bg-2); border: 1px solid var(--border); color: var(--txt-muted);
+      padding: 8px 14px; border-radius: 4px; font-family: 'JetBrains Mono'; font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.08em; cursor: pointer; transition: all 0.15s;
+    }
+    .bh-controls button:hover { color: var(--txt); border-color: var(--border-2); }
+    .bh-controls button.active.cat-sicak  { background: var(--cta);   color: #fff; border-color: var(--cta); }
+    .bh-controls button.active.cat-olgun  { background: var(--gold);  color: #000; border-color: var(--gold); }
+    .bh-controls button.active.cat-erken  { background: var(--up);    color: #000; border-color: var(--up); }
+    .bh-controls button.active.cat-all    { background: var(--txt);   color: var(--bg); border-color: var(--txt); }
+    .bh-controls .lbl { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* SVG harita stilleri */
+    .bh-map-wrap {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .bh-svg { width: 100%; height: auto; max-height: 600px; display: block; }
+    .ilce-block { fill: var(--bg-elev); stroke: var(--border-2); stroke-width: 1; transition: fill 0.2s; }
+    .ilce-block:hover { fill: var(--bg-2); }
+    .ilce-label { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 12px; fill: var(--txt-muted); text-anchor: middle; pointer-events: none; }
+
+    .mahalle-dot { cursor: pointer; transition: all 0.2s; }
+    .mahalle-dot:hover { transform-origin: center; }
+    .mahalle-label { font-family: 'JetBrains Mono', monospace; font-size: 9px; fill: var(--txt-muted); pointer-events: none; text-anchor: start; }
+
+    .dot-sicak { fill: var(--cta); }
+    .dot-olgun { fill: var(--gold); }
+    .dot-erken { fill: var(--up); }
+
+    .filtered-out { opacity: 0.15; }
+
+    /* Tooltip */
+    .bh-tooltip {
+      position: absolute;
+      background: var(--bg-elev);
+      border: 1px solid var(--border-2);
+      border-radius: 6px;
+      padding: 12px 14px;
+      font-size: 0.85rem;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.15s;
+      z-index: 10;
+      max-width: 280px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+    }
+    .bh-tooltip.show { opacity: 1; }
+    .bh-tooltip .tt-mah { font-family: 'Space Grotesk'; font-weight: 700; font-size: 1rem; color: var(--txt); margin-bottom: 2px; }
+    .bh-tooltip .tt-ilce { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px; }
+    .bh-tooltip .tt-row { display: flex; justify-content: space-between; padding: 3px 0; }
+    .bh-tooltip .tt-row .k { color: var(--txt-muted); font-size: 0.78rem; font-family: 'JetBrains Mono'; }
+    .bh-tooltip .tt-row .v { color: var(--txt); font-weight: 700; font-family: 'JetBrains Mono'; font-size: 0.85rem; }
+    .bh-tooltip .tt-kat { display: inline-block; padding: 2px 8px; border-radius: 3px; font-family: 'JetBrains Mono'; font-size: 9px; text-transform: uppercase; letter-spacing: 0.08em; margin-top: 6px; }
+    .bh-tooltip .tt-kat.cat-sicak { background: var(--cta); color: #fff; }
+    .bh-tooltip .tt-kat.cat-olgun { background: var(--gold); color: #000; }
+    .bh-tooltip .tt-kat.cat-erken { background: var(--up); color: #000; }
+    .bh-tooltip .tt-note { margin-top: 6px; color: var(--txt-muted); font-size: 0.78rem; font-style: italic; }
+
+    /* Legend */
+    .bh-legend {
+      display: flex; gap: 24px; padding: 16px 20px;
+      border: 1px solid var(--border); border-radius: 8px;
+      background: var(--bg-card); margin-bottom: 24px; flex-wrap: wrap;
+    }
+    .bh-legend-item { display: flex; align-items: center; gap: 8px; }
+    .bh-legend-dot { width: 14px; height: 14px; border-radius: 50%; }
+    .bh-legend-lbl { font-family: 'JetBrains Mono'; font-size: 11px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .bh-legend-cnt { font-family: 'JetBrains Mono'; font-weight: 700; color: var(--txt); font-size: 13px; }
+
+    /* Liste — alt panel */
+    .bh-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-bottom: 40px;
+    }
+    @media (max-width: 700px) { .bh-grid { grid-template-columns: 1fr; } }
+    .bh-col { border: 1px solid var(--border); background: var(--bg-card); border-radius: 8px; padding: 16px; }
+    .bh-col h3 { margin: 0 0 10px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 1rem; text-transform: uppercase; letter-spacing: 0.06em; }
+    .bh-col .bh-row { display: grid; grid-template-columns: 1fr auto; gap: 8px; padding: 6px 0; border-bottom: 1px solid rgba(31,41,55,0.5); font-size: 0.88rem; cursor: pointer; transition: background 0.15s; }
+    .bh-col .bh-row:hover { background: rgba(255,255,255,0.02); }
+    .bh-col .bh-row:last-child { border-bottom: none; }
+    .bh-col .bh-row .mh { color: var(--txt); }
+    .bh-col .bh-row .ilce { font-size: 11px; color: var(--txt-faint); font-family: 'JetBrains Mono'; }
+    .bh-col .bh-row .ilan { font-family: 'JetBrains Mono'; color: var(--gold); font-weight: 700; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Bursa Harita</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="../bultenler/index.html">Bültenler</a>
+      <a href="../bultenler/sayi-2-v6-bursa-mahalle-isi.html">Sayı 2</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wide" style="padding-bottom: 60px;">
+
+  <div class="bh-hero">
+    <span class="t-eyebrow">İnteraktif Harita · Sayı 2 v6</span>
+    <h1>Bursa Mahalle <span class="grad-text">Isı Haritası</span></h1>
+    <p class="lede">62 mahalle, 17 ilçe, 3 kategori. Mahalleye fareyle gel — meclis kararı, ilan sayısı, TL/m². Filtre düğmeleriyle kategori daraltma.</p>
+  </div>
+
+  <!-- Legend -->
+  <div class="bh-legend">
+    <div class="bh-legend-item"><span class="bh-legend-dot" style="background:var(--cta)"></span><span class="bh-legend-lbl">🔥 Sıcak</span><span class="bh-legend-cnt">1</span></div>
+    <div class="bh-legend-item"><span class="bh-legend-dot" style="background:var(--gold)"></span><span class="bh-legend-lbl">🏛️ Olgunlaşmış</span><span class="bh-legend-cnt">15</span></div>
+    <div class="bh-legend-item"><span class="bh-legend-dot" style="background:var(--up)"></span><span class="bh-legend-lbl">🌱 Erken Sinyal</span><span class="bh-legend-cnt">20</span></div>
+    <div class="bh-legend-item" style="margin-left:auto"><span class="bh-legend-lbl muted">Toplam:</span><span class="bh-legend-cnt">36 mahalle (62 izlem)</span></div>
+  </div>
+
+  <!-- Filter controls -->
+  <div class="bh-controls">
+    <span class="lbl">Filtre:</span>
+    <button class="active cat-all" data-filter="all">Tümü</button>
+    <button data-filter="sicak" class="cat-all">🔥 Sıcak</button>
+    <button data-filter="olgun" class="cat-all">🏛️ Olgunlaşmış</button>
+    <button data-filter="erken" class="cat-all">🌱 Erken Sinyal</button>
+    <span class="lbl" style="margin-left:auto">Veri: BBB Meclis + Sahibinden + CSB Bursa</span>
+  </div>
+
+  <!-- SVG Harita -->
+  <div class="bh-map-wrap">
+    <div id="bh-tooltip" class="bh-tooltip">
+      <div class="tt-mah">—</div>
+    </div>
+
+    <svg class="bh-svg" viewBox="0 0 900 540" xmlns="http://www.w3.org/2000/svg">
+
+      <!-- Bursa şehir konsepti — ilçeler grid kutu olarak -->
+      <!-- Konum yaklaşık coğrafi: kuzey üstte (Gemlik, Mudanya), merkez Osmangazi, doğu Yıldırım/Kestel, güneydoğu İnegöl -->
+
+      <!-- Gemlik (kuzeydoğu) -->
+      <rect class="ilce-block" x="540" y="40" width="200" height="60" rx="6"/>
+      <text class="ilce-label" x="640" y="75">Gemlik</text>
+
+      <!-- Mudanya (kuzey/batı kıyı) -->
+      <rect class="ilce-block" x="160" y="40" width="180" height="60" rx="6"/>
+      <text class="ilce-label" x="250" y="75">Mudanya</text>
+
+      <!-- Karacabey (uzak batı) -->
+      <rect class="ilce-block" x="20" y="100" width="120" height="50" rx="6"/>
+      <text class="ilce-label" x="80" y="130">Karacabey</text>
+
+      <!-- Nilüfer (batı, Osmangazi'nin solu) -->
+      <rect class="ilce-block" x="160" y="120" width="240" height="180" rx="6"/>
+      <text class="ilce-label" x="280" y="138">Nilüfer</text>
+
+      <!-- Osmangazi (merkez, en büyük) -->
+      <rect class="ilce-block" x="420" y="120" width="280" height="220" rx="6" style="fill:rgba(245,158,11,0.04)"/>
+      <text class="ilce-label" x="560" y="138">Osmangazi (merkez)</text>
+
+      <!-- Yıldırım (doğu) -->
+      <rect class="ilce-block" x="720" y="120" width="160" height="180" rx="6"/>
+      <text class="ilce-label" x="800" y="138">Yıldırım</text>
+
+      <!-- Kestel (doğu altta) -->
+      <rect class="ilce-block" x="720" y="320" width="160" height="50" rx="6"/>
+      <text class="ilce-label" x="800" y="350">Kestel</text>
+
+      <!-- Gürsu (Yıldırım'ın yanı) -->
+      <rect class="ilce-block" x="720" y="390" width="160" height="50" rx="6"/>
+      <text class="ilce-label" x="800" y="420">Gürsu</text>
+
+      <!-- İnegöl (güneydoğu) -->
+      <rect class="ilce-block" x="540" y="370" width="160" height="60" rx="6"/>
+      <text class="ilce-label" x="620" y="405">İnegöl</text>
+
+      <!-- Mustafakemalpaşa (güneybatı) -->
+      <rect class="ilce-block" x="20" y="370" width="160" height="50" rx="6"/>
+      <text class="ilce-label" x="100" y="400">M.K.Paşa</text>
+
+      <!-- Demirtaş bölgesi (Osmangazi doğu, vurgulu) -->
+      <rect class="ilce-block" x="600" y="270" width="100" height="60" rx="4" style="fill:rgba(220,38,38,0.08); stroke:rgba(220,38,38,0.3)"/>
+      <text class="ilce-label" x="650" y="305" style="fill:var(--cta);font-size:10px">Demirtaş bölgesi</text>
+
+      <!-- ============ MAHALLE NOKTALARI ============ -->
+
+      <!-- SICAK (1) — Demirtaş Sakarya -->
+      <g class="mahalle-dot" data-kat="sicak" data-name="Demirtaş Sakarya" data-ilce="Osmangazi"
+         data-ilan="187" data-meclis="2" data-medyan="4.5M ₺" data-note="Tek SICAK mahalle. Demirtaş ailesi toplamı ~327 ilan.">
+        <circle class="dot-sicak" cx="635" cy="295" r="10"/>
+        <text class="mahalle-label" x="650" y="298">D. Sakarya</text>
+      </g>
+
+      <!-- OLGUNLAŞMIŞ (Osmangazi merkez) -->
+      <g class="mahalle-dot" data-kat="olgun" data-name="Kovukçınar" data-ilce="Osmangazi" data-ilan="193" data-medyan="7.000.000 ₺" data-m2="99.538 ₺/m²">
+        <circle class="dot-olgun" cx="480" cy="180" r="9"/>
+        <text class="mahalle-label" x="492" y="183">Kovukçınar 193</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Tayakadın" data-ilce="Osmangazi" data-ilan="178" data-medyan="2.700.000 ₺" data-m2="46.462 ₺/m²">
+        <circle class="dot-olgun" cx="540" cy="180" r="9"/>
+        <text class="mahalle-label" x="552" y="183">Tayakadın 178</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Çekirge" data-ilce="Osmangazi" data-ilan="140" data-medyan="6.770.000 ₺" data-m2="52.456 ₺/m²" data-note="turistik tarihi">
+        <circle class="dot-olgun" cx="450" cy="210" r="8"/>
+        <text class="mahalle-label" x="462" y="213">Çekirge 140</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Bağlarbaşı" data-ilce="Osmangazi" data-ilan="138" data-medyan="6.325.000 ₺" data-m2="79.529 ₺/m²">
+        <circle class="dot-olgun" cx="540" cy="210" r="8"/>
+        <text class="mahalle-label" x="552" y="213">Bağlarbaşı 138</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Altıparmak" data-ilce="Osmangazi" data-ilan="124" data-medyan="2.235.000 ₺" data-m2="57.626 ₺/m²">
+        <circle class="dot-olgun" cx="475" cy="240" r="7"/>
+        <text class="mahalle-label" x="487" y="243">Altıparmak 124</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Ulucami" data-ilce="Osmangazi" data-ilan="84" data-medyan="4.500.000 ₺" data-m2="102.806 ₺/m²" data-note="tarihi merkez">
+        <circle class="dot-olgun" cx="555" cy="240" r="7"/>
+        <text class="mahalle-label" x="567" y="243">Ulucami 84</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Soğanlı" data-ilce="Osmangazi" data-ilan="63" data-medyan="7.850.000 ₺" data-m2="68.109 ₺/m²">
+        <circle class="dot-olgun" cx="445" cy="270" r="6"/>
+        <text class="mahalle-label" x="455" y="273">Soğanlı 63</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Altınova ⭐" data-ilce="Osmangazi" data-ilan="53" data-medyan="8.000.000 ₺" data-m2="140.412 ₺/m²" data-note="EN PREMİUM TL/m²">
+        <circle class="dot-olgun" cx="510" cy="270" r="9" style="stroke:var(--gold); stroke-width:2; fill:var(--gold)"/>
+        <text class="mahalle-label" x="525" y="273" style="fill:var(--gold);font-weight:700">Altınova ⭐</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Panayır" data-ilce="Osmangazi" data-ilan="51" data-medyan="5.395.000 ₺" data-m2="78.739 ₺/m²">
+        <circle class="dot-olgun" cx="580" cy="270" r="6"/>
+        <text class="mahalle-label" x="590" y="273">Panayır 51</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Akpınar ⭐⭐" data-ilce="Osmangazi" data-ilan="49" data-medyan="7.550.000 ₺" data-m2="88.301 ₺/m²" data-note="Sprint 7 tezi — 4 kanal mührü">
+        <circle class="dot-olgun" cx="440" cy="305" r="9" style="stroke:var(--gold); stroke-width:2"/>
+        <text class="mahalle-label" x="454" y="308" style="fill:var(--gold);font-weight:700">Akpınar ⭐⭐</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Köyler" data-ilce="Osmangazi" data-ilan="48" data-medyan="35.000.000 ₺" data-m2="102.587 ₺/m²" data-note="villa kategorisi">
+        <circle class="dot-olgun" cx="505" cy="305" r="6"/>
+        <text class="mahalle-label" x="515" y="308">Köyler 48 (villa)</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Emek" data-ilce="Osmangazi" data-ilan="49" data-medyan="4.200.000 ₺" data-m2="47.681 ₺/m²">
+        <circle class="dot-olgun" cx="475" cy="325" r="6"/>
+        <text class="mahalle-label" x="485" y="328">Emek 49</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Demirtaş Barbaros" data-ilce="Osmangazi" data-ilan="47" data-medyan="4.000.000 ₺" data-m2="29.862 ₺/m²" data-note="Demirtaş ailesi">
+        <circle class="dot-olgun" cx="660" cy="295" r="6"/>
+        <text class="mahalle-label" x="670" y="298">D.Barbaros 47</text>
+      </g>
+
+      <!-- Nilüfer olgun -->
+      <g class="mahalle-dot" data-kat="olgun" data-name="Görükle 🆕" data-ilce="Nilüfer" data-ilan="44" data-meclis="0" data-note="Sprint 15 keşfi (NULL regex)">
+        <circle class="dot-olgun" cx="200" cy="190" r="8" style="stroke:var(--gold); stroke-width:1.5"/>
+        <text class="mahalle-label" x="212" y="193">Görükle 44 🆕</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Mudanya (NULL)" data-ilce="Mudanya" data-ilan="43" data-medyan="6.300.000 ₺" data-m2="55.138 ₺/m²" data-note="deniz erişimi">
+        <circle class="dot-olgun" cx="250" cy="80" r="6"/>
+        <text class="mahalle-label" x="260" y="83">Mudanya 43</text>
+      </g>
+
+      <!-- Nilüfer NULL'tan kurtarılan ek mahalleler -->
+      <g class="mahalle-dot" data-kat="olgun" data-name="Kayapa" data-ilce="Nilüfer" data-ilan="18" data-note="NULL regex">
+        <circle class="dot-olgun" cx="200" cy="215" r="5"/>
+        <text class="mahalle-label" x="210" y="218">Kayapa 18</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Balat" data-ilce="Nilüfer" data-ilan="16" data-note="NULL regex">
+        <circle class="dot-olgun" cx="270" cy="190" r="5"/>
+        <text class="mahalle-label" x="280" y="193">Balat 16</text>
+      </g>
+      <g class="mahalle-dot" data-kat="olgun" data-name="Özlüce" data-ilce="Nilüfer" data-ilan="8" data-note="NULL regex">
+        <circle class="dot-olgun" cx="340" cy="190" r="4"/>
+        <text class="mahalle-label" x="349" y="193">Özlüce 8</text>
+      </g>
+
+      <!-- ERKEN SİNYAL -->
+      <g class="mahalle-dot" data-kat="erken" data-name="Yunuseli" data-ilce="Osmangazi" data-meclis="6" data-ilan="9" data-note="v1 SICAK → ERKEN (multi-word düzeltme)">
+        <circle class="dot-erken" cx="610" cy="180" r="7"/>
+        <text class="mahalle-label" x="622" y="183">Yunuseli (6 mec)</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Fethiye" data-ilce="Nilüfer" data-meclis="3" data-ilan="7" data-note="Sprint 15'te NULL'tan yakalandı">
+        <circle class="dot-erken" cx="265" cy="220" r="6"/>
+        <text class="mahalle-label" x="275" y="223">Fethiye (3·7)</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Ertuğrul" data-ilce="Nilüfer" data-meclis="3" data-ilan="0" data-note="SIFIR ilan — saf erken sinyal">
+        <circle class="dot-erken" cx="200" cy="250" r="6" style="stroke:var(--up); stroke-width:2"/>
+        <text class="mahalle-label" x="212" y="253" style="fill:var(--up); font-weight:700">Ertuğrul (3·0)</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Gümüştepe" data-ilce="Nilüfer" data-meclis="3" data-ilan="0" data-note="SIFIR ilan — saf erken sinyal">
+        <circle class="dot-erken" cx="270" cy="250" r="6" style="stroke:var(--up); stroke-width:2"/>
+        <text class="mahalle-label" x="282" y="253" style="fill:var(--up); font-weight:700">Gümüştepe (3·0)</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Hasanağa" data-ilce="Nilüfer" data-meclis="3" data-ilan="0" data-note="SIFIR ilan — saf erken sinyal">
+        <circle class="dot-erken" cx="340" cy="250" r="6" style="stroke:var(--up); stroke-width:2"/>
+        <text class="mahalle-label" x="352" y="253" style="fill:var(--up); font-weight:700">Hasanağa (3·0)</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Erikli ⭐" data-ilce="Yıldırım" data-meclis="3" data-ilan="0" data-note="R15 — kompozit ölçek (1/25000+1/5000+1/1000)">
+        <circle class="dot-erken" cx="790" cy="180" r="8" style="stroke:var(--up); stroke-width:2"/>
+        <text class="mahalle-label" x="803" y="183" style="fill:var(--up); font-weight:700">Erikli ⭐ R15</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Mollaarap ⭐⭐" data-ilce="Yıldırım" data-meclis="CSB" data-ilan="—" data-note="R15 v6 — Riskli Alan 6 ada (557-559-560-561-579-612)">
+        <circle class="dot-erken" cx="795" cy="220" r="10" style="stroke:var(--cta); stroke-width:2; fill:url(#mlrp-grad)"/>
+        <text class="mahalle-label" x="810" y="223" style="fill:var(--cta); font-weight:700">Mollaarap ⭐⭐</text>
+      </g>
+      <g class="mahalle-dot" data-kat="erken" data-name="Millet" data-ilce="Yıldırım" data-meclis="3" data-ilan="4" data-note="R15 mahalle">
+        <circle class="dot-erken" cx="800" cy="260" r="6"/>
+        <text class="mahalle-label" x="812" y="263">Millet (3·4)</text>
+      </g>
+
+      <!-- gradient def -->
+      <defs>
+        <radialGradient id="mlrp-grad" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#fbbf24"/>
+          <stop offset="100%" stop-color="#dc2626"/>
+        </radialGradient>
+      </defs>
+
+      <!-- Açıklama notları -->
+      <text x="20" y="500" font-family="JetBrains Mono" font-size="10" fill="#4b5563">
+        Veri: BBB Meclis PDF (62 mahalle) + Sahibinden master (2.592 ilan) + CSB Bursa İl Müdürlüğü (37 duyuru, Sprint 19)
+      </text>
+      <text x="20" y="518" font-family="JetBrains Mono" font-size="10" fill="#4b5563">
+        Mahalleye fareyle gel — detay tooltip. Üstteki filtre düğmeleriyle kategori daralt.
+      </text>
+
+    </svg>
+  </div>
+
+  <!-- 3 sütun listesi (alternatif görünüm) -->
+  <h2 style="margin: 32px 0 16px;">3 Kategori Tam Liste</h2>
+  <div class="bh-grid">
+
+    <div class="bh-col">
+      <h3 class="cat-sicak">🔥 Sıcak (1)</h3>
+      <div class="bh-row"><span><span class="mh">Demirtaş Sakarya</span><br><span class="ilce">Osmangazi</span></span><span class="ilan">187</span></div>
+    </div>
+
+    <div class="bh-col">
+      <h3 class="cat-olgun">🏛️ Olgunlaşmış (15)</h3>
+      <div class="bh-row"><span><span class="mh">Kovukçınar</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">193</span></div>
+      <div class="bh-row"><span><span class="mh">Tayakadın</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">178</span></div>
+      <div class="bh-row"><span><span class="mh">Çekirge</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">140</span></div>
+      <div class="bh-row"><span><span class="mh">Bağlarbaşı</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">138</span></div>
+      <div class="bh-row"><span><span class="mh">Altıparmak</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">124</span></div>
+      <div class="bh-row"><span><span class="mh">Ulucami</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">84</span></div>
+      <div class="bh-row"><span><span class="mh">Soğanlı</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">63</span></div>
+      <div class="bh-row" style="background:rgba(245,158,11,0.06)"><span><span class="mh">Altınova ⭐</span> <span class="ilce">/Osmangazi · 140K TL/m²</span></span><span class="ilan">53</span></div>
+      <div class="bh-row"><span><span class="mh">Panayır</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">51</span></div>
+      <div class="bh-row" style="background:rgba(245,158,11,0.06)"><span><span class="mh">Akpınar ⭐⭐</span> <span class="ilce">/Osmangazi · 88K TL/m²</span></span><span class="ilan">49</span></div>
+      <div class="bh-row"><span><span class="mh">Emek</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">49</span></div>
+      <div class="bh-row"><span><span class="mh">Köyler</span> <span class="ilce">/Osmangazi · villa</span></span><span class="ilan">48</span></div>
+      <div class="bh-row"><span><span class="mh">D. Barbaros</span> <span class="ilce">/Osmangazi</span></span><span class="ilan">47</span></div>
+      <div class="bh-row"><span><span class="mh">Görükle 🆕</span> <span class="ilce">/Nilüfer</span></span><span class="ilan">44</span></div>
+      <div class="bh-row"><span><span class="mh">Mudanya</span> <span class="ilce">/Mudanya</span></span><span class="ilan">43</span></div>
+    </div>
+
+    <div class="bh-col">
+      <h3 class="cat-erken">🌱 Erken Sinyal (20)</h3>
+      <div class="bh-row"><span><span class="mh">Yunuseli</span> <span class="ilce">/Osmangazi · 6 meclis</span></span><span class="ilan">9</span></div>
+      <div class="bh-row"><span><span class="mh">Fethiye</span> <span class="ilce">/Nilüfer · 3 meclis</span></span><span class="ilan">7</span></div>
+      <div class="bh-row" style="background:rgba(16,185,129,0.06)"><span><span class="mh">Ertuğrul</span> <span class="ilce">/Nilüfer · 3 meclis</span></span><span class="ilan">0</span></div>
+      <div class="bh-row" style="background:rgba(16,185,129,0.06)"><span><span class="mh">Gümüştepe</span> <span class="ilce">/Nilüfer · 3 meclis</span></span><span class="ilan">0</span></div>
+      <div class="bh-row" style="background:rgba(16,185,129,0.06)"><span><span class="mh">Hasanağa</span> <span class="ilce">/Nilüfer · 3 meclis</span></span><span class="ilan">0</span></div>
+      <div class="bh-row" style="background:rgba(16,185,129,0.06)"><span><span class="mh">Erikli ⭐</span> <span class="ilce">/Yıldırım · R15 kompozit</span></span><span class="ilan">0</span></div>
+      <div class="bh-row" style="background:rgba(220,38,38,0.06)"><span><span class="mh">Mollaarap ⭐⭐</span> <span class="ilce">/Yıldırım · CSB Riskli Alan 6 ada</span></span><span class="ilan">v6</span></div>
+      <div class="bh-row"><span><span class="mh">Millet</span> <span class="ilce">/Yıldırım · 3 meclis</span></span><span class="ilan">4</span></div>
+      <div class="bh-row"><span><span class="mh">Karapınar</span> <span class="ilce">/Yıldırım</span></span><span class="ilan">0</span></div>
+      <div class="bh-row"><span><span class="mh">Siteler</span> <span class="ilce">/Yıldırım</span></span><span class="ilan">0</span></div>
+      <div class="bh-row"><span class="muted" style="font-size:0.8rem; padding:8px 0;">+ 10 mahalle daha (BBB 1-2 meclis)</span><span></span></div>
+    </div>
+
+  </div>
+
+  <hr class="divider">
+
+  <p class="center muted" style="font-size: 0.85rem;">
+    Veri kaynağı: BBB Meclis PDF tam metin · Sahibinden Bursa master 2.592 ilan · CSB Bursa İl Müdürlüğü · Sprint 11-19 (5 sprint çevrimi)<br>
+    <a href="../bultenler/sayi-2-v6-bursa-mahalle-isi.html">← Sayı 2 v6 Bülten</a>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="../bultenler/index.html">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+<script>
+const tooltip = document.getElementById('bh-tooltip');
+const mapWrap = document.querySelector('.bh-map-wrap');
+
+function showTooltip(target, e) {
+  const d = target.dataset;
+  const kat = d.kat;
+  const katLbl = { sicak: '🔥 Sıcak', olgun: '🏛️ Olgunlaşmış', erken: '🌱 Erken Sinyal' }[kat] || '';
+
+  let html = `<div class="tt-mah">${d.name}</div>`;
+  html += `<div class="tt-ilce">${d.ilce}</div>`;
+  if (d.ilan !== undefined) html += `<div class="tt-row"><span class="k">İlan</span><span class="v">${d.ilan}</span></div>`;
+  if (d.meclis !== undefined) html += `<div class="tt-row"><span class="k">Meclis kararı</span><span class="v">${d.meclis}</span></div>`;
+  if (d.medyan !== undefined) html += `<div class="tt-row"><span class="k">Medyan</span><span class="v">${d.medyan}</span></div>`;
+  if (d.m2 !== undefined) html += `<div class="tt-row"><span class="k">TL/m²</span><span class="v">${d.m2}</span></div>`;
+  html += `<span class="tt-kat cat-${kat}">${katLbl}</span>`;
+  if (d.note) html += `<div class="tt-note">${d.note}</div>`;
+  tooltip.innerHTML = html;
+
+  const rect = mapWrap.getBoundingClientRect();
+  const x = e.clientX - rect.left + 14;
+  const y = e.clientY - rect.top + 14;
+  tooltip.style.left = Math.min(x, rect.width - 300) + 'px';
+  tooltip.style.top = Math.min(y, rect.height - 200) + 'px';
+  tooltip.classList.add('show');
+}
+
+document.querySelectorAll('.mahalle-dot').forEach(el => {
+  el.addEventListener('mouseenter', (e) => showTooltip(el, e));
+  el.addEventListener('mousemove', (e) => {
+    const rect = mapWrap.getBoundingClientRect();
+    const x = e.clientX - rect.left + 14;
+    const y = e.clientY - rect.top + 14;
+    tooltip.style.left = Math.min(x, rect.width - 300) + 'px';
+    tooltip.style.top = Math.min(y, rect.height - 200) + 'px';
+  });
+  el.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+});
+
+// Filtre
+document.querySelectorAll('.bh-controls button').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.bh-controls button').forEach(b => {
+      b.classList.remove('active');
+      b.classList.add('cat-all');
+    });
+    btn.classList.add('active');
+    const f = btn.getAttribute('data-filter');
+    if (f === 'sicak') btn.classList.add('cat-sicak');
+    else if (f === 'olgun') btn.classList.add('cat-olgun');
+    else if (f === 'erken') btn.classList.add('cat-erken');
+    else btn.classList.add('cat-all');
+
+    document.querySelectorAll('.mahalle-dot').forEach(el => {
+      el.classList.toggle('filtered-out', f !== 'all' && el.getAttribute('data-kat') !== f);
+    });
+  });
+});
+</script>
+
+</body>
+</html>

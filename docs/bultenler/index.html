@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Bültenler</title>
+  <meta name="description" content="Tradia bültenleri — Çoklu Medya Analist Denetimi, Bursa Mahalle Isı Haritası, İstanbul Mega Plan Değişikliği.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_tradia_tema.css">
+  <style>
+    .bl-card {
+      display: grid;
+      grid-template-columns: 80px 1fr auto;
+      gap: 20px;
+      align-items: center;
+      padding: 22px;
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border-radius: 10px;
+      margin-bottom: 14px;
+      transition: all 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .bl-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    }
+    .bl-num {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 3.5rem; line-height: 1;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text;
+      color: transparent;
+      text-align: center;
+    }
+    .bl-card .meta { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.1em; }
+    .bl-card h3 { font-size: 1.3rem; margin: 4px 0 6px; color: var(--txt); }
+    .bl-card .lede { font-size: 0.95rem; color: var(--txt-muted); line-height: 1.5; margin: 0; }
+    .bl-card .arrow { font-family: 'JetBrains Mono'; font-size: 1.5rem; color: var(--gold); }
+    .bl-card.draft {
+      border-style: dashed;
+      opacity: 0.65;
+    }
+    .bl-card.draft:hover { transform: none; box-shadow: none; cursor: default; border-color: var(--border-2); }
+    .bl-card.draft .arrow { color: var(--txt-faint); }
+
+    .bl-tag {
+      display: inline-block;
+      font-family: 'JetBrains Mono'; font-size: 9px;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 2px 8px; border-radius: 3px;
+      margin-right: 6px;
+    }
+    .bl-tag.yayinda { background: var(--up); color: #000; }
+    .bl-tag.hazirlanan { background: var(--gold); color: #000; }
+    .bl-tag.planlanan { background: var(--bg-elev); color: var(--txt-muted); border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Bültenler</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="#" class="active">Bültenler</a>
+      <a href="../komponentler/analist_skor_panel.html">Analist Panel</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap" style="padding-top: 40px;">
+
+  <span class="t-eyebrow">Bültenler</span>
+  <h1>Tradia <span class="grad-text">Yatırım İstihbaratı</span></h1>
+  <p class="lede">Mahalle granülarite. Çoklu medya denetimi. Mega plan radarı. Tradia bültenleri, Türkiye gayrimenkul ve makro yorum dünyası için saha-içi veri yayını.</p>
+
+  <hr class="divider" style="margin: 32px 0;">
+
+  <!-- SAYI 1 -->
+  <a href="sayi-1-v2-analist-denetimi.html" class="bl-card">
+    <div class="bl-num">01</div>
+    <div>
+      <div class="meta">
+        <span class="bl-tag yayinda">Yayında</span>
+        Haziran 2026 · v2
+      </div>
+      <h3>İki Farklı Profil, Aynı Tutarlılık</h3>
+      <p class="lede">Çoklu Medya Analist Denetimi — Mahfi 67, Kerem 67, Atilla 46, Murat 24. 14 isim, 6 profil tipi, %0 maliyet.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <!-- SAYI 2 -->
+  <a href="sayi-2-v6-bursa-mahalle-isi.html" class="bl-card">
+    <div class="bl-num">02</div>
+    <div>
+      <div class="meta">
+        <span class="bl-tag yayinda">Yayında</span>
+        Haziran 2026 · v6
+      </div>
+      <h3>Bursa Mahalle Isı Haritası — 62 mahalle × 3 kategori</h3>
+      <p class="lede">SICAK · OLGUNLAŞMIŞ · ERKEN SİNYAL. Demirtaş Sakarya 187 ilan, Altınova 140K TL/m², Mollaarap Riskli Alan 6 ada lokalizasyonu. Akpınar paradoksu 4 kanal mührü.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <!-- SAYI 3 -->
+  <a href="sayi-3-v6-istanbul-arnavutkoy.html" class="bl-card">
+    <div class="bl-num">03</div>
+    <div>
+      <div class="meta">
+        <span class="bl-tag yayinda">Yayında</span>
+        Haziran 2026 · v6
+      </div>
+      <h3>Arnavutköy 272.61 ha — 2026 İstanbul'un EN BÜYÜK Plan Değişikliği</h3>
+      <p class="lede">CSB + İBB + Sahibinden 3 paralel kanal cross-validation. Halkalı Rezerv, Beylikdüzü Adnan Kahveci, Büyükçekmece 40 riskli yapı yıkıldı. Cross-Hat 4/4 hat GUCLU_POZITIF.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <hr class="divider" style="margin: 40px 0 24px;">
+
+  <h2>Aday Konular — Sonraki Sayılar</h2>
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; margin-top: 16px;">
+
+    <div class="t-card" style="margin: 0;">
+      <div class="meta mono" style="font-size:10px; color:var(--txt-faint); text-transform:uppercase; letter-spacing:0.1em;">
+        <span class="bl-tag planlanan">Planlanan</span> Sayı 4
+      </div>
+      <h3 style="margin-top:8px">Deprem Bülteni</h3>
+      <p class="muted" style="font-size:0.88rem;">Hatay TOKİ Defne + EKAP Faz 4 +21 ilan. Bölge gayrimenkul piyasası yapısal şok analizi.</p>
+    </div>
+
+    <div class="t-card" style="margin: 0;">
+      <div class="meta mono" style="font-size:10px; color:var(--txt-faint); text-transform:uppercase; letter-spacing:0.1em;">
+        <span class="bl-tag planlanan">Planlanan</span> Sayı 5-9
+      </div>
+      <h3 style="margin-top:8px">Büyükşehir Serisi</h3>
+      <p class="muted" style="font-size:0.88rem;">Ankara, İzmir, Antalya, Kayseri, Konya, Gaziantep, Eskişehir, Adana — mahalle granülarite ile genişleme.</p>
+    </div>
+
+    <div class="t-card" style="margin: 0;">
+      <div class="meta mono" style="font-size:10px; color:var(--txt-faint); text-transform:uppercase; letter-spacing:0.1em;">
+        <span class="bl-tag planlanan">Yol Haritası</span>
+      </div>
+      <h3 style="margin-top:8px">Live Dashboard</h3>
+      <p class="muted" style="font-size:0.88rem;">Gerçek zamanlı havuz büyüklüğü, son haber, sıcak ilçe anomali alarmı. Pro üyelik özelliği.</p>
+    </div>
+  </div>
+
+  <hr class="divider" style="margin: 40px 0 24px;">
+
+  <!-- Türkiye Kapsama Haritası Bonus -->
+  <h2>🇹🇷 Türkiye Kapsama Haritası</h2>
+  <p class="muted">9 büyükşehir derin + 81 il yerel + 9 hükümet kanalı. Endeksa/REIDIN ile karşılaştırma.</p>
+  <a href="../komponentler/turkiye_kapsama_haritasi.html" class="bl-card" style="margin-top: 12px;">
+    <div class="bl-num">🇹🇷</div>
+    <div>
+      <div class="meta">
+        <span class="bl-tag yayinda">Bonus</span>
+        Ulusal Kapsam · Sprint 19 sonu
+      </div>
+      <h3>%94 Kapsama — 9 + 81 + 9 Kanal</h3>
+      <p class="lede">Endeksa/REIDIN tek-kanal endeks. Tradia: mahalle granülerlik × ulusal kapsama × cross-validation × analist denetimi × $0 maliyet. Detaylı karşılaştırma tablosu.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="../komponentler/analist_skor_panel.html">Analist Panel</a> ·
+    <a href="../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+</body>
+</html>
