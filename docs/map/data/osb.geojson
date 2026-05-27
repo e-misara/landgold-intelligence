@@ -1,0 +1,4805 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8050794,
+          41.0698727
+        ]
+      },
+      "properties": {
+        "osb_adi": "İkitelli OSB",
+        "il": "İstanbul",
+        "ilce": "Başakşehir",
+        "bolge": "Marmara",
+        "alan_ha": 1254,
+        "durum": "faal",
+        "ihracat_milyon_usd": 8500,
+        "sektor": "tekstil,hazır giyim,metal",
+        "arsa_usd_m2": 1200,
+        "tradia_score": 88,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1657801,
+          41.0008598
+        ]
+      },
+      "properties": {
+        "osb_adi": "Dudullu OSB",
+        "il": "İstanbul",
+        "ilce": "Ümraniye",
+        "bolge": "Marmara",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2100,
+        "sektor": "elektronik,makine,plastik",
+        "arsa_usd_m2": 1800,
+        "tradia_score": 86,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.3963681,
+          40.883363
+        ]
+      },
+      "properties": {
+        "osb_adi": "Tuzla OSB",
+        "il": "İstanbul",
+        "ilce": "Tuzla",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3200,
+        "sektor": "kimya,plastik,metal",
+        "arsa_usd_m2": 1400,
+        "tradia_score": 82,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.7412446,
+          41.184471
+        ]
+      },
+      "properties": {
+        "osb_adi": "Hadımköy OSB",
+        "il": "İstanbul",
+        "ilce": "Arnavutköy",
+        "bolge": "Marmara",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "otomotiv,metal,makine",
+        "arsa_usd_m2": 950,
+        "tradia_score": 85,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.6801113,
+          41.0342862
+        ]
+      },
+      "properties": {
+        "osb_adi": "Esenyurt OSB",
+        "il": "İstanbul",
+        "ilce": "Esenyurt",
+        "bolge": "Marmara",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 850,
+        "sektor": "tekstil,ambalaj",
+        "arsa_usd_m2": 1100,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9847907,
+          40.2169975
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bursa OSB (BOSB)",
+        "il": "Bursa",
+        "ilce": "Nilüfer",
+        "bolge": "Marmara",
+        "alan_ha": 1876,
+        "durum": "faal",
+        "ihracat_milyon_usd": 12000,
+        "sektor": "otomotiv,tekstil,makine",
+        "arsa_usd_m2": 680,
+        "tradia_score": 89,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.0760992,
+          40.2830186
+        ]
+      },
+      "properties": {
+        "osb_adi": "Demirtaş OSB",
+        "il": "Bursa",
+        "ilce": "Osmangazi",
+        "bolge": "Marmara",
+        "alan_ha": 520,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3500,
+        "sektor": "kimya,plastik,metal",
+        "arsa_usd_m2": 520,
+        "tradia_score": 81,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9847907,
+          40.2169975
+        ]
+      },
+      "properties": {
+        "osb_adi": "Nilüfer OSB",
+        "il": "Bursa",
+        "ilce": "Nilüfer",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 580,
+        "tradia_score": 79,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1570698,
+          40.4301652
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gemlik OSB",
+        "il": "Bursa",
+        "ilce": "Gemlik",
+        "bolge": "Marmara",
+        "alan_ha": 340,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "petrokimya,liman",
+        "arsa_usd_m2": 420,
+        "tradia_score": 83,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.431767,
+          40.8006696
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kocaeli OSB (KOSBI)",
+        "il": "Kocaeli",
+        "ilce": "Gebze",
+        "bolge": "Marmara",
+        "alan_ha": 2400,
+        "durum": "faal",
+        "ihracat_milyon_usd": 18000,
+        "sektor": "otomotiv,kimya,petrokimya",
+        "arsa_usd_m2": 480,
+        "tradia_score": 91,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.5843011,
+          40.8035371
+        ]
+      },
+      "properties": {
+        "osb_adi": "Dilovası OSB",
+        "il": "Kocaeli",
+        "ilce": "Dilovası",
+        "bolge": "Marmara",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 5200,
+        "sektor": "kimya,plastik,metal",
+        "arsa_usd_m2": 380,
+        "tradia_score": 87,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4843584,
+          40.9210777
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gebze OSB",
+        "il": "Kocaeli",
+        "ilce": "Gebze",
+        "bolge": "Marmara",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3800,
+        "sektor": "elektronik,makine",
+        "arsa_usd_m2": 520,
+        "tradia_score": 85,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.9565596,
+          41.2918173
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çerkezköy OSB",
+        "il": "Tekirdağ",
+        "ilce": "Çerkezköy",
+        "bolge": "Marmara",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2200,
+        "sektor": "tekstil,kimya,metal",
+        "arsa_usd_m2": 180,
+        "tradia_score": 80,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8602513,
+          41.1360905
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çorlu OSB",
+        "il": "Tekirdağ",
+        "ilce": "Çorlu",
+        "bolge": "Marmara",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "tekstil,deri,metal",
+        "arsa_usd_m2": 160,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4974704,
+          41.1854448
+        ]
+      },
+      "properties": {
+        "osb_adi": "Muratlı OSB",
+        "il": "Tekirdağ",
+        "ilce": "Muratlı",
+        "bolge": "Marmara",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "gıda,ambalaj",
+        "arsa_usd_m2": 120,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8411084,
+          39.581315
+        ]
+      },
+      "properties": {
+        "osb_adi": "Balıkesir OSB",
+        "il": "Balıkesir",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 920,
+        "sektor": "gıda,seramik,metal",
+        "arsa_usd_m2": 140,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3558365,
+          40.713143
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sakarya OSB",
+        "il": "Sakarya",
+        "ilce": "Arifiye",
+        "bolge": "Marmara",
+        "alan_ha": 520,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "otomotiv,metal,plastik",
+        "arsa_usd_m2": 220,
+        "tradia_score": 80,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2699916,
+          40.6582529
+        ]
+      },
+      "properties": {
+        "osb_adi": "Yalova OSB",
+        "il": "Yalova",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "kimya,plastik",
+        "arsa_usd_m2": 320,
+        "tradia_score": 77,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8567558,
+          41.034547
+        ]
+      },
+      "properties": {
+        "osb_adi": "Topkapı Deri OSB",
+        "il": "İstanbul",
+        "ilce": "Bağcılar",
+        "bolge": "Marmara",
+        "alan_ha": 120,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "deri,hazır giyim",
+        "arsa_usd_m2": 1600,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8657701,
+          41.0030495
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çobançeşme OSB",
+        "il": "İstanbul",
+        "ilce": "Bahçelievler",
+        "bolge": "Marmara",
+        "alan_ha": 95,
+        "durum": "faal",
+        "ihracat_milyon_usd": 320,
+        "sektor": "tekstil,ambalaj",
+        "arsa_usd_m2": 1400,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.7950711,
+          41.1075794
+        ]
+      },
+      "properties": {
+        "osb_adi": "İkitelli Deri OSB",
+        "il": "İstanbul",
+        "ilce": "Başakşehir",
+        "bolge": "Marmara",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "deri,plastik",
+        "arsa_usd_m2": 1100,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.5454836,
+          40.1586918
+        ]
+      },
+      "properties": {
+        "osb_adi": "İnegöl OSB",
+        "il": "Bursa",
+        "ilce": "İnegöl",
+        "bolge": "Marmara",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "mobilya,orman ürünleri",
+        "arsa_usd_m2": 380,
+        "tradia_score": 84,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.4132707,
+          40.0350481
+        ]
+      },
+      "properties": {
+        "osb_adi": "Mustafakemalpaşa OSB",
+        "il": "Bursa",
+        "ilce": "Mustafakemalpaşa",
+        "bolge": "Marmara",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 280,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2120659,
+          40.1998922
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kestel OSB",
+        "il": "Bursa",
+        "ilce": "Kestel",
+        "bolge": "Marmara",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "metal,plastik",
+        "arsa_usd_m2": 320,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.431767,
+          40.8006696
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gebze 2. OSB",
+        "il": "Kocaeli",
+        "ilce": "Gebze",
+        "bolge": "Marmara",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "kimya,plastik",
+        "arsa_usd_m2": 460,
+        "tradia_score": 83,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.7839402,
+          40.760756
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kocaeli 2. OSB",
+        "il": "Kocaeli",
+        "ilce": "Körfez",
+        "bolge": "Marmara",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2200,
+        "sektor": "petrokimya,metal",
+        "arsa_usd_m2": 420,
+        "tradia_score": 82,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0449447,
+          40.7685269
+        ]
+      },
+      "properties": {
+        "osb_adi": "İzmit OSB",
+        "il": "Kocaeli",
+        "ilce": "İzmit",
+        "bolge": "Marmara",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "kağıt,ambalaj",
+        "arsa_usd_m2": 380,
+        "tradia_score": 79,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0476976,
+          41.2254816
+        ]
+      },
+      "properties": {
+        "osb_adi": "Hayrabolu OSB",
+        "il": "Tekirdağ",
+        "ilce": "Hayrabolu",
+        "bolge": "Marmara",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 100,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0120394,
+          40.8811155
+        ]
+      },
+      "properties": {
+        "osb_adi": "Malkara OSB",
+        "il": "Tekirdağ",
+        "ilce": "Malkara",
+        "bolge": "Marmara",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda",
+        "arsa_usd_m2": 90,
+        "tradia_score": 64,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.7206648,
+          40.2071691
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gönen OSB",
+        "il": "Balıkesir",
+        "ilce": "Gönen",
+        "bolge": "Marmara",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "deri,tekstil",
+        "arsa_usd_m2": 110,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.7355212,
+          40.2094489
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bandırma OSB",
+        "il": "Balıkesir",
+        "ilce": "Bandırma",
+        "bolge": "Marmara",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "kimya,gübre,liman",
+        "arsa_usd_m2": 160,
+        "tradia_score": 75,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4028892,
+          40.146271
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çanakkale OSB",
+        "il": "Çanakkale",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "seramik,gıda",
+        "arsa_usd_m2": 180,
+        "tradia_score": 76,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.5587225,
+          41.6759327
+        ]
+      },
+      "properties": {
+        "osb_adi": "Edirne OSB",
+        "il": "Edirne",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 120,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3554651,
+          41.4041358
+        ]
+      },
+      "properties": {
+        "osb_adi": "Lüleburgaz OSB",
+        "il": "Kırklareli",
+        "ilce": "Lüleburgaz",
+        "bolge": "Marmara",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "tekstil,gıda,metal",
+        "arsa_usd_m2": 130,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.3558365,
+          40.713143
+        ]
+      },
+      "properties": {
+        "osb_adi": "Arifiye OSB",
+        "il": "Sakarya",
+        "ilce": "Arifiye",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 980,
+        "sektor": "otomotiv,plastik",
+        "arsa_usd_m2": 200,
+        "tradia_score": 76,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7452727,
+          40.7955034
+        ]
+      },
+      "properties": {
+        "osb_adi": "Hendek OSB",
+        "il": "Sakarya",
+        "ilce": "Hendek",
+        "bolge": "Marmara",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "metal,plastik",
+        "arsa_usd_m2": 170,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.1422531,
+          40.7860603
+        ]
+      },
+      "properties": {
+        "osb_adi": "Düzce OSB",
+        "il": "Düzce",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "orman ürünleri,plastik",
+        "arsa_usd_m2": 160,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2246101,
+          40.7696866
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bolu OSB",
+        "il": "Bolu",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "gıda,plastik,metal",
+        "arsa_usd_m2": 150,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.9861257,
+          40.1712249
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bilecik OSB",
+        "il": "Bilecik",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "porselen,seramik",
+        "arsa_usd_m2": 160,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.333482,
+          41.6814524
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kırklareli OSB",
+        "il": "Kırklareli",
+        "ilce": "Merkez",
+        "bolge": "Marmara",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 320,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 110,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6303057,
+          40.8548793
+        ]
+      },
+      "properties": {
+        "osb_adi": "Keşan OSB",
+        "il": "Edirne",
+        "ilce": "Keşan",
+        "bolge": "Marmara",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 95,
+        "tradia_score": 63,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.9807391,
+          39.5030179
+        ]
+      },
+      "properties": {
+        "osb_adi": "Burhaniye OSB",
+        "il": "Balıkesir",
+        "ilce": "Burhaniye",
+        "bolge": "Marmara",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "zeytin,gıda",
+        "arsa_usd_m2": 120,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.1531894,
+          39.9183805
+        ]
+      },
+      "properties": {
+        "osb_adi": "Susurluk OSB",
+        "il": "Balıkesir",
+        "ilce": "Susurluk",
+        "bolge": "Marmara",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,deri",
+        "arsa_usd_m2": 100,
+        "tradia_score": 63,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8041066,
+          41.1590875
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çorlu 2. OSB",
+        "il": "Tekirdağ",
+        "ilce": "Çorlu",
+        "bolge": "Marmara",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "tekstil,metal,otomotiv",
+        "arsa_usd_m2": 380,
+        "tradia_score": 86,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1523298,
+          41.0703914
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kandıra OSB",
+        "il": "Kocaeli",
+        "ilce": "Kandıra",
+        "bolge": "Marmara",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "kimya,plastik",
+        "arsa_usd_m2": 260,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3172425,
+          38.4537895
+        ]
+      },
+      "properties": {
+        "osb_adi": "Atatürk OSB",
+        "il": "İzmir",
+        "ilce": "Çiğli",
+        "bolge": "Ege",
+        "alan_ha": 1680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 8200,
+        "sektor": "makine,metal,kimya",
+        "arsa_usd_m2": 480,
+        "tradia_score": 87,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3919613,
+          38.458127
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kemalpaşa OSB",
+        "il": "İzmir",
+        "ilce": "Kemalpaşa",
+        "bolge": "Ege",
+        "alan_ha": 920,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3800,
+        "sektor": "gıda,tekstil,metal",
+        "arsa_usd_m2": 320,
+        "tradia_score": 85,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3475609,
+          38.1700242
+        ]
+      },
+      "properties": {
+        "osb_adi": "Torbalı OSB",
+        "il": "İzmir",
+        "ilce": "Torbalı",
+        "bolge": "Ege",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2400,
+        "sektor": "otomotiv,metal",
+        "arsa_usd_m2": 280,
+        "tradia_score": 86,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0190284,
+          38.8273039
+        ]
+      },
+      "properties": {
+        "osb_adi": "Aliağa OSB",
+        "il": "İzmir",
+        "ilce": "Aliağa",
+        "bolge": "Ege",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 4200,
+        "sektor": "petrokimya,gemi",
+        "arsa_usd_m2": 380,
+        "tradia_score": 84,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3403061,
+          38.622658
+        ]
+      },
+      "properties": {
+        "osb_adi": "Manisa OSB",
+        "il": "Manisa",
+        "ilce": "Merkez",
+        "bolge": "Ege",
+        "alan_ha": 2800,
+        "durum": "faal",
+        "ihracat_milyon_usd": 15000,
+        "sektor": "elektronik,beyaz eşya,otomotiv",
+        "arsa_usd_m2": 220,
+        "tradia_score": 90,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.7084176,
+          38.5000458
+        ]
+      },
+      "properties": {
+        "osb_adi": "Turgutlu OSB",
+        "il": "Manisa",
+        "ilce": "Turgutlu",
+        "bolge": "Ege",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 160,
+        "tradia_score": 76,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2451334,
+          37.8074445
+        ]
+      },
+      "properties": {
+        "osb_adi": "Denizli OSB",
+        "il": "Denizli",
+        "ilce": "Merkez",
+        "bolge": "Ege",
+        "alan_ha": 1240,
+        "durum": "faal",
+        "ihracat_milyon_usd": 4500,
+        "sektor": "tekstil,hazır giyim",
+        "arsa_usd_m2": 180,
+        "tradia_score": 82,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2578094,
+          37.8087889
+        ]
+      },
+      "properties": {
+        "osb_adi": "Honaz OSB",
+        "il": "Denizli",
+        "ilce": "Honaz",
+        "bolge": "Ege",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 980,
+        "sektor": "mermer,tekstil",
+        "arsa_usd_m2": 140,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.9849352,
+          37.8558207
+        ]
+      },
+      "properties": {
+        "osb_adi": "Aydın OSB",
+        "il": "Aydın",
+        "ilce": "Merkez",
+        "bolge": "Ege",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1600,
+        "sektor": "gıda,tekstil,makine",
+        "arsa_usd_m2": 160,
+        "tradia_score": 75,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.2213533,
+          38.6769203
+        ]
+      },
+      "properties": {
+        "osb_adi": "Uşak OSB",
+        "il": "Uşak",
+        "ilce": "Merkez",
+        "bolge": "Ege",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2200,
+        "sektor": "deri,tekstil",
+        "arsa_usd_m2": 140,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5636114,
+          38.7855692
+        ]
+      },
+      "properties": {
+        "osb_adi": "Afyon OSB",
+        "il": "Afyonkarahisar",
+        "ilce": "Merkez",
+        "bolge": "Ege",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1400,
+        "sektor": "mermer,gıda,kimya",
+        "arsa_usd_m2": 120,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.1215657,
+          39.3907445
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kütahya OSB",
+        "il": "Kütahya",
+        "ilce": "Merkez",
+        "bolge": "Ege",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 820,
+        "sektor": "seramik,bor,kimya",
+        "arsa_usd_m2": 110,
+        "tradia_score": 70,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1399665,
+          38.3262756
+        ]
+      },
+      "properties": {
+        "osb_adi": "İzmir Serbest Bölge",
+        "il": "İzmir",
+        "ilce": "Gaziemir",
+        "bolge": "Ege",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "elektronik,makine,lojistik",
+        "arsa_usd_m2": 580,
+        "tradia_score": 86,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1381399,
+          38.2551566
+        ]
+      },
+      "properties": {
+        "osb_adi": "Menderes OSB",
+        "il": "İzmir",
+        "ilce": "Menderes",
+        "bolge": "Ege",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "gıda,seramik",
+        "arsa_usd_m2": 240,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0075442,
+          38.8264294
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bergama OSB",
+        "il": "İzmir",
+        "ilce": "Bergama",
+        "bolge": "Ege",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 160,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.8401895,
+          38.9240528
+        ]
+      },
+      "properties": {
+        "osb_adi": "Akhisar OSB",
+        "il": "Manisa",
+        "ilce": "Akhisar",
+        "bolge": "Ege",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 980,
+        "sektor": "zeytin,gıda,tekstil",
+        "arsa_usd_m2": 140,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3228713,
+          38.5063681
+        ]
+      },
+      "properties": {
+        "osb_adi": "Salihli OSB",
+        "il": "Manisa",
+        "ilce": "Salihli",
+        "bolge": "Ege",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 130,
+        "tradia_score": 70,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.6789423,
+          37.821539
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çardak OSB",
+        "il": "Denizli",
+        "ilce": "Çardak",
+        "bolge": "Ege",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "mermer,tekstil",
+        "arsa_usd_m2": 120,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3270857,
+          37.9140609
+        ]
+      },
+      "properties": {
+        "osb_adi": "Nazilli OSB",
+        "il": "Aydın",
+        "ilce": "Nazilli",
+        "bolge": "Ege",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "tekstil,boyama",
+        "arsa_usd_m2": 140,
+        "tradia_score": 69,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.4441595,
+          37.7616739
+        ]
+      },
+      "properties": {
+        "osb_adi": "Söke OSB",
+        "il": "Aydın",
+        "ilce": "Söke",
+        "bolge": "Ege",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "gıda,pamuk",
+        "arsa_usd_m2": 130,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.7799762,
+          37.3162709
+        ]
+      },
+      "properties": {
+        "osb_adi": "Milas OSB",
+        "il": "Muğla",
+        "ilce": "Milas",
+        "bolge": "Ege",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "mermer,enerji",
+        "arsa_usd_m2": 200,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.0472427,
+          38.0336401
+        ]
+      },
+      "properties": {
+        "osb_adi": "Dinar OSB",
+        "il": "Afyonkarahisar",
+        "ilce": "Dinar",
+        "bolge": "Ege",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "mermer,gıda",
+        "arsa_usd_m2": 90,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4863407,
+          39.5402183
+        ]
+      },
+      "properties": {
+        "osb_adi": "Tavşanlı OSB",
+        "il": "Kütahya",
+        "ilce": "Tavşanlı",
+        "bolge": "Ege",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "bor,seramik",
+        "arsa_usd_m2": 100,
+        "tradia_score": 64,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9670144,
+          38.3998673
+        ]
+      },
+      "properties": {
+        "osb_adi": "Eşme OSB",
+        "il": "Uşak",
+        "ilce": "Eşme",
+        "bolge": "Ege",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "deri,tekstil",
+        "arsa_usd_m2": 120,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.6632865,
+          38.1311316
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ödemiş OSB",
+        "il": "İzmir",
+        "ilce": "Ödemiş",
+        "bolge": "Ege",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 150,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.70417,
+          38.118057
+        ]
+      },
+      "properties": {
+        "osb_adi": "Tire OSB",
+        "il": "İzmir",
+        "ilce": "Tire",
+        "bolge": "Ege",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "deri,tekstil",
+        "arsa_usd_m2": 140,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.3685018,
+          37.9479646
+        ]
+      },
+      "properties": {
+        "osb_adi": "Selçuk OSB",
+        "il": "İzmir",
+        "ilce": "Selçuk",
+        "bolge": "Ege",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,turizm malzemeleri",
+        "arsa_usd_m2": 180,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.6241754,
+          39.1987193
+        ]
+      },
+      "properties": {
+        "osb_adi": "Soma OSB",
+        "il": "Manisa",
+        "ilce": "Soma",
+        "bolge": "Ege",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "enerji,madencilik",
+        "arsa_usd_m2": 120,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.6859781,
+          39.1155007
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kırkağaç OSB",
+        "il": "Manisa",
+        "ilce": "Kırkağaç",
+        "bolge": "Ege",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 100,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.8326718,
+          38.0442443
+        ]
+      },
+      "properties": {
+        "osb_adi": "Buldan OSB",
+        "il": "Denizli",
+        "ilce": "Buldan",
+        "bolge": "Ege",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "tekstil,dokuma",
+        "arsa_usd_m2": 110,
+        "tradia_score": 64,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.2684841,
+          37.3696865
+        ]
+      },
+      "properties": {
+        "osb_adi": "Didim OSB",
+        "il": "Aydın",
+        "ilce": "Didim",
+        "bolge": "Ege",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,turizm",
+        "arsa_usd_m2": 180,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.266873,
+          37.8632398
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kuşadası OSB",
+        "il": "Aydın",
+        "ilce": "Kuşadası",
+        "bolge": "Ege",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "gıda,turizm malzemeleri",
+        "arsa_usd_m2": 220,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.430651,
+          37.0343987
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bodrum OSB",
+        "il": "Muğla",
+        "ilce": "Bodrum",
+        "bolge": "Ege",
+        "alan_ha": 120,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "turizm malzemeleri,gıda",
+        "arsa_usd_m2": 380,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.1153384,
+          36.6221154
+        ]
+      },
+      "properties": {
+        "osb_adi": "Fethiye OSB",
+        "il": "Muğla",
+        "ilce": "Fethiye",
+        "bolge": "Ege",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "gıda,turizm",
+        "arsa_usd_m2": 280,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.0075442,
+          38.8264294
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bergama OSB",
+        "il": "İzmir",
+        "ilce": "Bergama",
+        "bolge": "Ege",
+        "alan_ha": 200,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 160,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.4953524,
+          41.2293683
+        ]
+      },
+      "properties": {
+        "osb_adi": "Samsun OSB",
+        "il": "Samsun",
+        "ilce": "Tekkeköy",
+        "bolge": "Karadeniz",
+        "alan_ha": 1280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "gıda,metal,plastik",
+        "arsa_usd_m2": 180,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.9024777,
+          41.5665954
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bafra OSB",
+        "il": "Samsun",
+        "ilce": "Bafra",
+        "bolge": "Karadeniz",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 820,
+        "sektor": "gıda,ambalaj",
+        "arsa_usd_m2": 120,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.9325905,
+          40.9537303
+        ]
+      },
+      "properties": {
+        "osb_adi": "Trabzon OSB",
+        "il": "Trabzon",
+        "ilce": "Arsin",
+        "bolge": "Karadeniz",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "gıda,metal,ambalaj",
+        "arsa_usd_m2": 220,
+        "tradia_score": 76,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4117855,
+          41.211961
+        ]
+      },
+      "properties": {
+        "osb_adi": "Zonguldak OSB",
+        "il": "Zonguldak",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "çelik,maden,enerji",
+        "arsa_usd_m2": 140,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6374083,
+          41.1363213
+        ]
+      },
+      "properties": {
+        "osb_adi": "Karabük OSB",
+        "il": "Karabük",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "çelik,metal",
+        "arsa_usd_m2": 120,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.423638,
+          40.9009645
+        ]
+      },
+      "properties": {
+        "osb_adi": "Rize OSB",
+        "il": "Rize",
+        "ilce": "Pazar",
+        "bolge": "Karadeniz",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "çay,gıda",
+        "arsa_usd_m2": 160,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.9171665,
+          40.8085703
+        ]
+      },
+      "properties": {
+        "osb_adi": "Giresun OSB",
+        "il": "Giresun",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,fındık",
+        "arsa_usd_m2": 130,
+        "tradia_score": 63,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.8964303,
+          40.9786588
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ordu OSB",
+        "il": "Ordu",
+        "ilce": "Altınordu",
+        "bolge": "Karadeniz",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 320,
+        "sektor": "gıda,fındık,plastik",
+        "arsa_usd_m2": 140,
+        "tradia_score": 64,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.8599615,
+          40.4818611
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çorum OSB",
+        "il": "Çorum",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "metal,makine,gıda",
+        "arsa_usd_m2": 130,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.7543166,
+          41.5164669
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kastamonu OSB",
+        "il": "Kastamonu",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 320,
+        "sektor": "ahşap,orman ürünleri",
+        "arsa_usd_m2": 100,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.4953524,
+          41.2293683
+        ]
+      },
+      "properties": {
+        "osb_adi": "Samsun 2. OSB",
+        "il": "Samsun",
+        "ilce": "İlkadım",
+        "bolge": "Karadeniz",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "gıda,kimya",
+        "arsa_usd_m2": 160,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.0580406,
+          40.9358214
+        ]
+      },
+      "properties": {
+        "osb_adi": "Araklı OSB",
+        "il": "Trabzon",
+        "ilce": "Araklı",
+        "bolge": "Karadeniz",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "fındık,gıda",
+        "arsa_usd_m2": 180,
+        "tradia_score": 69,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4605496,
+          41.2062217
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ereğli OSB",
+        "il": "Zonguldak",
+        "ilce": "Ereğli",
+        "bolge": "Karadeniz",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "çelik,metal",
+        "arsa_usd_m2": 160,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.2009075,
+          40.7987548
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gerede OSB",
+        "il": "Bolu",
+        "ilce": "Gerede",
+        "bolge": "Karadeniz",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "orman,plastik",
+        "arsa_usd_m2": 130,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2128338,
+          41.5074775
+        ]
+      },
+      "properties": {
+        "osb_adi": "Taşköprü OSB",
+        "il": "Kastamonu",
+        "ilce": "Taşköprü",
+        "bolge": "Karadeniz",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "ahşap,gıda",
+        "arsa_usd_m2": 80,
+        "tradia_score": 58,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.0544655,
+          41.4196081
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sinop OSB",
+        "il": "Sinop",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "gıda,balıkçılık",
+        "arsa_usd_m2": 110,
+        "tradia_score": 60,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6399973,
+          40.5837427
+        ]
+      },
+      "properties": {
+        "osb_adi": "Amasya OSB",
+        "il": "Amasya",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,metal",
+        "arsa_usd_m2": 110,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.4942039,
+          40.4961545
+        ]
+      },
+      "properties": {
+        "osb_adi": "Tokat OSB",
+        "il": "Tokat",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 320,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 100,
+        "tradia_score": 61,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.8507534,
+          40.482698
+        ]
+      },
+      "properties": {
+        "osb_adi": "Çorum 2. OSB",
+        "il": "Çorum",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "metal,makine",
+        "arsa_usd_m2": 120,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.422003,
+          41.5671118
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bartın OSB",
+        "il": "Bartın",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "orman,ambalaj",
+        "arsa_usd_m2": 100,
+        "tradia_score": 59,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6929575,
+          41.2456658
+        ]
+      },
+      "properties": {
+        "osb_adi": "Safranbolu OSB",
+        "il": "Karabük",
+        "ilce": "Safranbolu",
+        "bolge": "Karadeniz",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "çelik,turizm",
+        "arsa_usd_m2": 120,
+        "tradia_score": 61,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.7257588,
+          41.0062151
+        ]
+      },
+      "properties": {
+        "osb_adi": "Trabzon 2. OSB",
+        "il": "Trabzon",
+        "ilce": "Ortahisar",
+        "bolge": "Karadeniz",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "fındık,gıda,metal",
+        "arsa_usd_m2": 200,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.423638,
+          40.9009645
+        ]
+      },
+      "properties": {
+        "osb_adi": "Rize 2. OSB",
+        "il": "Rize",
+        "ilce": "Merkez",
+        "bolge": "Karadeniz",
+        "alan_ha": 140,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "çay,gıda",
+        "arsa_usd_m2": 150,
+        "tradia_score": 63,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.4631932,
+          41.3853867
+        ]
+      },
+      "properties": {
+        "osb_adi": "Hopa OSB",
+        "il": "Artvin",
+        "ilce": "Hopa",
+        "bolge": "Karadeniz",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "liman,gıda",
+        "arsa_usd_m2": 140,
+        "tradia_score": 64,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.2318776,
+          40.9389231
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bulancak OSB",
+        "il": "Giresun",
+        "ilce": "Bulancak",
+        "bolge": "Karadeniz",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "fındık,gıda",
+        "arsa_usd_m2": 110,
+        "tradia_score": 59,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.500221,
+          41.0308808
+        ]
+      },
+      "properties": {
+        "osb_adi": "Fatsa OSB",
+        "il": "Ordu",
+        "ilce": "Fatsa",
+        "bolge": "Karadeniz",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "fındık,plastik",
+        "arsa_usd_m2": 120,
+        "tradia_score": 61,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.4604721,
+          41.1433899
+        ]
+      },
+      "properties": {
+        "osb_adi": "Vezirköprü OSB",
+        "il": "Samsun",
+        "ilce": "Vezirköprü",
+        "bolge": "Karadeniz",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "gıda,orman",
+        "arsa_usd_m2": 90,
+        "tradia_score": 56,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.2328676,
+          40.1317972
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sungurlu OSB",
+        "il": "Çorum",
+        "ilce": "Sungurlu",
+        "bolge": "Karadeniz",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "metal,gıda",
+        "arsa_usd_m2": 95,
+        "tradia_score": 58,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.4674973,
+          40.8481535
+        ]
+      },
+      "properties": {
+        "osb_adi": "Merzifon OSB",
+        "il": "Amasya",
+        "ilce": "Merzifon",
+        "bolge": "Karadeniz",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,metal,savunma",
+        "arsa_usd_m2": 120,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.5613583,
+          40.7039571
+        ]
+      },
+      "properties": {
+        "osb_adi": "Erbaa OSB",
+        "il": "Tokat",
+        "ilce": "Erbaa",
+        "bolge": "Karadeniz",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 85,
+        "tradia_score": 56,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.4117855,
+          41.211961
+        ]
+      },
+      "properties": {
+        "osb_adi": "Alaplı OSB",
+        "il": "Zonguldak",
+        "ilce": "Alaplı",
+        "bolge": "Karadeniz",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "kağıt,ambalaj",
+        "arsa_usd_m2": 130,
+        "tradia_score": 63,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5539838,
+          39.9790523
+        ]
+      },
+      "properties": {
+        "osb_adi": "ASO 1. OSB",
+        "il": "Ankara",
+        "ilce": "Sincan",
+        "bolge": "İç Anadolu",
+        "alan_ha": 2400,
+        "durum": "faal",
+        "ihracat_milyon_usd": 8500,
+        "sektor": "savunma,makine,metal",
+        "arsa_usd_m2": 320,
+        "tradia_score": 86,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5539838,
+          39.9790523
+        ]
+      },
+      "properties": {
+        "osb_adi": "ASO 2. OSB",
+        "il": "Ankara",
+        "ilce": "Kazan",
+        "bolge": "İç Anadolu",
+        "alan_ha": 1800,
+        "durum": "faal",
+        "ihracat_milyon_usd": 5200,
+        "sektor": "otomotiv,savunma,elektronik",
+        "arsa_usd_m2": 280,
+        "tradia_score": 85,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.7463804,
+          39.9710699
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ostim OSB",
+        "il": "Ankara",
+        "ilce": "Yenimahalle",
+        "bolge": "İç Anadolu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3800,
+        "sektor": "savunma,elektronik,makine",
+        "arsa_usd_m2": 480,
+        "tradia_score": 84,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6210804,
+          37.9602155
+        ]
+      },
+      "properties": {
+        "osb_adi": "Konya OSB",
+        "il": "Konya",
+        "ilce": "Karatay",
+        "bolge": "İç Anadolu",
+        "alan_ha": 3200,
+        "durum": "faal",
+        "ihracat_milyon_usd": 6800,
+        "sektor": "makine,metal,gıda",
+        "arsa_usd_m2": 180,
+        "tradia_score": 83,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5898683,
+          37.9678141
+        ]
+      },
+      "properties": {
+        "osb_adi": "Konya 2. OSB",
+        "il": "Konya",
+        "ilce": "Selçuklu",
+        "bolge": "İç Anadolu",
+        "alan_ha": 1200,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 160,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6188087,
+          38.6850641
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kayseri OSB",
+        "il": "Kayseri",
+        "ilce": "Melikgazi",
+        "bolge": "İç Anadolu",
+        "alan_ha": 2800,
+        "durum": "faal",
+        "ihracat_milyon_usd": 5500,
+        "sektor": "mobilya,tekstil,metal",
+        "arsa_usd_m2": 160,
+        "tradia_score": 82,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6188087,
+          38.6850641
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kayseri 2. OSB",
+        "il": "Kayseri",
+        "ilce": "Kocasinan",
+        "bolge": "İç Anadolu",
+        "alan_ha": 980,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 140,
+        "tradia_score": 76,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.5237649,
+          39.7655536
+        ]
+      },
+      "properties": {
+        "osb_adi": "ESOŞ OSB",
+        "il": "Eskişehir",
+        "ilce": "Odunpazarı",
+        "bolge": "İç Anadolu",
+        "alan_ha": 1680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 4200,
+        "sektor": "havacılık,savunma,demiryolu",
+        "arsa_usd_m2": 240,
+        "tradia_score": 84,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.0884601,
+          39.7935853
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sivas OSB",
+        "il": "Sivas",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "çimento,metal,gıda",
+        "arsa_usd_m2": 100,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4129236,
+          38.4001048
+        ]
+      },
+      "properties": {
+        "osb_adi": "Aksaray OSB",
+        "il": "Aksaray",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "otomotiv,metal",
+        "arsa_usd_m2": 130,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5785308,
+          39.8850753
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kırıkkale OSB",
+        "il": "Kırıkkale",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "savunma,patlayıcı,metal",
+        "arsa_usd_m2": 150,
+        "tradia_score": 70,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.5408269,
+          39.9869837
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sincan OSB",
+        "il": "Ankara",
+        "ilce": "Sincan",
+        "bolge": "İç Anadolu",
+        "alan_ha": 1200,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3200,
+        "sektor": "savunma,makine",
+        "arsa_usd_m2": 260,
+        "tradia_score": 83,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.1417303,
+          39.58567
+        ]
+      },
+      "properties": {
+        "osb_adi": "Polatlı OSB",
+        "il": "Ankara",
+        "ilce": "Polatlı",
+        "bolge": "İç Anadolu",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "savunma,gıda",
+        "arsa_usd_m2": 180,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.6210804,
+          37.9602155
+        ]
+      },
+      "properties": {
+        "osb_adi": "Konya 3. OSB",
+        "il": "Konya",
+        "ilce": "Karatay",
+        "bolge": "İç Anadolu",
+        "alan_ha": 800,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "makine,metal",
+        "arsa_usd_m2": 150,
+        "tradia_score": 77,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8483332,
+          37.4193713
+        ]
+      },
+      "properties": {
+        "osb_adi": "Seydişehir OSB",
+        "il": "Konya",
+        "ilce": "Seydişehir",
+        "bolge": "İç Anadolu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "alüminyum,metal",
+        "arsa_usd_m2": 120,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.6371725,
+          39.7543651
+        ]
+      },
+      "properties": {
+        "osb_adi": "Eskişehir 2. OSB",
+        "il": "Eskişehir",
+        "ilce": "Tepebaşı",
+        "bolge": "İç Anadolu",
+        "alan_ha": 820,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "demiryolu,makine",
+        "arsa_usd_m2": 200,
+        "tradia_score": 79,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.6188087,
+          38.6850641
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kayseri 3. OSB",
+        "il": "Kayseri",
+        "ilce": "Talas",
+        "bolge": "İç Anadolu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "mobilya,gıda",
+        "arsa_usd_m2": 130,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6246336,
+          38.5569321
+        ]
+      },
+      "properties": {
+        "osb_adi": "Nevşehir OSB",
+        "il": "Nevşehir",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,turizm malzemeleri",
+        "arsa_usd_m2": 140,
+        "tradia_score": 68,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6100192,
+          37.9528303
+        ]
+      },
+      "properties": {
+        "osb_adi": "Niğde OSB",
+        "il": "Niğde",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 110,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.4129236,
+          38.4001048
+        ]
+      },
+      "properties": {
+        "osb_adi": "Aksaray 2. OSB",
+        "il": "Aksaray",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "otomotiv,metal",
+        "arsa_usd_m2": 120,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.3227656,
+          37.217149
+        ]
+      },
+      "properties": {
+        "osb_adi": "Karaman OSB",
+        "il": "Karaman",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 110,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          33.5785308,
+          39.8850753
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kırıkkale 2. OSB",
+        "il": "Kırıkkale",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 320,
+        "sektor": "savunma,metal",
+        "arsa_usd_m2": 140,
+        "tradia_score": 69,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.7838272,
+          39.7564536
+        ]
+      },
+      "properties": {
+        "osb_adi": "Yozgat OSB",
+        "il": "Yozgat",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "gıda,metal",
+        "arsa_usd_m2": 90,
+        "tradia_score": 60,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.0959191,
+          39.7918897
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sivas 2. OSB",
+        "il": "Sivas",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "çimento,gıda",
+        "arsa_usd_m2": 90,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.1909188,
+          39.0781665
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kırşehir OSB",
+        "il": "Kırşehir",
+        "ilce": "Merkez",
+        "bolge": "İç Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 85,
+        "tradia_score": 58,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4987922,
+          39.4341352
+        ]
+      },
+      "properties": {
+        "osb_adi": "Haymana OSB",
+        "il": "Ankara",
+        "ilce": "Haymana",
+        "bolge": "İç Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 140,
+        "tradia_score": 70,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.0473423,
+          37.5140718
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ereğli OSB",
+        "il": "Konya",
+        "ilce": "Ereğli",
+        "bolge": "İç Anadolu",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "çelik,metal",
+        "arsa_usd_m2": 130,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.4900997,
+          38.3879285
+        ]
+      },
+      "properties": {
+        "osb_adi": "Develi OSB",
+        "il": "Kayseri",
+        "ilce": "Develi",
+        "bolge": "İç Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "tekstil,halı",
+        "arsa_usd_m2": 110,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.9541081,
+          39.7680249
+        ]
+      },
+      "properties": {
+        "osb_adi": "Alpu OSB",
+        "il": "Eskişehir",
+        "ilce": "Alpu",
+        "bolge": "İç Anadolu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "şeker,gıda",
+        "arsa_usd_m2": 160,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.4508649,
+          39.2760303
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kangal OSB",
+        "il": "Sivas",
+        "ilce": "Kangal",
+        "bolge": "İç Anadolu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "enerji,madencilik",
+        "arsa_usd_m2": 80,
+        "tradia_score": 56,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5625033,
+          37.8876069
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bor OSB",
+        "il": "Niğde",
+        "ilce": "Bor",
+        "bolge": "İç Anadolu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 90,
+        "tradia_score": 59,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.8888721,
+          36.6389037
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ermenek OSB",
+        "il": "Karaman",
+        "ilce": "Ermenek",
+        "bolge": "İç Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "madencilik,enerji",
+        "arsa_usd_m2": 75,
+        "tradia_score": 52,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.3800057,
+          39.0598745
+        ]
+      },
+      "properties": {
+        "osb_adi": "Mucur OSB",
+        "il": "Kırşehir",
+        "ilce": "Mucur",
+        "bolge": "İç Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "gıda,tuz",
+        "arsa_usd_m2": 70,
+        "tradia_score": 51,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.8483332,
+          37.4193713
+        ]
+      },
+      "properties": {
+        "osb_adi": "Seydişehir OSB",
+        "il": "Konya",
+        "ilce": "Seydişehir",
+        "bolge": "İç Anadolu",
+        "alan_ha": 260,
+        "durum": "faal",
+        "ihracat_milyon_usd": 580,
+        "sektor": "alüminyum,metal",
+        "arsa_usd_m2": 140,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.3690842,
+          37.1659166
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gaziantep OSB",
+        "il": "Gaziantep",
+        "ilce": "Şehitkamil",
+        "bolge": "Güneydoğu",
+        "alan_ha": 4200,
+        "durum": "faal",
+        "ihracat_milyon_usd": 22000,
+        "sektor": "tekstil,plastik,metal,gıda",
+        "arsa_usd_m2": 180,
+        "tradia_score": 89,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.6366559,
+          37.0306836
+        ]
+      },
+      "properties": {
+        "osb_adi": "İslahiye OSB",
+        "il": "Gaziantep",
+        "ilce": "İslahiye",
+        "bolge": "Güneydoğu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "tekstil,metal",
+        "arsa_usd_m2": 120,
+        "tradia_score": 80,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.7805082,
+          36.9466722
+        ]
+      },
+      "properties": {
+        "osb_adi": "Nizip OSB",
+        "il": "Gaziantep",
+        "ilce": "Nizip",
+        "bolge": "Güneydoğu",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 100,
+        "tradia_score": 75,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.5935799,
+          36.9726777
+        ]
+      },
+      "properties": {
+        "osb_adi": "Adana OSB",
+        "il": "Adana",
+        "ilce": "Seyhan",
+        "bolge": "Güneydoğu",
+        "alan_ha": 1680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 5200,
+        "sektor": "tekstil,gıda,kimya",
+        "arsa_usd_m2": 160,
+        "tradia_score": 82,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.8124428,
+          37.0288825
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ceyhan OSB",
+        "il": "Adana",
+        "ilce": "Ceyhan",
+        "bolge": "Güneydoğu",
+        "alan_ha": 820,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3800,
+        "sektor": "petrokimya,enerji",
+        "arsa_usd_m2": 200,
+        "tradia_score": 83,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.7728087,
+          36.9512173
+        ]
+      },
+      "properties": {
+        "osb_adi": "Mersin OSB",
+        "il": "Mersin",
+        "ilce": "Tarsus",
+        "bolge": "Güneydoğu",
+        "alan_ha": 1480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 6800,
+        "sektor": "gıda,kimya,plastik",
+        "arsa_usd_m2": 180,
+        "tradia_score": 85,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.895149,
+          36.9164834
+        ]
+      },
+      "properties": {
+        "osb_adi": "Tarsus OSB",
+        "il": "Mersin",
+        "ilce": "Tarsus",
+        "bolge": "Güneydoğu",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "tekstil,plastik",
+        "arsa_usd_m2": 140,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.7684322,
+          37.6002862
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kahramanmaraş OSB",
+        "il": "Kahramanmaraş",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 1280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 3200,
+        "sektor": "tekstil,demir çelik",
+        "arsa_usd_m2": 140,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.2149178,
+          36.6946641
+        ]
+      },
+      "properties": {
+        "osb_adi": "İskenderun OSB",
+        "il": "Hatay",
+        "ilce": "İskenderun",
+        "bolge": "Güneydoğu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "çelik,liman,metal",
+        "arsa_usd_m2": 160,
+        "tradia_score": 76,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.6534912,
+          37.0959635
+        ]
+      },
+      "properties": {
+        "osb_adi": "Şanlıurfa OSB",
+        "il": "Şanlıurfa",
+        "ilce": "Eyyübiye",
+        "bolge": "Güneydoğu",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 820,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 100,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.1162305,
+          38.0162642
+        ]
+      },
+      "properties": {
+        "osb_adi": "Diyarbakır OSB",
+        "il": "Diyarbakır",
+        "ilce": "Bağlar",
+        "bolge": "Güneydoğu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "gıda,tekstil,plastik",
+        "arsa_usd_m2": 90,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.4261418,
+          37.1158312
+        ]
+      },
+      "properties": {
+        "osb_adi": "Mardin OSB",
+        "il": "Mardin",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 80,
+        "tradia_score": 63,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.2972055,
+          37.1602385
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gaziantep 2. OSB",
+        "il": "Gaziantep",
+        "ilce": "Şahinbey",
+        "bolge": "Güneydoğu",
+        "alan_ha": 1800,
+        "durum": "faal",
+        "ihracat_milyon_usd": 8500,
+        "sektor": "tekstil,plastik,metal",
+        "arsa_usd_m2": 160,
+        "tradia_score": 86,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.5085487,
+          36.9651081
+        ]
+      },
+      "properties": {
+        "osb_adi": "Oğuzeli OSB",
+        "il": "Gaziantep",
+        "ilce": "Oğuzeli",
+        "bolge": "Güneydoğu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 980,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 110,
+        "tradia_score": 73,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.5497081,
+          36.9686422
+        ]
+      },
+      "properties": {
+        "osb_adi": "Adana 2. OSB",
+        "il": "Adana",
+        "ilce": "Yüreğir",
+        "bolge": "Güneydoğu",
+        "alan_ha": 980,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 140,
+        "tradia_score": 78,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.5307018,
+          36.7495289
+        ]
+      },
+      "properties": {
+        "osb_adi": "Mersin 2. OSB",
+        "il": "Mersin",
+        "ilce": "Mezitli",
+        "bolge": "Güneydoğu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2200,
+        "sektor": "kimya,plastik",
+        "arsa_usd_m2": 160,
+        "tradia_score": 79,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.862,
+          37.3754351
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kahramanmaraş 2. OSB",
+        "il": "Kahramanmaraş",
+        "ilce": "Türkoğlu",
+        "bolge": "Güneydoğu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1800,
+        "sektor": "tekstil,metal",
+        "arsa_usd_m2": 120,
+        "tradia_score": 74,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.1640991,
+          36.2025574
+        ]
+      },
+      "properties": {
+        "osb_adi": "Antakya OSB",
+        "il": "Hatay",
+        "ilce": "Antakya",
+        "bolge": "Güneydoğu",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 1200,
+        "sektor": "gıda,metal",
+        "arsa_usd_m2": 130,
+        "tradia_score": 72,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.6217561,
+          38.0284385
+        ]
+      },
+      "properties": {
+        "osb_adi": "Adıyaman OSB",
+        "il": "Adıyaman",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 90,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.2371131,
+          37.9047174
+        ]
+      },
+      "properties": {
+        "osb_adi": "Batman OSB",
+        "il": "Batman",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "petrol,plastik",
+        "arsa_usd_m2": 85,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.1027982,
+          37.0143801
+        ]
+      },
+      "properties": {
+        "osb_adi": "Osmaniye OSB",
+        "il": "Osmaniye",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 110,
+        "tradia_score": 67,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.7955597,
+          37.1674869
+        ]
+      },
+      "properties": {
+        "osb_adi": "Şanlıurfa 2. OSB",
+        "il": "Şanlıurfa",
+        "ilce": "Haliliye",
+        "bolge": "Güneydoğu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 90,
+        "tradia_score": 66,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.1845788,
+          37.9437832
+        ]
+      },
+      "properties": {
+        "osb_adi": "Diyarbakır 2. OSB",
+        "il": "Diyarbakır",
+        "ilce": "Kayapınar",
+        "bolge": "Güneydoğu",
+        "alan_ha": 420,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "gıda,plastik",
+        "arsa_usd_m2": 85,
+        "tradia_score": 64,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.5847974,
+          37.1916551
+        ]
+      },
+      "properties": {
+        "osb_adi": "Mardin 2. OSB",
+        "il": "Mardin",
+        "ilce": "Kızıltepe",
+        "bolge": "Güneydoğu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 75,
+        "tradia_score": 60,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.3577361,
+          37.1646557
+        ]
+      },
+      "properties": {
+        "osb_adi": "Gaziantep 3. OSB",
+        "il": "Gaziantep",
+        "ilce": "Nurdağı",
+        "bolge": "Güneydoğu",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 2800,
+        "sektor": "tekstil,metal",
+        "arsa_usd_m2": 140,
+        "tradia_score": 80,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.227408,
+          36.835312
+        ]
+      },
+      "properties": {
+        "osb_adi": "Dörtyol OSB",
+        "il": "Hatay",
+        "ilce": "Dörtyol",
+        "bolge": "Güneydoğu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "çelik,liman",
+        "arsa_usd_m2": 130,
+        "tradia_score": 71,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.6217178,
+          37.7860716
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kahta OSB",
+        "il": "Adıyaman",
+        "ilce": "Kahta",
+        "bolge": "Güneydoğu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 80,
+        "tradia_score": 60,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.9318833,
+          37.9687632
+        ]
+      },
+      "properties": {
+        "osb_adi": "Siirt OSB",
+        "il": "Siirt",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "tekstil,gıda",
+        "arsa_usd_m2": 65,
+        "tradia_score": 52,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.1146069,
+          36.7165552
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kilis OSB",
+        "il": "Kilis",
+        "ilce": "Merkez",
+        "bolge": "Güneydoğu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,tekstil,sınır ticareti",
+        "arsa_usd_m2": 80,
+        "tradia_score": 60,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.1631558,
+          39.9321132
+        ]
+      },
+      "properties": {
+        "osb_adi": "Erzurum OSB",
+        "il": "Erzurum",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 580,
+        "durum": "faal",
+        "ihracat_milyon_usd": 420,
+        "sektor": "gıda,inşaat malzemeleri",
+        "arsa_usd_m2": 90,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.1868574,
+          38.3383623
+        ]
+      },
+      "properties": {
+        "osb_adi": "Malatya OSB",
+        "il": "Malatya",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 680,
+        "durum": "faal",
+        "ihracat_milyon_usd": 680,
+        "sektor": "gıda,tekstil,kayısı işleme",
+        "arsa_usd_m2": 100,
+        "tradia_score": 65,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.2227135,
+          38.6747164
+        ]
+      },
+      "properties": {
+        "osb_adi": "Elazığ OSB",
+        "il": "Elazığ",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "metal,gıda",
+        "arsa_usd_m2": 85,
+        "tradia_score": 60,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.3113401,
+          38.5887924
+        ]
+      },
+      "properties": {
+        "osb_adi": "Van OSB",
+        "il": "Van",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 75,
+        "tradia_score": 58,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.3982514,
+          39.7545058
+        ]
+      },
+      "properties": {
+        "osb_adi": "Erzincan OSB",
+        "il": "Erzincan",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 220,
+        "sektor": "metal,gıda",
+        "arsa_usd_m2": 80,
+        "tradia_score": 57,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.1631558,
+          39.9321132
+        ]
+      },
+      "properties": {
+        "osb_adi": "Erzurum 2. OSB",
+        "il": "Erzurum",
+        "ilce": "Palandöken",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 380,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "gıda,inşaat",
+        "arsa_usd_m2": 85,
+        "tradia_score": 59,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.1868574,
+          38.3383623
+        ]
+      },
+      "properties": {
+        "osb_adi": "Malatya 2. OSB",
+        "il": "Malatya",
+        "ilce": "Battalgazi",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 480,
+        "durum": "faal",
+        "ihracat_milyon_usd": 480,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 95,
+        "tradia_score": 62,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.2227135,
+          38.6747164
+        ]
+      },
+      "properties": {
+        "osb_adi": "Elazığ 2. OSB",
+        "il": "Elazığ",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 280,
+        "sektor": "metal,gıda",
+        "arsa_usd_m2": 80,
+        "tradia_score": 58,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.3955098,
+          38.5038174
+        ]
+      },
+      "properties": {
+        "osb_adi": "Van 2. OSB",
+        "il": "Van",
+        "ilce": "İpekyolu",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 280,
+        "durum": "faal",
+        "ihracat_milyon_usd": 180,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 70,
+        "tradia_score": 55,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.0504894,
+          39.719125
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ağrı OSB",
+        "il": "Ağrı",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "gıda,inşaat",
+        "arsa_usd_m2": 65,
+        "tradia_score": 52,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.4898925,
+          38.7322221
+        ]
+      },
+      "properties": {
+        "osb_adi": "Muş OSB",
+        "il": "Muş",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "gıda",
+        "arsa_usd_m2": 60,
+        "tradia_score": 50,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.5283945,
+          38.8079126
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bingöl OSB",
+        "il": "Bingöl",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 60,
+        "sektor": "gıda,inşaat",
+        "arsa_usd_m2": 60,
+        "tradia_score": 49,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.101591,
+          40.6108796
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kars OSB",
+        "il": "Kars",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "hayvancılık,gıda",
+        "arsa_usd_m2": 65,
+        "tradia_score": 51,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.0467957,
+          39.9218784
+        ]
+      },
+      "properties": {
+        "osb_adi": "Iğdır OSB",
+        "il": "Iğdır",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "gıda,sınır ticareti",
+        "arsa_usd_m2": 70,
+        "tradia_score": 53,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.7035585,
+          41.1102966
+        ]
+      },
+      "properties": {
+        "osb_adi": "Ardahan OSB",
+        "il": "Ardahan",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 120,
+        "durum": "faal",
+        "ihracat_milyon_usd": 40,
+        "sektor": "hayvancılık,gıda",
+        "arsa_usd_m2": 55,
+        "tradia_score": 47,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.49103,
+          39.7467552
+        ]
+      },
+      "properties": {
+        "osb_adi": "Erzincan 2. OSB",
+        "il": "Erzincan",
+        "ilce": "Merkez",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 220,
+        "durum": "faal",
+        "ihracat_milyon_usd": 160,
+        "sektor": "metal,gıda",
+        "arsa_usd_m2": 75,
+        "tradia_score": 55,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.1868574,
+          38.3383623
+        ]
+      },
+      "properties": {
+        "osb_adi": "Malatya 3. OSB",
+        "il": "Malatya",
+        "ilce": "Yeşilyurt",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 320,
+        "durum": "faal",
+        "ihracat_milyon_usd": 380,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 90,
+        "tradia_score": 61,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.8659125,
+          38.7189254
+        ]
+      },
+      "properties": {
+        "osb_adi": "Kovancılar OSB",
+        "il": "Elazığ",
+        "ilce": "Kovancılar",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 120,
+        "sektor": "metal,gıda",
+        "arsa_usd_m2": 75,
+        "tradia_score": 54,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.3591059,
+          39.0289887
+        ]
+      },
+      "properties": {
+        "osb_adi": "Erciş OSB",
+        "il": "Van",
+        "ilce": "Erciş",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 180,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 65,
+        "tradia_score": 50,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.8612338,
+          39.2334202
+        ]
+      },
+      "properties": {
+        "osb_adi": "Patnos OSB",
+        "il": "Ağrı",
+        "ilce": "Patnos",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 60,
+        "sektor": "gıda,hayvancılık",
+        "arsa_usd_m2": 55,
+        "tradia_score": 47,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.1624501,
+          40.0407979
+        ]
+      },
+      "properties": {
+        "osb_adi": "Horasan OSB",
+        "il": "Erzurum",
+        "ilce": "Horasan",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "gıda,inşaat",
+        "arsa_usd_m2": 70,
+        "tradia_score": 50,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.7681749,
+          39.9027528
+        ]
+      },
+      "properties": {
+        "osb_adi": "Refahiye OSB",
+        "il": "Erzincan",
+        "ilce": "Refahiye",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 140,
+        "durum": "faal",
+        "ihracat_milyon_usd": 60,
+        "sektor": "madencilik,gıda",
+        "arsa_usd_m2": 65,
+        "tradia_score": 48,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.2878112,
+          38.4931961
+        ]
+      },
+      "properties": {
+        "osb_adi": "Tatvan OSB",
+        "il": "Bitlis",
+        "ilce": "Tatvan",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "gıda,tekstil",
+        "arsa_usd_m2": 60,
+        "tradia_score": 49,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.2708343,
+          39.092386
+        ]
+      },
+      "properties": {
+        "osb_adi": "Bulanık OSB",
+        "il": "Muş",
+        "ilce": "Bulanık",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 140,
+        "durum": "faal",
+        "ihracat_milyon_usd": 40,
+        "sektor": "gıda,hayvancılık",
+        "arsa_usd_m2": 55,
+        "tradia_score": 46,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.5576394,
+          38.7518473
+        ]
+      },
+      "properties": {
+        "osb_adi": "Genç OSB",
+        "il": "Bingöl",
+        "ilce": "Genç",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 140,
+        "durum": "faal",
+        "ihracat_milyon_usd": 40,
+        "sektor": "gıda,orman",
+        "arsa_usd_m2": 55,
+        "tradia_score": 45,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.5769437,
+          40.33589
+        ]
+      },
+      "properties": {
+        "osb_adi": "Sarıkamış OSB",
+        "il": "Kars",
+        "ilce": "Sarıkamış",
+        "bolge": "Doğu Anadolu",
+        "alan_ha": 160,
+        "durum": "faal",
+        "ihracat_milyon_usd": 80,
+        "sektor": "gıda,turizm",
+        "arsa_usd_m2": 70,
+        "tradia_score": 53,
+        "tip": "osb",
+        "renk": "orange"
+      }
+    }
+  ]
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Newsletters</title>
+  <meta name="description" content="Tradia newsletters — Cross-Media Analyst Audit, Bursa Neighbourhood Heat Map, Istanbul Mega Plan Amendment, Bursa 17-district Liveability (coming).">
+  <link rel="canonical" href="https://tradiaturkey.com/en/bultenler/">
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/bultenler/">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/bultenler/">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/bultenler/">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/bultenler/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../bultenler/_tradia_tema.css">
+  <style>
+    .bl-card {
+      display: grid; grid-template-columns: 80px 1fr auto;
+      gap: 20px; align-items: center; padding: 22px;
+      border: 1px solid var(--border); background: var(--bg-card);
+      border-radius: 10px; margin-bottom: 14px;
+      transition: all 0.2s; text-decoration: none; color: inherit;
+    }
+    .bl-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .bl-num {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 3.5rem; line-height: 1;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-align: center;
+    }
+    .bl-card .meta { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.1em; }
+    .bl-card h3 { font-size: 1.3rem; margin: 4px 0 6px; color: var(--txt); }
+    .bl-card .lede { font-size: 0.95rem; color: var(--txt-muted); line-height: 1.5; margin: 0; }
+    .bl-card .arrow { font-family: 'JetBrains Mono'; font-size: 1.5rem; color: var(--gold); }
+    .bl-card.draft { border-style: dashed; opacity: 0.65; }
+    .bl-card.draft:hover { transform: none; box-shadow: none; cursor: default; border-color: var(--border); }
+    .bl-card.draft .arrow { color: var(--txt-faint); }
+
+    .bl-tag {
+      display: inline-block; font-family: 'JetBrains Mono'; font-size: 9px;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 2px 8px; border-radius: 3px; margin-right: 6px;
+    }
+    .bl-tag.yayinda    { background: var(--up); color: #000; }
+    .bl-tag.hazirlanan { background: var(--gold); color: #000; }
+    .bl-tag.planlanan  { background: var(--bg-elev, var(--bg-2)); color: var(--txt-muted); border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Newsletters</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Home</a>
+      <a href="#" class="active">Newsletters</a>
+      <a href="../../komponentler/analist_skor_panel.html">Analyst Panel</a>
+      <a href="../../manifesto.html">Manifesto</a>
+      <a href="../../bultenler/" style="color:var(--gold)">🇹🇷 TR</a>
+      <a href="../../ru/bultenler/" style="color:var(--gold)">🇷🇺 RU</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Newsletters · 2026</span>
+    <h1>Tradia <span class="grad-text">Newsletters</span></h1>
+    <p class="lede">Monthly Turkey investment intelligence — cross-media analyst audit, neighbourhood heat maps, mega project plan amendments.</p>
+  </section>
+
+  <a class="bl-card" href="sayi-1-v2-en.html">
+    <div class="bl-num">01</div>
+    <div>
+      <div class="meta"><span class="bl-tag yayinda">Live</span> June 2026 · v2</div>
+      <h3>Cross-Media Analyst Audit</h3>
+      <p class="lede">Two distinct profiles, the same consistency. Tradia consistency score for 4 analysts — Mahfi, Kerem, Atilla, Murat.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <div class="bl-card draft">
+    <div class="bl-num">02</div>
+    <div>
+      <div class="meta"><span class="bl-tag hazirlanan">In Progress</span> July 2026 · Translation</div>
+      <h3>Bursa Neighbourhood Heat Map</h3>
+      <p class="lede">POI density score for 4 Mudanya neighbourhoods. Original Turkish edition <a href="../../bultenler/sayi-2-v6-bursa-mahalle-isi.html" style="color:var(--gold)">here</a>. EN translation coming Sprint 8.</p>
+    </div>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="bl-card draft">
+    <div class="bl-num">03</div>
+    <div>
+      <div class="meta"><span class="bl-tag hazirlanan">In Progress</span> August 2026 · Translation</div>
+      <h3>Istanbul / Arnavutköy Mega Plan Amendment</h3>
+      <p class="lede">272.61 ha plan amendment in Tayakadın — Tradia identified it 2 months before the market. Original Turkish edition <a href="../../bultenler/sayi-3-v6-istanbul-arnavutkoy.html" style="color:var(--gold)">here</a>. EN translation coming Sprint 8.</p>
+    </div>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="bl-card draft">
+    <div class="bl-num">06</div>
+    <div>
+      <div class="meta"><span class="bl-tag planlanan">Coming Soon</span> Sprint 7+</div>
+      <h3>Bursa 17-District Liveability Heat Map</h3>
+      <p class="lede">All 17 Bursa districts × ~62 neighbourhoods POI density + 4-quadrant filter. Depends on CC-Press Sprint 25 province/district pivot.</p>
+    </div>
+    <div class="arrow">⏳</div>
+  </div>
+
+  <hr class="divider">
+
+  <p class="center muted mono" style="font-size: 0.85rem; padding: 20px 0;">
+    <strong>Tradia Newsletters</strong> · Free · Open methodology · No spam<br>
+    <span class="faint">Monthly Turkey investment intelligence brief.</span>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Turkey Investment Intelligence</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Home</a> ·
+    <a href="../../map/">Maps</a> ·
+    <a href="../../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+</body>
+</html>

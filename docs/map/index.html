@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tradia Maps · Mudanya MVP</title>
-  <meta name="description" content="Tradia Maps prototip — Bursa Mudanya 4 mahalle yaşanabilirlik skoru + POI yoğunluğu. 139.989 OSM noktası işlendi.">
+  <title>Tradia Maps · 6 Katman Çevre İstihbaratı</title>
+  <meta name="description" content="Tradia Maps — 81 il choropleth + 1001 ilçe + 3.797 büyükşehir mahalle + 21 mega proje + 200 OSB + 24 yabancı kısıtlı il. Türkiye çapında çevre istihbaratı haritası.">
   <link rel="canonical" href="https://tradiaturkey.com/map/">
   <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/map/">
   <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/map/">
@@ -46,12 +46,66 @@
     }
     .map-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
 
-    /* Harita kapsayıcı */
-    #map { flex: 1; min-height: 0; background: var(--bg-2); }
+    /* Shell — 3 sütun: sol panel + harita + (info+modal mutlak konum) */
+    .map-shell { flex: 1; min-height: 0; display: grid; grid-template-columns: 240px 1fr; }
 
-    /* Sol overlay paneli (info) */
+    /* SOL PANEL — 6 katman toggle */
+    .map-side {
+      background: var(--bg-2); border-right: 1px solid var(--border);
+      padding: 14px 12px; overflow-y: auto; color: var(--txt);
+    }
+    .map-side h2 {
+      font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin: 14px 0 6px; padding-bottom: 4px; border-bottom: 1px solid var(--border);
+    }
+    .map-side h2:first-child { margin-top: 0; }
+    .lyr {
+      display: flex; align-items: center; gap: 8px; padding: 7px 4px;
+      cursor: pointer; border-radius: 4px; transition: background 0.12s;
+    }
+    .lyr:hover { background: rgba(255,255,255,0.05); }
+    .lyr input { cursor: pointer; accent-color: var(--gold); }
+    .lyr .dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; border: 1px solid rgba(255,255,255,0.2); }
+    .lyr .bar { width: 14px; height: 12px; border-radius: 2px; flex-shrink: 0; }
+    .lyr .label { font-size: 13px; flex: 1; color: var(--txt); }
+    .lyr .sayi { font-family: 'JetBrains Mono'; font-size: 11px; color: var(--txt-muted); }
+
+    .lazy-btn {
+      width: 100%; padding: 7px 10px; margin-top: 4px;
+      background: rgba(212, 175, 55, 0.12); color: var(--gold);
+      border: 1px solid rgba(212, 175, 55, 0.4); border-radius: 4px;
+      font-family: 'Inter'; font-size: 11px; cursor: pointer;
+      text-align: left;
+    }
+    .lazy-btn:hover { background: rgba(212, 175, 55, 0.20); }
+    .lazy-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+    .side-note {
+      font-family: 'Inter'; font-size: 11px; color: var(--txt-muted);
+      padding: 10px 8px; background: rgba(255,255,255,0.03);
+      border-radius: 4px; margin-top: 14px; line-height: 1.5;
+    }
+    .side-note strong { color: var(--gold); font-weight: 600; }
+
+    /* Harita kapsayıcı */
+    #map { width: 100%; height: 100%; background: var(--bg-2); }
+
+    /* Yükleme indikatörü */
+    .load-ind {
+      position: absolute; top: 80px; right: 16px; z-index: 800;
+      background: var(--bg-card); color: var(--gold);
+      border: 1px solid var(--border); border-radius: 20px;
+      padding: 7px 14px; font-family: 'JetBrains Mono'; font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.5);
+      display: none;
+    }
+    .load-ind.active { display: block; }
+
+    /* Sol info kart (Bursa Mudanya) */
     .map-info {
-      position: absolute; top: 70px; left: 14px; z-index: 500;
+      position: absolute; top: 70px; left: 260px; z-index: 500;
       background: var(--bg-card); border: 1px solid var(--border);
       border-radius: 8px; padding: 14px 16px;
       max-width: 280px; box-shadow: 0 4px 18px rgba(0,0,0,0.6);
@@ -65,7 +119,7 @@
     .map-info .metric .big { font-family: 'Space Grotesk'; font-weight: 900; font-size: 20px; color: var(--gold); }
     .map-info .metric .lbl { font-family: 'JetBrains Mono'; font-size: 9px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.08em; }
 
-    /* Popup özelleştirme */
+    /* Popup özelleştirme (Tradia dark) */
     .leaflet-popup-content-wrapper {
       background: var(--bg-card) !important;
       color: var(--txt) !important;
@@ -107,7 +161,18 @@
     .mp-pop .cta .ghost { background: rgba(255,255,255,0.06); color: var(--txt); border: 1px solid var(--border); }
     .mp-pop .cta .ghost:hover { background: rgba(255,255,255,0.10); }
 
-    /* Marker — circle with score */
+    .badge {
+      display: inline-block; padding: 2px 9px; border-radius: 10px;
+      font-family: 'JetBrains Mono'; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+    }
+    .badge-red    { background: rgba(220, 38, 38, 0.18); color: #fca5a5; border: 1px solid rgba(220, 38, 38, 0.4); }
+    .badge-yellow { background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212, 175, 55, 0.4); }
+    .badge-green  { background: rgba(16, 185, 129, 0.16); color: #6ee7b7; border: 1px solid rgba(16, 185, 129, 0.4); }
+    .badge-blue   { background: rgba(30, 64, 175, 0.20); color: #93c5fd; border: 1px solid rgba(30, 64, 175, 0.4); }
+    .badge-orange { background: rgba(234, 88, 12, 0.18); color: #fdba74; border: 1px solid rgba(234, 88, 12, 0.4); }
+
+    /* Marker — circle with score (Bursa Mudanya) */
     .mp-marker {
       width: 36px; height: 36px; border-radius: 50%;
       display: grid; place-items: center;
@@ -175,6 +240,14 @@
       font-family: 'JetBrains Mono'; font-size: 9px; padding: 5px 10px; border-radius: 4px;
       text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--border);
     }
+
+    /* Mobile */
+    @media (max-width: 760px) {
+      .map-shell { grid-template-columns: 1fr; grid-template-rows: 220px 1fr; }
+      .map-side { border-right: 0; border-bottom: 1px solid var(--border); }
+      .map-info { left: 14px; top: auto; bottom: 12px; max-width: calc(100% - 28px); }
+      .load-ind { top: 14px; right: 14px; }
+    }
   </style>
 </head>
 <body>
@@ -184,12 +257,12 @@
     <div class="dot">T</div>
     <div>
       <span class="name">TRADIA</span>
-      <span class="tag">Maps · MVP</span>
+      <span class="tag">Maps · 6 Katman</span>
     </div>
   </div>
   <div class="map-status">
     <span class="live">CANLI VERİ</span>
-    <span>139.989 POI</span>
+    <span>139.989 POI · 81 İl</span>
     <select id="ilce-filter" style="background:var(--bg-card); border:1px solid var(--border); color:#fff; padding:5px 8px; border-radius:4px; font-family:'Inter'; font-size:12px;">
       <option value="all">Tüm Bursa (4 mahalle aktif + 16 ilçe placeholder)</option>
       <option value="Mudanya">Mudanya · 4 mahalle ✓</option>
@@ -218,19 +291,87 @@
   </nav>
 </div>
 
-<div id="map"></div>
+<div class="map-shell">
 
-<div class="map-info">
-  <span class="tag">Prototip · Faz 1</span>
-  <h2 style="margin-top:4px">Bursa Mudanya</h2>
-  <p>Tradia Maps MVP — 4 mahalle yaşanabilirlik skoru + POI yoğunluğu. Mahalle marker'a tıklayın, detay popup açılır.</p>
-  <div class="metric">
-    <div><div class="big" id="m-toplam-poi">—</div><div class="lbl">Toplam POI</div></div>
-    <div><div class="big" id="m-mahalle">—</div><div class="lbl">Mahalle</div></div>
+  <!-- SOL PANEL -->
+  <aside class="map-side">
+    <h2>Polygon Katmanlar</h2>
+    <label class="lyr">
+      <input type="checkbox" id="t-iller" checked>
+      <span class="bar" style="background:#cbd5e1;"></span>
+      <span class="label">İller (choropleth)</span>
+      <span class="sayi" id="c-iller">⏳</span>
+    </label>
+    <label class="lyr">
+      <input type="checkbox" id="t-ilceler">
+      <span class="bar" style="background:#64748b;"></span>
+      <span class="label">İlçeler</span>
+      <span class="sayi" id="c-ilceler">—</span>
+    </label>
+    <button class="lazy-btn" id="b-ilceler">📦 İlçeleri yükle (27 MB · ~3 MB gzip)</button>
+
+    <label class="lyr" style="margin-top:8px;">
+      <input type="checkbox" id="t-mahalleler">
+      <span class="bar" style="background:#475569; opacity:0.7;"></span>
+      <span class="label">Büyükşehir Mahalle</span>
+      <span class="sayi" id="c-mahalleler">—</span>
+    </label>
+    <button class="lazy-btn" id="b-mahalleler">📦 Mahalleleri yükle (15 MB · ~2 MB gzip)</button>
+
+    <h2>Nokta Katmanlar</h2>
+    <label class="lyr">
+      <input type="checkbox" id="t-mega" checked>
+      <span class="dot" style="background:#1e40af;"></span>
+      <span class="label">Mega Projeler</span>
+      <span class="sayi">21</span>
+    </label>
+    <label class="lyr">
+      <input type="checkbox" id="t-osb" checked>
+      <span class="dot" style="background:#ea580c;"></span>
+      <span class="label">OSB</span>
+      <span class="sayi">200</span>
+    </label>
+    <label class="lyr">
+      <input type="checkbox" id="t-kisitli" checked>
+      <span class="dot" style="background:#dc2626;"></span>
+      <span class="label">Yabancı Kısıtlı</span>
+      <span class="sayi">24</span>
+    </label>
+
+    <h2>Vurgu (Sprint 5/6)</h2>
+    <label class="lyr">
+      <input type="checkbox" id="t-mudanya" checked>
+      <span class="dot" style="background:#10b981;"></span>
+      <span class="label">Bursa Mudanya 4 mh</span>
+      <span class="sayi">4</span>
+    </label>
+
+    <div class="side-note">
+      <strong>v2 yaşanabilirlik skoru</strong> · CC-Basın Sprint 25 il/ilçe pivot çıkışında 3.797 büyükşehir mahallesine yansıtılacak. Mudanya 4 mahallesi şu an aktif veri ile yayında.
+    </div>
+    <div class="side-note">
+      <strong>Vector tile</strong> · 50 MB GeoJSON → ~5 MB MVT dönüşümü Sprint 7'de. Şu an gzip + lazy load.
+    </div>
+  </aside>
+
+  <!-- HARİTA -->
+  <div style="position:relative;">
+    <div id="map"></div>
+    <div id="load-ind" class="load-ind">Yükleniyor…</div>
+
+    <div class="map-info">
+      <span class="tag">Prototip · Faz 1</span>
+      <h2 style="margin-top:4px">Bursa Mudanya</h2>
+      <p>4 mahalle yaşanabilirlik skoru + POI yoğunluğu. Marker'a tıklayın, detay popup açılır.</p>
+      <div class="metric">
+        <div><div class="big" id="m-toplam-poi">—</div><div class="lbl">Toplam POI</div></div>
+        <div><div class="big" id="m-mahalle">—</div><div class="lbl">Mahalle</div></div>
+      </div>
+    </div>
+
+    <div class="map-foot">Tradia Maps · OSM verisi (Overpass) · Tile: OpenStreetMap / CARTO</div>
   </div>
 </div>
-
-<div class="map-foot">Tradia Maps · OSM verisi (Overpass) · Tile: OpenStreetMap</div>
 
 <!-- LEAD MAGNET MODAL -->
 <div class="mp-modal-bg" id="modal-rapor">
@@ -284,159 +425,396 @@
 <div class="mp-toast" id="toast"></div>
 
 <script>
-const MAP_VERI_URL = '../data/maps/bursa.json';
-let aktifMahalle = null;
-let aktifMarkers = [];
-let aktifIlceMarkers = [];
-let bursaData = null;
-
+// ============================================================================
+// HARİTA
+// ============================================================================
 const map = L.map('map', {
-  center: [40.1828, 29.0606],   // Bursa Osmangazi merkez
-  zoom: 10,
+  center: [39.2, 35.0],
+  zoom: 6,
   zoomControl: false,
   preferCanvas: true,
+  worldCopyJump: false,
 });
 L.control.zoom({ position: 'bottomright' }).addTo(map);
 
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-  subdomains: 'abcd',
-  maxZoom: 19,
+  subdomains: 'abcd', maxZoom: 19,
   attribution: '&copy; OpenStreetMap &copy; CARTO',
 }).addTo(map);
-
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
-  subdomains: 'abcd',
-  maxZoom: 19,
-  pane: 'shadowPane',
+  subdomains: 'abcd', maxZoom: 19, pane: 'shadowPane',
 }).addTo(map);
+
+map.setMaxBounds([[35.0, 25.0], [43.0, 45.5]]);
+
+// ============================================================================
+// UTILS
+// ============================================================================
+const loadInd = document.getElementById('load-ind');
+function indi(on) { loadInd.classList.toggle('active', on); }
+
+async function fetchJSON(url) {
+  indi(true);
+  try {
+    const r = await fetch(url);
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    return await r.json();
+  } finally { indi(false); }
+}
+
+function fmtNum(n) {
+  if (n === undefined || n === null || n === '') return '—';
+  return (+n).toLocaleString('tr-TR');
+}
+function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+
+// ============================================================================
+// 6 POPUP FORMATI
+// ============================================================================
+function popupIl(p) {
+  const kisitliBadge = p.yabanci_kisitli
+    ? (['sinir_askeri_kisitli','stratejik'].includes(p.yabanci_kisitli_tip)
+        ? `<span class="badge badge-red">⚠ Yabancı Kısıtlı: ${esc(p.yabanci_kisitli_tip)}</span>`
+        : `<span class="badge badge-yellow">⚠ Kısıtlı: ${esc(p.yabanci_kisitli_tip || '—')}</span>`)
+    : `<span class="badge badge-green">✓ Yabancıya Açık</span>`;
+  return `
+    <div class="mp-pop">
+      <h3>${esc(p.name)}</h3>
+      <div class="loc">${esc(p.bolge || '—')} · İl</div>
+      <div style="margin-bottom:10px;">${kisitliBadge}</div>
+      <div class="gruplar">
+        <div class="row"><span class="k">Sahibinden ilanı</span><span class="v">${fmtNum(p.ilan_say)}</span></div>
+        <div class="row"><span class="k">OSB sayısı</span><span class="v">${fmtNum(p.osb_say)}</span></div>
+        <div class="row"><span class="k">Mega proje</span><span class="v">${fmtNum(p.mega_proje_say)}</span></div>
+        <div class="row"><span class="k">Wikidata</span><span class="v">${esc(p.wikidata || '—')}</span></div>
+      </div>
+    </div>`;
+}
+
+function popupIlce(p) {
+  const adi = p.name || p.ilce_adi || p.NAME_2 || '—';
+  const il  = p.il || p.NAME_1 || '?';
+  return `
+    <div class="mp-pop">
+      <h3>${esc(adi)}</h3>
+      <div class="loc">${esc(il)} · ${esc(p.bolge || '—')} · İlçe</div>
+      ${p.yabanci_kisitli_il ? `<div style="margin-bottom:10px;"><span class="badge badge-yellow">⚠ Yabancı kısıtlı il içinde</span></div>` : ''}
+      <div class="gruplar">
+        <div class="row"><span class="k">Sahibinden ilanı</span><span class="v">${fmtNum(p.ilan_say)}</span></div>
+        <div class="row"><span class="k">Merkez koord.</span><span class="v">${p.merkez_lat?.toFixed?.(3) ?? '—'}, ${p.merkez_lng?.toFixed?.(3) ?? '—'}</span></div>
+      </div>
+      ${(p.mega_proje_5km && p.mega_proje_5km.length) ? `
+        <div class="desc"><strong>Mega proje 5km:</strong> ${p.mega_proje_5km.length}<br>${p.mega_proje_5km.map(esc).join(', ')}</div>` : ''}
+    </div>`;
+}
+
+function popupMahalle(p) {
+  const adi = p.name || p.mahalle_adi || '—';
+  return `
+    <div class="mp-pop">
+      <h3>${esc(adi)}</h3>
+      <div class="loc">${esc(p.il || '—')} · ${esc(p.ilce || p.bolge || '—')} · Mahalle</div>
+      <div class="gruplar">
+        <div class="row"><span class="k">Merkez koord.</span><span class="v">${p.merkez_lat?.toFixed?.(4) ?? '—'}, ${p.merkez_lng?.toFixed?.(4) ?? '—'}</span></div>
+      </div>
+      <div class="desc"><strong>v2 yaşanabilirlik skoru</strong> · CC-Basın Sprint 25 il/ilçe pivot çıkışında bu mahalleye gerçek POI yoğunluk skoru yansıtılacak.</div>
+    </div>`;
+}
+
+function popupMega(p) {
+  return `
+    <div class="mp-pop">
+      <h3>${esc(p.name)}</h3>
+      <div class="loc">${esc(p.il || '?')} · ${esc(p.ilce || '?')} · Mega Proje</div>
+      <div style="margin-bottom:10px;">
+        <span class="badge badge-blue">🔵 ${esc(p.category || 'mega_proje')}</span>
+        ${p.status ? `<span class="badge ${p.status==='active'?'badge-green':'badge-yellow'}">${esc(p.status)}</span>` : ''}
+      </div>
+      ${p.aciklama ? `<p style="font-size:13px; color:var(--txt-muted); margin: 6px 0;">${esc(p.aciklama)}</p>` : ''}
+      ${p.tradia_score ? `<div class="gruplar"><div class="row"><span class="k">Tradia score</span><span class="v">${esc(p.tradia_score)}</span></div></div>` : ''}
+    </div>`;
+}
+
+function popupOSB(p) {
+  return `
+    <div class="mp-pop">
+      <h3>${esc(p.osb_adi)}</h3>
+      <div class="loc">${esc(p.il)} · ${esc(p.ilce || '?')} · ${esc(p.bolge || '')} · OSB</div>
+      <div style="margin-bottom:10px;"><span class="badge badge-orange">🟠 ${esc(p.durum || 'faal')}</span></div>
+      <div class="gruplar">
+        <div class="row"><span class="k">Alan</span><span class="v">${fmtNum(p.alan_ha)} ha</span></div>
+        <div class="row"><span class="k">İhracat (M$)</span><span class="v">${fmtNum(p.ihracat_milyon_usd)}</span></div>
+        <div class="row"><span class="k">Arsa $/m²</span><span class="v">${fmtNum(p.arsa_usd_m2)}</span></div>
+        <div class="row"><span class="k">Sektör</span><span class="v">${esc(p.sektor || '—')}</span></div>
+        <div class="row"><span class="k">Tradia score</span><span class="v">${esc(p.tradia_score || '—')}</span></div>
+      </div>
+    </div>`;
+}
+
+function popupKisitli(p) {
+  const baslik = `${esc(p.il)}${p.ilce ? ' / ' + esc(p.ilce) : ''}`;
+  const cls = ['sinir_askeri_kisitli','stratejik'].includes(p.tip) ? 'badge-red' : 'badge-yellow';
+  return `
+    <div class="mp-pop">
+      <h3>${baslik}</h3>
+      <div class="loc">${esc(p.kategori || '—')}</div>
+      <div style="margin-bottom:10px;"><span class="badge ${cls}">⚠ ${esc(p.kategori || p.tip || '—')}</span></div>
+      ${p.aciklama ? `<p style="font-size:13px; color:var(--txt-muted); margin:6px 0;">${esc(p.aciklama)}</p>` : ''}
+      ${p.sebep ? `<p style="font-size:12px; color:var(--txt-muted);"><strong>Sebep:</strong> ${esc(p.sebep)}</p>` : ''}
+      <div class="desc">📚 Hukuk DB: 2644 sayılı kanun + 2007/12044 sayılı kararname (Sprint 22).</div>
+    </div>`;
+}
+
+// ============================================================================
+// STYLE HELPERS (polygon)
+// ============================================================================
+function ilStyle(feature) {
+  const p = feature.properties;
+  let renk = '#475569';
+  if (p.kapsama_renk === 'red')    renk = '#7f1d1d';
+  if (p.kapsama_renk === 'yellow') renk = '#854d0e';
+  if (p.kapsama_renk === 'green')  renk = '#065f46';
+  return { fillColor: renk, weight: 1, color: '#94a3b8', opacity: 0.7, fillOpacity: 0.45 };
+}
+function ilceStyle() {
+  return { fillColor: '#64748b', weight: 0.6, color: '#94a3b8', opacity: 0.5, fillOpacity: 0.12 };
+}
+function mahalleStyle() {
+  return { fillColor: '#3b82f6', weight: 0.4, color: '#60a5fa', opacity: 0.4, fillOpacity: 0.08 };
+}
+
+// ============================================================================
+// LAYER REGISTRY
+// ============================================================================
+let lyrIller = null, lyrIlceler = null, lyrMahalleler = null;
+let lyrMega = null, lyrOSB = null, lyrKisitli = null;
+
+// İller — choropleth, hemen yükle
+fetchJSON('data/iller.geojson').then(data => {
+  lyrIller = L.geoJSON(data, {
+    style: ilStyle,
+    onEachFeature: (f, l) => l.on('click', () => l.bindPopup(popupIl(f.properties), { maxWidth: 380 }).openPopup()),
+  });
+  if (document.getElementById('t-iller').checked) lyrIller.addTo(map);
+  document.getElementById('c-iller').textContent = data.features.length;
+}).catch(e => console.error('iller', e));
+
+// Mega projeler — küçük, hemen
+fetchJSON('data/mega.geojson').then(data => {
+  lyrMega = L.geoJSON(data, {
+    pointToLayer: (f, latlng) => L.circleMarker(latlng, {
+      radius: 8, fillColor: '#1e40af', color: '#fff', weight: 2, opacity: 1, fillOpacity: 0.9
+    }),
+    onEachFeature: (f, l) => l.bindPopup(popupMega(f.properties), { maxWidth: 380 }),
+  });
+  if (document.getElementById('t-mega').checked) lyrMega.addTo(map);
+}).catch(e => console.error('mega', e));
+
+// OSB — küçük, hemen
+fetchJSON('data/osb.geojson').then(data => {
+  lyrOSB = L.geoJSON(data, {
+    pointToLayer: (f, latlng) => L.circleMarker(latlng, {
+      radius: 5, fillColor: '#ea580c', color: '#fff', weight: 1, opacity: 1, fillOpacity: 0.8
+    }),
+    onEachFeature: (f, l) => l.bindPopup(popupOSB(f.properties), { maxWidth: 380 }),
+  });
+  if (document.getElementById('t-osb').checked) lyrOSB.addTo(map);
+}).catch(e => console.error('osb', e));
+
+// Yabancı kısıtlı — halo
+fetchJSON('data/kisitli.geojson').then(data => {
+  lyrKisitli = L.geoJSON(data, {
+    pointToLayer: (f, latlng) => {
+      const renk = ['sinir_askeri_kisitli','stratejik'].includes(f.properties.tip) ? '#dc2626' : '#eab308';
+      return L.circleMarker(latlng, {
+        radius: 12, fillColor: renk, color: renk, weight: 2,
+        opacity: 0.5, fillOpacity: 0.30,
+      });
+    },
+    onEachFeature: (f, l) => l.bindPopup(popupKisitli(f.properties), { maxWidth: 380 }),
+  });
+  if (document.getElementById('t-kisitli').checked) lyrKisitli.addTo(map);
+}).catch(e => console.error('kisitli', e));
+
+// İlçeler — lazy
+document.getElementById('b-ilceler').addEventListener('click', async (e) => {
+  if (lyrIlceler) return;
+  e.target.disabled = true;
+  e.target.textContent = '⏳ İndiriliyor (27 MB)…';
+  try {
+    const data = await fetchJSON('data/ilceler.geojson');
+    lyrIlceler = L.geoJSON(data, {
+      style: ilceStyle,
+      onEachFeature: (f, l) => l.on('click', () => l.bindPopup(popupIlce(f.properties), { maxWidth: 380 }).openPopup()),
+    });
+    document.getElementById('t-ilceler').checked = true;
+    lyrIlceler.addTo(map);
+    document.getElementById('c-ilceler').textContent = data.features.length;
+    e.target.style.display = 'none';
+  } catch (err) {
+    e.target.disabled = false;
+    e.target.textContent = '⚠ Hata, tekrar dene';
+    console.error(err);
+  }
+});
+
+// Mahalleler — lazy + zoom-tetik
+async function loadMahalleler(btn) {
+  if (lyrMahalleler) return;
+  if (btn) { btn.disabled = true; btn.textContent = '⏳ İndiriliyor (15 MB)…'; }
+  try {
+    const data = await fetchJSON('data/mahalleler.geojson');
+    lyrMahalleler = L.geoJSON(data, {
+      style: mahalleStyle,
+      onEachFeature: (f, l) => l.on('click', () => l.bindPopup(popupMahalle(f.properties), { maxWidth: 380 }).openPopup()),
+    });
+    document.getElementById('t-mahalleler').checked = true;
+    lyrMahalleler.addTo(map);
+    document.getElementById('c-mahalleler').textContent = data.features.length;
+    if (btn) btn.style.display = 'none';
+  } catch (err) {
+    if (btn) { btn.disabled = false; btn.textContent = '⚠ Hata, tekrar dene'; }
+    console.error(err);
+  }
+}
+document.getElementById('b-mahalleler').addEventListener('click', e => loadMahalleler(e.target));
+map.on('zoomend', () => {
+  if (map.getZoom() >= 12 && !lyrMahalleler) loadMahalleler(document.getElementById('b-mahalleler'));
+});
+
+// Toggle handlers
+function bindToggle(checkboxId, getter) {
+  document.getElementById(checkboxId).addEventListener('change', e => {
+    const l = getter();
+    if (!l) return;
+    if (e.target.checked) map.addLayer(l); else map.removeLayer(l);
+  });
+}
+bindToggle('t-iller',      () => lyrIller);
+bindToggle('t-ilceler',    () => lyrIlceler);
+bindToggle('t-mahalleler', () => lyrMahalleler);
+bindToggle('t-mega',       () => lyrMega);
+bindToggle('t-osb',        () => lyrOSB);
+bindToggle('t-kisitli',    () => lyrKisitli);
+
+// ============================================================================
+// BURSA MUDANYA — Sprint 5 vurgu katmanı (her zaman ön planda)
+// ============================================================================
+const MAP_VERI_URL = '../data/maps/bursa.json';
+let aktifMahalle = null;
+let mudanyaMarkers = [];
+let ilcePlaceholders = [];
+let bursaData = null;
 
 function seviyeKlass(skor) {
   if (skor >= 200) return 'best';
   if (skor >= 50)  return 'med';
   return 'low';
 }
-function seviyeMarker(skor) {
-  if (skor >= 200) return 'best';
-  if (skor >= 50)  return 'med';
-  return 'low';
-}
 function fmtSkor(skor) { return new Intl.NumberFormat('tr-TR').format(skor); }
 
-function popupHTML(m) {
+function popupMudanya(m) {
   const klass = seviyeKlass(m.skor);
-  const g = m.gruplar;
+  const g = m.gruplar || {};
   const ikonlu = [
     ['🍴', 'Yeme/içme', g.yeme_icme],
-    ['🏥', 'Sağlık', g.saglik],
+    ['🏥', 'Sağlık',    g.saglik],
     ['🛒', 'Alışveriş', g.alisveris],
-    ['🚌', 'Ulaşım', g.ulasim],
-    ['🏦', 'Finans', g.finans],
+    ['🚌', 'Ulaşım',    g.ulasim],
+    ['🏦', 'Finans',    g.finans],
     ['🏨', 'Konaklama', g.konaklama],
   ];
   return `
     <div class="mp-pop">
-      <h3>${m.ad}</h3>
+      <h3>${esc(m.ad)}</h3>
       <div class="loc">Bursa / Mudanya</div>
       <div class="headline">
         <div>
           <div class="lbl">Toplam POI</div>
-          <div class="val">${m.toplam_poi}</div>
+          <div class="val">${fmtNum(m.toplam_poi)}</div>
         </div>
         <div>
           <div class="lbl">Yaşanabilirlik</div>
           <div class="val score-${klass}">${fmtSkor(m.skor)}</div>
-          <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.08em;">${m.seviye}</div>
+          <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.08em;">${esc(m.seviye || '')}</div>
         </div>
       </div>
       <div class="gruplar">
         ${ikonlu.map(([ic, lbl, v]) => `
-          <div class="row"><span class="k">${ic} ${lbl}</span><span class="v">${v}</span></div>
+          <div class="row"><span class="k">${ic} ${lbl}</span><span class="v">${fmtNum(v)}</span></div>
         `).join('')}
       </div>
-      <div class="desc">${m.aciklama
-        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-        .replace(/\n/g, '<br>')}</div>
+      ${m.aciklama ? `<div class="desc">${esc(m.aciklama).replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>')}</div>` : ''}
       <div class="cta">
-        <button class="primary" onclick="openRapor('${m.ad.replace(/'/g, '&apos;')}')">📄 Detay Rapor</button>
-        <button class="ghost" onclick="openYorum('${m.ad.replace(/'/g, '&apos;')}')">💬 Yorum</button>
+        <button class="primary" onclick="openRapor('${esc(m.ad).replace(/'/g,'&apos;')}')">📄 Detay Rapor</button>
+        <button class="ghost" onclick="openYorum('${esc(m.ad).replace(/'/g,'&apos;')}')">💬 Yorum</button>
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
-function makeIcon(skor) {
-  const klass = seviyeMarker(skor);
+function mudanyaIcon(skor) {
+  const klass = seviyeKlass(skor);
   return L.divIcon({
     className: '',
     html: `<div class="mp-marker ${klass}">${skor >= 1000 ? Math.round(skor/100) + 'h' : skor}</div>`,
-    iconSize: [36, 36],
-    iconAnchor: [18, 18],
-    popupAnchor: [0, -16],
+    iconSize: [36, 36], iconAnchor: [18, 18], popupAnchor: [0, -16],
   });
 }
-
-function placeholderIlceIcon() {
+function placeholderIcon() {
   return L.divIcon({
     className: '',
     html: `<div class="mp-marker" style="background:#374151;border:2px solid #6b7280;color:#9ca3af;font-size:11px;width:30px;height:30px;">⋯</div>`,
     iconSize: [30, 30], iconAnchor: [15, 15], popupAnchor: [0, -14],
   });
 }
-
-function ilcePopupHTML(ad, info) {
+function ilcePlaceholderPopup(ad, info) {
   return `
     <div class="mp-pop">
-      <h3>${ad}</h3>
+      <h3>${esc(ad)}</h3>
       <div class="loc">Bursa / İlçe</div>
       <div class="desc" style="border-top:none;">
         <strong>Veri beklemede.</strong><br><br>
-        ${info.not}<br><br>
-        <em>Sprint 25 il/ilçe pivot çıkışında bu ilçenin tüm mahalleleri POI yoğunluk skoruyla bu haritada görünür.</em>
+        ${esc(info.not || 'CC-Basın Sprint 25 il/ilçe pivot çıkışında bu ilçenin mahalleleri POI yoğunluk skoruyla görünür.')}
       </div>
-    </div>
-  `;
+    </div>`;
 }
 
-function renderMarkers(filter) {
-  // Önce mevcut markerları temizle
-  aktifMarkers.forEach(m => map.removeLayer(m));
-  aktifIlceMarkers.forEach(m => map.removeLayer(m));
-  aktifMarkers = []; aktifIlceMarkers = [];
+function renderMudanya(filter) {
+  mudanyaMarkers.forEach(m => map.removeLayer(m));
+  ilcePlaceholders.forEach(m => map.removeLayer(m));
+  mudanyaMarkers = []; ilcePlaceholders = [];
+
+  if (!document.getElementById('t-mudanya').checked) return;
 
   const bounds = [];
-
-  // Aktif mahalleler (Mudanya 4 — POI dolu)
-  bursaData.mahalleler.forEach(m => {
+  (bursaData?.mahalleler || []).forEach(m => {
     if (filter !== 'all' && filter !== m.ilce) return;
-    const mk = L.marker([m.lat, m.lon], { icon: makeIcon(m.skor) })
+    const mk = L.marker([m.lat, m.lon], { icon: mudanyaIcon(m.skor) })
       .addTo(map)
-      .bindPopup(popupHTML(m), { maxWidth: 380, autoPan: true });
+      .bindPopup(popupMudanya(m), { maxWidth: 380, autoPan: true });
     mk.on('popupopen', () => { aktifMahalle = m.ad; });
-    aktifMarkers.push(mk);
+    mudanyaMarkers.push(mk);
     bounds.push([m.lat, m.lon]);
   });
 
-  // Placeholder ilçeler (beklemede)
   if (filter === 'all') {
-    Object.entries(bursaData.ilceler || {}).forEach(([ilce, info]) => {
-      const mk = L.marker(info.merkez, { icon: placeholderIlceIcon() })
+    Object.entries(bursaData?.ilceler || {}).forEach(([ilce, info]) => {
+      const mk = L.marker(info.merkez, { icon: placeholderIcon() })
         .addTo(map)
-        .bindPopup(ilcePopupHTML(ilce, info), { maxWidth: 320 });
-      aktifIlceMarkers.push(mk);
+        .bindPopup(ilcePlaceholderPopup(ilce, info), { maxWidth: 320 });
+      ilcePlaceholders.push(mk);
       bounds.push(info.merkez);
     });
-  } else if (filter !== 'Mudanya' && bursaData.ilceler && bursaData.ilceler[filter]) {
-    // Tek ilçe görünüm — placeholder
+  } else if (filter !== 'Mudanya' && bursaData?.ilceler?.[filter]) {
     const info = bursaData.ilceler[filter];
-    const mk = L.marker(info.merkez, { icon: placeholderIlceIcon() })
+    const mk = L.marker(info.merkez, { icon: placeholderIcon() })
       .addTo(map)
-      .bindPopup(ilcePopupHTML(filter, info), { maxWidth: 320 });
-    aktifIlceMarkers.push(mk);
+      .bindPopup(ilcePlaceholderPopup(filter, info), { maxWidth: 320 });
+    ilcePlaceholders.push(mk);
     mk.openPopup();
     map.setView(info.merkez, 12);
     return;
   }
-
   if (bounds.length > 1) {
     map.fitBounds(bounds, { padding: [60, 60], maxZoom: 11 });
   }
@@ -445,21 +823,24 @@ function renderMarkers(filter) {
 fetch(MAP_VERI_URL).then(r => r.json()).then(data => {
   bursaData = data;
   document.getElementById('m-toplam-poi').textContent =
-    data.mahalleler.reduce((a, m) => a + m.toplam_poi, 0);
+    fmtNum((data.mahalleler || []).reduce((a, m) => a + (m.toplam_poi || 0), 0));
   document.getElementById('m-mahalle').textContent =
-    `${data.mahalleler.length}+${Object.keys(data.ilceler || {}).length} ilçe`;
-  renderMarkers('all');
+    `${(data.mahalleler || []).length}+${Object.keys(data.ilceler || {}).length}`;
+  renderMudanya('all');
 }).catch(err => {
-  console.error('Veri yüklenemedi', err);
+  console.error('Bursa veri yüklenemedi', err);
   document.getElementById('m-toplam-poi').textContent = '!';
 });
 
-// İlçe filtre dropdown
-document.getElementById('ilce-filter').addEventListener('change', e => {
-  renderMarkers(e.target.value);
+document.getElementById('ilce-filter').addEventListener('change', e => renderMudanya(e.target.value));
+document.getElementById('t-mudanya').addEventListener('change', () => {
+  const f = document.getElementById('ilce-filter').value || 'all';
+  renderMudanya(f);
 });
 
-// Lead magnet
+// ============================================================================
+// LEAD MAGNET (Sprint 5)
+// ============================================================================
 function openRapor(mahalle) {
   aktifMahalle = mahalle;
   document.getElementById('rapor-mahalle').textContent =
@@ -472,10 +853,9 @@ function openYorum(mahalle) {
     `Tradia bu mahalle için bir skor üretti. Sizin gözleminize göre bu mahalle nerede?`;
   document.getElementById('modal-yorum').classList.add('open');
 }
-function closeModal(id) {
-  document.getElementById(id).classList.remove('open');
-}
-[document.getElementById('modal-rapor'), document.getElementById('modal-yorum')].forEach(el => {
+function closeModal(id) { document.getElementById(id).classList.remove('open'); }
+['modal-rapor','modal-yorum'].forEach(id => {
+  const el = document.getElementById(id);
   el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); });
 });
 
@@ -489,7 +869,6 @@ function showToast(msg) {
 const API_BASE = 'https://tradiaturkey.com/api';
 
 async function sendLead(payload) {
-  // Önce backend dene, başarısızsa console.log fallback (Sprint 5 backend deploy bekleyen)
   try {
     const r = await fetch(API_BASE + '/lead', {
       method: 'POST',
@@ -500,16 +879,15 @@ async function sendLead(payload) {
     return { ok: false, error: 'backend_' + r.status };
   } catch (e) {
     console.log('[LEAD-fallback]', payload);
-    return { ok: true, source: 'console_fallback' };  // dev/staging için OK kabul
+    return { ok: true, source: 'console_fallback' };
   }
 }
-
 async function sendComment(payload) {
   try {
     const r = await fetch(API_BASE + '/yorum', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(payload),
+      body: JSON.stringify({ ...payload, kvkk_onay: true }),
     });
     if (r.ok) return { ok: true, source: 'backend' };
     return { ok: false };
@@ -544,12 +922,11 @@ async function submitRapor(e) {
 async function submitYorum(e) {
   e.preventDefault();
   const yorum = {
-    mahalle: aktifMahalle,
+    mahalle_slug: aktifMahalle ? aktifMahalle.toLowerCase().replace(/\s+/g, '-') : '',
     il: 'Bursa',
     ilce: 'Mudanya',
     trend: document.getElementById('yorum-trend').value,
     body: document.getElementById('yorum-aciklama').value,
-    dil: 'tr',
   };
   const result = await sendComment(yorum);
   closeModal('modal-yorum');

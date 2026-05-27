@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Бюллетени</title>
+  <meta name="description" content="Бюллетени Tradia — Кросс-медиа Аудит Аналитиков, Тепловая Карта Кварталов Бурсы, Изменение Мегаплана Стамбула, Жизнеспособность 17 районов Бурсы (готовится).">
+  <link rel="canonical" href="https://tradiaturkey.com/ru/bultenler/">
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/bultenler/">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/bultenler/">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/bultenler/">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/bultenler/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../bultenler/_tradia_tema.css">
+  <style>
+    .bl-card {
+      display: grid; grid-template-columns: 80px 1fr auto;
+      gap: 20px; align-items: center; padding: 22px;
+      border: 1px solid var(--border); background: var(--bg-card);
+      border-radius: 10px; margin-bottom: 14px;
+      transition: all 0.2s; text-decoration: none; color: inherit;
+    }
+    .bl-card:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+    .bl-num {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 3.5rem; line-height: 1;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      text-align: center;
+    }
+    .bl-card .meta { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-faint); text-transform: uppercase; letter-spacing: 0.1em; }
+    .bl-card h3 { font-size: 1.3rem; margin: 4px 0 6px; color: var(--txt); }
+    .bl-card .lede { font-size: 0.95rem; color: var(--txt-muted); line-height: 1.5; margin: 0; }
+    .bl-card .arrow { font-family: 'JetBrains Mono'; font-size: 1.5rem; color: var(--gold); }
+    .bl-card.draft { border-style: dashed; opacity: 0.65; }
+    .bl-card.draft:hover { transform: none; box-shadow: none; cursor: default; border-color: var(--border); }
+    .bl-card.draft .arrow { color: var(--txt-faint); }
+
+    .bl-tag {
+      display: inline-block; font-family: 'JetBrains Mono'; font-size: 9px;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 2px 8px; border-radius: 3px; margin-right: 6px;
+    }
+    .bl-tag.yayinda    { background: var(--up); color: #000; }
+    .bl-tag.hazirlanan { background: var(--gold); color: #000; }
+    .bl-tag.planlanan  { background: var(--bg-elev, var(--bg-2)); color: var(--txt-muted); border: 1px solid var(--border); }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Бюллетени</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Главная</a>
+      <a href="#" class="active">Бюллетени</a>
+      <a href="../../komponentler/analist_skor_panel.html">Аналит. Панель</a>
+      <a href="../../manifesto.html">Манифест</a>
+      <a href="../../bultenler/" style="color:var(--gold)">🇹🇷 TR</a>
+      <a href="../../en/bultenler/" style="color:var(--gold)">🇬🇧 EN</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Бюллетени · 2026</span>
+    <h1>Бюллетени <span class="grad-text">Tradia</span></h1>
+    <p class="lede">Ежемесячная инвестиционная аналитика Турции — кросс-медиа аудит аналитиков, тепловые карты кварталов, изменения мегаплана.</p>
+  </section>
+
+  <a class="bl-card" href="sayi-1-v2-ru.html">
+    <div class="bl-num">01</div>
+    <div>
+      <div class="meta"><span class="bl-tag yayinda">В эфире</span> Июнь 2026 · v2</div>
+      <h3>Кросс-медиа Аудит Аналитиков</h3>
+      <p class="lede">Два разных профиля, одна и та же последовательность. Балл последовательности Tradia для 4 аналитиков — Махфи, Керем, Атилла, Мурат.</p>
+    </div>
+    <div class="arrow">→</div>
+  </a>
+
+  <div class="bl-card draft">
+    <div class="bl-num">02</div>
+    <div>
+      <div class="meta"><span class="bl-tag hazirlanan">В работе</span> Июль 2026 · Перевод</div>
+      <h3>Тепловая Карта Кварталов Бурсы</h3>
+      <p class="lede">Балл плотности POI для 4 кварталов Мудании. Турецкий оригинал <a href="../../bultenler/sayi-2-v6-bursa-mahalle-isi.html" style="color:var(--gold)">здесь</a>. RU перевод — Sprint 8.</p>
+    </div>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="bl-card draft">
+    <div class="bl-num">03</div>
+    <div>
+      <div class="meta"><span class="bl-tag hazirlanan">В работе</span> Август 2026 · Перевод</div>
+      <h3>Стамбул / Арнавуткёй — Изменение Мегаплана</h3>
+      <p class="lede">Изменение плана 272.61 га в Таякадын — Tradia выявила за 2 месяца до рынка. Турецкий оригинал <a href="../../bultenler/sayi-3-v6-istanbul-arnavutkoy.html" style="color:var(--gold)">здесь</a>. RU перевод — Sprint 8.</p>
+    </div>
+    <div class="arrow">→</div>
+  </div>
+
+  <div class="bl-card draft">
+    <div class="bl-num">06</div>
+    <div>
+      <div class="meta"><span class="bl-tag planlanan">Скоро</span> Sprint 7+</div>
+      <h3>Тепловая Карта 17 Районов Бурсы</h3>
+      <p class="lede">Все 17 районов Бурсы × ~62 квартала плотности POI + фильтр по 4 квадрантам. Зависит от пивота провинция/район CC-Press Sprint 25.</p>
+    </div>
+    <div class="arrow">⏳</div>
+  </div>
+
+  <hr class="divider">
+
+  <p class="center muted mono" style="font-size: 0.85rem; padding: 20px 0;">
+    <strong>Бюллетени Tradia</strong> · Бесплатно · Открытая методология · Без спама<br>
+    <span class="faint">Ежемесячная сводка инвестиционной аналитики Турции.</span>
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Инвестиционная Аналитика Турции</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Главная</a> ·
+    <a href="../../map/">Карты</a> ·
+    <a href="../../manifesto.html">Манифест</a>
+  </p>
+</footer>
+
+</body>
+</html>

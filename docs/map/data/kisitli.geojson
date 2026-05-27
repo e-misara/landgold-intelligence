@@ -1,0 +1,430 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.3499,
+          36.4019
+        ]
+      },
+      "properties": {
+        "il": "Hatay",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.7917,
+          37.1583
+        ]
+      },
+      "properties": {
+        "il": "Şanlıurfa",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.3833,
+          37.0662
+        ]
+      },
+      "properties": {
+        "il": "Gaziantep",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.1212,
+          36.7184
+        ]
+      },
+      "properties": {
+        "il": "Kilis",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          40.7351,
+          37.3126
+        ]
+      },
+      "properties": {
+        "il": "Mardin",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.4546,
+          37.5167
+        ]
+      },
+      "properties": {
+        "il": "Şırnak",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.7333,
+          37.5833
+        ]
+      },
+      "properties": {
+        "il": "Hakkari",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.4097,
+          38.5012
+        ]
+      },
+      "properties": {
+        "il": "Van",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.0503,
+          39.7191
+        ]
+      },
+      "properties": {
+        "il": "Ağrı",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          44.045,
+          39.9237
+        ]
+      },
+      "properties": {
+        "il": "Iğdır",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          43.0975,
+          40.6013
+        ]
+      },
+      "properties": {
+        "il": "Kars",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          42.7022,
+          41.1105
+        ]
+      },
+      "properties": {
+        "il": "Ardahan",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.8194,
+          41.1828
+        ]
+      },
+      "properties": {
+        "il": "Artvin",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.5623,
+          41.6818
+        ]
+      },
+      "properties": {
+        "il": "Edirne",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.2167,
+          41.7333
+        ]
+      },
+      "properties": {
+        "il": "Kırklareli",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.4142,
+          40.1553
+        ]
+      },
+      "properties": {
+        "il": "Çanakkale",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.1532,
+          42.0264
+        ]
+      },
+      "properties": {
+        "il": "Sinop",
+        "tip": "sinir_askeri_kisitli",
+        "kategori": "Sınır/Askeri Kısıtlı",
+        "renk": "red",
+        "aciklama": "4660 sayılı Cumhurbaşkanı Kararı — yabancıya satış kısıtlı/yasak"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          30.7056,
+          36.8841
+        ]
+      },
+      "properties": {
+        "il": "Antalya",
+        "tip": "sahil_turistik_kismi",
+        "kategori": "Sahil/Turistik Kısmi Kısıtlı",
+        "renk": "yellow",
+        "tehlike_ilceleri": [
+          "Alanya",
+          "Manavgat (Belek)",
+          "Kemer",
+          "Kaş",
+          "Demre"
+        ],
+        "aciklama": "Yabancı yoğunluğu yüksek; 2022-2024 arası bazı ilçelerde %10 sınırı yaklaştı"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.3636,
+          37.2153
+        ]
+      },
+      "properties": {
+        "il": "Muğla",
+        "tip": "sahil_turistik_kismi",
+        "kategori": "Sahil/Turistik Kısmi Kısıtlı",
+        "renk": "yellow",
+        "tehlike_ilceleri": [
+          "Fethiye Çalış",
+          "Marmaris İçmeler",
+          "Bodrum Yalıkavak"
+        ],
+        "aciklama": "Fethiye/Marmaris/Bodrum yoğun yabancı"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.9784,
+          41.0082
+        ]
+      },
+      "properties": {
+        "il": "İstanbul",
+        "tip": "sahil_turistik_kismi",
+        "kategori": "Sahil/Turistik Kısmi Kısıtlı",
+        "renk": "yellow",
+        "tehlike_ilceleri": [],
+        "aciklama": "Çatalca/Silivri askeri kısıtlama; Beyoğlu/Şişli/Kadıköy serbest ama yabancı yoğun"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1287,
+          38.4192
+        ]
+      },
+      "properties": {
+        "il": "İzmir",
+        "tip": "sahil_turistik_kismi",
+        "kategori": "Sahil/Turistik Kısmi Kısıtlı",
+        "renk": "yellow",
+        "tehlike_ilceleri": [],
+        "aciklama": "Çeşme/Foça turistik; Aliağa stratejik liman askeri ek izin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.6415,
+          36.8121
+        ]
+      },
+      "properties": {
+        "il": "Mersin",
+        "ilce": "Gülnar",
+        "tip": "stratejik",
+        "kategori": "Stratejik Yatırım (nükleer/petrol/gaz)",
+        "renk": "darkred",
+        "sebep": "Akkuyu Nükleer Santral sahası — yabancı edinim ek izin"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.1532,
+          42.0264
+        ]
+      },
+      "properties": {
+        "il": "Sinop",
+        "ilce": "İnceburun",
+        "tip": "stratejik",
+        "kategori": "Stratejik Yatırım (nükleer/petrol/gaz)",
+        "renk": "darkred",
+        "sebep": "Planlanan Sinop Nükleer Santral sahası — kısıtlı (Sprint 18 ihale haberi)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.73,
+          41.005
+        ]
+      },
+      "properties": {
+        "il": "Trabzon",
+        "ilce": "Yomra/Sürmene",
+        "tip": "stratejik",
+        "kategori": "Stratejik Yatırım (nükleer/petrol/gaz)",
+        "renk": "darkred",
+        "sebep": "Karadeniz doğal gaz boru hattı — bazı kıyı parselleri sınırlı"
+      }
+    }
+  ]
+}

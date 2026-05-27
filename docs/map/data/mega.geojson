@@ -1,0 +1,488 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.27,
+          39.9
+        ]
+      },
+      "properties": {
+        "id": "erzurum-dogu-ekspres",
+        "name": "Erzurum — Doğu Ekspres Turizm ve Kayak Bölgesi",
+        "name_en": "Erzurum — Eastern Express Tourism & Ski Zone",
+        "category": "tourism",
+        "status": "active",
+        "tradia_score": 72,
+        "il": "Erzurum",
+        "ilce": "Palandöken-Yakutiye",
+        "aciklama": "Doğu Ekspres + kayak",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.309,
+          38.355
+        ]
+      },
+      "properties": {
+        "id": "malatya-kayisi-osb",
+        "name": "Malatya — Kayısı ve Gıda İşleme Sanayi",
+        "name_en": "Malatya — Apricot & Food Processing Industrial Zone",
+        "category": "agricultural_industrial",
+        "status": "active",
+        "tradia_score": 68,
+        "il": "Malatya",
+        "ilce": "Battalgazi-Yeşilyurt",
+        "aciklama": "Kayısı işleme + OSB",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          31.997,
+          36.545
+        ]
+      },
+      "properties": {
+        "id": "antalya-turizm-kusagi",
+        "name": "Antalya Turizm ve Konut Kuşağı",
+        "name_en": "Antalya Tourism & Residential Belt",
+        "category": "tourism",
+        "status": "active",
+        "tradia_score": 88,
+        "il": "Antalya",
+        "ilce": "Alanya-Manavgat hattı",
+        "aciklama": "Antalya turizm kuşağı",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.43,
+          37.0354
+        ]
+      },
+      "properties": {
+        "id": "mugla-bodrum-marmaris",
+        "name": "Muğla — Bodrum, Marmaris, Fethiye Lüks Kuşağı",
+        "name_en": "Mugla Luxury Coast — Bodrum, Marmaris, Fethiye",
+        "category": "luxury_tourism",
+        "status": "active",
+        "tradia_score": 91,
+        "il": "Muğla",
+        "ilce": "Bodrum",
+        "aciklama": "Bodrum yarımadası",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.1287,
+          38.4192
+        ]
+      },
+      "properties": {
+        "id": "izmir-lojistik-aksi",
+        "name": "İzmir Lojistik ve Sanayi Aksı",
+        "name_en": "Izmir Logistics & Industrial Corridor",
+        "category": "industrial",
+        "status": "active",
+        "tradia_score": 82,
+        "il": "İzmir",
+        "ilce": "Çiğli-Aliağa",
+        "aciklama": "Liman ve OSB aksı",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          27.145,
+          38.438
+        ]
+      },
+      "properties": {
+        "id": "izmir-alsancak-gelisim",
+        "name": "İzmir Alsancak — Bayraklı Kentsel Dönüşüm",
+        "name_en": "Izmir Alsancak-Bayraklı Urban Transformation",
+        "category": "urban_renewal",
+        "status": "active",
+        "tradia_score": 79,
+        "il": "İzmir",
+        "ilce": "Konak",
+        "aciklama": "Alsancak-Bayraklı kentsel dönüşüm",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.8289,
+          38.6431
+        ]
+      },
+      "properties": {
+        "id": "nevsehir-kappadokya",
+        "name": "Nevşehir — Kapadokya Turizm Yatırım Bölgesi",
+        "name_en": "Nevsehir — Cappadocia Tourism Investment Zone",
+        "category": "tourism",
+        "status": "active",
+        "tradia_score": 84,
+        "il": "Nevşehir",
+        "ilce": "Ürgüp-Göreme",
+        "aciklama": "Kapadokya turizm bölgesi",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          37.4,
+          37.15
+        ]
+      },
+      "properties": {
+        "id": "gaziantep-osb-ihracat",
+        "name": "Gaziantep OSB — Tekstil ve İhracat Merkezi",
+        "name_en": "Gaziantep Industrial Zone — Textile & Export Hub",
+        "category": "industrial",
+        "status": "active",
+        "tradia_score": 83,
+        "il": "Gaziantep",
+        "ilce": "Şehitkamil",
+        "aciklama": "4.200 ha OSB",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          34.631,
+          36.792
+        ]
+      },
+      "properties": {
+        "id": "mersin-serbest-ticaret",
+        "name": "Mersin Serbest Ticaret Bölgesi ve Liman",
+        "name_en": "Mersin Free Trade Zone & Port",
+        "category": "logistics",
+        "status": "active",
+        "tradia_score": 86,
+        "il": "Mersin",
+        "ilce": "Akdeniz",
+        "aciklama": "Mersin Liman ve STB",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          38.7917,
+          37.1583
+        ]
+      },
+      "properties": {
+        "id": "gap-sanliurfa-tarim",
+        "name": "GAP Projesi — Şanlıurfa Sulama ve Tarım Dönüşümü",
+        "name_en": "GAP Project — Şanlıurfa Irrigation & Agricultural Transformation",
+        "category": "agricultural_industrial",
+        "status": "active",
+        "tradia_score": 74,
+        "il": "Şanlıurfa",
+        "ilce": "Merkez (GAP)",
+        "aciklama": "GAP Sulama tarım dönüşümü",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.85,
+          36.9
+        ]
+      },
+      "properties": {
+        "id": "adana-ceyhan-enerji",
+        "name": "Adana-Ceyhan Enerji ve Petrokimya Koridoru",
+        "name_en": "Adana-Ceyhan Energy & Petrochemical Corridor",
+        "category": "industrial",
+        "status": "active",
+        "tradia_score": 80,
+        "il": "Adana",
+        "ilce": "Ceyhan",
+        "aciklama": "BTC, Yumurtalık petrokimya",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.73,
+          39.975
+        ]
+      },
+      "properties": {
+        "id": "ankara-teknoloji-usu",
+        "name": "Ankara Teknoloji ve Savunma Sanayi Üssü",
+        "name_en": "Ankara Technology & Defense Industry Hub",
+        "category": "technology",
+        "status": "active",
+        "tradia_score": 85,
+        "il": "Ankara",
+        "ilce": "Çankaya-Yenimahalle",
+        "aciklama": "Savunma sanayi koridoru",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          32.4847,
+          37.8714
+        ]
+      },
+      "properties": {
+        "id": "konya-tarim-lojistik",
+        "name": "Konya — Tarım Teknolojisi ve Lojistik Merkezi",
+        "name_en": "Konya — Agricultural Technology & Logistics Hub",
+        "category": "agricultural_industrial",
+        "status": "active",
+        "tradia_score": 76,
+        "il": "Konya",
+        "ilce": "Selçuklu-Karatay",
+        "aciklama": "Tarım teknoloji ve lojistik",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          35.5,
+          38.7333
+        ]
+      },
+      "properties": {
+        "id": "kayseri-organize-sanayi",
+        "name": "Kayseri Organize Sanayi — Mobilya ve Tekstil Merkezi",
+        "name_en": "Kayseri Industrial Zone — Furniture & Textile Hub",
+        "category": "industrial",
+        "status": "active",
+        "tradia_score": 77,
+        "il": "Kayseri",
+        "ilce": "Melikgazi-Kocasinan",
+        "aciklama": "Kayseri OSB",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          39.73,
+          41.005
+        ]
+      },
+      "properties": {
+        "id": "trabzon-gulf-demand",
+        "name": "Trabzon — Körfez Yatırımcı Talebi",
+        "name_en": "Trabzon — Gulf Investor Demand Zone",
+        "category": "residential",
+        "status": "active",
+        "tradia_score": 86,
+        "il": "Trabzon",
+        "ilce": "Ortahisar",
+        "aciklama": "Körfez yatırımcı talebi merkezi",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          41.0,
+          41.025
+        ]
+      },
+      "properties": {
+        "id": "rize-artvin-hidroelektrik",
+        "name": "Rize-Artvin — Havalimanı ve Hidroelektrik Bölgesi",
+        "name_en": "Rize-Artvin Airport & Hydroelectric Development Zone",
+        "category": "infrastructure",
+        "status": "active",
+        "tradia_score": 74,
+        "il": "Rize/Artvin",
+        "ilce": "Rize Merkez",
+        "aciklama": "HES koridoru + havalimanı",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          36.33,
+          41.2867
+        ]
+      },
+      "properties": {
+        "id": "samsun-karadeniz-hub",
+        "name": "Samsun — Karadeniz Lojistik ve Ticaret Merkezi",
+        "name_en": "Samsun — Black Sea Logistics & Trade Hub",
+        "category": "logistics",
+        "status": "active",
+        "tradia_score": 78,
+        "il": "Samsun",
+        "ilce": "İlkadım-Tekkeköy",
+        "aciklama": "Karadeniz lojistik merkezi",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.58,
+          41.0136
+        ]
+      },
+      "properties": {
+        "id": "kanal-istanbul",
+        "name": "Kanal İstanbul",
+        "name_en": null,
+        "category": null,
+        "status": "planning",
+        "tradia_score": 92,
+        "il": "İstanbul",
+        "ilce": "Küçükçekmece-Avcılar koridoru",
+        "aciklama": "Planlanan kanal güzergahı orta nokta",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          28.7411,
+          41.2611
+        ]
+      },
+      "properties": {
+        "id": "istanbul-havalimani",
+        "name": "İstanbul Havalimanı Gelişim Bölgesi",
+        "name_en": null,
+        "category": null,
+        "status": "active",
+        "tradia_score": 90,
+        "il": "İstanbul",
+        "ilce": "Arnavutköy",
+        "aciklama": "IST havalimanı",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          26.6,
+          40.2425
+        ]
+      },
+      "properties": {
+        "id": "canakkale-koprusu",
+        "name": "Çanakkale 1915 Köprüsü Etki Bölgesi",
+        "name_en": null,
+        "category": null,
+        "status": "active",
+        "tradia_score": 81,
+        "il": "Çanakkale",
+        "ilce": "Lapseki-Gelibolu",
+        "aciklama": "1915 Çanakkale Köprüsü",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          29.4333,
+          40.8
+        ]
+      },
+      "properties": {
+        "id": "gebze-kocaeli-oiz",
+        "name": "Gebze-Kocaeli Organize Sanayi Genişlemesi",
+        "name_en": null,
+        "category": null,
+        "status": "active",
+        "tradia_score": 83,
+        "il": "Kocaeli",
+        "ilce": "Gebze",
+        "aciklama": "Gebze OSB merkez",
+        "tip": "mega_proje",
+        "renk": "blue"
+      }
+    }
+  ]
+}
