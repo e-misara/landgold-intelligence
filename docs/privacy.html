@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Gizlilik Politikası</title>
+  <meta name="description" content="Tradia (tradiaturkey.com) gizlilik politikası — KVKK 6698 + GDPR uyumlu. Veri toplama, işleme, silme süreci.">
+  <link rel="canonical" href="https://tradiaturkey.com/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bultenler/_tradia_tema.css">
+  <link rel="stylesheet" href="assets/cookie-banner.css">
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Gizlilik</span>
+    </div>
+    <nav class="t-nav">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="bultenler/">Bültenler</a>
+      <a href="map/">Maps</a>
+      <a href="kvkk.html">KVKK</a>
+      <a href="en/privacy.html" style="color:var(--gold)">🇬🇧 EN</a>
+      <a href="ru/privacy.html" style="color:var(--gold)">🇷🇺 RU</a>
+      <a href="de/privacy.html" style="color:var(--gold)">🇩🇪 DE</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Yasal · Son güncelleme 2026-05-27 · v1.0</span>
+    <h1>Gizlilik <span class="grad-text">Politikası</span></h1>
+    <p class="lede">Tradia (tradiaturkey.com) Türkiye Yatırım İstihbaratı platformudur. Bu belge, sitede sizden topladığımız veriyi, neden topladığımızı, nasıl koruduğumuzu ve haklarınızı açıklar. 6698 Sayılı KVKK + AB GDPR uyumlu.</p>
+  </section>
+
+  <h2>1. Veri Sorumlusu</h2>
+  <p><strong>Tradia</strong> · Türkiye Yatırım İstihbaratı<br>
+  Operatör: Ahmet ÇOLAK / ANASTASIYA CHOLAK (bireysel girişim)<br>
+  İletişim: <a href="mailto:info@tradiaturkey.com" style="color:var(--gold)">info@tradiaturkey.com</a></p>
+
+  <h2>2. Topladığımız Veri</h2>
+  <div class="t-card">
+    <h4>a) Lead formu (rapor talebi, şehir raporu, waitlist)</h4>
+    <ul>
+      <li><strong>E-posta adresi</strong> — raporu göndermek için (zorunlu)</li>
+      <li><strong>Ad-soyad</strong> — opsiyonel, kişiselleştirilmiş rapor için</li>
+      <li><strong>İl + Mahalle</strong> — hangi rapor istendiği</li>
+      <li><strong>Dil tercihi</strong> — yanıt dili</li>
+      <li><strong>IP hash</strong> — SHA-256 ile salt eklenerek hash'lenmiş (ham IP saklanmaz; spam koruması için)</li>
+    </ul>
+
+    <h4>b) Yorum/Trend formu (mahalle yorumu)</h4>
+    <ul>
+      <li><strong>Mahalle slug</strong> — hangi mahalle için</li>
+      <li><strong>Trend seçimi</strong> (yükseliste/stabil/düşüşte)</li>
+      <li><strong>Yorum metni</strong> — opsiyonel (280 karakter)</li>
+      <li><strong>IP hash</strong> — spam koruması</li>
+    </ul>
+
+    <h4>c) Teknik çerezler</h4>
+    <ul>
+      <li><strong>tradia_cookie_consent</strong> (1 yıl) — bu çerez onay seçiminiz</li>
+      <li>LocalStorage'a yazılır; Tradia sunucusuna gönderilmez</li>
+      <li>Pazarlama, analitik, izleme çerezi yoktur</li>
+    </ul>
+  </div>
+
+  <h2>3. Veri Toplama Amacı</h2>
+  <ul>
+    <li>İstediğiniz raporu hazırlayıp e-posta ile göndermek</li>
+    <li>İlçe/mahalle topluluk geri bildirimini Tradia skor metodolojisinde kullanmak (anonimleştirilmiş)</li>
+    <li>Spam ve kötüye kullanımı önlemek (IP hash + rate limit 5 req/dakika)</li>
+    <li>İstatistiksel rapor (lansman dalga 1 lead sayısı, dil dağılımı — anonim toplam)</li>
+  </ul>
+
+  <h2>4. Veri Saklama Yeri ve Süresi</h2>
+  <div class="t-card">
+    <p><strong>Saklama yeri:</strong> Cloudflare D1 (SQLite) — Western Europe (EU-West, GB).</p>
+    <p><strong>Saklama süresi:</strong></p>
+    <ul>
+      <li>Lead kayıtları: 5 yıl (vergi/kayıt mevzuatı sebebiyle); silme talebi ile herhangi bir zaman silinebilir.</li>
+      <li>Yorumlar: 5 yıl (anonim olduğundan kişisel veri taşımaz).</li>
+      <li>Rate limit kayıtları: 90 gün, ardından otomatik silinir.</li>
+      <li>KVKK silme audit kayıtları: 10 yıl (yasal zorunluluk).</li>
+    </ul>
+  </div>
+
+  <h2>5. KVKK Madde 11 — Haklarınız</h2>
+  <p>6698 Sayılı Kanun'un 11. maddesi uyarınca aşağıdaki haklara sahipsiniz:</p>
+  <ol>
+    <li>Kişisel verinizin işlenip işlenmediğini öğrenme</li>
+    <li>İşlendiyse buna ilişkin bilgi talep etme</li>
+    <li>İşleme amacını ve amacına uygun kullanılıp kullanılmadığını öğrenme</li>
+    <li>Yurt içinde veya yurt dışında aktarılan üçüncü kişileri bilme</li>
+    <li>Eksik veya yanlış işlenmişse düzeltilmesini isteme</li>
+    <li>Kanun kapsamında <strong>silinmesini veya yok edilmesini isteme</strong></li>
+    <li>Düzeltme/silme yapılmışsa bunun üçüncü kişilere bildirilmesini isteme</li>
+    <li>İşlenen verinin analiz edilmesi sonucu aleyhinize bir sonuç çıkmasına itiraz etme</li>
+    <li>Kanuna aykırı işleme nedeniyle zarara uğramışsanız tazminat talep etme</li>
+  </ol>
+
+  <h2>6. Silme Talebi (KVKK Madde 7)</h2>
+  <div class="t-card">
+    <p>Verilerinizin silinmesini istediğinizde:</p>
+    <ol>
+      <li><strong>E-posta ile:</strong> <code class="mono">info@tradiaturkey.com</code> adresine kaydolduğunuz e-posta adresinizden "Verilerimi silin" yazın. 30 gün içinde silinir; audit kaydı oluşturulur.</li>
+      <li><strong>API ile (geliştirici tarafı):</strong> <code class="mono">POST /api/kvkk-sil</code> endpoint'i (X-Admin-Key auth gerekir; Tradia operatörü işler).</li>
+    </ol>
+    <p>Silme işlemi: Bu e-posta ile kayıtlı tüm lead'ler ve yorumlar SİLİNİR. Audit log'a sadece e-posta + silme tarihi kayıt edilir (yasal zorunluluk).</p>
+  </div>
+
+  <h2>7. Üçüncü Taraf Paylaşımı</h2>
+  <p><strong>HİÇBİR ÜÇÜNCÜ TARAFA SATILMAZ veya PAYLAŞILMAZ.</strong></p>
+  <p>İstisna: Yasal zorunluluk halinde (mahkeme kararı, KVKK Kurulu talebi) ilgili kurumla minimum gerekli veri paylaşılır.</p>
+
+  <h2>8. Veri Güvenliği</h2>
+  <ul>
+    <li>Tüm trafik HTTPS (TLS 1.3) ile şifrelenir</li>
+    <li>IP adresleri ham olarak saklanmaz; SHA-256 + salt ile hash'lenir</li>
+    <li>E-posta adresleri Cloudflare D1 (encrypted at rest) içinde saklanır</li>
+    <li>Yönetici erişimi Bearer token + IP whitelist ile sınırlanmıştır</li>
+    <li>5 req/dk/IP rate limit ile DoS koruması</li>
+  </ul>
+
+  <h2>9. Çerez Kullanımı</h2>
+  <p>Tradia <strong>sadece teknik çerez</strong> kullanır:</p>
+  <ul>
+    <li><code class="mono">tradia_cookie_consent</code> — çerez onayınız (LocalStorage, 1 yıl)</li>
+    <li>Hiçbir analytics çerezi yok (Google Analytics, Facebook Pixel vb.)</li>
+    <li>Hiçbir izleme/reklam çerezi yok</li>
+    <li>Çerez bannerına "Sadece zorunlu" seçeneği = aslında bizden hiç ek çerez gelmiyor</li>
+  </ul>
+  <p>Çerez tercihinizi sıfırlamak için: tarayıcı geliştirici konsoluna <code class="mono">tradiaCookie.revoke()</code> yazın.</p>
+
+  <h2>10. Politika Güncellemeleri</h2>
+  <p>Bu politika 2026-05-27'de yayınlandı (v1.0). Önemli değişiklikler sitede duyurulur; küçük güncellemeler tarih revizyonu ile yapılır. Geçmiş sürümler için <a href="https://github.com/e-misara/landgold-intelligence" style="color:var(--gold)">git geçmişi</a> mevcuttur.</p>
+
+  <hr class="divider">
+
+  <h2>11. Şikayet ve Başvuru</h2>
+  <p>Herhangi bir sorunuz veya şikayetiniz için:</p>
+  <ul>
+    <li>E-posta: <code class="mono">info@tradiaturkey.com</code></li>
+    <li>KVKK Kurumu: <a href="https://www.kvkk.gov.tr" style="color:var(--gold)">kvkk.gov.tr</a> — başvuru hakkınız saklıdır</li>
+    <li>GDPR Veri Koruma Otoritesi (AB sakinleri için): yerel DPA'nıza başvurabilirsiniz</li>
+  </ul>
+
+  <p class="muted mono" style="font-size:11px; padding-top: 20px; border-top: 1px solid var(--border); margin-top: 30px;">
+    ⚖ <strong>Hukuki not:</strong> Bu politika taslaktır ve Sprint 8'de hukuk müşaviri tarafından revize edilebilir. Yasal bağlayıcılık ifade eder; bu nedenle politika değişikliğinde sitede duyurulur.
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="index.html">Ana Sayfa</a> ·
+    <a href="bultenler/">Bültenler</a> ·
+    <a href="manifesto.html">Manifesto</a> ·
+    <a href="privacy.html">Gizlilik</a> ·
+    <a href="kvkk.html">KVKK</a>
+  </p>
+</footer>
+
+<script defer src="assets/cookie-banner.js"></script>
+</body>
+</html>

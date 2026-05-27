@@ -1,0 +1,71 @@
+/* Tradia Cookie Banner (Sprint 7) — minimum, analytics-free */
+
+.tradia-cookie-banner {
+  position: fixed;
+  bottom: 18px; left: 50%; transform: translateX(-50%);
+  z-index: 9999;
+  display: none;
+  align-items: center; gap: 14px;
+  background: rgba(13, 20, 36, 0.97);
+  backdrop-filter: blur(10px);
+  color: #e2e8f0;
+  border: 1px solid #d4af37;
+  border-radius: 10px;
+  padding: 14px 18px;
+  max-width: 720px;
+  width: calc(100% - 32px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+  font-family: -apple-system, "Segoe UI", "Inter", Arial, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.tradia-cookie-banner.show { display: flex; }
+
+.tradia-cookie-banner .tcb-text {
+  flex: 1;
+}
+
+.tradia-cookie-banner .tcb-text strong {
+  color: #d4af37;
+}
+
+.tradia-cookie-banner a {
+  color: #d4af37;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.tradia-cookie-banner button {
+  background: #C8102E;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 9px 18px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.15s;
+}
+.tradia-cookie-banner button:hover { background: #a00d24; }
+
+.tradia-cookie-banner .tcb-secondary {
+  background: transparent;
+  color: #94a3b8;
+  border: 1px solid #1f2937;
+  padding: 9px 14px;
+}
+.tradia-cookie-banner .tcb-secondary:hover { background: rgba(255, 255, 255, 0.05); }
+
+@media (max-width: 560px) {
+  .tradia-cookie-banner {
+    flex-direction: column; align-items: stretch;
+    bottom: 8px; padding: 12px 14px;
+  }
+  .tradia-cookie-banner .tcb-actions {
+    display: flex; gap: 8px; margin-top: 4px;
+  }
+  .tradia-cookie-banner button { flex: 1; }
+}

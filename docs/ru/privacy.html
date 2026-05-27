@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Политика конфиденциальности</title>
+  <meta name="description" content="Политика конфиденциальности Tradia (tradiaturkey.com) — соответствие KVKK 6698 + GDPR. Сбор, обработка и удаление данных.">
+  <link rel="canonical" href="https://tradiaturkey.com/ru/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/privacy.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <link rel="stylesheet" href="../assets/cookie-banner.css">
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Конфиденциальность</span>
+    </div>
+    <nav class="t-nav">
+      <a href="index.html">Главная</a>
+      <a href="bultenler/">Бюллетени</a>
+      <a href="../map/">Карты</a>
+      <a href="../privacy.html" style="color:var(--gold)">🇹🇷 TR</a>
+      <a href="../en/privacy.html" style="color:var(--gold)">🇬🇧 EN</a>
+      <a href="../de/privacy.html" style="color:var(--gold)">🇩🇪 DE</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Юридическое · Обновлено 2026-05-27 · v1.0</span>
+    <h1>Политика <span class="grad-text">конфиденциальности</span></h1>
+    <p class="lede">Tradia (tradiaturkey.com) — платформа инвестиционной аналитики Турции. Этот документ описывает, какие данные мы собираем, зачем, как защищаем и какие у вас права. Соответствие Закону KVKK 6698 Турции + GDPR ЕС.</p>
+  </section>
+
+  <h2>1. Контроллер данных</h2>
+  <p><strong>Tradia</strong> · Инвестиционная аналитика Турции<br>
+  Оператор: Ahmet ÇOLAK / ANASTASIYA CHOLAK (индивидуальный предприниматель)<br>
+  Контакт: <a href="mailto:info@tradiaturkey.com" style="color:var(--gold)">info@tradiaturkey.com</a></p>
+
+  <h2>2. Какие данные мы собираем</h2>
+  <div class="t-card">
+    <h4>a) Форма заявки (отчёт, городской отчёт, список ожидания)</h4>
+    <ul>
+      <li><strong>Email-адрес</strong> — для доставки отчёта (обязательно)</li>
+      <li><strong>Имя</strong> — опционально, для персонализированного отчёта</li>
+      <li><strong>Провинция + Квартал</strong> — какой отчёт запрошен</li>
+      <li><strong>Языковые предпочтения</strong> — язык ответа</li>
+      <li><strong>Хеш IP</strong> — SHA-256 с солью (сырой IP не хранится; для защиты от спама)</li>
+    </ul>
+
+    <h4>b) Форма комментариев/тренда (квартал)</h4>
+    <ul>
+      <li><strong>Slug квартала</strong> — какой квартал</li>
+      <li><strong>Выбор тренда</strong> (растёт/стабильно/падает)</li>
+      <li><strong>Текст комментария</strong> — опционально (макс. 280 символов)</li>
+      <li><strong>Хеш IP</strong> — защита от спама</li>
+    </ul>
+
+    <h4>c) Технические cookie</h4>
+    <ul>
+      <li><strong>tradia_cookie_consent</strong> (1 год) — ваше согласие на cookie</li>
+      <li>Хранится в LocalStorage; на серверы Tradia не отправляется</li>
+      <li>Маркетинговые, аналитические или отслеживающие cookie отсутствуют</li>
+    </ul>
+  </div>
+
+  <h2>3. Цели сбора</h2>
+  <ul>
+    <li>Подготовить и отправить отчёт по email</li>
+    <li>Использовать сообщество-фидбек по районам/кварталам в методологии Tradia (анонимно)</li>
+    <li>Предотвратить спам и злоупотребления (хеш IP + лимит 5 запр./мин)</li>
+    <li>Агрегированная статистика (количество заявок дальше волны 1, распределение по языкам — только анонимные суммы)</li>
+  </ul>
+
+  <h2>4. Место и срок хранения</h2>
+  <div class="t-card">
+    <p><strong>Место хранения:</strong> Cloudflare D1 (SQLite) — Западная Европа (EU-West, GB).</p>
+    <p><strong>Срок:</strong></p>
+    <ul>
+      <li>Записи заявок: 5 лет (требования налогового/учётного законодательства); удаляются в любой момент по запросу.</li>
+      <li>Комментарии: 5 лет (анонимные, не содержат личных данных).</li>
+      <li>Записи лимита: 90 дней, затем автоматически удаляются.</li>
+      <li>Аудит удаления KVKK: 10 лет (юридическое требование).</li>
+    </ul>
+  </div>
+
+  <h2>5. Ваши права (KVKK ст. 11 + GDPR ст. 15-22)</h2>
+  <p>Согласно Закону Турции KVKK 6698 ст. 11 + GDPR ЕС у вас есть право:</p>
+  <ol>
+    <li>Узнать, обрабатываются ли ваши персональные данные</li>
+    <li>Запросить информацию, если обрабатываются</li>
+    <li>Узнать цель обработки и проверить соответствие использования</li>
+    <li>Знать третьи стороны (внутри/за рубежом), которым передаются данные</li>
+    <li>Запросить исправление неполных или неверных данных</li>
+    <li><strong>Запросить удаление или уничтожение</strong> по закону</li>
+    <li>Запросить уведомление третьих сторон об исправлении/удалении</li>
+    <li>Возражать против результатов автоматизированной обработки</li>
+    <li>Требовать компенсации за незаконную обработку</li>
+  </ol>
+
+  <h2>6. Запрос удаления (KVKK ст. 7 + GDPR ст. 17)</h2>
+  <div class="t-card">
+    <p>Чтобы запросить удаление ваших данных:</p>
+    <ol>
+      <li><strong>По email:</strong> Напишите "Удалить мои данные" с вашего зарегистрированного email на <code class="mono">info@tradiaturkey.com</code>. Удалено в течение 30 дней; создаётся запись в аудит-логе.</li>
+      <li><strong>Через API (разработчик):</strong> <code class="mono">POST /api/kvkk-sil</code> (X-Admin-Key auth; обрабатывает оператор Tradia).</li>
+    </ol>
+    <p>Удаление: Все заявки и комментарии, зарегистрированные с этим email, УДАЛЯЮТСЯ. В аудит-логе сохраняются только email + дата удаления (юридическое требование).</p>
+  </div>
+
+  <h2>7. Передача третьим сторонам</h2>
+  <p><strong>МЫ НЕ ПРОДАЁМ И НЕ ПЕРЕДАЁМ ТРЕТЬИМ СТОРОНАМ.</strong></p>
+  <p>Исключение: При юридической обязанности (судебный приказ, запрос Совета KVKK) минимально необходимые данные передаются соответствующему органу.</p>
+
+  <h2>8. Безопасность данных</h2>
+  <ul>
+    <li>Весь трафик зашифрован HTTPS (TLS 1.3)</li>
+    <li>IP-адреса не хранятся в сыром виде; хешируются через SHA-256 + соль</li>
+    <li>Email хранится в Cloudflare D1 (encrypted at rest)</li>
+    <li>Доступ администратора ограничен Bearer-токеном + IP allow-list</li>
+    <li>Защита DoS через лимит 5 запр./мин/IP</li>
+  </ul>
+
+  <h2>9. Использование cookie</h2>
+  <p>Tradia использует <strong>только технические cookie</strong>:</p>
+  <ul>
+    <li><code class="mono">tradia_cookie_consent</code> — ваше согласие на cookie (LocalStorage, 1 год)</li>
+    <li>Никаких аналитических cookie (Google Analytics, Facebook Pixel и т.д.)</li>
+    <li>Никаких отслеживающих/рекламных cookie</li>
+    <li>"Только необходимые" в баннере = от нас и так никаких дополнительных cookie не приходит</li>
+  </ul>
+  <p>Чтобы сбросить согласие, введите <code class="mono">tradiaCookie.revoke()</code> в консоли браузера.</p>
+
+  <h2>10. Обновления политики</h2>
+  <p>Эта политика опубликована 2026-05-27 (v1.0). Существенные изменения объявляются на сайте; мелкие правки только обновляют дату. Архивные версии — в <a href="https://github.com/e-misara/landgold-intelligence" style="color:var(--gold)">истории git</a>.</p>
+
+  <hr class="divider">
+
+  <h2>11. Жалобы и обращения</h2>
+  <ul>
+    <li>Email: <code class="mono">info@tradiaturkey.com</code></li>
+    <li>Орган KVKK Турции: <a href="https://www.kvkk.gov.tr" style="color:var(--gold)">kvkk.gov.tr</a></li>
+    <li>Орган защиты данных ЕС: обратитесь к местному DPA</li>
+  </ul>
+
+  <p class="muted mono" style="font-size:11px; padding-top: 20px; border-top: 1px solid var(--border); margin-top: 30px;">
+    ⚖ <strong>Юридическая заметка:</strong> Политика является черновиком и может быть пересмотрена юридическим советником в Sprint 8. Существенные изменения будут объявлены.
+  </p>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Инвестиционная аналитика Турции</p>
+  <p style="margin-top:8px">
+    <a href="index.html">Главная</a> ·
+    <a href="bultenler/">Бюллетени</a> ·
+    <a href="../manifesto.html">Манифест</a> ·
+    <a href="privacy.html">Конфиденциальность</a>
+  </p>
+</footer>
+
+<script defer src="../assets/cookie-banner.js"></script>
+</body>
+</html>

@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Bursa 1.112 Mahalle Yaşanabilirlik</title>
+  <meta name="description" content="Bursa 17 ilçe × 1.112 yerleşim — POI yoğunluk v2 yaşanabilirlik skoru + sahibinden TL/m² + 4 kadran yatırım analizi.">
+  <link rel="canonical" href="https://tradiaturkey.com/map/bursa.html">
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/map/bursa.html">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/map/bursa.html">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    body { overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+
+    .map-top {
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 18px; background: var(--bg-2); border-bottom: 1px solid var(--border);
+      gap: 12px; flex-wrap: wrap;
+    }
+    .map-brand { display: flex; align-items: center; gap: 10px; }
+    .map-brand .dot { width: 26px; height: 26px; background: var(--cta); border-radius: 4px; display: grid; place-items: center; color: #fff; font-family: 'Space Grotesk'; font-weight: 900; font-size: 14px; }
+    .map-brand .name { font-family: 'Space Grotesk'; font-weight: 700; font-size: 17px; color: #fff; }
+    .map-brand .tag { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; margin-left: 4px; }
+
+    .map-status {
+      display: flex; align-items: center; gap: 14px; flex-wrap: wrap;
+      font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .map-status .live { color: var(--up); }
+    .map-status .live::before { content: "●"; margin-right: 5px; animation: blink 2s ease infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .filter-select {
+      background: var(--bg-card); border: 1px solid var(--border);
+      color: #fff; padding: 5px 8px; border-radius: 4px;
+      font-family: 'Inter'; font-size: 12px;
+    }
+
+    .map-nav { display: flex; gap: 6px; }
+    .map-nav a {
+      padding: 6px 12px; font-family: 'Inter'; font-size: 12px;
+      color: var(--txt-muted); text-decoration: none; border-radius: 4px;
+    }
+    .map-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+
+    .shell { flex: 1; min-height: 0; display: grid; grid-template-columns: 260px 1fr 280px; }
+
+    /* SOL — Top 20 sticky list */
+    .side-left {
+      background: var(--bg-2); border-right: 1px solid var(--border);
+      padding: 12px; overflow-y: auto;
+    }
+    .side-left h2 {
+      font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold);
+      text-transform: uppercase; letter-spacing: 0.1em;
+      margin: 0 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--border);
+    }
+    .top-row {
+      display: grid; grid-template-columns: 26px 1fr auto;
+      gap: 8px; padding: 7px 6px; border-radius: 4px;
+      font-family: 'Inter'; font-size: 12px;
+      cursor: pointer; transition: background 0.12s;
+    }
+    .top-row:hover { background: rgba(255,255,255,0.05); }
+    .top-row .rank { font-family: 'Space Grotesk'; font-weight: 900; color: var(--gold); }
+    .top-row .name { color: var(--txt); }
+    .top-row .name .ilce { color: var(--txt-muted); font-size: 10px; }
+    .top-row .skor { font-family: 'JetBrains Mono'; font-weight: 700; color: var(--up); font-size: 11px; }
+
+    /* ORTA — harita */
+    #map { width: 100%; height: 100%; background: var(--bg-2); }
+
+    /* SAĞ — detail panel */
+    .side-right {
+      background: var(--bg-card); border-left: 1px solid var(--border);
+      padding: 14px 16px; overflow-y: auto;
+    }
+    .side-right .placeholder {
+      color: var(--txt-muted); font-style: italic; font-size: 13px;
+      padding: 40px 8px; text-align: center;
+    }
+    .det-h h2 { font-family: 'Space Grotesk'; font-weight: 700; font-size: 17px; color: #fff; margin: 0 0 2px; }
+    .det-h .loc { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .det-bigs { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .det-bigs .lbl { font-family: 'JetBrains Mono'; font-size: 9px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .det-bigs .val { font-family: 'Space Grotesk'; font-weight: 900; font-size: 22px; color: var(--gold); line-height: 1.1; margin-top: 2px; }
+    .det-bigs .val.up { color: var(--up); }
+    .det-bigs .val.cta { color: var(--cta); }
+    .det-row { display: flex; justify-content: space-between; padding: 5px 0; border-bottom: 1px dashed rgba(255,255,255,0.08); font-size: 12px; }
+    .det-row .k { color: var(--txt-muted); }
+    .det-row .v { font-family: 'JetBrains Mono'; font-weight: 700; color: #fff; }
+    .det-grup { padding: 8px 0; }
+
+    .kadran-badge {
+      display: inline-block; padding: 2px 9px; border-radius: 10px;
+      font-family: 'JetBrains Mono'; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em; margin-top: 6px;
+    }
+    .kadran-YS_DF { background: rgba(16, 185, 129, 0.2); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.4); }
+    .kadran-YS_YF { background: rgba(212, 175, 55, 0.15); color: var(--gold); border: 1px solid rgba(212,175,55,0.4); }
+    .kadran-DS_DF { background: rgba(100,116,139,0.2); color: #cbd5e1; border: 1px solid rgba(100,116,139,0.4); }
+    .kadran-DS_YF { background: rgba(220,38,38,0.18); color: #fca5a5; border: 1px solid rgba(220,38,38,0.4); }
+
+    .marker-dot {
+      width: 14px; height: 14px; border-radius: 50%; border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .map-foot {
+      position: absolute; bottom: 10px; right: 14px; z-index: 500;
+      background: rgba(13, 20, 36, 0.92); color: var(--txt-muted);
+      font-family: 'JetBrains Mono'; font-size: 9px; padding: 5px 10px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--border);
+    }
+
+    @media (max-width: 900px) {
+      .shell { grid-template-columns: 1fr; grid-template-rows: auto 1fr auto; }
+      .side-left { max-height: 30vh; border-right: 0; border-bottom: 1px solid var(--border); }
+      .side-right { max-height: 32vh; border-left: 0; border-top: 1px solid var(--border); }
+    }
+  </style>
+  <link rel="stylesheet" href="../assets/cookie-banner.css">
+</head>
+<body>
+
+<div class="map-top">
+  <div class="map-brand">
+    <div class="dot">T</div>
+    <div>
+      <span class="name">TRADIA</span>
+      <span class="tag">Bursa · 1.112 mahalle</span>
+    </div>
+  </div>
+  <div class="map-status">
+    <span class="live">v2 SKOR · CC-Basın Sprint 26</span>
+    <select id="filter-ilce" class="filter-select">
+      <option value="all">17 ilçe (tümü)</option>
+    </select>
+    <select id="filter-kadran" class="filter-select">
+      <option value="all">4 kadran (tümü)</option>
+      <option value="YS_DF">🟢 Yatırım Altını (yüksek skor, düşük fiyat)</option>
+      <option value="YS_YF">🟡 Premium (yüksek skor, yüksek fiyat)</option>
+      <option value="DS_DF">⚪ Normal (düşük skor, düşük fiyat)</option>
+      <option value="DS_YF">🔴 Riskli (düşük skor, yüksek fiyat)</option>
+    </select>
+  </div>
+  <nav class="map-nav">
+    <a href="../index.html">Ana Sayfa</a>
+    <a href="./">Maps</a>
+    <a href="../bultenler/">Bültenler</a>
+    <a href="../bultenler/sayi-6-bursa-coming-soon.html" style="color:var(--gold)">📰 Sayı 6</a>
+  </nav>
+</div>
+
+<div class="shell">
+
+  <!-- SOL — Top 20 -->
+  <aside class="side-left">
+    <h2>Top 20 Mahalle (v2 skor)</h2>
+    <div id="top20-list"></div>
+    <h2 style="margin-top:16px;">Yatırım Altın 🟢</h2>
+    <p style="font-size:11px; color:var(--txt-muted); margin:4px 0 8px;">Yüksek v2 + Düşük TL/m²</p>
+    <div id="altin-list"></div>
+  </aside>
+
+  <!-- HARITA -->
+  <div style="position:relative;">
+    <div id="map"></div>
+    <div class="map-foot">Tradia Bursa · OSM POI v2 · Sahibinden TL/m²</div>
+  </div>
+
+  <!-- SAĞ — detail -->
+  <aside class="side-right" id="detail">
+    <div class="placeholder">
+      Sol listeden ya da haritadan bir mahalle seç →<br><br>
+      <strong>Renk kodu:</strong><br>
+      🟢 v2 ≥ 60 İyi<br>
+      🟡 v2 30-60 Orta<br>
+      🔴 v2 &lt; 30 Düşük<br>
+      ⚪ POI yok
+    </div>
+  </aside>
+</div>
+
+<script>
+// ============================================================================
+// HARITA
+// ============================================================================
+const map = L.map('map', {
+  center: [40.15, 29.05],   // Bursa merkez
+  zoom: 9,
+  zoomControl: true,
+  preferCanvas: true,
+});
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+  subdomains: 'abcd', maxZoom: 19,
+  attribution: '&copy; OpenStreetMap &copy; CARTO',
+}).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+  subdomains: 'abcd', maxZoom: 19, pane: 'shadowPane',
+}).addTo(map);
+
+// Bursa bbox
+map.setMaxBounds([[39.4, 28.0], [40.7, 30.3]]);
+
+// ============================================================================
+// VERİ
+// ============================================================================
+let yerlesimler = [];           // 1112 mahalle/yerleşim (17 ilce)
+let kadranIndex = new Map();    // mahalle_key → 'YS_YF'/'YS_DF'/'DS_YF'/'DS_DF'
+let top20 = [];                 // detaylı 20 mahalle (POI gruplar)
+let markers = [];
+
+const KADRAN_RENK = {
+  YS_DF: '#10b981',  // yatırım altın
+  YS_YF: '#d4af37',  // premium
+  DS_DF: '#94a3b8',  // normal
+  DS_YF: '#dc2626',  // riskli
+  yok:   '#475569',  // POI yok
+};
+const KADRAN_AD = {
+  YS_DF: 'Yatırım Altını',
+  YS_YF: 'Premium',
+  DS_DF: 'Normal',
+  DS_YF: 'Riskli',
+};
+
+function esc(s) { return String(s ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c])); }
+function fmtNum(n) { if (n === null || n === undefined || n === '') return '—'; return (+n).toLocaleString('tr-TR'); }
+function key(ilce, mahalle) { return `${ilce}::${mahalle}`; }
+
+function getKadran(ilce, mahalle) {
+  return kadranIndex.get(key(ilce, mahalle)) || 'yok';
+}
+
+function skorRenk(skor) {
+  if (skor >= 60) return '#10b981';
+  if (skor >= 30) return '#d4af37';
+  if (skor > 0)   return '#dc2626';
+  return '#475569';
+}
+
+function gosterDetail(y) {
+  const det = document.getElementById('detail');
+  const kadran = getKadran(y.ilce, y.mahalle);
+  const top20entry = top20.find(t => t.ilce === y.ilce && t.mahalle === y.mahalle);
+  const data = top20entry || y;
+  const g = data.gruplar || {};
+  const ikonlu = [
+    ['🍴', 'Yeme/içme', g.yeme],
+    ['🏥', 'Sağlık',    g.saglik],
+    ['🛒', 'Alışveriş', g.alisveris],
+    ['🚌', 'Ulaşım',    g.ulasim],
+    ['📚', 'Eğitim',    g.egitim],
+    ['🏦', 'Finans',    g.finans],
+    ['🏨', 'Konaklama', g.konaklama],
+    ['👥', 'Sosyal',    g.sosyal],
+  ];
+  det.innerHTML = `
+    <div class="det-h">
+      <h2>${esc(y.mahalle || y.name)}</h2>
+      <div class="loc">${esc(y.ilce)} · Bursa</div>
+      ${kadran !== 'yok' ? `<span class="kadran-badge kadran-${kadran}">${KADRAN_AD[kadran]}</span>` : ''}
+    </div>
+    <div class="det-bigs">
+      <div>
+        <div class="lbl">v2 Skor</div>
+        <div class="val ${y.v2_skor >= 60 ? 'up' : (y.v2_skor < 30 ? 'cta' : '')}">${fmtNum(y.v2_skor ?? data.v2 ?? y.v2)}</div>
+        <div style="font-family:'JetBrains Mono';font-size:9px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.06em;">${esc(y.seviye || '')}</div>
+      </div>
+      <div>
+        <div class="lbl">Sahibinden TL/m²</div>
+        <div class="val">${fmtNum(data.sahibinden_tl_m2 ?? data.tl_m2)}</div>
+        <div style="font-family:'JetBrains Mono';font-size:9px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.06em;">${data.sahibinden_ilan || data.ilan || 0} ilan</div>
+      </div>
+    </div>
+    <div class="det-grup">
+      <div class="det-row"><span class="k">Toplam POI</span><span class="v">${fmtNum(y.toplam_poi)}</span></div>
+      <div class="det-row"><span class="k">Yer tipi</span><span class="v">${esc(y.place || '—')}</span></div>
+      <div class="det-row"><span class="k">Koordinat</span><span class="v">${y.lat?.toFixed?.(4) ?? '—'}, ${y.lon?.toFixed?.(4) ?? '—'}</span></div>
+      <div class="det-row"><span class="k">Fiyat kaynağı</span><span class="v">${esc(data.fiyat_kaynak || '—')}</span></div>
+      ${y.osm_id ? `<div class="det-row"><span class="k">OSM ID</span><span class="v">${y.osm_id}</span></div>` : ''}
+    </div>
+    ${top20entry ? `
+    <div class="det-grup" style="border-top:1px solid var(--border); padding-top:10px;">
+      <div style="font-family:'JetBrains Mono'; font-size:9px; color:var(--txt-muted); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px;">POI Kırılımı</div>
+      ${ikonlu.map(([ic, lbl, v]) => `<div class="det-row"><span class="k">${ic} ${lbl}</span><span class="v">${fmtNum(v || 0)}</span></div>`).join('')}
+    </div>` : ''}
+  `;
+}
+
+function render() {
+  markers.forEach(m => map.removeLayer(m));
+  markers = [];
+  const ilceFilter   = document.getElementById('filter-ilce').value;
+  const kadranFilter = document.getElementById('filter-kadran').value;
+  const bounds = [];
+  yerlesimler.forEach(y => {
+    if (ilceFilter !== 'all' && y.ilce !== ilceFilter) return;
+    const k = getKadran(y.ilce, y.mahalle);
+    if (kadranFilter !== 'all' && k !== kadranFilter) return;
+    const renk = k !== 'yok' ? KADRAN_RENK[k] : skorRenk(y.v2_skor);
+    const m = L.circleMarker([y.lat, y.lon], {
+      radius: 5 + Math.min(8, (y.v2_skor || 0) / 10),
+      fillColor: renk, color: '#fff', weight: 1.5, fillOpacity: 0.85,
+    }).addTo(map);
+    m.on('click', () => gosterDetail(y));
+    markers.push(m);
+    bounds.push([y.lat, y.lon]);
+  });
+  if (bounds.length > 0 && ilceFilter !== 'all') {
+    map.fitBounds(bounds, { padding: [40, 40], maxZoom: 12 });
+  }
+}
+
+function renderTop20() {
+  const list = document.getElementById('top20-list');
+  list.innerHTML = top20.map((t, i) => `
+    <div class="top-row" data-ilce="${esc(t.ilce)}" data-mahalle="${esc(t.mahalle)}">
+      <span class="rank">${i + 1}</span>
+      <span class="name">${esc(t.mahalle)}<br><span class="ilce">${esc(t.ilce)}</span></span>
+      <span class="skor">${fmtNum(t.v2_skor)}</span>
+    </div>
+  `).join('');
+  list.querySelectorAll('.top-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const y = yerlesimler.find(x => x.ilce === row.dataset.ilce && x.mahalle === row.dataset.mahalle);
+      if (y) { gosterDetail(y); map.setView([y.lat, y.lon], 13); }
+    });
+  });
+}
+
+function renderAltinList(altinler) {
+  const list = document.getElementById('altin-list');
+  list.innerHTML = altinler.slice(0, 10).map((a, i) => `
+    <div class="top-row" data-ilce="${esc(a.ilce)}" data-mahalle="${esc(a.mahalle)}">
+      <span class="rank" style="color:var(--up)">🟢</span>
+      <span class="name">${esc(a.mahalle)}<br><span class="ilce">${esc(a.ilce)} · ${fmtNum(a.tl_m2)} TL/m²</span></span>
+      <span class="skor">${fmtNum(a.v2)}</span>
+    </div>
+  `).join('');
+  list.querySelectorAll('.top-row').forEach(row => {
+    row.addEventListener('click', () => {
+      const y = yerlesimler.find(x => x.ilce === row.dataset.ilce && x.mahalle === row.dataset.mahalle);
+      if (y) { gosterDetail(y); map.setView([y.lat, y.lon], 13); }
+    });
+  });
+}
+
+function buildIlceDropdown() {
+  const ilceler = [...new Set(yerlesimler.map(y => y.ilce))].sort();
+  const sel = document.getElementById('filter-ilce');
+  ilceler.forEach(ilce => {
+    const count = yerlesimler.filter(y => y.ilce === ilce).length;
+    const opt = document.createElement('option');
+    opt.value = ilce;
+    opt.textContent = `${ilce} (${count})`;
+    sel.appendChild(opt);
+  });
+}
+
+// ============================================================================
+// VERİ YÜKLE
+// ============================================================================
+Promise.all([
+  fetch('../data/maps/bursa_17ilce_v2.json').then(r => r.json()),
+  fetch('../data/maps/bursa_4kadran.json').then(r => r.json()),
+  fetch('../data/maps/bursa_top20.jsonl').then(r => r.text()),
+]).then(([y17, kadran, top20text]) => {
+  yerlesimler = y17.yerlesimler;
+  top20 = top20text.trim().split('\n').map(l => JSON.parse(l));
+
+  // 4 kadran index
+  for (const grup of Object.keys(kadran.kaynak_dagilim || {})) {
+    for (const m of kadran.kaynak_dagilim[grup]) {
+      kadranIndex.set(key(m.ilce, m.mahalle), grup);
+    }
+  }
+
+  buildIlceDropdown();
+  renderTop20();
+  renderAltinList(kadran.kaynak_dagilim?.YS_DF || []);
+  render();
+}).catch(err => {
+  console.error('Bursa veri yüklenemedi', err);
+  document.getElementById('detail').innerHTML = '<div class="placeholder">⚠ Veri yüklenemedi.</div>';
+});
+
+document.getElementById('filter-ilce').addEventListener('change', render);
+document.getElementById('filter-kadran').addEventListener('change', render);
+</script>
+
+<script defer src="../assets/cookie-banner.js"></script>
+</body>
+</html>

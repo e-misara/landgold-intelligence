@@ -249,6 +249,7 @@
       .load-ind { top: 14px; right: 14px; }
     }
   </style>
+  <link rel="stylesheet" href="../assets/cookie-banner.css">
 </head>
 <body>
 
@@ -483,10 +484,14 @@ function popupIl(p) {
       <div class="loc">${esc(p.bolge || '—')} · İl</div>
       <div style="margin-bottom:10px;">${kisitliBadge}</div>
       <div class="gruplar">
+        <div class="row"><span class="k">Nüfus</span><span class="v">${fmtNum(p.nufus)}</span></div>
+        <div class="row"><span class="k">Yoğunluk</span><span class="v">${fmtNum(p.yogunluk)} /km²</span></div>
+        <div class="row"><span class="k">Büyüme %</span><span class="v">${p.buyume_yuzde ?? '—'}</span></div>
+        <div class="row"><span class="k">Göç (net)</span><span class="v">${fmtNum(p.goc_neto)}</span></div>
         <div class="row"><span class="k">Sahibinden ilanı</span><span class="v">${fmtNum(p.ilan_say)}</span></div>
         <div class="row"><span class="k">OSB sayısı</span><span class="v">${fmtNum(p.osb_say)}</span></div>
         <div class="row"><span class="k">Mega proje</span><span class="v">${fmtNum(p.mega_proje_say)}</span></div>
-        <div class="row"><span class="k">Wikidata</span><span class="v">${esc(p.wikidata || '—')}</span></div>
+        <div class="row"><span class="k">Üniversite</span><span class="v">${fmtNum(p.universite_sayisi)}</span></div>
       </div>
     </div>`;
 }
@@ -510,14 +515,32 @@ function popupIlce(p) {
 
 function popupMahalle(p) {
   const adi = p.name || p.mahalle_adi || '—';
+  const v2 = p.yasanabilirlik_v2;
+  const seviye = p.yasanabilirlik_seviye || '';
+  const klass = v2 >= 60 ? 'score-best' : (v2 >= 30 ? 'score-med' : 'score-low');
+  const v2Block = (v2 !== undefined && v2 !== null) ? `
+      <div class="headline">
+        <div>
+          <div class="lbl">v2 Skor</div>
+          <div class="val ${klass}">${fmtNum(v2)}</div>
+          <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.08em;">${esc(seviye)}</div>
+        </div>
+        <div>
+          <div class="lbl">Toplam POI</div>
+          <div class="val">${fmtNum(p.toplam_poi)}</div>
+        </div>
+      </div>` : `
+      <div class="desc"><strong>POI verisi yok</strong> — bu yerleşim için OSM POI eşleşmesi bulunamadı.</div>`;
   return `
     <div class="mp-pop">
       <h3>${esc(adi)}</h3>
-      <div class="loc">${esc(p.il || '—')} · ${esc(p.ilce || p.bolge || '—')} · Mahalle</div>
+      <div class="loc">${esc(p.il || '—')} · ${esc(p.bolge || '—')} · Mahalle</div>
+      ${v2Block}
       <div class="gruplar">
         <div class="row"><span class="k">Merkez koord.</span><span class="v">${p.merkez_lat?.toFixed?.(4) ?? '—'}, ${p.merkez_lng?.toFixed?.(4) ?? '—'}</span></div>
+        ${p.wikidata ? `<div class="row"><span class="k">Wikidata</span><span class="v">${esc(p.wikidata)}</span></div>` : ''}
       </div>
-      <div class="desc"><strong>v2 yaşanabilirlik skoru</strong> · CC-Basın Sprint 25 il/ilçe pivot çıkışında bu mahalleye gerçek POI yoğunluk skoru yansıtılacak.</div>
+      <div class="desc"><strong>Sprint 7 v2</strong> · 3.797 büyükşehir mahallesi POI yoğunluk skoru (CC-Basın Sprint 24 v2 formülü).</div>
     </div>`;
 }
 
@@ -935,5 +958,6 @@ async function submitYorum(e) {
 }
 </script>
 
+<script defer src="../assets/cookie-banner.js"></script>
 </body>
 </html>

@@ -1,0 +1,7105 @@
+{
+  "esik_v2": 0.0,
+  "esik_tl_m2": 28344.0,
+  "kaynak_dagilim": {
+    "YS_YF": [
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Dumlupınar",
+        "v2": 74.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 74,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "29 Ekim",
+        "v2": 67.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 35,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Eşref Dinçer",
+        "v2": 64.0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 28,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Ertuğrul",
+        "v2": 61.6,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 26,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kükürtlü",
+        "v2": 55.7,
+        "tl_m2": 47156,
+        "ilan": 6,
+        "poi": 43,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Yüzüncüyıl",
+        "v2": 55.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 29,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Dikkaldırım",
+        "v2": 54.6,
+        "tl_m2": 32727,
+        "ilan": 7,
+        "poi": 32,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Dr.Ziya Kaya",
+        "v2": 52.0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 17,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Panayır",
+        "v2": 50.4,
+        "tl_m2": 44235,
+        "ilan": 10,
+        "poi": 24,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "23 Nisan",
+        "v2": 50.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 31,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yeşilova",
+        "v2": 49.8,
+        "tl_m2": 31677,
+        "ilan": 3,
+        "poi": 11,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Camiikebir",
+        "v2": 49.6,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Santral Garaj",
+        "v2": 49.5,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 25,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Ömerbey Mah.",
+        "v2": 49.5,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 18,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Ahmet Yesevi",
+        "v2": 49.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Soğanlı",
+        "v2": 47.0,
+        "tl_m2": 46480,
+        "ilan": 2,
+        "poi": 10,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Cumhuriyet",
+        "v2": 46.1,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 44,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Cihatlı",
+        "v2": 46.0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 16,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Gaziakdemir",
+        "v2": 45.3,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 20,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Umurbey",
+        "v2": 45.1,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 15,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Demirsubaşı",
+        "v2": 44.5,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Balat",
+        "v2": 44.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Esentepe",
+        "v2": 44.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 33,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Karaman",
+        "v2": 43.8,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 23,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Halitpaşa",
+        "v2": 43.5,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 16,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Odunluk",
+        "v2": 43.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 30,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Altınova",
+        "v2": 42.3,
+        "tl_m2": 44293,
+        "ilan": 2,
+        "poi": 16,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yeniceabat",
+        "v2": 42.3,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 14,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Güzelyalı",
+        "v2": 42.1,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 9,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Küçükbalıklı",
+        "v2": 42.0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Fatih",
+        "v2": 42.0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Hisar",
+        "v2": 41.8,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çekirge",
+        "v2": 41.4,
+        "tl_m2": 32059,
+        "ilan": 30,
+        "poi": 20,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Kurtuluş",
+        "v2": 40.6,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirtaş Dumlupınar",
+        "v2": 40.6,
+        "tl_m2": 30556,
+        "ilan": 9,
+        "poi": 17,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kurtuluş",
+        "v2": 40.2,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 9,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Görükle",
+        "v2": 38.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 14,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "İhsaniye",
+        "v2": 38.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 26,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "30 Ağustos Zafer",
+        "v2": 37.9,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Hamidiye",
+        "v2": 37.9,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Hamidiye",
+        "v2": 37.9,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Beyler",
+        "v2": 36.4,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Veysel Karani",
+        "v2": 36.4,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ebu İshak",
+        "v2": 36.4,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 9,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Atıcılar",
+        "v2": 36.4,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Muradiye",
+        "v2": 36.4,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Arapzade",
+        "v2": 36.0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Nalbantoğlu",
+        "v2": 35.8,
+        "tl_m2": 29369,
+        "ilan": 2,
+        "poi": 25,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Güzelyalı Siteler",
+        "v2": 34.9,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Beşevler",
+        "v2": 34.6,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 15,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Mahmut Çelebi",
+        "v2": 33.9,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Hıdırbali",
+        "v2": 33.7,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Hürriyet",
+        "v2": 33.7,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Şehreküstü",
+        "v2": 33.5,
+        "tl_m2": 30800,
+        "ilan": 3,
+        "poi": 13,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Mütareke",
+        "v2": 32.7,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Alemdar",
+        "v2": 32.2,
+        "tl_m2": 31907,
+        "ilan": 6,
+        "poi": 8,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Eşrefzade",
+        "v2": 31.7,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Altınşehir",
+        "v2": 31.7,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Fethiye",
+        "v2": 31.5,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Osmangazi",
+        "v2": 31.2,
+        "tl_m2": 37065,
+        "ilan": 2,
+        "poi": 14,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Kızılcıklı",
+        "v2": 31.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Gülbahçe",
+        "v2": 31.0,
+        "tl_m2": 36408,
+        "ilan": 3,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Geçit",
+        "v2": 30.2,
+        "tl_m2": 45517,
+        "ilan": 7,
+        "poi": 8,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Doğanbey",
+        "v2": 30.2,
+        "tl_m2": 30924,
+        "ilan": 4,
+        "poi": 12,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yenibağlar",
+        "v2": 29.9,
+        "tl_m2": 31306,
+        "ilan": 4,
+        "poi": 12,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "İbrahimpaşa",
+        "v2": 29.7,
+        "tl_m2": 33333,
+        "ilan": 5,
+        "poi": 5,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Cumhuriyet",
+        "v2": 29.1,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hamitler",
+        "v2": 28.6,
+        "tl_m2": 40294,
+        "ilan": 26,
+        "poi": 12,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hamzabey",
+        "v2": 28.3,
+        "tl_m2": 30588,
+        "ilan": 3,
+        "poi": 8,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Hasanbey",
+        "v2": 28.0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Yeni",
+        "v2": 27.7,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Akçalar",
+        "v2": 27.7,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Zafer",
+        "v2": 27.7,
+        "tl_m2": 40327,
+        "ilan": 1,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Barış",
+        "v2": 27.4,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yunuseli",
+        "v2": 27.1,
+        "tl_m2": 37009,
+        "ilan": 51,
+        "poi": 6,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Tuzpazarı",
+        "v2": 27.1,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Konak",
+        "v2": 26.8,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Selamet",
+        "v2": 26.8,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çiftehavuzlar",
+        "v2": 26.8,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Engürücük",
+        "v2": 26.5,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Balkan",
+        "v2": 26.2,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Tahtakale",
+        "v2": 25.6,
+        "tl_m2": 273810,
+        "ilan": 1,
+        "poi": 11,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Çeltikçi",
+        "v2": 25.3,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Doğan",
+        "v2": 25.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Kayapa",
+        "v2": 24.7,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Cihanköy",
+        "v2": 24.7,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Bademli",
+        "v2": 24.7,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Güzelyalı Yalı",
+        "v2": 24.7,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Maksem",
+        "v2": 23.7,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirtaşpaşa",
+        "v2": 23.3,
+        "tl_m2": 30670,
+        "ilan": 2,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ovaakça Merkez",
+        "v2": 23.3,
+        "tl_m2": 32076,
+        "ilan": 12,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Yeniköy",
+        "v2": 23.3,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kavaklı",
+        "v2": 23.0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Güzelyalı Eğitim",
+        "v2": 22.6,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yenigün",
+        "v2": 21.9,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Minareliçavuş",
+        "v2": 21.9,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Alacahırka",
+        "v2": 21.9,
+        "tl_m2": 40909,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Balıkpazarı",
+        "v2": 21.9,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Akpınar",
+        "v2": 21.5,
+        "tl_m2": 50000,
+        "ilan": 35,
+        "poi": 10,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yüzüncüyıl",
+        "v2": 21.2,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Mustafa Kemal Paşa",
+        "v2": 21.2,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Dereçavuş",
+        "v2": 21.2,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "İstiklal",
+        "v2": 21.2,
+        "tl_m2": 37300,
+        "ilan": 10,
+        "poi": 3,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Şükrüçavuş",
+        "v2": 21.2,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Başköy",
+        "v2": 20.8,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Alaşar",
+        "v2": 20.8,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hürriyet",
+        "v2": 20.8,
+        "tl_m2": 34499,
+        "ilan": 4,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Demirci",
+        "v2": 20.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Özlüce",
+        "v2": 20.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Gündoğan",
+        "v2": 19.6,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Gedelek",
+        "v2": 19.6,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Adliye",
+        "v2": 19.6,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Boyalıca",
+        "v2": 18.8,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Alaaddinbey",
+        "v2": 18.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Çamlıca",
+        "v2": 18.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Tirilye",
+        "v2": 18.3,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Ulucami",
+        "v2": 17.4,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Kumla",
+        "v2": 17.4,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hüdavendigar",
+        "v2": 17.0,
+        "tl_m2": 60714,
+        "ilan": 14,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Nilüferköy",
+        "v2": 17.0,
+        "tl_m2": 136667,
+        "ilan": 25,
+        "poi": 2,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Aydınpınar",
+        "v2": 17.0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yılmaz",
+        "v2": 16.0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Yeşil Camii",
+        "v2": 16.0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Selçuk",
+        "v2": 16.0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Çalı",
+        "v2": 16.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Karacaoba",
+        "v2": 16.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Ürünlü",
+        "v2": 16.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ovaakça Çeşmebaşı Mah.",
+        "v2": 16.0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Fatih",
+        "v2": 16.0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Kurtul",
+        "v2": 16.0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Muratoba",
+        "v2": 16.0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yeni",
+        "v2": 15.5,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Yolçatı",
+        "v2": 15.5,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Ataevler",
+        "v2": 15.5,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Kültür",
+        "v2": 15.5,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çaybaşı",
+        "v2": 15.5,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ovaakça",
+        "v2": 15.5,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Kurşunlu",
+        "v2": 15.5,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Halitpaşa",
+        "v2": 15.5,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Osmaniye",
+        "v2": 15.5,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Sahil",
+        "v2": 15.5,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Yenimahalle",
+        "v2": 15.5,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Dağyenice",
+        "v2": 15.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "19 Mayıs",
+        "v2": 15.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Gümüştepe",
+        "v2": 15.0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Gölyazı",
+        "v2": 14.4,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Namık Kemal",
+        "v2": 14.4,
+        "tl_m2": 48529,
+        "ilan": 1,
+        "poi": 3,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yiğitali",
+        "v2": 13.3,
+        "tl_m2": 77500,
+        "ilan": 2,
+        "poi": 3,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çeltik",
+        "v2": 13.3,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "İnkaya",
+        "v2": 13.3,
+        "tl_m2": 240000,
+        "ilan": 1,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Haydariye",
+        "v2": 13.3,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Kumyaka",
+        "v2": 13.3,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Çamdibi",
+        "v2": 12.6,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Güneştepe",
+        "v2": 12.6,
+        "tl_m2": 35500,
+        "ilan": 47,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Ebe",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Afşar",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Akbıyık",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Karaköy",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Selimiye",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yolören",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çardak",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Tabakhane",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Marmaracık",
+        "v2": 11.3,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Dırazali",
+        "v2": 11.3,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Çakırca",
+        "v2": 11.3,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Çiçekli",
+        "v2": 11.3,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Hasanağa",
+        "v2": 11.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Yaylacık",
+        "v2": 11.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Çatalağıl",
+        "v2": 11.3,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ahmetbey",
+        "v2": 11.3,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Dürdane",
+        "v2": 11.3,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirtaş Cumhuriyet",
+        "v2": 11.3,
+        "tl_m2": 34808,
+        "ilan": 77,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Gürle",
+        "v2": 11.3,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Paşapınar",
+        "v2": 11.3,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Yeni Gürle",
+        "v2": 11.3,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Şahinyurdu",
+        "v2": 11.3,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Güvenli",
+        "v2": 11.3,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Kumsaz",
+        "v2": 11.3,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Çayönü",
+        "v2": 11.3,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yeniköy",
+        "v2": 9.8,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Işıktepe",
+        "v2": 9.8,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hüseyinalanı",
+        "v2": 9.8,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Çakırlı",
+        "v2": 9.8,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Büyükkumla",
+        "v2": 9.8,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Keramet",
+        "v2": 8.9,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Gölyaka",
+        "v2": 8.9,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "İslamköy",
+        "v2": 8.9,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Candarlı",
+        "v2": 8.0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Söylemiş",
+        "v2": 6.9,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Burcun",
+        "v2": 6.9,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Mahmudiye",
+        "v2": 6.9,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Bayındır",
+        "v2": 6.9,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Elbeyli",
+        "v2": 6.9,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Atlas",
+        "v2": 6.9,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Emek Fatih Sultan Mehmet",
+        "v2": 6.9,
+        "tl_m2": 33182,
+        "ilan": 10,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Emek Adnan Menderes",
+        "v2": 6.9,
+        "tl_m2": 39193,
+        "ilan": 20,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Doburca",
+        "v2": 6.9,
+        "tl_m2": 166571,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Mollagürani",
+        "v2": 6.9,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Mahmudiye",
+        "v2": 6.9,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Narlı",
+        "v2": 6.9,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Ata",
+        "v2": 6.9,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Çağrışan",
+        "v2": 6.9,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Köprühisar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çamönü",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Eğerce",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kirazlıyayla",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Akdere",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Akçapınar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Alaylı",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Aydoğdu",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Barcın",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Beypınar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Cihadiye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Demirboğa",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Dereköy",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Gökçesu",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Günece",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Hayriye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Karaamca",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Karabahadır",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Karacaahmet",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Karacaali",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Karasıl",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kavaklı",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Koyunhisar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kozdere",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kızılhisar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kızılköy",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Mahmudiye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Mecidiye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Menteşe",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Orhaniye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Osmaniye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Papatya",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Reşadiye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Subaşı",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Süleymaniye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Terziler",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Toprakdere",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Toprakocak",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yarhisar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yazılı",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Yıldırım",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çayırlı",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çelebi",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çeltikçi",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çiçeközü",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Ayaz",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Fethiye",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Kıblepınar",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Paşayayla",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "İncirli",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yenişehir",
+        "mahalle": "Çayır",
+        "v2": 0,
+        "tl_m2": 45669,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Elmalı",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Sultaniye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Kırkhamam",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Kutluca",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Kırıntı",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Hacıosman",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Gürmüzlü",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Tacir",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Sarıağıl",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Osmaniye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Orhaniye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Ömerli",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Mecidiye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Yürükler",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Sansarak",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Çamoluk",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Şerefiye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Çampınar",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Aydınlar",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Derbent",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Göllüce",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Mustafalı",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Müşküle",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Ankara",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Dereköy",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Hisardere",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Hocaköy",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Kaynarca",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Kırkharman",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Paşabük",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Süleymaniye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Sığırhisar",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Yeni Şerefiye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "İhsaniye",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "İnikli",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Karatekin",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Özekdere",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İznik",
+        "mahalle": "Alakaya",
+        "v2": 0,
+        "tl_m2": 100000,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Tahtalı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Çaylı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Ayvaköy",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Fadıllı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Güngören",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Kadriye",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Korubaşı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Kuruçeşme",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Makşempınarı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Unçukuru",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Üçpınar",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "İnegazi",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Badırga",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Büyük Balıklı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Gökçe",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "Konaklı",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Nilüfer",
+        "mahalle": "İrfaniye",
+        "v2": 0,
+        "tl_m2": 41818,
+        "ilan": 23,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Tuzaklı",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kirazlı",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Mürseller",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Elmaçukur",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Bağlı",
+        "v2": 0,
+        "tl_m2": 122727,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Karabalçık",
+        "v2": 0,
+        "tl_m2": 48913,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Gündoğdu",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Doğancı",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Soğukpınar",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Karaislah",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Dağakça",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Güneybayırı",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Uluçam",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Avdancık",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirtaş Barbaros",
+        "v2": 0,
+        "tl_m2": 29902,
+        "ilan": 41,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Aksungur",
+        "v2": 0,
+        "tl_m2": 95101,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çağlayan",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Gökçeören",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Büyük Deliller",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Güneybudaklar",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Küçük Deliller",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Seferışıklar",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Mollafenari",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Koğukçınar",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "İsmetiye",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirtaş Sakarya",
+        "v2": 0,
+        "tl_m2": 37000,
+        "ilan": 43,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Armutköy",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çukurca",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yenikent",
+        "v2": 0,
+        "tl_m2": 35541,
+        "ilan": 4,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Mehmet Akif",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Soğukkuyu",
+        "v2": 0,
+        "tl_m2": 36458,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirkapı",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yahşibey",
+        "v2": 0,
+        "tl_m2": 33947,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Selçukgazi",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ovaakça Santral Mahallisi",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ovaakça Eğitim",
+        "v2": 0,
+        "tl_m2": 39306,
+        "ilan": 4,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Demirtaş",
+        "v2": 0,
+        "tl_m2": 34091,
+        "ilan": 729,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Ortaköy",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Dutluca",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Akharem",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Fındıklı",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Hamzalı",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Gemiç",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Heceler",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Karsak",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Narlıca",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Sölöz",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Yeni Sölöz",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Örnekköy",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Bayırköy",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Üreğil",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Tekke",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Orhangazi",
+        "mahalle": "Topselvi",
+        "v2": 0,
+        "tl_m2": 29167,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Gençali",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Katırlı",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Şükriye",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Feyziye",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Yeniköy",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Küçükkumla",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Karacaali",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Fındıcak",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Orhaniye",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Yeni",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gemlik",
+        "mahalle": "Kayhan",
+        "v2": 0,
+        "tl_m2": 28344,
+        "ilan": 6,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Altıntaş",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Çepni",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "İpekyayla",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Işıklı",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Yörükali",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Akköy",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Dereköy",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Yaylacık",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Balabancık",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Hasköy",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Dedeköy",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Küçük Yenice",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Ülkü",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Yalıçiftlik",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Esence",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Yaman",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Kaymakoba",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Çınarlı",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Mirzaoba",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Emirleryenicesi",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Evciler",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Eğerce",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Hançerli",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Mesudiye",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Mürsel",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Söğütpınar",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Yörük Yenicesi",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Çamlık",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Göynüklü",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Orhaniye",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Çekrice",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Eşkel",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Mudanya",
+        "mahalle": "Güzelyalı Burgaz",
+        "v2": 0,
+        "tl_m2": 38281,
+        "ilan": 8,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      }
+    ],
+    "YS_DF": [
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Cuma",
+        "v2": 64.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 36,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Elmasbahçeler",
+        "v2": 56.7,
+        "tl_m2": 24327,
+        "ilan": 8,
+        "poi": 41,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Osmaniye",
+        "v2": 54.6,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 25,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Osmaniye",
+        "v2": 54.6,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 25,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Zafer",
+        "v2": 53.4,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Kurtuluş",
+        "v2": 52.9,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Ortabağlar",
+        "v2": 51.2,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ulu",
+        "v2": 50.9,
+        "tl_m2": 21400,
+        "ilan": 6,
+        "poi": 22,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Emek Zekai Gümüşdiş",
+        "v2": 47.5,
+        "tl_m2": 27027,
+        "ilan": 1,
+        "poi": 31,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Burhaniye Mah.",
+        "v2": 46.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Orhanbey",
+        "v2": 46.5,
+        "tl_m2": 27917,
+        "ilan": 1,
+        "poi": 27,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çırpan",
+        "v2": 45.8,
+        "tl_m2": 20083,
+        "ilan": 4,
+        "poi": 21,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Esenevler",
+        "v2": 45.3,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Kale",
+        "v2": 44.9,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Erikli",
+        "v2": 44.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Drama",
+        "v2": 44.2,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 17,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hocaalizade",
+        "v2": 44.2,
+        "tl_m2": 26800,
+        "ilan": 3,
+        "poi": 20,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kırcaali",
+        "v2": 44.0,
+        "tl_m2": 26111,
+        "ilan": 2,
+        "poi": 15,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Turgutalp",
+        "v2": 43.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 16,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Turgutalp",
+        "v2": 43.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 16,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Orhaniye",
+        "v2": 43.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 14,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Mimar Sinan",
+        "v2": 43.8,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 9,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Davutdede",
+        "v2": 43.6,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 11,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Tavşanlı",
+        "v2": 42.5,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Hacıseyfettin",
+        "v2": 42.1,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Başaran",
+        "v2": 42.0,
+        "tl_m2": 16154,
+        "ilan": 2,
+        "poi": 8,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kemalpaşa",
+        "v2": 41.4,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 16,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Alaaddin",
+        "v2": 41.0,
+        "tl_m2": 23571,
+        "ilan": 3,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Demetevler",
+        "v2": 41.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hamidiye",
+        "v2": 40.6,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Güllük",
+        "v2": 40.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Şirinevler",
+        "v2": 40.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 13,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Sırameşeler",
+        "v2": 39.6,
+        "tl_m2": 27631,
+        "ilan": 4,
+        "poi": 18,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Ahmetpaşa",
+        "v2": 39.0,
+        "tl_m2": 14500,
+        "ilan": 3,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Çirişhane",
+        "v2": 38.6,
+        "tl_m2": 13864,
+        "ilan": 1,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Değirmenönü",
+        "v2": 38.6,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Ahmet Vefik Paşa OSB",
+        "v2": 36.7,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 9,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Tuna",
+        "v2": 36.7,
+        "tl_m2": 23077,
+        "ilan": 1,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Beyazıt",
+        "v2": 36.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Alanyurt",
+        "v2": 36.4,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 16,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Garipçe Mahallesi",
+        "v2": 36.2,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 14,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Bağlarbaşı",
+        "v2": 36.2,
+        "tl_m2": 23864,
+        "ilan": 15,
+        "poi": 10,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Muradiye",
+        "v2": 36.0,
+        "tl_m2": 26292,
+        "ilan": 6,
+        "poi": 11,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Çınarönü",
+        "v2": 35.8,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Bağlaraltı",
+        "v2": 35.8,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kayıhan",
+        "v2": 35.3,
+        "tl_m2": 23913,
+        "ilan": 1,
+        "poi": 15,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Duaçınarı",
+        "v2": 35.3,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Ahmet Vefik Paşa Mah.",
+        "v2": 35.1,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Hacivat",
+        "v2": 35.1,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Kurtoğlu",
+        "v2": 34.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 9,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yunus Emre",
+        "v2": 34.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Sakarya",
+        "v2": 34.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Şükraniye",
+        "v2": 34.6,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Vatan",
+        "v2": 34.6,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yavuzselim",
+        "v2": 34.2,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Reyhan",
+        "v2": 33.9,
+        "tl_m2": 26400,
+        "ilan": 1,
+        "poi": 11,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yiğitler",
+        "v2": 33.5,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 12,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Esentepe",
+        "v2": 33.0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 10,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Mevlana",
+        "v2": 33.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Alacamescit",
+        "v2": 31.7,
+        "tl_m2": 25417,
+        "ilan": 1,
+        "poi": 13,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yenimahalle",
+        "v2": 31.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Maltepe",
+        "v2": 31.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Süleymaniye",
+        "v2": 31.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Sıracevizler",
+        "v2": 31.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Ertuğrulgazi",
+        "v2": 31.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yeşil",
+        "v2": 31.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Selimiye",
+        "v2": 29.7,
+        "tl_m2": 25500,
+        "ilan": 1,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Karapınar",
+        "v2": 29.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Süleymaniye OSB Mah.",
+        "v2": 29.4,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yeniceköy",
+        "v2": 29.1,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Yenikaraman",
+        "v2": 29.1,
+        "tl_m2": 24091,
+        "ilan": 7,
+        "poi": 12,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Piremir",
+        "v2": 29.1,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Gazi",
+        "v2": 28.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Ulus",
+        "v2": 28.3,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yeşilyayla",
+        "v2": 28.3,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Mesudiye Mah.",
+        "v2": 28.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Kazım Karabekir",
+        "v2": 27.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Davutkadı",
+        "v2": 27.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Yediselviler",
+        "v2": 27.7,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Anadolu",
+        "v2": 27.4,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Deydinler",
+        "v2": 26.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 8,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Vanimehmet",
+        "v2": 26.8,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Nasrettin",
+        "v2": 26.8,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Küplüpınar",
+        "v2": 26.8,
+        "tl_m2": 15513,
+        "ilan": 2,
+        "poi": 3,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "152 Evler",
+        "v2": 26.8,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Eğitim",
+        "v2": 26.8,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Namazgah",
+        "v2": 26.8,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kurşunlu",
+        "v2": 26.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yenice",
+        "v2": 26.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Ertuğrulgazi",
+        "v2": 25.9,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Sırabademler",
+        "v2": 25.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Aktarhüssam",
+        "v2": 25.3,
+        "tl_m2": 24788,
+        "ilan": 4,
+        "poi": 6,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Şehabettinpaşa",
+        "v2": 25.3,
+        "tl_m2": 17266,
+        "ilan": 4,
+        "poi": 7,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Yeni",
+        "v2": 25.0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Huzur",
+        "v2": 24.7,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Akhisar",
+        "v2": 24.7,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Sinanbey",
+        "v2": 24.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "İntizam",
+        "v2": 24.0,
+        "tl_m2": 21165,
+        "ilan": 9,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Mamuriyet",
+        "v2": 23.0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "75. Yıl",
+        "v2": 23.0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Yenidoğan OSB",
+        "v2": 22.6,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 7,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Canbalı",
+        "v2": 22.6,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Harmanlı",
+        "v2": 22.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Saadet",
+        "v2": 21.9,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "İvazpaşa",
+        "v2": 21.9,
+        "tl_m2": 8806,
+        "ilan": 1,
+        "poi": 2,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hocahasan",
+        "v2": 21.9,
+        "tl_m2": 18571,
+        "ilan": 11,
+        "poi": 2,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Zümrütevler",
+        "v2": 21.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Değirmenlikızık",
+        "v2": 21.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Selçukbey",
+        "v2": 21.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Baruthane",
+        "v2": 21.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Emirsultan",
+        "v2": 21.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Musababa",
+        "v2": 21.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Hacı İlyas",
+        "v2": 21.5,
+        "tl_m2": 26061,
+        "ilan": 5,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Muratlı",
+        "v2": 21.2,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 6,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yeniköy",
+        "v2": 20.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Altıparmak",
+        "v2": 20.4,
+        "tl_m2": 18900,
+        "ilan": 5,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yunusemre",
+        "v2": 20.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "İpekyolu",
+        "v2": 20.0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Şehitler",
+        "v2": 19.6,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Tabaklar",
+        "v2": 19.6,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yeni",
+        "v2": 19.2,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yeni Mahalle",
+        "v2": 19.2,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Umurbey",
+        "v2": 19.2,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Siteler",
+        "v2": 19.2,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Tahtaköprü",
+        "v2": 18.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 5,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Tayakadın",
+        "v2": 18.3,
+        "tl_m2": 17373,
+        "ilan": 3,
+        "poi": 4,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Meydancık",
+        "v2": 17.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Dağkadı",
+        "v2": 17.4,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Cumalıkızık",
+        "v2": 17.4,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Seyran",
+        "v2": 16.5,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 4,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Alibey",
+        "v2": 16.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Bilal",
+        "v2": 16.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kulaca",
+        "v2": 16.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Çeltikçi",
+        "v2": 16.0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Turan",
+        "v2": 16.0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Serme",
+        "v2": 16.0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Gölkıyı",
+        "v2": 16.0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yeni Karaağaç",
+        "v2": 16.0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Cerrah",
+        "v2": 15.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Mahmudiye",
+        "v2": 15.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Baykoca",
+        "v2": 15.5,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "İstiklal Mah.",
+        "v2": 15.5,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Karacaahmet",
+        "v2": 15.5,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Bahar",
+        "v2": 15.5,
+        "tl_m2": 13182,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Vakıf",
+        "v2": 15.5,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Arabayatağı",
+        "v2": 15.5,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Mehmet Akif Ersoy",
+        "v2": 15.5,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Teferrüç",
+        "v2": 15.5,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Selimzade",
+        "v2": 15.5,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Derekızık",
+        "v2": 14.4,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Fevzipaşa",
+        "v2": 13.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Uluabat",
+        "v2": 13.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Esentepe",
+        "v2": 12.6,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Sinandede",
+        "v2": 12.6,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Eski Karacakaya",
+        "v2": 11.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "mahalle",
+        "v2": 11.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Aşağıballık",
+        "v2": 11.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hasanpaşa",
+        "v2": 11.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kınık",
+        "v2": 11.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "mahalle",
+        "v2": 11.3,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "İğdir",
+        "v2": 11.3,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Şahin",
+        "v2": 11.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "İkizce",
+        "v2": 11.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Küçük Karaağaç",
+        "v2": 11.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Bayramdere",
+        "v2": 11.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Hotanlı",
+        "v2": 11.3,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Çitli",
+        "v2": 9.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Oylat",
+        "v2": 9.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 3,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hamamlı",
+        "v2": 9.8,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Garipçe",
+        "v2": 9.8,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 2,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Fatih",
+        "v2": 8.9,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Abdullahpaşa",
+        "v2": 8.9,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Alipaşa",
+        "v2": 8.9,
+        "tl_m2": 28095,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Mollaarap",
+        "v2": 8.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Kazancı",
+        "v2": 6.9,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Saitabat",
+        "v2": 6.9,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Doğanevler",
+        "v2": 6.9,
+        "tl_m2": 14348,
+        "ilan": 1,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Sakarya",
+        "v2": 6.9,
+        "tl_m2": 22896,
+        "ilan": 8,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Karaağaç",
+        "v2": 6.9,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 1,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Rüştiye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Akıncılar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kayapınar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Saray",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Pabuçluçayır",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Esenköy",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Çayyaka",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Tuzla",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hilmiye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Gündüzlü",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hacıkara",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Güneykestane",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Eski Bahçekaya",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Mezit",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Saadet",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Sulhiye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Tüfekçikonak",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Bahçekaya",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Gedikpınar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Sultaniye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Akbaşlar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yukarıballık",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Bahariye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Olukman",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Boğazköy",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Dipsizgöl",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Doğanyurdu",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Dömez",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Edebey",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Elmaçayır",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Eymir",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Babaoğlu",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Fevziye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Fındıklı",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Gülbahçe",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Halhalca",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hamzabey",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hayriye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hocaköy",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Karagölet",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Karahasanlar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Karakadı",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Karalar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Çiftlik",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kestanealanı",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kocakonak",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Konurlar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kozluca",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Küçük Yenice",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Kıran",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Lütfiye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Maden",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Muratbey",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Ortaköy",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Paşaören",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Sarıpınar",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "İclaliye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Sungurpaşa",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Süle",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Sülüklügöl",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Süpürtü",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Tekke",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Tokuş",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yeniyörük",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Yiğit",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Çavuş",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Çaylıca",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Özlüce",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "İhsaniye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "İsaören",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Cemiyet",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Şipali",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Gazelli",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Güzelyurt",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Hamitabat",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Eskiköy",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Soğukdere",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Esentepe",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Cumhuriyet",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Arapoturağı Yaylası",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Bayramşah",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Boğazova",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Pelikçayırı",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "İnegöl",
+        "mahalle": "Mesariye",
+        "v2": 0,
+        "tl_m2": 27778,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Gölcük",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Gölbaşı",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Seymen",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Erdoğan",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Dudaklı",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Narlıdere",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Nüzhetiye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Kayacık",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Ümitalan",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Şevketiye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Babasultan",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Aksu",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Alaçam",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Lütfiye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Yağmurlu",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Burhaniye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Gözede",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Orhaniye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Osmaniye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Çataltepe",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Soğuksu",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Kozluören",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Barakfakih",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Ağlaşan",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Kestel",
+        "mahalle": "Sayfiye",
+        "v2": 0,
+        "tl_m2": 25625,
+        "ilan": 3,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Ericek",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Adaköy",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Ağaköy",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Canbazlar",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Dışkaya",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Hasanköy",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Karahıdır",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Kazıklı",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Kumlukalanı",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Gürsu",
+        "mahalle": "Yenidoğan",
+        "v2": 0,
+        "tl_m2": 16471,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Boğazköy",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yeşildere",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Dağesemen",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Taşpınar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Ballıkaya",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Beylik",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Sazlıca",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Sultaniye",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Çarık",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Çavuşköy",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Kurşunlu",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yarış",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Ekmekçi",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Okçular",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yeni Sarıbey",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Karakoca",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Örencik",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Ova Hamidiye",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Ovaesemen",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Canbaz",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Çamlıca",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Tophisar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Arız",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Doğla",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Keşlik",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Akçakoyun",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Akçasusurluk",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Danişment",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Hürriyet",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Gönü",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Ekinli",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Şahmelek",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Taşlık",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Ortasarıbey",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Subaşı",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Gölecik",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "İsmetpaşa",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Kedikaya",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "İnkaya",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Karasu",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Güngörmez",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Orhaniye",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yolağzı",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Çeşnigir",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Eskisarıbey",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Kıranlar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Akhisar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Hayırlar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Kulakpınar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Bakırköy",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Hamidiye",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Eskikaraağaç",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Karadut",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Selimiye",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Yenice",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Runguşpaşa",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Mecidiye",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Hüdavendigar",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Karacabey",
+        "mahalle": "Emirsultan",
+        "v2": 0,
+        "tl_m2": 25618,
+        "ilan": 2,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Seç",
+        "v2": 0,
+        "tl_m2": 8299,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kemerçeşme",
+        "v2": 0,
+        "tl_m2": 13958,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Adalet",
+        "v2": 0,
+        "tl_m2": 27955,
+        "ilan": 5,
+        "poi": 1,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kuruçeşme",
+        "v2": 0,
+        "tl_m2": 26250,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kocanaip",
+        "v2": 0,
+        "tl_m2": 21538,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Pınarbaşı",
+        "v2": 0,
+        "tl_m2": 18750,
+        "ilan": 1,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Osmangazi",
+        "mahalle": "Kiremitçi",
+        "v2": 0,
+        "tl_m2": 27222,
+        "ilan": 5,
+        "poi": 0,
+        "fiyat_kaynak": "mahalle"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Hamamlıkızık",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Zeyniler",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Samanlı",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Akçağlayan",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Kaplıkaya",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Fidyekızık",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Balaban",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "İsabey",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Hocataşkın",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Karamazak",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      },
+      {
+        "ilce": "Yıldırım",
+        "mahalle": "Çelebi Mehmet",
+        "v2": 0,
+        "tl_m2": 23043,
+        "ilan": 7,
+        "poi": 0,
+        "fiyat_kaynak": "ilce_medyan"
+      }
+    ],
+    "DS_YF": [],
+    "DS_DF": []
+  },
+  "mahalle_bazli_yatirim_altin": [
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Elmasbahçeler",
+      "v2": 56.7,
+      "tl_m2": 24327,
+      "ilan": 8
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Ulu",
+      "v2": 50.9,
+      "tl_m2": 21400,
+      "ilan": 6
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Emek Zekai Gümüşdiş",
+      "v2": 47.5,
+      "tl_m2": 27027,
+      "ilan": 1
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Orhanbey",
+      "v2": 46.5,
+      "tl_m2": 27917,
+      "ilan": 1
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Çırpan",
+      "v2": 45.8,
+      "tl_m2": 20083,
+      "ilan": 4
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Hocaalizade",
+      "v2": 44.2,
+      "tl_m2": 26800,
+      "ilan": 3
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Kırcaali",
+      "v2": 44.0,
+      "tl_m2": 26111,
+      "ilan": 2
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Başaran",
+      "v2": 42.0,
+      "tl_m2": 16154,
+      "ilan": 2
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Alaaddin",
+      "v2": 41.0,
+      "tl_m2": 23571,
+      "ilan": 3
+    },
+    {
+      "ilce": "Osmangazi",
+      "mahalle": "Sırameşeler",
+      "v2": 39.6,
+      "tl_m2": 27631,
+      "ilan": 4
+    }
+  ],
+  "mahalle_bazli_uyari": []
+}

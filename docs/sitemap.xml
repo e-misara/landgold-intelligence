@@ -212,4 +212,63 @@
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
+  <url>
+    <loc>https://tradiaturkey.com/map/bursa.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.85</priority>
+  </url>
+  <url>
+    <loc>https://tradiaturkey.com/bultenler/sayi-6-bursa-coming-soon.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://tradiaturkey.com/privacy.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://tradiaturkey.com/en/privacy.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://tradiaturkey.com/ru/privacy.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://tradiaturkey.com/de/privacy.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/privacy.html"/>
+  </url>
+  <url>
+    <loc>https://tradiaturkey.com/kvkk.html</loc>
+    <lastmod>2026-05-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.55</priority>
+  </url>
 </urlset>

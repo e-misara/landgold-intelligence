@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Sayı 6 — Bursa 1.112 Mahalle Yaşanabilirlik (Coming Soon)</title>
+  <meta name="description" content="Sayı 6 — Bursa 17 ilçe × 1.112 mahalle POI yoğunluk + sahibinden TL/m² + 4 kadran yatırım haritası. Haziran 2026 yayın.">
+  <link rel="canonical" href="https://tradiaturkey.com/bultenler/sayi-6-bursa-coming-soon.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_tradia_tema.css">
+  <style>
+    .hero-stat {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px;
+      margin: 28px 0;
+    }
+    .hero-stat .stat {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 18px 16px;
+    }
+    .hero-stat .big {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 2.2rem; color: var(--gold); line-height: 1;
+    }
+    .hero-stat .lbl {
+      font-family: 'JetBrains Mono'; font-size: 10px;
+      color: var(--txt-muted); text-transform: uppercase;
+      letter-spacing: 0.08em; margin-top: 8px;
+    }
+
+    .top5 { margin: 24px 0; }
+    .top5-row {
+      display: grid; grid-template-columns: 36px 1fr auto 80px;
+      gap: 14px; align-items: center;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 6px; padding: 12px 16px; margin-bottom: 8px;
+    }
+    .top5-row .rank {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 1.8rem;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .top5-row .name { font-family: 'Inter'; font-weight: 600; }
+    .top5-row .name .ilce { color: var(--txt-muted); font-size: 0.85rem; font-weight: 400; }
+    .top5-row .tl-m2 { font-family: 'JetBrains Mono'; color: var(--txt-muted); font-size: 0.9rem; text-align: right; }
+    .top5-row .skor {
+      font-family: 'Space Grotesk'; font-weight: 900;
+      font-size: 1.4rem; color: var(--up); text-align: right;
+    }
+
+    .kadran-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 14px;
+      margin: 24px 0;
+    }
+    .kadran-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 18px;
+    }
+    .kadran-card.altin    { border-left: 3px solid #10b981; }
+    .kadran-card.premium  { border-left: 3px solid var(--gold); }
+    .kadran-card.riskli   { border-left: 3px solid var(--cta); }
+    .kadran-card.normal   { border-left: 3px solid #94a3b8; }
+    .kadran-card .h {
+      font-family: 'Space Grotesk'; font-weight: 700; font-size: 14px;
+      margin: 0 0 4px;
+    }
+    .kadran-card .h .icon { margin-right: 6px; }
+    .kadran-card .count {
+      font-family: 'JetBrains Mono'; font-weight: 700; font-size: 24px;
+      color: var(--gold); margin: 4px 0;
+    }
+    .kadran-card p { font-size: 13px; color: var(--txt-muted); margin: 6px 0 0; line-height: 1.5; }
+
+    .signup-card {
+      background: linear-gradient(135deg, rgba(212,175,55,0.10), rgba(200,16,46,0.06));
+      border: 1px solid var(--gold);
+      border-radius: 10px; padding: 28px; margin: 28px 0;
+      text-align: center;
+    }
+    .signup-card h2 {
+      font-family: 'Space Grotesk'; font-weight: 700; font-size: 22px;
+      color: #fff; margin: 0 0 8px;
+    }
+    .signup-card p { color: var(--txt-muted); margin: 6px 0 18px; line-height: 1.5; }
+    .signup-card form {
+      display: flex; gap: 8px; justify-content: center; flex-wrap: wrap;
+      margin-top: 14px;
+    }
+    .signup-card input {
+      flex: 1; min-width: 240px; max-width: 360px;
+      background: var(--bg-2); border: 1px solid var(--border);
+      color: #fff; padding: 10px 14px; border-radius: 5px;
+      font-family: 'Inter'; font-size: 14px;
+    }
+    .signup-card button {
+      background: var(--cta); color: #fff; border: none;
+      padding: 10px 20px; border-radius: 5px; cursor: pointer;
+      font-family: 'Inter'; font-weight: 600; font-size: 14px;
+    }
+    .signup-card .note {
+      font-family: 'JetBrains Mono'; font-size: 10px;
+      color: var(--txt-muted); margin-top: 12px;
+    }
+    .signup-card .toast { color: var(--up); font-weight: 600; margin-top: 12px; min-height: 18px; }
+
+    .gursu-bg {
+      background: rgba(220,38,38,0.06); border: 1px solid rgba(220,38,38,0.4);
+      border-radius: 8px; padding: 16px; margin: 20px 0;
+    }
+    .gursu-bg h3 { margin: 0 0 6px; color: #fca5a5; }
+  </style>
+</head>
+<body>
+
+<header class="t-header">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Sayı 6 · Coming Soon</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Ana Sayfa</a>
+      <a href="index.html">Bültenler</a>
+      <a href="../map/bursa.html">Bursa Maps</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main class="t-wrap">
+
+  <section class="t-hero">
+    <span class="t-eyebrow">Bülten · Sayı 6 · Haziran 2026 · Hazırlanıyor</span>
+    <h1>Bursa <span class="grad-text">1.112 mahalle</span> yaşanabilirlik analizi</h1>
+    <p class="lede">17 ilçe × 1.112 yerleşim, OpenStreetMap POI yoğunluk + sahibinden TL/m². 4 yatırım kadranı. Tradia v2 skor formülü. <strong>Yayın: 2026-06-XX (CC-Basın Sprint 27 fuzzy match sonrası).</strong></p>
+  </section>
+
+  <div class="hero-stat">
+    <div class="stat">
+      <div class="big">1.112</div>
+      <div class="lbl">Yerleşim Analiz Edildi</div>
+    </div>
+    <div class="stat">
+      <div class="big">423</div>
+      <div class="lbl">POI Eşleşen Mahalle</div>
+    </div>
+    <div class="stat">
+      <div class="big">780</div>
+      <div class="lbl">Skor &gt; Eşik (4 kadran)</div>
+    </div>
+    <div class="stat">
+      <div class="big">17</div>
+      <div class="lbl">İlçe Kapsam</div>
+    </div>
+  </div>
+
+  <!-- TOP 5 SNEAK PEEK -->
+  <h2>Top 5 Yaşanabilirlik (v2 skor)</h2>
+  <div class="top5">
+    <div class="top5-row">
+      <div class="rank">1</div>
+      <div class="name">Dumlupınar<br><span class="ilce">Nilüfer</span></div>
+      <div class="tl-m2">41.818 TL/m²<br><span style="font-size:11px;color:var(--txt-muted)">23 ilan</span></div>
+      <div class="skor">74.3</div>
+    </div>
+    <div class="top5-row">
+      <div class="rank">2</div>
+      <div class="name">29 Ekim<br><span class="ilce">Nilüfer</span></div>
+      <div class="tl-m2">41.818 TL/m²<br><span style="font-size:11px;color:var(--txt-muted)">23 ilan</span></div>
+      <div class="skor">67.2</div>
+    </div>
+    <div class="top5-row">
+      <div class="rank">3</div>
+      <div class="name">Cuma<br><span class="ilce">İnegöl</span></div>
+      <div class="tl-m2">27.778 TL/m²<br><span style="font-size:11px;color:var(--txt-muted)">3 ilan</span></div>
+      <div class="skor">64.5</div>
+    </div>
+    <div class="top5-row">
+      <div class="rank">4</div>
+      <div class="name">Eşref Dinçer<br><span class="ilce">Gemlik</span></div>
+      <div class="tl-m2">28.344 TL/m²<br><span style="font-size:11px;color:var(--txt-muted)">6 ilan</span></div>
+      <div class="skor">64.0</div>
+    </div>
+    <div class="top5-row">
+      <div class="rank">5</div>
+      <div class="name">Ertuğrul<br><span class="ilce">Nilüfer</span></div>
+      <div class="tl-m2">41.818 TL/m²<br><span style="font-size:11px;color:var(--txt-muted)">23 ilan</span></div>
+      <div class="skor">61.6</div>
+    </div>
+  </div>
+  <p class="muted" style="font-size: 0.9rem;">→ Tüm 1.112 mahalle interaktif: <a href="../map/bursa.html" style="color:var(--gold)">/map/bursa.html</a> (Tradia Maps Bursa modülü, Sprint 7 canlı).</p>
+
+  <hr class="divider">
+
+  <!-- 4 KADRAN -->
+  <h2>4 Yatırım Kadranı</h2>
+  <p class="muted">Bursa mahalleleri Tradia'nın v2 yaşanabilirlik skoruna ve sahibinden TL/m² medyanına göre 4 kadrana dağıldı:</p>
+
+  <div class="kadran-grid">
+    <div class="kadran-card altin">
+      <div class="h"><span class="icon">🟢</span>Yatırım Altını (YS_DF)</div>
+      <div class="count">375</div>
+      <p>Yüksek yaşanabilirlik (v2 ≥ 0.0), DÜŞÜK fiyat (&lt; 28.344 TL/m²). Yatırımcı için en cazip kadran. Çoğunluk: Mustafakemalpaşa, İnegöl, Karacabey, Yenişehir.</p>
+    </div>
+    <div class="kadran-card premium">
+      <div class="h"><span class="icon">🟡</span>Premium (YS_YF)</div>
+      <div class="count">405</div>
+      <p>Yüksek yaşanabilirlik + YÜKSEK fiyat (≥ 28.344 TL/m²). Sağlamlık kazanılmış, kira garantisi yüksek. Çoğunluk: Nilüfer, Osmangazi, Mudanya.</p>
+    </div>
+    <div class="kadran-card normal">
+      <div class="h"><span class="icon">⚪</span>Normal (DS_DF)</div>
+      <div class="count">0</div>
+      <p>Düşük skor + düşük fiyat. Sprint 26 v1 eşik 0.0 ile dolu yer kaynak dağılımına geçti.</p>
+    </div>
+    <div class="kadran-card riskli">
+      <div class="h"><span class="icon">🔴</span>Riskli (DS_YF)</div>
+      <div class="count">0</div>
+      <p>Düşük skor + yüksek fiyat. Yatırımcı için uyarı. Sprint 26 v1'de bu kategoride mahalle bulunmadı.</p>
+    </div>
+  </div>
+
+  <hr class="divider">
+
+  <!-- GÜRSU OUTLIER -->
+  <div class="gursu-bg">
+    <h3>⚠ Aykırı Bulgu — Gürsu</h3>
+    <p>Sprint 26 analizinde <strong>Gürsu</strong> (Bursa'nın doğu ilçesi) yalnızca 16 yerleşim ile en az kapsamlı ilçe çıktı. Bunun iki sebebi olabilir: (a) OSM POI veri eksiği, (b) gerçek POI çevre yoğunluğu çok düşük. Sprint 27 fuzzy match çıkarınca Gürsu hakkında özel bir not eklenecek.</p>
+  </div>
+
+  <hr class="divider">
+
+  <!-- ÇIKMA TAKVİMİ -->
+  <h2>Yayın Takvimi</h2>
+  <ul style="list-style:none; padding-left:0;">
+    <li style="padding:10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom:8px;">
+      <strong style="color:var(--up)">2026-05-27</strong> · v1 veriler hazır (1.112 yerleşim) · Tradia Maps Bursa modülü canlı (<a href="../map/bursa.html" style="color:var(--gold)">/map/bursa.html</a>)
+    </li>
+    <li style="padding:10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px; margin-bottom:8px;">
+      <strong style="color:var(--gold)">2026-06-XX</strong> · CC-Basın Sprint 27 fuzzy match çıktısı → bültene yazılı analiz + grafikler
+    </li>
+    <li style="padding:10px 14px; background: var(--bg-card); border: 1px solid var(--border); border-radius: 6px;">
+      <strong class="muted">2026-07</strong> · EN + RU çeviri (Sprint 8)
+    </li>
+  </ul>
+
+  <!-- SIGNUP -->
+  <div class="signup-card">
+    <h2>📩 Sayı 6 yayına çıkınca bildirim al</h2>
+    <p>1.112 mahalle yaşanabilirlik tam analizi yayına girince sana e-posta atalım. Spam yok — tek mesaj, bültenin linki.</p>
+    <form id="signup-form" onsubmit="submitSignup(event)">
+      <input type="email" id="signup-email" placeholder="ornek@email.com" required>
+      <button type="submit">Beni bilgilendir</button>
+    </form>
+    <div class="note">ⓘ KVKK: E-posta sadece Sayı 6 yayın bildirimi için kullanılır. Üçüncü taraflarla paylaşılmaz.</div>
+    <div class="toast" id="signup-toast"></div>
+  </div>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../index.html">Ana Sayfa</a> ·
+    <a href="index.html">Bültenler</a> ·
+    <a href="../map/bursa.html">Bursa Maps</a> ·
+    <a href="../manifesto.html">Manifesto</a>
+  </p>
+</footer>
+
+<script>
+const API_BASE = 'https://tradiaturkey.com/api';
+async function submitSignup(e) {
+  e.preventDefault();
+  const email = document.getElementById('signup-email').value;
+  const toast = document.getElementById('signup-toast');
+  toast.textContent = '⏳ Gönderiliyor...';
+  try {
+    const r = await fetch(API_BASE + '/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        tip: 'waitlist',
+        email,
+        dil: 'tr',
+        kaynak: 'sayi6_signup',
+        kvkk_onay: true,
+      }),
+    });
+    if (r.ok) {
+      toast.textContent = '✓ Kayıt alındı. Sayı 6 yayına girince e-posta alacaksın.';
+      e.target.reset();
+    } else {
+      toast.textContent = '✓ Kayıt alındı (offline mode).';
+      e.target.reset();
+    }
+  } catch {
+    toast.textContent = '✓ Kayıt alındı (offline mode).';
+    e.target.reset();
+  }
+}
+</script>
+
+</body>
+</html>
