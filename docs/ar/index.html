@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ترادیا · ذكاء العقارات التركية للمستثمرين الخليجيين</title>
+  <meta name="description" content="ترادیا — النسخة العربية لمستثمري دول الخليج (الإمارات والسعودية والكويت). بيانات على مستوى الحي، رادار المشاريع الكبرى، تقارير باللغة العربية.">
+  <link rel="canonical" href="https://tradiaturkey.com/ar/">
+
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/tr/">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/">
+  <link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/">
+  <link rel="alternate" hreflang="ar" href="https://tradiaturkey.com/ar/">
+  <link rel="alternate" hreflang="fa" href="https://tradiaturkey.com/fa/">
+  <link rel="alternate" hreflang="zh" href="https://tradiaturkey.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/tr/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    body { direction: rtl; }
+    .soon-wrap { min-height: 100vh; display: grid; place-items: center; padding: 24px; }
+    .soon-card {
+      max-width: 540px; text-align: center;
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 48px 32px; border-radius: 12px;
+    }
+    .soon-card h1 { font-size: clamp(2.5rem, 6vw, 4rem); margin: 16px 0; }
+    .soon-card .tag {
+      display: inline-block; padding: 6px 14px; border-radius: 4px;
+      background: rgba(245,158,11,0.1); color: var(--gold);
+      font-family: 'JetBrains Mono'; font-size: 11px;
+      text-transform: uppercase; letter-spacing: 0.15em;
+    }
+    .soon-card .lede { color: var(--txt-muted); font-size: 1.05rem; line-height: 1.7; margin: 20px 0 28px; }
+    .lang-row { display: flex; gap: 6px; justify-content: center; margin-top: 32px; flex-wrap: wrap; }
+    .lang-row a, .lang-row span {
+      padding: 6px 12px; border-radius: 4px;
+      font-family: 'JetBrains Mono'; font-size: 11px;
+      text-transform: uppercase; text-decoration: none;
+    }
+    .lang-row a { background: var(--bg-2); color: var(--gold); border: 1px solid var(--border); }
+    .lang-row a:hover { border-color: var(--gold); }
+    .lang-row .here { background: var(--cta); color: #fff; }
+    .lead-form { display: flex; gap: 8px; margin-top: 24px; }
+    .lead-form input {
+      flex: 1; padding: 12px; background: var(--bg-2); border: 1px solid var(--border);
+      border-radius: 5px; color: #fff; font-family: 'Inter'; font-size: 14px;
+    }
+    .lead-form button {
+      padding: 12px 22px; background: var(--cta); color: #fff; border: none;
+      border-radius: 5px; font-family: 'Space Grotesk'; font-weight: 700;
+      font-size: 13px; cursor: pointer; text-transform: uppercase;
+    }
+    .ok { color: var(--up); font-family: 'JetBrains Mono'; font-size: 12px; margin-top: 12px; display: none; }
+    .ok.show { display: block; }
+  </style>
+</head>
+<body>
+
+<div class="soon-wrap">
+  <div class="soon-card">
+    <span class="tag">المرحلة 2 · إطلاق الربع الثالث 2026</span>
+    <h1><span class="grad-text">قريبًا</span></h1>
+    <p class="lede">ترادیا — النسخة العربية لمستثمري دول الخليج (الإمارات والسعودية والكويت). بيانات على مستوى الحي، رادار المشاريع الكبرى، تقارير باللغة العربية.</p>
+    <form class="lead-form" onsubmit="window.submitWait(event, 'ar')">
+      <input type="email" required placeholder="email">
+      <button type="submit">اشترك في قائمة الانتظار</button>
+    </form>
+    <div class="ok" id="ok-msg">✓</div>
+    <div class="lang-row">
+      <a href="../tr/">TR</a>
+      <a href="../en/">النسخة الإنجليزية</a>
+      <span class="here">AR</span>
+    </div>
+  </div>
+</div>
+
+<script>
+window.submitWait = function(e, locale) {
+  e.preventDefault();
+  const email = e.target.querySelector('input').value;
+  console.log('[WAITLIST]', { locale, email, ts: new Date().toISOString() });
+  document.getElementById('ok-msg').classList.add('show');
+  e.target.reset();
+  setTimeout(() => document.getElementById('ok-msg').classList.remove('show'), 6000);
+};
+</script>
+
+</body>
+</html>

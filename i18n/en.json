@@ -1,0 +1,110 @@
+{
+  "_meta": {
+    "lang": "en",
+    "dir": "ltr",
+    "lang_name_native": "English",
+    "lang_name_english": "English",
+    "locale": "en-US",
+    "rev": "2026-05-26",
+    "status": "landing-only · full translation pending"
+  },
+
+  "common": {
+    "site_name": "Tradia",
+    "site_tagline": "Turkey Investment Intelligence",
+    "currency_symbol": "₺",
+    "currency_code": "TRY",
+    "per_m2": "TRY/m²",
+    "skip_to_content": "Skip to content",
+    "back_to_top": "Back to top",
+    "menu": "Menu",
+    "close": "Close",
+    "open": "Open",
+    "loading": "Loading…",
+    "read_more": "Read more",
+    "learn_more": "Learn more",
+    "free_pdf": "Free City Report PDF",
+    "cta_subscribe": "Become a Pro",
+    "all_rights_reserved": "All rights reserved.",
+    "data_source": "Data source",
+    "last_updated": "Last updated",
+    "methodology": "Methodology"
+  },
+
+  "nav": {
+    "home": "Home",
+    "mega_projects": "Mega Projects",
+    "corridors": "Corridors",
+    "newsletter": "Newsletter",
+    "intelligence": "Intelligence",
+    "about": "About",
+    "membership": "Membership",
+    "manifesto": "Manifesto",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "kvkk": "Data Protection"
+  },
+
+  "landing": {
+    "hero_eyebrow": "TURKEY INVESTMENT INTELLIGENCE",
+    "hero_title_line1": "Turkey",
+    "hero_title_line2": "Investment Intelligence",
+    "hero_subtitle": "Real estate market, mega projects and macro data — for global investors looking at Turkey. Position before the news hits.",
+    "hero_cta_primary": "Open the Map",
+    "hero_cta_secondary": "Mega Projects",
+    "stats_listings": "Listings Tracked",
+    "stats_mega": "Mega Project Archive",
+    "stats_coverage": "Geographic Coverage",
+    "stats_update": "Data Refresh",
+    "coverage_value": "81 Provinces · 973 Districts",
+    "update_value": "Monthly",
+
+    "fact_1_title": "Neighbourhood-Level Granularity",
+    "fact_1_desc": "Competitors stop at province/district. Tradia goes deeper — 62-neighbourhood heat map for Bursa, 39-district median for Istanbul.",
+
+    "fact_2_title": "Multi-Channel Cross-Validation",
+    "fact_2_desc": "Ministry of Environment + Istanbul Municipality + sahibinden + Bursa Council + EKAP + Central Bank + Statistics Institute. A thesis confirmed by 3-4 parallel channels is locked in.",
+
+    "fact_3_title": "$0 Cost · 100% Transparency",
+    "fact_3_desc": "Endeksa is paywalled. Tradia is free at point of use. Formula, bug reports, self-criticism — all public.",
+
+    "fact_4_title": "Early Signal on Mega Projects",
+    "fact_4_desc": "Cross-Hat Sprint 7 thesis on Arnavutköy: STRONG_POSITIVE on 4/4 channels. Official Ministry confirmation came 2 months later — 272.61 hectares.",
+
+    "fact_5_title": "Multi-Media Analyst Audit",
+    "fact_5_desc": "A first in Turkish media. Measures a single analyst's consistency across video and written work, automatically.",
+
+    "cta_box_title": "Free City Report",
+    "cta_box_desc": "Tradia analysis for one Turkish city — neighbourhood heat map + mega project signal + price medians. PDF, delivered instantly.",
+    "cta_box_button": "Request Report"
+  },
+
+  "newsletter": {
+    "list_title": "Tradia Newsletter",
+    "list_subtitle": "Neighbourhood granularity. Multi-media audit. Mega-plan radar.",
+    "issue_label": "Issue",
+    "published": "Published",
+    "draft": "In progress",
+    "planned": "Planned"
+  },
+
+  "manifesto": {
+    "title": "Data quality > Data volume",
+    "subtitle": "Tradia is building a new standard for Turkey investment intelligence.",
+    "principle_1": "Endeksa stops at province/district. Tradia signals at neighbourhood level.",
+    "principle_2": "Bloomberg lets analysts speak. Tradia measures their consistency.",
+    "principle_3": "Being on-window during an event is not the same as interpreting it.",
+    "principle_4": "Tradia corrects itself. That is the methodological backbone.",
+    "principle_5": "Yesterday it did not exist in Turkish investment intelligence. Today it is unrivalled."
+  },
+
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "legal": "Legal",
+    "contact": "Contact",
+    "address_label": "Address",
+    "address_value": "Istanbul, Turkey",
+    "email": "info@tradiaturkey.com"
+  }
+}

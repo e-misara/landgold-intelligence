@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia Maps · Mudanya MVP</title>
+  <meta name="description" content="Tradia Maps prototip — Bursa Mudanya 4 mahalle yaşanabilirlik skoru + POI yoğunluğu. 139.989 OSM noktası işlendi.">
+  <link rel="canonical" href="https://tradiaturkey.com/map/">
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/map/">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/map/">
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    body { overflow: hidden; height: 100vh; display: flex; flex-direction: column; }
+
+    /* Üst bar */
+    .map-top {
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 10px 18px; background: var(--bg-2); border-bottom: 1px solid var(--border);
+      gap: 12px; flex-wrap: wrap;
+    }
+    .map-brand { display: flex; align-items: center; gap: 10px; }
+    .map-brand .dot { width: 26px; height: 26px; background: var(--cta); border-radius: 4px; display: grid; place-items: center; color: #fff; font-family: 'Space Grotesk'; font-weight: 900; font-size: 14px; }
+    .map-brand .name { font-family: 'Space Grotesk'; font-weight: 700; font-size: 17px; color: #fff; }
+    .map-brand .tag { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.12em; margin-left: 4px; }
+
+    .map-status {
+      display: flex; align-items: center; gap: 14px;
+      font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted);
+      text-transform: uppercase; letter-spacing: 0.08em;
+    }
+    .map-status .live { color: var(--up); }
+    .map-status .live::before { content: "●"; margin-right: 5px; animation: blink 2s ease infinite; }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+    .map-nav { display: flex; gap: 6px; }
+    .map-nav a {
+      padding: 6px 12px; font-family: 'Inter'; font-size: 12px;
+      color: var(--txt-muted); text-decoration: none; border-radius: 4px;
+      transition: all 0.15s;
+    }
+    .map-nav a:hover { color: #fff; background: rgba(255,255,255,0.06); }
+
+    /* Harita kapsayıcı */
+    #map { flex: 1; min-height: 0; background: var(--bg-2); }
+
+    /* Sol overlay paneli (info) */
+    .map-info {
+      position: absolute; top: 70px; left: 14px; z-index: 500;
+      background: var(--bg-card); border: 1px solid var(--border);
+      border-radius: 8px; padding: 14px 16px;
+      max-width: 280px; box-shadow: 0 4px 18px rgba(0,0,0,0.6);
+      color: var(--txt);
+    }
+    .map-info h2 { font-family: 'Space Grotesk'; font-weight: 700; font-size: 14px; color: #fff; margin: 0 0 4px; }
+    .map-info .tag { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; }
+    .map-info p { font-size: 12px; color: var(--txt-muted); line-height: 1.5; margin: 8px 0 0; }
+    .map-info .metric { display: flex; gap: 10px; margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--border); }
+    .map-info .metric div { flex: 1; }
+    .map-info .metric .big { font-family: 'Space Grotesk'; font-weight: 900; font-size: 20px; color: var(--gold); }
+    .map-info .metric .lbl { font-family: 'JetBrains Mono'; font-size: 9px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+
+    /* Popup özelleştirme */
+    .leaflet-popup-content-wrapper {
+      background: var(--bg-card) !important;
+      color: var(--txt) !important;
+      border-radius: 8px !important;
+      border: 1px solid var(--border) !important;
+      padding: 0 !important;
+      min-width: 320px !important;
+    }
+    .leaflet-popup-content { margin: 0 !important; line-height: 1.5 !important; }
+    .leaflet-popup-tip { background: var(--bg-card) !important; }
+    .leaflet-popup-close-button { color: #fff !important; padding: 8px 10px !important; font-size: 22px !important; }
+
+    .mp-pop { padding: 16px 18px 14px; }
+    .mp-pop h3 { font-family: 'Space Grotesk'; font-weight: 700; font-size: 17px; color: #fff; margin: 0 0 2px; }
+    .mp-pop .loc { font-family: 'JetBrains Mono'; font-size: 11px; color: var(--gold); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 12px; }
+    .mp-pop .headline { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+    .mp-pop .headline .lbl { font-family: 'JetBrains Mono'; font-size: 9px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.08em; }
+    .mp-pop .headline .val { font-family: 'Space Grotesk'; font-weight: 900; font-size: 22px; color: var(--gold); line-height: 1.1; margin-top: 2px; }
+    .mp-pop .headline .val.score-best { color: var(--up); }
+    .mp-pop .headline .val.score-med  { color: var(--gold); }
+    .mp-pop .headline .val.score-low  { color: var(--cta); }
+
+    .mp-pop .gruplar { padding: 10px 0; display: grid; grid-template-columns: 1fr 1fr; gap: 6px 14px; font-size: 12px; }
+    .mp-pop .gruplar .row { display: flex; justify-content: space-between; border-bottom: 1px dashed rgba(255,255,255,0.08); padding: 3px 0; }
+    .mp-pop .gruplar .row .k { color: var(--txt-muted); }
+    .mp-pop .gruplar .row .v { font-family: 'JetBrains Mono'; font-weight: 700; color: #fff; }
+
+    .mp-pop .desc { font-size: 12px; color: var(--txt-muted); line-height: 1.55; padding-top: 10px; border-top: 1px solid var(--border); }
+    .mp-pop .desc strong { color: var(--gold); font-weight: 600; }
+
+    .mp-pop .cta { display: flex; gap: 6px; margin-top: 12px; }
+    .mp-pop .cta button {
+      flex: 1; padding: 8px 10px; border: none; border-radius: 5px;
+      font-family: 'Inter'; font-size: 11px; font-weight: 600;
+      cursor: pointer; transition: all 0.15s;
+    }
+    .mp-pop .cta .primary { background: var(--cta); color: #fff; }
+    .mp-pop .cta .primary:hover { background: #b8002a; }
+    .mp-pop .cta .ghost { background: rgba(255,255,255,0.06); color: var(--txt); border: 1px solid var(--border); }
+    .mp-pop .cta .ghost:hover { background: rgba(255,255,255,0.10); }
+
+    /* Marker — circle with score */
+    .mp-marker {
+      width: 36px; height: 36px; border-radius: 50%;
+      display: grid; place-items: center;
+      font-family: 'Space Grotesk'; font-weight: 900; font-size: 14px;
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      border: 2px solid #fff;
+    }
+    .mp-marker.best { background: #10b981; }
+    .mp-marker.med  { background: #f59e0b; }
+    .mp-marker.low  { background: #dc2626; }
+
+    /* Modal — lead magnet */
+    .mp-modal-bg {
+      position: fixed; inset: 0; background: rgba(0,0,0,0.75);
+      z-index: 1500; display: none; align-items: center; justify-content: center;
+      backdrop-filter: blur(4px);
+    }
+    .mp-modal-bg.open { display: flex; }
+    .mp-modal {
+      background: var(--bg-card); border: 1px solid var(--border); border-radius: 10px;
+      padding: 24px 26px; max-width: 440px; width: calc(100% - 32px);
+      box-shadow: 0 12px 48px rgba(0,0,0,0.7);
+    }
+    .mp-modal h3 { font-family: 'Space Grotesk'; font-weight: 700; font-size: 18px; color: #fff; margin: 0 0 6px; }
+    .mp-modal .sub { font-size: 13px; color: var(--txt-muted); margin-bottom: 18px; line-height: 1.5; }
+    .mp-modal label { display: block; font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 6px; }
+    .mp-modal input, .mp-modal textarea, .mp-modal select {
+      width: 100%; padding: 10px 12px;
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 5px;
+      color: #fff; font-family: 'Inter'; font-size: 13px;
+      margin-bottom: 14px;
+    }
+    .mp-modal input:focus, .mp-modal textarea:focus, .mp-modal select:focus {
+      outline: none; border-color: var(--gold);
+    }
+    .mp-modal textarea { resize: vertical; min-height: 78px; }
+    .mp-modal .modal-cta { display: flex; gap: 8px; margin-top: 8px; }
+    .mp-modal .modal-cta button {
+      flex: 1; padding: 10px 14px; border: none; border-radius: 5px;
+      font-family: 'Inter'; font-size: 13px; font-weight: 600; cursor: pointer;
+    }
+    .mp-modal .modal-cta .primary { background: var(--cta); color: #fff; }
+    .mp-modal .modal-cta .ghost { background: transparent; color: var(--txt-muted); border: 1px solid var(--border); }
+    .mp-modal .note {
+      font-size: 11px; color: var(--txt-muted); margin-top: 12px;
+      padding-top: 12px; border-top: 1px solid var(--border);
+    }
+
+    /* Toast */
+    .mp-toast {
+      position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%);
+      background: var(--up); color: #fff; padding: 12px 24px; border-radius: 6px;
+      font-family: 'Inter'; font-size: 13px; font-weight: 600;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+      z-index: 2000; opacity: 0; pointer-events: none;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    .mp-toast.show { opacity: 1; transform: translateX(-50%) translateY(-6px); }
+
+    /* Alt etiket */
+    .map-foot {
+      position: absolute; bottom: 10px; right: 14px; z-index: 500;
+      background: rgba(13, 20, 36, 0.92); color: var(--txt-muted);
+      font-family: 'JetBrains Mono'; font-size: 9px; padding: 5px 10px; border-radius: 4px;
+      text-transform: uppercase; letter-spacing: 0.08em; border: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+<div class="map-top">
+  <div class="map-brand">
+    <div class="dot">T</div>
+    <div>
+      <span class="name">TRADIA</span>
+      <span class="tag">Maps · MVP</span>
+    </div>
+  </div>
+  <div class="map-status">
+    <span class="live">CANLI VERİ</span>
+    <span>139.989 POI</span>
+    <span>Bursa / Mudanya · 4 mahalle</span>
+  </div>
+  <nav class="map-nav">
+    <a href="../index.html">Ana Sayfa</a>
+    <a href="../bultenler/index.html">Bültenler</a>
+    <a href="../manifesto.html">Manifesto</a>
+  </nav>
+</div>
+
+<div id="map"></div>
+
+<div class="map-info">
+  <span class="tag">Prototip · Faz 1</span>
+  <h2 style="margin-top:4px">Bursa Mudanya</h2>
+  <p>Tradia Maps MVP — 4 mahalle yaşanabilirlik skoru + POI yoğunluğu. Mahalle marker'a tıklayın, detay popup açılır.</p>
+  <div class="metric">
+    <div><div class="big" id="m-toplam-poi">—</div><div class="lbl">Toplam POI</div></div>
+    <div><div class="big" id="m-mahalle">—</div><div class="lbl">Mahalle</div></div>
+  </div>
+</div>
+
+<div class="map-foot">Tradia Maps · OSM verisi (Overpass) · Tile: OpenStreetMap</div>
+
+<!-- LEAD MAGNET MODAL -->
+<div class="mp-modal-bg" id="modal-rapor">
+  <div class="mp-modal">
+    <h3>📄 Ücretsiz Detay Rapor</h3>
+    <div class="sub" id="rapor-mahalle">Mahalle adı buraya gelecek.</div>
+    <p style="font-size:12px; color: var(--txt-muted); margin-bottom: 18px;">
+      Bu mahalle için 12 sayfalık Tradia analiz raporu PDF — POI yoğunluk haritası, fiyat geçmişi, komşu mahalle karşılaştırma, yatırım skoru. E-posta adresinize göndereceğiz.
+    </p>
+    <form id="form-rapor" onsubmit="submitRapor(event)">
+      <label>E-posta</label>
+      <input type="email" id="rapor-email" required placeholder="ornek@email.com">
+      <label>Ad-Soyad (opsiyonel)</label>
+      <input type="text" id="rapor-isim" placeholder="Profesyonel kullanım için">
+      <div class="modal-cta">
+        <button type="button" class="ghost" onclick="closeModal('modal-rapor')">İptal</button>
+        <button type="submit" class="primary">📄 Raporu Gönder</button>
+      </div>
+      <div class="note">
+        ⓘ KVKK: E-posta sadece rapor gönderimi için kullanılır, üçüncü taraflarla paylaşılmaz. Spam yok.
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="mp-modal-bg" id="modal-yorum">
+  <div class="mp-modal">
+    <h3>💬 Siz Ne Diyorsunuz?</h3>
+    <div class="sub" id="yorum-mahalle">Bu mahalle için Tradia tahmini sizi yansıtıyor mu?</div>
+    <form id="form-yorum" onsubmit="submitYorum(event)">
+      <label>Sizce bu mahalle</label>
+      <select id="yorum-trend" required>
+        <option value="">— Seçin —</option>
+        <option value="yukseliste">📈 Yükselişte</option>
+        <option value="stabil">⚖ Stabil</option>
+        <option value="dususte">📉 Düşüşte</option>
+      </select>
+      <label>Neden? (en fazla 280 karakter, opsiyonel)</label>
+      <textarea id="yorum-aciklama" maxlength="280" placeholder="Yerel bir gözleminiz, kentsel proje haberi, sosyal etken..."></textarea>
+      <div class="modal-cta">
+        <button type="button" class="ghost" onclick="closeModal('modal-yorum')">İptal</button>
+        <button type="submit" class="primary">💬 Yorumu Gönder</button>
+      </div>
+      <div class="note">
+        ⓘ Anonim toplanır. Tradia mahalle skorlarını topluluk geri bildirimiyle ince ayarlar.
+      </div>
+    </form>
+  </div>
+</div>
+
+<div class="mp-toast" id="toast"></div>
+
+<script>
+const MAP_VERI_URL = '../data/maps/mudanya.json';
+let aktifMahalle = null;
+
+const map = L.map('map', {
+  center: [40.3766, 28.8855],
+  zoom: 12,
+  zoomControl: false,
+  preferCanvas: true,
+});
+L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+  subdomains: 'abcd',
+  maxZoom: 19,
+  attribution: '&copy; OpenStreetMap &copy; CARTO',
+}).addTo(map);
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_only_labels/{z}/{x}/{y}{r}.png', {
+  subdomains: 'abcd',
+  maxZoom: 19,
+  pane: 'shadowPane',
+}).addTo(map);
+
+function seviyeKlass(skor) {
+  if (skor >= 200) return 'best';
+  if (skor >= 50)  return 'med';
+  return 'low';
+}
+function seviyeMarker(skor) {
+  if (skor >= 200) return 'best';
+  if (skor >= 50)  return 'med';
+  return 'low';
+}
+function fmtSkor(skor) { return new Intl.NumberFormat('tr-TR').format(skor); }
+
+function popupHTML(m) {
+  const klass = seviyeKlass(m.skor);
+  const g = m.gruplar;
+  const ikonlu = [
+    ['🍴', 'Yeme/içme', g.yeme_icme],
+    ['🏥', 'Sağlık', g.saglik],
+    ['🛒', 'Alışveriş', g.alisveris],
+    ['🚌', 'Ulaşım', g.ulasim],
+    ['🏦', 'Finans', g.finans],
+    ['🏨', 'Konaklama', g.konaklama],
+  ];
+  return `
+    <div class="mp-pop">
+      <h3>${m.ad}</h3>
+      <div class="loc">Bursa / Mudanya</div>
+      <div class="headline">
+        <div>
+          <div class="lbl">Toplam POI</div>
+          <div class="val">${m.toplam_poi}</div>
+        </div>
+        <div>
+          <div class="lbl">Yaşanabilirlik</div>
+          <div class="val score-${klass}">${fmtSkor(m.skor)}</div>
+          <div style="font-family:'JetBrains Mono';font-size:10px;color:var(--txt-muted);margin-top:2px;text-transform:uppercase;letter-spacing:0.08em;">${m.seviye}</div>
+        </div>
+      </div>
+      <div class="gruplar">
+        ${ikonlu.map(([ic, lbl, v]) => `
+          <div class="row"><span class="k">${ic} ${lbl}</span><span class="v">${v}</span></div>
+        `).join('')}
+      </div>
+      <div class="desc">${m.aciklama
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\n/g, '<br>')}</div>
+      <div class="cta">
+        <button class="primary" onclick="openRapor('${m.ad.replace(/'/g, '&apos;')}')">📄 Detay Rapor</button>
+        <button class="ghost" onclick="openYorum('${m.ad.replace(/'/g, '&apos;')}')">💬 Yorum</button>
+      </div>
+    </div>
+  `;
+}
+
+function makeIcon(skor) {
+  const klass = seviyeMarker(skor);
+  return L.divIcon({
+    className: '',
+    html: `<div class="mp-marker ${klass}">${skor >= 1000 ? Math.round(skor/100) + 'h' : skor}</div>`,
+    iconSize: [36, 36],
+    iconAnchor: [18, 18],
+    popupAnchor: [0, -16],
+  });
+}
+
+fetch(MAP_VERI_URL).then(r => r.json()).then(data => {
+  document.getElementById('m-toplam-poi').textContent =
+    data.mahalleler.reduce((a, m) => a + m.toplam_poi, 0);
+  document.getElementById('m-mahalle').textContent = data.mahalleler.length;
+
+  const bounds = [];
+  data.mahalleler.forEach(m => {
+    const mk = L.marker([m.lat, m.lon], { icon: makeIcon(m.skor) })
+      .addTo(map)
+      .bindPopup(popupHTML(m), { maxWidth: 380, autoPan: true });
+    mk.on('popupopen', () => { aktifMahalle = m.ad; });
+    bounds.push([m.lat, m.lon]);
+  });
+
+  if (bounds.length > 1) {
+    map.fitBounds(bounds, { padding: [60, 60], maxZoom: 13 });
+  }
+}).catch(err => {
+  console.error('Veri yüklenemedi', err);
+  document.getElementById('m-toplam-poi').textContent = '!';
+});
+
+// Lead magnet
+function openRapor(mahalle) {
+  aktifMahalle = mahalle;
+  document.getElementById('rapor-mahalle').textContent =
+    `${mahalle} mahallesi için 12 sayfalık Tradia detay raporu.`;
+  document.getElementById('modal-rapor').classList.add('open');
+}
+function openYorum(mahalle) {
+  aktifMahalle = mahalle;
+  document.getElementById('yorum-mahalle').textContent =
+    `Tradia bu mahalle için bir skor üretti. Sizin gözleminize göre bu mahalle nerede?`;
+  document.getElementById('modal-yorum').classList.add('open');
+}
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+}
+[document.getElementById('modal-rapor'), document.getElementById('modal-yorum')].forEach(el => {
+  el.addEventListener('click', e => { if (e.target === el) el.classList.remove('open'); });
+});
+
+function showToast(msg) {
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 3500);
+}
+
+function submitRapor(e) {
+  e.preventDefault();
+  const email = document.getElementById('rapor-email').value;
+  const isim = document.getElementById('rapor-isim').value;
+  const lead = {
+    tip: 'rapor',
+    mahalle: aktifMahalle,
+    email, isim,
+    ts: new Date().toISOString(),
+  };
+  console.log('[LEAD] Rapor talebi:', lead);
+  // TODO: gerçek backend (Sprint 5+)
+  // fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(lead)});
+  closeModal('modal-rapor');
+  e.target.reset();
+  showToast('✓ Talebiniz alındı. Rapor 24 saat içinde gönderilecek.');
+}
+
+function submitYorum(e) {
+  e.preventDefault();
+  const trend = document.getElementById('yorum-trend').value;
+  const aciklama = document.getElementById('yorum-aciklama').value;
+  const lead = {
+    tip: 'yorum',
+    mahalle: aktifMahalle,
+    trend, aciklama,
+    ts: new Date().toISOString(),
+  };
+  console.log('[LEAD] Yorum:', lead);
+  // TODO: gerçek backend (Sprint 5+)
+  closeModal('modal-yorum');
+  e.target.reset();
+  showToast('✓ Yorumunuz kaydedildi. Teşekkürler.');
+}
+</script>
+
+</body>
+</html>

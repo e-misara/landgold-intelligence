@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Türkiye Yatırım İstihbaratı</title>
+  <meta name="description" content="Türkiye gayrimenkul piyasası, mega proje ve makro veri istihbaratı. Mahalle seviyesinde POI yoğunluğu, 81 il kapsamı, çoklu medya analist denetimi.">
+  <link rel="canonical" href="https://tradiaturkey.com/tr/">
+
+  <!-- 4 dilli hreflang (TR + EN aktif, RU/DE/AR/FA/ZH placeholder) -->
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/tr/">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/">
+  <link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/">
+  <link rel="alternate" hreflang="ar" href="https://tradiaturkey.com/ar/">
+  <link rel="alternate" hreflang="fa" href="https://tradiaturkey.com/fa/">
+  <link rel="alternate" hreflang="zh" href="https://tradiaturkey.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/tr/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    /* Dil switcher */
+    .lang-switch {
+      position: absolute; top: 12px; right: 14px;
+      display: flex; gap: 4px; align-items: center; z-index: 100;
+    }
+    .lang-switch a, .lang-switch span {
+      padding: 4px 8px; font-family: 'JetBrains Mono'; font-size: 11px;
+      text-transform: uppercase; border-radius: 3px;
+      text-decoration: none; transition: all 0.15s;
+    }
+    .lang-switch .active { background: var(--cta); color: #fff; font-weight: 700; }
+    .lang-switch .live   { color: var(--gold); }
+    .lang-switch .live:hover { background: rgba(245,158,11,0.1); }
+    .lang-switch .soon   { color: var(--txt-faint); cursor: not-allowed; opacity: 0.5; }
+
+    .l-hero {
+      padding: 80px 24px 60px; text-align: center;
+      background: radial-gradient(ellipse 60% 50% at 50% 50%,
+        rgba(220,38,38,0.12) 0%, transparent 70%),
+        radial-gradient(ellipse 40% 40% at 50% 80%,
+        rgba(245,158,11,0.06) 0%, transparent 70%), var(--bg);
+    }
+    .l-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.2rem; }
+    .l-hero .lede { font-size: 1.15rem; color: var(--txt-muted); max-width: 720px; margin: 0 auto 28px; line-height: 1.7; }
+
+    .l-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+    .l-cta { padding: 14px 28px; border-radius: 6px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; }
+    .l-cta.primary { background: var(--cta); color: #fff; }
+    .l-cta.primary:hover { background: #b8002a; transform: translateY(-2px); }
+    .l-cta.ghost { border: 1px solid var(--border-2); color: var(--txt); }
+    .l-cta.ghost:hover { background: rgba(255,255,255,0.04); border-color: var(--gold); color: var(--gold); }
+
+    .l-facts {
+      max-width: 1100px; margin: 60px auto;
+      padding: 0 24px;
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 14px;
+    }
+    .l-fact {
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 22px 18px; border-radius: 8px;
+    }
+    .l-fact .big {
+      font-family: 'Space Grotesk'; font-weight: 900; font-size: 2.2rem;
+      background: linear-gradient(135deg, var(--gold), var(--cta));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+      line-height: 1;
+    }
+    .l-fact .lbl { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 10px; }
+    .l-fact .det { font-size: 13px; color: var(--txt-faint); margin-top: 6px; line-height: 1.4; }
+
+    .l-features { max-width: 1100px; margin: 80px auto; padding: 0 24px; }
+    .l-features h2 { text-align: center; margin-bottom: 8px; }
+    .l-features .sub { text-align: center; color: var(--txt-muted); max-width: 600px; margin: 0 auto 40px; }
+    .l-grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .l-card {
+      background: var(--bg-card); border: 1px solid var(--border);
+      padding: 22px; border-radius: 8px; transition: all 0.2s;
+    }
+    .l-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .l-card .ic { font-size: 28px; margin-bottom: 12px; }
+    .l-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+    .l-card p { color: var(--txt-muted); font-size: 14px; line-height: 1.6; }
+    .l-card a {
+      display: inline-block; margin-top: 12px; font-family: 'JetBrains Mono';
+      font-size: 11px; color: var(--gold); text-decoration: none;
+      text-transform: uppercase; letter-spacing: 0.1em;
+    }
+    .l-card a:hover { color: var(--cta); }
+
+    .l-lead { max-width: 720px; margin: 80px auto; padding: 30px; text-align: center;
+      background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(245,158,11,0.04));
+      border: 1px solid rgba(220,38,38,0.2); border-radius: 12px;
+    }
+    .l-lead h2 { color: var(--gold); }
+    .l-lead p { color: #fef3c7; }
+    .l-lead form {
+      display: flex; gap: 8px; max-width: 480px; margin: 24px auto 8px;
+      flex-wrap: wrap;
+    }
+    .l-lead input {
+      flex: 1; min-width: 220px; padding: 12px 14px;
+      background: var(--bg-2); border: 1px solid var(--border); border-radius: 5px;
+      color: #fff; font-family: 'Inter'; font-size: 14px;
+    }
+    .l-lead button {
+      padding: 12px 20px; background: var(--cta); color: #fff; border: none;
+      border-radius: 5px; font-family: 'Space Grotesk'; font-weight: 700;
+      font-size: 13px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.04em;
+    }
+    .l-lead .ok-msg {
+      color: var(--up); font-family: 'JetBrains Mono'; font-size: 12px; margin-top: 12px;
+      display: none;
+    }
+    .l-lead .ok-msg.show { display: block; }
+    .l-lead .kvkk { font-size: 11px; color: var(--txt-faint); margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<nav class="lang-switch">
+  <span class="active">TR</span>
+  <a class="live" href="../en/" title="English">EN</a>
+  <span class="soon" title="Faz 2 — Yakında">RU</span>
+  <span class="soon" title="Faz 3 — Yakında">DE</span>
+  <span class="soon" title="Faz 2 — Yakında">AR</span>
+  <span class="soon" title="Faz 3 — Yakında">FA</span>
+  <span class="soon" title="Faz 4 — Yakında">ZH</span>
+</nav>
+
+<header class="t-header" style="position:relative">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">Türkçe</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Anasayfa (eski)</a>
+      <a href="../map/">Maps</a>
+      <a href="../bultenler/">Bültenler</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="l-hero">
+  <span class="t-eyebrow">Türkiye Yatırım İstihbaratı · Bağımsız · Otomatik · Kanıtlı</span>
+  <h1>Türkiye'nin sessiz<br><span class="grad-text">piyasa hareketleri.</span></h1>
+  <p class="lede">81 il, 973 ilçe, mahalle seviyesinde POI yoğunluğu, mega proje radarı, çoklu medya analist denetimi — tek platformda. Endeksa il/ilçe seviyesinde durur; Tradia mahalleye iner.</p>
+  <div class="l-cta-row">
+    <a href="../map/" class="l-cta primary">🗺️ Haritayı Aç (Mudanya MVP)</a>
+    <a href="../bultenler/" class="l-cta ghost">📰 Bültenler</a>
+  </div>
+</section>
+
+<section class="l-facts">
+  <div class="l-fact"><div class="big">81</div><div class="lbl">İl Kapsama</div><div class="det">Tam Türkiye + 9 hükümet kanalı</div></div>
+  <div class="l-fact"><div class="big">139,989</div><div class="lbl">POI</div><div class="det">OpenStreetMap mahalle bazlı</div></div>
+  <div class="l-fact"><div class="big">8,480</div><div class="lbl">Havuz Kaydı</div><div class="det">Cross-Hat 4 hat sentezi</div></div>
+  <div class="l-fact"><div class="big">62</div><div class="lbl">Bursa Mahalle</div><div class="det">5 sprint mahalle ısı haritası</div></div>
+  <div class="l-fact"><div class="big">$0</div><div class="lbl">Kullanıcı Maliyeti</div><div class="det">Ücretsiz şehir raporu PDF</div></div>
+</section>
+
+<section class="l-features">
+  <h2>3 Katmanlı Veri Disiplini</h2>
+  <p class="sub">Tek-kanal endeks değil — devlet planlama + makro çerçeve + piyasa fiyatı paralel okunur.</p>
+  <div class="l-grid3">
+    <div class="l-card">
+      <div class="ic">🏛️</div>
+      <h3>Resmi Planlama</h3>
+      <p>BBB Meclis 180 PDF, CSB 5 il (İstanbul/Hatay/Bursa/Ankara/İzmir), TOKİ haber akışı, EKAP ihale arşivi. Devlet kararı doğrulanmadan tez yayımlanmaz.</p>
+      <a href="../bultenler/sayi-3-v6-istanbul-arnavutkoy.html">Sayı 3 · Arnavutköy 272.61 ha →</a>
+    </div>
+    <div class="l-card">
+      <div class="ic">📊</div>
+      <h3>Makro Çerçeve</h3>
+      <p>TCMB Konut Fiyat Endeksleri (YKFE/YOKFE), TÜİK satış istatistikleri, Beklenti Anketi. Türkiye'nin makro nabzı tek tabloda.</p>
+      <a href="../bultenler/sayi-1-v2-analist-denetimi.html">Çoklu Medya Denetimi →</a>
+    </div>
+    <div class="l-card">
+      <div class="ic">🏙️</div>
+      <h3>Piyasa Granüleri</h3>
+      <p>Sahibinden master 104.428 ilan, OSM POI yoğunluğu, mahalle seviyesinde yaşanabilirlik skoru. Endeksa'nın veremediği derinlik.</p>
+      <a href="../bultenler/sayi-2-v6-bursa-mahalle-isi.html">Sayı 2 · Bursa Mahalle Isı →</a>
+    </div>
+  </div>
+</section>
+
+<section class="l-lead">
+  <h2>Ücretsiz Şehir Raporu</h2>
+  <p>İlgilendiğiniz il için 12 sayfalık Tradia analiz raporu PDF — mahalle skorları, mega proje etkisi, fiyat hareketi. E-postanıza gönderelim.</p>
+  <form onsubmit="submitLead(event)">
+    <input type="email" id="lead-email" required placeholder="ornek@email.com">
+    <select id="lead-il" style="padding: 12px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 5px; color: #fff; font-family: 'Inter'; font-size: 14px;">
+      <option value="">— İl seçin —</option>
+      <option value="istanbul">İstanbul</option>
+      <option value="bursa">Bursa</option>
+      <option value="ankara">Ankara</option>
+      <option value="izmir">İzmir</option>
+      <option value="hatay">Hatay</option>
+      <option value="antalya">Antalya</option>
+      <option value="diger">Diğer</option>
+    </select>
+    <button type="submit">📄 Raporu İste</button>
+  </form>
+  <div class="ok-msg" id="lead-ok">✓ Talebiniz alındı. Rapor 24 saat içinde gönderilecek.</div>
+  <div class="kvkk">ⓘ KVKK: E-posta sadece rapor gönderimi için kullanılır. Spam yok. Üçüncü taraflarla paylaşılmaz.</div>
+</section>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Türkiye Yatırım İstihbaratı</p>
+  <p style="margin-top:8px">
+    <a href="../map/">Maps</a> ·
+    <a href="../bultenler/">Bültenler</a> ·
+    <a href="../manifesto.html">Manifesto</a> ·
+    <a href="../en/">English</a>
+  </p>
+  <p style="margin-top:14px; font-size:11px;" class="muted">
+    Veri kaynakları: BBB · TOKİ · CSB 5 il · EKAP · TCMB · TÜİK · OSM · Sahibinden master
+  </p>
+</footer>
+
+<script>
+function submitLead(e) {
+  e.preventDefault();
+  const lead = {
+    tip: 'sehir_raporu',
+    email: document.getElementById('lead-email').value,
+    il: document.getElementById('lead-il').value || 'belirsiz',
+    locale: 'tr',
+    ts: new Date().toISOString(),
+  };
+  console.log('[LEAD]', lead);
+  // TODO: backend (Sprint 5+)
+  document.getElementById('lead-ok').classList.add('show');
+  e.target.reset();
+  setTimeout(() => document.getElementById('lead-ok').classList.remove('show'), 6000);
+}
+</script>
+
+</body>
+</html>

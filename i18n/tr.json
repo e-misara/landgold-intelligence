@@ -1,0 +1,109 @@
+{
+  "_meta": {
+    "lang": "tr",
+    "dir": "ltr",
+    "lang_name_native": "Türkçe",
+    "lang_name_english": "Turkish",
+    "locale": "tr-TR",
+    "rev": "2026-05-26"
+  },
+
+  "common": {
+    "site_name": "Tradia",
+    "site_tagline": "Türkiye Yatırım İstihbaratı",
+    "currency_symbol": "₺",
+    "currency_code": "TRY",
+    "per_m2": "TL/m²",
+    "skip_to_content": "İçeriğe atla",
+    "back_to_top": "Yukarı çık",
+    "menu": "Menü",
+    "close": "Kapat",
+    "open": "Aç",
+    "loading": "Yükleniyor…",
+    "read_more": "Daha fazla",
+    "learn_more": "Detaylı incele",
+    "free_pdf": "Ücretsiz Şehir Raporu PDF",
+    "cta_subscribe": "Pro Üye Ol",
+    "all_rights_reserved": "Tüm hakları saklıdır.",
+    "data_source": "Veri kaynağı",
+    "last_updated": "Son güncelleme",
+    "methodology": "Metodoloji"
+  },
+
+  "nav": {
+    "home": "Ana Sayfa",
+    "mega_projects": "Mega Projeler",
+    "corridors": "Koridorlar",
+    "newsletter": "Bülten",
+    "intelligence": "İstihbarat",
+    "about": "Hakkımızda",
+    "membership": "Üyelik",
+    "manifesto": "Manifesto",
+    "privacy": "Gizlilik",
+    "terms": "Kullanım Şartları",
+    "kvkk": "KVKK"
+  },
+
+  "landing": {
+    "hero_eyebrow": "TÜRKİYE YATIRIM İSTİHBARATI",
+    "hero_title_line1": "Türkiye",
+    "hero_title_line2": "Yatırım İstihbaratı",
+    "hero_subtitle": "81 ilde gayrimenkul piyasası, mega projeler ve makro veri tek platformda. Habere yansımadan pozisyon alın.",
+    "hero_cta_primary": "Haritaya Git",
+    "hero_cta_secondary": "Mega Projeler",
+    "stats_listings": "İzlenen İlan",
+    "stats_mega": "Mega Proje Arşivi",
+    "stats_coverage": "Coğrafi Kapsam",
+    "stats_update": "Veri Güncellenme",
+    "coverage_value": "81 İl · 973 İlçe",
+    "update_value": "Aylık",
+
+    "fact_1_title": "Mahalle Granülerlik",
+    "fact_1_desc": "Endeksa il/ilçe seviyesinde durur. Tradia mahalleye iner — Bursa 62 mahalle ısı haritası, İstanbul 39 ilçe medyan.",
+
+    "fact_2_title": "Çoklu Kanal Cross-Validation",
+    "fact_2_desc": "CSB + İBB + Sahibinden + BBB + EKAP + TCMB + TÜİK. 3-4 paralel kanal aynı tezi doğruluyorsa kesinleşmiş.",
+
+    "fact_3_title": "%0 Maliyet · %100 Şeffaflık",
+    "fact_3_desc": "Endeksa ücretli abonelik. Tradia kullanıcısına ücretsiz. Formül + bug raporları + öz-eleştiri açık.",
+
+    "fact_4_title": "Mega Proje Erken Sinyal",
+    "fact_4_desc": "Cross-Hat Sprint 7 Arnavutköy tezi: GUCLU_POZITIF 4/4 hat. CSB resmi 2 ay sonra doğruladı — 272.61 hektar.",
+
+    "fact_5_title": "Çoklu Medya Denetimi",
+    "fact_5_desc": "Türk medyasında bir ilk. Aynı analistin video + yazı tutarlılığını otomatik ölçer.",
+
+    "cta_box_title": "Ücretsiz Şehir Raporu",
+    "cta_box_desc": "Tek bir şehir için Tradia analizi — mahalle ısı + mega proje + fiyat medyanı. PDF formatında, anında.",
+    "cta_box_button": "Raporu İste"
+  },
+
+  "newsletter": {
+    "list_title": "Tradia Bültenleri",
+    "list_subtitle": "Mahalle granülerlik. Çoklu medya denetimi. Mega plan radarı.",
+    "issue_label": "Sayı",
+    "published": "Yayında",
+    "draft": "Hazırlanıyor",
+    "planned": "Planlanan"
+  },
+
+  "manifesto": {
+    "title": "Veri kalitesi > Veri hacmi",
+    "subtitle": "Tradia, Türkiye yatırım istihbaratı için yeni bir standart kuruyor.",
+    "principle_1": "Endeksa il/ilçe verir. Tradia mahalle sinyal verir.",
+    "principle_2": "Bloomberg analist konuşturur. Tradia tutarlılığı ölçer.",
+    "principle_3": "Pencere içinde olmak, olayı yorumlamak değildir.",
+    "principle_4": "Tradia yanılınca düzeltir. Bu metodoloji omurgasıdır.",
+    "principle_5": "Türk yatırım istihbaratında bir gün önce yoktu. Şimdi rakipsiz."
+  },
+
+  "footer": {
+    "company": "Şirket",
+    "services": "Hizmetler",
+    "legal": "Yasal",
+    "contact": "İletişim",
+    "address_label": "Adres",
+    "address_value": "İstanbul, Türkiye",
+    "email": "info@tradiaturkey.com"
+  }
+}

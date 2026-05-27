@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tradia · Turkey Real Estate Intelligence</title>
+  <meta name="description" content="Turkey real estate intelligence for global investors. Neighborhood-level POI density, 81 provinces, mega project radar, multi-channel cross-validation. The depth Endeksa and REIDIN cannot reach.">
+  <link rel="canonical" href="https://tradiaturkey.com/en/">
+
+  <link rel="alternate" hreflang="tr" href="https://tradiaturkey.com/tr/">
+  <link rel="alternate" hreflang="en" href="https://tradiaturkey.com/en/">
+  <link rel="alternate" hreflang="ru" href="https://tradiaturkey.com/ru/">
+  <link rel="alternate" hreflang="de" href="https://tradiaturkey.com/de/">
+  <link rel="alternate" hreflang="ar" href="https://tradiaturkey.com/ar/">
+  <link rel="alternate" hreflang="fa" href="https://tradiaturkey.com/fa/">
+  <link rel="alternate" hreflang="zh" href="https://tradiaturkey.com/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://tradiaturkey.com/tr/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
+  <style>
+    /* identical to TR landing — share styling */
+    .lang-switch { position: absolute; top: 12px; right: 14px; display: flex; gap: 4px; align-items: center; z-index: 100; }
+    .lang-switch a, .lang-switch span { padding: 4px 8px; font-family: 'JetBrains Mono'; font-size: 11px; text-transform: uppercase; border-radius: 3px; text-decoration: none; transition: all 0.15s; }
+    .lang-switch .active { background: var(--cta); color: #fff; font-weight: 700; }
+    .lang-switch .live { color: var(--gold); }
+    .lang-switch .live:hover { background: rgba(245,158,11,0.1); }
+    .lang-switch .soon { color: var(--txt-faint); cursor: not-allowed; opacity: 0.5; }
+
+    .l-hero { padding: 80px 24px 60px; text-align: center; background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(220,38,38,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 50% 80%, rgba(245,158,11,0.06) 0%, transparent 70%), var(--bg); }
+    .l-hero h1 { font-size: clamp(2.5rem, 6vw, 4.5rem); margin-bottom: 1.2rem; }
+    .l-hero .lede { font-size: 1.15rem; color: var(--txt-muted); max-width: 720px; margin: 0 auto 28px; line-height: 1.7; }
+    .l-cta-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 32px; }
+    .l-cta { padding: 14px 28px; border-radius: 6px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: 0.04em; text-decoration: none; transition: all 0.2s; }
+    .l-cta.primary { background: var(--cta); color: #fff; }
+    .l-cta.primary:hover { background: #b8002a; transform: translateY(-2px); }
+    .l-cta.ghost { border: 1px solid var(--border-2); color: var(--txt); }
+    .l-cta.ghost:hover { background: rgba(255,255,255,0.04); border-color: var(--gold); color: var(--gold); }
+    .l-facts { max-width: 1100px; margin: 60px auto; padding: 0 24px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    .l-fact { background: var(--bg-card); border: 1px solid var(--border); padding: 22px 18px; border-radius: 8px; }
+    .l-fact .big { font-family: 'Space Grotesk'; font-weight: 900; font-size: 2.2rem; background: linear-gradient(135deg, var(--gold), var(--cta)); -webkit-background-clip: text; background-clip: text; color: transparent; line-height: 1; }
+    .l-fact .lbl { font-family: 'JetBrains Mono'; font-size: 10px; color: var(--txt-muted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 10px; }
+    .l-fact .det { font-size: 13px; color: var(--txt-faint); margin-top: 6px; line-height: 1.4; }
+    .l-features { max-width: 1100px; margin: 80px auto; padding: 0 24px; }
+    .l-features h2 { text-align: center; margin-bottom: 8px; }
+    .l-features .sub { text-align: center; color: var(--txt-muted); max-width: 600px; margin: 0 auto 40px; }
+    .l-grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+    .l-card { background: var(--bg-card); border: 1px solid var(--border); padding: 22px; border-radius: 8px; transition: all 0.2s; }
+    .l-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+    .l-card .ic { font-size: 28px; margin-bottom: 12px; }
+    .l-card h3 { font-size: 1.15rem; margin-bottom: 8px; }
+    .l-card p { color: var(--txt-muted); font-size: 14px; line-height: 1.6; }
+    .l-card a { display: inline-block; margin-top: 12px; font-family: 'JetBrains Mono'; font-size: 11px; color: var(--gold); text-decoration: none; text-transform: uppercase; letter-spacing: 0.1em; }
+    .l-card a:hover { color: var(--cta); }
+    .l-lead { max-width: 720px; margin: 80px auto; padding: 30px; text-align: center; background: linear-gradient(135deg, rgba(220,38,38,0.08), rgba(245,158,11,0.04)); border: 1px solid rgba(220,38,38,0.2); border-radius: 12px; }
+    .l-lead h2 { color: var(--gold); }
+    .l-lead p { color: #fef3c7; }
+    .l-lead form { display: flex; gap: 8px; max-width: 480px; margin: 24px auto 8px; flex-wrap: wrap; }
+    .l-lead input, .l-lead select { flex: 1; min-width: 220px; padding: 12px 14px; background: var(--bg-2); border: 1px solid var(--border); border-radius: 5px; color: #fff; font-family: 'Inter'; font-size: 14px; }
+    .l-lead button { padding: 12px 20px; background: var(--cta); color: #fff; border: none; border-radius: 5px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 13px; cursor: pointer; text-transform: uppercase; letter-spacing: 0.04em; }
+    .l-lead .ok-msg { color: var(--up); font-family: 'JetBrains Mono'; font-size: 12px; margin-top: 12px; display: none; }
+    .l-lead .ok-msg.show { display: block; }
+    .l-lead .kvkk { font-size: 11px; color: var(--txt-faint); margin-top: 12px; }
+  </style>
+</head>
+<body>
+
+<nav class="lang-switch">
+  <a class="live" href="../tr/" title="Türkçe">TR</a>
+  <span class="active">EN</span>
+  <span class="soon" title="Phase 2 — Coming">RU</span>
+  <span class="soon" title="Phase 3 — Coming">DE</span>
+  <span class="soon" title="Phase 2 — Coming">AR</span>
+  <span class="soon" title="Phase 3 — Coming">FA</span>
+  <span class="soon" title="Phase 4 — Coming">ZH</span>
+</nav>
+
+<header class="t-header" style="position:relative">
+  <div class="t-header-inner">
+    <div class="t-logo">
+      <div class="t-logo-dot">T</div>
+      <span class="t-logo-text">TRADIA</span>
+      <span class="t-logo-tag">English</span>
+    </div>
+    <nav class="t-nav">
+      <a href="../index.html">Home (legacy)</a>
+      <a href="../map/">Maps</a>
+      <a href="../bultenler/">Newsletters</a>
+      <a href="../manifesto.html">Manifesto</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="l-hero">
+  <span class="t-eyebrow">Turkey Real Estate Intelligence · Independent · Automated · Evidence-based</span>
+  <h1>Turkey's silent<br><span class="grad-text">market movements.</span></h1>
+  <p class="lede">For global investors evaluating Turkish real estate: 81 provinces, 973 districts, neighborhood-level POI density, mega project radar, multi-channel cross-validation — in a single platform. Endeksa and REIDIN stop at the district level; Tradia goes down to the neighborhood.</p>
+  <div class="l-cta-row">
+    <a href="../map/" class="l-cta primary">🗺️ Open Map (Mudanya MVP)</a>
+    <a href="../bultenler/" class="l-cta ghost">📰 Newsletters</a>
+  </div>
+</section>
+
+<section class="l-facts">
+  <div class="l-fact"><div class="big">81</div><div class="lbl">Provinces Covered</div><div class="det">All of Turkey + 9 government channels</div></div>
+  <div class="l-fact"><div class="big">139,989</div><div class="lbl">POIs Indexed</div><div class="det">OpenStreetMap, neighborhood-aggregated</div></div>
+  <div class="l-fact"><div class="big">8,480</div><div class="lbl">Signal Pool</div><div class="det">Cross-Hat 4-channel synthesis</div></div>
+  <div class="l-fact"><div class="big">62</div><div class="lbl">Bursa Neighborhoods</div><div class="det">5-sprint heat map analysis</div></div>
+  <div class="l-fact"><div class="big">$0</div><div class="lbl">User Cost</div><div class="det">Free city report PDF</div></div>
+</section>
+
+<section class="l-features">
+  <h2>Three-Layer Data Discipline</h2>
+  <p class="sub">Not a single-channel index — official planning + macro framework + market pricing read in parallel.</p>
+  <div class="l-grid3">
+    <div class="l-card">
+      <div class="ic">🏛️</div>
+      <h3>Official Planning</h3>
+      <p>180 PDF council resolutions, 5 provincial Ministry of Environment & Urbanism channels (Istanbul/Hatay/Bursa/Ankara/Izmir), TOKİ housing announcements, EKAP tender archive. No thesis is published until cross-validated by government records.</p>
+      <a href="../bultenler/sayi-3-v6-istanbul-arnavutkoy.html">Issue 3 · Arnavutköy 272.61 ha →</a>
+    </div>
+    <div class="l-card">
+      <div class="ic">📊</div>
+      <h3>Macro Framework</h3>
+      <p>Turkish Central Bank housing price indices (new/existing), TÜİK national statistics, expectations survey. Turkey's macro pulse in one table.</p>
+      <a href="../bultenler/sayi-1-v2-analist-denetimi.html">Multi-Media Analyst Audit →</a>
+    </div>
+    <div class="l-card">
+      <div class="ic">🏙️</div>
+      <h3>Market Granularity</h3>
+      <p>104,428 Sahibinden listings master, OSM POI density, neighborhood-level livability score. The depth Endeksa and REIDIN cannot reach.</p>
+      <a href="../bultenler/sayi-2-v6-bursa-mahalle-isi.html">Issue 2 · Bursa Neighborhood Heat →</a>
+    </div>
+  </div>
+</section>
+
+<section class="l-lead">
+  <h2>Free City Report</h2>
+  <p>Choose a province — receive a 12-page Tradia analysis PDF: neighborhood scores, mega project impact, price trajectory. Delivered to your inbox.</p>
+  <form onsubmit="submitLead(event)">
+    <input type="email" id="lead-email" required placeholder="example@email.com">
+    <select id="lead-il">
+      <option value="">— Select province —</option>
+      <option value="istanbul">Istanbul</option>
+      <option value="bursa">Bursa</option>
+      <option value="ankara">Ankara</option>
+      <option value="izmir">Izmir</option>
+      <option value="hatay">Hatay</option>
+      <option value="antalya">Antalya</option>
+      <option value="diger">Other</option>
+    </select>
+    <button type="submit">📄 Request Report</button>
+  </form>
+  <div class="ok-msg" id="lead-ok">✓ Request received. Report will be delivered within 24 hours.</div>
+  <div class="kvkk">ⓘ GDPR/KVKK: Your email is used only to deliver the report. No spam. Not shared with third parties.</div>
+</section>
+
+</main>
+
+<footer class="t-footer">
+  <p>© 2026 Tradia · Turkey Investment Intelligence</p>
+  <p style="margin-top:8px">
+    <a href="../map/">Maps</a> ·
+    <a href="../bultenler/">Newsletters</a> ·
+    <a href="../manifesto.html">Manifesto</a> ·
+    <a href="../tr/">Türkçe</a>
+  </p>
+  <p style="margin-top:14px; font-size:11px;" class="muted">
+    Data sources: BBB council · TOKİ · CSB 5 provinces · EKAP · CBRT · TÜİK · OSM · Sahibinden master
+  </p>
+</footer>
+
+<script>
+function submitLead(e) {
+  e.preventDefault();
+  const lead = {
+    tip: 'city_report',
+    email: document.getElementById('lead-email').value,
+    il: document.getElementById('lead-il').value || 'unspecified',
+    locale: 'en',
+    ts: new Date().toISOString(),
+  };
+  console.log('[LEAD]', lead);
+  document.getElementById('lead-ok').classList.add('show');
+  e.target.reset();
+  setTimeout(() => document.getElementById('lead-ok').classList.remove('show'), 6000);
+}
+</script>
+
+</body>
+</html>
