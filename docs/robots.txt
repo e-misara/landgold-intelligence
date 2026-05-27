@@ -1,6 +1,10 @@
+# Tradia Turkey — robots.txt
 User-agent: *
 Allow: /
-Disallow: /admin/
 Disallow: /api/
 
+# Sitemap
 Sitemap: https://tradiaturkey.com/sitemap.xml
+
+# Crawl delay (yumuşak)
+Crawl-delay: 1

@@ -1,0 +1,31 @@
+# Tradia Lead Backend — Cloudflare Worker config
+# Deploy: cd workers && wrangler deploy
+# İlk kurulum: ../DEPLOY.md
+
+name = "tradia-lead-handler"
+main = "lead-handler.js"
+compatibility_date = "2026-05-27"
+workers_dev = false
+
+# Production route
+[[routes]]
+pattern = "tradiaturkey.com/api/*"
+zone_name = "tradiaturkey.com"
+
+# D1 binding
+[[d1_databases]]
+binding = "DB"
+database_name = "tradia-leads"
+database_id = "PASTE_AFTER_wrangler_d1_create"
+
+# Cron trigger (saatlik temizlik)
+[triggers]
+crons = ["0 * * * *"]
+
+# Secrets (wrangler secret put ile set edilir)
+# wrangler secret put NOTIFY_WEBHOOK    → Telegram bot URL veya Slack webhook
+# wrangler secret put ADMIN_KEY         → /api/stats erişimi
+# wrangler secret put HASH_SALT         → IP hash salt (random string)
+
+# Limits (free tier)
+# 100.000 req/gün ücretsiz · D1 5 GB depolama · 5M okuma/ay

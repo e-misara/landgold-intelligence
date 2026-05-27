@@ -19,6 +19,59 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <!-- Open Graph + Twitter Card -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Tradia">
+  <meta property="og:url" content="https://tradiaturkey.com/tr/">
+  <meta property="og:title" content="Tradia — Türkiye Yatırım İstihbaratı">
+  <meta property="og:description" content="81 ilde gayrimenkul piyasası, mega projeler ve makro veri tek platformda. Mahalle granülarite + cross-validation.">
+  <meta property="og:image" content="https://tradiaturkey.com/og-image.jpg">
+  <meta property="og:locale" content="tr_TR">
+  <meta property="og:locale:alternate" content="tr_TR">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tradia — Türkiye Yatırım İstihbaratı">
+  <meta name="twitter:description" content="81 ilde gayrimenkul piyasası, mega projeler ve makro veri tek platformda. Mahalle granülarite + cross-validation.">
+  <meta name="twitter:image" content="https://tradiaturkey.com/og-image.jpg">
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://tradiaturkey.com/#org",
+        "name": "Tradia",
+        "alternateName": "Tradia Türkiye Yatırım İstihbaratı",
+        "url": "https://tradiaturkey.com",
+        "logo": "https://tradiaturkey.com/favicon.svg",
+        "description": "81 ilde gayrimenkul piyasası, mega projeler ve makro veri tek platformda. Mahalle granülarite + cross-validation.",
+        "areaServed": { "@type": "Country", "name": "Turkey" },
+        "founder": { "@type": "Person", "name": "Ahmet ÇOLAK" }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://tradiaturkey.com/#site",
+        "url": "https://tradiaturkey.com/",
+        "name": "Tradia",
+        "publisher": { "@id": "https://tradiaturkey.com/#org" },
+        "inLanguage": ["tr-TR", "en-US"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "Tradia Maps",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://tradiaturkey.com/map/",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Türkiye gayrimenkul piyasası için mahalle seviyesinde yaşanabilirlik skoru — 139.989 POI analiz edildi."
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="../bultenler/_tradia_tema.css">
   <style>
     /* Dil switcher */

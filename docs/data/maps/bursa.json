@@ -1,0 +1,295 @@
+{
+  "il": "Bursa",
+  "merkez": [
+    40.1828,
+    29.0606
+  ],
+  "zoom_default": 10,
+  "kaynak": {
+    "poi": "OpenStreetMap (Overpass API)",
+    "sinir": "OSM idari sınırlar GeoJSON",
+    "v2_formul": "v2_sqrt = sqrt(v1_raw) * 4 (Sprint 25)",
+    "toplam_poi_turkiye": 139989,
+    "veri_tarihi": "2026-05",
+    "kapsam_notu": "Mudanya 4 mahalle aktif. Diğer 16 ilçe POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot bekleniyor."
+  },
+  "ilceler": {
+    "Osmangazi": {
+      "merkez": [
+        40.1828,
+        29.0606
+      ],
+      "durum": "veri_beklemede",
+      "not": "Osmangazi mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Yıldırım": {
+      "merkez": [
+        40.19,
+        29.1183
+      ],
+      "durum": "veri_beklemede",
+      "not": "Yıldırım mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Nilüfer": {
+      "merkez": [
+        40.2167,
+        28.9856
+      ],
+      "durum": "veri_beklemede",
+      "not": "Nilüfer mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Gemlik": {
+      "merkez": [
+        40.4314,
+        29.1581
+      ],
+      "durum": "veri_beklemede",
+      "not": "Gemlik mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Karacabey": {
+      "merkez": [
+        40.2127,
+        28.3617
+      ],
+      "durum": "veri_beklemede",
+      "not": "Karacabey mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Mustafakemalpaşa": {
+      "merkez": [
+        40.0353,
+        28.4106
+      ],
+      "durum": "veri_beklemede",
+      "not": "Mustafakemalpaşa mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "İnegöl": {
+      "merkez": [
+        40.078,
+        29.5103
+      ],
+      "durum": "veri_beklemede",
+      "not": "İnegöl mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Kestel": {
+      "merkez": [
+        40.1986,
+        29.2128
+      ],
+      "durum": "veri_beklemede",
+      "not": "Kestel mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Gürsu": {
+      "merkez": [
+        40.2233,
+        29.1839
+      ],
+      "durum": "veri_beklemede",
+      "not": "Gürsu mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Orhangazi": {
+      "merkez": [
+        40.4881,
+        29.3092
+      ],
+      "durum": "veri_beklemede",
+      "not": "Orhangazi mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "İznik": {
+      "merkez": [
+        40.4297,
+        29.7197
+      ],
+      "durum": "veri_beklemede",
+      "not": "İznik mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Yenişehir": {
+      "merkez": [
+        40.2611,
+        29.6531
+      ],
+      "durum": "veri_beklemede",
+      "not": "Yenişehir mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Orhaneli": {
+      "merkez": [
+        39.905,
+        28.9831
+      ],
+      "durum": "veri_beklemede",
+      "not": "Orhaneli mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Keles": {
+      "merkez": [
+        39.9136,
+        29.2406
+      ],
+      "durum": "veri_beklemede",
+      "not": "Keles mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Büyükorhan": {
+      "merkez": [
+        39.7811,
+        28.9094
+      ],
+      "durum": "veri_beklemede",
+      "not": "Büyükorhan mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    },
+    "Harmancık": {
+      "merkez": [
+        39.6864,
+        29.1697
+      ],
+      "durum": "veri_beklemede",
+      "not": "Harmancık mahalle POI eşleştirme CC-Basın Sprint 25 il/ilçe pivot çıkışında aktivize edilecek."
+    }
+  },
+  "mahalleler": [
+    {
+      "ad": "Mudanya Merkez",
+      "lat": 40.3766,
+      "lon": 28.8855,
+      "toplam_poi": 97,
+      "skor": 732,
+      "seviye": "Mükemmel",
+      "gruplar": {
+        "yeme_icme": 37,
+        "saglik": 31,
+        "alisveris": 13,
+        "ulasim": 8,
+        "egitim": 0,
+        "sosyal": 1,
+        "finans": 4,
+        "konaklama": 3
+      },
+      "kategoriler": {
+        "hotel": 3,
+        "fuel": 3,
+        "cafe": 13,
+        "restaurant": 19,
+        "station": 1,
+        "supermarket": 11,
+        "attraction": 1,
+        "bus_station": 4,
+        "pharmacy": 30,
+        "clinic": 1,
+        "bank": 4,
+        "fast_food": 4,
+        "hairdresser": 1,
+        "convenience": 1,
+        "bar": 1
+      },
+      "aciklama": "Mudanya Merkez — Bursa/Mudanya. Bu mahallede 37 restoran/kafe, 13 market/marketlet, 0 okul/anaokulu ve 31 sağlık noktası (eczane/klinik) bulunuyor. Ulaşım: 8 durak/istasyon. Finans: 4 banka/ATM. Toplam 97 POI — Yaşanabilirlik: **Mükemmel** (skor 732).",
+      "ilce": "Mudanya"
+    },
+    {
+      "ad": "Çağrışan Mahallesi",
+      "lat": 40.3027,
+      "lon": 28.9408,
+      "toplam_poi": 8,
+      "skor": 74,
+      "seviye": "İyi",
+      "gruplar": {
+        "yeme_icme": 3,
+        "saglik": 4,
+        "alisveris": 1,
+        "ulasim": 0,
+        "egitim": 0,
+        "sosyal": 0,
+        "finans": 0,
+        "konaklama": 0
+      },
+      "kategoriler": {
+        "restaurant": 3,
+        "supermarket": 1,
+        "pharmacy": 4
+      },
+      "aciklama": "Çağrışan Mahallesi — Bursa/Mudanya. Bu mahallede 3 restoran/kafe, 1 market/marketlet, 0 okul/anaokulu ve 4 sağlık noktası (eczane/klinik) bulunuyor. Ulaşım: 0 durak/istasyon. Finans: 0 banka/ATM. Toplam 8 POI — Yaşanabilirlik: **İyi** (skor 74).",
+      "ilce": "Mudanya"
+    },
+    {
+      "ad": "Eğerce Mahallesi",
+      "lat": 40.3549,
+      "lon": 28.6226,
+      "toplam_poi": 4,
+      "skor": 15,
+      "seviye": "Az yaşanabilir",
+      "gruplar": {
+        "yeme_icme": 1,
+        "saglik": 0,
+        "alisveris": 2,
+        "ulasim": 0,
+        "egitim": 0,
+        "sosyal": 0,
+        "finans": 0,
+        "konaklama": 1
+      },
+      "kategoriler": {
+        "convenience": 2,
+        "fast_food": 1,
+        "hotel": 1
+      },
+      "aciklama": "Eğerce Mahallesi — Bursa/Mudanya. Bu mahallede 1 restoran/kafe, 2 market/marketlet, 0 okul/anaokulu ve 0 sağlık noktası (eczane/klinik) bulunuyor. Ulaşım: 0 durak/istasyon. Finans: 0 banka/ATM. Toplam 4 POI — Yaşanabilirlik: **Az yaşanabilir** (skor 15).",
+      "ilce": "Mudanya"
+    },
+    {
+      "ad": "Mesudiye Mahallesi",
+      "lat": 40.365,
+      "lon": 28.91,
+      "toplam_poi": 2,
+      "skor": 10,
+      "seviye": "Az yaşanabilir",
+      "gruplar": {
+        "yeme_icme": 0,
+        "saglik": 0,
+        "alisveris": 2,
+        "ulasim": 0,
+        "egitim": 0,
+        "sosyal": 0,
+        "finans": 0,
+        "konaklama": 0
+      },
+      "kategoriler": {
+        "convenience": 2
+      },
+      "aciklama": "Mesudiye Mahallesi — Bursa/Mudanya. Bu mahallede 0 restoran/kafe, 2 market/marketlet, 0 okul/anaokulu ve 0 sağlık noktası (eczane/klinik) bulunuyor. Ulaşım: 0 durak/istasyon. Finans: 0 banka/ATM. Toplam 2 POI — Yaşanabilirlik: **Az yaşanabilir** (skor 10).",
+      "ilce": "Mudanya"
+    }
+  ],
+  "renk_kod": [
+    {
+      "min": 80,
+      "max": 9999,
+      "renk": "#065f46",
+      "etiket": "Mükemmel",
+      "marker_class": "best-dark"
+    },
+    {
+      "min": 40,
+      "max": 80,
+      "renk": "#10b981",
+      "etiket": "İyi",
+      "marker_class": "best"
+    },
+    {
+      "min": 15,
+      "max": 40,
+      "renk": "#f59e0b",
+      "etiket": "Orta",
+      "marker_class": "med"
+    },
+    {
+      "min": 1,
+      "max": 15,
+      "renk": "#f97316",
+      "etiket": "Az",
+      "marker_class": "low"
+    },
+    {
+      "min": 0,
+      "max": 1,
+      "renk": "#6b7280",
+      "etiket": "Veri yok",
+      "marker_class": "none"
+    }
+  ]
+}

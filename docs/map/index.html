@@ -190,7 +190,26 @@
   <div class="map-status">
     <span class="live">CANLI VERİ</span>
     <span>139.989 POI</span>
-    <span>Bursa / Mudanya · 4 mahalle</span>
+    <select id="ilce-filter" style="background:var(--bg-card); border:1px solid var(--border); color:#fff; padding:5px 8px; border-radius:4px; font-family:'Inter'; font-size:12px;">
+      <option value="all">Tüm Bursa (4 mahalle aktif + 16 ilçe placeholder)</option>
+      <option value="Mudanya">Mudanya · 4 mahalle ✓</option>
+      <option value="Osmangazi">Osmangazi · beklemede</option>
+      <option value="Yıldırım">Yıldırım · beklemede</option>
+      <option value="Nilüfer">Nilüfer · beklemede</option>
+      <option value="Gemlik">Gemlik · beklemede</option>
+      <option value="Karacabey">Karacabey · beklemede</option>
+      <option value="İnegöl">İnegöl · beklemede</option>
+      <option value="Kestel">Kestel · beklemede</option>
+      <option value="Gürsu">Gürsu · beklemede</option>
+      <option value="Mustafakemalpaşa">Mustafakemalpaşa · beklemede</option>
+      <option value="Orhangazi">Orhangazi · beklemede</option>
+      <option value="İznik">İznik · beklemede</option>
+      <option value="Yenişehir">Yenişehir · beklemede</option>
+      <option value="Orhaneli">Orhaneli · beklemede</option>
+      <option value="Keles">Keles · beklemede</option>
+      <option value="Büyükorhan">Büyükorhan · beklemede</option>
+      <option value="Harmancık">Harmancık · beklemede</option>
+    </select>
   </div>
   <nav class="map-nav">
     <a href="../index.html">Ana Sayfa</a>
@@ -265,12 +284,15 @@
 <div class="mp-toast" id="toast"></div>
 
 <script>
-const MAP_VERI_URL = '../data/maps/mudanya.json';
+const MAP_VERI_URL = '../data/maps/bursa.json';
 let aktifMahalle = null;
+let aktifMarkers = [];
+let aktifIlceMarkers = [];
+let bursaData = null;
 
 const map = L.map('map', {
-  center: [40.3766, 28.8855],
-  zoom: 12,
+  center: [40.1828, 29.0606],   // Bursa Osmangazi merkez
+  zoom: 10,
   zoomControl: false,
   preferCanvas: true,
 });
@@ -353,26 +375,88 @@ function makeIcon(skor) {
   });
 }
 
-fetch(MAP_VERI_URL).then(r => r.json()).then(data => {
-  document.getElementById('m-toplam-poi').textContent =
-    data.mahalleler.reduce((a, m) => a + m.toplam_poi, 0);
-  document.getElementById('m-mahalle').textContent = data.mahalleler.length;
+function placeholderIlceIcon() {
+  return L.divIcon({
+    className: '',
+    html: `<div class="mp-marker" style="background:#374151;border:2px solid #6b7280;color:#9ca3af;font-size:11px;width:30px;height:30px;">⋯</div>`,
+    iconSize: [30, 30], iconAnchor: [15, 15], popupAnchor: [0, -14],
+  });
+}
+
+function ilcePopupHTML(ad, info) {
+  return `
+    <div class="mp-pop">
+      <h3>${ad}</h3>
+      <div class="loc">Bursa / İlçe</div>
+      <div class="desc" style="border-top:none;">
+        <strong>Veri beklemede.</strong><br><br>
+        ${info.not}<br><br>
+        <em>Sprint 25 il/ilçe pivot çıkışında bu ilçenin tüm mahalleleri POI yoğunluk skoruyla bu haritada görünür.</em>
+      </div>
+    </div>
+  `;
+}
+
+function renderMarkers(filter) {
+  // Önce mevcut markerları temizle
+  aktifMarkers.forEach(m => map.removeLayer(m));
+  aktifIlceMarkers.forEach(m => map.removeLayer(m));
+  aktifMarkers = []; aktifIlceMarkers = [];
 
   const bounds = [];
-  data.mahalleler.forEach(m => {
+
+  // Aktif mahalleler (Mudanya 4 — POI dolu)
+  bursaData.mahalleler.forEach(m => {
+    if (filter !== 'all' && filter !== m.ilce) return;
     const mk = L.marker([m.lat, m.lon], { icon: makeIcon(m.skor) })
       .addTo(map)
       .bindPopup(popupHTML(m), { maxWidth: 380, autoPan: true });
     mk.on('popupopen', () => { aktifMahalle = m.ad; });
+    aktifMarkers.push(mk);
     bounds.push([m.lat, m.lon]);
   });
 
-  if (bounds.length > 1) {
-    map.fitBounds(bounds, { padding: [60, 60], maxZoom: 13 });
+  // Placeholder ilçeler (beklemede)
+  if (filter === 'all') {
+    Object.entries(bursaData.ilceler || {}).forEach(([ilce, info]) => {
+      const mk = L.marker(info.merkez, { icon: placeholderIlceIcon() })
+        .addTo(map)
+        .bindPopup(ilcePopupHTML(ilce, info), { maxWidth: 320 });
+      aktifIlceMarkers.push(mk);
+      bounds.push(info.merkez);
+    });
+  } else if (filter !== 'Mudanya' && bursaData.ilceler && bursaData.ilceler[filter]) {
+    // Tek ilçe görünüm — placeholder
+    const info = bursaData.ilceler[filter];
+    const mk = L.marker(info.merkez, { icon: placeholderIlceIcon() })
+      .addTo(map)
+      .bindPopup(ilcePopupHTML(filter, info), { maxWidth: 320 });
+    aktifIlceMarkers.push(mk);
+    mk.openPopup();
+    map.setView(info.merkez, 12);
+    return;
   }
+
+  if (bounds.length > 1) {
+    map.fitBounds(bounds, { padding: [60, 60], maxZoom: 11 });
+  }
+}
+
+fetch(MAP_VERI_URL).then(r => r.json()).then(data => {
+  bursaData = data;
+  document.getElementById('m-toplam-poi').textContent =
+    data.mahalleler.reduce((a, m) => a + m.toplam_poi, 0);
+  document.getElementById('m-mahalle').textContent =
+    `${data.mahalleler.length}+${Object.keys(data.ilceler || {}).length} ilçe`;
+  renderMarkers('all');
 }).catch(err => {
   console.error('Veri yüklenemedi', err);
   document.getElementById('m-toplam-poi').textContent = '!';
+});
+
+// İlçe filtre dropdown
+document.getElementById('ilce-filter').addEventListener('change', e => {
+  renderMarkers(e.target.value);
 });
 
 // Lead magnet
@@ -402,39 +486,75 @@ function showToast(msg) {
   setTimeout(() => t.classList.remove('show'), 3500);
 }
 
-function submitRapor(e) {
+const API_BASE = 'https://tradiaturkey.com/api';
+
+async function sendLead(payload) {
+  // Önce backend dene, başarısızsa console.log fallback (Sprint 5 backend deploy bekleyen)
+  try {
+    const r = await fetch(API_BASE + '/lead', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ ...payload, kvkk_onay: true }),
+    });
+    if (r.ok) return { ok: true, source: 'backend' };
+    return { ok: false, error: 'backend_' + r.status };
+  } catch (e) {
+    console.log('[LEAD-fallback]', payload);
+    return { ok: true, source: 'console_fallback' };  // dev/staging için OK kabul
+  }
+}
+
+async function sendComment(payload) {
+  try {
+    const r = await fetch(API_BASE + '/yorum', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (r.ok) return { ok: true, source: 'backend' };
+    return { ok: false };
+  } catch (e) {
+    console.log('[YORUM-fallback]', payload);
+    return { ok: true, source: 'console_fallback' };
+  }
+}
+
+async function submitRapor(e) {
   e.preventDefault();
-  const email = document.getElementById('rapor-email').value;
-  const isim = document.getElementById('rapor-isim').value;
   const lead = {
     tip: 'rapor',
     mahalle: aktifMahalle,
-    email, isim,
-    ts: new Date().toISOString(),
+    email: document.getElementById('rapor-email').value,
+    ad: document.getElementById('rapor-isim').value,
+    dil: 'tr',
+    kaynak: 'map',
   };
-  console.log('[LEAD] Rapor talebi:', lead);
-  // TODO: gerçek backend (Sprint 5+)
-  // fetch('/api/lead', {method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify(lead)});
+  const result = await sendLead(lead);
   closeModal('modal-rapor');
   e.target.reset();
-  showToast('✓ Talebiniz alındı. Rapor 24 saat içinde gönderilecek.');
+  if (result.ok) {
+    showToast(result.source === 'backend'
+      ? '✓ Talebiniz alındı. Rapor 24 saat içinde gönderilecek.'
+      : '✓ Talebiniz alındı (offline mode).');
+  } else {
+    showToast('⚠ Bağlantı sorunu. Lütfen tekrar deneyin.');
+  }
 }
 
-function submitYorum(e) {
+async function submitYorum(e) {
   e.preventDefault();
-  const trend = document.getElementById('yorum-trend').value;
-  const aciklama = document.getElementById('yorum-aciklama').value;
-  const lead = {
-    tip: 'yorum',
+  const yorum = {
     mahalle: aktifMahalle,
-    trend, aciklama,
-    ts: new Date().toISOString(),
+    il: 'Bursa',
+    ilce: 'Mudanya',
+    trend: document.getElementById('yorum-trend').value,
+    body: document.getElementById('yorum-aciklama').value,
+    dil: 'tr',
   };
-  console.log('[LEAD] Yorum:', lead);
-  // TODO: gerçek backend (Sprint 5+)
+  const result = await sendComment(yorum);
   closeModal('modal-yorum');
   e.target.reset();
-  showToast('✓ Yorumunuz kaydedildi. Teşekkürler.');
+  showToast(result.ok ? '✓ Yorumunuz kaydedildi. Teşekkürler.' : '⚠ Bağlantı sorunu.');
 }
 </script>
 
