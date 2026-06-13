@@ -1,0 +1,42 @@
+name: İhale DSİ Haftalık (CC-İhale)
+
+on:
+  schedule:
+    # Salı 06:50 UTC = 09:50 TR — DSİ ihale liste (sulama/baraj altyapı)
+    - cron: "50 6 * * 2"
+  workflow_dispatch:        # V16 SERT POC manuel test
+
+jobs:
+  dsi:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: DSİ ihale çek
+        run: |
+          mkdir -p data logs
+          python3 scripts/dsi_ihale.py 2>&1 | tee logs/dsi_ihale_$(date +%F).log
+
+      - name: Audit + log commit
+        run: |
+          git config user.name  "tradia-ihale-bot"
+          git config user.email "ihale-bot@tradiaturkey.com"
+          git add -f data/dsi_ihale.json logs/dsi_ihale_*.log 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok"
+            exit 0
+          fi
+          git commit -m "ihale-dsi: $(date +%F) haftalık bulut tetik [skip ci]"
+          git push

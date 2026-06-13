@@ -1,0 +1,45 @@
+name: İhale RG Günlük (CC-İhale)
+
+on:
+  schedule:
+    # 06:30 UTC = 09:30 TR — Resmî Gazete günlük ihale ilanları
+    - cron: "30 6 * * *"
+  workflow_dispatch:        # V16 SERT POC manuel test
+
+jobs:
+  rg:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur (pypdf)
+        run: pip install pypdf>=4.0.0
+
+      - name: RG ihale günlük çek
+        run: |
+          mkdir -p data logs
+          python3 scripts/rg_ihale_gunluk.py 2>&1 | tee logs/rg_ihale_$(date +%F).log
+
+      - name: Audit + log commit
+        run: |
+          git config user.name  "tradia-ihale-bot"
+          git config user.email "ihale-bot@tradiaturkey.com"
+          git add -f data/rg_ihale_gunluk.jsonl data/rg_gun_ozet.json logs/rg_ihale_*.log 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok"
+            exit 0
+          fi
+          git commit -m "ihale-rg: $(date +%F) günlük bulut tetik [skip ci]"
+          git push

@@ -1,0 +1,42 @@
+name: İhale CSB Haftalık (CC-İhale)
+
+on:
+  schedule:
+    # Pazartesi 06:45 UTC = 09:45 TR — CSB e-Devlet 540 detay harvest
+    - cron: "45 6 * * 1"
+  workflow_dispatch:        # V16 SERT POC manuel test
+
+jobs:
+  csb:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: CSB e-Devlet harvest
+        run: |
+          mkdir -p data logs
+          python3 scripts/csb_harvest.py 2>&1 | tee logs/csb_harvest_$(date +%F).log
+
+      - name: Audit + log commit
+        run: |
+          git config user.name  "tradia-ihale-bot"
+          git config user.email "ihale-bot@tradiaturkey.com"
+          git add -f data/csb_540_harvest.json logs/csb_harvest_*.log 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok"
+            exit 0
+          fi
+          git commit -m "ihale-csb: $(date +%F) haftalık bulut tetik [skip ci]"
+          git push
