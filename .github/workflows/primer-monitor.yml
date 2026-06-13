@@ -1,0 +1,43 @@
+name: Primer Monitor (CC-Basın)
+
+on:
+  schedule:
+    # 06:00 UTC = 09:00 TR — Bursa BBB + İBB CKAN + ÇŞB + BDDK günlük
+    - cron: "0 6 * * *"
+  workflow_dispatch:        # Manuel test — V16 SERT proof of concept
+
+jobs:
+  primer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Primer monitör çalıştır
+        run: |
+          mkdir -p data/audit
+          mkdir -p logs
+          python3 scripts/primer_monitor_gunluk.py 2>&1 | tee logs/primer_$(date +%F).log
+
+      - name: Audit dosyasını ve log'u commit et
+        run: |
+          git config user.name  "tradia-primer-bot"
+          git config user.email "primer-bot@tradiaturkey.com"
+          git add -f data/audit/primer_monitor_*.json logs/primer_*.log 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok, commit atlanıyor"
+            exit 0
+          fi
+          git commit -m "primer: $(date +%F) bulut tetik [skip ci]"
+          git push
