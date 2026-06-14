@@ -1,0 +1,40 @@
+name: Valilik Pulse Büyükşehir (CC-Basın B94 — 23 il günlük)
+
+# Tier 2: kalan büyükşehir (Adana, İzmir, Aydın, vs.)
+# Metro tier'dan ayrı çalışır — günde 1 kez sabah
+
+on:
+  schedule:
+    - cron: "30 6 * * *"   # 09:30 TR
+  workflow_dispatch:
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Valilik büyükşehir tier çalıştır
+        run: python3 scripts/valilik_pulse_81il.py buyuksehir
+
+      - name: Havuz + audit commit
+        run: |
+          git config user.name "tradia-basin-bot"
+          git config user.email "basin-bot@tradia.local"
+          git add data/havuz/valilik/ data/audit/valilik_pulse_buyuksehir_*.json
+          git diff --cached --quiet || (
+            git commit -m "valilik-buyuksehir: $(date -u +%FT%H:%MZ) [skip ci]"
+            git push
+          )

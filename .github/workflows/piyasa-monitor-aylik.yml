@@ -1,0 +1,40 @@
+name: Piyasa Monitor Aylık (CC-Basın B87 borç, anayasa v2.0)
+
+on:
+  schedule:
+    # Her ayın 1'inde 07:00 UTC = 10:00 TR (Faz-3 keşfi)
+    - cron: "0 7 1 * *"
+    # Ayın 15'inde de — orta-ay teyit
+    - cron: "0 7 15 * *"
+  workflow_dispatch:        # V16 SERT POC
+
+jobs:
+  piyasa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Piyasa monitör çalıştır
+        run: python3 scripts/piyasa_monitor_aylik.py
+
+      - name: Havuz + audit commit (bot)
+        run: |
+          git config user.name "tradia-basin-bot"
+          git config user.email "basin-bot@tradia.local"
+          git add data/havuz/piyasa/ data/audit/piyasa_monitor_*.json
+          git diff --cached --quiet || (
+            git commit -m "piyasa-monitor: $(date -u +%FT%H:%MZ) aylık [skip ci]"
+            git push
+          )

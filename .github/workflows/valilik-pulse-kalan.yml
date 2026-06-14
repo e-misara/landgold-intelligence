@@ -1,0 +1,40 @@
+name: Valilik Pulse Kalan (CC-Basın B94 — 51 il günlük batch)
+
+# Tier 3: kalan 51 il (orta-küçük şehirler) — sabah batch
+# Public repo → sınırsız dakika, 51 il tek run'da
+
+on:
+  schedule:
+    - cron: "45 6 * * *"   # 09:45 TR
+  workflow_dispatch:
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Valilik kalan tier çalıştır
+        run: python3 scripts/valilik_pulse_81il.py kalan
+
+      - name: Havuz + audit commit
+        run: |
+          git config user.name "tradia-basin-bot"
+          git config user.email "basin-bot@tradia.local"
+          git add data/havuz/valilik/ data/audit/valilik_pulse_kalan_*.json
+          git diff --cached --quiet || (
+            git commit -m "valilik-kalan: $(date -u +%FT%H:%MZ) [skip ci]"
+            git push
+          )

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.tradia.ccbasin.pulse</string>
+
+  <!-- Bilgisayar açıkken DEVAMLI çalış (B96 Patron talebi) -->
+  <key>KeepAlive</key>
+  <true/>
+
+  <key>RunAtLoad</key>
+  <true/>
+
+  <!-- launchd python3 ~/Desktop'a erişemez (B6 dersi) — landgold-agents home altında, sorun yok -->
+  <key>WorkingDirectory</key>
+  <string>/Users/GAC-A/landgold-agents</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/GAC-A/landgold-agents/scripts/lokal_surekli_motor.py</string>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/Users/GAC-A/landgold-agents/logs/lokal_motor.out</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/GAC-A/landgold-agents/logs/lokal_motor.err</string>
+
+  <!-- Throttling: çökerse en az 10 sn bekle (CPU koruma) -->
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+
+  <!-- Düşük öncelik: GUI takılmasın -->
+  <key>Nice</key>
+  <integer>5</integer>
+</dict>
+</plist>

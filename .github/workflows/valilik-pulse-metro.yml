@@ -1,0 +1,42 @@
+name: Valilik Pulse Metro (CC-Basın B94 — 7 il yarım-günlük)
+
+# Tier 1: yüksek-aktivite il (İstanbul/Ankara/İzmir/Bursa/Antalya/Kocaeli/Gaziantep)
+# Public repo → GHA dakika sınırsız (B94 düzeltme)
+
+on:
+  schedule:
+    # Sabah 06:15 UTC = 09:15 TR · akşam 14:15 UTC = 17:15 TR (yarım-günlük)
+    - cron: "15 6 * * *"
+    - cron: "15 14 * * *"
+  workflow_dispatch:
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Valilik metro tier çalıştır
+        run: python3 scripts/valilik_pulse_81il.py metro
+
+      - name: Havuz + audit commit
+        run: |
+          git config user.name "tradia-basin-bot"
+          git config user.email "basin-bot@tradia.local"
+          git add data/havuz/valilik/ data/audit/valilik_pulse_metro_*.json
+          git diff --cached --quiet || (
+            git commit -m "valilik-metro: $(date -u +%FT%H:%MZ) [skip ci]"
+            git push
+          )

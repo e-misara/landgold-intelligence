@@ -1,0 +1,42 @@
+name: Haber Pulse Saatlik (CC-Basın anayasa v2.0)
+
+on:
+  schedule:
+    # Her saat XX:10'de — TR herhangi bir TZ konvertine gerek yok, UTC ile çalışır
+    # 24 run/gün × 30 = 720 run/ay × ~1 dk = 720 dk/ay (GHA $0 tier 2000 dk sınır içinde)
+    - cron: "10 * * * *"
+  workflow_dispatch:        # V16 SERT POC + manuel anı yakalama
+
+jobs:
+  pulse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5      # hafif RSS fetch — 5 dk yeter
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Bağımlılıkları kur
+        run: pip install feedparser
+
+      - name: Haber pulse çalıştır
+        run: python3 scripts/haber_pulse_saatlik.py
+
+      - name: Havuz + audit commit (bot)
+        run: |
+          git config user.name "tradia-basin-bot"
+          git config user.email "basin-bot@tradia.local"
+          git add data/havuz/haber/ data/audit/haber_pulse_*.json
+          git diff --cached --quiet || (
+            git commit -m "haber-pulse: $(date -u +%FT%H:%MZ) saatlik [skip ci]"
+            git push
+          )

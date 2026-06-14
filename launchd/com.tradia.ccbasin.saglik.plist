@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.tradia.ccbasin.saglik</string>
+
+  <!-- Günde 1 kez 02:00 TR — düşük trafik saati, gecelik birikme yeterli -->
+  <key>StartCalendarInterval</key>
+  <dict>
+    <key>Hour</key>
+    <integer>2</integer>
+    <key>Minute</key>
+    <integer>0</integer>
+  </dict>
+
+  <!-- RunAtLoad: yükleme anında bir kez tetik (B98 ilk doğrulama) -->
+  <key>RunAtLoad</key>
+  <true/>
+
+  <key>WorkingDirectory</key>
+  <string>/Users/GAC-A/landgold-agents</string>
+
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>-c</string>
+    <string>/usr/bin/python3 /Users/GAC-A/landgold-agents/scripts/olu_feed_detektor.py &amp;&amp; /usr/bin/python3 /Users/GAC-A/landgold-agents/scripts/havuz_siniflandir.py &amp;&amp; /usr/bin/python3 /Users/GAC-A/landgold-agents/scripts/cross_cc_besle.py</string>
+  </array>
+
+  <key>StandardOutPath</key>
+  <string>/Users/GAC-A/landgold-agents/logs/saglik_rutini.out</string>
+
+  <key>StandardErrorPath</key>
+  <string>/Users/GAC-A/landgold-agents/logs/saglik_rutini.err</string>
+
+  <key>Nice</key>
+  <integer>10</integer>
+</dict>
+</plist>

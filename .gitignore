@@ -23,3 +23,22 @@ data/directives_inbox/
 landgold.db
 venv/
 vezir/*.tmp
+.env
+
+# CC-Basın B99 — saatlik akış havuzu (bot push şişmesini önler)
+# Önceki !data/havuz/** exception kalır (eski pipeline tracked dosyalar),
+# spesifik B93+ akış dizinleri sondaki kural precedence ile ignore'lanır
+data/havuz/haber/
+data/havuz/valilik/
+data/havuz/piyasa/
+data/havuz/siniflandirilmis/
+data/havuz/_akis_log.jsonl
+data/havuz/_lokal_state.json
+data/havuz/*.bak_*
+data/havuz/*.tmp
+
+# Cross-CC köprü çıktıları (lokal devir, cloud'a gerek yok)
+data/devir/
+
+# Audit dosyaları — TUZAK-6 ÜÇLÜ kanıt için TRACKED açık (V16 SERT)
+# data/audit/ bot commit'leri küçük JSON özet, kabul edilebilir şişme
