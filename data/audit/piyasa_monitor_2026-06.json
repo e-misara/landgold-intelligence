@@ -1,0 +1,48 @@
+{
+  "_meta": "CC-Basın Piyasa Monitör Aylık (anayasa v2.0)",
+  "ay": "2026-06",
+  "gunluk_log": [
+    {
+      "tarih": "2026-06-15",
+      "toplam_yeni_distinct": 84,
+      "kanallar": [
+        {
+          "id": "tcmb_kfe",
+          "kaynak": "TCMB Konut Fiyat Endeksi",
+          "fetch_ok": true,
+          "fetch_sayisi": 0,
+          "yeni_distinct": 0
+        },
+        {
+          "id": "gyoder_yayinlar",
+          "kaynak": "GYODER Yayınlar",
+          "fetch_ok": true,
+          "fetch_sayisi": 44,
+          "yeni_distinct": 44
+        },
+        {
+          "id": "tuik_veri_portali",
+          "kaynak": "TÜİK Veri Portalı (probe)",
+          "fetch_ok": false,
+          "fetch_sayisi": 0,
+          "yeni_distinct": 0
+        },
+        {
+          "id": "istanbul_ced",
+          "kaynak": "İstanbul Valiliği ÇED Duyuruları",
+          "fetch_ok": true,
+          "fetch_sayisi": 40,
+          "yeni_distinct": 40
+        },
+        {
+          "id": "istanbul_kararlar",
+          "kaynak": "İstanbul Valiliği Genelge/Karar",
+          "fetch_ok": true,
+          "fetch_sayisi": 40,
+          "yeni_distinct": 0
+        }
+      ],
+      "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/piyasa/2026-06/2026-06-15.jsonl"
+    }
+  ]
+}
