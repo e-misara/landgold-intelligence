@@ -106,6 +106,111 @@
         }
       ],
       "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/haber/2026-06-15/15.jsonl"
+    },
+    {
+      "saat": "21",
+      "toplam_fetch": 555,
+      "toplam_relevant": 138,
+      "toplam_yeni_distinct": 138,
+      "kaynak_durum": [
+        {
+          "id": "aa_ekonomi",
+          "kaynak": "AA Ekonomi",
+          "fetch_ok": true,
+          "fetch_sayisi": 30,
+          "relevant": 4,
+          "yeni_distinct": 4
+        },
+        {
+          "id": "hurriyet_ekonomi",
+          "kaynak": "Hürriyet Ekonomi",
+          "fetch_ok": true,
+          "fetch_sayisi": 100,
+          "relevant": 17,
+          "yeni_distinct": 17
+        },
+        {
+          "id": "milliyet_emlak",
+          "kaynak": "Milliyet Emlak",
+          "fetch_ok": true,
+          "fetch_sayisi": 20,
+          "relevant": 2,
+          "yeni_distinct": 2
+        },
+        {
+          "id": "sabah_ekonomi",
+          "kaynak": "Sabah Ekonomi",
+          "fetch_ok": true,
+          "fetch_sayisi": 10,
+          "relevant": 1,
+          "yeni_distinct": 1
+        },
+        {
+          "id": "dunya_emlak",
+          "kaynak": "Dünya Gazetesi Emlak",
+          "fetch_ok": true,
+          "fetch_sayisi": 25,
+          "relevant": 2,
+          "yeni_distinct": 2
+        },
+        {
+          "id": "cumhuriyet_ekonomi",
+          "kaynak": "Cumhuriyet Ekonomi",
+          "fetch_ok": true,
+          "fetch_sayisi": 100,
+          "relevant": 9,
+          "yeni_distinct": 9
+        },
+        {
+          "id": "ntv_ekonomi",
+          "kaynak": "NTV Ekonomi",
+          "fetch_ok": true,
+          "fetch_sayisi": 20,
+          "relevant": 10,
+          "yeni_distinct": 10
+        },
+        {
+          "id": "haberturk_ekonomi",
+          "kaynak": "Habertürk Ekonomi",
+          "fetch_ok": true,
+          "fetch_sayisi": 30,
+          "relevant": 3,
+          "yeni_distinct": 3
+        },
+        {
+          "id": "emlakkulisi",
+          "kaynak": "Emlak Kulisi",
+          "fetch_ok": true,
+          "fetch_sayisi": 50,
+          "relevant": 33,
+          "yeni_distinct": 33
+        },
+        {
+          "id": "arkitera",
+          "kaynak": "Arkitera",
+          "fetch_ok": true,
+          "fetch_sayisi": 120,
+          "relevant": 46,
+          "yeni_distinct": 46
+        },
+        {
+          "id": "rg_anasayfa",
+          "kaynak": "Resmî Gazete Ana",
+          "fetch_ok": false,
+          "fetch_sayisi": 0,
+          "relevant": 0,
+          "yeni_distinct": 0
+        },
+        {
+          "id": "toki_duyuru",
+          "kaynak": "TOKİ Duyuru",
+          "fetch_ok": true,
+          "fetch_sayisi": 50,
+          "relevant": 11,
+          "yeni_distinct": 11
+        }
+      ],
+      "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/haber/2026-06-15/21.jsonl"
     }
   ]
 }
