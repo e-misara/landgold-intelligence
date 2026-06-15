@@ -1,0 +1,174 @@
+{
+  "_meta": "CC-Basın Valilik 81-il Pulse (anayasa v2.0)",
+  "tier": "buyuksehir",
+  "tarih": "2026-06-15",
+  "saat": "15",
+  "calistirma_zamani": "2026-06-15T15:48:54.427193+03:00",
+  "il_sayisi": 23,
+  "il_durum": [
+    {
+      "il": "adana",
+      "fetch_ok": true,
+      "fetch_sayisi": 56,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "aydin",
+      "fetch_ok": true,
+      "fetch_sayisi": 44,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "balikesir",
+      "fetch_ok": true,
+      "fetch_sayisi": 61,
+      "relevant": 3,
+      "yeni_distinct": 3
+    },
+    {
+      "il": "denizli",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "diyarbakir",
+      "fetch_ok": true,
+      "fetch_sayisi": 34,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "erzurum",
+      "fetch_ok": true,
+      "fetch_sayisi": 38,
+      "relevant": 2,
+      "yeni_distinct": 2
+    },
+    {
+      "il": "eskisehir",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "hatay",
+      "fetch_ok": true,
+      "fetch_sayisi": 66,
+      "relevant": 4,
+      "yeni_distinct": 4
+    },
+    {
+      "il": "kahramanmaras",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kayseri",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "konya",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "malatya",
+      "fetch_ok": true,
+      "fetch_sayisi": 45,
+      "relevant": 4,
+      "yeni_distinct": 4
+    },
+    {
+      "il": "manisa",
+      "fetch_ok": true,
+      "fetch_sayisi": 53,
+      "relevant": 3,
+      "yeni_distinct": 3
+    },
+    {
+      "il": "mardin",
+      "fetch_ok": true,
+      "fetch_sayisi": 44,
+      "relevant": 5,
+      "yeni_distinct": 5
+    },
+    {
+      "il": "mersin",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "mugla",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "ordu",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "sakarya",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "samsun",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "sanliurfa",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "tekirdag",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "trabzon",
+      "fetch_ok": true,
+      "fetch_sayisi": 37,
+      "relevant": 2,
+      "yeni_distinct": 2
+    },
+    {
+      "il": "van",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    }
+  ],
+  "toplam_relevant": 26,
+  "toplam_yeni_distinct": 26,
+  "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/valilik/2026-06-15/buyuksehir_15.jsonl"
+}
