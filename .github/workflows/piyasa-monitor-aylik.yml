@@ -31,10 +31,12 @@ jobs:
 
       - name: Havuz + audit commit (bot)
         run: |
-          git config user.name "tradia-basin-bot"
-          git config user.email "basin-bot@tradia.local"
-          git add data/audit/piyasa_monitor_*.json
-          git diff --cached --quiet || (
-            git commit -m "piyasa-monitor: $(date -u +%FT%H:%MZ) aylık [skip ci]"
-            git push
-          )
+          git config user.name  "tradia-basin-bot"
+          git config user.email "basin-bot@tradiaturkey.com"
+          git add -f data/audit/piyasa_monitor_*.json 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Değişiklik yok, commit atlanıyor"
+            exit 0
+          fi
+          git commit -m "piyasa-monitor: $(date -u +%FT%H:%MZ) aylık [skip ci]"
+          git push
