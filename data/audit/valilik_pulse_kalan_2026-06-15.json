@@ -1,0 +1,370 @@
+{
+  "_meta": "CC-Basın Valilik 81-il Pulse (anayasa v2.0)",
+  "tier": "kalan",
+  "tarih": "2026-06-15",
+  "saat": "15",
+  "calistirma_zamani": "2026-06-15T15:53:36.001253+03:00",
+  "il_sayisi": 51,
+  "il_durum": [
+    {
+      "il": "adiyaman",
+      "fetch_ok": true,
+      "fetch_sayisi": 51,
+      "relevant": 2,
+      "yeni_distinct": 2
+    },
+    {
+      "il": "afyonkarahisar",
+      "fetch_ok": true,
+      "fetch_sayisi": 31,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "agri",
+      "fetch_ok": true,
+      "fetch_sayisi": 29,
+      "relevant": 2,
+      "yeni_distinct": 2
+    },
+    {
+      "il": "aksaray",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "amasya",
+      "fetch_ok": true,
+      "fetch_sayisi": 49,
+      "relevant": 4,
+      "yeni_distinct": 4
+    },
+    {
+      "il": "ardahan",
+      "fetch_ok": true,
+      "fetch_sayisi": 37,
+      "relevant": 2,
+      "yeni_distinct": 2
+    },
+    {
+      "il": "artvin",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "bartin",
+      "fetch_ok": true,
+      "fetch_sayisi": 54,
+      "relevant": 2,
+      "yeni_distinct": 2
+    },
+    {
+      "il": "batman",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "bayburt",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "bilecik",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "bingol",
+      "fetch_ok": true,
+      "fetch_sayisi": 33,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "bitlis",
+      "fetch_ok": true,
+      "fetch_sayisi": 51,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "bolu",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "burdur",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "canakkale",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "cankiri",
+      "fetch_ok": true,
+      "fetch_sayisi": 45,
+      "relevant": 7,
+      "yeni_distinct": 7
+    },
+    {
+      "il": "corum",
+      "fetch_ok": true,
+      "fetch_sayisi": 39,
+      "relevant": 3,
+      "yeni_distinct": 3
+    },
+    {
+      "il": "duzce",
+      "fetch_ok": true,
+      "fetch_sayisi": 36,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "edirne",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "elazig",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "erzincan",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "giresun",
+      "fetch_ok": true,
+      "fetch_sayisi": 37,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "gumushane",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "hakkari",
+      "fetch_ok": true,
+      "fetch_sayisi": 42,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "igdir",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "isparta",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "karabuk",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "karaman",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kars",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kastamonu",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kilis",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kirikkale",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kirklareli",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kirsehir",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "kutahya",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "mus",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "nevsehir",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "nigde",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "osmaniye",
+      "fetch_ok": true,
+      "fetch_sayisi": 49,
+      "relevant": 4,
+      "yeni_distinct": 4
+    },
+    {
+      "il": "rize",
+      "fetch_ok": true,
+      "fetch_sayisi": 18,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "siirt",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "sinop",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "sirnak",
+      "fetch_ok": true,
+      "fetch_sayisi": 43,
+      "relevant": 1,
+      "yeni_distinct": 1
+    },
+    {
+      "il": "sivas",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "tokat",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "tunceli",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "usak",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "yalova",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "yozgat",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    },
+    {
+      "il": "zonguldak",
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
+    }
+  ],
+  "toplam_relevant": 33,
+  "toplam_yeni_distinct": 33,
+  "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/valilik/2026-06-15/kalan_15.jsonl"
+}
