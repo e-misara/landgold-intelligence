@@ -29,6 +29,21 @@ jobs:
       - name: Piyasa monitör çalıştır
         run: python3 scripts/piyasa_monitor_aylik.py
 
+      - name: DEBUG cloud runner state (B111)
+        if: always()
+        run: |
+          echo "=== AUDIT DİZİNİ ==="
+          ls -la data/audit/ 2>/dev/null | head -20 || echo "data/audit/ DİZİN YOK"
+          echo ""
+          echo "=== piyasa_monitor JSON varlık ==="
+          ls -la data/audit/piyasa_monitor_*.json 2>/dev/null || echo "piyasa_monitor_*.json YOK"
+          echo ""
+          echo "=== git status (commit step öncesi) ==="
+          git status --short | head -20
+          echo ""
+          echo "=== runner PWD ==="
+          pwd
+
       - name: Havuz + audit commit (bot)
         run: |
           git config user.name  "tradia-basin-bot"
