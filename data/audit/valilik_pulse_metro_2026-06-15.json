@@ -2,8 +2,8 @@
   "_meta": "CC-Basın Valilik 81-il Pulse (anayasa v2.0)",
   "tier": "metro",
   "tarih": "2026-06-15",
-  "saat": "15",
-  "calistirma_zamani": "2026-06-15T15:42:46.046997+03:00",
+  "saat": "21",
+  "calistirma_zamani": "2026-06-15T21:46:04.457668+03:00",
   "il_sayisi": 7,
   "il_durum": [
     {
@@ -36,27 +36,27 @@
     },
     {
       "il": "antalya",
-      "fetch_ok": true,
-      "fetch_sayisi": 55,
-      "relevant": 1,
-      "yeni_distinct": 1
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
+      "relevant": 0,
+      "yeni_distinct": 0
     },
     {
       "il": "kocaeli",
-      "fetch_ok": true,
-      "fetch_sayisi": 23,
+      "fetch_ok": false,
+      "fetch_sayisi": 0,
       "relevant": 0,
       "yeni_distinct": 0
     },
     {
       "il": "gaziantep",
-      "fetch_ok": false,
-      "fetch_sayisi": 0,
-      "relevant": 0,
-      "yeni_distinct": 0
+      "fetch_ok": true,
+      "fetch_sayisi": 52,
+      "relevant": 1,
+      "yeni_distinct": 1
     }
   ],
   "toplam_relevant": 8,
   "toplam_yeni_distinct": 8,
-  "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/valilik/2026-06-15/metro_15.jsonl"
+  "havuz_dosya": "/home/runner/work/landgold-intelligence/landgold-intelligence/data/havuz/valilik/2026-06-15/metro_21.jsonl"
 }
