@@ -31,21 +31,6 @@ jobs:
       - name: Haber pulse çalıştır
         run: python3 scripts/haber_pulse_saatlik.py
 
-      - name: DEBUG cloud runner state (B111)
-        if: always()
-        run: |
-          echo "=== AUDIT DİZİNİ ==="
-          ls -la data/audit/ 2>/dev/null | head -20 || echo "data/audit/ DİZİN YOK"
-          echo ""
-          echo "=== haber_pulse JSON varlık ==="
-          ls -la data/audit/haber_pulse_*.json 2>/dev/null || echo "haber_pulse_*.json YOK"
-          echo ""
-          echo "=== git status (commit step öncesi) ==="
-          git status --short | head -20
-          echo ""
-          echo "=== runner PWD ==="
-          pwd
-
       - name: Havuz + audit commit (bot)
         run: |
           git config user.name  "tradia-basin-bot"

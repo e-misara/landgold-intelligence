@@ -31,21 +31,6 @@ jobs:
       - name: Valilik metro tier çalıştır
         run: python3 scripts/valilik_pulse_81il.py metro
 
-      - name: DEBUG cloud runner state (B111)
-        if: always()
-        run: |
-          echo "=== AUDIT DİZİNİ ==="
-          ls -la data/audit/ 2>/dev/null | head -20 || echo "data/audit/ DİZİN YOK"
-          echo ""
-          echo "=== valilik_pulse_metro JSON varlık ==="
-          ls -la data/audit/valilik_pulse_metro_*.json 2>/dev/null || echo "valilik_pulse_metro_*.json YOK"
-          echo ""
-          echo "=== git status (commit step öncesi) ==="
-          git status --short | head -20
-          echo ""
-          echo "=== runner PWD ==="
-          pwd
-
       - name: Havuz + audit commit
         run: |
           git config user.name  "tradia-basin-bot"
