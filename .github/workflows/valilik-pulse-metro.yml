@@ -38,10 +38,12 @@ jobs:
           echo "=== B115 DEBUG ENSTRUMANTASYON ==="
           echo "[1] AUDIT DOSYA varlık:"
           ls -la data/audit/valilik_pulse_metro_*.json 2>/dev/null || echo "  YOK"
-          echo "[2] AUDIT JSON il_durum entry sayısı:"
+          echo "[2] AUDIT JSON satır + byte:"
           for f in data/audit/valilik_pulse_metro_*.json; do
             [ -f "$f" ] || continue
-            python3 -c "import json; d=json.load(open('$f')); print(f'  $f: il_durum={len(d.get(\"il_durum\",[]))} relevant={d.get(\"toplam_relevant\",0)} yeni_distinct={d.get(\"toplam_yeni_distinct\",0)}')" 2>/dev/null || echo "  $f: parse FAIL"
+            sz=$(wc -c <"$f")
+            ln=$(wc -l <"$f")
+            echo "  $f: ${ln} satır ${sz} byte"
           done
           echo "[3] git add audit:"
           git add -f data/audit/valilik_pulse_metro_*.json 2>/dev/null || echo "  git add fail"

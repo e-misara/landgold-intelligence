@@ -38,10 +38,12 @@ jobs:
           echo "=== B115 DEBUG ENSTRUMANTASYON ==="
           echo "[1] AUDIT DOSYA varlık:"
           ls -la data/audit/haber_pulse_*.json 2>/dev/null || echo "  YOK ← (s₃) feed fetch fail veya script audit yazmıyor"
-          echo "[2] AUDIT JSON saatlik_log entry sayısı:"
+          echo "[2] AUDIT JSON satır + byte:"
           for f in data/audit/haber_pulse_*.json; do
             [ -f "$f" ] || continue
-            python3 -c "import json; d=json.load(open('$f')); print(f'  $f: entries={len(d.get(\"saatlik_log\",[]))}')" 2>/dev/null || echo "  $f: parse FAIL"
+            sz=$(wc -c <"$f")
+            ln=$(wc -l <"$f")
+            echo "  $f: ${ln} satır ${sz} byte"
           done
           echo "[3] git add audit:"
           git add -f data/audit/haber_pulse_*.json 2>/dev/null || echo "  git add fail (|| true yutuldu)"
