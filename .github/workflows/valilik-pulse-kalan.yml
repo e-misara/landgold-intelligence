@@ -33,10 +33,23 @@ jobs:
         run: |
           git config user.name  "tradia-basin-bot"
           git config user.email "basin-bot@tradiaturkey.com"
-          git add -f data/audit/valilik_pulse_kalan_*.json 2>/dev/null || true
+          echo "=== B115 DEBUG ENSTRUMANTASYON ==="
+          echo "[1] AUDIT DOSYA varlık:"
+          ls -la data/audit/valilik_pulse_kalan_*.json 2>/dev/null || echo "  YOK"
+          echo "[2] AUDIT metrik:"
+          for f in data/audit/valilik_pulse_kalan_*.json; do
+            [ -f "$f" ] || continue
+            python3 -c "import json; d=json.load(open('$f')); print(f'  $f: il_durum={len(d.get(\"il_durum\",[]))} relevant={d.get(\"toplam_relevant\",0)} yeni_distinct={d.get(\"toplam_yeni_distinct\",0)}')" 2>/dev/null
+          done
+          echo "[3] git add:"
+          git add -f data/audit/valilik_pulse_kalan_*.json 2>/dev/null || echo "  fail"
+          echo "[4] git diff staged stat:"
+          git diff --cached --stat
+          echo "[5] EXIT-PATH:"
           if git diff --cached --quiet; then
-            echo "Değişiklik yok, commit atlanıyor"
+            echo "  EXIT_PATH=NO_CHANGE"
             exit 0
           fi
+          echo "  EXIT_PATH=COMMIT_PUSH"
           git commit -m "valilik-kalan: $(date -u +%FT%H:%MZ) [skip ci]"
-          git push
+          git push && echo "  PUSH=SUCCESS" || echo "  PUSH=FAIL"
